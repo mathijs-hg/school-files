@@ -1,0 +1,64 @@
+###############################################################
+ # Copyright(c) 2005-2021 Shenzhen TP-Link Technologies Co. Ltd.
+ # All right reserved.
+ #
+ # Filename		:	wifiextend
+ # Version		:	1.0
+ # Abstract		:	
+ # Author		:	Cyril Zheng(zhengyuchao@tp-link.com.cn)
+ # Created Date	:	2021.08.10
+ #
+ # Modified History:
+ # 1.Create file.	2021.08.10  Cyril Zheng
+ #          Content: extend wifi command for MTK via different chips
+###############################################################
+#!/bin/bash
+_usage() {
+	cat <<EOF
+Usage: $0 [set_backhaul|set_edcca|set_channel|check_main_vif|set_backhaul_down]
+EOF
+	exit 1
+}
+
+_set_edcca() {
+    echo "nothing to do when set_edcca"
+}
+
+_set_backhaul() {
+    echo "nothing to do when set_backhaul"
+}
+
+
+_check_main_vif() {
+    local main_if_2g="ra0"
+    local main_if_5g="rai0"
+    if [ "$1" = "$main_if_2g" -o "$1" = "$main_if_5g" ]; then
+        echo "true"
+    else
+        echo "false"
+    fi
+}
+
+_set_channel() {
+    local ifname=$1
+    local CH=$2
+    iwpriv "$ifname" set "Channel=$CH"
+}
+
+_set_backhaul_down() {
+    echo "nothing to do when set_backhaul_down"
+}
+
+main() {
+    case "$1" in
+        set_backhaul) shift 1; _set_backhaul "$@";;
+        set_edcca) _set_edcca "$2";;
+        set_channel) shift 1; _set_channel "$@";;
+        check_main_vif) shift 1; _check_main_vif "$@";;
+        set_backhaul_down) shift 1; _set_backhaul_down "$@";;
+        --help|help) _usage;;
+        *) _usage;;
+    esac
+}
+
+main $@

@@ -1,0 +1,104 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibblkid-tiny.so[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mlibblkid-tiny.so[0m
+
+sll a2, v0, 8
+srl v0, v0, 8
+lhu t0, 0xa(a1)
+or a2, a2, v0
+sll v0, t3, 8
+srl t3, t3, 8
+lhu a0, 0xc(a1)
+or t3, v0, t3
+sll v0, t2, 8
+srl t2, t2, 8
+lhu v1, 0xe(a1)
+or t2, v0, t2
+sll v0, t1, 8
+srl t1, t1, 8
+lhu t4, 2(a1)
+or t1, v0, t1
+sll v0, t0, 8
+srl t0, t0, 8
+or t0, v0, t0
+sll v0, a0, 8
+srl a0, a0, 8
+lw a1, -0x7fdc(gp)
+or a0, v0, a0
+sll v0, v1, 8
+srl v1, v1, 8
+[31mlw t9, -sym.imp.sprintf(gp)[0m
+sll a3, t4, 8
+or v1, v0, v1
+srl t4, t4, 8
+or a3, a3, t4
+andi t3, t3, 0xffff
+andi t2, t2, 0xffff
+andi t1, t1, 0xffff
+andi t0, t0, 0xffff
+andi a0, a0, 0xffff
+andi v1, v1, 0xffff
+sw a0, 0x20(sp)
+sw t3, 0x10(sp)
+sw t2, 0x14(sp)
+sw t1, 0x18(sp)
+sw t0, 0x1c(sp)
+sw v1, 0x24(sp)
+addiu a0, s1, 0x34
+addiu a1, a1, 0x4348
+andi a2, a2, 0xffff
+jalr t9
+--
+sw ra, 0x3c(sp)
+sw s6, 0x38(sp)
+sw s5, 0x34(sp)
+sw s4, 0x30(sp)
+sw s3, 0x2c(sp)
+sw s2, 0x28(sp)
+sw s1, 0x24(sp)
+sw s0, 0x20(sp)
+jalr t9
+addiu a0, a0, 0x4374
+lw gp, 0x10(sp)
+bnez v0, 0x1b84
+addiu v1, zero, 1
+lw s6, -0x7fe8(gp)
+lw s1, -0x7fdc(gp)
+lw t9, -sym.imp.opendir(gp)
+addiu v0, zero, 0x180
+sw v0, 0x55f0(s6)
+jalr t9
+addiu a0, s1, 0x437c
+lw gp, 0x10(sp)
+beqz v0, 0x1b6c
+move s0, v0
+lw s4, -0x7fe8(gp)
+lw a1, -0x7fdc(gp)
+[31mlw t9, -sym.imp.sprintf(gp)[0m
+addiu a2, s1, 0x437c
+addiu a0, s4, 0x5780
+jalr t9
+addiu a1, a1, 0x438c
+lw gp, 0x10(sp)
+addiu s5, s4, 0x5780
+addu s5, s5, v0
+lw s3, -0x7fdc(gp)
+lw s1, -0x7fe8(gp)
+addiu s3, s3, 0x4390
+b 0x1b38
+addiu s1, s1, 0x6780
+lbu a0, 0xa(v0)
+sw zero, 0x1c(sp)
+bne a0, v1, 0x1b38
+sw zero, 0x18(sp)
+lw t9, -sym.imp.sscanf(gp)
+addiu s2, v0, 0xb
+move a0, s2
+move a1, s3
+
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m2[0m times [0;33mlibblkid-tiny.so[0m
+

@@ -1,0 +1,149 @@
+<br />
+<pre>fp_number_type * _fpadd_parts(fp_number_type *a,fp_number_type *b,fp_number_type *tmp)</pre>
+<br />
+<pre>{</pre>
+<pre>  bool bVar1;</pre>
+<pre>  fp_class_type fVar2;</pre>
+<pre>  uint uVar3;</pre>
+<pre>  halffractype hVar4;</pre>
+<pre>  fp_class_type fVar5;</pre>
+<pre>  int iVar6;</pre>
+<pre>  uint uVar7;</pre>
+<pre>  uint b_00;</pre>
+<pre>  uint uVar8;</pre>
+<pre>  uint b_01;</pre>
+<pre>  uint uVar9;</pre>
+<pre>  fp_number_type *pfVar10;</pre>
+<pre>  int iVar11;</pre>
+<pre>  int iVar12;</pre>
+<pre>  DItype DVar13;</pre>
+<pre>  DItype DVar14;</pre>
+<pre>  undefined *puVar15;</pre>
+<pre>  undefined4 in_stack_ffffffcc;</pre>
+<pre>  </pre>
+<pre>  fVar2 = a-&gt;class;</pre>
+<pre>  puVar15 = &amp;_gp;</pre>
+<pre>  pfVar10 = a;</pre>
+<pre>  if ((CLASS_QNAN &lt; fVar2) &amp;&amp; (fVar5 = b-&gt;class, pfVar10 = b, CLASS_QNAN &lt; fVar5)) {</pre>
+<pre>    if (fVar2 == CLASS_INFINITY) {</pre>
+<pre>      pfVar10 = a;</pre>
+<pre>      if ((fVar5 == CLASS_INFINITY) &amp;&amp; (a-&gt;sign != b-&gt;sign)) {</pre>
+<pre>        pfVar10 = &amp;__thenan_df;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      pfVar10 = b;</pre>
+<pre>      if (fVar5 != CLASS_INFINITY) {</pre>
+<pre>        if (fVar5 == CLASS_ZERO) {</pre>
+<pre>          pfVar10 = a;</pre>
+<pre>          if (fVar2 == CLASS_ZERO) {</pre>
+<pre><span class="green"><span class="green">            memcpy(tmp,a,0x18)</span></span></span></pre>
+<pre>            tmp-&gt;sign = b-&gt;sign &amp; a-&gt;sign;</pre>
+<pre>            pfVar10 = tmp;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          pfVar10 = b;</pre>
+<pre>          if (fVar2 != CLASS_ZERO) {</pre>
+<pre>            iVar11 = a-&gt;normal_exp;</pre>
+<pre>            iVar6 = b-&gt;normal_exp;</pre>
+<pre>            b_00 = (a-&gt;fraction).l[0];</pre>
+<pre>            uVar8 = (a-&gt;fraction).l[1];</pre>
+<pre>            uVar3 = iVar11 - iVar6;</pre>
+<pre>            iVar12 = ((int)uVar3 &gt;&gt; 0x1f ^ uVar3) - ((int)uVar3 &gt;&gt; 0x1f);</pre>
+<pre>            b_01 = (b-&gt;fraction).l[0];</pre>
+<pre>            uVar9 = (b-&gt;fraction).l[1];</pre>
+<pre>            if (iVar12 &lt; 0x40) {</pre>
+<pre>              if ((int)uVar3 &lt; 1) {</pre>
+<pre>                iVar6 = iVar11;</pre>
+<pre>                if (uVar3 != 0) {</pre>
+<pre>                  DVar13 = __lshrdi3(CONCAT44(in_stack_ffffffcc,0x418190),b_00);</pre>
+<pre>                  DVar14 = __ashldi3(CONCAT44(in_stack_ffffffcc,puVar15),1);</pre>
+<pre>                  b_00 = (uint)(((int)DVar14 - 1U &amp; b_00 |</pre>
+<pre>                                (int)((ulonglong)DVar14 &gt;&gt; 0x20) - (uint)((int)DVar14 == 0) &amp; uVar8)</pre>
+<pre>                               != 0) | (uint)DVar13;</pre>
+<pre>                  uVar8 = (uint)((ulonglong)DVar13 &gt;&gt; 0x20);</pre>
+<pre>                  iVar6 = iVar11 + iVar12;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                DVar13 = __lshrdi3(CONCAT44(in_stack_ffffffcc,0x418190),b_01);</pre>
+<pre>                DVar14 = __ashldi3(CONCAT44(in_stack_ffffffcc,puVar15),1);</pre>
+<pre>                b_01 = (uint)(((int)DVar14 - 1U &amp; b_01 |</pre>
+<pre>                              (int)((ulonglong)DVar14 &gt;&gt; 0x20) - (uint)((int)DVar14 == 0) &amp; uVar9)</pre>
+<pre>                             != 0) | (uint)DVar13;</pre>
+<pre>                uVar9 = (uint)((ulonglong)DVar13 &gt;&gt; 0x20);</pre>
+<pre>                iVar6 = iVar11;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            else if (iVar6 &lt; iVar11) {</pre>
+<pre>              b_01 = 0;</pre>
+<pre>              uVar9 = 0;</pre>
+<pre>              iVar6 = iVar11;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              b_00 = 0;</pre>
+<pre>              uVar8 = 0;</pre>
+<pre>            }</pre>
+<pre>            uVar3 = a-&gt;sign;</pre>
+<pre>            if (uVar3 == b-&gt;sign) {</pre>
+<pre>              tmp-&gt;sign = uVar3;</pre>
+<pre>              tmp-&gt;normal_exp = iVar6;</pre>
+<pre>              (tmp-&gt;fraction).l[0] = b_01 + b_00;</pre>
+<pre>              (tmp-&gt;fraction).l[1] = (uint)(b_01 + b_00 &lt; b_01) + uVar9 + uVar8;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              uVar7 = b_01 - b_00;</pre>
+<pre>              if (uVar3 == 0) {</pre>
+<pre>                uVar7 = b_00 - b_01;</pre>
+<pre>                bVar1 = b_00 &lt; uVar7;</pre>
+<pre>                iVar11 = uVar8 - uVar9;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                bVar1 = b_01 &lt; uVar7;</pre>
+<pre>                iVar11 = uVar9 - uVar8;</pre>
+<pre>              }</pre>
+<pre>              hVar4 = iVar11 - (uint)bVar1;</pre>
+<pre>              if ((int)hVar4 &lt; 0) {</pre>
+<pre>                uVar7 = -uVar7;</pre>
+<pre>                tmp-&gt;sign = 1;</pre>
+<pre>                tmp-&gt;normal_exp = iVar6;</pre>
+<pre>                hVar4 = -(uint)(uVar7 != 0) - hVar4;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                tmp-&gt;sign = 0;</pre>
+<pre>                tmp-&gt;normal_exp = iVar6;</pre>
+<pre>              }</pre>
+<pre>              (tmp-&gt;fraction).l[0] = uVar7;</pre>
+<pre>              (tmp-&gt;fraction).l[1] = hVar4;</pre>
+<pre>              while( true ) {</pre>
+<pre>                uVar8 = (tmp-&gt;fraction).l[0];</pre>
+<pre>                hVar4 = (tmp-&gt;fraction).l[1];</pre>
+<pre>                uVar9 = (uint)(uVar8 - 1 &lt; uVar8) + (hVar4 - 1);</pre>
+<pre>                if ((0xfffffff &lt; uVar9) || ((uVar9 == 0xfffffff &amp;&amp; (uVar8 - 1 == 0xffffffff))))</pre>
+<pre>                break;</pre>
+<pre>                (tmp-&gt;fraction).l[0] = uVar8 &lt;&lt; 1;</pre>
+<pre>                iVar6 = tmp-&gt;normal_exp;</pre>
+<pre>                (tmp-&gt;fraction).l[1] = hVar4 &lt;&lt; 1 | uVar8 &gt;&gt; 0x1f;</pre>
+<pre>                tmp-&gt;normal_exp = iVar6 + -1;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            uVar8 = (tmp-&gt;fraction).l[1];</pre>
+<pre>            tmp-&gt;class = CLASS_NUMBER;</pre>
+<pre>            pfVar10 = tmp;</pre>
+<pre>            if (0x1fffffff &lt; uVar8) {</pre>
+<pre>              (tmp-&gt;fraction).l[0] =</pre>
+<pre>                   (tmp-&gt;fraction).l[0] &amp; 1 | uVar8 &lt;&lt; 0x1f | (tmp-&gt;fraction).l[0] &gt;&gt; 1;</pre>
+<pre>              iVar6 = tmp-&gt;normal_exp;</pre>
+<pre>              (tmp-&gt;fraction).l[1] = uVar8 &gt;&gt; 1;</pre>
+<pre>              tmp-&gt;normal_exp = iVar6 + 1;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return pfVar10;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 41848adb9f36f6b9</pre>

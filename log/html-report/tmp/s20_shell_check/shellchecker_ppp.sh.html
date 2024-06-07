@@ -1,0 +1,252 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 6:</span></pre>
+<pre></span>	. /lib/functions.sh</span></pre>
+<pre><span class="green">          ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 7:</span></pre>
+<pre></span>	. ../netifd-proto.sh</span></pre>
+<pre><span class="green">          ^----------------^ SC1091 (info): Not following: ../netifd-proto.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 27:</span></pre>
+<pre></span>	local config="$1"; shift</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 41:</span></pre>
+<pre></span>	local interval="${keepalive##*[, ]}"</span></pre>
+<pre><span class="orange">        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                        ^-----------------^ SC2154 (warning): keepalive is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 46:</span></pre>
+<pre></span>	[ "$ip_mode" == "static" ] &amp;&amp; json_get_var ipaddr ipaddr</span></pre>
+<pre><span class="orange">           ^------^ SC2154 (warning): ip_mode is referenced but not assigned.</span></pre>
+<pre><span class="orange">                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 49:</span></pre>
+<pre></span>	local dnsarg="usepeerdns"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 51:</span></pre>
+<pre></span>	[ "$dns_mode" == "static" ] &amp;&amp; dnsarg=""</span></pre>
+<pre><span class="orange">           ^-------^ SC2154 (warning): dns_mode is referenced but not assigned.</span></pre>
+<pre><span class="orange">                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 53:</span></pre>
+<pre></span>	network_echo $LOG_PRI_DEBUG "ppp" "start pppd,${username:+user "$username"} ${password:+password "$password"} ${mru:+mtu $mru mru $mru}"</span></pre>
+<pre><span class="green">                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_DEBUG" "ppp" "start pppd,${username:+user "$username"} ${password:+password "$password"} ${mru:+mtu $mru mru $mru}"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 62:</span></pre>
+<pre></span>		$demand maxfail 1 \</span></pre>
+<pre><span class="green">                ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		"$demand" maxfail 1 \</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 73:</span></pre>
+<pre></span>		$pppd_options "$&commat;"</span></pre>
+<pre><span class="orange">                ^-----------^ SC2154 (warning): pppd_options is referenced but not assigned.</span></pre>
+<pre><span class="green">                ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		"$pppd_options" "$&commat;"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 77:</span></pre>
+<pre></span>	local interface="$1"</span></pre>
+<pre><span class="orange">        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 78:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "ppp" "teardown $interface "</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "ppp" "teardown $interface "</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 83:</span></pre>
+<pre></span>			network_echo $LOG_PRI_ERR "ppp" "auth fail"</span></pre>
+<pre><span class="green">                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			network_echo "$LOG_PRI_ERR" "ppp" "auth fail"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 89:</span></pre>
+<pre></span>			network_echo $LOG_PRI_ERR "ppp" "invalid options"</span></pre>
+<pre><span class="green">                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			network_echo "$LOG_PRI_ERR" "ppp" "invalid options"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 107:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 110:</span></pre>
+<pre></span>	ppp_generic_setup "$config" "$device"</span></pre>
+<pre><span class="orange">                                     ^-----^ SC2154 (warning): device is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 127:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 128:</span></pre>
+<pre></span>	local iface="$2"</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 129:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "pppoe" "$iface start dial"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "pppoe" "$iface start dial"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 148:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "pppoe" "teardown" "$&commat;"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "pppoe" "teardown" "$&commat;"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 155:</span></pre>
+<pre></span>	available=1</span></pre>
+<pre><span class="orange">        ^-------^ SC2034 (warning): available appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 156:</span></pre>
+<pre></span>	no_device=1</span></pre>
+<pre><span class="orange">        ^-------^ SC2034 (warning): no_device appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 160:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 161:</span></pre>
+<pre></span>	local iface="$2"</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 162:</span></pre>
+<pre></span>	local parent=""</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 163:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "pptp" "$iface start dial"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "pptp" "$iface start dial"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 166:</span></pre>
+<pre></span>	config_get parent $config parent</span></pre>
+<pre><span class="green">                          ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get parent "$config" parent</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 167:</span></pre>
+<pre></span>	config_get iface $parent ifname</span></pre>
+<pre><span class="green">                         ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get iface "$parent" ifname</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 170:</span></pre>
+<pre></span>	[ -f /tmp/iptv_wan_iface ] &amp;&amp; iface=`cat /tmp/iptv_wan_iface`</span></pre>
+<pre><span class="green">                                            ^-----------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ -f /tmp/iptv_wan_iface ] &amp;&amp; iface=$(cat /tmp/iptv_wan_iface)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 172:</span></pre>
+<pre></span>	local ip serv_addr server</span></pre>
+<pre><span class="orange">        ^-----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 176:</span></pre>
+<pre></span>	             echo "$ip" &gt;&gt; /tmp/server.pptp-${config}</span></pre>
+<pre><span class="green">                                                    ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	             echo "$ip" &gt;&gt; /tmp/server.pptp-"${config}"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 185:</span></pre>
+<pre></span>		network_echo $LOG_PRI_ERR "pptp" "Could not resolve server address"</span></pre>
+<pre><span class="green">                             ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		network_echo "$LOG_PRI_ERR" "pptp" "Could not resolve server address"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 186:</span></pre>
+<pre></span>		err_code=`cat /tmp/resolveip_error`</span></pre>
+<pre><span class="green">                         ^------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		err_code=$(cat /tmp/resolveip_error)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 187:</span></pre>
+<pre></span>		if [ "$err_code" == "2" ]; then</span></pre>
+<pre><span class="orange">                                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 195:</span></pre>
+<pre></span>	local load</span></pre>
+<pre><span class="orange">        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 204:</span></pre>
+<pre></span>		pptp pptp_server $server \</span></pre>
+<pre><span class="green">                                 ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		pptp pptp_server "$server" \</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 207:</span></pre>
+<pre></span>		nic-ifname $iface</span></pre>
+<pre><span class="green">                           ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		nic-ifname "$iface"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/ppp.sh line 213:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "pptp" "teardown" "$&commat;"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "pptp" "teardown" "$&commat;"</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- available appears unused. Verify ...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2154" title="https://www.shellcheck.net/wiki/SC2154" target="_blank" >https://www.shellcheck.net/wiki/SC2154</a> -- device is referenced but not assi...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3014" title="https://www.shellcheck.net/wiki/SC3014" target="_blank" >https://www.shellcheck.net/wiki/SC3014</a> -- In POSIX sh, == in place of = is ...</pre>

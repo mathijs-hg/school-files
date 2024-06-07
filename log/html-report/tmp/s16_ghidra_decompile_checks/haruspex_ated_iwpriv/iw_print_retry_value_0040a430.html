@@ -1,0 +1,82 @@
+<br />
+<pre>void iw_print_retry_value</pre>
+<pre>               (FLO_type param_1,FLO_type param_2,undefined4 *param_3,size_t param_4,</pre>
+<pre>               SItype param_5_00,uint param_6,int param_5)</pre>
+<br />
+<pre>{</pre>
+<pre>  char *__s;</pre>
+<pre>  undefined4 *local_res0;</pre>
+<pre>  SItype local_res8;</pre>
+<pre>  </pre>
+<pre>  if ((int)param_4 &lt; 0x14) {</pre>
+<pre><span class="green">    snprintf((char *)param_3,param_4,"&lt;too big&gt;")</span></span></pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    param_4 = param_4 - 0x14</span></span></pre>
+<pre>    local_res0 = param_3;</pre>
+<pre>    if ((param_6 &amp; 1) != 0) {</pre>
+<pre>      *param_3 = 0x6e696d20;</pre>
+<pre>      *(undefined *)(param_3 + 1) = 0;</pre>
+<pre>      local_res0 = param_3 + 1;</pre>
+<pre>    }</pre>
+<pre>    if ((param_6 &amp; 2) != 0) {</pre>
+<pre>      *local_res0 = 0x78616d20;</pre>
+<pre>      *(undefined *)(local_res0 + 1) = 0;</pre>
+<pre>      local_res0 = local_res0 + 1;</pre>
+<pre>    }</pre>
+<pre>    if ((param_6 &amp; 0x10) != 0) {</pre>
+<pre>      *local_res0 = 0x6f687320;</pre>
+<pre>      *(char *)(local_res0 + 1) = 'r';</pre>
+<pre>      *(char *)((int)local_res0 + 5) = 't';</pre>
+<pre>      *(char *)((int)local_res0 + 6) = '\0';</pre>
+<pre>      local_res0 = (undefined4 *)((int)local_res0 + 6);</pre>
+<pre>    }</pre>
+<pre>    if ((param_6 &amp; 0x20) != 0) {</pre>
+<pre>      *local_res0 = 0x6f6c2020;</pre>
+<pre>      *(char *)(local_res0 + 1) = 'n';</pre>
+<pre>      *(char *)((int)local_res0 + 5) = 'g';</pre>
+<pre>      *(char *)((int)local_res0 + 6) = '\0';</pre>
+<pre>      local_res0 = (undefined4 *)((int)local_res0 + 6);</pre>
+<pre>    }</pre>
+<pre>    if ((param_6 &amp; 0x2000) == 0) {</pre>
+<pre><span class="green">      snprintf((char *)local_res0,param_4," limit:%d",param_5_00)</span></span></pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      *local_res0 = 0x66696c20;</pre>
+<pre>      local_res0[1] = 0x6d697465;</pre>
+<pre>      *(char *)(local_res0 + 2) = 'e';</pre>
+<pre>      *(char *)((int)local_res0 + 9) = ':';</pre>
+<pre>      *(char *)((int)local_res0 + 10) = '\0';</pre>
+<pre>      __s = (char *)((int)local_res0 + 10);</pre>
+<pre>      if ((param_6 &amp; 4) == 0) {</pre>
+<pre>        if (param_5_00 &lt; 1000000) {</pre>
+<pre>          if (param_5_00 &lt; 1000) {</pre>
+<pre><span class="green">            snprintf(__s,param_4,"%dus",param_5_00)</span></span></pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            __floatsidf(param_5_00);</pre>
+<pre>            __divdf3(param_1,param_2);</pre>
+<pre><span class="green">            snprintf(__s,param_4,"%gms")</span></span></pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          __floatsidf(param_5_00);</pre>
+<pre>          __divdf3(param_1,param_2);</pre>
+<pre><span class="green">          snprintf(__s,param_4,"%gs")</span></span></pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_res8 = param_5_00;</pre>
+<pre>        if (param_5 &lt; 0x15) {</pre>
+<pre>          __floatsidf(param_5_00);</pre>
+<pre>          __divdf3(param_1,param_2);</pre>
+<pre>          local_res8 = __fixdfsi(param_1);</pre>
+<pre>        }</pre>
+<pre><span class="green">        snprintf(__s,param_4,"%d",local_res8)</span></span></pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] b9678cb78f2d313f</pre>

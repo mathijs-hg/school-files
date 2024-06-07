@@ -1,0 +1,413 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 18:[0m
+[0m. /lib/config/uci.sh[0m
+[32m  ^----------------^ SC1091 (info): Not following: /lib/config/uci.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 23:[0m
+[0m	local iface=$1;shift[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local iface="$1";shift
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 24:[0m
+[0m	local opt[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 30:[0m
+[0m		echo wpa_cli ${opt} "$@" >&2[0m
+[32m                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		echo wpa_cli "${opt}" "$@" >&2
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 31:[0m
+[0m		wpa_cli ${opt} "$@" || exit 2[0m
+[32m                        ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		wpa_cli "${opt}" "$@" || exit 2
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 34:[0m
+[0m	wpa_cli ${opt} "$@" >/dev/null 2>&1 || exit 2[0m
+[32m                ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	wpa_cli "${opt}" "$@" >/dev/null 2>&1 || exit 2
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 66:[0m
+[0m	local chan=$1[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                   ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local chan="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 67:[0m
+[0m	local auth=$2[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                   ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local auth="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 68:[0m
+[0m	local psk=$3[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                  ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local psk="$3"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 69:[0m
+[0m	local key=$4[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                  ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local key="$4"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 70:[0m
+[0m	local index=$5[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local index="$5"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 77:[0m
+[0m	if [ ! ${chan} -ge 1 ] && [ ! ${chan} -le 13 ] || \[0m
+[32m               ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                      ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ ! "${chan}" -ge 1 ] && [ ! "${chan}" -le 13 ] || \
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 78:[0m
+[0m	[ ! ${chan} -ge 36 ] && [ ! ${chan} -le 64 ] && [ ! $((${chan}%4)) -eq 0 ] || \[0m
+[32m            ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                    ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                               ^-----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+[1mDid you mean: [0m
+	[ ! "${chan}" -ge 36 ] && [ ! "${chan}" -le 64 ] && [ ! $((${chan}%4)) -eq 0 ] || \
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 79:[0m
+[0m	[ ! ${chan} -ge 100 ] && [ ! ${chan} -le 150 ] && [ ! $((${chan}%4)) -eq 0 ]; then[0m
+[32m            ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                     ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                 ^-----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+[1mDid you mean: [0m
+	[ ! "${chan}" -ge 100 ] && [ ! "${chan}" -le 150 ] && [ ! $((${chan}%4)) -eq 0 ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 90:[0m
+[0m		if [ -n "${key}" -o -n "${index}" -o -n "${psk}" ]; then[0m
+[33m                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                  ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 106:[0m
+[0m		if [ -n "${key}" -o -n "${index}" ]; then[0m
+[33m                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 124:[0m
+[0mlocal chan ssid auth psk key index[0m
+[33m^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 125:[0m
+[0mlocal timeout=4[0m
+[33m^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 131:[0m
+[0m		[ ${auth} = "open" ] || [ ${auth} = "wep" ] || [ ${auth} = "wpa" ] || {[0m
+[32m                  ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                          ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                 ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		[ "${auth}" = "open" ] || [ "${auth}" = "wep" ] || [ "${auth}" = "wpa" ] || {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 140:[0m
+[0m		if [ ! ${index} -ge 0 ] && [ ! ${index} -le 3 ]; then[0m
+[32m                       ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                               ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		if [ ! "${index}" -ge 0 ] && [ ! "${index}" -le 3 ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 167:[0m
+[0mlocal nid[0m
+[33m^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 168:[0m
+[0mlocal oldchan=$(uci_get wireless @wifi-device[0] channel)[0m
+[33m^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m              ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 169:[0m
+[0mlocal iface=$(wlanconfig ath create wlandev wifi0 wlanmode sta)[0m
+[33m^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m            ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 172:[0m
+[0mWPA_CLI global interface_add ${iface} "" athr /var/run/wpa_supplicant-${iface}[0m
+[32m                             ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                      ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI global interface_add "${iface}" "" athr /var/run/wpa_supplicant-"${iface}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 173:[0m
+[0mnid=$(wpa_cli -p /var/run/wpa_supplicant-${iface} -i ${iface} add_network)[0m
+[32m                                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                     ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+nid=$(wpa_cli -p /var/run/wpa_supplicant-"${iface}" -i "${iface}" add_network)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 176:[0m
+[0mWPA_CLI ${iface} set_network ${nid} ssid \"${ssid}\"[0m
+[32m        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI "${iface}" set_network "${nid}" ssid \""${ssid}"\"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 177:[0m
+[0mWPA_CLI ${iface} set_network ${nid} scan_freq ${chan}[0m
+[32m        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                              ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI "${iface}" set_network "${nid}" scan_freq "${chan}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 178:[0m
+[0mWPA_CLI ${iface} set_network ${nid} scan_ssid 1[0m
+[32m        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI "${iface}" set_network "${nid}" scan_ssid 1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 181:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} key_mgmt NONE[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" key_mgmt NONE
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 184:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} key_mgmt NONE[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" key_mgmt NONE
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 185:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} wep_key${index} \"${key}\"[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" wep_key"${index}" \""${key}"\"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 186:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} wep_tx_keyidx ${index}[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" wep_tx_keyidx "${index}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 189:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} key_mgmt WPA-PSK[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" key_mgmt WPA-PSK
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 190:[0m
+[0m		WPA_CLI ${iface} set_network ${nid} psk \"${psk}\"[0m
+[32m                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		WPA_CLI "${iface}" set_network "${nid}" psk \""${psk}"\"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 195:[0m
+[0mWPA_CLI ${iface} enable_network ${nid}[0m
+[32m        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI "${iface}" enable_network "${nid}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 197:[0m
+[0mlocal conn_state=[0m
+[33m^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 198:[0m
+[0mwhile [ ${timeout} -gt 0 ]; do[0m
+[32m        ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+while [ "${timeout}" -gt 0 ]; do
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 200:[0m
+[0m	conn_state=$(wpa_cli -p /var/run/wpa_supplicant-${iface} -i ${iface} status 2>/dev/null | grep wpa_state | cut -d= -f2)[0m
+[32m                                                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                    ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	conn_state=$(wpa_cli -p /var/run/wpa_supplicant-"${iface}" -i "${iface}" status 2>/dev/null | grep wpa_state | cut -d= -f2)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 201:[0m
+[0m	if [ ${conn_state} = "COMPLETED" ]; then[0m
+[32m             ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ "${conn_state}" = "COMPLETED" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 204:[0m
+[0m	timeout=$((--timeout))[0m
+[33m                   ^-- SC3018 (warning): In POSIX sh, -- is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 208:[0m
+[0mif [ ${conn_state} != "COMPLETED" ]; then[0m
+[32m     ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+if [ "${conn_state}" != "COMPLETED" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 210:[0m
+[0m	WPA_CLI ${iface} remove_network ${nid}[0m
+[32m                ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                        ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	WPA_CLI "${iface}" remove_network "${nid}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 211:[0m
+[0m	WPA_CLI global interface_remove ${iface}[0m
+[32m                                        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	WPA_CLI global interface_remove "${iface}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 212:[0m
+[0m	iwconfig ath0 channel ${oldchan}[0m
+[32m                              ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	iwconfig ath0 channel "${oldchan}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 213:[0m
+[0m	wlanconfig ${iface} destroy[0m
+[32m                   ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	wlanconfig "${iface}" destroy
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 214:[0m
+[0m	kill $(cat /var/run/wpa_supplicant-configme.pid)[0m
+[33m             ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 219:[0m
+[0mWPA_CLI ${iface} remove_network ${nid}[0m
+[32m        ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI "${iface}" remove_network "${nid}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 220:[0m
+[0mWPA_CLI global interface_remove ${iface}[0m
+[32m                                ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+WPA_CLI global interface_remove "${iface}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 221:[0m
+[0miwconfig ath0 channel ${oldchan}[0m
+[32m                      ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+iwconfig ath0 channel "${oldchan}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 222:[0m
+[0mwlanconfig ${iface} destroy[0m
+[32m           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+wlanconfig "${iface}" destroy
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/wifi_try line 223:[0m
+[0mkill $(cat /var/run/wpa_supplicant-configme.pid)[0m
+[33m     ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...
+  https://www.shellcheck.net/wiki/SC2166 -- Prefer [ p ] || [ q ] as [ p -o q...

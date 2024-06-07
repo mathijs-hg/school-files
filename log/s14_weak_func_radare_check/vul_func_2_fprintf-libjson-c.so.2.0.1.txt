@@ -1,0 +1,87 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibjson-c.so.2.0.1[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mlibjson-c.so.2.0.1[0m
+
+nop
+jr ra
+addiu sp, sp, 0x28
+lui gp, 2
+addiu gp, gp, -0x1168
+addu gp, gp, t9
+lw v0, -0x7fe8(gp)
+addiu sp, sp, -0x28
+sw gp, 0x10(sp)
+lw v0, -0x6d5c(v0)
+sw a2, 0x30(sp)
+addiu a2, sp, 0x2c
+sw a1, 0x2c(sp)
+sw ra, 0x24(sp)
+sw a3, 0x34(sp)
+move a1, a0
+beqz v0, 0x223c
+sw a2, 0x18(sp)
+lw t9, -sym.imp.vsyslog(gp)
+nop
+jalr t9
+addiu a0, zero, 3
+b 0x2250
+nop
+lw v0, -0x7f4c(gp)
+[31mlw t9, -sym.imp.vfprintf(gp)[0m
+lw a0, (v0)
+jalr t9
+nop
+lw ra, 0x24(sp)
+nop
+jr ra
+addiu sp, sp, 0x28
+lui gp, 2
+addiu gp, gp, -0x11e0
+addu gp, gp, t9
+lw v0, -0x7fe8(gp)
+addiu sp, sp, -0x28
+sw gp, 0x10(sp)
+lw v0, -0x6d5c(v0)
+sw a2, 0x30(sp)
+addiu a2, sp, 0x2c
+sw a1, 0x2c(sp)
+sw ra, 0x24(sp)
+sw a3, 0x34(sp)
+move a1, a0
+beqz v0, 0x22b4
+sw a2, 0x18(sp)
+lw t9, -sym.imp.vsyslog(gp)
+nop
+jalr t9
+addiu a0, zero, 6
+b 0x22c8
+nop
+lw v0, -0x7f4c(gp)
+[31mlw t9, -sym.imp.vfprintf(gp)[0m
+lw a0, (v0)
+jalr t9
+nop
+lw ra, 0x24(sp)
+nop
+jr ra
+addiu sp, sp, 0x28
+nop
+nop
+lui gp, 2
+addiu gp, gp, -0x1260
+addu gp, gp, t9
+lw v0, -0x7fdc(gp)
+jr ra
+addiu v0, v0, -0x7770
+jr ra
+addiu v0, zero, 0xb00
+lui gp, 2
+addiu gp, gp, -0x1280
+addu gp, gp, t9
+
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m2[0m times [0;33mlibjson-c.so.2.0.1[0m
+

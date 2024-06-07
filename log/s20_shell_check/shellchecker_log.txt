@@ -1,0 +1,82 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 5:[0m
+[0mSTART=12[0m
+[33m^---^ SC2034 (warning): START appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 6:[0m
+[0mSTOP=89[0m
+[33m^--^ SC2034 (warning): STOP appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 9:[0m
+[0mUSE_PROCD=1[0m
+[33m^-------^ SC2034 (warning): USE_PROCD appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 34:[0m
+[0m	local log_buffer_size log_size[0m
+[33m        ^----------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 36:[0m
+[0m	[ $log_buffer_size -eq 0 -a $log_size -gt 0 ] && log_buffer_size=$log_size[0m
+[32m          ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                 ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[32m                                    ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ "$log_buffer_size" -eq 0 -a "$log_size" -gt 0 ] && log_buffer_size=$log_size
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 37:[0m
+[0m	[ $log_buffer_size -eq 0 ] && log_buffer_size=16[0m
+[32m          ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ "$log_buffer_size" -eq 0 ] && log_buffer_size=16
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 47:[0m
+[0m	PIDCOUNT="$(( ${PIDCOUNT} + 1))"[0m
+[32m                      ^---------^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 48:[0m
+[0m	local pid_file="/var/run/logread.${PIDCOUNT}.pid"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 49:[0m
+[0m	local log_file log_size[0m
+[33m        ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 65:[0m
+[0m	PIDCOUNT="$(( ${PIDCOUNT} + 1))"[0m
+[32m                      ^---------^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 66:[0m
+[0m	local pid_file="/var/run/logread.${PIDCOUNT}.pid"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 67:[0m
+[0m	local log_ip log_port log_proto log_prefix[0m
+[33m        ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 80:[0m
+[0m	local cfg="$1"[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/log line 81:[0m
+[0m	local hostname mac[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- START appears unused. Verify use ...
+  https://www.shellcheck.net/wiki/SC2166 -- Prefer [ p ] && [ q ] as [ p -a q...
+  https://www.shellcheck.net/wiki/SC3043 -- In POSIX sh, 'local' is undefined.

@@ -1,0 +1,364 @@
+<br />
+<pre>int flash_image(libmtd_t libmtd,mtd_dev_info *mtd,ubigen_info *ui,ubi_scan_info *si)</pre>
+<br />
+<pre>{</pre>
+<pre>  char cVar1;</pre>
+<pre>  uint uVar2;</pre>
+<pre>  char *pcVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  int *piVar6;</pre>
+<pre>  undefined4 uVar7;</pre>
+<pre>  int iVar8;</pre>
+<pre>  uint uVar9;</pre>
+<pre>  uint uVar10;</pre>
+<pre>  int iVar11;</pre>
+<pre>  undefined4 *puVar12;</pre>
+<pre>  uint32_t uVar13;</pre>
+<pre>  uint uVar14;</pre>
+<pre>  uint *ss;</pre>
+<pre>  undefined4 *puVar15;</pre>
+<pre>  int iVar16;</pre>
+<pre>  uint *puVar17;</pre>
+<pre>  undefined4 uVar18;</pre>
+<pre>  undefined4 uVar19;</pre>
+<pre>  code *pcVar20;</pre>
+<pre>  undefined *puVar21;</pre>
+<pre>  DItype DVar22;</pre>
+<pre>  undefined4 in_stack_fffffee8;</pre>
+<pre>  undefined4 in_stack_fffffeec;</pre>
+<pre>  undefined4 in_stack_fffffef0;</pre>
+<pre>  undefined4 in_stack_fffffef4;</pre>
+<pre>  int iStack_108;</pre>
+<pre>  undefined4 uStack_104;</pre>
+<pre>  undefined *local_100 [2];</pre>
+<pre>  stat st;</pre>
+<pre>  int local_48;</pre>
+<pre>  int local_44;</pre>
+<pre>  int local_40;</pre>
+<pre>  uint32_t _x;</pre>
+<pre>  undefined *local_2c;</pre>
+<pre>  </pre>
+<pre>  pcVar3 = args.image;</pre>
+<pre>  local_100[0] = &amp;_gp;</pre>
+<pre>  iVar4 = strcmp(args.image,"-");</pre>
+<pre>  if (iVar4 == 0) {</pre>
+<pre>    if (((uint)args.image_sz | args.image_sz._4_4_) == 0) {</pre>
+<pre>      (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                (**(undefined4 **)(local_100[0] + -0x7ee8),</pre>
+<pre>                 "%s: error!: must use \'-S\' with non-zero value when reading from stdin\n",</pre>
+<pre>                 "ubiformat");</pre>
+<pre>      return -1;</pre>
+<pre>    }</pre>
+<pre>    iVar4 = (**(code **)(local_100[0] + -0x7ee0))(0);</pre>
+<pre>    if (-1 &lt; iVar4) {</pre>
+<pre>LAB_00402dec:</pre>
+<pre>      DVar22 = __divdi3(CONCAT44(in_stack_fffffeec,in_stack_fffffee8),</pre>
+<pre>                        CONCAT44(in_stack_fffffef4,in_stack_fffffef0));</pre>
+<pre>      local_40 = (int)DVar22;</pre>
+<pre>      if (si-&gt;good_cnt &lt; local_40) {</pre>
+<pre>        puVar12 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>        puVar15 = (undefined4 *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>        uVar18 = *puVar15;</pre>
+<pre>        (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                  (*puVar12,"%s: error!: file \"%s\" is too large (%lld bytes)\n","ubiformat",</pre>
+<pre>                   args.image);</pre>
+<pre>        uVar7 = *puVar12;</pre>
+<pre>        (**(code **)(local_100[0] + -0x7e58))(uVar18);</pre>
+<pre>        (**(code **)(local_100[0] + -0x7e90))(uVar7,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c);</pre>
+<pre>out_close:</pre>
+<pre>        (**(code **)(local_100[0] + -0x7f10))(iVar4);</pre>
+<pre>        return -1;</pre>
+<pre>      }</pre>
+<pre>      DVar22 = __moddi3(CONCAT44(in_stack_fffffeec,in_stack_fffffee8),</pre>
+<pre>                        CONCAT44(in_stack_fffffef4,in_stack_fffffef0));</pre>
+<pre>      if (DVar22 == 0) {</pre>
+<pre>        if ((args._0_4_ &amp; 4) != 0) {</pre>
+<pre>          (**(code **)(local_100[0] + -0x7e50))</pre>
+<pre>                    ("%s: will write %d eraseblocks\n","ubiformat",local_40);</pre>
+<pre>        }</pre>
+<pre>        puVar21 = local_100[0];</pre>
+<pre>        if (mtd-&gt;eb_cnt &lt; 1) {</pre>
+<pre>          iVar16 = 0;</pre>
+<pre>LAB_00403010:</pre>
+<pre>          if ((args._0_4_ &amp; 6) == 0) {</pre>
+<pre>            (**(code **)(puVar21 + -0x7e44))(10);</pre>
+<pre>            puVar21 = local_100[0];</pre>
+<pre>          }</pre>
+<pre>          (**(code **)(puVar21 + -0x7f10))(iVar4);</pre>
+<pre>          return iVar16 + 1;</pre>
+<pre>        }</pre>
+<pre>        local_48 = 0;</pre>
+<pre>        local_44 = 0;</pre>
+<pre>        iVar16 = 0;</pre>
+<pre>        uVar9 = args._0_4_;</pre>
+<pre>LAB_00402e94:</pre>
+<pre>        iVar8 = -(mtd-&gt;eb_size + 0xeU &amp; 0xfffffff8);</pre>
+<pre>        ss = (uint *)((int)local_100 + iVar8);</pre>
+<pre>        if ((uVar9 &amp; 6) == 0) {</pre>
+<pre>          DVar22 = __divdi3(*(DItype *)((int)&amp;st + iVar8 + -0x20),</pre>
+<pre>                            *(DItype *)((int)&amp;st + iVar8 + -0x18));</pre>
+<pre>          (**(code **)(local_100[0] + -0x7e50))</pre>
+<pre>                    ("\rubiformat: flashing eraseblock %d -- %2lld %% complete  ",iVar16,(int)DVar22</pre>
+<pre>                     ,(int)((ulonglong)DVar22 &gt;&gt; 0x20));</pre>
+<pre>          (**(code **)(local_100[0] + -0x7e80))(**(undefined4 **)(local_100[0] + -0x7e54));</pre>
+<pre>          uVar13 = si-&gt;ec[iVar16];</pre>
+<pre>          uVar9 = args._0_4_;</pre>
+<pre>          puVar21 = local_100[0];</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          uVar13 = si-&gt;ec[iVar16];</pre>
+<pre>        }</pre>
+<pre>        if (uVar13 != 0xfffffffc) {</pre>
+<pre>          if ((uVar9 &amp; 4) != 0) {</pre>
+<pre>            (**(code **)(puVar21 + -0x7e50))("%s: eraseblock %d: erase","ubiformat",iVar16);</pre>
+<pre>            (**(code **)(local_100[0] + -0x7e80))(**(undefined4 **)(local_100[0] + -0x7e54));</pre>
+<pre>          }</pre>
+<pre>          iVar5 = mtd_erase(libmtd,mtd,args.node_fd,iVar16);</pre>
+<pre>          if (iVar5 == 0) {</pre>
+<pre>            if (local_48 == 0) {</pre>
+<pre>              iVar5 = mtd-&gt;eb_size;</pre>
+<pre>              puVar17 = ss;</pre>
+<pre>joined_r0x00403434:</pre>
+<pre>              for (; iVar5 != 0; iVar5 = iVar5 - iVar11) {</pre>
+<pre>                iVar11 = (**(code **)(local_100[0] + -0x7ea8))(iVar4,puVar17,iVar5);</pre>
+<pre>                if (iVar11 == 0) {</pre>
+<pre>                  puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>                  (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                            (*puVar15,"%s: error!: eof reached; %zu bytes remaining\n","ubiformat",</pre>
+<pre>                             iVar5);</pre>
+<pre>                  goto LAB_004036a0;</pre>
+<pre>                }</pre>
+<pre>                if (iVar11 &lt; 1) goto LAB_00403494;</pre>
+<pre>                puVar17 = (uint *)((int)puVar17 + iVar11);</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            uVar9 = (uint)args.ec;</pre>
+<pre>            uVar2 = args.ec._4_4_;</pre>
+<pre>            if ((args._0_4_ &amp; 8) == 0) {</pre>
+<pre>              if ((int)si-&gt;ec[iVar16] &lt; 0) {</pre>
+<pre>                uVar9 = *(uint *)&amp;si-&gt</span>ean_ec;</pre>
+<pre>                uVar2 = *(uint *)((int)&amp;si-&gt</span>ean_ec + 4);</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                uVar9 = si-&gt;ec[iVar16] + 1;</pre>
+<pre>                uVar2 = 0;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            if ((args._0_4_ &amp; 4) != 0) {</pre>
+<pre>              (**(code **)(local_100[0] + -0x7e50))(", change EC to %lld");</pre>
+<pre>              (**(code **)(local_100[0] + -0x7e80))(**(undefined4 **)(local_100[0] + -0x7e54));</pre>
+<pre>            }</pre>
+<pre>            uVar10 = *ss;</pre>
+<pre>            uVar14 = ui-&gt;image_seq;</pre>
+<pre>            if ((uVar10 &gt;&gt; 0x18 | uVar10 &lt;&lt; 0x18 | (uVar10 &amp; 0xff00) &lt;&lt; 8 | (uVar10 &amp; 0xff0000) &gt;&gt; 8</pre>
+<pre>                ) == 0x55424923) {</pre>
+<pre>              uVar13 = mtd_crc32(0xffffffff,ss,0x3c);</pre>
+<pre>              uVar10 = *(uint *)((int)&amp;st + iVar8 + 0x34);</pre>
+<pre>              uVar10 = uVar10 &gt;&gt; 0x18 | uVar10 &lt;&lt; 0x18 | (uVar10 &amp; 0xff00) &lt;&lt; 8 |</pre>
+<pre>                       (uVar10 &amp; 0xff0000) &gt;&gt; 8;</pre>
+<pre>              if (uVar13 == uVar10) {</pre>
+<pre>                *(uint *)((int)&amp;st + iVar8 + 4) =</pre>
+<pre>                     uVar9 &gt;&gt; 0x18 | uVar9 &lt;&lt; 0x18 | (uVar9 &amp; 0xff00) &lt;&lt; 8 | (uVar9 &amp; 0xff0000) &gt;&gt; 8</pre>
+<pre>                ;</pre>
+<pre>                *(uint *)((int)&amp;st + iVar8 + 0x10) =</pre>
+<pre>                     uVar14 &gt;&gt; 0x18 | uVar14 &lt;&lt; 0x18 | (uVar14 &amp; 0xff00) &lt;&lt; 8 |</pre>
+<pre>                     (uVar14 &amp; 0xff0000) &gt;&gt; 8;</pre>
+<pre>                *(uint *)((int)&amp;st + iVar8) =</pre>
+<pre>                     uVar2 &gt;&gt; 0x18 | uVar2 &lt;&lt; 0x18 | (uVar2 &amp; 0xff00) &lt;&lt; 8 | (uVar2 &amp; 0xff0000) &gt;&gt; 8</pre>
+<pre>                ;</pre>
+<pre>                uVar13 = mtd_crc32(0xffffffff,ss,0x3c);</pre>
+<pre>                *(uint32_t *)((int)&amp;st + iVar8 + 0x34) =</pre>
+<pre>                     uVar13 &gt;&gt; 0x18 | uVar13 &lt;&lt; 0x18 | (uVar13 &amp; 0xff00) &lt;&lt; 8 |</pre>
+<pre>                     (uVar13 &amp; 0xff0000) &gt;&gt; 8;</pre>
+<pre>                if ((args._0_4_ &amp; 4) != 0) {</pre>
+<pre>                  (**(code **)(local_100[0] + -0x7e70))(", write data");</pre>
+<pre>                  (**(code **)(local_100[0] + -0x7e80))(**(undefined4 **)(local_100[0] + -0x7e54));</pre>
+<pre>                }</pre>
+<pre>                iVar5 = mtd-&gt;eb_size + -1;</pre>
+<pre>                if (-1 &lt; iVar5) {</pre>
+<pre><span class="green">                  cVar1 = *(char *)((int)ss + iVar5)</span></span></pre>
+<pre>                  while (cVar1 == -1) {</pre>
+<pre>                    iVar5 = iVar5 + -1;</pre>
+<pre>                    if (iVar5 == -1) break;</pre>
+<pre><span class="green">                    cVar1 = *(char *)((int)ss + iVar5)</span></span></pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                iVar11 = mtd-&gt</span>in_io_size;</pre>
+<pre>                *(undefined4 *)((int)&amp;st + iVar8 + -0x20) = 0;</pre>
+<pre>                if (iVar11 == 0) {</pre>
+<pre>                  trap(0x1c00);</pre>
+<pre>                }</pre>
+<pre>                *(uint **)((int)&amp;st + iVar8 + -0x1c) = ss;</pre>
+<pre>                *(undefined4 *)((int)&amp;st + iVar8 + -0x14) = 0;</pre>
+<pre>                *(undefined4 *)((int)&amp;iStack_108 + iVar8) = 0;</pre>
+<pre>                *(undefined4 *)((int)&amp;uStack_104 + iVar8) = 0;</pre>
+<pre>                *(int *)((int)&amp;st + iVar8 + -0x18) = iVar11 * ((iVar5 + iVar11) / iVar11);</pre>
+<pre>                iVar5 = mtd_write(libmtd,mtd,args.node_fd,iVar16,*(int *)((int)&amp;st + iVar8 + -0x20),</pre>
+<pre>                                  *(void **)((int)&amp;st + iVar8 + -0x1c),</pre>
+<pre>                                  *(int *)((int)&amp;st + iVar8 + -0x18),</pre>
+<pre>                                  *(void **)((int)&amp;st + iVar8 + -0x14),</pre>
+<pre>                                  *(int *)((int)&amp;iStack_108 + iVar8),</pre>
+<pre>                                  *(uint8_t *)((int)&amp;uStack_104 + iVar8));</pre>
+<pre>                if (iVar5 == 0) {</pre>
+<pre>                  local_44 = local_44 + 1;</pre>
+<pre>                  puVar21 = local_100[0];</pre>
+<pre>                  if (local_40 &lt;= local_44) goto LAB_00403010;</pre>
+<pre>                  local_48 = 0;</pre>
+<pre>                  uVar9 = args._0_4_;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  local_2c = &amp;DAT_00410000;</pre>
+<pre>                  piVar6 = (int *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>                  iVar5 = *piVar6;</pre>
+<pre>                  (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                            (**(undefined4 **)(local_100[0] + -0x7ee8),</pre>
+<pre>                             "%s: error!: cannot write eraseblock %d\n","ubiformat",iVar16);</pre>
+<pre>                  _x = **(uint32_t **)(local_100[0] + -0x7ee8);</pre>
+<pre>                  uVar7 = (**(code **)(local_100[0] + -0x7e58))(iVar5);</pre>
+<pre>                  puVar21 = local_100[0];</pre>
+<pre>                  *(undefined4 *)((int)&amp;st + iVar8 + -0x1c) = uVar7;</pre>
+<pre>                  *(int *)((int)&amp;st + iVar8 + -0x20) = iVar5;</pre>
+<pre>                  (**(code **)(puVar21 + -0x7e90))(_x,"%*serror %d (%s)\n",0xb,local_2c + -0x1c74);</pre>
+<pre>                  if (*piVar6 != 5) goto out_close;</pre>
+<pre>                  iVar8 = mtd_torture(libmtd,mtd,args.node_fd,iVar16);</pre>
+<pre>                  if (iVar8 != 0) {</pre>
+<pre>                    iVar8 = mark_bad(mtd,si,iVar16);</pre>
+<pre>                    if (iVar8 == 0) {</pre>
+<pre>                      local_48 = 1;</pre>
+<pre>                      uVar9 = args._0_4_;</pre>
+<pre>                      puVar21 = local_100[0];</pre>
+<pre>                      goto LAB_00402fe4;</pre>
+<pre>                    }</pre>
+<pre>                    goto out_close;</pre>
+<pre>                  }</pre>
+<pre>                  local_48 = 1;</pre>
+<pre>                  uVar9 = args._0_4_;</pre>
+<pre>                  puVar21 = local_100[0];</pre>
+<pre>                }</pre>
+<pre>                goto LAB_00402fe4;</pre>
+<pre>              }</pre>
+<pre>              puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>              pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>              uVar7 = *puVar15;</pre>
+<pre>              *(uint *)((int)&amp;st + iVar8 + -0x20) = uVar10;</pre>
+<pre>              (*pcVar20)(uVar7,"%s: error!: bad CRC %#08x, should be %#08x\n\n","ubiformat",uVar13);</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>              pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>              uVar7 = *puVar15;</pre>
+<pre>              *(undefined4 *)((int)&amp;st + iVar8 + -0x20) = 0x55424923;</pre>
+<pre>              (*pcVar20)(uVar7,"%s: error!: bad UBI magic %#08x, should be %#08x\n","ubiformat");</pre>
+<pre>            }</pre>
+<pre>            uVar7 = *puVar15;</pre>
+<pre>            pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>            *(char **)((int)&amp;st + iVar8 + -0x20) = args.image;</pre>
+<pre>            (*pcVar20)(uVar7,"%s: error!: bad EC header at eraseblock %d of \"%s\"\n","ubiformat",</pre>
+<pre>                       local_44);</pre>
+<pre>            goto out_close;</pre>
+<pre>          }</pre>
+<pre>          if ((args._0_4_ &amp; 2) == 0) {</pre>
+<pre>            (**(code **)(local_100[0] + -0x7e44))(10);</pre>
+<pre>          }</pre>
+<pre>          local_2c = &amp;DAT_00410000;</pre>
+<pre>          piVar6 = (int *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>          iVar5 = *piVar6;</pre>
+<pre>          (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                    (**(undefined4 **)(local_100[0] + -0x7ee8),</pre>
+<pre>                     "%s: error!: failed to erase eraseblock %d\n","ubiformat",iVar16);</pre>
+<pre>          _x = **(uint32_t **)(local_100[0] + -0x7ee8);</pre>
+<pre>          uVar7 = (**(code **)(local_100[0] + -0x7e58))(iVar5);</pre>
+<pre>          puVar21 = local_100[0];</pre>
+<pre>          *(undefined4 *)((int)&amp;st + iVar8 + -0x1c) = uVar7;</pre>
+<pre>          *(int *)((int)&amp;st + iVar8 + -0x20) = iVar5;</pre>
+<pre>          (**(code **)(puVar21 + -0x7e90))(_x,"%*serror %d (%s)\n",0xb,local_2c + -0x1c74);</pre>
+<pre>          if ((*piVar6 != 5) ||</pre>
+<pre>             (iVar8 = mark_bad(mtd,si,iVar16), uVar9 = args._0_4_, puVar21 = local_100[0],</pre>
+<pre>             iVar8 != 0)) goto out_close;</pre>
+<pre>        }</pre>
+<pre>LAB_00402fe4:</pre>
+<pre>        iVar16 = iVar16 + 1;</pre>
+<pre>        if (mtd-&gt;eb_cnt &lt;= iVar16) goto LAB_00403010;</pre>
+<pre>        goto LAB_00402e94;</pre>
+<pre>      }</pre>
+<pre>      puVar12 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>      iVar4 = -1;</pre>
+<pre>      puVar15 = (undefined4 *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>      uVar7 = *puVar15;</pre>
+<pre>      (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>                (*puVar12,</pre>
+<pre>                 "%s: error!: file \"%s\" (size %lld bytes) is not multiple of eraseblock size (%d bytes)\n"</pre>
+<pre>                 ,"ubiformat",args.image);</pre>
+<pre>      uVar18 = *puVar12;</pre>
+<pre>      (**(code **)(local_100[0] + -0x7e58))(uVar7);</pre>
+<pre>      pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>      goto LAB_00403944;</pre>
+<pre>    }</pre>
+<pre>    puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>    iVar4 = -1;</pre>
+<pre>    puVar12 = (undefined4 *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>    uVar7 = *puVar12;</pre>
+<pre>    (**(code **)(local_100[0] + -0x7e90))(*puVar15,"%s: error!: failed to dup stdin\n","ubiformat");</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    iVar16 = (**(code **)(local_100[0] + -0x7e5c))(pcVar3,&amp;st);</pre>
+<pre>    iVar4 = -1;</pre>
+<pre>    if (iVar16 == 0) {</pre>
+<pre>      iVar4 = (**(code **)(local_100[0] + -0x7ed4))(args.image,0);</pre>
+<pre>      if (iVar4 != -1) {</pre>
+<pre>        if (iVar4 &lt; 0) {</pre>
+<pre>          return iVar4;</pre>
+<pre>        }</pre>
+<pre>        goto LAB_00402dec;</pre>
+<pre>      }</pre>
+<pre>      pcVar20 = *(code **)(local_100[0] + -0x7ef0);</pre>
+<pre>      puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      pcVar20 = *(code **)(local_100[0] + -0x7ef0);</pre>
+<pre>      puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>    }</pre>
+<pre>    puVar12 = (undefined4 *)(*pcVar20)();</pre>
+<pre>    uVar7 = *puVar12;</pre>
+<pre>    (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>              (*puVar15,"%s: error!: cannot open \"%s\"\n","ubiformat",args.image);</pre>
+<pre>  }</pre>
+<pre>  uVar18 = *puVar15;</pre>
+<pre>  (**(code **)(local_100[0] + -0x7e58))(uVar7);</pre>
+<pre>  pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>LAB_00403944:</pre>
+<pre>  (*pcVar20)(uVar18,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c);</pre>
+<pre>  return iVar4;</pre>
+<pre>LAB_00403494:</pre>
+<pre>  piVar6 = (int *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>  iVar11 = *piVar6;</pre>
+<pre>  if ((iVar11 != 4) &amp;&amp; (iVar11 != 0xb)) {</pre>
+<pre>    puVar15 = *(undefined4 **)(local_100[0] + -0x7ee8);</pre>
+<pre>    (**(code **)(local_100[0] + -0x7e90))</pre>
+<pre>              (*puVar15,"%s: error!: reading failed; %zu bytes remaining\n","ubiformat",iVar5);</pre>
+<pre>    uVar18 = *puVar15;</pre>
+<pre>    uVar7 = (**(code **)(local_100[0] + -0x7e58))(iVar11);</pre>
+<pre>    pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>    *(int *)((int)&amp;st + iVar8 + -0x20) = iVar11;</pre>
+<pre>    *(undefined4 *)((int)&amp;st + iVar8 + -0x1c) = uVar7;</pre>
+<pre>    (*pcVar20)(uVar18,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c);</pre>
+<pre>LAB_004036a0:</pre>
+<pre>    puVar12 = (undefined4 *)(**(code **)(local_100[0] + -0x7ef0))();</pre>
+<pre>    uVar7 = *puVar15;</pre>
+<pre>    pcVar20 = *(code **)(local_100[0] + -0x7e90);</pre>
+<pre>    uVar19 = *puVar12;</pre>
+<pre>    *(char **)((int)&amp;st + iVar8 + -0x20) = args.image;</pre>
+<pre>    (*pcVar20)(uVar7,"%s: error!: failed to read eraseblock %d from \"%s\"\n","ubiformat",local_44);</pre>
+<pre>    uVar18 = *puVar15;</pre>
+<pre>    uVar7 = (**(code **)(local_100[0] + -0x7e58))(uVar19);</pre>
+<pre>    puVar21 = local_100[0];</pre>
+<pre>    *(undefined4 *)((int)&amp;st + iVar8 + -0x20) = uVar19;</pre>
+<pre>    *(undefined4 *)((int)&amp;st + iVar8 + -0x1c) = uVar7;</pre>
+<pre>    (**(code **)(puVar21 + -0x7e90))(uVar18,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c);</pre>
+<pre>    goto out_close;</pre>
+<pre>  }</pre>
+<pre>  goto joined_r0x00403434;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 39c301da203b0290</pre>

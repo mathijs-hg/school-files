@@ -1,0 +1,36 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/bin/board_detect line 3:</span></pre>
+<pre></span>[ -d "/etc/board.d/" -a ! -f "/etc/board.json" ] &amp;&amp; {</span></pre>
+<pre><span class="orange">                     ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/bin/board_detect line 4:</span></pre>
+<pre></span>	for a in `ls /etc/board.d/*`; do</span></pre>
+<pre><span class="red">                 ^-----------------^ SC2045 (error): Iterating over ls output is fragile. Use globs.</span></pre>
+<pre><span class="green">                 ^-----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	for a in $(ls /etc/board.d/*); do</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/bin/board_detect line 5:</span></pre>
+<pre></span>		[ -x $a ] || continue</span></span></pre>
+<pre><span class="green">                     ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		[ -x "$a" ] || continue;</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/bin/board_detect line 6:</span></pre>
+<pre></span>		$(. $a)</span></pre>
+<pre><span class="orange">                ^-----^ SC2091 (warning): Remove surrounding $() to avoid executing output (or use eval if intentional).</span></pre>
+<pre><span class="orange">                    ^-- SC1090 (warning): ShellCheck can't follow non-constant source. Use a directive to specify location.</span></pre>
+<pre><span class="green">                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		$(. "$a")</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2045" title="https://www.shellcheck.net/wiki/SC2045" target="_blank" >https://www.shellcheck.net/wiki/SC2045</a> -- Iterating over ls output is fragi...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC1090" title="https://www.shellcheck.net/wiki/SC1090" target="_blank" >https://www.shellcheck.net/wiki/SC1090</a> -- ShellCheck can't follow non-const...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2091" title="https://www.shellcheck.net/wiki/SC2091" target="_blank" >https://www.shellcheck.net/wiki/SC2091</a> -- Remove surrounding $() to avoid e...</pre>

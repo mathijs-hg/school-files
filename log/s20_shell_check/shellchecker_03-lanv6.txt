@@ -1,0 +1,1989 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 5:[0m
+[0m. /lib/functions.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 6:[0m
+[0m. /lib/functions/network.sh[0m
+[32m  ^-----------------------^ SC1091 (info): Not following: /lib/functions/network.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 7:[0m
+[0m. /usr/share/libubox/jshn.sh[0m
+[32m  ^------------------------^ SC1091 (info): Not following: /usr/share/libubox/jshn.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 8:[0m
+[0m. /lib/netifd/netifd-proto.sh[0m
+[32m  ^-------------------------^ SC1091 (info): Not following: /lib/netifd/netifd-proto.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 11:[0m
+[0m	local ip4="$1"[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 12:[0m
+[0m	local oIFS="$IFS"; IFS="."; set -- $ip4; IFS="$oIFS"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                                           ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local oIFS="$IFS"; IFS="."; set -- "$ip4"; IFS="$oIFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 13:[0m
+[0m	local prefix=$(printf "2002:%02x%02x:%02x%02x:1::" $1 $2 $3 $4)[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                     ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                                           ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local prefix=$(printf "2002:%02x%02x:%02x%02x:1::" "$1" "$2" "$3" "$4")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 19:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 20:[0m
+[0m	local var="$2"[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 21:[0m
+[0m	ifstr=`ubus call network.interface.$iface status | grep '"l3_device": '`[0m
+[32m              ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                           ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	ifstr=$(ubus call network.interface."$iface" status | grep '"l3_device": ')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 29:[0m
+[0m	local ifname="$1"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 30:[0m
+[0m	local prefix="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 31:[0m
+[0m	local prefixlen="$3"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 32:[0m
+[0m	local mode="$4"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 33:[0m
+[0m	local file="$5"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 34:[0m
+[0m	local dns1="$6"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 35:[0m
+[0m	local dns2="$7"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 39:[0m
+[0m	if [ "$device_mode" == "apmode" ]; then[0m
+[33m                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 45:[0m
+[0m	config_get device_role $device_id role "AP"[0m
+[32m                               ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	config_get device_role "$device_id" role "AP"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 47:[0m
+[0m	if [ "$device_role" == "RE" ]; then[0m
+[33m              ^----------^ SC2154 (warning): device_role is referenced but not assigned (did you mean 'device_mode'?).[0m
+[33m                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 51:[0m
+[0m	echo -e "interface $ifname " > "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 52:[0m
+[0m	echo -e "{" >> "$file"[0m
+[32m        ^--------------------^ SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 53:[0m
+[0m	echo -e "\tMaxRtrAdvInterval 10;" >> "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 54:[0m
+[0m	echo -e "\tMinRtrAdvInterval 5;" >> "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 55:[0m
+[0m	echo -e "\tAdvDefaultLifetime 1800;" >> "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 56:[0m
+[0m	echo -e "\tAdvSendAdvert on;" >> "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 58:[0m
+[0m	if [ "$mode" == "prefix" ]; then[0m
+[33m                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 59:[0m
+[0m		echo -e "\tAdvManagedFlag off;" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 60:[0m
+[0m		echo -e "\tAdvOtherConfigFlag on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 61:[0m
+[0m		echo -e "\tprefix $prefix/$prefixlen" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 62:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 63:[0m
+[0m		echo -e "\t\tAdvOnLink on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 64:[0m
+[0m		echo -e "\t\tAdvAutonomous on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 65:[0m
+[0m		echo -e "\t\tAdvRouterAddr on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 66:[0m
+[0m		echo -e "\t\tAdvPreferredLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 67:[0m
+[0m		echo -e "\t\tAdvValidLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 68:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 69:[0m
+[0m	elif [ "$mode" == "dhcp6s" ]; then[0m
+[33m                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 70:[0m
+[0m		echo -e "\tAdvManagedFlag on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 71:[0m
+[0m		echo -e "\tAdvOtherConfigFlag on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 72:[0m
+[0m	elif [ "$mode" == "rdnss" ]; then[0m
+[33m                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 73:[0m
+[0m		echo -e "\tAdvManagedFlag off;" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 74:[0m
+[0m		echo -e "\tAdvOtherConfigFlag off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 75:[0m
+[0m		echo -e "\tprefix $prefix/$prefixlen" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 76:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 77:[0m
+[0m		echo -e "\t\tAdvOnLink on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 78:[0m
+[0m		echo -e "\t\tAdvAutonomous on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 79:[0m
+[0m		echo -e "\t\tAdvRouterAddr on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 80:[0m
+[0m		echo -e "\t\tAdvPreferredLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 81:[0m
+[0m		echo -e "\t\tAdvValidLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 82:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 83:[0m
+[0m		echo -e "\tRDNSS $dns1 $dns2" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 84:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 85:[0m
+[0m		echo -e "\t\tAdvRDNSSPreference 8;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 86:[0m
+[0m		echo -e "\t\tAdvRDNSSOpen off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 87:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 88:[0m
+[0m	elif [ "$mode" == "ndp" ]; then[0m
+[33m                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 89:[0m
+[0m		echo -e "\tAdvManagedFlag off;" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 90:[0m
+[0m		echo -e "\tAdvOtherConfigFlag on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 91:[0m
+[0m		echo -e "\tprefix $prefix/$prefixlen" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 92:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 93:[0m
+[0m		echo -e "\t\tAdvOnLink on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 94:[0m
+[0m		echo -e "\t\tAdvAutonomous on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 95:[0m
+[0m		echo -e "\t\tAdvRouterAddr on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 96:[0m
+[0m		echo -e "\t\tAdvPreferredLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 97:[0m
+[0m		echo -e "\t\tAdvValidLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 98:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 99:[0m
+[0m		echo -e "\tRDNSS $dns1 $dns2" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 100:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 101:[0m
+[0m		echo -e "\t\tAdvRDNSSPreference 8;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 102:[0m
+[0m		echo -e "\t\tAdvRDNSSOpen off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 103:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 104:[0m
+[0m	elif [ "$mode" == "mobile" ]; then[0m
+[33m                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 105:[0m
+[0m		echo -e "\tMinRtrAdvInterval 3;" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 106:[0m
+[0m		echo -e "\tMaxRtrAdvInterval 10;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 107:[0m
+[0m		echo -e "\tAdvDefaultPreference high;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 108:[0m
+[0m		echo -e "\tAdvManagedFlag off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 109:[0m
+[0m		echo -e "\tAdvOtherConfigFlag on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 110:[0m
+[0m		echo -e "\tAdvDefaultLifetime 30;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 111:[0m
+[0m		echo -e "\tprefix $prefix/$prefixlen" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 112:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 113:[0m
+[0m		echo -e "\t\tAdvPreferredLifetime 120;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 114:[0m
+[0m		echo -e "\t\tAdvValidLifetime 300;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 115:[0m
+[0m		echo -e "\t\tAdvOnLink on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 116:[0m
+[0m		echo -e "\t\tAdvAutonomous on;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 117:[0m
+[0m		echo -e "\t\tAdvRouterAddr off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 118:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 119:[0m
+[0m		echo -e "\tRDNSS $dns1 $dns2" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 120:[0m
+[0m		echo -e "\t{" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 121:[0m
+[0m		echo -e "\t\tAdvRDNSSPreference 8;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 122:[0m
+[0m		echo -e "\t\tAdvRDNSSOpen off;" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 123:[0m
+[0m		echo -e "\t};" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 125:[0m
+[0m	echo -e "};" >> "$file"[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 129:[0m
+[0m	local wan_ifname="$1"[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 130:[0m
+[0m	local lan_ifname="$2"[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 131:[0m
+[0m	local prefix="$3"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 132:[0m
+[0m	local prefixlen="$4"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 133:[0m
+[0m	local file="/var/etc/ndppd.conf"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 135:[0m
+[0m	[ "$wan_ifname" == "rmnet_mhi0.1" -o "$wan_ifname" == "wwan0" ] && {[0m
+[33m                        ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                          ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[32m                                                                        ^-- SC2015 (info): Note that A && B || C is not if-then-else. C may run when A is true.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 136:[0m
+[0m		echo -e "route-ttl 30000" > "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 137:[0m
+[0m		echo -e "address-ttl 30000" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 138:[0m
+[0m		echo -e "proxy $wan_ifname {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 139:[0m
+[0m		echo -e "router yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 140:[0m
+[0m		echo -e "timeout 1000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 141:[0m
+[0m		echo -e "autowire no" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 142:[0m
+[0m		echo -e "keepalive yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 143:[0m
+[0m		echo -e "retries 3" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 144:[0m
+[0m		echo -e "ttl 600000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 145:[0m
+[0m		echo -e "rule $prefix/$prefixlen {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 146:[0m
+[0m		echo -e "iface $lan_ifname" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 147:[0m
+[0m		echo -e "autovia no" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 148:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 149:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 151:[0m
+[0m		echo -e "route-ttl 30000" > "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 152:[0m
+[0m		echo -e "address-ttl 30000" >> "$file"[0m
+[32m                ^-- SC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 153:[0m
+[0m		echo -e "proxy $wan_ifname {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 154:[0m
+[0m		echo -e "router yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 155:[0m
+[0m		echo -e "timeout 1000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 156:[0m
+[0m		echo -e "autowire yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 157:[0m
+[0m		echo -e "keepalive yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 158:[0m
+[0m		echo -e "retries 3" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 159:[0m
+[0m		echo -e "ttl 600000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 160:[0m
+[0m		echo -e "rule $prefix/$prefixlen {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 161:[0m
+[0m		echo -e "iface $lan_ifname" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 162:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 163:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 165:[0m
+[0m		echo -e "proxy $lan_ifname {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 166:[0m
+[0m		echo -e "router yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 167:[0m
+[0m		echo -e "timeout 1000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 168:[0m
+[0m		echo -e "autowire yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 169:[0m
+[0m		echo -e "keepalive yes" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 170:[0m
+[0m		echo -e "retries 3" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 171:[0m
+[0m		echo -e "ttl 600000" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 172:[0m
+[0m		echo -e "rule $prefix/$prefixlen {" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 173:[0m
+[0m		echo -e "iface $wan_ifname" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 174:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 175:[0m
+[0m		echo -e "}" >> "$file"[0m
+[33m                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 180:[0m
+[0m	local radvdfile="$1"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 181:[0m
+[0m	local radvdpidfile="$2"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 182:[0m
+[0m	local ifname="$3"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 183:[0m
+[0m	local count=3[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 184:[0m
+[0m	local running=`ifconfig $ifname | grep RUNNING`[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                      ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local running=$(ifconfig "$ifname" | grep RUNNING)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 185:[0m
+[0m	while [ $count -ne 0 -a ${#running} -eq 0 ]; do[0m
+[33m                             ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 187:[0m
+[0m		running=`ifconfig $ifname | grep RUNNING`[0m
+[32m                        ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                  ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		running=$(ifconfig "$ifname" | grep RUNNING)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 188:[0m
+[0m		let "count=count - 1"[0m
+[33m                ^------------------^ SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 190:[0m
+[0m	network_echo $LOG_PRI_NOTICE "lanv6" "start_radvd"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "lanv6" "start_radvd"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 191:[0m
+[0m	[ -f "$radvdfile" ] &&  network_echo $LOG_PRI_NOTICE "lanv6" "$radvdfile is ok"[0m
+[32m                                             ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ -f "$radvdfile" ] &&  network_echo "$LOG_PRI_NOTICE" "lanv6" "$radvdfile is ok"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 196:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 197:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 198:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 199:[0m
+[0m	local radvdfile="$radvddir/radvd.conf"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 200:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 202:[0m
+[0m	local dns1="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 203:[0m
+[0m	local dns2="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 204:[0m
+[0m	local dns tmp[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 205:[0m
+[0m	local wan_type[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 207:[0m
+[0m	local startip endip leasetime prefix prefixlen[0m
+[33m        ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 208:[0m
+[0m	local startip_tmp endip_tmp leasetime_tmp primary_dns_tmp secondary_dns_tmp[0m
+[33m        ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 209:[0m
+[0m	network_echo $LOG_PRI_NOTICE "lanv6" "start dial, iface=$iface ifname=$ifname"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "lanv6" "start dial, iface=$iface ifname=$ifname"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 233:[0m
+[0m	[ "$wan_type_ppoeshare" == "pppoeshare" ] && {[0m
+[33m           ^-----------------^ SC2154 (warning): wan_type_ppoeshare is referenced but not assigned.[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 234:[0m
+[0m		local index=1[0m
+[33m                ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 237:[0m
+[0m			result=$(echo $tmp | grep .)[0m
+[32m                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			result=$(echo "$tmp" | grep .)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 238:[0m
+[0m			[ -n "$tmp" ] && [ -z "$(echo $tmp | grep "\.")" ] && {[0m
+[32m                                           ^-- SC2143 (style): Use ! grep -q instead of comparing output with [ -z .. ].[0m
+[32m                                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			[ -n "$tmp" ] && [ -z "$(echo "$tmp" | grep "\.")" ] && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 242:[0m
+[0m						index=`expr $index + 1`;;[0m
+[32m                                                      ^---------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                       ^--^ SC2003 (style): expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].[0m
+[32m                                                            ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+						index=$(expr "$index" + 1);;
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 245:[0m
+[0m						index=`expr $index + 1`;;[0m
+[32m                                                      ^---------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                       ^--^ SC2003 (style): expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].[0m
+[32m                                                            ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+						index=$(expr "$index" + 1);;
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 253:[0m
+[0m		[ "$dnsv6_mode" == "static" ] && {[0m
+[33m                   ^---------^ SC2154 (warning): dnsv6_mode is referenced but not assigned.[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 259:[0m
+[0m	[ "$wan_type" == "6to4" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 260:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 262:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan link,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan link,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 267:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan address,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan address,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 274:[0m
+[0m	[ "$wan_type" == "6rd" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 275:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 286:[0m
+[0m		local ip6prefix=$(uci get network.wanv6.ip6prefix)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 287:[0m
+[0m		local ip6prefixlen=$(uci get network.wanv6.ip6prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 288:[0m
+[0m		local ip4prefixlen=$(uci get network.wanv6.ip4prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 289:[0m
+[0m		local ip6subnet=$(6rdcalc "$ip6prefix/$ip6prefixlen" "$ipaddr/$ip4prefixlen")[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 296:[0m
+[0m		network_echo $LOG_PRI_ERR "lanv6" "lanv6 prefix is zero,exit"[0m
+[32m                             ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		network_echo "$LOG_PRI_ERR" "lanv6" "lanv6 prefix is zero,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 317:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 322:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "::" ]	&& {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 327:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 332:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "::" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 355:[0m
+[0m       if [ "$dns1" == "$primary_dns_tmp" -a "$dns2" == "$secondary_dns_tmp" -a "$startip" == "$startip_tmp" -a "$endip" == "$endip_tmp" -a "$leasetime" == "$leasetime_tmp" ];then[0m
+[33m                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                          ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                             ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                                                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                                                             ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                                                                                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                                                                                         ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                                                                                                                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 364:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 365:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 366:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 367:[0m
+[0m	local radvdfile="$radvddir/radvd.conf"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 368:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 370:[0m
+[0m	local dns1="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 371:[0m
+[0m	local dns2="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 372:[0m
+[0m	local dns tmp[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 373:[0m
+[0m	local wan_type[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 375:[0m
+[0m	local prefix prefixlen[0m
+[33m        ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 391:[0m
+[0m	[ "$wan_type_ppoeshare" == "pppoeshare" ] && {[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 392:[0m
+[0m		local index=1[0m
+[33m                ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 395:[0m
+[0m			result=$(echo $tmp | grep .)[0m
+[32m                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			result=$(echo "$tmp" | grep .)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 396:[0m
+[0m			[ -n "$tmp" ] && [ -z "$(echo $tmp | grep "\.")" ] && {[0m
+[32m                                           ^-- SC2143 (style): Use ! grep -q instead of comparing output with [ -z .. ].[0m
+[32m                                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			[ -n "$tmp" ] && [ -z "$(echo "$tmp" | grep "\.")" ] && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 400:[0m
+[0m						index=$(($index+1))[0m
+[32m                                                         ^----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 404:[0m
+[0m						index=$(($index+1))[0m
+[32m                                                         ^----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 413:[0m
+[0m		[ "$dnsv6_mode" == "static" ] && {[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 419:[0m
+[0m	[ "$wan_type" == "6to4" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 420:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 422:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan link,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan link,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 427:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan address,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan address,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 434:[0m
+[0m	[ "$wan_type" == "6rd" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 435:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 446:[0m
+[0m		local ip6prefix=$(uci get network.wanv6.ip6prefix)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 447:[0m
+[0m		local ip6prefixlen=$(uci get network.wanv6.ip6prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 448:[0m
+[0m		local ip4prefixlen=$(uci get network.wanv6.ip4prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 449:[0m
+[0m		local ip6subnet=$(6rdcalc "$ip6prefix/$ip6prefixlen" "$ipaddr/$ip4prefixlen")[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 464:[0m
+[0m	[ "$dns1" == "none" -a "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                            ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 469:[0m
+[0m	[ "$dns1" == "::" -a "$dns2" == "::" ]	&& {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                          ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 474:[0m
+[0m	[ "$dns1" == "::" -a "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                          ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 479:[0m
+[0m	[ "$dns1" == "none" -a "$dns2" == "::" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                            ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 506:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 507:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 508:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 509:[0m
+[0m	local radvdfile="$radvddir/radvd.conf"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 510:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 512:[0m
+[0m	local dns1="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 513:[0m
+[0m	local dns2="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 514:[0m
+[0m	local dns tmp[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 515:[0m
+[0m	local wan_type[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 517:[0m
+[0m	local prefix prefixlen[0m
+[33m        ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 533:[0m
+[0m	[ "$wan_type_ppoeshare" == "pppoeshare" ] && {[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 534:[0m
+[0m		local index=1[0m
+[33m                ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 537:[0m
+[0m			result=$(echo $tmp | grep .)[0m
+[32m                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			result=$(echo "$tmp" | grep .)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 538:[0m
+[0m			[ -n "$tmp" ] && [ -z "$(echo $tmp | grep "\.")" ] && {[0m
+[32m                                           ^-- SC2143 (style): Use ! grep -q instead of comparing output with [ -z .. ].[0m
+[32m                                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			[ -n "$tmp" ] && [ -z "$(echo "$tmp" | grep "\.")" ] && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 542:[0m
+[0m						index=$(($index+1))[0m
+[32m                                                         ^----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 546:[0m
+[0m						index=$(($index+1))[0m
+[32m                                                         ^----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 555:[0m
+[0m		[ "$dnsv6_mode" == "static" ] && {[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 561:[0m
+[0m	[ "$wan_type" == "6to4" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 562:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 564:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan link,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan link,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 569:[0m
+[0m			network_echo $LOG_PRI_ERR "lanv6" "wanv6 type is 6to4,no wan address,exit"[0m
+[32m                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			network_echo "$LOG_PRI_ERR" "lanv6" "wanv6 type is 6to4,no wan address,exit"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 576:[0m
+[0m	[ "$wan_type" == "6rd" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 577:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 588:[0m
+[0m		local ip6prefix=$(uci get network.wanv6.ip6prefix)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 589:[0m
+[0m		local ip6prefixlen=$(uci get network.wanv6.ip6prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 590:[0m
+[0m		local ip4prefixlen=$(uci get network.wanv6.ip4prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 591:[0m
+[0m		local ip6subnet=$(6rdcalc "$ip6prefix/$ip6prefixlen" "$ipaddr/$ip4prefixlen")[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 606:[0m
+[0m	[ "$dns1" == "none" -a "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                            ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 611:[0m
+[0m	[ "$dns1" == "::" -a "$dns2" == "::" ]	&& {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                          ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 616:[0m
+[0m	[ "$dns1" == "::" -a "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                          ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 621:[0m
+[0m	[ "$dns1" == "none" -a "$dns2" == "::" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                            ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 626:[0m
+[0m	[ "$dns1" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 630:[0m
+[0m	[ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 644:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 645:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 646:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 647:[0m
+[0m	local radvdfile="$radvddir/radvd.conf"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 648:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 650:[0m
+[0m	local dns1="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 651:[0m
+[0m	local dns2="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 652:[0m
+[0m	local dns tmp[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 653:[0m
+[0m	local wan_type[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 654:[0m
+[0m	local ppp_type[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 655:[0m
+[0m	local prefix prefixlen[0m
+[33m        ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 656:[0m
+[0m	local wan_ifname[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 664:[0m
+[0m	network_echo $LOG_PRI_NOTICE "lanv6" "start dial, iface=$iface ifname=$ifname"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "lanv6" "start dial, iface=$iface ifname=$ifname"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 666:[0m
+[0m	if [ "$ppp_type" == "pppoeshare" ]; then [0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 667:[0m
+[0m		local tmp_dns arr [0m
+[33m                ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 670:[0m
+[0m		arr=$(echo $tmp_dns|tr " " "\n") [0m
+[32m                           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		arr=$(echo "$tmp_dns"|tr " " "\n") 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 672:[0m
+[0m			if [ $dns1 == "none" ]; then [0m
+[32m                             ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+[1mDid you mean: [0m
+			if [ "$dns1" == "none" ]; then 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 673:[0m
+[0m				dns1=`echo $x|grep ":"` [0m
+[32m                                     ^----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                           ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				dns1=$(echo "$x"|grep ":") 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 674:[0m
+[0m				[ -z ${dns1} ] && dns1="none" [0m
+[32m                                     ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				[ -z "${dns1}" ] && dns1="none" 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 675:[0m
+[0m			elif [ $dns2 == "none" ]; then  [0m
+[32m                               ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+[1mDid you mean: [0m
+			elif [ "$dns2" == "none" ]; then  
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 676:[0m
+[0m				dns2=`echo $x|grep ":"` [0m
+[32m                                     ^----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                           ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				dns2=$(echo "$x"|grep ":") 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 677:[0m
+[0m				[ -z ${dns2} ] && dns2="none" [0m
+[32m                                     ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				[ -z "${dns2}" ] && dns2="none" 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 687:[0m
+[0m	if [ "$ppp_type" == "pppoeshare" ]; then[0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 699:[0m
+[0m	[ "$wan_type" == "6to4" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 700:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 710:[0m
+[0m		local orig_prefix=$(get_tunnel_prefix "$ipaddr")[0m
+[33m                ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                  ^----------------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 711:[0m
+[0m		prefix=$(lua /lib/netifd/lanv6_genrate_ndp_prefix.lua $orig_prefix)[0m
+[32m                                                                      ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		prefix=$(lua /lib/netifd/lanv6_genrate_ndp_prefix.lua "$orig_prefix")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 715:[0m
+[0m	[ "$wan_type" == "6rd" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 716:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 727:[0m
+[0m		local ip6prefix=$(uci get network.wanv6.ip6prefix)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 728:[0m
+[0m		local ip6prefixlen=$(uci get network.wanv6.ip6prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 729:[0m
+[0m		local ip4prefixlen=$(uci get network.wanv6.ip4prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 730:[0m
+[0m		local ip6subnet=$(6rdcalc "$ip6prefix/$ip6prefixlen" "$ipaddr/$ip4prefixlen")[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 745:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 750:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "::" ]	&& {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 755:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 760:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "::" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 765:[0m
+[0m	[ "$dns1" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 769:[0m
+[0m	[ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 794:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 795:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 796:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 797:[0m
+[0m	local radvdfile="$radvddir/radvd.conf"[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 798:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 800:[0m
+[0m	local dns1="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 801:[0m
+[0m	local dns2="none"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 802:[0m
+[0m	local startip endip leasetime prefix prefixlen[0m
+[33m        ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 803:[0m
+[0m	local wan_ifname[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 805:[0m
+[0m	network_echo $LOG_PRI_NOTICE "mobilelanv6" "start dial, iface=$iface ifname=$ifname"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "mobilelanv6" "start dial, iface=$iface ifname=$ifname"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 828:[0m
+[0m	local mobile_wan_ifname=$(uci get network.wanbv6.ifname)[0m
+[33m        ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^---------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 829:[0m
+[0m	ip -f inet6 route flush $prefix/$prefixlen dev $mobile_wan_ifname[0m
+[32m                                ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                        ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                       ^----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	ip -f inet6 route flush "$prefix"/"$prefixlen" dev "$mobile_wan_ifname"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 830:[0m
+[0m	local result=$?[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 831:[0m
+[0m	network_echo $LOG_PRI_NOTICE "mobilelanv6" "ip -f inet6 route flush $prefix/$prefixlen dev $mobile_wan_ifname result=$result"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "mobilelanv6" "ip -f inet6 route flush $prefix/$prefixlen dev $mobile_wan_ifname result=$result"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 836:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 841:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "::" ]	&& {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 846:[0m
+[0m	[ "$dns1" == "::" ] && [ "$dns2" == "none" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 851:[0m
+[0m	[ "$dns1" == "none" ] && [ "$dns2" == "::" ] && {[0m
+[33m                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 879:[0m
+[0m	local ifname proto[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 882:[0m
+[0m	config_get ifname $INTERFACE ifname[0m
+[32m                          ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	config_get ifname "$INTERFACE" ifname
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 883:[0m
+[0m	config_get proto $INTERFACE proto[0m
+[32m                         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	config_get proto "$INTERFACE" proto
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 885:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 891:[0m
+[0m	[ "$proto" == "dhcp6s" ] && proto_dhcp6s_setup "$INTERFACE" "$ifname"[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 893:[0m
+[0m	[ "$proto" == "slaac" ] && proto_slaac_setup "$INTERFACE" "$ifname"[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 895:[0m
+[0m	[ "$proto" == "rdnss" ] && proto_rdnss_setup "$INTERFACE" "$ifname"[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 897:[0m
+[0m	[ "$proto" == "ndp" ] && proto_ndp_setup "$INTERFACE" "$ifname"[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 899:[0m
+[0m	[ "$(isMobile 2>/dev/null)" = "yes" ] && [ "$proto" == "mobilelanv6" ] && proto_mobilelanv6_setup "$INTERFACE" "$ifname"[0m
+[33m                                                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 903:[0m
+[0m	local ifname[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 905:[0m
+[0m	config_get ifname $INTERFACE ifname[0m
+[32m                          ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	config_get ifname "$INTERFACE" ifname
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 907:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 908:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 910:[0m
+[0m	network_echo $LOG_PRI_NOTICE "lanv6" "proto_lanv6_teardown"[0m
+[32m                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	network_echo "$LOG_PRI_NOTICE" "lanv6" "proto_lanv6_teardown"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 915:[0m
+[0m	[ -f "$radvdpidfile" ] && kill -15 `cat "$radvdpidfile"`[0m
+[33m                                           ^-------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                           ^-------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	[ -f "$radvdpidfile" ] && kill -15 $(cat "$radvdpidfile")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 925:[0m
+[0m    local support_sgmac=$(uci -c /etc/profile.d get profile.switch.sgmac)[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 926:[0m
+[0m    if [ -n "$support_sgmac" -a "$support_sgmac" == "yes" ]; then[0m
+[33m                             ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 933:[0m
+[0m	. /usr/lib/wanDetect/disconnect_lan_sgmac.sh[0m
+[32m          ^-- SC1091 (info): Not following: /usr/lib/wanDetect/disconnect_lan_sgmac.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 941:[0m
+[0m		local lan_port1=$(brctl show br-lan | grep eth0)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 942:[0m
+[0m		local lan_port2=$(brctl show br-lan | grep eth1)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 943:[0m
+[0m		local lan_port3=$(brctl show br-lan | grep eth2)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 944:[0m
+[0m		local switch_port_0=$(uci -c /etc/profile.d/ get interfaces.@interface[0].switch_port)[0m
+[33m                ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 945:[0m
+[0m		[ -z $switch_port_0 ] && switch_port_0=1[0m
+[32m                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		[ -z "$switch_port_0" ] && switch_port_0=1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 946:[0m
+[0m		local switch_port_1=$(uci -c /etc/profile.d/ get interfaces.@interface[1].switch_port)[0m
+[33m                ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 947:[0m
+[0m		[ -z $switch_port_1 ] && switch_port_1=0[0m
+[32m                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		[ -z "$switch_port_1" ] && switch_port_1=0
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 957:[0m
+[0m				switch phy_power $switch_port_0 off 1>/dev/null 2>&1[0m
+[32m                                                 ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				switch phy_power "$switch_port_0" off 1>/dev/null 2>&1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 968:[0m
+[0m				switch phy_power $switch_port_0 on 1>/dev/null 2>&1[0m
+[32m                                                 ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				switch phy_power "$switch_port_0" on 1>/dev/null 2>&1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 977:[0m
+[0m				if [ "$(uci get interfaces.@interface[1].model -c /etc/profile.d)" == "BCM54991" ]; then[0m
+[33m                                                                                                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 983:[0m
+[0m				switch phy_power $switch_port_1 off 1>/dev/null 2>&1[0m
+[32m                                                 ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				switch phy_power "$switch_port_1" off 1>/dev/null 2>&1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 992:[0m
+[0m				if [ "$(uci get interfaces.@interface[1].model -c /etc/profile.d)" == "BCM54991" ]; then[0m
+[33m                                                                                                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 998:[0m
+[0m				switch phy_power $switch_port_1 on 1>/dev/null 2>&1[0m
+[32m                                                 ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				switch phy_power "$switch_port_1" on 1>/dev/null 2>&1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1018:[0m
+[0m	local proto[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1020:[0m
+[0m	config_get proto $INTERFACE proto[0m
+[32m                         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	config_get proto "$INTERFACE" proto
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1023:[0m
+[0m	[ "$proto" == "mobilelanv6" ] || {[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1032:[0m
+[0m	local isMobile=$(isMobile 2>/dev/null)[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                       ^---------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1034:[0m
+[0m		[ -e /tmp/not_disconnect_wifi ] && echo "/tmp/not_disconnect_wifi is exist" > /dev/console || replug_wifi_device[0m
+[32m                                                ^-- SC2015 (info): Note that A && B || C is not if-then-else. C may run when A is true.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1035:[0m
+[0m		[ -e /tmp/not_disconnect_eth ] && echo "/tmp/not_disconnect_eth is exist" > /dev/console || replug_eth_device[0m
+[32m                                               ^-- SC2015 (info): Note that A && B || C is not if-then-else. C may run when A is true.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1043:[0m
+[0m[ "$ACTION" == "ifup" -a "$INTERFACE" == "lanv6" ] && {[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                      ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/03-lanv6 line 1048:[0m
+[0m[ "$ACTION" == "ifdown" -a "$INTERFACE" == "lanv6" ] && proto_lanv6_teardown[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                        ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                        ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2154 -- device_role is referenced but not...
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...

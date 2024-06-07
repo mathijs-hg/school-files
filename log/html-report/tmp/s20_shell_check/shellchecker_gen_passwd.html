@@ -1,0 +1,56 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 4:</span></pre>
+<pre></span>	local digital_string</span></pre>
+<pre><span class="orange">        ^------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 5:</span></pre>
+<pre></span>	local hex_string=`cat /dev/urandom | head -n 8 | md5sum | head -c 8`</span></pre>
+<pre><span class="orange">        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">              ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                         ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<pre><span class="green">                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<pre><span class="green">                              ^----------^ SC2002 (style): Useless cat. Consider 'cmd &lt; file | ..' or 'cmd file | ..' instead.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local hex_string=$(cat /dev/urandom | head -n 8 | md5sum | head -c 8)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 6:</span></pre>
+<pre></span>	digital_string=`echo $hex_string | tr 'a-f' ''0-5`</span></pre>
+<pre><span class="green">                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<pre><span class="green">                             ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	digital_string=$(echo "$hex_string" | tr 'a-f' ''0-5)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 7:</span></pre>
+<pre></span>	echo $digital_string</span></pre>
+<pre><span class="green">             ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$digital_string"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 10:</span></pre>
+<pre></span>local dynpasswd=""</span></pre>
+<pre><span class="orange">^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 11:</span></pre>
+<pre></span>if [ "$1" == "guest" ]; then</span></pre>
+<pre><span class="orange">          ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/gen_passwd line 13:</span></pre>
+<pre></span>	echo $dynpasswd</span></pre>
+<pre><span class="green">             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$dynpasswd"</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...</pre>
+<pre>  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...</pre>
+<pre>  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...</pre>

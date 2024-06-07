@@ -1,0 +1,311 @@
+#! /bin/sh
+
+local MAC_FILE=/tmp/getfirm-default-mac
+local IMEI_FILE=/tmp/getfirm-default-imei
+local MAC_TMP_FILE=/tmp/getfirm-tmp-mac
+local PIN_FILE=/tmp/getfirm-pin
+local PRODUCTINFO_FILE=/tmp/getfirm-product-info
+local DEVICEID_FILE=/tmp/getfirm-device-id
+local SOFTVERSION_FILE=/tmp/getfirm-soft-version
+# add for LTE mobile
+local isMobile=$(isMobile 2>/dev/null)
+
+. /lib/functions.sh
+
+usage()
+{
+	echo "getfirm <info>"
+	echo "        MAC"
+	if [ "$isMobile" = "yes" ]; then
+		echo "        IMEI"
+	fi
+	echo "        LAN_MAC"
+	echo "        SSID"
+	echo "        PIN"	
+	echo "        MODEL"
+	echo "        DEVICE_TYPE"
+	echo "        FIRM"
+	echo "        WEBSITE"
+	echo "        HARDVERSION"
+	echo "        SOFTVERSION"
+	echo "        LANGUAGE"
+	echo "        PRODUCT_ID"
+	echo "        SPECIAL_ID"
+	echo "        DEV_ID"
+	echo "        HW_VER"
+	echo "        HW_ID"
+	echo "        FW_ID"
+	echo "        OEM_ID"
+	echo "        COUNTRY"
+	echo "        DEFAULT_GID"
+	echo "        DEFAULT_KEY"
+	echo "        PRECONF_KEY"
+	echo "        PRECONF_GID"
+	echo "        PRECONF_PACK"
+}
+
+option="$1"
+factoryLanMac="00-0A-EB-13-7B-00"
+wan_detect_mode="$(uci get wanDetect.settings.mode)"
+if [ "$wan_detect_mode" = "test1" ]; then
+	if [ -f "$MAC_TMP_FILE" ];then
+		factoryLanMac=`cat "$MAC_TMP_FILE"`
+	else
+		hex_string1=`cat /dev/urandom | head -n 8 | md5sum | head -c 2`
+		hex_string2=`cat /dev/urandom | head -n 8 | md5sum | head -c 2`
+		hex_string3=`cat /dev/urandom | head -n 8 | md5sum | head -c 2`
+		factoryLanMac="00-14-78-""$hex_string1""-""$hex_string2""-""$hex_string3"
+		echo "$factoryLanMac" > "$MAC_TMP_FILE"
+	fi
+fi
+
+deviceType="HOMEWIFISYSTEM"
+
+get_default_mac(){
+    local default_mac
+
+	if [ ! -s $MAC_FILE ]; then		
+		nvrammanager -r $MAC_FILE -p default-mac >/dev/null 2>&1
+	fi
+
+	if [ -s $MAC_FILE ];then
+		default_mac=$(grep 'MAC' $MAC_FILE | cut -d : -f 2-)
+	else
+		default_mac=${factoryLanMac}
+	fi
+
+[32m    eval "$1='${default_mac}'"[0m
+}
+
+inc_mac(){
+	echo $1 | awk 'BEGIN{FS="-";add=1}{for(i=6;i>0;i--){j="0x"$i;\
+	if(i>3){if(j+add>255){j=j+add-256;add=1;}else{j=j+add;add=0;}}printf("%02x",j);printf "-"}}' \
+	| awk 'BEGIN{FS="-"}{for(i=6;i>0;i--){printf $i;if(i>1){printf "-"}}}'
+}
+
+is_default_mac_at_wan()
+{
+    local default_mac_ifname
+    default_mac_ifname=$(uci -c /etc/profile.d get profile.default_mac.ifname)
+    if [ "${default_mac_ifname}" = "wan" ]; then
+        # default mac is used at wan interface
+        return 0
+    fi
+    return 1
+}
+
+get_lan_mac()
+{
+    local l_default_mac
+    local lan_mac
+
+    get_default_mac l_default_mac
+
+    if is_default_mac_at_wan; then
+        #use default_mac + 1
+        lan_mac=$(inc_mac ${l_default_mac})
+        lan_mac=$(echo ${lan_mac} | tr 'a-f' 'A-F')
+    else
+        #use default_mac
+        lan_mac=${l_default_mac}
+    fi
+
+[32m    eval "$1='${lan_mac}'"[0m
+}
+
+case $option in
+    MAC)
+    local l_default_mac
+    get_default_mac l_default_mac
+    echo -n "${l_default_mac}"
+    ;;
+
+    LAN_MAC)
+	local l_lan_mac
+	get_lan_mac l_lan_mac
+	echo -n "${l_lan_mac}"
+    ;;
+	
+    SSID)
+    #echo  "TP-LINK"
+	config_load wifi
+	local ap_ssid
+	config_get ap_ssid ap ssid
+	echo $ap_ssid
+    ;;
+    #Cooperate with tddp to read product imei for LTE
+    IMEI)
+	if [ "$isMobile" = "yes" ]; then
+		if [ ! -s $IMEI_FILE ]; then
+			nvrammanager -r $IMEI_FILE -p default-imei >/dev/null 2>&1
+		fi
+		if [ -s $IMEI_FILE ];then
+			echo $(grep -E '[0-9]{15}' $IMEI_FILE)
+		fi
+	else
+		echo "It's not mobile, unsupport imei"
+	fi
+    ;;
+    PIN)
+	if [ ! -s $PIN_FILE ]; then
+		nvrammanager -r $PIN_FILE -p pin >/dev/null 2>&1
+	fi
+	echo $(cat $PIN_FILE)
+    ;;
+
+	MODEL)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^product_name:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	DEVICE_TYPE)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+    grep '^product_type:' /tmp/getfirm-product-info > /dev/null 2>&1 &&
+        echo $(grep '^product_type:' $PRODUCTINFO_FILE | cut -d : -f 2-) || echo $deviceType
+	;;
+	
+	FIRM)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^vendor_name:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	WEBSITE)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^vendor_url:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	HARDVERSION)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^product_ver:' $PRODUCTINFO_FILE | cut -d : -f 2- | cut -d . -f 1-2)
+	;;
+
+	LANGUAGE) 
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^language:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	PRODUCT_ID)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^product_id:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	SPECIAL_ID)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^special_id:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+
+	DEV_ID)
+	if [ ! -s $DEVICEID_FILE ]; then
+		nvrammanager -r $DEVICEID_FILE -p device-id > /dev/null 2>&1
+	fi
+	echo $(grep '^dev_id:' $DEVICEID_FILE | cut -d : -f 2-)
+	;;
+
+	HW_VER)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^hw_ver:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+
+	HW_ID)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^hw_id:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+
+	HW_VER)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^hw_ver:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+
+	SOFTVERSION)
+	if [ ! -f $SOFTVERSION_FILE ]; then
+		nvrammanager -r $SOFTVERSION_FILE -p soft-version > /dev/null 2>&1
+	fi
+	echo $(grep '^soft_ver:' $SOFTVERSION_FILE | cut -d : -f 2-)
+	;;
+
+	FW_ID)
+	if [ ! -f $SOFTVERSION_FILE ]; then
+		nvrammanager -r $SOFTVERSION_FILE -p soft-version > /dev/null 2>&1
+	fi
+	echo $(grep '^fw_id:' $SOFTVERSION_FILE | cut -d : -f 2-)
+	;;
+ 
+ 	OEM_ID)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^oem_id:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+	COUNTRY)
+	if [ ! -f $PRODUCTINFO_FILE ]; then
+		nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+	fi
+	echo $(grep '^country:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+	;;
+	
+    DEFAULT_GID)
+    if [ ! -f $PRODUCTINFO_FILE ]; then
+        nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+    fi
+    echo $(grep '^gid:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+    ;;	
+	
+    DEFAULT_KEY)
+    if [ ! -f $PRODUCTINFO_FILE ]; then
+        nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+    fi
+    echo $(grep '^key:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+    ;;  
+
+    PRECONF_GID)
+    if [ ! -f $PRODUCTINFO_FILE ]; then
+        nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+    fi
+    echo $(grep '^preconf_g:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+    ;;
+
+    PRECONF_KEY)
+    if [ ! -f $PRODUCTINFO_FILE ]; then
+        nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+    fi
+    echo $(grep '^preconf_k:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+    ;;
+
+    PRECONF_PACK)
+    if [ ! -f $PRODUCTINFO_FILE ]; then
+        nvrammanager -r $PRODUCTINFO_FILE -p product-info > /dev/null 2>&1
+    fi
+    echo $(grep '^preconf_p:' $PRODUCTINFO_FILE | cut -d : -f 2-)
+    ;;
+    
+	refresh)
+	rm /tmp/getfirm-*
+	;;
+	
+    *)
+    usage
+    ;;
+esac

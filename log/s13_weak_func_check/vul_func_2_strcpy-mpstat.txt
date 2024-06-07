@@ -1,0 +1,69 @@
+[[0;33m*[0m] Binary protection state of [0;33mmpstat[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mmpstat[0m
+
+  409198:	02602821 	move	a1,s3
+  40919c:	0320f809 	jalr	t9
+  4091a0:	27a40124 	addiu	a0,sp,292
+  4091a4:	0c10114c 	jal	404530 <oct2chr>
+  4091a8:	27a400a4 	addiu	a0,sp,164
+  4091ac:	8fbc0010 	lw	gp,16(sp)
+  4091b0:	27a400a4 	addiu	a0,sp,164
+  4091b4:	8f99819c 	lw	t9,-32356(gp)
+  4091b8:	00000000 	nop
+  4091bc:	0320f809 	jalr	t9
+  4091c0:	27a50018 	addiu	a1,sp,24
+  4091c4:	8fbc0010 	lw	gp,16(sp)
+  4091c8:	0440ffe3 	bltz	v0,409158 <read_stat_irq+0x4520>
+  4091cc:	00000000 	nop
+  4091d0:	8fa70024 	lw	a3,36(sp)
+  4091d4:	00000000 	nop
+  4091d8:	10e0ffdf 	beqz	a3,409158 <read_stat_irq+0x4520>
+  4091dc:	00112140 	sll	a0,s1,0x5
+  4091e0:	8fa3001c 	lw	v1,28(sp)
+  4091e4:	8fa60028 	lw	a2,40(sp)
+  4091e8:	00670018 	mult	v1,a3
+  4091ec:	001111c0 	sll	v0,s1,0x7
+  4091f0:	00821021 	addu	v0,a0,v0
+  4091f4:	02821021 	addu	v0,s4,v0
+  4091f8:	8fa4002c 	lw	a0,44(sp)
+[31m  4091fc:	8f9981e8 	lw	t9,strcpy[0m
+  409200:	ac400004 	sw	zero,4(v0)
+  409204:	ac440030 	sw	a0,48(v0)
+--
+  40a96c:	0320f809 	jalr	t9
+  40a970:	02802821 	move	a1,s4
+  40a974:	8fbc0010 	lw	gp,16(sp)
+  40a978:	02802821 	move	a1,s4
+  40a97c:	03c02021 	move	a0,s8
+  40a980:	8f998130 	lw	t9,-32464(gp)
+  40a984:	1040ffef 	beqz	v0,40a944 <count_bits+0x578>
+  40a988:	0217b021 	addu	s6,s0,s7
+  40a98c:	0320f809 	jalr	t9
+  40a990:	00000000 	nop
+  40a994:	8fbc0010 	lw	gp,16(sp)
+  40a998:	1040ffea 	beqz	v0,40a944 <count_bits+0x578>
+  40a99c:	00000000 	nop
+  40a9a0:	8f9980fc 	lw	t9,strlen
+  40a9a4:	00000000 	nop
+  40a9a8:	0320f809 	jalr	t9
+  40a9ac:	02802021 	move	a0,s4
+  40a9b0:	8fbc0010 	lw	gp,16(sp)
+  40a9b4:	24440001 	addiu	a0,v0,1
+  40a9b8:	8f998180 	lw	t9,-32384(gp)
+  40a9bc:	00000000 	nop
+  40a9c0:	0320f809 	jalr	t9
+  40a9c4:	24050001 	li	a1,1
+  40a9c8:	8fbc0010 	lw	gp,16(sp)
+  40a9cc:	00402021 	move	a0,v0
+[31m  40a9d0:	8f9981e8 	lw	t9,strcpy[0m
+  40a9d4:	10400012 	beqz	v0,40aa20 <count_bits+0x654>
+  40a9d8:	aec20000 	sw	v0,0(s6)
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m2[0m times [0;33mmpstat[0m
+

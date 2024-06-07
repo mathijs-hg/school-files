@@ -1,0 +1,170 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>undefined4 iw_process_scan(int param_1,char *param_2,int param_3,int *param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  int *piVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  void *__ptr;</pre>
+<pre>  undefined8 uVar3;</pre>
+<pre>  void *local_88;</pre>
+<pre>  uint local_84;</pre>
+<pre>  void **local_80;</pre>
+<pre>  void **local_50;</pre>
+<pre>  char acStack_48 [16];</pre>
+<pre>  void *local_38;</pre>
+<pre>  ushort local_34;</pre>
+<pre>  undefined2 local_32;</pre>
+<pre>  undefined auStack_28 [2];</pre>
+<pre>  ushort uStack_26;</pre>
+<pre>  void *pvStack_24;</pre>
+<pre>  undefined4 uStack_20;</pre>
+<pre>  void *pvStack_1c;</pre>
+<pre>  void *pvStack_18;</pre>
+<pre>  undefined auStack_14 [12];</pre>
+<pre>  </pre>
+<pre>  local_88 = (void *)0x0;</pre>
+<pre>  local_84 = 0x1000;</pre>
+<pre>  param_4[1] = param_4[1] + 1;</pre>
+<pre>  if (0x96 &lt; param_4[1]) {</pre>
+<pre>    piVar1 = __errno_location();</pre>
+<pre>    *piVar1 = 0x3e;</pre>
+<pre>    return 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  if (param_4[1] == 1) {</pre>
+<pre>    local_38 = (void *)0x0;</pre>
+<pre>    local_32 = 0;</pre>
+<pre>    local_34 = 0;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_48,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar2 = ioctl(param_1,0x8b18,acStack_48);</pre>
+<pre>    if ((iVar2 &lt; 0) &amp;&amp; (piVar1 = __errno_location(), *piVar1 != 1)) {</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    return 0xfa;</pre>
+<pre>  }</pre>
+<pre>  while( true ) {</pre>
+<pre><span class="green">    __ptr = realloc(local_88,local_84)</span></span></pre>
+<pre>    if (__ptr == (void *)0x0) {</pre>
+<pre>      if (local_88 != (void *)0x0) {</pre>
+<pre>        free(local_88);</pre>
+<pre>      }</pre>
+<pre>      piVar1 = __errno_location();</pre>
+<pre>      *piVar1 = 0xc;</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    local_32 = 0;</pre>
+<pre>    local_34 = (ushort)local_84;</pre>
+<pre>    local_38 = __ptr;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_48,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar2 = ioctl(param_1,0x8b19,acStack_48);</pre>
+<pre>    if (-1 &lt; iVar2) break;</pre>
+<pre>    piVar1 = __errno_location();</pre>
+<pre>    if ((*piVar1 != 7) || (param_3 &lt; 0x11)) {</pre>
+<pre>      piVar1 = __errno_location();</pre>
+<pre>      if (*piVar1 == 0xb) {</pre>
+<pre>        free(__ptr);</pre>
+<pre>        return 100;</pre>
+<pre>      }</pre>
+<pre>      free(__ptr);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    local_88 = __ptr;</pre>
+<pre>    if ((int)local_84 &lt; (int)(uint)local_34) {</pre>
+<pre>      local_84 = (uint)local_34;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_84 = local_84 &lt;&lt; 1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if (local_34 != 0) {</pre>
+<pre>    local_80 = (void **)0x0;</pre>
+<pre>    iw_init_event_stream(auStack_14,__ptr,local_34);</pre>
+<pre>    *param_4 = 0;</pre>
+<pre>    do {</pre>
+<pre>      iVar2 = iw_extract_event_stream(auStack_14,auStack_28,param_3);</pre>
+<pre>      if (0 &lt; iVar2) {</pre>
+<pre>        local_50 = local_80;</pre>
+<pre>        if (uStack_26 == 0x8b15) {</pre>
+<pre><span class="green"><span class="green">          local_50 = (void **)malloc(0x100)</span></span></span></pre>
+<pre>          if (local_50 != (void **)0x0) {</pre>
+<pre>            if (local_80 != (void **)0x0) {</pre>
+<pre>              *local_80 = local_50;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(local_50,0,0x100)</span></span></pre>
+<pre>            local_50[1] = (void *)0x1;</pre>
+<pre>            local_50[2] = pvStack_24;</pre>
+<pre>            local_50[3] = uStack_20;</pre>
+<pre>            local_50[4] = pvStack_1c;</pre>
+<pre>            local_50[5] = pvStack_18;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (uStack_26 &lt; 0x8b16) {</pre>
+<pre>          if (uStack_26 == 0x8b05) {</pre>
+<pre>            local_80[0xe] = (void *)0x1;</pre>
+<pre>            uVar3 = iw_freq2float(&amp;pvStack_24);</pre>
+<pre>            *(undefined8 *)(local_80 + 0x10) = uVar3;</pre>
+<pre>            local_80[0x12] = (void *)((uint)uStack_20 &gt;&gt; 0x18);</pre>
+<pre>          }</pre>
+<pre>          else if (uStack_26 == 0x8b07) {</pre>
+<pre>            local_80[0x32] = pvStack_24;</pre>
+<pre>            if (((int)local_80[0x32] &lt; 7) &amp;&amp; (-1 &lt; (int)local_80[0x32])) {</pre>
+<pre>              local_80[0x31] = (void *)0x1;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          else if (uStack_26 == 0x8b03) {</pre>
+<pre>            local_80[0xb] = (void *)0x1;</pre>
+<pre>            local_80[0xc] = pvStack_24;</pre>
+<pre>            local_80[0xd] = uStack_20;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (uStack_26 == 0x8b21) {</pre>
+<pre>          if ((local_80[0x3f] == (void *)0x0) || ((int)local_80[0x3d] &lt; (int)pvStack_24)) {</pre>
+<pre>            local_80[0x3f] = (void *)0x1;</pre>
+<pre>            local_80[0x3d] = pvStack_24;</pre>
+<pre>            local_80[0x3e] = uStack_20;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (uStack_26 &lt; 0x8b22) {</pre>
+<pre>          if (uStack_26 == 0x8b1b) {</pre>
+<pre>            local_80[0x26] = (void *)0x1;</pre>
+<pre>            local_80[0x27] = (void *)(uint)uStack_20._2_2_;</pre>
+<pre><span class="green">            memset(local_80 + 0x28,0,0x21)</span></span></pre>
+<pre>            if ((pvStack_24 != (void *)0x0) &amp;&amp; ((short)uStack_20 != 0)) {</pre>
+<pre><span class="green">              memcpy(local_80 + 0x28,pvStack_24,(uint)uStack_20 &amp; 0xffff)</span></span></pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (uStack_26 == 0x8b2b) {</pre>
+<pre>          local_80[0x13] = (void *)0x1;</pre>
+<pre>          local_80[0x24] = (void *)((uint)uStack_20 &amp; 0xffff);</pre>
+<pre>          local_80[0x25] = (void *)(uint)uStack_20._2_2_;</pre>
+<pre>          if (pvStack_24 == (void *)0x0) {</pre>
+<pre>            local_80[0x25] = (void *)((uint)local_80[0x25] | 0x800);</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre><span class="green">            memcpy(local_80 + 0x14,pvStack_24,(uint)uStack_20 &amp; 0xffff)</span></span></pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (uStack_26 == 0x8c01) {</pre>
+<pre>          local_80[0x3c] = (void *)0x1;</pre>
+<pre>          *(void **)((int)local_80 + 0xd2) = pvStack_24;</pre>
+<pre>        }</pre>
+<pre>        if (local_50 == (void **)0x0) {</pre>
+<pre>          free(__ptr);</pre>
+<pre>          piVar1 = __errno_location();</pre>
+<pre>          *piVar1 = 0xc;</pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        local_80 = local_50;</pre>
+<pre>        if (*param_4 == 0) {</pre>
+<pre>          *param_4 = (int)local_50;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    } while (0 &lt; iVar2);</pre>
+<pre>  }</pre>
+<pre>  free(__ptr);</pre>
+<pre>  return 0;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 36ee8ae4d05a63f6</pre>

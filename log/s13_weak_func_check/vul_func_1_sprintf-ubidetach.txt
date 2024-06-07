@@ -1,0 +1,40 @@
+[[0;33m*[0m] Binary protection state of [0;33mubidetach[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mubidetach[0m
+
+  401a94:	08100689 	j	401a24 <read_positive_int+0x58>
+  401a98:	2403ffff 	li	v1,-1
+
+00401a9c <dev_read_int>:
+  401a9c:	3c1c0042 	lui	gp,0x42
+  401aa0:	279cbbb0 	addiu	gp,gp,-17488
+  401aa4:	8f998094 	lw	t9,strlen
+  401aa8:	27bdffd0 	addiu	sp,sp,-48
+  401aac:	afbf002c 	sw	ra,44(sp)
+  401ab0:	afbe0028 	sw	s8,40(sp)
+  401ab4:	afb30024 	sw	s3,36(sp)
+  401ab8:	03a0f021 	move	s8,sp
+  401abc:	afb20020 	sw	s2,32(sp)
+  401ac0:	afb1001c 	sw	s1,28(sp)
+  401ac4:	afb00018 	sw	s0,24(sp)
+  401ac8:	afbc0010 	sw	gp,16(sp)
+  401acc:	00809821 	move	s3,a0
+  401ad0:	00a09021 	move	s2,a1
+  401ad4:	0320f809 	jalr	t9
+  401ad8:	00c08821 	move	s1,a2
+  401adc:	24420040 	addiu	v0,v0,64
+  401ae0:	8fdc0010 	lw	gp,16(s8)
+  401ae4:	000210c2 	srl	v0,v0,0x3
+  401ae8:	000210c0 	sll	v0,v0,0x3
+  401aec:	03a2e823 	subu	sp,sp,v0
+[31m  401af0:	8f9980a8 	lw	t9,sprintf[0m
+  401af4:	27b00010 	addiu	s0,sp,16
+  401af8:	02403021 	move	a2,s2
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m1[0m times [0;33mubidetach[0m
+

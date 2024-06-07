@@ -1,0 +1,87 @@
+<br />
+<pre>libmtd_t libmtd_open(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  libmtd *lib;</pre>
+<pre>  char *pcVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  </pre>
+<pre><span class="green"><span class="green">  lib = (libmtd *)calloc(1,0x34)</span></span></span></pre>
+<pre>  if (lib == (libmtd *)0x0) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    iVar2 = *piVar3;</pre>
+<pre>    fprintf(stderr,"%s: error!: out of memory\n","libmtd");</pre>
+<pre>    __stream = stderr;</pre>
+<pre>    pcVar1 = strerror(iVar2);</pre>
+<pre>    fprintf(__stream,"%*serror %d (%s)\n",8,"",iVar2,pcVar1);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>    exit(-1);</pre>
+<pre>  }</pre>
+<pre>  *(uint *)&amp;lib-&gt;field_0x30 = *(uint *)&amp;lib-&gt;field_0x30 &amp; 0xfffffff9;</pre>
+<pre>  pcVar1 = mkpath("/sys","class/mtd");</pre>
+<pre>  lib-&gt;sysfs_mtd = pcVar1;</pre>
+<pre>  if (pcVar1 != (char *)0x0) {</pre>
+<pre>    pcVar1 = mkpath(pcVar1,"mtd%d");</pre>
+<pre>    lib-&gt</span>td = pcVar1;</pre>
+<pre>    if (pcVar1 != (char *)0x0) {</pre>
+<pre>      pcVar1 = mkpath(pcVar1,"name");</pre>
+<pre>      lib-&gt</span>td_name = pcVar1;</pre>
+<pre>      if (pcVar1 != (char *)0x0) {</pre>
+<pre>        iVar2 = sysfs_is_supported(lib);</pre>
+<pre>        if (iVar2 == 0) {</pre>
+<pre>          free(lib-&gt</span>td);</pre>
+<pre>          free(lib-&gt;sysfs_mtd);</pre>
+<pre>          free(lib-&gt</span>td_name);</pre>
+<pre>          lib-&gt;sysfs_mtd = (char *)0x0;</pre>
+<pre>          lib-&gt</span>td = (char *)0x0;</pre>
+<pre>          lib-&gt</span>td_name = (char *)0x0;</pre>
+<pre>          return lib;</pre>
+<pre>        }</pre>
+<pre>        pcVar1 = mkpath(lib-&gt</span>td,"dev");</pre>
+<pre>        lib-&gt</span>td_dev = pcVar1;</pre>
+<pre>        if (pcVar1 != (char *)0x0) {</pre>
+<pre>          pcVar1 = mkpath(lib-&gt</span>td,"type");</pre>
+<pre>          lib-&gt</span>td_type = pcVar1;</pre>
+<pre>          if (pcVar1 != (char *)0x0) {</pre>
+<pre>            pcVar1 = mkpath(lib-&gt</span>td,"erasesize");</pre>
+<pre>            lib-&gt</span>td_eb_size = pcVar1;</pre>
+<pre>            if (pcVar1 != (char *)0x0) {</pre>
+<pre>              pcVar1 = mkpath(lib-&gt</span>td,"size");</pre>
+<pre>              lib-&gt</span>td_size = pcVar1;</pre>
+<pre>              if (pcVar1 != (char *)0x0) {</pre>
+<pre>                pcVar1 = mkpath(lib-&gt</span>td,"writesize");</pre>
+<pre>                lib-&gt</span>td_min_io_size = pcVar1;</pre>
+<pre>                if (pcVar1 != (char *)0x0) {</pre>
+<pre>                  pcVar1 = mkpath(lib-&gt</span>td,"subpagesize");</pre>
+<pre>                  lib-&gt</span>td_subpage_size = pcVar1;</pre>
+<pre>                  if (pcVar1 != (char *)0x0) {</pre>
+<pre>                    pcVar1 = mkpath(lib-&gt</span>td,"oobsize");</pre>
+<pre>                    lib-&gt</span>td_oob_size = pcVar1;</pre>
+<pre>                    if (pcVar1 != (char *)0x0) {</pre>
+<pre>                      pcVar1 = mkpath(lib-&gt</span>td,"numeraseregions");</pre>
+<pre>                      lib-&gt</span>td_region_cnt = pcVar1;</pre>
+<pre>                      if (pcVar1 != (char *)0x0) {</pre>
+<pre>                        pcVar1 = mkpath(lib-&gt</span>td,"flags");</pre>
+<pre>                        lib-&gt</span>td_flags = pcVar1;</pre>
+<pre>                        if (pcVar1 != (char *)0x0) {</pre>
+<pre>                          *(uint *)&amp;lib-&gt;field_0x30 = *(uint *)&amp;lib-&gt;field_0x30 | 1;</pre>
+<pre>                          return lib;</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  libmtd_close(lib);</pre>
+<pre>  return (libmtd_t)0x0;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 25effa1171de982f</pre>

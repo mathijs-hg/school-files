@@ -1,0 +1,158 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>int mtd_write(libmtd_t desc,mtd_dev_info *mtd,int fd,int eb,int offs,void *data,int len,void *oob,</pre>
+<pre>             int ooblen,uint8_t mode)</pre>
+<br />
+<pre>{</pre>
+<pre>  uint64_t start;</pre>
+<pre>  int iVar1;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  ssize_t sVar3;</pre>
+<pre>  char *pcVar4;</pre>
+<pre>  void *__dest;</pre>
+<pre>  int iVar5;</pre>
+<pre>  FILE *pFVar6;</pre>
+<pre>  __u32 (*data_00) [2];</pre>
+<pre>  __u32 (*pa_Var7) [2];</pre>
+<pre>  __off64_t _Var8;</pre>
+<pre>  uint64_t in_stack_fffffea8;</pre>
+<pre>  undefined8 uVar9;</pre>
+<pre>  mtd_write_req ops;</pre>
+<pre>  nand_oobinfo old_oobinfo;</pre>
+<pre>  int *_err;</pre>
+<pre>  </pre>
+<pre>  data_00 = (__u32 (*) [2])eb;</pre>
+<pre>  iVar1 = mtd_valid_erase_block(mtd,eb);</pre>
+<pre>  if (iVar1 != 0) {</pre>
+<pre>    return iVar1;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = mtd-&gt;eb_size;</pre>
+<pre>  if ((offs &lt; 0) || (iVar1 &lt; offs + len)) {</pre>
+<pre>    fprintf(stderr,"%s: error!: bad offset %d or length %d, mtd%d eraseblock size is %d\n","libmtd",</pre>
+<pre>            offs,len,mtd-&gt</span>td_num,iVar1);</pre>
+<pre>code_r0x0040a31c:</pre>
+<pre>    piVar2 = __errno_location();</pre>
+<pre>    *piVar2 = 0x16;</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  iVar5 = mtd-&gt;subpage_size;</pre>
+<pre>  if (iVar5 == 0) {</pre>
+<pre>    trap(0x1c00);</pre>
+<pre>  }</pre>
+<pre>  if (offs % iVar5 != 0) {</pre>
+<pre>    fprintf(stderr,"%s: error!: write offset %d is not aligned to mtd%d min. I/O size %d\n","libmtd"</pre>
+<pre>            ,offs,mtd-&gt</span>td_num,iVar5);</pre>
+<pre>    goto code_r0x0040a31c;</pre>
+<pre>  }</pre>
+<pre>  if (iVar5 == 0) {</pre>
+<pre>    trap(0x1c00);</pre>
+<pre>  }</pre>
+<pre>  if (len % iVar5 != 0) {</pre>
+<pre>    fprintf(stderr,"%s: error!: write length %d is not aligned to mtd%d min. I/O size %d\n","libmtd"</pre>
+<pre>            ,len,mtd-&gt</span>td_num,iVar5);</pre>
+<pre>    goto code_r0x0040a31c;</pre>
+<pre>  }</pre>
+<pre>  start = (longlong)eb * (longlong)iVar1 + (longlong)offs;</pre>
+<pre>  if (oob == (void *)0x0) goto LAB_0040a018;</pre>
+<pre>  ops.len._4_4_ = len &gt;&gt; 0x1f;</pre>
+<pre>  ops.ooblen._4_4_ = ooblen &gt;&gt; 0x1f;</pre>
+<pre>  ops.ooblen._0_4_ = ooblen;</pre>
+<pre>  ops.len._0_4_ = len;</pre>
+<pre>  ops.usr_data._0_4_ = data;</pre>
+<pre>  ops.usr_data._4_4_ = 0;</pre>
+<pre>  ops.usr_oob._0_4_ = oob;</pre>
+<pre>  ops.usr_oob._4_4_ = 0;</pre>
+<pre>  ops.mode = mode;</pre>
+<pre>  ops.start = start;</pre>
+<pre>  iVar5 = ioctl(fd,0xc0304d18,&amp;ops);</pre>
+<pre>  if (iVar5 == 0) {</pre>
+<pre>    return 0;</pre>
+<pre>  }</pre>
+<pre>  piVar2 = __errno_location();</pre>
+<pre>  iVar5 = *piVar2;</pre>
+<pre>  if ((iVar5 != 0x19) &amp;&amp; (iVar5 != 0x7a)) {</pre>
+<pre>    fprintf(stderr,"%s: error!: %s ioctl failed for eraseblock %d (mtd%d)\n","libmtd","MEMWRITE",eb,</pre>
+<pre>            mtd-&gt</span>td_num);</pre>
+<pre>    pFVar6 = stderr;</pre>
+<pre>    pcVar4 = strerror(iVar5);</pre>
+<pre>    uVar9 = CONCAT44(pcVar4,iVar5);</pre>
+<pre>    goto LAB_0040a10c;</pre>
+<pre>  }</pre>
+<pre>  if (mode == '\x01') {</pre>
+<pre>    iVar5 = ioctl(fd,0x40c84d0a,&amp;old_oobinfo);</pre>
+<pre>    if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green"><span class="green">      __dest = malloc(ooblen)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">      memcpy(__dest,oob,ooblen)</span></span></span></pre>
+<pre>      if (old_oobinfo.useecc == 2) {</pre>
+<pre>        data_00 = old_oobinfo.oobfree;</pre>
+<pre>        if (old_oobinfo.oobfree[0][1] != 0) {</pre>
+<pre>          iVar5 = 0;</pre>
+<pre>          pa_Var7 = data_00;</pre>
+<pre>          do {</pre>
+<pre>            data_00 = pa_Var7[1];</pre>
+<pre>            memcpy((void *)((int)oob + (*pa_Var7)[0]),(void *)((int)__dest + iVar5),</pre>
+<pre><span class="green">                   old_oobinfo.oobfree[0][1])</span></span></pre>
+<pre>            iVar5 = iVar5 + old_oobinfo.oobfree[0][1];</pre>
+<pre>            old_oobinfo.oobfree[0][1] = pa_Var7[1][1];</pre>
+<pre>            pa_Var7 = data_00;</pre>
+<pre>          } while (old_oobinfo.oobfree[0][1] != 0);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        memcpy((void *)((int)oob + old_oobinfo.eccbytes),</pre>
+<pre><span class="green">               (void *)((int)__dest + old_oobinfo.eccbytes),mtd-&gt;oob_size - old_oobinfo.eccbytes)</span></span></pre>
+<pre>      }</pre>
+<pre>      goto LAB_00409fe0;</pre>
+<pre>    }</pre>
+<pre>    iVar1 = *piVar2;</pre>
+<pre>    pcVar4 = "%s: error!: MEMGETOOBSEL failed\n";</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>LAB_00409fe0:</pre>
+<pre>    in_stack_fffffea8 = start;</pre>
+<pre>    iVar5 = mtd_write_oob(desc,mtd,fd,start,(longlong)ooblen,data_00);</pre>
+<pre>    if (-1 &lt; iVar5) {</pre>
+<pre>LAB_0040a018:</pre>
+<pre>      if (data == (void *)0x0) {</pre>
+<pre>        return 0;</pre>
+<pre>      }</pre>
+<pre>      _Var8 = lseek64(fd,in_stack_fffffea8 &amp; 0xffffffff00000000,(int)&amp;DAT_00410000);</pre>
+<pre>      if (_Var8 == (longlong)eb * (longlong)iVar1 + (longlong)offs) {</pre>
+<pre>        sVar3 = write(fd,data,len);</pre>
+<pre>        if (sVar3 == len) {</pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>        piVar2 = __errno_location();</pre>
+<pre>        iVar1 = *piVar2;</pre>
+<pre>        fprintf(stderr,"%s: error!: cannot write %d bytes to mtd%d (eraseblock %d, offset %d)\n",</pre>
+<pre>                "libmtd",len,mtd-&gt</span>td_num,eb,offs);</pre>
+<pre>        pFVar6 = stderr;</pre>
+<pre>        pcVar4 = strerror(iVar1);</pre>
+<pre>        uVar9 = CONCAT44(pcVar4,iVar1);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        piVar2 = __errno_location();</pre>
+<pre>        iVar1 = *piVar2;</pre>
+<pre>        fprintf(stderr,"%s: error!: cannot seek mtd%d to offset %lld\n","libmtd",mtd-&gt</span>td_num,start)</pre>
+<pre>        ;</pre>
+<pre>        pFVar6 = stderr;</pre>
+<pre>        pcVar4 = strerror(iVar1);</pre>
+<pre>        uVar9 = CONCAT44(pcVar4,iVar1);</pre>
+<pre>      }</pre>
+<pre>      fprintf(pFVar6,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,uVar9);</pre>
+<pre>      return -1;</pre>
+<pre>    }</pre>
+<pre>    iVar1 = *piVar2;</pre>
+<pre>    pcVar4 = "%s: error!: cannot write to OOB\n";</pre>
+<pre>  }</pre>
+<pre>  fprintf(stderr,pcVar4,"libmtd");</pre>
+<pre>  pFVar6 = stderr;</pre>
+<pre>  pcVar4 = strerror(iVar1);</pre>
+<pre>  uVar9 = CONCAT44(pcVar4,iVar1);</pre>
+<pre>LAB_0040a10c:</pre>
+<pre>  fprintf(pFVar6,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,uVar9);</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 11b4d17ac5b7ca0d</pre>

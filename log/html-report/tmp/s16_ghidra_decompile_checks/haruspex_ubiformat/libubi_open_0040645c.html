@@ -1,0 +1,151 @@
+<br />
+<pre>libubi_t libubi_open(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  void *desc;</pre>
+<pre>  char *pcVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  void *pvVar4;</pre>
+<pre>  int version;</pre>
+<pre>  </pre>
+<pre><span class="green"><span class="green">  desc = calloc(1,0x68)</span></span></span></pre>
+<pre>  pvVar4 = desc;</pre>
+<pre>  if (desc != (void *)0x0) {</pre>
+<pre>    pcVar1 = mkpath("/sys","class/misc/ubi_ctrl/");</pre>
+<pre>    *(char **)((int)desc + 4) = pcVar1;</pre>
+<pre>    if (pcVar1 != (char *)0x0) {</pre>
+<pre>      pcVar1 = mkpath(pcVar1,"dev");</pre>
+<pre>      *(char **)((int)desc + 8) = pcVar1;</pre>
+<pre>      if (pcVar1 != (char *)0x0) {</pre>
+<pre>        pcVar1 = mkpath("/sys","class/ubi");</pre>
+<pre>        *(char **)((int)desc + 0xc) = pcVar1;</pre>
+<pre>        if (pcVar1 != (char *)0x0) {</pre>
+<pre><span class="green">          iVar2 = open64(pcVar1,0)</span></span></pre>
+<pre>          if (iVar2 == -1) {</pre>
+<pre>            piVar3 = __errno_location();</pre>
+<pre>            *piVar3 = 0;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar2 = close(iVar2);</pre>
+<pre>            if (iVar2 == 0) {</pre>
+<pre>              pcVar1 = mkpath(*(char **)((int)desc + 0xc),"ubi%d");</pre>
+<pre>              *(char **)((int)desc + 0x10) = pcVar1;</pre>
+<pre>              if (pcVar1 != (char *)0x0) {</pre>
+<pre>                pcVar1 = mkpath(*(char **)((int)desc + 0xc),"version");</pre>
+<pre>                *(char **)((int)desc + 0x14) = pcVar1;</pre>
+<pre>                if (pcVar1 != (char *)0x0) {</pre>
+<pre>                  pcVar1 = mkpath(*(char **)((int)desc + 0x10),"dev");</pre>
+<pre>                  *(char **)((int)desc + 0x18) = pcVar1;</pre>
+<pre>                  if (pcVar1 != (char *)0x0) {</pre>
+<pre>                    pcVar1 = mkpath(*(char **)((int)desc + 0x10),"avail_eraseblocks");</pre>
+<pre>                    *(char **)((int)desc + 0x1c) = pcVar1;</pre>
+<pre>                    if (pcVar1 != (char *)0x0) {</pre>
+<pre>                      pcVar1 = mkpath(*(char **)((int)desc + 0x10),"total_eraseblocks");</pre>
+<pre>                      *(char **)((int)desc + 0x20) = pcVar1;</pre>
+<pre>                      if (pcVar1 != (char *)0x0) {</pre>
+<pre>                        pcVar1 = mkpath(*(char **)((int)desc + 0x10),"bad_peb_count");</pre>
+<pre>                        *(char **)((int)desc + 0x24) = pcVar1;</pre>
+<pre>                        if (pcVar1 != (char *)0x0) {</pre>
+<pre>                          pcVar1 = mkpath(*(char **)((int)desc + 0x10),"eraseblock_size");</pre>
+<pre>                          *(char **)((int)desc + 0x28) = pcVar1;</pre>
+<pre>                          if (pcVar1 != (char *)0x0) {</pre>
+<pre>                            pcVar1 = mkpath(*(char **)((int)desc + 0x10),"max_ec");</pre>
+<pre>                            *(char **)((int)desc + 0x2c) = pcVar1;</pre>
+<pre>                            if (pcVar1 != (char *)0x0) {</pre>
+<pre>                              pcVar1 = mkpath(*(char **)((int)desc + 0x10),"reserved_for_bad");</pre>
+<pre>                              *(char **)((int)desc + 0x30) = pcVar1;</pre>
+<pre>                              if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                pcVar1 = mkpath(*(char **)((int)desc + 0x10),"max_vol_count");</pre>
+<pre>                                *(char **)((int)desc + 0x34) = pcVar1;</pre>
+<pre>                                if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                  pcVar1 = mkpath(*(char **)((int)desc + 0x10),"min_io_size");</pre>
+<pre>                                  *(char **)((int)desc + 0x38) = pcVar1;</pre>
+<pre>                                  if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                    pcVar1 = mkpath(*(char **)((int)desc + 0x10),"mtd_num");</pre>
+<pre>                                    *(char **)((int)desc + 0x3c) = pcVar1;</pre>
+<pre>                                    if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                      pcVar1 = mkpath(*(char **)((int)desc + 0xc),"ubi%d_%d");</pre>
+<pre>                                      *(char **)((int)desc + 0x40) = pcVar1;</pre>
+<pre>                                      if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                        pcVar1 = mkpath(pcVar1,"type");</pre>
+<pre>                                        *(char **)((int)desc + 0x44) = pcVar1;</pre>
+<pre>                                        if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                          pcVar1 = mkpath(*(char **)((int)desc + 0x40),"dev");</pre>
+<pre>                                          *(char **)((int)desc + 0x48) = pcVar1;</pre>
+<pre>                                          if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                            pcVar1 = mkpath(*(char **)((int)desc + 0x40),"alignment"</pre>
+<pre>                                                           );</pre>
+<pre>                                            *(char **)((int)desc + 0x4c) = pcVar1;</pre>
+<pre>                                            if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                              pcVar1 = mkpath(*(char **)((int)desc + 0x40),</pre>
+<pre>                                                              "data_bytes");</pre>
+<pre>                                              *(char **)((int)desc + 0x50) = pcVar1;</pre>
+<pre>                                              if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                                pcVar1 = mkpath(*(char **)((int)desc + 0x40),</pre>
+<pre>                                                                "reserved_ebs");</pre>
+<pre>                                                *(char **)((int)desc + 0x54) = pcVar1;</pre>
+<pre>                                                if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                                  pcVar1 = mkpath(*(char **)((int)desc + 0x40),</pre>
+<pre>                                                                  "usable_eb_size");</pre>
+<pre>                                                  *(char **)((int)desc + 0x58) = pcVar1;</pre>
+<pre>                                                  if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                                    pcVar1 = mkpath(*(char **)((int)desc + 0x40),</pre>
+<pre>                                                                    "corrupted");</pre>
+<pre>                                                    *(char **)((int)desc + 0x5c) = pcVar1;</pre>
+<pre>                                                    if (pcVar1 != (char *)0x0) {</pre>
+<pre>                                                      pcVar1 = mkpath(*(char **)((int)desc + 0x40),</pre>
+<pre>                                                                      "name");</pre>
+<pre>                                                      *(char **)((int)desc + 0x60) = pcVar1;</pre>
+<pre>                                                      if ((pcVar1 != (char *)0x0) &amp;&amp;</pre>
+<pre>                                                         (iVar2 = read_positive_int(*(char **)((int)</pre>
+<pre>                                                  desc + 0x14),&amp;version), iVar2 == 0)) {</pre>
+<pre>                                                    if (version == 1) {</pre>
+<pre>                                                      return desc;</pre>
+<pre>                                                    }</pre>
+<pre>                                                    fprintf(stderr,</pre>
+<pre>                                                  "%s: error!: this library was made for UBI version %d, but UBI version %d is detected\n\n"</pre>
+<pre>                                                  ,"libubi",1,version);</pre>
+<pre>                                                  }</pre>
+<pre>                                                  }</pre>
+<pre>                                                  }</pre>
+<pre>                                                }</pre>
+<pre>                                              }</pre>
+<pre>                                            }</pre>
+<pre>                                          }</pre>
+<pre>                                        }</pre>
+<pre>                                      }</pre>
+<pre>                                    }</pre>
+<pre>                                  }</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                            }</pre>
+<pre>                          }</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              piVar3 = __errno_location();</pre>
+<pre>              iVar2 = *piVar3;</pre>
+<pre>              fprintf(stderr,"%s: error!: close failed on \"%s\"\n","libubi",</pre>
+<pre>                      *(undefined4 *)((int)desc + 0xc));</pre>
+<pre>              __stream = stderr;</pre>
+<pre>              pcVar1 = strerror(iVar2);</pre>
+<pre>              fprintf(__stream,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar2,pcVar1);</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    pvVar4 = (void *)0x0;</pre>
+<pre>    libubi_close(desc);</pre>
+<pre>  }</pre>
+<pre>  return pvVar4;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 767f98a1bebd2ac0</pre>

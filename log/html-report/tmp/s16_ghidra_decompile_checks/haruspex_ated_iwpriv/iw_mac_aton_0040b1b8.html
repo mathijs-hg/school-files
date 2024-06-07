@@ -1,0 +1,37 @@
+<br />
+<pre>int iw_mac_aton(char *param_1,int param_2,int param_3)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  undefined *puVar3;</pre>
+<pre>  char *local_20;</pre>
+<pre>  int local_1c;</pre>
+<pre>  int local_14;</pre>
+<pre>  uint local_10 [2];</pre>
+<pre>  </pre>
+<pre>  puVar3 = &amp;_gp;</pre>
+<pre>  local_1c = 0;</pre>
+<pre>  local_20 = param_1;</pre>
+<pre>  while ((*local_20 != '\0' &amp;&amp;</pre>
+<pre><span class="green">         (iVar1 = sscanf(local_20,"%1X%1X",&amp;local_14,local_10,puVar3), iVar1 == 2))) {</span></pre>
+<pre>    local_10[0] = local_14 &lt;&lt; 4 | local_10[0];</pre>
+<pre>    *(char *)(param_2 + local_1c) = (char)local_10[0];</pre>
+<pre>    local_1c = local_1c + 1;</pre>
+<pre>    if (local_20[2] == '\0') {</pre>
+<pre>      return local_1c;</pre>
+<pre>    }</pre>
+<pre>    if (param_3 &lt;= local_1c) {</pre>
+<pre>      piVar2 = __errno_location();</pre>
+<pre>      *piVar2 = 7;</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>    if (local_20[2] != ':') break;</pre>
+<pre>    local_20 = local_20 + 3;</pre>
+<pre>  }</pre>
+<pre>  piVar2 = __errno_location();</pre>
+<pre>  *piVar2 = 0x16;</pre>
+<pre>  return 0;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] a651b2b4c213a46d</pre>

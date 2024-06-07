@@ -1,0 +1,1 @@
+$.su.modelManager.define("txPowerM",{fields:[{name:"band2_4"},{name:"band5_1"},{name:"band5_2"}],proxy:{url:$.su.url("/admin/wireless?form=power")}}),$.su.storeManager.define("txPowerS",{fields:[{name:"name"},{name:"value"}],data:[{name:$.su.CHAR.WIFI_POWER.LOW,value:"low"},{name:$.su.CHAR.WIFI_POWER.MIDDLE,value:"middle"},{name:$.su.CHAR.WIFI_POWER.HIGH,value:"high"}]});

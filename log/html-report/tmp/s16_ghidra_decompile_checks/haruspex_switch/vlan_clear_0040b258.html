@@ -1,0 +1,30 @@
+<br />
+<pre>void vlan_clear(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  uint local_18;</pre>
+<pre>  int local_14;</pre>
+<pre>  int local_10 [2];</pre>
+<pre>  </pre>
+<pre>  local_14 = 0;</pre>
+<pre>  do {</pre>
+<pre>    if (0xf &lt; local_14) {</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    local_10[0] = 0;</pre>
+<pre>    reg_write(0x94,0);</pre>
+<pre>    local_10[0] = local_14 + -0x7ffff000;</pre>
+<pre>    reg_write(0x90,local_10[0]);</pre>
+<pre>    for (local_18 = 0; local_18 &lt; 300; local_18 = local_18 + 1) {</pre>
+<pre>      usleep(1000);</pre>
+<pre><span class="green">      reg_read(0x90,local_10)</span></span></pre>
+<pre>      if (-1 &lt; local_10[0]) break;</pre>
+<pre>    }</pre>
+<pre>    if (local_18 == 300) {</pre>
+<pre>      puts("config vlan timeout.");</pre>
+<pre>    }</pre>
+<pre>    local_14 = local_14 + 1;</pre>
+<pre>  } while( true );</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] efa70f1ae71783b6</pre>

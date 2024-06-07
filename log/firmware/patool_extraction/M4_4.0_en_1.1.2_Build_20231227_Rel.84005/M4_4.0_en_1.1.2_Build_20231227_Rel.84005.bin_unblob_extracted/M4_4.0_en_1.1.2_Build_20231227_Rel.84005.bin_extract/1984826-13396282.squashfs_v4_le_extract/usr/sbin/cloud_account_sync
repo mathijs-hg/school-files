@@ -1,0 +1,55 @@
+#!/usr/bin/lua
+
+local sys      = require "luci.sys"
+local uci      = require "luci.model.uci"
+local dbg      = require "luci.tools.debug"
+local script   = require "sync-script"
+local accmgnt = require "luci.model.accountmgnt"
+local getfirm = require "luci.model.getfirm"
+
+local uci_r    = uci.cursor()
+
+local function main()
+    local device_id = (getfirm.getfirm_cached("DEV_ID")):trim()
+    if not device_id or device_id == "" then
+        return
+    end
+    local role = uci_r:get("bind_device_list", device_id, "role")
+    if role ~= "RE" then
+        dbg("this check only on RE")
+        return
+    end
+    local dft_account = false
+    if accmgnt.is_dft_account_exist() then
+        dbg("found binded RE using default account!")
+        dft_account = true
+    end
+    local bind_status = uci_r:get("cloud_config", "device_status", "bind_status")
+    local need_bind = uci_r:get("cloud_config", "device_status", "need_bind")
+    if dft_account and need_bind == "0" and bind_status == "1" then
+        dbg("set this RE as unbinded...")
+        uci_r:set("cloud_config", "device_status", "bind_status", "0")
+        uci_r:set("cloud_config", "device_status", "need_bind", "1")
+        uci_r:commit("cloud_config")
+        return
+    end
+
+    dbg("cloud_account_sync:bind_status=%s, need_bind=%s" % {bind_status, need_bind})
+    local old_username = uci_r:get("cloud_config", "device_status", "username_md5")
+    local new_username = accmgnt.get_username_md5()
+    if not old_username then
+        uci_r:set("cloud_config", "device_status", "username_md5", new_username)
+        uci_r:commit("cloud_config")
+        return
+    end
+    if new_username and old_username ~= new_username then
+        dbg("device config bind wrong USERNAME:%s", old_username)
+        dbg("user config USERNAME:%s", new_username)
+        uci_r:set("cloud_config", "device_status", "bind_status", "0")
+        uci_r:set("cloud_config", "device_status", "need_bind", "1")
+        uci_r:set("cloud_config", "device_status", "username_md5", new_username)
+        uci_r:commit("cloud_config")
+    end
+end
+
+script.run(main)

@@ -1,0 +1,47 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 7:[0m
+[0m. /lib/functions.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 13:[0m
+[0m	local config="$1"  [0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 14:[0m
+[0m        local type vapname disabled   [0m
+[33m        ^-------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 20:[0m
+[0m	[ $disabled = 0 -a "$type" = "$2" ] || return[0m
+[32m          ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                        ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+
+[1mDid you mean: [0m
+	[ "$disabled" = 0 -a "$type" = "$2" ] || return
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 31:[0m
+[0m	if $(echo $(iwconfig $vapname 2>/dev/null) | grep "Access Point" > /dev/null); then[0m
+[33m           ^-- SC2091 (warning): Remove surrounding $() to avoid executing output (or use eval if intentional).[0m
+[33m                  ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                  ^-- SC2005 (style): Useless echo? Instead of 'echo $(cmd)', just use 'cmd'.[0m
+[32m                             ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if $(echo $(iwconfig "$vapname" 2>/dev/null) | grep "Access Point" > /dev/null); then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/sbin/updateassoclist.sh line 32:[0m
+[0m		wlanconfig $vapname list | grep -v ADDR | awk '{print $1}' | sed "s/:/-/g;s/^/$type &/g" >> /tmp/$FILENAME[0m
+[32m                           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		wlanconfig "$vapname" list | grep -v ADDR | awk '{print $1}' | sed "s/:/-/g;s/^/$type &/g" >> /tmp/$FILENAME
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2091 -- Remove surrounding $() to avoid e...
+  https://www.shellcheck.net/wiki/SC2166 -- Prefer [ p ] && [ q ] as [ p -a q...

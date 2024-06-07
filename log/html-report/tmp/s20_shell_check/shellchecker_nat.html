@@ -1,0 +1,109 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 12:</span></pre>
+<pre></span>. /lib/functions.sh</span></pre>
+<pre><span class="green">  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 13:</span></pre>
+<pre></span>. /lib/functions/network.sh</span></pre>
+<pre><span class="green">  ^-----------------------^ SC1091 (info): Not following: /lib/functions/network.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 14:</span></pre>
+<pre></span>. $NAT_LIBDIR/nat_comm.sh</span></pre>
+<pre><span class="green">  ^---------------------^ SC1091 (info): Not following: ./nat_comm.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 15:</span></pre>
+<pre></span>. $NAT_LIBDIR/nat.sh</span></pre>
+<pre><span class="green">  ^----------------^ SC1091 (info): Not following: ./nat.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 23:</span></pre>
+<pre></span>	echo $0 "&lt;action&gt;" "&lt</span>odule&gt;" "{" "&lt;parameters&gt;" "}"</span></pre>
+<pre><span class="green">             ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$0" "&lt;action&gt;" "&lt</span>odule&gt;" "{" "&lt;parameters&gt;" "}"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 39:</span></pre>
+<pre></span>! nat_check_mod $mod &amp;&amp; usage</span></pre>
+<pre><span class="green">                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>! nat_check_mod "$mod" &amp;&amp; usage</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 56:</span></pre>
+<pre></span>local bool=$(uci_get_state nat.core.enabled)</span></pre>
+<pre><span class="orange">^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">      ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">           ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 57:</span></pre>
+<pre></span>[ $bool -eq 0 ] &amp;&amp; {</span></pre>
+<pre><span class="green">  ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>[ "$bool" -eq 0 ] &amp;&amp; {</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 61:</span></pre>
+<pre></span>if [ "$act" == "add" ]</span></pre>
+<pre><span class="orange">            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 64:</span></pre>
+<pre></span>    rules=$(nat_${mod}_param_to_rule "$param")</span></pre>
+<pre><span class="green">                ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    rules=$(nat_"${mod}"_param_to_rule "$param")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 65:</span></pre>
+<pre></span>    tgt=$(nat_${mod}_target "$rules")</span></pre>
+<pre><span class="green">              ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    tgt=$(nat_"${mod}"_target "$rules")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 68:</span></pre>
+<pre></span>        nat "$act" "$mod" "$tgt" "$" { $rules }</span></pre>
+<pre><span class="orange">                                     ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="green">                                       ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                              ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        nat "$act" "$mod" "$tgt" "$" { "$rules" }</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 70:</span></pre>
+<pre></span>	if [ "$mod" == "dns" ]; then</span></pre>
+<pre><span class="orange">                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 71:</span></pre>
+<pre></span>		rules2=$(nat_${mod}_param_to_rule_tcp "$param")</span></pre>
+<pre><span class="green">                             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		rules2=$(nat_"${mod}"_param_to_rule_tcp "$param")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/nat line 73:</span></pre>
+<pre></span>			nat "$act" "$mod" "$tgt" "$" { $rules2 }</span></pre>
+<pre><span class="orange">                                                     ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="green">                                                       ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                                               ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			nat "$act" "$mod" "$tgt" "$" { "$rules2" }</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC1083" title="https://www.shellcheck.net/wiki/SC1083" target="_blank" >https://www.shellcheck.net/wiki/SC1083</a> -- This { is literal. Check expressi...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2046" title="https://www.shellcheck.net/wiki/SC2046" target="_blank" >https://www.shellcheck.net/wiki/SC2046</a> -- Quote this to prevent word splitt...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2155" title="https://www.shellcheck.net/wiki/SC2155" target="_blank" >https://www.shellcheck.net/wiki/SC2155</a> -- Declare and assign separately to ...</pre>

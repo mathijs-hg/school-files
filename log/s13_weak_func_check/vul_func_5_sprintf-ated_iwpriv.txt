@@ -1,0 +1,155 @@
+[[0;33m*[0m] Binary protection state of [0;33mated_iwpriv[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mated_iwpriv[0m
+
+  40925c:	a0430002 	sb	v1,2(v0)
+  409260:	8fc20028 	lw	v0,40(s8)
+  409264:	00000000 	nop
+  409268:	24420002 	addiu	v0,v0,2
+  40926c:	afc20028 	sw	v0,40(s8)
+  409270:	8fc20018 	lw	v0,24(s8)
+  409274:	00000000 	nop
+  409278:	24420001 	addiu	v0,v0,1
+  40927c:	afc20018 	sw	v0,24(s8)
+  409280:	8fc30018 	lw	v1,24(s8)
+  409284:	8fc20034 	lw	v0,52(s8)
+  409288:	00000000 	nop
+  40928c:	0062102a 	slt	v0,v1,v0
+  409290:	1440ffd5 	bnez	v0,4091e8 <iw_print_key+0x138>
+  409294:	00000000 	nop
+  409298:	081024ee 	j	4093b8 <iw_print_key+0x308>
+  40929c:	00000000 	nop
+  4092a0:	3c020041 	lui	v0,0x41
+  4092a4:	2443f4ac 	addiu	v1,v0,-2900
+  4092a8:	8fc20030 	lw	v0,48(s8)
+  4092ac:	00000000 	nop
+  4092b0:	90420000 	lbu	v0,0(v0)
+  4092b4:	8fc40028 	lw	a0,40(s8)
+  4092b8:	00602821 	move	a1,v1
+  4092bc:	00403021 	move	a2,v0
+[31m  4092c0:	8f8280dc 	lw	v0,sprintf[0m
+  4092c4:	00000000 	nop
+  4092c8:	0040c821 	move	t9,v0
+--
+  409304:	1440000e 	bnez	v0,409340 <iw_print_key+0x290>
+  409308:	00000000 	nop
+  40930c:	8fc20028 	lw	v0,40(s8)
+  409310:	8fc30028 	lw	v1,40(s8)
+  409314:	00000000 	nop
+  409318:	24630001 	addiu	v1,v1,1
+  40931c:	afc30028 	sw	v1,40(s8)
+  409320:	3c030041 	lui	v1,0x41
+  409324:	2463f4a8 	addiu	v1,v1,-2904
+  409328:	90640000 	lbu	a0,0(v1)
+  40932c:	00000000 	nop
+  409330:	a0440000 	sb	a0,0(v0)
+  409334:	90630001 	lbu	v1,1(v1)
+  409338:	00000000 	nop
+  40933c:	a0430001 	sb	v1,1(v0)
+  409340:	3c020041 	lui	v0,0x41
+  409344:	2443f4ac 	addiu	v1,v0,-2900
+  409348:	8fc20018 	lw	v0,24(s8)
+  40934c:	8fc40030 	lw	a0,48(s8)
+  409350:	00000000 	nop
+  409354:	00821021 	addu	v0,a0,v0
+  409358:	90420000 	lbu	v0,0(v0)
+  40935c:	8fc40028 	lw	a0,40(s8)
+  409360:	00602821 	move	a1,v1
+  409364:	00403021 	move	a2,v0
+[31m  409368:	8f8280dc 	lw	v0,sprintf[0m
+  40936c:	00000000 	nop
+  409370:	0040c821 	move	t9,v0
+--
+  40ad00:	afc40028 	sw	a0,40(s8)
+  40ad04:	afc5002c 	sw	a1,44(s8)
+  40ad08:	afc60030 	sw	a2,48(s8)
+  40ad0c:	afc70034 	sw	a3,52(s8)
+  40ad10:	8fc3002c 	lw	v1,44(s8)
+  40ad14:	00000000 	nop
+  40ad18:	00601021 	move	v0,v1
+  40ad1c:	00021040 	sll	v0,v0,0x1
+  40ad20:	00431821 	addu	v1,v0,v1
+  40ad24:	8fc20034 	lw	v0,52(s8)
+  40ad28:	00000000 	nop
+  40ad2c:	0043102a 	slt	v0,v0,v1
+  40ad30:	10400004 	beqz	v0,40ad44 <iw_mac_ntop+0x60>
+  40ad34:	00000000 	nop
+  40ad38:	00001021 	move	v0,zero
+  40ad3c:	08102b86 	j	40ae18 <iw_mac_ntop+0x134>
+  40ad40:	00000000 	nop
+  40ad44:	3c020041 	lui	v0,0x41
+  40ad48:	2443f690 	addiu	v1,v0,-2416
+  40ad4c:	8fc20028 	lw	v0,40(s8)
+  40ad50:	00000000 	nop
+  40ad54:	90420000 	lbu	v0,0(v0)
+  40ad58:	8fc40030 	lw	a0,48(s8)
+  40ad5c:	00602821 	move	a1,v1
+  40ad60:	00403021 	move	a2,v0
+[31m  40ad64:	8f8280dc 	lw	v0,sprintf[0m
+  40ad68:	00000000 	nop
+  40ad6c:	0040c821 	move	t9,v0
+  40ad70:	0320f809 	jalr	t9
+  40ad74:	00000000 	nop
+  40ad78:	8fdc0010 	lw	gp,16(s8)
+  40ad7c:	24020001 	li	v0,1
+  40ad80:	afc20018 	sw	v0,24(s8)
+  40ad84:	08102b7f 	j	40adfc <iw_mac_ntop+0x118>
+  40ad88:	00000000 	nop
+  40ad8c:	8fc30018 	lw	v1,24(s8)
+  40ad90:	00000000 	nop
+  40ad94:	00601021 	move	v0,v1
+  40ad98:	00021040 	sll	v0,v0,0x1
+  40ad9c:	00431021 	addu	v0,v0,v1
+  40ada0:	2442ffff 	addiu	v0,v0,-1
+  40ada4:	8fc30030 	lw	v1,48(s8)
+  40ada8:	00000000 	nop
+  40adac:	00622021 	addu	a0,v1,v0
+  40adb0:	3c020041 	lui	v0,0x41
+  40adb4:	2443f698 	addiu	v1,v0,-2408
+  40adb8:	8fc20018 	lw	v0,24(s8)
+  40adbc:	8fc50028 	lw	a1,40(s8)
+  40adc0:	00000000 	nop
+  40adc4:	00a21021 	addu	v0,a1,v0
+  40adc8:	90420000 	lbu	v0,0(v0)
+  40adcc:	00602821 	move	a1,v1
+  40add0:	00403021 	move	a2,v0
+[31m  40add4:	8f8280dc 	lw	v0,sprintf[0m
+  40add8:	00000000 	nop
+  40addc:	0040c821 	move	t9,v0
+--
+  40ae7c:	8fc40030 	lw	a0,48(s8)
+  40ae80:	00000000 	nop
+  40ae84:	90840002 	lbu	a0,2(a0)
+  40ae88:	00000000 	nop
+  40ae8c:	00804021 	move	t0,a0
+  40ae90:	8fc40030 	lw	a0,48(s8)
+  40ae94:	00000000 	nop
+  40ae98:	90840003 	lbu	a0,3(a0)
+  40ae9c:	00000000 	nop
+  40aea0:	00803821 	move	a3,a0
+  40aea4:	8fc40030 	lw	a0,48(s8)
+  40aea8:	00000000 	nop
+  40aeac:	90840004 	lbu	a0,4(a0)
+  40aeb0:	00000000 	nop
+  40aeb4:	00803021 	move	a2,a0
+  40aeb8:	8fc40030 	lw	a0,48(s8)
+  40aebc:	00000000 	nop
+  40aec0:	90840005 	lbu	a0,5(a0)
+  40aec4:	afa80010 	sw	t0,16(sp)
+  40aec8:	afa70014 	sw	a3,20(sp)
+  40aecc:	afa60018 	sw	a2,24(sp)
+  40aed0:	afa4001c 	sw	a0,28(sp)
+  40aed4:	8fc40034 	lw	a0,52(s8)
+  40aed8:	00603021 	move	a2,v1
+  40aedc:	00403821 	move	a3,v0
+[31m  40aee0:	8f8280dc 	lw	v0,sprintf[0m
+  40aee4:	00000000 	nop
+  40aee8:	0040c821 	move	t9,v0
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m5[0m times [0;33mated_iwpriv[0m
+

@@ -1,0 +1,19 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/deleteToken.sh line 8:[0m
+[0msleep $expired[0m
+[32m      ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+sleep "$expired"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/deleteToken.sh line 10:[0m
+[0m[ -f $token_file ] && rm -f $token_file[0m
+[32m     ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                            ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+[ -f "$token_file" ] && rm -f "$token_file"
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...

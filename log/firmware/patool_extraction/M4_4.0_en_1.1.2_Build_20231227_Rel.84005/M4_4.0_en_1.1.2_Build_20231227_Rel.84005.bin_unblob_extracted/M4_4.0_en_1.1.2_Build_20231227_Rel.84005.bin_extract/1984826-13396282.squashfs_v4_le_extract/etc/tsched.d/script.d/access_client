@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cmd_clean="clean_daily_msg"
+cmd_stats="/lib/access_client/stats_daily_client_num"
+cmd_store="/lib/access_client/store_access_client"
+
+echo "access_client script running" > /dev/console
+$($cmd_clean)
+$($cmd_stats)
+$($cmd_store)

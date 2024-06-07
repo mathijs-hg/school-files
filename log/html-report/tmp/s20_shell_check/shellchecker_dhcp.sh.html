@@ -1,0 +1,123 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 3:</span></pre>
+<pre></span>. /lib/functions.sh</span></pre>
+<pre><span class="green">  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 4:</span></pre>
+<pre></span>. ../netifd-proto.sh</span></pre>
+<pre><span class="green">  ^----------------^ SC1091 (info): Not following: ../netifd-proto.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 18:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 19:</span></pre>
+<pre></span>	local iface="$2"</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 20:</span></pre>
+<pre></span>	local lastip=/var/run/udhcpc-$iface.ip</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">                                     ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local lastip=/var/run/udhcpc-"$iface".ip</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 21:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "dhcp" "start dial iface=$iface"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "dhcp" "start dial iface=$iface"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 22:</span></pre>
+<pre></span>	local ipaddr hostname clientid vendorid broadcast reqopts</span></pre>
+<pre><span class="orange">        ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 25:</span></pre>
+<pre></span>	local opt dhcpopts</span></pre>
+<pre><span class="orange">        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 33:</span></pre>
+<pre></span>		local unicast=$(uci get protocol.dhcp.unicast)</span></pre>
+<pre><span class="orange">                ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                      ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                              ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 37:</span></pre>
+<pre></span>	[ -n "$clientid" ] &amp;&amp; clientid="-x 0x3d:${clientid//:/}" || clientid="-C"</span></pre>
+<pre><span class="orange">                                                ^-------------^ SC3060 (warning): In POSIX sh, string replacement is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 40:</span></pre>
+<pre></span>	[ -f $lastip ] &amp;&amp; ipaddr=$(cat $lastip)</span></pre>
+<pre><span class="green">             ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                       ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ -f "$lastip" ] &amp;&amp; ipaddr=$(cat "$lastip")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 47:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "dhcp" "call udhcpc to get ip info."</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "dhcp" "call udhcpc to get ip info."</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 48:</span></pre>
+<pre></span>	network_echo $LOG_PRI_DEBUG "dhcp" "params: -O 33 -O 121 -O 249 -f -R -a -t 0 -i $iface ${ipaddr:+-r $ipaddr} ${hostname:+-H $hostname} ${vendorid:+-V \"$vendorid\"} $broadcast $dhcpopts"</span></pre>
+<pre><span class="green">                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_DEBUG" "dhcp" "params: -O 33 -O 121 -O 249 -f -R -a -t 0 -i $iface ${ipaddr:+-r $ipaddr} ${hostname:+-H $hostname} ${vendorid:+-V \"$vendorid\"} $broadcast $dhcpopts"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 50:</span></pre>
+<pre></span>		-p /var/run/udhcpc-$iface.pid \</span></pre>
+<pre><span class="green">                                   ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		-p /var/run/udhcpc-"$iface".pid \</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 57:</span></pre>
+<pre></span>		$broadcast $dhcpopts \</span></pre>
+<pre><span class="green">                           ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		$broadcast "$dhcpopts" \</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 63:</span></pre>
+<pre></span>	local interface="$1"</span></pre>
+<pre><span class="orange">        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 64:</span></pre>
+<pre></span>	local ifname=""</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">              ^----^ SC2034 (warning): ifname appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/dhcp.sh line 70:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "dhcp" "teardown $interface "</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "dhcp" "teardown $interface "</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- ifname appears unused. Verify use...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2046" title="https://www.shellcheck.net/wiki/SC2046" target="_blank" >https://www.shellcheck.net/wiki/SC2046</a> -- Quote this to prevent word splitt...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2155" title="https://www.shellcheck.net/wiki/SC2155" target="_blank" >https://www.shellcheck.net/wiki/SC2155</a> -- Declare and assign separately to ...</pre>

@@ -1,0 +1,77 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 4:</span></pre>
+<pre></span>. /usr/share/libubox/jshn.sh</span></pre>
+<pre><span class="green">  ^------------------------^ SC1091 (info): Not following: /usr/share/libubox/jshn.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 7:</span></pre>
+<pre></span>	local device="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 8:</span></pre>
+<pre></span>	local ifdev ifl3dev ifobj</span></pre>
+<pre><span class="orange">        ^-----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 9:</span></pre>
+<pre></span>	for ifobj in `ubus list network.interface.\*`; do</span></pre>
+<pre><span class="green">                     ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	for ifobj in $(ubus list network.interface.\*); do</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 12:</span></pre>
+<pre></span>			json_load "$(ifstatus $interface)"</span></pre>
+<pre><span class="green">                                              ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			json_load "$(ifstatus "$interface")"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 15:</span></pre>
+<pre></span>			if [[ "$device" = "$ifdev" ]] || [[ "$device" = "$ifl3dev" ]]; then</span></pre>
+<pre><span class="orange">                           ^------------------------^ SC3010 (warning): In POSIX sh, [[ ]] is undefined.</span></pre>
+<pre><span class="orange">                                                         ^--------------------------^ SC3010 (warning): In POSIX sh, [[ ]] is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 31:</span></pre>
+<pre></span>	local _data="$(ubus -S call "$1" "$2")"</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">              ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 39:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 40:</span></pre>
+<pre></span>	local ifname type device l3dev</span></pre>
+<pre><span class="orange">        ^----------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 61:</span></pre>
+<pre></span>	local config="$1"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 68:</span></pre>
+<pre></span>	local iface="$1"</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 69:</span></pre>
+<pre></span>	local config="$2"</span></pre>
+<pre><span class="orange">        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/network/config.sh line 76:</span></pre>
+<pre></span>	[ -n "$2" ] &amp;&amp; \</span></pre>
+<pre><span class="green">                    ^-- SC2015 (info): Note that A &amp;&amp; B || C is not if-then-else. C may run when A is true.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2155" title="https://www.shellcheck.net/wiki/SC2155" target="_blank" >https://www.shellcheck.net/wiki/SC2155</a> -- Declare and assign separately to ...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3010" title="https://www.shellcheck.net/wiki/SC3010" target="_blank" >https://www.shellcheck.net/wiki/SC3010</a> -- In POSIX sh, [[ ]] is undefined.</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3043" title="https://www.shellcheck.net/wiki/SC3043" target="_blank" >https://www.shellcheck.net/wiki/SC3043</a> -- In POSIX sh, 'local' is undefined.</pre>

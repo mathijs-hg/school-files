@@ -1,0 +1,75 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>undefined4 iw_in_addr(int param_1,char *param_2,char *param_3,int *param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  char *pcVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  undefined4 local_68;</pre>
+<pre>  undefined4 local_64;</pre>
+<pre>  undefined4 local_60;</pre>
+<pre>  undefined4 local_5c;</pre>
+<pre>  undefined4 local_58;</pre>
+<pre>  undefined4 local_54;</pre>
+<pre>  undefined4 local_50;</pre>
+<pre>  undefined4 local_4c;</pre>
+<pre>  undefined4 local_48;</pre>
+<pre>  int local_44;</pre>
+<pre>  int local_40;</pre>
+<pre>  int local_3c;</pre>
+<pre>  uint local_38;</pre>
+<pre>  char acStack_24 [20];</pre>
+<pre>  </pre>
+<pre>  pcVar1 = strchr(param_3,0x3a);</pre>
+<pre>  if (pcVar1 == (char *)0x0) {</pre>
+<pre>    iVar2 = iw_check_if_addr_type(param_1,param_2);</pre>
+<pre>    if (iVar2 &lt; 0) {</pre>
+<pre>      fprintf(stderr,"%-8.16s  Interface doesn\'t support IP addresses\n",param_2);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    iVar2 = iw_in_inet(param_3,&amp;local_68);</pre>
+<pre>    if (iVar2 &lt; 0) {</pre>
+<pre>      fprintf(stderr,"Invalid interface address %s\n",param_3);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    local_58 = local_68;</pre>
+<pre>    local_54 = local_64;</pre>
+<pre>    local_50 = local_60;</pre>
+<pre>    local_4c = local_5c;</pre>
+<pre>    local_48 = (uint)local_48._2_2_ &lt;&lt; 0x10;</pre>
+<pre>    local_38 = 0;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_24,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar2 = ioctl(param_1,0x8954,&amp;local_58);</pre>
+<pre>    __stream = stderr;</pre>
+<pre>    if ((iVar2 &lt; 0) || ((local_38 &amp; 2) == 0)) {</pre>
+<pre>      piVar3 = __errno_location();</pre>
+<pre>      fprintf(__stream,</pre>
+<pre>              "Arp failed for %s on %s... (%d)\nTry to ping the address before setting it.\n",</pre>
+<pre>              param_3,param_2,*piVar3);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    *param_4 = local_48;</pre>
+<pre>    param_4[1] = local_44;</pre>
+<pre>    param_4[2] = local_40;</pre>
+<pre>    param_4[3] = local_3c;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    iVar2 = iw_check_mac_addr_type(param_1,param_2);</pre>
+<pre>    if (iVar2 &lt; 0) {</pre>
+<pre>      fprintf(stderr,"%-8.16s  Interface doesn\'t support MAC addresses\n",param_2);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    *(undefined2 *)param_4 = 1;</pre>
+<pre>    iVar2 = iw_ether_aton(param_3,(undefined2 *)((int)param_4 + 2));</pre>
+<pre>    if (iVar2 == 0) {</pre>
+<pre>      fprintf(stderr,"Invalid hardware address %s\n",param_3);</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return 0;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 5c39170d0c6aa9dd</pre>

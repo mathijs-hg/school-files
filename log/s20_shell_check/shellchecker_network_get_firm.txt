@@ -1,0 +1,256 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 4:[0m
+[0m	echo $1 | awk 'BEGIN{FS="-";add=1}{for(i=6;i>0;i--){j="0x"$i;\[0m
+[32m             ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo "$1" | awk 'BEGIN{FS="-";add=1}{for(i=6;i>0;i--){j="0x"$i;\
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 10:[0m
+[0m	echo $1 | awk 'BEGIN{FS="-";dec=1}{for(i=6;i>0;i--){j="0x"$i;\[0m
+[32m             ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo "$1" | awk 'BEGIN{FS="-";dec=1}{for(i=6;i>0;i--){j="0x"$i;\
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 17:[0m
+[0m    local default_mac_ifname[0m
+[33m    ^----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 26:[0m
+[0mlocal mac=$(getfirm MAC)[0m
+[33m^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^-^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m          ^------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 27:[0m
+[0mlocal lan_mac=$(getfirm LAN_MAC)[0m
+[33m^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m              ^----------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 29:[0m
+[0mif [ "$1" == "lan" ]; then[0m
+[33m          ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 30:[0m
+[0m    echo -n $lan_mac[0m
+[33m         ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m            ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo -n "$lan_mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 31:[0m
+[0melif [ "$1" == "wan" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 33:[0m
+[0m        echo -n $mac[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 35:[0m
+[0m        mac=$(inc_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        mac=$(inc_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 36:[0m
+[0m        echo -n $mac[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 38:[0m
+[0melif [ "$1" == "lan_inc2" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 39:[0m
+[0m	mac=$(inc_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac=$(inc_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 40:[0m
+[0m	mac=$(inc_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac=$(inc_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 41:[0m
+[0m	echo -n $mac[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 42:[0m
+[0melif [ "$1" == "wireless_2.4" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 43:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 44:[0m
+[0m    echo -n $mac[0m
+[33m         ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 45:[0m
+[0melif [ "$1" == "wireless_5" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 46:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 47:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 48:[0m
+[0m    echo -n $mac[0m
+[33m         ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 49:[0m
+[0melif [ "$1" == "lan_dec1" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 50:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 51:[0m
+[0m    echo -n $mac[0m
+[33m         ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 52:[0m
+[0melif [ "$1" == "lan_dec2" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 53:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 54:[0m
+[0m    mac=$(dec_mac $mac)[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 55:[0m
+[0m    echo -n $mac[0m
+[33m         ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo -n "$mac"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 56:[0m
+[0melif [ "$1" == "lan_dec3" ]; then[0m
+[33m            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 57:[0m
+[0m	mac=$(dec_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 58:[0m
+[0m	mac=$(dec_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 59:[0m
+[0m	mac=$(dec_mac $mac)[0m
+[32m                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac=$(dec_mac "$mac")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/network_get_firm line 60:[0m
+[0m	echo -n $mac[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo -n "$mac"
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...
+  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...

@@ -1,0 +1,18 @@
+#!/bin/sh /etc/rc.common
+#
+# Copyright (c) 2019 TP-LINK Technologies Co., Ltd.
+# All Rights Reserved.
+
+START=79
+
+start() {
+	# TODO: add the calibration process.
+	[ "$(/sbin/is_cal)" = "false" ] && {
+		echo "wireless is not calibrated, starting ated..." > /dev/console
+		/sbin/ated_iwpriv &
+		/sbin/ated_iwpriv &
+	}
+
+	return 0
+}
+

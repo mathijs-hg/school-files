@@ -1,0 +1,38 @@
+[[0;34m+[0m] [0;36m[1mCheck decompiled binary source code for vulnerabilities[0m
+[1m=================================================================[0m
+The following module tries to decompile the firmware binaries with Ghidra. Afterwards it tests the decompiled sources with semgrep for vulnerabilities.
+Furhter details about the used approach are documented by [0;33m0xdea[0m in the following resources:
+    [*] [0;33mhttps://security.humanativaspa.it/automating-binary-vulnerability-discovery-with-ghidra-and-semgrep/[0m
+    [*] [0;33mhttps://github.com/0xdea/ghidra-scripts/blob/main/Haruspex.java[0m
+    [*] [0;33mhttps://github.com/0xdea/semgrep-rules[0m
+
+
+[[0;32m+[0m][0;32m Found [0;33m144 issues[0;32m in native binary [0;33mswitch[0m[0m
+[[0;32m+[0m][0;32m Found [0;33m270 issues[0;32m in native binary [0;33mated_iwpriv[0m[0m
+[[0;32m+[0m][0;32m Found [0;33m44 issues[0;32m in native binary [0;33mhw_nat[0m[0m
+[[0;32m+[0m][0;32m Found [0;33m40 issues[0;32m in native binary [0;33mflash_erase[0m[0m
+[[0;32m+[0m][0;32m Found [0;33m102 issues[0;32m in native binary [0;33mubiformat[0m[0m
+
+
+
+
+[0;34m==>[0m [0;36mResults - Ghidra decompiled code analysis via Semgrep[0m
+-----------------------------------------------------------------
+[[0;32m+[0m][0;32m Found [0;33m600[0;32m possible vulnerabilities ([0;33mvia semgrep on Ghidra decompiled code[0;32m) in [0;33m6[0;32m tested binaries:[0m[0m
+    [0;32mcommand-injection[0;33m - 2 times.[0m
+    [0;32minsecure-api-rand-srand[0;33m - 2 times.[0m
+    [0;32minsecure-api-scanf-etc[0;33m - 3 times.[0m
+    [0;32minsecure-api-strcpy-stpcpy-strcat[0;33m - 6 times.[0m
+    [0;32minteger-truncation[0;33m - 4 times.[0m
+    [0;32minteger-wraparound[0;33m - 3 times.[0m
+    [0;32minteresting-api-calls[0;33m - 363 times.[0m
+    [0;32mpointer-subtraction[0;33m - 4 times.[0m
+    [0;32msigned-unsigned-conversion[0;33m - 161 times.[0m
+    [0;32munchecked-ret-malloc-calloc-realloc[0;33m - 1 times.[0m
+    [0;32munchecked-ret-scanf-etc[0;33m - 10 times.[0m
+    [0;32munsafe-ret-snprintf-vsnprintf[0;33m - 4 times.[0m
+    [0;32munterminated-string-strncpy-stpncpy[0;33m - 37 times.[0m
+
+-----------------------------------------------------------------
+
+[*] Statistics:600:6

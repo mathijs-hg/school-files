@@ -1,0 +1,41 @@
+<br />
+<pre>void phy_crossover(undefined4 param_1,undefined4 *param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  ulong uVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  uint local_10;</pre>
+<pre>  </pre>
+<pre>  uVar1 = strtoul((char *)param_2[2],(char **)0x0,10);</pre>
+<pre>  if (((int)uVar1 &lt; 0) || (4 &lt; (int)uVar1)) {</pre>
+<pre>    usage(*param_2);</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    local_10 = mii_mgr_cl45_read(uVar1,0x1e,0x145)</span></span></pre>
+<pre>    printf("mii_mgr_cl45:");</pre>
+<pre>    printf("Read:  port#=%d, device=0x%x, reg=0x%x, value=0x%x\n",uVar1,0x1e,0x145,local_10);</pre>
+<pre>    iVar2 = strncmp((char *)param_2[3],"auto",5);</pre>
+<pre>    if (iVar2 == 0) {</pre>
+<pre>      local_10 = local_10 &amp; 0xffffffe7;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      iVar2 = strncmp((char *)param_2[3],"mdi",4);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        local_10 = local_10 &amp; 0xffffffe7 | 0x10;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = strncmp((char *)param_2[3],"mdix",5);</pre>
+<pre>        if (iVar2 != 0) {</pre>
+<pre>          usage(*param_2);</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        local_10 = local_10 | 0x18;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    printf("Write: port#=%d, device=0x%x, reg=0x%x. value=0x%x\n",uVar1,0x1e,0x145,local_10);</pre>
+<pre>    mii_mgr_cl45_write(uVar1,0x1e,0x145,local_10);</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 5b98510e4ea38e57</pre>

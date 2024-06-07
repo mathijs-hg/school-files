@@ -1,0 +1,172 @@
+/lib/ld-uClibc.so.0
+pP>A
+_init
+_fini
+__uClibc_main
+__deregister_frame_info
+__register_frame_info
+_Jv_RegisterClasses
+strtok_r
+strtoul
+puts
+exit
+memcpy
+snprintf
+if_indextoname
+strcmp
+bridgeSetSnoopingParam
+atoi
+if_nametoindex
+memset
+inet_pton
+bridgeAllocTableBuf
+bridgeTableAction
+bridgeFreeTableBuf
+libhyficommon.so
+_DYNAMIC_LINKING
+__RLD_MAP
+_GLOBAL_OFFSET_TABLE_
+socket
+fcntl
+close
+bind
+poll
+free
+strlcpy
+malloc
+getpid
+sendto
+recvfrom
+libc.so.0
+_ftext
+_fdata
+_edata
+__bss_start
+_fbss
+_end
+0-9'%	
+<! @
+<! @
+<! `
+<! `
+<!  
+<!  
+=s&#
+|<E&!
+|<R&
+R&! 
+s&!(`
+\8$&
+<!( 
+:F$0
+<0?"
+=B$!
+$0>c$
+'!0@
+$!  
+$&!(`
+'Invalid MAC address
+Usage:
+mcsctl -s brname state state(enable or disable)
+mcsctl -s brname debug state(enable or disable)
+mcsctl -s brname policy value(flood or drop)
+mcsctl -s brname aging time(s)
+mcsctl -s brname retag state(enable or disable) dscp
+mcsctl -s brname route type(flood, drop, specify or default) ifname
+mcsctl -s brname acl add type(igmp or mld) rule(Disable, Multicast, SystemWideManagement, Management, NonSnooping or Internal) pattern(ipv4, ipv6 or mac) ip(mac) ipmask(macmask)
+mcsctl -s brname acl flush type(igmp or mld)
+mcsctl -s brname convertall state(enable or disable)
+mcsctl -s brname timeout from(GroupSpecificQueries, AllSystemQueries or GroupMembershipInterval) state(enable or disable)
+mcsctl -s brname IGMPv3MLDv2Filter state(enable or disable)
+mcsctl -s brname IgnoreTbit state(enable or disable)
+mcsctl -s brname LocalQueryInterval value
+mcsctl -s brname LocalInspect state(enable or disable)
+mcsctl -s brname extraqueryresponse value
+mcsctl -s brname QRVThreshold value
+mcsctl -s brname mcrouter state(enable or disable)
+mcsctl -g brname acltbl num_entries
+mcsctl -g brname mdbtbl num_entries
+example:
+mcsctl -s br-lan state enable
+mcsctl -s br-lan debug enable
+mcsctl -s br-lan policy flood
+mcsctl -s br-lan aging 260
+mcsctl -s br-lan retag enable 40
+mcsctl -s br-lan route specify eth0.5
+mcsctl -s br-lan acl add igmp SystemWideManagement ipv4 224.0.0.1 255.255.255.255
+mcsctl -s br-lan acl add igmp Multicast mac 01:00:5e:00:00:00 ff:ff:ff:00:00:00
+mcsctl -s br-lan acl flush igmp
+mcsctl -s br-lan convertall enable
+mcsctl -s br-lan timeout AllSystemQueries disable
+mcsctl -s br-lan LocalQueryInterval 125
+mcsctl -g br-lan acltbl 20
+mcsctl -g br-lan mdbtbl 20
+IGMP ACL TABLE:
+MLD ACL TABLE:
+	PATTEN %02d:%03d.%03d.%03d.%03d/%03d.%03d.%03d.%03d - %02x:%02x:%02x:%02x:%02x:%02x/%02x:%02x:%02x:%02x:%02x:%02x -- %s
+	PATTEN %02d:%04x:%04x:%04x:%04x:%04x:%04x:%04x:%04x/%04x:%04x:%04x:%04x:%04x:%04x:%04x:%04x - %02x:%02x:%02x:%02x:%02x:%02x/%02x:%02x:%02x:%02x:%02x:%02x -- %s
+DISABLE
+MULTICAST
+SYSTEM WIDE MANAGEMENT
+NON SNOOPING
+Nonblock Listed Sources
+Block Listed Sources
+----------------------------Bridge Snooping Hash Table -- IPv4----------------------------------
+NUM   GROUP                                                       FDB               PORT      AGE
+----------------------------Bridge Snooping Hash Table -- IPv6----------------------------------
+%03d.%03d.%03d.%03d
+%-6d%-60s%02x:%02x:%02x:%02x:%02x:%02x %-10s%-10lu
+      |--Source Mode:%s
+      |--Num of Sources:%d
+      `--Num of Sources:%d
+      `--Source %d of %d:%s
+      |--Source %d of %d:%s
+%04x:%04x:%04x:%04x:%04x:%04x:%04x:%04x
+Invalid argument %s
+state
+disable
+debug
+policy
+drop
+aging
+retag
+route
+specify
+default
+igmp
+Multicast
+SystemWideManagement
+Management
+NonSnooping
+Disable
+ipv4
+Error, please specify the ipv6 address.
+Invalid ipv4 address %s
+Invalid ipv4 mask address %s
+ipv6
+Error, please specify the ipv4 address.
+Invalid ipv6 address %s
+Invalid ipv6 mask address %s
+flush
+convertall
+timeout
+GroupSpecificQueries
+AllSystemQueries
+GroupMembershipInterval
+IGMPv3MLDv2Filter
+IgnoreTbit
+LocalQueryInterval
+mcrouter
+mdbtbl
+acltbl
+%s: Invalid request
+%s: Buffer too small (requested %d, allocated %d)
+%s: netlink failed, error: %s 
+MC_STATUS_SUCCESS
+MC_STATUS_NOT_SUPPORTED
+MC_STATUS_RESOURCES
+MC_STATUS_INVALID_PARAMETER
+MC_STATUS_BUFFER_OVERFLOW
+MC_STATUS_FAILURE
+MC_STATUS_NOT_FOUND
+bridgeTableAction

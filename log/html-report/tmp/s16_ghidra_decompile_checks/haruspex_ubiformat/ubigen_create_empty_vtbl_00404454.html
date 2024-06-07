@@ -1,0 +1,39 @@
+<br />
+<pre>ubi_vtbl_record * ubigen_create_empty_vtbl(ubigen_info *ui)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  ubi_vtbl_record *puVar1;</pre>
+<pre>  uint32_t uVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  char *pcVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  ubi_vtbl_record *ss;</pre>
+<pre>  int iVar6;</pre>
+<pre>  size_t __size;</pre>
+<pre>  </pre>
+<pre>  __size = ui-&gt;vtbl_size;</pre>
+<pre><span class="green"><span class="green">  puVar1 = (ubi_vtbl_record *)calloc(1,__size)</span></span></span></pre>
+<pre>  if (puVar1 == (ubi_vtbl_record *)0x0) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    iVar6 = *piVar3;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot allocate %d bytes of memory\n","libubigen",__size);</pre>
+<pre>    __stream = stderr;</pre>
+<pre>    pcVar4 = strerror(iVar6);</pre>
+<pre>    fprintf(__stream,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c,iVar6,pcVar4);</pre>
+<pre>  }</pre>
+<pre>  else if (0 &lt; ui-&gt</span>ax_volumes) {</pre>
+<pre>    iVar6 = 0;</pre>
+<pre>    ss = puVar1;</pre>
+<pre>    do {</pre>
+<pre>      uVar2 = mtd_crc32(0xffffffff,ss,0xa8);</pre>
+<pre>      iVar5 = ui-&gt</span>ax_volumes;</pre>
+<pre>      iVar6 = iVar6 + 1;</pre>
+<pre>      ss-&gt;crc = uVar2 &gt;&gt; 0x18 | uVar2 &lt;&lt; 0x18 | (uVar2 &amp; 0xff00) &lt;&lt; 8 | (uVar2 &amp; 0xff0000) &gt;&gt; 8;</pre>
+<pre>      ss = ss + 1;</pre>
+<pre>    } while (iVar6 &lt; iVar5);</pre>
+<pre>  }</pre>
+<pre>  return puVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] d90ed97a6dec86e5</pre>

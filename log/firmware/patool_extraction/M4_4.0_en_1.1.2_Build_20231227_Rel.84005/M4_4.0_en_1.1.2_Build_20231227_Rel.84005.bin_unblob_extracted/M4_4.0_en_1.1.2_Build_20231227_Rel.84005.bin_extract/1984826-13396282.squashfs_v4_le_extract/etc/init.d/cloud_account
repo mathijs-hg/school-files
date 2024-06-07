@@ -1,0 +1,43 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=99
+USE_PROCD=1
+
+start_service()
+{
+    echo "=========> check cloud_config.device_status.username_md5" > /dev/console
+    local username_md5=$(uci get cloud_config.device_status.username_md5)
+
+    local username=$(uci get accountmgnt.@cloud_account[0].username_md5)
+    if [ -z "$username" ]; then
+        echo "no username is found in accountmgnt" > /dev/console
+        return
+    fi
+
+    if [[ ! -z "$username_md5" && "$username_md5" == "$username" ]]; then
+        echo "cloud config username_md5 is already added..." > /dev/console
+        return
+    fi
+
+    echo "========> add username_md5 to cloud_config:$username" > /dev/console
+    uci set cloud_config.device_status.username_md5="$username"
+    uci commit cloud_config
+}
+
+stop_service()
+{
+    echo "=========> cloud_account do nothing for stop" > /dev/console
+}
+
+reload_service()
+{
+    echo "=========> cloud_account call cloud_account_sync..." > /dev/console
+    cloud_account_sync
+}
+
+service_triggers() {
+	#if /etc/config/accountmgnt changes, check the cloud_status to see if this device
+    # is bind to the cloud. if so and this device is using default account, unbind it
+	procd_add_reload_trigger "accountmgnt"
+}

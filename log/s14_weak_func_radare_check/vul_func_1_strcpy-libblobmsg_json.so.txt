@@ -1,0 +1,57 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibblobmsg_json.so[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibblobmsg_json.so[0m
+
+addiu a1, sp, 0x18
+lw v1, -0x7fdc(gp)
+sll v0, v0, 2
+addiu v1, v1, 0x1e98
+addu v0, v1, v0
+lw v0, (v0)
+nop
+addu v0, v0, gp
+jr v0
+nop
+lw a1, -0x7fdc(gp)
+addiu a0, sp, 0x18
+b 0x1108
+addiu a1, a1, 0x1e60
+lbu v0, (s2)
+nop
+beqz v0, 0x10f8
+nop
+lw a1, -0x7fdc(gp)
+b 0x1104
+addiu a1, a1, 0x1e4c
+lw a1, -0x7fdc(gp)
+nop
+addiu a1, a1, 0x1e54
+addiu a0, sp, 0x18
+[31mlw t9, -sym.imp.strcpy(gp)[0m
+nop
+jalr t9
+nop
+lw gp, 0x10(sp)
+b 0x1230
+nop
+lhu v0, (s2)
+lw a1, -0x7fdc(gp)
+addiu a0, sp, 0x18
+andi a2, v0, 0xffff
+srl a2, a2, 8
+sll v0, v0, 8
+or a2, a2, v0
+addiu a1, a1, 0x1e68
+b 0x1174
+andi a2, a2, 0xffff
+lw t9, -sym.imp.__bswapsi2(gp)
+lw a0, (s2)
+jalr t9
+nop
+
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m1[0m times [0;33mlibblobmsg_json.so[0m
+

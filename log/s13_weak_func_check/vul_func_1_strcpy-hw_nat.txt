@@ -1,0 +1,40 @@
+[[0;33m*[0m] Binary protection state of [0;33mhw_nat[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mhw_nat[0m
+
+  4081b0:	10400005 	beqz	v0,4081c8 <getnext+0x48>
+  4081b4:	00000000 	nop
+  4081b8:	8fc20030 	lw	v0,48(s8)
+  4081bc:	00000000 	nop
+  4081c0:	14400004 	bnez	v0,4081d4 <getnext+0x54>
+  4081c4:	00000000 	nop
+  4081c8:	2402ffff 	li	v0,-1
+  4081cc:	081020a6 	j	408298 <getnext+0x118>
+  4081d0:	00000000 	nop
+  4081d4:	8fc40028 	lw	a0,40(s8)
+  4081d8:	8fc5002c 	lw	a1,44(s8)
+  4081dc:	8f8280a0 	lw	v0,-32608(gp)
+  4081e0:	00000000 	nop
+  4081e4:	0040c821 	move	t9,v0
+  4081e8:	0320f809 	jalr	t9
+  4081ec:	00000000 	nop
+  4081f0:	8fdc0010 	lw	gp,16(s8)
+  4081f4:	afc20018 	sw	v0,24(s8)
+  4081f8:	8fc20018 	lw	v0,24(s8)
+  4081fc:	00000000 	nop
+  408200:	1440000d 	bnez	v0,408238 <getnext+0xb8>
+  408204:	00000000 	nop
+  408208:	8fc20028 	lw	v0,40(s8)
+  40820c:	8fc40030 	lw	a0,48(s8)
+  408210:	00402821 	move	a1,v0
+[31m  408214:	8f8280f0 	lw	v0,strcpy[0m
+  408218:	00000000 	nop
+  40821c:	0040c821 	move	t9,v0
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m1[0m times [0;33mhw_nat[0m
+

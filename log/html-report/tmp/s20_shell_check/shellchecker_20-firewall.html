@@ -1,0 +1,35 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/20-firewall line 7:</span></pre>
+<pre></span>[ "$DEVICE" == "lo" ] &amp;&amp; exit 0</span></pre>
+<pre><span class="orange">            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/20-firewall line 9:</span></pre>
+<pre></span>. /lib/functions.sh</span></pre>
+<pre><span class="green">  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/20-firewall line 10:</span></pre>
+<pre></span>. /lib/firewall/core.sh</span></pre>
+<pre><span class="green">  ^-------------------^ SC1091 (info): Not following: /lib/firewall/core.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/20-firewall line 17:</span></pre>
+<pre></span>		network_echo $LOG_PRI_NOTICE "firewall" "$INTERFACE ifup, start update firewall."</span></pre>
+<pre><span class="green">                             ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		network_echo "$LOG_PRI_NOTICE" "firewall" "$INTERFACE ifup, start update firewall."</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/20-firewall line 21:</span></pre>
+<pre></span>		network_echo $LOG_PRI_NOTICE "firewall" "$INTERFACE ifdown, start flush firewall."</span></pre>
+<pre><span class="green">                             ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		network_echo "$LOG_PRI_NOTICE" "firewall" "$INTERFACE ifdown, start flush firewall."</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3014" title="https://www.shellcheck.net/wiki/SC3014" target="_blank" >https://www.shellcheck.net/wiki/SC3014</a> -- In POSIX sh, == in place of = is ...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC1091" title="https://www.shellcheck.net/wiki/SC1091" target="_blank" >https://www.shellcheck.net/wiki/SC1091</a> -- Not following: /lib/firewall/core...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2086" title="https://www.shellcheck.net/wiki/SC2086" target="_blank" >https://www.shellcheck.net/wiki/SC2086</a> -- Double quote to prevent globbing ...</pre>

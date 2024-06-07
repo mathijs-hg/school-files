@@ -1,0 +1,929 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s20_shell_check.html" title="./../s20_shell_check.html" >&laquo; Back to s20_shell_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 3:</span></pre>
+<pre></span>. /lib/functions.sh</span></pre>
+<pre><span class="green">  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 14:</span></pre>
+<pre></span>RESERVATION_UCI_FILE="dhcp_reservation"</span></pre>
+<pre><span class="orange">^------------------^ SC2034 (warning): RESERVATION_UCI_FILE appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 15:</span></pre>
+<pre></span>RESERVATION_UCI_TYPE="reservation"</span></pre>
+<pre><span class="orange">^------------------^ SC2034 (warning): RESERVATION_UCI_TYPE appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 22:</span></pre>
+<pre></span>UDHCPD_PID_FILE="/tmp/udhcpd_br-$interface.pid"</span></pre>
+<pre><span class="orange">^-------------^ SC2034 (warning): UDHCPD_PID_FILE appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 31:</span></pre>
+<pre></span>secondary="0.0.0.0"</span></pre>
+<pre><span class="orange">^-------^ SC2034 (warning): secondary appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 35:</span></pre>
+<pre></span>static_lease_mac="00:00:00:00:00:00"</span></pre>
+<pre><span class="orange">^--------------^ SC2034 (warning): static_lease_mac appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 36:</span></pre>
+<pre></span>static_lease_ip="192.168.0.1"</span></pre>
+<pre><span class="orange">^-------------^ SC2034 (warning): static_lease_ip appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 41:</span></pre>
+<pre></span>	local value=$1</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local value="$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 42:</span></pre>
+<pre></span>	echo "$value" &gt;&gt; $SMARTIP_CONFIG_FILE</span></pre>
+<pre><span class="green">                         ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$value" &gt;&gt; "$SMARTIP_CONFIG_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 57:</span></pre>
+<pre></span>    local config="$1"</span></pre>
+<pre><span class="orange">    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">    ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 58:</span></pre>
+<pre></span>    local vapname vapmode net_type device</span></pre>
+<pre><span class="orange">    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 60:</span></pre>
+<pre></span>    config_get vapname "$config" vapname</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 61:</span></pre>
+<pre></span>    config_get vapmode "$config" mode</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 62:</span></pre>
+<pre></span>    config_get net_type "$config" type</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 63:</span></pre>
+<pre></span>    config_get device "$config" device</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 65:</span></pre>
+<pre></span>    if [ -n "$vapname" ] &amp;&amp; [ "$device" = "wifi0" ]; then</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">       ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                            ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 67:</span></pre>
+<pre></span>        if [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">           ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                    ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 68:</span></pre>
+<pre></span>            bak_2g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 69:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "config" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 70:</span></pre>
+<pre></span>            config_2g="$vapname"</span></pre>
+<pre><span class="green">            ^------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 71:</span></pre>
+<pre></span>        elif [ "$vapmode" = "sta" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">             ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                       ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 72:</span></pre>
+<pre></span>            sta_2g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 73:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "default" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 74:</span></pre>
+<pre></span>            default_2g="$vapname"</span></pre>
+<pre><span class="green">            ^-------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 75:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "lan" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 76:</span></pre>
+<pre></span>            lan_2g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 77:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "guest" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-----------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 78:</span></pre>
+<pre></span>            guest_2g="$vapname"</span></pre>
+<pre><span class="green">            ^-----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 81:</span></pre>
+<pre></span>    elif [ -n "$vapname" ] &amp;&amp; [ "$device" = "wifi1" ]; then</span></pre>
+<pre><span class="green">         ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                              ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 83:</span></pre>
+<pre></span>        if [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">           ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                    ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 84:</span></pre>
+<pre></span>            bak_5g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 85:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "config" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 86:</span></pre>
+<pre></span>            config_5g="$vapname"</span></pre>
+<pre><span class="green">            ^------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 87:</span></pre>
+<pre></span>        elif [ "$vapmode" = "sta" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">             ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                       ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 88:</span></pre>
+<pre></span>            sta_5g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 89:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "default" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 90:</span></pre>
+<pre></span>            default_5g="$vapname"</span></pre>
+<pre><span class="green">            ^-------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 91:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "lan" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 92:</span></pre>
+<pre></span>            lan_5g="$vapname"</span></pre>
+<pre><span class="green">            ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 93:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "guest" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-----------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 94:</span></pre>
+<pre></span>            guest_5g="$vapname"</span></pre>
+<pre><span class="green">            ^-----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 97:</span></pre>
+<pre></span>    elif [ -n "$vapname" ] &amp;&amp; [ "$device" = "wifi2" ]; then</span></pre>
+<pre><span class="green">         ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                              ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 99:</span></pre>
+<pre></span>        if [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">           ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                    ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 100:</span></pre>
+<pre></span>            bak_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 101:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "config" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 102:</span></pre>
+<pre></span>            config_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^-------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 103:</span></pre>
+<pre></span>        elif [ "$vapmode" = "sta" ] &amp;&amp; [ "$net_type" = "backhaul" ]; then</span></pre>
+<pre><span class="green">             ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                       ^--------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 104:</span></pre>
+<pre></span>            sta_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 105:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "default" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 106:</span></pre>
+<pre></span>            default_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 107:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "lan" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 108:</span></pre>
+<pre></span>            lan_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 109:</span></pre>
+<pre></span>        elif [ "$vapmode" = "ap" ] &amp;&amp; [ "$net_type" = "guest" ]; then</span></pre>
+<pre><span class="green">             ^--------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                      ^-----------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 110:</span></pre>
+<pre></span>            guest_5g2="$vapname"</span></pre>
+<pre><span class="green">            ^------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 117:</span></pre>
+<pre></span>    local  sta_ifnames lan_ifnames guest_ifnames</span></pre>
+<pre><span class="orange">    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 118:</span></pre>
+<pre></span>    local  bak_ifnames config_ifnames default_ifnames</span></pre>
+<pre><span class="orange">    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 194:</span></pre>
+<pre></span>	local section="$1"</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">        ^----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 195:</span></pre>
+<pre></span>	local options="gw lanip lantype mask"</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 196:</span></pre>
+<pre></span>	config_get if $section interface</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                      ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get if "$section" interface</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 198:</span></pre>
+<pre></span>	if [ "$if" = "$interface" ]; then</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">           ^----------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="orange">              ^-^ SC2154 (warning): if is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 199:</span></pre>
+<pre></span>	    for option in $options; do</span></pre>
+<pre><span class="green">            ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 200:</span></pre>
+<pre></span>		    config_get value $section $option</span></pre>
+<pre><span class="green">                    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                     ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                              ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		    config_get value "$section" "$option"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 201:</span></pre>
+<pre></span>		    add "$option=$value"</span></pre>
+<pre><span class="green">                    ^------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 208:</span></pre>
+<pre></span>	echo -n "" &gt; $SMARTIP_CONFIG_FILE</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                     ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo -n "" &gt; "$SMARTIP_CONFIG_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 218:</span></pre>
+<pre></span>	if [ -f $LANIP_CHANGE_FILE ]; then</span></pre>
+<pre><span class="green">                ^----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	if [ -f "$LANIP_CHANGE_FILE" ]; then</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 219:</span></pre>
+<pre></span>		read change &lt; $LANIP_CHANGE_FILE</span></pre>
+<pre><span class="green">                ^--^ SC2162 (info): read without -r will mangle backslashes.</span></pre>
+<pre><span class="green">                              ^----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		read change &lt; "$LANIP_CHANGE_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 221:</span></pre>
+<pre></span>		rm -f $LANIP_CHANGE_FILE</span></pre>
+<pre><span class="green">                      ^----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		rm -f "$LANIP_CHANGE_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 226:</span></pre>
+<pre></span>	local section=$1</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">        ^--------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local section="$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 228:</span></pre>
+<pre></span>    config_get value $section interface</span></pre>
+<pre><span class="green">    ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                     ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    config_get value "$section" interface</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 229:</span></pre>
+<pre></span>    [ "$value" != "$interface" ] &amp;&amp; return	</span></pre>
+<pre><span class="green">    ^---------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                    ^----------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 231:</span></pre>
+<pre></span>	config_get value $section lanip</span></pre>
+<pre><span class="green">        ^-----------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" lanip</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 232:</span></pre>
+<pre></span>	lanip=$value</span></pre>
+<pre><span class="green">        ^----------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 233:</span></pre>
+<pre></span>	config_get value $section mask</span></pre>
+<pre><span class="green">        ^----------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" mask</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 234:</span></pre>
+<pre></span>	mask=$value</span></pre>
+<pre><span class="green">        ^---------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 238:</span></pre>
+<pre></span>	local section=$1</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">        ^--------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local section="$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 240:</span></pre>
+<pre></span>	config_get value $section interface</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" interface</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 241:</span></pre>
+<pre></span>	[ "$value" != "$interface" ] &amp;&amp; return</span></pre>
+<pre><span class="green">        ^---------------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                                        ^----^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 243:</span></pre>
+<pre></span>	config_get value $section startIpAddress</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" startIpAddress</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 244:</span></pre>
+<pre></span>	ipBegin=$value</span></pre>
+<pre><span class="green">        ^------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 246:</span></pre>
+<pre></span>	config_get value $section endIpAddress</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" endIpAddress</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 247:</span></pre>
+<pre></span>	ipEnd=$value</span></pre>
+<pre><span class="green">        ^----------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 249:</span></pre>
+<pre></span>	config_get value $section primaryDns</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" primaryDns</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 250:</span></pre>
+<pre></span>	primaryDns=$value</span></pre>
+<pre><span class="green">        ^---------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 252:</span></pre>
+<pre></span>	config_get value $section secondaryDns</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" secondaryDns</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 253:</span></pre>
+<pre></span>	secondaryDns=$value</span></pre>
+<pre><span class="green">        ^-----------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 255:</span></pre>
+<pre></span>	config_get value $section dhcpServer</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" dhcpServer</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 256:</span></pre>
+<pre></span>	echo "$value" &gt; $UDHCPD_INFO_FILE</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                        ^---------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$value" &gt; "$UDHCPD_INFO_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 258:</span></pre>
+<pre></span>	config_get value $section defaultGateway</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" defaultGateway</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 259:</span></pre>
+<pre></span>	router=$value</span></pre>
+<pre><span class="orange">        ^----^ SC2034 (warning): router appears unused. Verify use (or export if used externally).</span></pre>
+<pre><span class="green">        ^-----------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 261:</span></pre>
+<pre></span>	config_get value $section dhcpLeaseTime</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value "$section" dhcpLeaseTime</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 262:</span></pre>
+<pre></span>	if [ "$sys_mode" == "AP" ];then</span></pre>
+<pre><span class="green">        ^-- SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="green">           ^---------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<pre><span class="orange">                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 263:</span></pre>
+<pre></span>		lease=1</span></pre>
+<pre><span class="green">                ^-----^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 265:</span></pre>
+<pre></span>		lease=$value</span></pre>
+<pre><span class="green">                ^----------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 267:</span></pre>
+<pre></span>	let "lease = $lease * 60"</span></pre>
+<pre><span class="orange">        ^----------------------^ SC3039 (warning): In POSIX sh, 'let' is undefined.</span></pre>
+<pre><span class="green">        ^-----------------------^ SC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 282:</span></pre>
+<pre></span>	if [ "$primaryDns" == "0.0.0.0" -a "$secondaryDns" == "0.0.0.0" ]; then</span></pre>
+<pre><span class="orange">                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<pre><span class="orange">                                        ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<pre><span class="orange">                                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 290:</span></pre>
+<pre></span>	echo -n "" &gt; $UDHCPD_CONFIG_FILE</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                     ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo -n "" &gt; "$UDHCPD_CONFIG_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 292:</span></pre>
+<pre></span>cat &lt;&lt; END		&gt;&gt; $UDHCPD_CONFIG_FILE</span></pre>
+<pre><span class="green">                           ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>cat &lt;&lt; END		&gt;&gt; "$UDHCPD_CONFIG_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 306:</span></pre>
+<pre></span>	if test -f $SMARTIP_LANIP_FILE</span></pre>
+<pre><span class="green">                   ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	if test -f "$SMARTIP_LANIP_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 308:</span></pre>
+<pre></span>		runtime_lanip=$(cat $SMARTIP_LANIP_FILE)</span></pre>
+<pre><span class="green">                                    ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		runtime_lanip=$(cat "$SMARTIP_LANIP_FILE")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 310:</span></pre>
+<pre></span>		runtime_lanip=$lanip		</span></pre>
+<pre><span class="orange">                ^-----------^ SC2034 (warning): runtime_lanip appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 319:</span></pre>
+<pre></span>if [ -f $WANIP_CONFLICT_FILE ]; then</span></pre>
+<pre><span class="green">        ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>if [ -f "$WANIP_CONFLICT_FILE" ]; then</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 320:</span></pre>
+<pre></span>	read conflict &lt; $WANIP_CONFLICT_FILE</span></pre>
+<pre><span class="green">        ^--^ SC2162 (info): read without -r will mangle backslashes.</span></pre>
+<pre><span class="green">                        ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	read conflict &lt; "$WANIP_CONFLICT_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 321:</span></pre>
+<pre></span>	rm -f $WANIP_CONFLICT_FILE</span></pre>
+<pre><span class="green">              ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	rm -f "$WANIP_CONFLICT_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 327:</span></pre>
+<pre></span>		cmdline=$(cat /proc/$pid/cmdline | grep $interface) </span></pre>
+<pre><span class="green">                                    ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                                        ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		cmdline=$(cat /proc/"$pid"/cmdline | grep "$interface") </pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 329:</span></pre>
+<pre></span>			kill -SIGTERM $pid</span></pre>
+<pre><span class="green">                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			kill -SIGTERM "$pid"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 333:</span></pre>
+<pre></span>	if [ -f $UDHCPD_LEASES_FILE ]; then</span></pre>
+<pre><span class="green">                ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	if [ -f "$UDHCPD_LEASES_FILE" ]; then</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 334:</span></pre>
+<pre></span>		:&gt; $UDHCPD_LEASES_FILE</span></pre>
+<pre><span class="green">                   ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		:&gt; "$UDHCPD_LEASES_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 343:</span></pre>
+<pre></span>	local lanip=''</span></pre>
+<pre><span class="orange">        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 347:</span></pre>
+<pre></span>		ip addr del $lanip dev br-lan</span></pre>
+<pre><span class="green">                            ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		ip addr del "$lanip" dev br-lan</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 355:</span></pre>
+<pre></span>	/usr/bin/smartipd -t $interface	-S</span></pre>
+<pre><span class="green">                             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	/usr/bin/smartipd -t "$interface"	-S</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 359:</span></pre>
+<pre></span>	[ -f $SMARTIP_CONFIG_FILE ] &amp;&amp; rm -f $SMARTIP_CONFIG_FILE</span></pre>
+<pre><span class="green">             ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                             ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ -f "$SMARTIP_CONFIG_FILE" ] &amp;&amp; rm -f "$SMARTIP_CONFIG_FILE"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 362:</span></pre>
+<pre></span>        cmdline=$(cat /proc/$pid/cmdline | grep $interface) </span></pre>
+<pre><span class="green">                            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                                ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        cmdline=$(cat /proc/"$pid"/cmdline | grep "$interface") </pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 364:</span></pre>
+<pre></span>            kill -SIGTERM $pid</span></pre>
+<pre><span class="green">                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            kill -SIGTERM "$pid"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 377:</span></pre>
+<pre></span>	/usr/bin/smartipd -t $interface -S</span></pre>
+<pre><span class="green">                             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	/usr/bin/smartipd -t "$interface" -S</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 416:</span></pre>
+<pre></span>	/usr/bin/smartipd -t $interface -c</span></pre>
+<pre><span class="green">                             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	/usr/bin/smartipd -t "$interface" -c</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/smartip line 425:</span></pre>
+<pre></span>	/usr/bin/smartipd -t $interface -d</span></pre>
+<pre><span class="green">                             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	/usr/bin/smartipd -t "$interface" -d</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- RESERVATION_UCI_FILE appears unus...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2154" title="https://www.shellcheck.net/wiki/SC2154" target="_blank" >https://www.shellcheck.net/wiki/SC2154</a> -- if is referenced but not assigned.</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2166" title="https://www.shellcheck.net/wiki/SC2166" target="_blank" >https://www.shellcheck.net/wiki/SC2166</a> -- Prefer [ p ] &amp;&amp; [ q ] as [ p -a q...</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+[[0;33m*[0m] Binary protection state of [0;33miwlist[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33miwlist[0m
+
+  405cf8:	afb40028 	sw	s4,40(sp)
+  405cfc:	afb20020 	sw	s2,32(sp)
+  405d00:	00808021 	move	s0,a0
+  405d04:	00c08821 	move	s1,a2
+  405d08:	8fa20048 	lw	v0,72(sp)
+  405d0c:	00001812 	mflo	v1
+  405d10:	00a3182a 	slt	v1,a1,v1
+  405d14:	1060000e 	beqz	v1,405d50 <iw_print_key+0x8c>
+  405d18:	00e09821 	move	s3,a3
+  405d1c:	8f868028 	lw	a2,-32728(gp)
+  405d20:	8fbf0034 	lw	ra,52(sp)
+  405d24:	8fb60030 	lw	s6,48(sp)
+  405d28:	8fb5002c 	lw	s5,44(sp)
+  405d2c:	8fb40028 	lw	s4,40(sp)
+  405d30:	8fb30024 	lw	s3,36(sp)
+  405d34:	8fb20020 	lw	s2,32(sp)
+  405d38:	8fb1001c 	lw	s1,28(sp)
+  405d3c:	8fb00018 	lw	s0,24(sp)
+  405d40:	8f998190 	lw	t9,-32368(gp)
+  405d44:	24c6a4f4 	addiu	a2,a2,-23308
+  405d48:	03200008 	jr	t9
+  405d4c:	27bd0038 	addiu	sp,sp,56
+  405d50:	30420800 	andi	v0,v0,0x800
+  405d54:	1040002e 	beqz	v0,405e10 <iw_print_key+0x14c>
+  405d58:	00000000 	nop
+[31m  405d5c:	8f9981a4 	lw	t9,strcpy[0m
+  405d60:	1ce0000d 	bgtz	a3,405d98 <iw_print_key+0xd4>
+  405d64:	00000000 	nop
+  405d68:	8f858028 	lw	a1,-32728(gp)
+  405d6c:	8fbf0034 	lw	ra,52(sp)
+  405d70:	8fb60030 	lw	s6,48(sp)
+  405d74:	8fb5002c 	lw	s5,44(sp)
+  405d78:	8fb40028 	lw	s4,40(sp)
+  405d7c:	8fb30024 	lw	s3,36(sp)
+  405d80:	8fb20020 	lw	s2,32(sp)
+  405d84:	8fb1001c 	lw	s1,28(sp)
+  405d88:	8fb00018 	lw	s0,24(sp)
+  405d8c:	24a59f60 	addiu	a1,a1,-24736
+  405d90:	03200008 	jr	t9
+  405d94:	27bd0038 	addiu	sp,sp,56
+  405d98:	8f928028 	lw	s2,-32728(gp)
+  405d9c:	26100002 	addiu	s0,s0,2
+  405da0:	24110001 	li	s1,1
+  405da4:	0320f809 	jalr	t9
+  405da8:	2645a500 	addiu	a1,s2,-23296
+  405dac:	8fbc0010 	lw	gp,16(sp)
+  405db0:	2652a500 	addiu	s2,s2,-23296
+  405db4:	8f948028 	lw	s4,-32728(gp)
+  405db8:	10000011 	b	405e00 <iw_print_key+0x13c>
+  405dbc:	2694a504 	addiu	s4,s4,-23292
+  405dc0:	14400008 	bnez	v0,405de4 <iw_print_key+0x120>
+  405dc4:	02002021 	move	a0,s0
+[31m  405dc8:	8f9981a4 	lw	t9,strcpy[0m
+  405dcc:	00000000 	nop
+  405dd0:	0320f809 	jalr	t9
+  405dd4:	02802821 	move	a1,s4
+  405dd8:	8fbc0010 	lw	gp,16(sp)
+  405ddc:	26150001 	addiu	s5,s0,1
+  405de0:	02a08021 	move	s0,s5
+[31m  405de4:	8f9981a4 	lw	t9,strcpy[0m
+  405de8:	02002021 	move	a0,s0
+  405dec:	0320f809 	jalr	t9
+  405df0:	02402821 	move	a1,s2
+  405df4:	8fbc0010 	lw	gp,16(sp)
+  405df8:	26100002 	addiu	s0,s0,2
+  405dfc:	26310001 	addiu	s1,s1,1
+  405e00:	1633ffef 	bne	s1,s3,405dc0 <iw_print_key+0xfc>
+  405e04:	32220001 	andi	v0,s1,0x1
+  405e08:	10000022 	b	405e94 <iw_print_key+0x1d0>
+  405e0c:	00000000 	nop
+  405e10:	8f948028 	lw	s4,-32728(gp)
+  405e14:	8f998120 	lw	t9,-32480(gp)
+  405e18:	90c60000 	lbu	a2,0(a2)
+  405e1c:	2685a508 	addiu	a1,s4,-23288
+  405e20:	0320f809 	jalr	t9
+  405e24:	26100002 	addiu	s0,s0,2
+  405e28:	8fbc0010 	lw	gp,16(sp)
+  405e2c:	24120001 	li	s2,1
+  405e30:	2694a508 	addiu	s4,s4,-23288
+  405e34:	8f958028 	lw	s5,-32728(gp)
+  405e38:	10000013 	b	405e88 <iw_print_key+0x1c4>
+  405e3c:	26b5a504 	addiu	s5,s5,-23292
+  405e40:	14400009 	bnez	v0,405e68 <iw_print_key+0x1a4>
+  405e44:	02321021 	addu	v0,s1,s2
+[31m  405e48:	8f9981a4 	lw	t9,strcpy[0m
+  405e4c:	02002021 	move	a0,s0
+  405e50:	0320f809 	jalr	t9
+--
+  4062c4:	afb3002c 	sw	s3,44(sp)
+  4062c8:	afb20028 	sw	s2,40(sp)
+  4062cc:	afb00020 	sw	s0,32(sp)
+  4062d0:	afbf0034 	sw	ra,52(sp)
+  4062d4:	afb10024 	sw	s1,36(sp)
+  4062d8:	00808021 	move	s0,a0
+  4062dc:	00c09021 	move	s2,a2
+  4062e0:	8fb40048 	lw	s4,72(sp)
+  4062e4:	1040000c 	beqz	v0,406318 <iw_print_pm_value+0x70>
+  4062e8:	00e09821 	move	s3,a3
+  4062ec:	8f868028 	lw	a2,-32728(gp)
+  4062f0:	8fbf0034 	lw	ra,52(sp)
+  4062f4:	8fb40030 	lw	s4,48(sp)
+  4062f8:	8fb3002c 	lw	s3,44(sp)
+  4062fc:	8fb20028 	lw	s2,40(sp)
+  406300:	8fb10024 	lw	s1,36(sp)
+  406304:	8fb00020 	lw	s0,32(sp)
+  406308:	8f998190 	lw	t9,-32368(gp)
+  40630c:	24c6a4f4 	addiu	a2,a2,-23308
+  406310:	03200008 	jr	t9
+  406314:	27bd0038 	addiu	sp,sp,56
+  406318:	30e20001 	andi	v0,a3,0x1
+  40631c:	10400007 	beqz	v0,40633c <iw_print_pm_value+0x94>
+  406320:	24b1ffe7 	addiu	s1,a1,-25
+  406324:	8f858028 	lw	a1,-32728(gp)
+[31m  406328:	8f9981a4 	lw	t9,strcpy[0m
+  40632c:	26100004 	addiu	s0,s0,4
+  406330:	0320f809 	jalr	t9
+  406334:	24a5a584 	addiu	a1,a1,-23164
+  406338:	8fbc0018 	lw	gp,24(sp)
+  40633c:	32620002 	andi	v0,s3,0x2
+  406340:	10400009 	beqz	v0,406368 <iw_print_pm_value+0xc0>
+  406344:	32622000 	andi	v0,s3,0x2000
+  406348:	8f858028 	lw	a1,-32728(gp)
+[31m  40634c:	8f9981a4 	lw	t9,strcpy[0m
+  406350:	02002021 	move	a0,s0
+  406354:	0320f809 	jalr	t9
+  406358:	24a5a58c 	addiu	a1,a1,-23156
+  40635c:	8fbc0018 	lw	gp,24(sp)
+  406360:	26100004 	addiu	s0,s0,4
+  406364:	32622000 	andi	v0,s3,0x2000
+[31m  406368:	8f9981a4 	lw	t9,strcpy[0m
+  40636c:	10400009 	beqz	v0,406394 <iw_print_pm_value+0xec>
+  406370:	32624000 	andi	v0,s3,0x4000
+--
+  406530:	8fbf0034 	lw	ra,52(sp)
+  406534:	8fb40030 	lw	s4,48(sp)
+  406538:	8fb3002c 	lw	s3,44(sp)
+  40653c:	8fb20028 	lw	s2,40(sp)
+  406540:	8fb10024 	lw	s1,36(sp)
+  406544:	8fb00020 	lw	s0,32(sp)
+  406548:	8f998190 	lw	t9,-32368(gp)
+  40654c:	00000000 	nop
+  406550:	03200008 	jr	t9
+  406554:	27bd0038 	addiu	sp,sp,56
+
+00406558 <iw_print_pm_mode>:
+  406558:	3c1c0002 	lui	gp,0x2
+  40655c:	279ccd28 	addiu	gp,gp,-13016
+  406560:	0399e021 	addu	gp,gp,t9
+  406564:	28a3001c 	slti	v1,a1,28
+  406568:	10600006 	beqz	v1,406584 <iw_print_pm_mode+0x2c>
+  40656c:	00801021 	move	v0,a0
+  406570:	8f868028 	lw	a2,-32728(gp)
+  406574:	8f998190 	lw	t9,-32368(gp)
+  406578:	00000000 	nop
+  40657c:	03200008 	jr	t9
+  406580:	24c6a4f4 	addiu	a2,a2,-23308
+  406584:	30c60f00 	andi	a2,a2,0xf00
+  406588:	24030300 	li	v1,768
+[31m  40658c:	8f9981a4 	lw	t9,strcpy[0m
+  406590:	10c3001a 	beq	a2,v1,4065fc <iw_print_pm_mode+0xa4>
+  406594:	00000000 	nop
+--
+  406654:	afb3002c 	sw	s3,44(sp)
+  406658:	afb20028 	sw	s2,40(sp)
+  40665c:	afb10024 	sw	s1,36(sp)
+  406660:	afbf0034 	sw	ra,52(sp)
+  406664:	afb00020 	sw	s0,32(sp)
+  406668:	00808821 	move	s1,a0
+  40666c:	00c09021 	move	s2,a2
+  406670:	8fb40048 	lw	s4,72(sp)
+  406674:	1040000c 	beqz	v0,4066a8 <iw_print_pm_mode+0x150>
+  406678:	00e09821 	move	s3,a3
+  40667c:	8f868028 	lw	a2,-32728(gp)
+  406680:	8fbf0034 	lw	ra,52(sp)
+  406684:	8fb40030 	lw	s4,48(sp)
+  406688:	8fb3002c 	lw	s3,44(sp)
+  40668c:	8fb20028 	lw	s2,40(sp)
+  406690:	8fb10024 	lw	s1,36(sp)
+  406694:	8fb00020 	lw	s0,32(sp)
+  406698:	8f998190 	lw	t9,-32368(gp)
+  40669c:	24c6a4f4 	addiu	a2,a2,-23308
+  4066a0:	03200008 	jr	t9
+  4066a4:	27bd0038 	addiu	sp,sp,56
+  4066a8:	30e20001 	andi	v0,a3,0x1
+  4066ac:	10400007 	beqz	v0,4066cc <iw_print_pm_mode+0x174>
+  4066b0:	24b0ffec 	addiu	s0,a1,-20
+  4066b4:	8f858028 	lw	a1,-32728(gp)
+[31m  4066b8:	8f9981a4 	lw	t9,strcpy[0m
+  4066bc:	26310004 	addiu	s1,s1,4
+  4066c0:	0320f809 	jalr	t9
+  4066c4:	24a5a584 	addiu	a1,a1,-23164
+  4066c8:	8fbc0018 	lw	gp,24(sp)
+  4066cc:	32620002 	andi	v0,s3,0x2
+  4066d0:	10400009 	beqz	v0,4066f8 <iw_print_pm_mode+0x1a0>
+  4066d4:	32620010 	andi	v0,s3,0x10
+  4066d8:	8f858028 	lw	a1,-32728(gp)
+[31m  4066dc:	8f9981a4 	lw	t9,strcpy[0m
+  4066e0:	02202021 	move	a0,s1
+  4066e4:	0320f809 	jalr	t9
+  4066e8:	24a5a58c 	addiu	a1,a1,-23156
+  4066ec:	8fbc0018 	lw	gp,24(sp)
+  4066f0:	26310004 	addiu	s1,s1,4
+  4066f4:	32620010 	andi	v0,s3,0x10
+  4066f8:	10400009 	beqz	v0,406720 <iw_print_pm_mode+0x1c8>
+  4066fc:	32620020 	andi	v0,s3,0x20
+  406700:	8f858028 	lw	a1,-32728(gp)
+[31m  406704:	8f9981a4 	lw	t9,strcpy[0m
+  406708:	02202021 	move	a0,s1
+  40670c:	0320f809 	jalr	t9
+  406710:	24a5a650 	addiu	a1,a1,-22960
+  406714:	8fbc0018 	lw	gp,24(sp)
+  406718:	26310006 	addiu	s1,s1,6
+  40671c:	32620020 	andi	v0,s3,0x20
+  406720:	10400009 	beqz	v0,406748 <iw_print_pm_mode+0x1f0>
+  406724:	32622000 	andi	v0,s3,0x2000
+  406728:	8f858028 	lw	a1,-32728(gp)
+[31m  40672c:	8f9981a4 	lw	t9,strcpy[0m
+  406730:	02202021 	move	a0,s1
+  406734:	0320f809 	jalr	t9
+  406738:	24a5a658 	addiu	a1,a1,-22952
+  40673c:	8fbc0018 	lw	gp,24(sp)
+  406740:	26310006 	addiu	s1,s1,6
+  406744:	32622000 	andi	v0,s3,0x2000
+  406748:	10400063 	beqz	v0,4068d8 <iw_print_pm_mode+0x380>
+  40674c:	02202021 	move	a0,s1
+  406750:	8f858028 	lw	a1,-32728(gp)
+[31m  406754:	8f9981a4 	lw	t9,strcpy[0m
+  406758:	32730004 	andi	s3,s3,0x4
+  40675c:	0320f809 	jalr	t9
+--
+  406d14:	8f858028 	lw	a1,-32728(gp)
+  406d18:	10000017 	b	406d78 <iw_ether_ntop+0x16c>
+  406d1c:	24a5a704 	addiu	a1,a1,-22780
+  406d20:	8f998144 	lw	t9,-32444(gp)
+  406d24:	02202021 	move	a0,s1
+  406d28:	27a50020 	addiu	a1,sp,32
+  406d2c:	0320f809 	jalr	t9
+  406d30:	24060006 	li	a2,6
+  406d34:	8fbc0010 	lw	gp,16(sp)
+  406d38:	14400004 	bnez	v0,406d4c <iw_ether_ntop+0x140>
+  406d3c:	02002021 	move	a0,s0
+  406d40:	8f858028 	lw	a1,-32728(gp)
+  406d44:	1000000c 	b	406d78 <iw_ether_ntop+0x16c>
+  406d48:	24a5a714 	addiu	a1,a1,-22764
+  406d4c:	8f998144 	lw	t9,-32444(gp)
+  406d50:	02202021 	move	a0,s1
+  406d54:	27a50018 	addiu	a1,sp,24
+  406d58:	0320f809 	jalr	t9
+  406d5c:	24060006 	li	a2,6
+  406d60:	8fbc0010 	lw	gp,16(sp)
+  406d64:	1440000a 	bnez	v0,406d90 <iw_ether_ntop+0x184>
+  406d68:	02202021 	move	a0,s1
+  406d6c:	8f858028 	lw	a1,-32728(gp)
+  406d70:	02002021 	move	a0,s0
+  406d74:	24a5a71c 	addiu	a1,a1,-22756
+[31m  406d78:	8f9981a4 	lw	t9,strcpy[0m
+  406d7c:	00000000 	nop
+  406d80:	0320f809 	jalr	t9
+--
+  406f54:	afb20020 	sw	s2,32(sp)
+  406f58:	afb1001c 	sw	s1,28(sp)
+  406f5c:	afbf0024 	sw	ra,36(sp)
+  406f60:	afb00018 	sw	s0,24(sp)
+  406f64:	00a09021 	move	s2,a1
+  406f68:	a4a20000 	sh	v0,0(a1)
+  406f6c:	a4a00002 	sh	zero,2(a1)
+  406f70:	8f858028 	lw	a1,-32728(gp)
+  406f74:	8f99812c 	lw	t9,-32468(gp)
+  406f78:	00808821 	move	s1,a0
+  406f7c:	0320f809 	jalr	t9
+  406f80:	24a5a724 	addiu	a1,a1,-22748
+  406f84:	8fbc0010 	lw	gp,16(sp)
+  406f88:	14400003 	bnez	v0,406f98 <iw_in_inet+0x5c>
+  406f8c:	00000000 	nop
+  406f90:	10000017 	b	406ff0 <iw_in_inet+0xb4>
+  406f94:	ae400004 	sw	zero,4(s2)
+  406f98:	8f998114 	lw	t9,-32492(gp)
+  406f9c:	00000000 	nop
+  406fa0:	0320f809 	jalr	t9
+  406fa4:	02202021 	move	a0,s1
+  406fa8:	8fbc0010 	lw	gp,16(sp)
+  406fac:	10400012 	beqz	v0,406ff8 <iw_in_inet+0xbc>
+  406fb0:	00000000 	nop
+  406fb4:	8c43000c 	lw	v1,12(v0)
+[31m  406fb8:	8f9981a4 	lw	t9,strcpy[0m
+  406fbc:	00032e00 	sll	a1,v1,0x18
+  406fc0:	00032602 	srl	a0,v1,0x18
+--
+  40700c:	14400010 	bnez	v0,407050 <iw_in_inet+0x114>
+  407010:	00408021 	move	s0,v0
+  407014:	8f998110 	lw	t9,-32496(gp)
+  407018:	00000000 	nop
+  40701c:	0320f809 	jalr	t9
+  407020:	00000000 	nop
+  407024:	8fbc0010 	lw	gp,16(sp)
+  407028:	00000000 	nop
+  40702c:	8f998128 	lw	t9,-32472(gp)
+  407030:	00000000 	nop
+  407034:	0320f809 	jalr	t9
+  407038:	00408021 	move	s0,v0
+  40703c:	8c420000 	lw	v0,0(v0)
+  407040:	00000000 	nop
+  407044:	ae020000 	sw	v0,0(s0)
+  407048:	1000000e 	b	407084 <iw_in_inet+0x148>
+  40704c:	2402ffff 	li	v0,-1
+  407050:	8c420010 	lw	v0,16(v0)
+  407054:	8f998180 	lw	t9,-32384(gp)
+  407058:	8e06000c 	lw	a2,12(s0)
+  40705c:	8c450000 	lw	a1,0(v0)
+  407060:	0320f809 	jalr	t9
+  407064:	26440004 	addiu	a0,s2,4
+  407068:	8fbc0010 	lw	gp,16(sp)
+  40706c:	8e050000 	lw	a1,0(s0)
+[31m  407070:	8f9981a4 	lw	t9,strcpy[0m
+  407074:	00000000 	nop
+  407078:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m16[0m times [0;33miwlist[0m
+

@@ -1,0 +1,21 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/20-nrd line 3:[0m
+[0mif [ "$SRCMODE" = "NONE" -o "$SRCMODE" = "RE" ] && [ "$DSTMODE" = "FAP" -o "$DSTMODE" = "HAP" ]; then[0m
+[33m                         ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                                        ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/20-nrd line 5:[0m
+[0melif [ "$SRCMODE" = "NONE" -o "$SRCMODE" = "FAP" -o "$SRCMODE" = "HAP" ] && [ "$DSTMODE" = "RE" ]; then[0m
+[33m                           ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/20-nrd line 9:[0m
+[0mif [ "$POINT" == "END" ] && [ "$MODE" = "RE2AP" -o "$MODE" = "AP2RE" ]; then[0m
+[33m              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2166 -- Prefer [ p ] || [ q ] as [ p -o q...
+  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...

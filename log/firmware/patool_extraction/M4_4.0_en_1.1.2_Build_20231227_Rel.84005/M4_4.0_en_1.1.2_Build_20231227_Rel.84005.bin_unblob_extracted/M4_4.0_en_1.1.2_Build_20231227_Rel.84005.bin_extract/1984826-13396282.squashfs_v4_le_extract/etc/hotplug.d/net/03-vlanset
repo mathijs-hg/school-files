@@ -1,0 +1,23 @@
+#!/bin/sh
+
+. /usr/lib/eth-encap/eth_encap.sh
+
+[ "add" = "$ACTION"  ] && {
+    
+    local vlan_enable
+    local vlan_id
+    local vlan_prio
+
+    config_load network
+    config_get vlan_enable vlan enable "0"
+    config_get vlan_id vlan id "0"
+    config_get vlan_prio vlan priority "0"
+    config_clear
+
+    if [ "$vlan_enable" == "1" ]; then
+        if [ "$INTERFACE" == "br-wan.""$vlan_id" ]; then
+            vlan_set_prio br-wan $vlan_id $vlan_prio
+        fi
+    fi
+
+}

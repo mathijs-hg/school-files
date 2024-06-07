@@ -1,0 +1,49 @@
+<br />
+<pre>uint iw_get_priv_info(int param_1,char *param_2,void **param_3)</pre>
+<br />
+<pre>{</pre>
+<pre>  void *pvVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  void *local_48;</pre>
+<pre>  uint local_44;</pre>
+<pre>  char acStack_2c [16];</pre>
+<pre>  void *local_1c;</pre>
+<pre>  ushort local_18;</pre>
+<pre>  undefined2 local_16;</pre>
+<pre>  </pre>
+<pre>  local_48 = (void *)0x0;</pre>
+<pre>  local_44 = 0x10;</pre>
+<pre>  do {</pre>
+<pre><span class="green"><span class="green">    pvVar1 = realloc(local_48,local_44 * 0x18)</span></span></span></pre>
+<pre>    if (pvVar1 == (void *)0x0) {</pre>
+<pre>      fprintf(stderr,"%s: Allocation failed\n","iw_get_priv_info");</pre>
+<pre>      break;</pre>
+<pre>    }</pre>
+<pre>    local_18 = (ushort)local_44;</pre>
+<pre>    local_16 = 0;</pre>
+<pre>    local_1c = pvVar1;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_2c,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar2 = ioctl(param_1,0x8b0d,acStack_2c);</pre>
+<pre>    if (-1 &lt; iVar2) {</pre>
+<pre>      *param_3 = pvVar1;</pre>
+<pre>      return (uint)local_18;</pre>
+<pre>    }</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    local_48 = pvVar1;</pre>
+<pre>    if (*piVar3 != 7) break;</pre>
+<pre>    if ((int)local_44 &lt; (int)(uint)local_18) {</pre>
+<pre>      local_44 = (uint)local_18;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_44 = local_44 &lt;&lt; 1;</pre>
+<pre>    }</pre>
+<pre>  } while ((int)local_44 &lt; 1000);</pre>
+<pre>  if (local_48 != (void *)0x0) {</pre>
+<pre>    free(local_48);</pre>
+<pre>  }</pre>
+<pre>  *param_3 = (void *)0x0;</pre>
+<pre>  return 0xffffffff;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 27d84c8ff0ac8020</pre>

@@ -1,0 +1,63 @@
+<br />
+<pre><span class="green">size_t iw_in_key(char *param_1,void *param_2)</span></pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  undefined *puVar2;</pre>
+<pre>  size_t local_60;</pre>
+<pre>  char *local_5c;</pre>
+<pre>  uint local_58;</pre>
+<pre>  int local_54;</pre>
+<pre>  uint local_50;</pre>
+<pre>  uint local_4c;</pre>
+<pre>  undefined auStack_48 [64];</pre>
+<pre>  </pre>
+<pre>  puVar2 = &amp;_gp;</pre>
+<pre><span class="green">  local_60 = 0</span></span></pre>
+<pre>  iVar1 = strncmp(param_1,"s:",2);</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre><span class="green">    local_60 = strlen(param_1 + 2)</span></span></pre>
+<pre>    if (0x40 &lt; (int)local_60) {</pre>
+<pre><span class="green">      local_60 = 0x40</span></span></pre>
+<pre>    }</pre>
+<pre><span class="green">    memcpy(param_2,param_1 + 2,local_60)</span></span></pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    iVar1 = strncmp(param_1,"p:",2);</pre>
+<pre>    if (iVar1 == 0) {</pre>
+<pre><span class="green">      local_60 = iw_pass_key(param_1 + 2,param_2)</span></span></pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_58 = 0xffffffff;</pre>
+<pre>      for (local_5c = param_1; *local_5c != '\0'; local_5c = local_5c + local_54) {</pre>
+<pre>        if ((int)local_58 &lt; 1) {</pre>
+<pre>          if (local_58 == 0) {</pre>
+<pre>            local_5c = local_5c + 1;</pre>
+<pre>          }</pre>
+<pre>          local_58 = strcspn(local_5c,"-:;.,");</pre>
+<pre>        }</pre>
+<pre><span class="green">        local_54 = sscanf(local_5c,"%1X%1X",&amp;local_50,&amp;local_4c,puVar2)</span></span></pre>
+<pre>        if (local_54 &lt; 1) {</pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        if ((local_58 &amp; 1) != 0) {</pre>
+<pre>          local_54 = 1;</pre>
+<pre>        }</pre>
+<pre>        if (local_54 == 2) {</pre>
+<pre>          local_4c = local_50 &lt;&lt; 4 | local_4c;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          local_4c = local_50;</pre>
+<pre>        }</pre>
+<pre>        auStack_48[local_60] = (char)local_4c;</pre>
+<pre><span class="green">        local_60 = local_60 + 1</span></span></pre>
+<pre>        if (0x3f &lt; (int)local_60) break;</pre>
+<pre>        local_58 = local_58 - local_54;</pre>
+<pre>      }</pre>
+<pre><span class="green">      memcpy(param_2,auStack_48,local_60)</span></span></pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return local_60;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 13fa69a27e51ee2e</pre>

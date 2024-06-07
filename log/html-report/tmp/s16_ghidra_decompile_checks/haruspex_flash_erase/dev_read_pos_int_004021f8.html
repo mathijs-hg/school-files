@@ -1,0 +1,47 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>int dev_read_pos_int(char *patt,int mtd_num,int *value)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  size_t sVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  undefined4 *puVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  undefined4 uVar6;</pre>
+<pre>  char *file;</pre>
+<pre>  code *pcVar7;</pre>
+<pre>  uint auStack_38 [2];</pre>
+<pre>  char *apcStack_30 [2];</pre>
+<pre>  undefined *local_28;</pre>
+<pre>  longlong res;</pre>
+<pre>  </pre>
+<pre>  local_28 = &amp;_gp;</pre>
+<pre>  sVar2 = strlen(patt);</pre>
+<pre><span class="green">  iVar1 = -(sVar2 + 0x40 &amp; 0xfffffff8)</span></span></pre>
+<pre>  file = (char *)((int)&amp;local_28 + iVar1);</pre>
+<pre>  (**(code **)(local_28 + -0x7f70))(file,patt,mtd_num);</pre>
+<pre>  iVar3 = read_pos_ll(file,&amp;res);</pre>
+<pre>  iVar5 = -1;</pre>
+<pre>  if (iVar3 == 0) {</pre>
+<pre>    if ((res._4_4_ &lt; 1) &amp;&amp; ((res._4_4_ != 0 || ((uint)res &lt; 0x80000000)))) {</pre>
+<pre>      *value = (uint)res;</pre>
+<pre>      iVar5 = 0;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      pcVar7 = *(code **)(local_28 + -0x7f38);</pre>
+<pre>      uVar6 = **(undefined4 **)(local_28 + -0x7f74);</pre>
+<pre>      *(uint *)((int)auStack_38 + iVar1) = (uint)res;</pre>
+<pre>      *(int *)((int)auStack_38 + iVar1 + 4) = res._4_4_;</pre>
+<pre>      *(char **)((int)apcStack_30 + iVar1) = file;</pre>
+<pre>      (*pcVar7)(uVar6,"%s: error!: value %lld read from file \"%s\" is out of range\n","libmtd");</pre>
+<pre>      puVar4 = (undefined4 *)(**(code **)(local_28 + -0x7f78))();</pre>
+<pre>      *puVar4 = 0x16;</pre>
+<pre>      iVar5 = -1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return iVar5;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 4cae3acfe5caee07</pre>

@@ -1,0 +1,141 @@
+<br />
+<pre>void table_search_mac_fid(undefined4 param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  size_t sVar1;</pre>
+<pre>  ulong uVar2;</pre>
+<pre>  uint uVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  undefined4 uVar5;</pre>
+<pre>  uint local_30;</pre>
+<pre>  uint local_28;</pre>
+<pre>  undefined4 local_24;</pre>
+<pre>  uint local_20;</pre>
+<pre>  uint local_1c;</pre>
+<pre>  char acStack_18 [4];</pre>
+<pre>  undefined local_14;</pre>
+<pre>  undefined local_10;</pre>
+<pre>  </pre>
+<pre><span class="green">  if ((*(int *)(param_2 + 0xc) == 0) || (sVar1 = strlen(*(char **)(param_2 + 0xc)), sVar1 != 0xc)) {</span></pre>
+<pre>    puts("MAC address format error, should be of length 12");</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_18,*(char **)(param_2 + 0xc),8)</span></span></span></span></pre>
+<pre>    local_10 = 0;</pre>
+<pre>    local_28 = strtoul(acStack_18,(char **)0x0,0x10);</pre>
+<pre>    reg_write(0x74,local_28);</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_18,(char *)(*(int *)(param_2 + 0xc) + 8),4)</span></span></span></span></pre>
+<pre>    local_14 = 0;</pre>
+<pre>    uVar2 = strtoul(acStack_18,(char **)0x0,0x10);</pre>
+<pre>    local_28 = uVar2 &lt;&lt; 0x10;</pre>
+<pre>    uVar2 = strtoul(*(char **)(param_2 + 0x14),(char **)0x0,0);</pre>
+<pre>    if (uVar2 &lt; 8) {</pre>
+<pre>      local_28 = uVar2 &lt;&lt; 0xc | local_28;</pre>
+<pre>      reg_write(0x78,local_28);</pre>
+<pre>      local_28 = 0x8000;</pre>
+<pre>      reg_write(0x80,0x8000);</pre>
+<pre>      usleep(1000);</pre>
+<pre>      local_30 = 0;</pre>
+<pre><span class="green">      while ((local_30 &lt; 0x14 &amp;&amp; (reg_read(0x80,&amp;local_28), (local_28 &amp; 0x8000) != 0))) {</span></pre>
+<pre>        usleep(1000);</pre>
+<pre>        local_30 = local_30 + 1;</pre>
+<pre>      }</pre>
+<pre>      if (local_30 == 0x14) {</pre>
+<pre>        puts("search timeout.");</pre>
+<pre>      }</pre>
+<pre>      else if ((local_28 &amp; 0x1000) == 0) {</pre>
+<pre>        puts("search done.");</pre>
+<pre>        puts("hash  port(0:6)   fid   vid  age   mac-address     filter my_mac");</pre>
+<pre>        printf("%03x:   ",local_28 &gt;&gt; 0x10 &amp; 0xfff);</pre>
+<pre><span class="green">        reg_read(0x8c,&amp;local_1c)</span></span></pre>
+<pre>        uVar3 = local_1c &gt;&gt; 4;</pre>
+<pre>        if ((uVar3 &amp; 1) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 2) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 4) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 8) == 0) {</pre>
+<pre>          uVar5 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          uVar5 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        printf("%c ",uVar5);</pre>
+<pre>        if ((uVar3 &amp; 0x10) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 0x20) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 0x40) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre>        if ((uVar3 &amp; 0x80) == 0) {</pre>
+<pre>          iVar4 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = 0x31;</pre>
+<pre>        }</pre>
+<pre>        putchar(iVar4);</pre>
+<pre><span class="green">        reg_read(0x88,&amp;local_20)</span></span></pre>
+<pre>        printf("   %2d",local_20 &gt;&gt; 0xc &amp; 7);</pre>
+<pre>        printf("  %4d",local_20 &amp; 0xfff);</pre>
+<pre>        printf(" %4d",local_1c &gt;&gt; 0x18);</pre>
+<pre><span class="green">        reg_read(0x84,&amp;local_24)</span></span></pre>
+<pre>        printf("  %08x",local_24);</pre>
+<pre>        printf("%04x",local_20 &gt;&gt; 0x10);</pre>
+<pre>        if ((local_1c &gt;&gt; 0x14 &amp; 3) == 3) {</pre>
+<pre>          uVar5 = 0x79;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          uVar5 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        printf("     %c",uVar5);</pre>
+<pre>        if ((local_1c &amp; 0x800000) == 0) {</pre>
+<pre>          uVar5 = 0x2d;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          uVar5 = 0x79;</pre>
+<pre>        }</pre>
+<pre>        printf("     %c\n",uVar5);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        puts("search no entry.");</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      puts("wrong fid range, should be within 0~7");</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] e8376d2304891df2</pre>

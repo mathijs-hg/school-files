@@ -1,0 +1,36 @@
+<br />
+<pre>void dip_del(undefined4 param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  uint local_20;</pre>
+<pre>  uint local_1c [5];</pre>
+<pre>  </pre>
+<pre>  str_to_ip(local_1c,*(undefined4 *)(param_2 + 0xc));</pre>
+<pre>  reg_write(0x74,local_1c[0]);</pre>
+<pre>  local_1c[0] = 0;</pre>
+<pre>  reg_write(0x78,0);</pre>
+<pre>  local_1c[0] = 0;</pre>
+<pre>  reg_write(0x7c,0);</pre>
+<pre>  local_1c[0] = 0x8011;</pre>
+<pre>  reg_write(0x80,0x8011);</pre>
+<pre>  local_20 = 0;</pre>
+<pre>  while( true ) {</pre>
+<pre>    if (0x13 &lt; local_20) {</pre>
+<pre>      if (local_20 == 0x14) {</pre>
+<pre>        puts("timeout.");</pre>
+<pre>      }</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre><span class="green">    reg_read(0x80,local_1c)</span></span></pre>
+<pre>    if ((local_1c[0] &amp; 0x8000) == 0) break;</pre>
+<pre>    usleep(1000);</pre>
+<pre>    local_20 = local_20 + 1;</pre>
+<pre>  }</pre>
+<pre>  if (*(int *)(param_2 + 4) == 0) {</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  puts("done.");</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] d8feda1802306e67</pre>

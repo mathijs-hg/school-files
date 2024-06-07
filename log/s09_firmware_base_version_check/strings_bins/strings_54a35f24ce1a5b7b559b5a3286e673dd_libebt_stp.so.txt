@@ -1,0 +1,79 @@
+libc.so.0
+_GLOBAL_OFFSET_TABLE_
+_gp_disp
+memcmp
+printf
+__ebt_print_error
+strdup
+strchr
+free
+strtoul
+ebt_check_option
+ebt_errormsg
+optarg
+_ebt_check_inverse
+strtol
+strcasecmp
+optind
+ebt_get_mac_and_mask
+putchar
+ebt_print_mac_and_mask
+_init
+ebt_register_match
+_ftext
+_fdata
+_edata
+__bss_start
+_fbss
+_end
+stp options:
+--stp-type type                  : BPDU type
+--stp-flags flag                 : control flag
+--stp-root-prio prio[:prio]      : root priority (16-bit) range
+--stp-root-addr address[/mask]   : MAC address of root
+--stp-root-cost cost[:cost]      : root cost (32-bit) range
+--stp-sender-prio prio[:prio]    : sender priority (16-bit) range
+--stp-sender-addr address[/mask] : MAC address of sender
+--stp-port port[:port]           : port id (16-bit) range
+--stp-msg-age age[:age]          : message age timer (16-bit) range
+--stp-max-age age[:age]          : maximum age timer (16-bit) range
+--stp-hello-time time[:time]     : hello time timer (16-bit) range
+--stp-forward-delay delay[:delay]: forward delay timer (16-bit) range
+ Recognized BPDU type strings:
+   "config": configuration BPDU (=0)
+   "tcn"   : topology change notification BPDU (=0x80)
+ Recognized control flag strings:
+   "topology-change"    : topology change flag (0x01)
+   "topology-change-ack": topology change acknowledgement flag (0x80)
+STP matching is only valid when the destination MAC address is the bridge group address (BGA) 01:80:c2:00:00:00
+Option without (mandatory) argument
+config
+Bad --stp-type argument
+topology-change
+topology-change-ack
+Bad --stp-flags argument
+Bad --stp-root-prio range
+Bad --stp-root-cost range
+Bad --stp-sender-prio range
+Bad --stp-port range
+Bad --stp-msg-age range
+Bad --stp-max-age range
+Bad --stp-hello-time range
+Bad --stp-forward-delay range
+Bad --stp-root-addr address
+Bad --stp-sender-addr address
+stp match: this shouldn't happen
+--%s %s
+%u:%u 
+stp-type
+stp-flags
+stp-root-prio
+stp-root-addr
+stp-root-cost
+stp-sender-prio
+stp-sender-addr
+stp-port
+stp-msg-age
+stp-max-age
+stp-hello-time
+stp-forward-delay

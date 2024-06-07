@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Situations when there is no need to start ddns.
+( [ "$INTERFACE" == "lan" ] || [ "$INTERFACE" == "lanv6" ] ) && exit 0
+
+. /usr/lib/ddns/dynamic_dns_functions.sh
+
+if [ "$ACTION" = "ifup" ]; then
+	start_daemon_for_all_ddns_sections "$INTERFACE"
+fi
+
+if [ "$ACTION" = "ifdown" ]; then
+	config_clear
+	SECTIONS=""
+	config_cb()
+	{
+		SECTIONS="$SECTIONS $2"
+	}
+	config_load ddns
+	for section in $SECTIONS
+	do
+		ddns stop "$section"
+	done
+	config_clear
+fi

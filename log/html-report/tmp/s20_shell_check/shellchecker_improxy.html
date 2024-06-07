@@ -1,0 +1,129 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 5:</span></pre>
+<pre></span>START=99</span></pre>
+<pre><span class="orange">^---^ SC2034 (warning): START appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 6:</span></pre>
+<pre></span>STOP=10</span></pre>
+<pre><span class="orange">^--^ SC2034 (warning): STOP appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 8:</span></pre>
+<pre></span>USE_PROCD=1</span></pre>
+<pre><span class="orange">^-------^ SC2034 (warning): USE_PROCD appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 18:</span></pre>
+<pre></span>	local act="$1"</span></pre>
+<pre><span class="orange">        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 19:</span></pre>
+<pre></span>	local ifname wan_type proto</span></pre>
+<pre><span class="orange">        ^-------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 25:</span></pre>
+<pre></span>	if [ "$act" = "start" -a "$proto" = "none"  ] &amp;&amp; [ "$wan_type" = "pppoe" -o "$wan_type" = "pppoeshare" ]; then</span></pre>
+<pre><span class="orange">                              ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<pre><span class="orange">                                                                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 33:</span></pre>
+<pre></span>	local upstream downstream</span></pre>
+<pre><span class="orange">        ^-----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 39:</span></pre>
+<pre></span>	echo -e "upstream \t$upstream" &gt;&gt;$CONF_FILE</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 44:</span></pre>
+<pre></span>	echo -e "downstream \t$downstream" &gt;&gt;$CONF_FILE</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 48:</span></pre>
+<pre></span>	local r1 r2 r3 r4</span></pre>
+<pre><span class="orange">        ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 51:</span></pre>
+<pre></span>	[ -z "$r1" ] &amp;&amp; fw add 4 f zone_wan ACCEPT ^ { -p igmp }</span></pre>
+<pre><span class="orange">                                                     ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                               ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 54:</span></pre>
+<pre></span>	[ -z "$r2" ] &amp;&amp; fw add 4 f zone_wan ACCEPT ^ { -p udp -d 224.0.0.0/4 }</span></pre>
+<pre><span class="orange">                                                     ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                                             ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 57:</span></pre>
+<pre></span>	[ -z "$r3" ] &amp;&amp; fw add 4 f zone_wan_forward zone_lan_ACCEPT ^ { -p udp -d 224.0.0.0/4 }</span></pre>
+<pre><span class="orange">                                                                      ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                                                              ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 60:</span></pre>
+<pre></span>	[ -z "$r4" ] &amp;&amp; fw add 6 f zone_wan_forward zone_lan_ACCEPT ^ { -p udp -d FF00::/8 }</span></pre>
+<pre><span class="orange">                                                                      ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                                                           ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 64:</span></pre>
+<pre></span>	fw del 4 f zone_wan ACCEPT { -p igmp }</span></pre>
+<pre><span class="orange">                                   ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                             ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 65:</span></pre>
+<pre></span>	fw del 4 f zone_wan ACCEPT { -p udp -d 224.0.0.0/4 }</span></pre>
+<pre><span class="orange">                                   ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                           ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 66:</span></pre>
+<pre></span>	fw del 4 f zone_wan_forward zone_lan_ACCEPT { -p udp -d 224.0.0.0/4 }</span></pre>
+<pre><span class="orange">                                                    ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                                            ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 67:</span></pre>
+<pre></span>	fw del 6 f zone_wan_forward zone_lan_ACCEPT { -p udp -d FF00::/8 }</span></pre>
+<pre><span class="orange">                                                    ^-- SC1083 (warning): This { is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<pre><span class="orange">                                                                         ^-- SC1083 (warning): This } is literal. Check expression (missing ;/\n?) or quote it.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 74:</span></pre>
+<pre></span>    [ "$join_version" = "3" ] &amp;&amp; echo -e "join_v3 \tenable" &gt;&gt;$CONF_FILE</span></pre>
+<pre><span class="orange">       ^-----------^ SC2154 (warning): join_version is referenced but not assigned.</span></pre>
+<pre><span class="orange">                                      ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 80:</span></pre>
+<pre></span>	local igmp_enable </span></pre>
+<pre><span class="orange">        ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 81:</span></pre>
+<pre></span>	local igmp_version</span></pre>
+<pre><span class="orange">        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 94:</span></pre>
+<pre></span>		echo -e "igmp \tenable \tversion \t$igmp_version" &gt;$CONF_FILE</span></pre>
+<pre><span class="orange">                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/improxy line 95:</span></pre>
+<pre></span>		echo -e "mld \tenable" &gt;&gt;$CONF_FILE</span></pre>
+<pre><span class="orange">                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC1083" title="https://www.shellcheck.net/wiki/SC1083" target="_blank" >https://www.shellcheck.net/wiki/SC1083</a> -- This { is literal. Check expressi...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- START appears unused. Verify use ...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2154" title="https://www.shellcheck.net/wiki/SC2154" target="_blank" >https://www.shellcheck.net/wiki/SC2154</a> -- join_version is referenced but no...</pre>

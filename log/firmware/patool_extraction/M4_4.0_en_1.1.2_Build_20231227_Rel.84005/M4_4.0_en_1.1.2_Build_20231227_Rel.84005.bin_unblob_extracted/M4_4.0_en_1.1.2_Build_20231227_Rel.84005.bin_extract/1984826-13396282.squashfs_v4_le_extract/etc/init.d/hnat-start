@@ -1,0 +1,88 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+boot()
+{
+	start
+}
+
+
+start()
+{
+	local nat_enable=$(uci get nat.@nat_global[0].enable)
+	local hw_enable=$(uci get nat.@nat_global[0].hw_enable)
+	[ "$hw_enable" == "off" ] && {
+		stop
+		return
+	}
+	
+	local kernel_version=$(uname -r)
+	[ ! -f /lib/modules/$kernel_version/hw_nat.ko ] && return
+	lsmod |grep -q "hw_nat" || {
+		# get sys_ode for traffic stats
+		local tmp_mode
+        tmp_mode=$(uci get sysmode.sysmode.mode)
+        if [ "$tmp_mode" == "Router" ]; then
+            insmod /lib/modules/$kernel_version/hw_nat.ko hwnat_sysmode=1
+        else
+            insmod /lib/modules/$kernel_version/hw_nat.ko hwnat_sysmode=2
+        fi
+	
+		# get work_mode 
+		local sys_work_mode=$(cat /tmp/work_mode | cut -d "\"" -f 4)
+
+		# save sta_dev_name
+		if [ -f "/proc/net/statistics/sta_dev_name" ]; then
+	    		cat /proc/net/statistics/sta_dev_name | sed "1,2d" | tr '\n' ':' > /proc/tplink/sta_dev_name
+		else
+			# happen rarely, because statistics module is inserted when kernel starts. 
+			echo "[hnat-start.init] can't open /proc/net/statistics/sta_dev_name">/dev/console
+			#if this happens, we can save sta dev name for AP mode FAP
+			if [ "$tmp_mode" != "Router" ] && [ -n "$sys_work_mode" ] && [ "$sys_work_mode" == "AP" -o "$sys_work_mode" == "FAP" ];then
+				local ifnames iface
+				local eth_ifnames=
+
+				ifnames=$(uci get "network.lan.ifname")
+				for iface in $ifnames; do
+        				eth_ifnames="${eth_ifnames}${eth_ifnames:+":"}${iface}"
+    			done
+
+        		[ -n "$eth_ifnames" ] && echo "$eth_ifnames" > /proc/tplink/sta_dev_name
+			fi
+		fi
+		
+		# save work_mode 
+		if [ -n "$sys_work_mode" ]; then
+			[ "$sys_work_mode" == "AP" ] || [ "$sys_work_mode" == "FAP" ]  && echo "AP" > /proc/tplink/work_mode
+			[ "$sys_work_mode" == "RE" ] && echo "RE" > /proc/tplink/work_mode
+		else
+            echo "[hnat-start.init] can't get /tmp/work_mode">/dev/console
+        fi
+		# traffic stats init ends.
+
+		. /lib/network/network_arch.sh
+		config_load network
+		local proto l3_device wanv6_vid
+		config_get proto wan proto "dslite"
+		
+		# TODO: v6plus need wan vlan id, and /usr/bin/hw_nat can't find dev! 2021.07.06
+		# config_get l3_device wan ifname "eth1.1"
+		# if [ "$proto" == "v6plus" ];then
+		#	wanv6_vid=${l3_device##*.}
+		#	[ $wanv6_vid -ge 0 ] || wanv6_vid=$WAN_DEFUALT_VID
+		#	[ -x "/usr/bin/hw_nat" ] && hw_nat -W 1_${wanv6_vid}
+		# else
+			[ -x "/usr/bin/hw_nat" ] && hw_nat -W 0
+		# fi
+		[ -d "/sys/class/net/ra0" ] && iwpriv ra0 set hw_nat_register=1 >/dev/null 2>&1
+		[ -d "/sys/class/net/rai0" ] && iwpriv rai0 set hw_nat_register=1 >/dev/null 2>&1
+		[ -d "/sys/class/net/rax0" ] && iwpriv rax0 set hw_nat_register=1 >/dev/null 2>&1
+	}	
+}
+
+stop()
+{
+	#config_load wireless
+	#config_foreach config_wifi_intf wifi-iface 0
+	rmmod hw_nat >/dev/null 2>&1
+}

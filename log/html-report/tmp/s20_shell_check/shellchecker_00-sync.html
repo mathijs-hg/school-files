@@ -1,0 +1,12 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/00-sync line 5:</span></pre>
+<pre></span>[ "$SRCMODE" = "FAP" -a "$DSTMODE" = "HAP" ] &amp;&amp; exit 0</span></pre>
+<pre><span class="orange">                     ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/00-sync line 10:</span></pre>
+<pre></span>if [ "$SRCMODE" = "RE" ] &amp;&amp; [ "$DSTMODE" = "FAP" -o "$DSTMODE" = "HAP" ]; then</span></pre>
+<pre><span class="orange">                                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2166" title="https://www.shellcheck.net/wiki/SC2166" target="_blank" >https://www.shellcheck.net/wiki/SC2166</a> -- Prefer [ p ] &amp;&amp; [ q ] as [ p -a q...</pre>

@@ -1,0 +1,46 @@
+#!/bin/sh
+# Copyright (c) 2020 Shenzhen TP-LINK Technologies Co.Ltd.
+# Author		Fang Jiekun<fangjiekun@tp-link.com.cn>
+. /lib/functions.sh
+
+cmd_notify_re="ubus call sync request '{\"opcode\":16406, \"target_type\":\"RE\", \"data\":{\"params\":{\"device_list\":["
+cmd_notify_re_end="]}}}'"
+
+cmd_save_tmp_config="/etc/tsched.d/save_tmp_config EXECUTEALL"
+
+cmd=$1
+shift
+
+case $cmd in
+    *ACTIVE)
+        #reboot
+        echo "reboot active" > /dev/console
+        #get lastest RE list
+        config_cb() {
+            if( ! $2 );then
+                cmd_notify_re="${cmd_notify_re}{\"device_id\":\"${2}\"},"
+            fi
+        }
+        config_load bind_device_list
+        #notify RE to reboot
+        cmd_notify_re=${cmd_notify_re%?}
+        cmd_notify_re=${cmd_notify_re}${cmd_notify_re_end}
+        echo "notify RE to reboot:${cmd_notify_re}"
+        eval $cmd_notify_re
+        #save tmp config to flash
+        eval $cmd_save_tmp_config
+        #self reboot
+        reboot
+    ;;
+
+    *DORM)
+        #wait
+        #echo "reboot dorm" > /dev/console
+    ;;
+
+    *RESET)
+        #reset
+        #echo "reboot reset" > /dev/console
+	;;
+esac
+

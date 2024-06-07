@@ -1,0 +1,1732 @@
+[[0;33m*[0m] Binary protection state of [0;33mbusybox[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mbusybox[0m
+
+jal 0x40d21c
+nop
+j 0x40fa7c
+nop
+lui a0, 0x4a
+jal 0x40d21c
+addiu a0, a0, 0x2f20
+jal 0x40eb9c
+addiu a0, zero, 0xa
+sw v0, 0x28(sp)
+lbu v0, (v0)
+nop
+beqz v0, 0x40f91c
+lui t9, 0x4a
+lw a0, 0x28(sp)
+addiu t9, t9, -0x1810
+jalr t9
+nop
+move a3, v0
+lw gp, 0x10(sp)
+bnez v0, 0x40f8ec
+move v1, zero
+j 0x40f928
+lui a0, 0x4a
+lw a0, 0x34(s1)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+addu v0, a0, v0
+lw a2, (v0)
+move a0, a3
+sw v1, 0x38(sp)
+sw a3, 0x30(sp)
+jalr t9
+move a1, s6
+lw v1, 0x38(sp)
+lw gp, 0x10(sp)
+lw a3, 0x30(sp)
+addiu v1, v1, 1
+lw v0, 0x10(s1)
+nop
+sltu v0, v0, v1
+beqz v0, 0x40f8b8
+sll v0, v1, 2
+lw t9, -sym.imp.fclose(gp)
+nop
+jalr t9
+move a0, a3
+--
+j 0x41013c
+addiu t1, zero, 1
+j 0x41013c
+addiu t0, zero, 1
+addiu a3, zero, 1
+addiu a0, a0, 1
+lbu v1, (a0)
+nop
+bnez v1, 0x410108
+nop
+addiu a2, a2, -1
+addiu t2, t2, 4
+lw a0, 4(t2)
+nop
+beqz a0, 0x410178
+addiu v1, zero, 1
+lbu v1, (a0)
+nop
+beq v1, t6, 0x41013c
+addiu v1, zero, 1
+sw t1, 0x55b8(s0)
+sw t0, 0x55bc(s3)
+beq a2, v1, 0x4101bc
+sw a3, 0x55c0(a1)
+lw v1, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a2, (v0)
+lw a0, (v1)
+lui a1, 0x4a
+jalr t9
+addiu a1, a1, 0x2fd8
+lw gp, 0x18(sp)
+nop
+lw t9, -sym.imp.exit(gp)
+nop
+jalr t9
+addiu a0, zero, 1
+lw v0, 0x55c0(a1)
+lui s2, 0x4c
+sw a0, 0x55c4(s2)
+beqz v0, 0x410260
+move s4, s2
+lw t9, -sym.imp.fopen64(gp)
+lui a1, 0x4b
+jalr t9
+addiu a1, a1, -0x5d68
+--
+jalr t9
+addiu a1, zero, 2
+sw v0, 0x55c8(s5)
+lw gp, 0x18(sp)
+bgez v0, 0x4102bc
+nop
+lw v0, -0x7e10(gp)
+lui a1, 0x4a
+lw a0, (v0)
+lw a2, 0x55c4(s2)
+j 0x4102f0
+addiu a1, a1, 0x3054
+lw a1, 0x55bc(s3)
+lw t9, -sym.imp.flock(gp)
+lw a0, 0x55c8(s1)
+sltiu a1, a1, 1
+jalr t9
+addiu a1, a1, 1
+lw gp, 0x18(sp)
+bgez v0, 0x410308
+lui a1, 0x4a
+lw v0, -0x7e10(gp)
+lw a2, 0x55c4(s4)
+lw a0, (v0)
+addiu a1, a1, 0x3064
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+nop
+jalr t9
+addiu s0, zero, 1
+j 0x410488
+nop
+lw t9, -sym.imp.fork(gp)
+nop
+jalr t9
+nop
+lw gp, 0x18(sp)
+bltz v0, 0x410484
+move s2, v0
+bnez v0, 0x4103d0
+addiu a0, zero, 9
+lw t9, -sym.imp.signal(gp)
+lui s1, 0x41
+jalr t9
+addiu a1, s1, 0x64
+lw gp, 0x18(sp)
+addiu a0, zero, 0xf
+--
+nop
+beqz v1, 0x414d3c
+move a3, a1
+lui a0, 0x4a
+lui t9, 0x40
+move a2, a3
+sw a3, 0x18(sp)
+addiu a0, a0, 0x3890
+addiu t9, t9, 0x63f8
+bal 0x4063f8
+move a1, s1
+lw gp, 0x10(sp)
+lw a3, 0x18(sp)
+beqz s1, 0x414d9c
+addiu v0, s0, 0x57d0
+lwl a0, 0xf(v0)
+nop
+lwr a0, 0xc(v0)
+beqz a3, 0x414d64
+nop
+lui a1, 0x4a
+j 0x414d6c
+addiu a1, a1, 0x3888
+lui a1, 0x4a
+addiu a1, a1, 0x388b
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+nop
+jalr t9
+move a2, s1
+addiu v0, s0, 0x57d0
+lw gp, 0x10(sp)
+lwl a0, 0xf(v0)
+lw t9, -sym.imp.fflush(gp)
+lwr a0, 0xc(v0)
+jalr t9
+nop
+lw gp, 0x10(sp)
+lui s2, 0x4c
+lui s4, 0x4a
+addiu s2, s2, 0x57e8
+addiu s4, s4, 0x389c
+addiu s3, zero, 0x20
+lw t9, -sym.imp.strcpy(gp)
+move a0, s2
+move a1, s4
+jalr t9
+--
+j 0x419c88
+move a0, s0
+addiu a0, zero, 1
+addiu t9, s2, 0x7048
+bal 0x407048
+move a1, s3
+lw gp, 0x18(sp)
+beq s5, s0, 0x419ba4
+move s5, s0
+j 0x419bfc
+srl v0, s5, 5
+addiu sp, sp, -0x430
+addiu v0, zero, 1
+lui gp, 0x4d
+addiu gp, gp, -0x3140
+sw v0, 0x20(sp)
+addiu v0, zero, 3
+sw s2, 0x428(sp)
+sw ra, 0x42c(sp)
+sw s1, 0x424(sp)
+sw s0, 0x420(sp)
+sw gp, 0x18(sp)
+beq a0, v0, 0x419d04
+move s2, a1
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a2, (s2)
+lw a0, (v0)
+lui a1, 0x4a
+jalr t9
+addiu a1, a1, 0x4158
+lw gp, 0x18(sp)
+j 0x419d38
+nop
+lw t9, -sym.imp.socket(gp)
+addiu a0, zero, 2
+addiu a1, zero, 1
+jalr t9
+move a2, zero
+lw gp, 0x18(sp)
+bgez v0, 0x419d4c
+move s0, v0
+lw t9, -sym.imp.perror(gp)
+lui a0, 0x4a
+jalr t9
+addiu a0, a0, 0x4174
+--
+lw s6, 0x48(sp)
+lw s5, 0x44(sp)
+lw s4, 0x40(sp)
+lw s3, 0x3c(sp)
+lw s2, 0x38(sp)
+lw s1, 0x34(sp)
+lw s0, 0x30(sp)
+jr ra
+addiu sp, sp, 0x50
+lui gp, 0x4d
+addiu sp, sp, -0x28
+addiu gp, gp, -0x3140
+sw s0, 0x18(sp)
+sw ra, 0x24(sp)
+sw s2, 0x20(sp)
+sw s1, 0x1c(sp)
+sw gp, 0x10(sp)
+move v0, a0
+move a3, a1
+beqz a0, 0x424ff8
+move s0, a2
+bnez a1, 0x424fc8
+nop
+lui a3, 0x4b
+addiu a3, a3, -0x79a4
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+move a0, s0
+addiu a1, a1, 0x5538
+jalr t9
+move a2, v0
+lw gp, 0x10(sp)
+nop
+lw t9, -sym.imp.fflush(gp)
+nop
+jalr t9
+move a0, s0
+lui v0, 0x4c
+lw s1, 0x5540(v0)
+addiu s2, zero, 0x20
+jal 0x424690
+move a0, s0
+lbu v0, 0x60(s1)
+nop
+addiu v0, v0, -0x30
+andi v0, v0, 0xff
+--
+move a3, zero
+sw v0, 8(s0)
+sw v1, 0xc(s0)
+addiu t9, zero, 5
+move fp, zero
+sw t9, 0x74(sp)
+lw a0, 0x58(sp)
+lw a1, 0x5c(sp)
+lui v0, 0x4a
+addiu t9, v0, -0x728
+jalr t9
+nop
+move s3, v0
+lw v0, 0x5564(s4)
+nop
+andi v0, v0, 4
+bnez v0, 0x425514
+lui v1, 0x4a
+addiu t9, v1, -0x460
+jalr t9
+addiu a0, s3, 4
+lw gp, 0x28(sp)
+move s0, v0
+lw a2, 0x58(sp)
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+lw a0, (v0)
+addiu a1, a1, 0x3914
+jalr t9
+move a3, s0
+lw gp, 0x28(sp)
+nop
+lw t9, -sym.imp.free(gp)
+nop
+jalr t9
+move a0, s0
+lw s0, 0x5540(s2)
+nop
+sb zero, 0x51(s0)
+bnez s6, 0x425538
+sb zero, 0x50(s0)
+lb v0, 0x48(sp)
+nop
+bnez v0, 0x425ac8
+nop
+jal 0x4245b8
+move a0, s3
+lw gp, 0x28(sp)
+lw a2, 0x38(sp)
+beqz s6, 0x42559c
+move s1, v0
+lb v0, 0x48(sp)
+nop
+beqz v0, 0x425568
+lui v0, 0x4a
+j 0x425570
+addiu v0, v0, 0x46cc
+lui v0, 0x4a
+addiu v0, v0, 0x5558
+lui t9, 0x4a
+addiu a1, t9, 0x5594
+lw a3, 0x40(sp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+sw a2, 0x10(sp)
+move a0, s1
+jalr t9
+move a2, v0
+lw gp, 0x28(sp)
+j 0x4255d0
+nop
+lw v0, 0x5564(s4)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+andi v0, v0, 0x800
+beqz v0, 0x4255bc
+move a0, s1
+lui a1, 0x4a
+j 0x4255c4
+addiu a1, a1, 0x55b0
+lui v0, 0x4a
+addiu a1, v0, 0x55c4
+jalr t9
+nop
+lw gp, 0x28(sp)
+lw a2, 0x40(sp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a3, 0x44(s0)
+lui a1, 0x4a
+move a0, s1
+jalr t9
+addiu a1, a1, 0x55d8
+lw gp, 0x28(sp)
+lui a0, 0x4a
+addiu a0, a0, 0x55f4
+lw t9, -sym.imp.fputs(gp)
+nop
+jalr t9
+move a1, s1
+lw a0, 0x3c(sp)
+lw gp, 0x28(sp)
+beqz a0, 0x425640
+nop
+jal 0x424620
+nop
+lw gp, 0x28(sp)
+lui a1, 0x4a
+move a0, s1
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+addiu a1, a1, 0x560e
+jalr t9
+move a2, v0
+lw gp, 0x28(sp)
+beqz s6, 0x425680
+nop
+lw a0, 0x54(sp)
+nop
+beqz a0, 0x425680
+nop
+jal 0x424620
+nop
+lw gp, 0x28(sp)
+lui a1, 0x4a
+move a0, s1
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+addiu a1, a1, 0x5608
+jalr t9
+move a2, v0
+lw gp, 0x28(sp)
+lw a2, 8(s0)
+lw a3, 0xc(s0)
+nop
+or v0, a2, a3
+beqz v0, 0x4256ac
+move a0, s1
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+jalr t9
+addiu a1, a1, 0x5628
+lw gp, 0x28(sp)
+lw a0, 0x38(s0)
+nop
+beqz a0, 0x4256d0
+nop
+lw t9, -sym.imp.fputs_unlocked(gp)
+nop
+jalr t9
+move a1, s1
+lw gp, 0x28(sp)
+lw v0, 0x5564(s4)
+nop
+andi v0, v0, 0x800
+beqz v0, 0x425724
+nop
+lw a3, 0x34(s0)
+lw t9, -sym.imp.strlen(gp)
+move a0, a3
+jalr t9
+sw a3, 0x80(sp)
+lw gp, 0x28(sp)
+lw a3, 0x80(sp)
+lui a1, 0x4a
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+move a0, s1
+addiu a1, a1, 0x5640
+jalr t9
+move a2, v0
+lw gp, 0x28(sp)
+j 0x425740
+nop
+lw t9, -sym.imp.fputs(gp)
+lui a0, 0x4a
+addiu a0, a0, 0x37f8
+jalr t9
+move a1, s1
+lw gp, 0x28(sp)
+nop
+lw t9, -sym.imp.fflush(gp)
+nop
+jalr t9
+move a0, s1
+addiu v1, s0, 0x60
+sw v1, 0x68(sp)
+--
+lw ra, 0x1c(sp)
+lw s0, 0x18(sp)
+j 0x439460
+addiu sp, sp, 0x20
+lui gp, 0x4d
+addiu sp, sp, -0xa0
+addiu gp, gp, -0x3140
+andi v0, a2, 1
+sw s4, 0x88(sp)
+sw s3, 0x84(sp)
+sw s2, 0x80(sp)
+sw s0, 0x78(sp)
+sw ra, 0x9c(sp)
+sw fp, 0x98(sp)
+sw s7, 0x94(sp)
+sw s6, 0x90(sp)
+sw s5, 0x8c(sp)
+sw s1, 0x7c(sp)
+sw gp, 0x20(sp)
+move s3, a0
+move s0, a1
+lw s2, 0xc(a1)
+beqz v0, 0x43b120
+move s4, a2
+lw a2, (s2)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+jalr t9
+addiu a1, a1, -0x7320
+j 0x43b304
+nop
+jal 0x437d4c
+move a0, a1
+lui a2, 0x4a
+addiu a0, sp, 0x28
+addiu a1, zero, 0x10
+addiu a2, a2, 0x75c0
+jal 0x439580
+move a3, v0
+move s1, v0
+lui v0, 0x4c
+lw v0, 0x56f4(v0)
+lw gp, 0x20(sp)
+bne s0, v0, 0x43b164
+addiu v1, sp, 0x28
+addu v0, v1, s1
+--
+sw s6, 0x10(sp)
+lw v0, (s2)
+addiu a0, sp, 0x28
+addiu a1, zero, 0x30
+move a2, s7
+move a3, s1
+jal 0x439580
+sw v0, 0x14(sp)
+lw gp, 0x20(sp)
+addiu v0, v0, -1
+addiu a3, zero, 0x21
+subu a3, a3, v0
+lw v1, 0xc(s0)
+nor v0, zero, a3
+sra v0, v0, 0x1f
+lui a0, 0x4a
+and a3, a3, v0
+bne s2, v1, 0x43b294
+addiu v0, a0, 0x7038
+lui v1, 0x4b
+addiu v0, v1, -0x79a4
+addiu s6, zero, 0x20
+sw s6, 0x10(sp)
+sw v0, 0x14(sp)
+lw v0, 8(s2)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+move a0, s3
+sw v0, 0x18(sp)
+move a1, fp
+addiu a2, sp, 0x28
+jalr t9
+addiu s2, s2, 0xc
+lw gp, 0x20(sp)
+bne s2, s5, 0x43b234
+nop
+jal 0x43b020
+move a0, s3
+lw v1, 0x14(s0)
+lui v0, 0xefff
+ori v0, v0, 0xffff
+and v0, v1, v0
+srl v1, v0, 0x10
+sw v0, 0x14(s0)
+andi v1, v1, 0xff
+addiu v0, zero, 2
+bne v1, v0, 0x43b304
+--
+beqz v0, 0x43b3a8
+nop
+move a1, s2
+jal 0x43b0b4
+move a2, s0
+lw s2, 0x18(s2)
+nop
+bnez s2, 0x43b380
+nop
+lw ra, 0x2c(sp)
+lw s4, 0x28(sp)
+lw s3, 0x24(sp)
+lw s2, 0x20(sp)
+lw s1, 0x1c(sp)
+lw s0, 0x18(sp)
+jr ra
+addiu sp, sp, 0x30
+lui gp, 0x4d
+addiu gp, gp, -0x3140
+lw v0, -obj.ash_ptr_to_globals_misc(gp)
+addiu sp, sp, -0x38
+sw s2, 0x28(sp)
+sw s0, 0x20(sp)
+lw s2, -0x7e10(gp)
+lw s0, (v0)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+sw s4, 0x30(sp)
+lw a2, 0x14(s0)
+move s4, a0
+lw a0, (s2)
+sw s1, 0x24(sp)
+lui s1, 0x4a
+sw s3, 0x2c(sp)
+sw gp, 0x10(sp)
+sw ra, 0x34(sp)
+move s3, a1
+jalr t9
+addiu a1, s1, 0x3074
+lui v0, 0x4c
+lw a2, 0x56b0(v0)
+lw gp, 0x10(sp)
+beqz a2, 0x43b4c4
+move a1, a2
+lw t9, -sym.imp.strcmp(gp)
+lw a0, 0x14(s0)
+jalr t9
+sw a2, 0x18(sp)
+lw gp, 0x10(sp)
+lw a2, 0x18(sp)
+beqz v0, 0x43b474
+nop
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (s2)
+jalr t9
+addiu a1, s1, 0x3074
+lw gp, 0x10(sp)
+lbu v0, 0x28(s0)
+nop
+beqz v0, 0x43b49c
+lui v0, 0x4c
+lw v0, 0x4eb0(v0)
+nop
+lw v0, 8(v0)
+nop
+blez v0, 0x43b4c4
+nop
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+lw a0, (v0)
+lui v0, 0x4c
+lw a2, 0x56b4(v0)
+jalr t9
+addiu a1, a1, 0x75e4
+lw gp, 0x10(sp)
+nop
+lw s0, -0x7e10(gp)
+[31mlw t9, -sym.imp.vfprintf(gp)[0m
+move a1, s4
+lw a0, (s0)
+jalr t9
+move a2, s3
+lw gp, 0x10(sp)
+lw a0, (s0)
+lw ra, 0x34(sp)
+lw s4, 0x30(sp)
+lw s3, 0x2c(sp)
+lw s2, 0x28(sp)
+lw s1, 0x24(sp)
+lw s0, 0x20(sp)
+j 0x43b020
+addiu sp, sp, 0x38
+addiu sp, sp, -0x20
+sw s0, 0x18(sp)
+move s0, a0
+move a0, a1
+sw ra, 0x1c(sp)
+jal 0x43b3d8
+--
+j 0x43dc80
+nop
+jal 0x43dbd4
+move a0, s1
+lw s1, (s1)
+nop
+bnez s1, 0x43dc70
+nop
+addiu s0, s0, 4
+bne s0, s2, 0x43dc58
+move fp, zero
+j 0x43de24
+nop
+lw t9, -sym.imp.strchr(gp)
+nop
+jalr t9
+addiu a1, zero, 0x3d
+bnez v0, 0x43dd00
+move a0, s7
+jal 0x438704
+move a0, s7
+lw a0, (v0)
+lw gp, 0x10(sp)
+bnez a0, 0x43dcec
+move a1, s3
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (s4)
+move a2, s2
+jalr t9
+move a3, s7
+lw gp, 0x10(sp)
+j 0x43de10
+addiu fp, zero, 1
+jal 0x43dbd4
+nop
+lw gp, 0x10(sp)
+j 0x43dde4
+nop
+sb zero, (v0)
+addiu v0, v0, 1
+jal 0x438704
+sw v0, 0x18(sp)
+move a1, v0
+lw v1, (v0)
+lw v0, (s6)
+lw gp, 0x10(sp)
+--
+lw s2, (s0)
+nop
+bnez s2, 0x43f0d4
+nop
+addiu s1, s1, 4
+bne s1, s3, 0x43f0c8
+nop
+jal 0x439460
+move s4, zero
+j 0x43f1a4
+nop
+jal 0x43ed5c
+move a0, s1
+lw gp, 0x10(sp)
+bnez v0, 0x43f094
+move s4, v0
+j 0x43f17c
+lui s3, 0x4a
+jal 0x439bd8
+nop
+lw gp, 0x10(sp)
+beqz v0, 0x43f168
+move a1, s3
+lw v0, 0x5710(s0)
+lw v1, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a3, (v0)
+lw a0, (v1)
+move a2, s2
+jalr t9
+addiu s4, zero, 1
+lw v0, 0x5710(s1)
+nop
+addiu v0, v0, 4
+j 0x43f18c
+sw v0, 0x5710(s1)
+lui s2, 0x4a
+lui s0, 0x4c
+addiu s3, s3, 0x778c
+addiu s2, s2, 0x7838
+lw v0, 0x5710(s0)
+nop
+lw a0, (v0)
+nop
+bnez a0, 0x43f134
+lui s1, 0x4c
+--
+addiu s5, s5, 4
+lbu v0, 2(v0)
+nop
+beqz v0, 0x440adc
+nop
+lbu s0, (v1)
+addiu s1, v1, 1
+move v0, s7
+j 0x44092c
+addiu a1, zero, 0x3a
+bnez a0, 0x440918
+addiu a0, v0, 1
+lbu v1, (s7)
+addiu v0, zero, 0x3a
+bne v1, v0, 0x4408e8
+lui s2, 0x4a
+addiu a0, s2, 0x7958
+addiu a1, sp, 0x18
+move a2, zero
+sb s0, 0x18(sp)
+jal 0x43bdc8
+sb zero, 0x19(sp)
+j 0x440910
+move s2, v0
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+lw a0, (v0)
+addiu a1, a1, 0x7960
+jalr t9
+move a2, s0
+addiu a0, s2, 0x7958
+jal 0x43b980
+move s2, zero
+j 0x440a00
+addiu s0, zero, 0x3f
+lbu a2, 1(v0)
+nop
+beq a2, a1, 0x44092c
+addiu v0, v0, 2
+move v0, a0
+lbu a0, (v0)
+nop
+bne a0, s0, 0x4408b0
+nop
+lbu a0, 1(v0)
+addiu v0, zero, 0x3a
+bne a0, v0, 0x4409e4
+lui s2, 0x4a
+lbu v1, 1(v1)
+lw v0, (s5)
+bnez v1, 0x4409c4
+nop
+bnez v0, 0x4409c4
+move s1, v0
+lbu v0, (s7)
+nop
+bne v0, a0, 0x440994
+addiu a0, s2, 0x7958
+addiu a1, sp, 0x18
+move a2, zero
+sb s0, 0x18(sp)
+jal 0x43bdc8
+sb zero, 0x19(sp)
+move s2, v0
+j 0x440a20
+addiu s0, zero, 0x3a
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+lw a0, (v0)
+addiu a1, a1, 0x7974
+jalr t9
+move a2, s0
+addiu a0, s2, 0x7958
+jal 0x43b980
+move s2, zero
+j 0x440ae0
+move s1, zero
+bne s1, v0, 0x4409d0
+addiu a0, s2, 0x7958
+addiu s5, s5, 4
+move a1, s1
+jal 0x43bdc8
+move a2, zero
+j 0x440a1c
+move s2, v0
+lw v0, -obj.ash_ptr_to_globals_misc(gp)
+addiu a0, s2, 0x7958
+--
+nop
+andi v0, v0, 4
+beqz v0, 0x450b30
+move a0, s0
+or v1, s6, s7
+beqz v1, 0x450b00
+move v0, zero
+lw v1, 0x8c(sp)
+addiu v0, zero, 0x64
+lw a0, 0x88(sp)
+mult v0, v1
+lw t9, -sym.__udivdi3(gp)
+move a2, s6
+move a3, s7
+mflo v1
+nop
+nop
+multu v0, a0
+mfhi a1
+mflo a0
+jalr t9
+addu a1, v1, a1
+lw gp, 0x18(sp)
+nop
+lw v1, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v1)
+addiu a3, zero, 0x64
+sw s5, 0x10(sp)
+sw s1, 0x14(sp)
+addiu a1, a1, -0x6714
+move a2, s0
+jalr t9
+subu a3, a3, v0
+move a0, s0
+lui v0, 0x40
+addiu t9, v0, 0x6eb8
+jalr t9
+nop
+lw gp, 0x18(sp)
+j 0x450b50
+nop
+addiu s3, zero, 1
+beq s1, s0, 0x450b78
+nop
+--
+nop
+bnez v0, 0x454590
+move a0, s4
+addiu a2, zero, -1
+addiu a3, zero, -1
+sw a2, 0x40(s0)
+sw a3, 0x44(s0)
+lui s1, 0x46
+addiu t9, s1, 0x10d0
+bal 0x4610d0
+move a0, s0
+lw gp, 0x10(sp)
+beqz v0, 0x4545cc
+addiu t9, s1, 0x10d0
+lw a2, 0x40(s0)
+addiu v0, zero, -1
+lw a3, 0x44(s0)
+bne a2, v0, 0x4545fc
+nop
+beq a3, a2, 0x454620
+nop
+andi s2, s2, 0x200
+bnez s2, 0x454620
+nop
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+jalr t9
+addiu a1, a1, -0x6674
+lw ra, 0x3c(sp)
+move v0, zero
+lw s5, 0x38(sp)
+lw s4, 0x34(sp)
+lw s3, 0x30(sp)
+lw s2, 0x2c(sp)
+lw s1, 0x28(sp)
+lw s0, 0x24(sp)
+jr ra
+addiu sp, sp, 0x40
+move v0, zero
+andi v1, a0, 1
+addiu a1, a1, -1
+bgtz a1, 0x454664
+or v0, v1, v0
+jr ra
+--
+jal 0x4584f4
+addiu a1, sp, 0x18
+lw v1, 4(s1)
+lw gp, 0x10(sp)
+beqz v1, 0x458b10
+addiu v0, zero, 1
+lw v1, -0x79d8(gp)
+nop
+lw a0, (v1)
+lw v1, (s1)
+nop
+bne v1, v0, 0x458ad4
+nop
+lw v0, -0x7e10(gp)
+nop
+lw a0, (v0)
+lw v1, 0x18(s0)
+addiu v0, zero, 0x4000
+andi v1, v1, 0xf000
+bne v1, v0, 0x458af0
+lui a3, 0x4b
+j 0x458af8
+addiu a3, a3, -0x2578
+lui a3, 0x4b
+addiu a3, a3, -0x79a4
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4a
+addiu a1, a1, 0x7c84
+jalr t9
+move a2, s3
+addiu v0, zero, 1
+lw ra, 0x234(sp)
+lw s5, 0x230(sp)
+lw s4, 0x22c(sp)
+lw s3, 0x228(sp)
+lw s2, 0x224(sp)
+lw s1, 0x220(sp)
+lw s0, 0x21c(sp)
+jr ra
+addiu sp, sp, 0x238
+lui gp, 0x4d
+addiu sp, sp, -0x38
+addiu gp, gp, -0x3140
+lui t9, 0x46
+sw s5, 0x2c(sp)
+sw s4, 0x28(sp)
+--
+swr a2, 0xc(v1)
+lw ra, 0x24(sp)
+lw s0, 0x20(sp)
+jr ra
+addiu sp, sp, 0x28
+lui gp, 0x4d
+addiu gp, gp, -0x3140
+lw v0, -0x7e10(gp)
+addiu sp, sp, -0x38
+lui v1, 0x4c
+sw ra, 0x34(sp)
+sw gp, 0x28(sp)
+lw a0, (v0)
+addiu v0, v1, 0x57d0
+lwl t0, 0x1b(v0)
+lwl a1, 0x1f(v0)
+lwl a2, 0x13(v0)
+lwl a3, 0x17(v0)
+lwr t0, 0x18(v0)
+lwr a1, 0x1c(v0)
+lwr a2, 0x10(v0)
+lwr a3, 0x14(v0)
+sw t0, 0x10(sp)
+sw a1, 0x14(sp)
+lwl a1, 3(v0)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lwr a1, 0x57d0(v1)
+lwl v1, 7(v0)
+nop
+lwr v1, 4(v0)
+sw a1, 0x18(sp)
+sw v1, 0x1c(sp)
+lwl a1, 0xb(v0)
+lwl v1, 0xf(v0)
+lwr a1, 8(v0)
+lwr v1, 0xc(v0)
+sw a1, 0x20(sp)
+lui a1, 0x4b
+sw v1, 0x24(sp)
+jalr t9
+addiu a1, a1, -0x5924
+lw ra, 0x34(sp)
+nop
+jr ra
+addiu sp, sp, 0x38
+lui gp, 0x4d
+--
+nop
+move s0, zero
+beqz s3, 0x46d63c
+andi v0, s5, 4
+bnez v0, 0x46d788
+andi v0, s5, 1
+bnez v0, 0x46d63c
+move a0, s2
+lw t9, -sym.imp.access(gp)
+nop
+jalr t9
+addiu a1, zero, 2
+lw gp, 0x10(sp)
+bgez v0, 0x46d5f4
+andi v0, s5, 2
+lw t9, -sym.imp.isatty(gp)
+nop
+jalr t9
+move a0, zero
+lw gp, 0x10(sp)
+bnez v0, 0x46d5fc
+andi v0, s5, 2
+beqz v0, 0x46d63c
+nop
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+addiu a1, a1, -0x52e0
+jalr t9
+move a2, s2
+lw gp, 0x10(sp)
+bltz v0, 0x46d784
+lui t9, 0x49
+addiu t9, t9, -0x1748
+jalr t9
+nop
+lw gp, 0x10(sp)
+beqz v0, 0x46d788
+nop
+lw t9, -sym.imp.rename(gp)
+lw a0, (s1)
+jalr t9
+move a1, s2
+lw gp, 0x10(sp)
+bgez v0, 0x46d788
+--
+move a1, s3
+lw gp, 0x20(sp)
+lui v0, 0x40
+lw t9, -0x7e10(gp)
+nop
+lw t9, (t9)
+nop
+sw t9, 0x30(sp)
+addiu t9, v0, 0x7274
+jalr t9
+addiu s6, zero, -1
+lui t9, 0x4b
+lw gp, 0x20(sp)
+lw v1, 0x3c(sp)
+addiu t9, t9, 0x3a2a
+sw t9, 0x2c(sp)
+lw t9, 0x38(sp)
+nop
+bnez t9, 0x47f608
+addiu t9, zero, 1
+lw t9, 0x34(sp)
+nop
+beqz t9, 0x47f5a0
+nop
+move s7, s6
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, 0x30(sp)
+lw a1, 0x2c(sp)
+sw s0, 0x10(sp)
+sw s1, 0x14(sp)
+sw s7, 0x18(sp)
+sw v1, 0x1c(sp)
+move a2, s3
+jalr t9
+move a3, s2
+addiu t9, zero, 1
+lw gp, 0x20(sp)
+bnez fp, 0x47f5f4
+sw t9, 0x28(sp)
+j 0x47f610
+lui s0, 0x40
+addiu v0, zero, 0xa
+bne s6, v0, 0x47f5f8
+addiu v0, zero, -1
+j 0x47f46c
+addiu s7, s7, 1
+--
+nop
+lw v1, 4(s0)
+nop
+beqz v1, 0x483fe0
+addiu v0, s2, 0x57d0
+swl v1, 0x7b(v0)
+swr v1, 0x78(v0)
+lbu v0, 0x2a(s0)
+nop
+addiu v0, v0, -0x3d
+andi v0, v0, 0xff
+sltiu v1, v0, 0x3d
+beqz v1, 0x484ab8
+sll v0, v0, 2
+lui a0, 0x4b
+addiu a0, a0, -0x383c
+addu v0, a0, v0
+lw v0, (v0)
+nop
+jr v0
+nop
+j 0x48485c
+move v0, s1
+addiu v0, s2, 0x57d0
+lwl a0, 0xb(v0)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lwr a0, 8(v0)
+addiu a1, a1, -0x7320
+jalr t9
+move a2, s6
+lw gp, 0x18(sp)
+j 0x4840bc
+nop
+lw t9, -sym.imp.strchr(gp)
+move a0, s1
+jalr t9
+addiu a1, zero, 0xa
+beqz v0, 0x484098
+addiu v1, s2, 0x57d0
+sb zero, (v0)
+lwl a1, 0xb(v1)
+move a0, s1
+addiu a2, sp, 0x21
+lwr a1, 8(v1)
+addiu a3, zero, 0xa
+--
+lw v0, (v0)
+nop
+bnez v0, 0x48e484
+nop
+lw t9, 0x28(sp)
+nop
+lbu v0, (t9)
+nop
+beqz v0, 0x48e478
+lui a0, 0x4b
+addiu a0, a0, -0x2d44
+lui t9, 0x40
+addiu t9, t9, 0x63c4
+jalr t9
+nop
+andi v0, s1, 2
+bnez v0, 0x48e718
+nop
+ori s1, s1, 2
+andi v0, s1, 0x41
+beqz v0, 0x48e4e8
+lui v0, 0x4b
+lw v1, -0x7e10(gp)
+j 0x48e4c0
+addiu a1, v0, -0x360b
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (v1)
+jalr t9
+sw v1, 0x3c(sp)
+lw gp, 0x18(sp)
+lw v1, 0x3c(sp)
+lui t9, 0x4b
+addiu a1, t9, -0x360c
+addiu s5, s5, 4
+lw a2, -4(s5)
+nop
+bnez a2, 0x48e4a0
+andi v0, s1, 0x40
+bnez v0, 0x48e4ec
+lui t9, 0x40
+addiu t9, t9, 0x68d0
+jalr t9
+addiu a0, zero, 0xa
+andi v0, s1, 0x40
+beqz v0, 0x48e60c
+lui a0, 0x4a
+--
+lbu v0, 2(a1)
+nop
+beqz v0, 0x48f3ac
+nop
+lui t9, 0x49
+addiu t9, t9, -0xd38
+b 0x48f2c8
+nop
+jr ra
+move v0, zero
+addiu sp, sp, -0x28
+lui v0, 0x4c
+sw s1, 0x1c(sp)
+lw s1, 0x553c(v0)
+lui gp, 0x4d
+addiu gp, gp, -0x3140
+andi a1, a1, 0x10
+sw s2, 0x20(sp)
+sw s0, 0x18(sp)
+sw ra, 0x24(sp)
+sw gp, 0x10(sp)
+lw s2, (s1)
+beqz a1, 0x48f42c
+move s0, a0
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+lui v0, 0x4c
+lw a2, 0x5538(v0)
+addiu a1, a1, -0x2c4c
+jalr t9
+move a3, s0
+lui t9, 0x49
+addiu t9, t9, -0x1748
+bal 0x48e8b8
+nop
+lw gp, 0x10(sp)
+beqz v0, 0x48f464
+move v1, zero
+lw t9, -sym.imp.unlink(gp)
+nop
+jalr t9
+move a0, s0
+bgez v0, 0x48f464
+addiu v1, zero, 1
+--
+bnez v1, 0x49afa0
+nop
+bne s4, s5, 0x49afac
+sltu v1, s6, s3
+beqz v1, 0x49afac
+nop
+beq s7, v0, 0x49b324
+move s3, s6
+move s4, s5
+lui v0, 0x40
+sltu v0, s0, v0
+beqz v0, 0x49afc4
+addiu v1, zero, 4
+j 0x49afe8
+sw zero, 0x2c(fp)
+lw v0, 0x28(fp)
+srl s1, s0, 8
+srl v0, v0, 8
+srl s3, s4, 8
+move s0, zero
+sw v0, 0x34(fp)
+sw zero, 0x28(fp)
+move s4, zero
+sw v1, 0x2c(fp)
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a2, 0x10(s2)
+lw a0, (v0)
+lui a1, 0x4b
+jalr t9
+addiu a1, a1, -0x2554
+lw v1, 0x34(fp)
+lw a0, 0x28(fp)
+lw gp, 0x18(fp)
+addu s5, s3, v1
+addu v0, s4, a0
+sltu s6, s5, s3
+addu s6, s6, v0
+or v0, s1, s0
+beqz v0, 0x49b194
+addiu a0, zero, 0x64
+mult a0, s6
+lw v0, -0x7e10(gp)
+lw t9, -sym.__udivdi3(gp)
+move a3, s0
+lw t0, (v0)
+move a2, s1
+sw t0, 0x3c(fp)
+mflo v0
+nop
+nop
+multu a0, s5
+mfhi a1
+mflo a0
+jalr t9
+addu a1, v0, a1
+lw gp, 0x18(fp)
+lw t0, 0x3c(fp)
+lui a1, 0x4b
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+move a0, t0
+addiu a1, a1, -0x2548
+jalr t9
+move a2, v0
+lui t9, 0x40
+addiu a0, zero, 2
+addiu a1, fp, 0x20
+addiu t9, t9, 0x6994
+jalr t9
+move a2, zero
+lw v0, 0x20(fp)
+lw gp, 0x18(fp)
+addiu v1, v0, -0x31
+blez v1, 0x49b194
+addiu v0, v0, -0x22
+srl v0, v0, 3
+sll v0, v0, 3
+move t0, sp
+lw t9, -sym.imp.memset(gp)
+subu sp, sp, v0
+--
+mult s6, v1
+addu v0, a0, v1
+sb zero, (v0)
+lw t9, -sym.__udivdi3(gp)
+move a2, s1
+mflo v0
+nop
+nop
+multu s5, v1
+mfhi a3
+addu a1, v0, a3
+mflo a0
+jalr t9
+move a3, s0
+lw gp, 0x18(fp)
+lw a0, 0x30(fp)
+addiu a1, zero, 0x2a
+lw t9, -sym.imp.memset(gp)
+nop
+jalr t9
+move a2, v0
+lw gp, 0x18(fp)
+lw a2, 0x30(fp)
+lui a1, 0x4b
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (v0)
+jalr t9
+addiu a1, a1, -0x2540
+lw gp, 0x18(fp)
+lw t0, 0x3c(fp)
+j 0x49b194
+move sp, t0
+srl s5, s5, 0xa
+or s5, v1, s5
+lw v1, 0x2c(fp)
+srl s6, s6, 0xa
+addiu v1, v1, 1
+j 0x49b19c
+sw v1, 0x2c(fp)
+lui v0, 1
+ori v0, v0, 0x86a0
+bnez s6, 0x49b178
+sll v1, s6, 0x16
+sltu v1, s5, v0
+beqz v1, 0x49b178
+sll v1, s6, 0x16
+lw a0, 0x2c(fp)
+lw v1, -0x7e10(gp)
+lui v0, 0x4b
+addiu v0, v0, -0x24fc
+addu v0, a0, v0
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (v1)
+lbu a3, (v0)
+lui a1, 0x4b
+addiu a1, a1, -0x2538
+jalr t9
+move a2, s5
+lw v0, 8(s2)
+lw v1, (s2)
+lw gp, 0x18(fp)
+beq s3, v1, 0x49b218
+subu v0, s7, v0
+sltiu v1, v0, 5
+sw s7, 8(s2)
+bnez v1, 0x49b214
+sw s3, (s2)
+lw v1, 0xc(s2)
+nop
+addu v0, v1, v0
+sw v0, 0xc(s2)
+move v0, zero
+--
+subu s0, s0, v1
+subu s0, s0, s1
+mult s0, s7
+move a3, s4
+mflo s0
+nop
+nop
+multu a0, s7
+mfhi a1
+mflo a0
+jalr t9
+addu a1, s0, a1
+subu s7, v0, s7
+lui v0, 0x36
+ori v0, v0, 0xee80
+sltu v1, s7, v0
+lw gp, 0x18(fp)
+bnez v1, 0x49b2d4
+addiu a2, zero, 0xe10
+addiu s7, v0, -1
+bnez a2, 0x49b2e0
+divu zero, s7, a2
+break 7
+addiu a3, zero, 0x3c
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+addiu a1, a1, -0x2510
+mfhi s7
+mflo a2
+nop
+nop
+bnez a3, 0x49b314
+divu zero, s7, a3
+break 7
+mfhi s7
+mflo a3
+jalr t9
+sw s7, 0x10(sp)
+move sp, fp
+lw ra, 0x64(sp)
+lw fp, 0x60(sp)
+lw s7, 0x5c(sp)
+lw s6, 0x58(sp)
+lw s5, 0x54(sp)
+--
+addiu a0, a0, -0x5524
+move a1, s0
+j 0x49c428
+addiu t9, t9, 0x63f8
+andi v0, s2, 8
+bnez v0, 0x49c1fc
+move a0, s0
+lw t9, -sym.imp.access(gp)
+nop
+jalr t9
+addiu a1, zero, 2
+lw gp, 0x10(sp)
+bgez v0, 0x49c200
+andi v0, s2, 0x10
+lw t9, -sym.imp.isatty(gp)
+nop
+jalr t9
+move a0, zero
+lw gp, 0x10(sp)
+bnez v0, 0x49c208
+nop
+andi v0, s2, 0x10
+beqz v0, 0x49c248
+nop
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+lui v0, 0x4c
+lw a2, 0x5538(v0)
+addiu a1, a1, -0x24e8
+jalr t9
+move a3, s0
+lui t9, 0x49
+addiu t9, t9, -0x1748
+bal 0x48e8b8
+move s1, zero
+lw gp, 0x10(sp)
+beqz v0, 0x49c430
+nop
+lw t9, -sym.imp.opendir(gp)
+move a0, s0
+jalr t9
+addiu s1, zero, -1
+lw gp, 0x10(sp)
+beqz v0, 0x49c430
+--
+nop
+jalr t9
+move a0, s4
+lw gp, 0x10(sp)
+nop
+lw t9, -sym.imp.readdir64(gp)
+nop
+jalr t9
+move a0, s3
+lw gp, 0x10(sp)
+bnez v0, 0x49c270
+move a0, s0
+lw t9, -sym.imp.closedir(gp)
+nop
+jalr t9
+move a0, s3
+lw gp, 0x10(sp)
+bgez v0, 0x49c2fc
+lui a0, 0x4b
+j 0x49c41c
+addiu a0, a0, -0x24c4
+andi s2, s2, 0x10
+beqz s2, 0x49c344
+lui a1, 0x4b
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (v0)
+lui v0, 0x4c
+lw a2, 0x5538(v0)
+addiu a1, a1, -0x24b0
+jalr t9
+move a3, s0
+lui t9, 0x49
+addiu t9, t9, -0x1748
+bal 0x48e8b8
+nop
+lw gp, 0x10(sp)
+beqz v0, 0x49c430
+nop
+lw t9, -sym.imp.rmdir(gp)
+nop
+jalr t9
+move a0, s0
+j 0x49c410
+nop
+andi v0, s2, 8
+bnez v0, 0x49c3b4
+move a0, s0
+lw t9, -sym.imp.access(gp)
+nop
+jalr t9
+addiu a1, zero, 2
+lw gp, 0x10(sp)
+bgez v0, 0x49c3b4
+ori v0, zero, 0xa000
+lw v1, 0x30(sp)
+nop
+andi v1, v1, 0xf000
+beq v1, v0, 0x49c3b4
+nop
+lw t9, -sym.imp.isatty(gp)
+nop
+jalr t9
+move a0, zero
+lw gp, 0x10(sp)
+bnez v0, 0x49c3c0
+nop
+andi s2, s2, 0x10
+beqz s2, 0x49c400
+nop
+lw v0, -0x7e10(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lui a1, 0x4b
+lw a0, (v0)
+lui v0, 0x4c
+lw a2, 0x5538(v0)
+addiu a1, a1, -0x2494
+jalr t9
+move a3, s0
+lui t9, 0x49
+addiu t9, t9, -0x1748
+bal 0x48e8b8
+move s1, zero
+lw gp, 0x10(sp)
+beqz v0, 0x49c430
+nop
+lw t9, -sym.imp.unlink(gp)
+move a0, s0
+jalr t9
+move s1, zero
+bgez v0, 0x49c430
+lui a0, 0x4b
+--
+bgez v0, 0x49da0c
+lui a0, 0x4b
+lui t9, 0x40
+addiu a0, a0, -0x22ac
+addiu t9, t9, 0x7ea8
+jalr t9
+move a1, s1
+addiu v0, zero, 2
+sh v0, 0x20(sp)
+move s6, zero
+lui v1, 0x49
+addiu t9, v1, 0x2350
+bal 0x492350
+move a0, s2
+lw gp, 0x18(sp)
+beqz v0, 0x49db6c
+move s7, v0
+lw t9, -sym.imp.strncmp(gp)
+lw a2, 0xe4(sp)
+move a0, s3
+jalr t9
+move a1, v0
+lw gp, 0x18(sp)
+beqz v0, 0x49da74
+lui a1, 0x4b
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+move a0, s4
+addiu a1, a1, -0x6234
+jalr t9
+move a2, s7
+lw gp, 0x18(sp)
+j 0x49db54
+nop
+lui t9, 0x4c
+lw v0, 0x5538(t9)
+addiu v1, zero, 0x70
+lbu v0, (v0)
+nop
+beq v0, v1, 0x49da98
+addiu v1, zero, 0x63
+bne v0, v1, 0x49db54
+nop
+lw v1, 0xe4(sp)
+lw t9, -sym.imp.strchrnul(gp)
+addiu a1, zero, 0x3a
+jalr t9
+--
+addiu a0, v0, 1
+lw gp, 0x18(sp)
+move a0, zero
+lw t9, -sym.imp.time(gp)
+nop
+jalr t9
+sw v0, 0xf0(sp)
+lui a0, 1
+addiu a0, a0, 0x5180
+bnez a0, 0x49db04
+divu zero, v0, a0
+break 7
+lw v1, 0xf0(sp)
+lui a1, 0x4b
+lw gp, 0x18(sp)
+sw v1, 0x14(sp)
+addiu a1, a1, -0x2290
+mflo a0
+sw a0, 0x10(sp)
+j 0x49db38
+move a0, s4
+lui a1, 0x4b
+sw v0, 0x10(sp)
+move a0, s4
+addiu a1, a1, -0x2284
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a3, 0x128(sp)
+move a2, s3
+jalr t9
+addiu s6, s6, 1
+lw gp, 0x18(sp)
+nop
+lw t9, -sym.imp.free(gp)
+nop
+jalr t9
+move a0, s7
+j 0x49da1c
+lui v1, 0x49
+bnez s6, 0x49dbac
+lui v0, 0x4c
+lw v0, 0x5538(v0)
+nop
+lbu v1, (v0)
+addiu v0, zero, 0x61
+bne v1, v0, 0x49dbac
+lui a1, 0x4a
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a3, 0x128(sp)
+move a0, s4
+addiu a1, a1, 0x7c84
+jalr t9
+move a2, s3
+lw gp, 0x18(sp)
+addiu s6, zero, 1
+lw t9, -sym.imp.fcntl64(gp)
+lw a0, 0xe0(sp)
+addiu a1, zero, 0x22
+jalr t9
+addiu a2, sp, 0x20
+lw gp, 0x18(sp)
+lui v1, 0x4c
+lw v0, 0x553c(v1)
+lw t9, -sym.imp.ferror(gp)
+move a0, s2
+jalr t9
+sw zero, (v0)
+lw gp, 0x18(sp)
+
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m44[0m times [0;33mbusybox[0m
+

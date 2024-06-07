@@ -1,0 +1,41 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 6:</span></pre>
+<pre></span>export HOME=$(grep -e "^${USER:-root}:" /etc/passwd | cut -d ":" -f 6)</span></pre>
+<pre><span class="orange">       ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">            ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 7:</span></pre>
+<pre></span>export HOME=${HOME:-/root}</span></pre>
+<pre><span class="green">            ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>export HOME="${HOME:-/root}"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 13:</span></pre>
+<pre></span>[ -x /usr/bin/vim ] &amp;&amp; alias vi=vim || alias vim=vi</span></pre>
+<pre><span class="green">                    ^-- SC2015 (info): Note that A &amp;&amp; B || C is not if-then-else. C may run when A is true.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 15:</span></pre>
+<pre></span>[ -z "$KSH_VERSION" -o \! -s /etc/mkshrc ] || . /etc/mkshrc</span></pre>
+<pre><span class="orange">                    ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<pre><span class="orange">                          ^-- SC2050 (warning): This expression is constant. Did you forget the $ on a variable?</span></pre>
+<pre><span class="orange">                          ^-- SC2057 (warning): Unknown binary operator.</span></pre>
+<pre><span class="green">                                                ^---------^ SC1091 (info): Not following: /etc/mkshrc was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 18:</span></pre>
+<pre></span>[ -x /usr/bin/ldd ] || ldd() { LD_TRACE_LOADED_OBJECTS=1 $*; }</span></pre>
+<pre><span class="orange">                                                         ^-- SC2048 (warning): Use "$&commat;" (with quotes) to prevent whitespace problems.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/profile line 22:</span></pre>
+<pre></span>		[ -e "$FILE" ] &amp;&amp; . "$FILE"</span></pre>
+<pre><span class="orange">                                    ^-----^ SC1090 (warning): ShellCheck can't follow non-constant source. Use a directive to specify location.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC1090" title="https://www.shellcheck.net/wiki/SC1090" target="_blank" >https://www.shellcheck.net/wiki/SC1090</a> -- ShellCheck can't follow non-const...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2046" title="https://www.shellcheck.net/wiki/SC2046" target="_blank" >https://www.shellcheck.net/wiki/SC2046</a> -- Quote this to prevent word splitt...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2048" title="https://www.shellcheck.net/wiki/SC2048" target="_blank" >https://www.shellcheck.net/wiki/SC2048</a> -- Use "$&commat;" (with quotes) to prevent...</pre>

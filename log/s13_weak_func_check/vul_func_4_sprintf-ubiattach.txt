@@ -1,0 +1,127 @@
+[[0;33m*[0m] Binary protection state of [0;33mubiattach[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mubiattach[0m
+
+  401e54:	08100779 	j	401de4 <read_positive_int+0x58>
+  401e58:	2403ffff 	li	v1,-1
+
+00401e5c <dev_read_int>:
+  401e5c:	3c1c0042 	lui	gp,0x42
+  401e60:	279cdcc0 	addiu	gp,gp,-9024
+  401e64:	8f998094 	lw	t9,strlen
+  401e68:	27bdffd0 	addiu	sp,sp,-48
+  401e6c:	afbf002c 	sw	ra,44(sp)
+  401e70:	afbe0028 	sw	s8,40(sp)
+  401e74:	afb30024 	sw	s3,36(sp)
+  401e78:	03a0f021 	move	s8,sp
+  401e7c:	afb20020 	sw	s2,32(sp)
+  401e80:	afb1001c 	sw	s1,28(sp)
+  401e84:	afb00018 	sw	s0,24(sp)
+  401e88:	afbc0010 	sw	gp,16(sp)
+  401e8c:	00809821 	move	s3,a0
+  401e90:	00a09021 	move	s2,a1
+  401e94:	0320f809 	jalr	t9
+  401e98:	00c08821 	move	s1,a2
+  401e9c:	24420040 	addiu	v0,v0,64
+  401ea0:	8fdc0010 	lw	gp,16(s8)
+  401ea4:	000210c2 	srl	v0,v0,0x3
+  401ea8:	000210c0 	sll	v0,v0,0x3
+  401eac:	03a2e823 	subu	sp,sp,v0
+[31m  401eb0:	8f9980a8 	lw	t9,sprintf[0m
+  401eb4:	27b00010 	addiu	s0,sp,16
+  401eb8:	02403021 	move	a2,s2
+--
+  401ef0:	03e00008 	jr	ra
+  401ef4:	27bd0030 	addiu	sp,sp,48
+
+00401ef8 <dev_read_ll>:
+  401ef8:	3c1c0042 	lui	gp,0x42
+  401efc:	279cdcc0 	addiu	gp,gp,-9024
+  401f00:	8f998094 	lw	t9,strlen
+  401f04:	27bdffd0 	addiu	sp,sp,-48
+  401f08:	afbf002c 	sw	ra,44(sp)
+  401f0c:	afbe0028 	sw	s8,40(sp)
+  401f10:	afb30024 	sw	s3,36(sp)
+  401f14:	03a0f021 	move	s8,sp
+  401f18:	afb20020 	sw	s2,32(sp)
+  401f1c:	afb1001c 	sw	s1,28(sp)
+  401f20:	afb00018 	sw	s0,24(sp)
+  401f24:	afbc0010 	sw	gp,16(sp)
+  401f28:	00809821 	move	s3,a0
+  401f2c:	00a09021 	move	s2,a1
+  401f30:	0320f809 	jalr	t9
+  401f34:	00c08821 	move	s1,a2
+  401f38:	24420040 	addiu	v0,v0,64
+  401f3c:	8fdc0010 	lw	gp,16(s8)
+  401f40:	000210c2 	srl	v0,v0,0x3
+  401f44:	000210c0 	sll	v0,v0,0x3
+  401f48:	03a2e823 	subu	sp,sp,v0
+[31m  401f4c:	8f9980a8 	lw	t9,sprintf[0m
+  401f50:	27b00010 	addiu	s0,sp,16
+  401f54:	02403021 	move	a2,s2
+--
+
+0040235c <dev_get_major>:
+  40235c:	27bdffc8 	addiu	sp,sp,-56
+  402360:	3c1c0042 	lui	gp,0x42
+  402364:	279cdcc0 	addiu	gp,gp,-9024
+  402368:	afb00020 	sw	s0,32(sp)
+  40236c:	8c900018 	lw	s0,24(a0)
+  402370:	8f998094 	lw	t9,strlen
+  402374:	afbe0030 	sw	s8,48(sp)
+  402378:	03a0f021 	move	s8,sp
+  40237c:	afbf0034 	sw	ra,52(sp)
+  402380:	afc70018 	sw	a3,24(s8)
+  402384:	afb3002c 	sw	s3,44(sp)
+  402388:	afb20028 	sw	s2,40(sp)
+  40238c:	afb10024 	sw	s1,36(sp)
+  402390:	afbc0010 	sw	gp,16(sp)
+  402394:	02002021 	move	a0,s0
+  402398:	00a09821 	move	s3,a1
+  40239c:	0320f809 	jalr	t9
+  4023a0:	00c09021 	move	s2,a2
+  4023a4:	24420040 	addiu	v0,v0,64
+  4023a8:	8fdc0010 	lw	gp,16(s8)
+  4023ac:	000210c2 	srl	v0,v0,0x3
+  4023b0:	000210c0 	sll	v0,v0,0x3
+  4023b4:	03a2e823 	subu	sp,sp,v0
+[31m  4023b8:	8f9980a8 	lw	t9,sprintf[0m
+  4023bc:	27b10010 	addiu	s1,sp,16
+  4023c0:	02202021 	move	a0,s1
+--
+  402e78:	8fbc0018 	lw	gp,24(sp)
+  402e7c:	08100b42 	j	402d08 <ubi_get_info+0x18c>
+  402e80:	00000000 	nop
+
+00402e84 <ubi_dev_present>:
+  402e84:	27bdff30 	addiu	sp,sp,-208
+  402e88:	3c1c0042 	lui	gp,0x42
+  402e8c:	279cdcc0 	addiu	gp,gp,-9024
+  402e90:	afb100c4 	sw	s1,196(sp)
+  402e94:	8c910010 	lw	s1,16(a0)
+  402e98:	8f998094 	lw	t9,strlen
+  402e9c:	afbe00c8 	sw	s8,200(sp)
+  402ea0:	03a0f021 	move	s8,sp
+  402ea4:	afbf00cc 	sw	ra,204(sp)
+  402ea8:	afb000c0 	sw	s0,192(sp)
+  402eac:	afbc0010 	sw	gp,16(sp)
+  402eb0:	02202021 	move	a0,s1
+  402eb4:	0320f809 	jalr	t9
+  402eb8:	afc500b8 	sw	a1,184(s8)
+  402ebc:	24420040 	addiu	v0,v0,64
+  402ec0:	8fdc0010 	lw	gp,16(s8)
+  402ec4:	000210c2 	srl	v0,v0,0x3
+  402ec8:	000210c0 	sll	v0,v0,0x3
+  402ecc:	03a2e823 	subu	sp,sp,v0
+  402ed0:	8fc600b8 	lw	a2,184(s8)
+[31m  402ed4:	8f9980a8 	lw	t9,sprintf[0m
+  402ed8:	27b00010 	addiu	s0,sp,16
+  402edc:	02002021 	move	a0,s0
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m4[0m times [0;33mubiattach[0m
+

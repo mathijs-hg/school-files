@@ -1,0 +1,15 @@
+[ ifup = "$ACTION" ] && {
+	uci_toggle_state network "$INTERFACE" up 1
+	uci_toggle_state network "$INTERFACE" connect_time $(sed -ne 's![^0-9].*$!!p' /proc/uptime)
+	[ -n "$DEVICE" ] && {
+		uci_toggle_state network "$INTERFACE" device "$(uci -q get network.$INTERFACE.ifname)"
+		uci_toggle_state network "$INTERFACE" ifname "$DEVICE"
+	}
+}
+
+if [ ifup = "$ACTION" ] && [ wan = "$INTERFACE" ]; then
+	if [ -f /usr/sbin/avirastate_check ] && [ ! -f /tmp/avirastate_checking ]; then
+		touch /tmp/avirastate_checking
+		/usr/sbin/avirastate_check &
+	fi
+fi

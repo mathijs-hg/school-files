@@ -1,0 +1,124 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 3:[0m
+[0mSTART=99[0m
+[33m^---^ SC2034 (warning): START appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 12:[0m
+[0m	local nat_enable=$(uci get nat.@nat_global[0].enable)[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^--------^ SC2034 (warning): nat_enable appears unused. Verify use (or export if used externally).[0m
+[33m              ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                         ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 13:[0m
+[0m	local hw_enable=$(uci get nat.@nat_global[0].hw_enable)[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 14:[0m
+[0m	[ "$hw_enable" == "off" ] && {[0m
+[33m                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 19:[0m
+[0m	local kernel_version=$(uname -r)[0m
+[33m        ^------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                             ^---------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 20:[0m
+[0m	[ ! -f /lib/modules/$kernel_version/hw_nat.ko ] && return[0m
+[32m                            ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ ! -f /lib/modules/"$kernel_version"/hw_nat.ko ] && return
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 23:[0m
+[0m		local tmp_mode[0m
+[33m                ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 25:[0m
+[0m        if [ "$tmp_mode" == "Router" ]; then[0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 26:[0m
+[0m            insmod /lib/modules/$kernel_version/hw_nat.ko hwnat_sysmode=1[0m
+[32m                                ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            insmod /lib/modules/"$kernel_version"/hw_nat.ko hwnat_sysmode=1
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 28:[0m
+[0m            insmod /lib/modules/$kernel_version/hw_nat.ko hwnat_sysmode=2[0m
+[32m                                ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            insmod /lib/modules/"$kernel_version"/hw_nat.ko hwnat_sysmode=2
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 32:[0m
+[0m		local sys_work_mode=$(cat /tmp/work_mode | cut -d "\"" -f 4)[0m
+[33m                ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                          ^------------^ SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 36:[0m
+[0m	    		cat /proc/net/statistics/sta_dev_name | sed "1,2d" | tr '\n' ':' > /proc/tplink/sta_dev_name[0m
+[32m                            ^-- SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 41:[0m
+[0m			if [ "$tmp_mode" != "Router" ] && [ -n "$sys_work_mode" ] && [ "$sys_work_mode" == "AP" -o "$sys_work_mode" == "FAP" ];then[0m
+[33m                                                                                                        ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                                                                ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                                                                                                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 42:[0m
+[0m				local ifnames iface[0m
+[33m                                ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 43:[0m
+[0m				local eth_ifnames=[0m
+[33m                                ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 56:[0m
+[0m			[ "$sys_work_mode" == "AP" ] || [ "$sys_work_mode" == "FAP" ]  && echo "AP" > /proc/tplink/work_mode[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 57:[0m
+[0m			[ "$sys_work_mode" == "RE" ] && echo "RE" > /proc/tplink/work_mode[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 63:[0m
+[0m		. /lib/network/network_arch.sh[0m
+[32m                  ^--------------------------^ SC1091 (info): Not following: /lib/network/network_arch.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/hnat-start line 65:[0m
+[0m		local proto l3_device wanv6_vid[0m
+[33m                ^-----------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^---^ SC2034 (warning): proto appears unused. Verify use (or export if used externally).[0m
+[33m                            ^-------^ SC2034 (warning): l3_device appears unused. Verify use (or export if used externally).[0m
+[33m                                      ^-------^ SC2034 (warning): wanv6_vid appears unused. Verify use (or export if used externally).[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- START appears unused. Verify use ...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...

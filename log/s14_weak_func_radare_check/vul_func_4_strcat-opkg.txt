@@ -1,0 +1,162 @@
+[[0;33m*[0m] Binary protection state of [0;33mopkg[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33mopkg[0m
+
+jalr t9
+addiu a0, zero, 1
+lw gp, 0x18(sp)
+lw s1, 0x24(s0)
+lw t9, -sym.imp.strlen(gp)
+beqz v0, 0x417170
+move a0, s1
+jalr t9
+nop
+lw gp, 0x18(sp)
+move a0, s2
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move s3, v0
+lw gp, 0x18(sp)
+addu v0, s3, v0
+move a0, s1
+lw t9, -sym.xrealloc(gp)
+nop
+bal sym.xrealloc
+addiu a1, v0, 2
+lw gp, 0x18(sp)
+lui a1, 0x42
+sw v0, 0x24(s0)
+[31mlw t9, -sym.imp.strcat(gp)[0m
+move a0, v0
+jalr t9
+addiu a1, a1, 0x4e58
+lw gp, 0x18(sp)
+j 0x4171b4
+nop
+jalr t9
+nop
+lw gp, 0x18(sp)
+move a0, s2
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move s3, v0
+lw gp, 0x18(sp)
+addu v0, s3, v0
+move a0, s1
+lw t9, -sym.xrealloc(gp)
+nop
+bal sym.xrealloc
+addiu a1, v0, 1
+lw gp, 0x18(sp)
+sw v0, 0x24(s0)
+lw a0, 0x24(s0)
+[31mlw t9, -sym.imp.strcat(gp)[0m
+nop
+jalr t9
+move a1, s2
+j 0x417230
+nop
+andi s3, s3, 8
+beqz s3, 0x417254
+lui v0, 0x44
+lw v0, -0x7158(v0)
+nop
+beqz v0, 0x417254
+lui a1, 0x42
+lw t9, -sym.imp.sscanf(gp)
+move a0, s2
+addiu a1, a1, 0x6ce0
+addiu a2, sp, 0xa0
+jalr t9
+addiu a3, sp, 0x20
+addiu v1, zero, 2
+lw gp, 0x18(sp)
+--
+nop
+jalr t9
+move a0, fp
+lw gp, 0x20(sp)
+move a0, s6
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move s1, v0
+lw gp, 0x20(sp)
+addu v0, s1, v0
+lw t9, -sym.xmalloc(gp)
+nop
+bal sym.xmalloc
+addiu a0, v0, 1
+lw gp, 0x20(sp)
+move a0, v0
+move a1, fp
+lw t9, -sym.imp.strcpy(gp)
+nop
+jalr t9
+move s1, v0
+lw gp, 0x20(sp)
+move a1, s6
+move a0, s1
+[31mlw t9, -sym.imp.strcat(gp)[0m
+nop
+jalr t9
+move s6, zero
+lw s4, 4(s0)
+lw gp, 0x20(sp)
+beqz s4, 0x41eb38
+nop
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move a0, fp
+lw gp, 0x20(sp)
+move a0, s4
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move s6, v0
+lw gp, 0x20(sp)
+addu v0, s6, v0
+lw t9, -sym.xmalloc(gp)
+nop
+bal sym.xmalloc
+addiu a0, v0, 1
+lw gp, 0x20(sp)
+move a0, v0
+move a1, fp
+lw t9, -sym.imp.strcpy(gp)
+nop
+jalr t9
+move s6, v0
+lw gp, 0x20(sp)
+lw a1, 4(s0)
+[31mlw t9, -sym.imp.strcat(gp)[0m
+nop
+jalr t9
+move a0, s6
+lw gp, 0x20(sp)
+j 0x41eb3c
+andi v0, s2, 8
+lw t9, -sym.xstrdup(gp)
+move a0, s1
+bal sym.xstrdup
+move s6, zero
+lw a0, 4(s0)
+lw gp, 0x20(sp)
+beqz a0, 0x41eb38
+move s1, v0
+lw t9, -sym.xstrdup(gp)
+nop
+bal sym.xstrdup
+nop
+lw gp, 0x20(sp)
+move s6, v0
+
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m4[0m times [0;33mopkg[0m
+

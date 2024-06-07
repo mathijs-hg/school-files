@@ -1,0 +1,23 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/pctl_log_update line 3:[0m
+[0m. /lib/parental_control/core_get_history.sh[0m
+[32m  ^-- SC1091 (info): Not following: /lib/parental_control/core_get_history.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/pctl_log_update line 4:[0m
+[0m. /lib/functions.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/pctl_log_update line 17:[0m
+[0m    cp ${G_PC_INSIGHTS_PATH}/${G_UCI_CONFIG_FILE} ${G_UCI_DEFAULT_PATH} # tmp/tmp-device-config/pc_insights --> /etc/config/pc_insights[0m
+[32m       ^-------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                             ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                  ^-------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    cp "${G_PC_INSIGHTS_PATH}"/"${G_UCI_CONFIG_FILE}" "${G_UCI_DEFAULT_PATH}" # tmp/tmp-device-config/pc_insights --> /etc/config/pc_insights
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: /lib/functions.sh ...
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...

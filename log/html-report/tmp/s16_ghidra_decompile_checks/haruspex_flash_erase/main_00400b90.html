@@ -1,0 +1,334 @@
+<br />
+<pre>int main(int argc,char **argv)</pre>
+<br />
+<pre>{</pre>
+<pre>  bool bVar1;</pre>
+<pre>  ulonglong uVar2;</pre>
+<pre>  bool bVar3;</pre>
+<pre>  FILE *pFVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  libmtd_t desc;</pre>
+<pre>  int iVar6;</pre>
+<pre>  void *pvVar7;</pre>
+<pre>  ssize_t sVar8;</pre>
+<pre>  int *piVar9;</pre>
+<pre>  char *pcVar10;</pre>
+<pre>  void *data;</pre>
+<pre>  uint uVar11;</pre>
+<pre>  uint uVar12;</pre>
+<pre>  int *__nptr;</pre>
+<pre>  void *eb;</pre>
+<pre>  UDItype UVar13;</pre>
+<pre>  DItype DVar14;</pre>
+<pre>  undefined4 in_stack_fffffdcc;</pre>
+<pre>  undefined4 in_stack_fffffdd0;</pre>
+<pre>  undefined4 in_stack_fffffdd4;</pre>
+<pre>  char *local_218;</pre>
+<pre>  int option_index;</pre>
+<pre>  nand_oobinfo oobinfo;</pre>
+<pre>  mtd_dev_info mtd;</pre>
+<pre>  ulong local_40;</pre>
+<pre>  __u32 local_34;</pre>
+<pre>  __u32 local_30;</pre>
+<pre>  </pre>
+<pre>  bVar1 = false;</pre>
+<pre>  while( true ) {</pre>
+<pre>    piVar9 = &amp;option_index;</pre>
+<pre>    option_index = 0;</pre>
+<pre><span class="green">    iVar5 = getopt_long(argc,argv,&amp;DAT_00406170,main::lexical_block_0::long_options)</span></span></pre>
+<pre>    if (iVar5 == -1) break;</pre>
+<pre>    if (iVar5 == 0x6a) {</pre>
+<pre>      jffs2 = 1;</pre>
+<pre>    }</pre>
+<pre>    else if (iVar5 &lt; 0x6b) {</pre>
+<pre>      if (iVar5 == 0x4e) {</pre>
+<pre>        noskipbad = 1;</pre>
+<pre>      }</pre>
+<pre>      else if (iVar5 &lt; 0x4f) {</pre>
+<pre>        if (iVar5 == 0) {</pre>
+<pre>          if (option_index == 0) {</pre>
+<pre>            pcVar10 = </pre>
+<pre>            "Usage: %s [options] MTD_DEVICE &lt;start offset&gt; &lt;block count&gt;\nErase blocks of the specified MTD device.\nSpecify a count of 0 to erase to end of device.\n\n  -j, --jffs2       format the device for jffs2\n  -N, --noskipbad   don\'t skip bad blocks\n  -u, --unlock      unlock sectors before erasing\n  -q, --quiet       do not display progress messages\n      --silent      same as --quiet\n      --help        display this help and exit\n      --version     output version information and exit\n"</pre>
+<pre>            ;</pre>
+<pre>            goto LAB_00400cac;</pre>
+<pre>          }</pre>
+<pre>          if (option_index == 1) {</pre>
+<pre>            pcVar10 = </pre>
+<pre>            "%1$s version 1.5.2\n\nCopyright (C) 2000 Arcom Control Systems Ltd\n\n%1$s comes with NO WARRANTY\nto the extent permitted by law.\n\nYou may redistribute copies of %1$s\nunder the terms of the GNU General Public Licence.\nSee the file `COPYING\' for more information.\n"</pre>
+<pre>            ;</pre>
+<pre>LAB_00400cac:</pre>
+<pre>            printf(pcVar10,"flash_erase");</pre>
+<pre>            return 0;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else if (iVar5 == 0x3f) {</pre>
+<pre>          bVar1 = true;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else if (iVar5 == 0x71) {</pre>
+<pre>      quiet = 1;</pre>
+<pre>    }</pre>
+<pre>    else if (iVar5 == 0x75) {</pre>
+<pre>      unlock = 1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  iVar5 = argc - optind;</pre>
+<pre>  if (iVar5 != 2) {</pre>
+<pre>    if (iVar5 == 3) {</pre>
+<pre>      __nptr = (int *)argv[optind + 1];</pre>
+<pre>      mtd_device = argv[optind];</pre>
+<pre>      strtoull((char *)__nptr,&amp;local_218,0);</pre>
+<pre>      if ((*(char *)__nptr == '\0') || (*local_218 != '\0')) {</pre>
+<pre>        fprintf(stderr,"%s: error!: %s: unable to parse the number \'%s\'\n","flash_erase",</pre>
+<pre>                "strtoull");</pre>
+<pre>        bVar1 = true;</pre>
+<pre>        piVar9 = __nptr;</pre>
+<pre>      }</pre>
+<pre>      pcVar10 = argv[optind + 2];</pre>
+<pre>      local_40 = strtoul(pcVar10,&amp;local_218,0);</pre>
+<pre>      if ((*pcVar10 != '\0') &amp;&amp; (*local_218 == '\0')) {</pre>
+<pre>        if (bVar1) goto LAB_00400da0;</pre>
+<pre><span class="green">        desc = libmtd_open()</span></span></pre>
+<pre>        if (desc == (libmtd_t)0x0) {</pre>
+<pre>          pcVar10 = "%s: error!: can\'t initialize libmtd\n";</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre><span class="green">          iVar5 = open64(mtd_device,2)</span></span></pre>
+<pre>          if (iVar5 &lt; 0) {</pre>
+<pre>            piVar9 = __errno_location();</pre>
+<pre>            iVar5 = *piVar9;</pre>
+<pre>            pcVar10 = "%s: error!: %s\n";</pre>
+<pre>LAB_00401718:</pre>
+<pre>            fprintf(stderr,pcVar10,"flash_erase",mtd_device);</pre>
+<pre>            pFVar4 = stderr;</pre>
+<pre>            pcVar10 = strerror(iVar5);</pre>
+<pre>            fprintf(pFVar4,"%*serror %d (%s)\n",0xd,"",iVar5,pcVar10);</pre>
+<pre>            return -1;</pre>
+<pre>          }</pre>
+<pre>          iVar6 = mtd_get_dev_info(desc,mtd_device,&amp</span>td);</pre>
+<pre>          if (iVar6 &lt; 0) {</pre>
+<pre>            pcVar10 = "%s: error!: mtd_get_dev_info failed\n";</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            if ((jffs2 == 0) || (mtd.type != 8)) {</pre>
+<pre>              bVar1 = mtd.type == 4;</pre>
+<pre>              bVar3 = mtd.type == 8;</pre>
+<pre>              if (jffs2 == 0) {</pre>
+<pre>                local_34 = 8;</pre>
+<pre>                local_30 = 0;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                if (target_endian == 0x4d2) {</pre>
+<pre>                  cleanmarker.magic.v16 = 0x1985;</pre>
+<pre>                  cleanmarker.nodetype.v16 = 0x2003;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  cleanmarker.magic.v16 = 0x8519;</pre>
+<pre>                  cleanmarker.nodetype.v16 = 800;</pre>
+<pre>                }</pre>
+<pre>                if (bVar1 || bVar3) {</pre>
+<pre>                  iVar6 = ioctl(iVar5,0x40c84d0a,&amp;oobinfo);</pre>
+<pre>                  if (iVar6 != 0) {</pre>
+<pre>                    piVar9 = __errno_location();</pre>
+<pre>                    iVar5 = *piVar9;</pre>
+<pre>                    pcVar10 = "%s: error!: %s: unable to get NAND oobinfo\n";</pre>
+<pre>                    goto LAB_00401718;</pre>
+<pre>                  }</pre>
+<pre>                  if (oobinfo.useecc == 2) {</pre>
+<pre>                    local_34 = oobinfo.oobfree[0][1];</pre>
+<pre>                    if (oobinfo.oobfree[0][1] == 0) {</pre>
+<pre>                      pcVar10 = </pre>
+<pre>                      "%s: error!:  Eeep. Autoplacement selected and no empty space in oob\n";</pre>
+<pre>                      goto LAB_00401784;</pre>
+<pre>                    }</pre>
+<pre>                    local_30 = oobinfo.oobfree[0][0];</pre>
+<pre>                    if (8 &lt; (int)oobinfo.oobfree[0][1]) {</pre>
+<pre>                      local_34 = 8;</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                  else if (mtd.oob_size == 0x10) {</pre>
+<pre>                    local_34 = 8;</pre>
+<pre>                    local_30 = 8;</pre>
+<pre>                  }</pre>
+<pre>                  else if (mtd.oob_size == 0x40) {</pre>
+<pre>                    local_34 = 8;</pre>
+<pre>                    local_30 = 0x10;</pre>
+<pre>                  }</pre>
+<pre>                  else if (mtd.oob_size == 8) {</pre>
+<pre>                    local_34 = 2;</pre>
+<pre>                    local_30 = 6;</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>                    local_34 = 8;</pre>
+<pre>                    local_30 = 0;</pre>
+<pre>                  }</pre>
+<pre>                  cleanmarker.totlen.v32 = 8;</pre>
+<pre>                  if (target_endian != 0x4d2) {</pre>
+<pre>                    cleanmarker.totlen.v32 = 0x8000000;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  cleanmarker.totlen.v32 = 0xc;</pre>
+<pre>                  if (target_endian != 0x4d2) {</pre>
+<pre>                    cleanmarker.totlen.v32 = 0xc000000;</pre>
+<pre>                  }</pre>
+<pre>                  local_34 = 8;</pre>
+<pre>                  local_30 = 0;</pre>
+<pre>                }</pre>
+<pre>                cleanmarker.hdr_crc.v32 = mtd_crc32(0,&amp;cleanmarker,8);</pre>
+<pre>                if (target_endian != 0x4d2) {</pre>
+<pre>                  cleanmarker.hdr_crc.v32 =</pre>
+<pre>                       cleanmarker.hdr_crc.v32 &lt;&lt; 0x18 | cleanmarker.hdr_crc.v32 &gt;&gt; 0x18 |</pre>
+<pre>                       cleanmarker.hdr_crc.v32 &gt;&gt; 8 &amp; 0xff00 |</pre>
+<pre>                       (cleanmarker.hdr_crc.v32 &amp; 0xff00) &lt;&lt; 8;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              UVar13 = __udivdi3(CONCAT44(in_stack_fffffdcc,piVar9),</pre>
+<pre>                                 CONCAT44(in_stack_fffffdd4,in_stack_fffffdd0));</pre>
+<pre>              pvVar7 = (void *)UVar13;</pre>
+<pre>              if (local_40 == 0) {</pre>
+<pre>                DVar14 = __divdi3(CONCAT44(in_stack_fffffdcc,piVar9),</pre>
+<pre>                                  CONCAT44(in_stack_fffffdd4,in_stack_fffffdd0));</pre>
+<pre>                local_40 = (int)DVar14 - (int)pvVar7;</pre>
+<pre>              }</pre>
+<pre>              uVar11 = 0;</pre>
+<pre>              eb = pvVar7;</pre>
+<pre>              if (pvVar7 &lt; (void *)(local_40 + (int)pvVar7)) {</pre>
+<pre>                do {</pre>
+<pre>                  uVar2 = ZEXT48(eb) * (ulonglong)(uint)mtd.eb_size;</pre>
+<pre>                  uVar11 = (uint)uVar2;</pre>
+<pre>                  uVar12 = (mtd.eb_size &gt;&gt; 0x1f) * (int)eb + (int)(uVar2 &gt;&gt; 0x20);</pre>
+<pre>                  if (noskipbad == 0) {</pre>
+<pre>                    iVar6 = mtd_is_bad(&amp</span>td,iVar5,(int)eb);</pre>
+<pre>                    if (iVar6 &lt; 1) {</pre>
+<pre>                      if (iVar6 != 0) {</pre>
+<pre>                        piVar9 = __errno_location();</pre>
+<pre>                        iVar6 = *piVar9;</pre>
+<pre>                        if (iVar6 != 0x7a) {</pre>
+<pre>                          fprintf(stderr,"%s: error!: %s: MTD get bad block failed\n","flash_erase",</pre>
+<pre>                                  mtd_device);</pre>
+<pre>                          pFVar4 = stderr;</pre>
+<pre>                          pcVar10 = strerror(iVar6);</pre>
+<pre>                          fprintf(pFVar4,"%*serror %d (%s)\n",0xd,"",iVar6,pcVar10);</pre>
+<pre>                          return -1;</pre>
+<pre>                        }</pre>
+<pre>                        noskipbad = 1;</pre>
+<pre>                        if (bVar1 || bVar3) {</pre>
+<pre>                          fprintf(stderr,"%s: error!: %s: Bad block check not available\n",</pre>
+<pre>                                  "flash_erase",mtd_device);</pre>
+<pre>                          return -1;</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                      goto LAB_00401064;</pre>
+<pre>                    }</pre>
+<pre>                    if (quiet == 0) {</pre>
+<pre>                      pcVar10 = "%s: Skipping bad block at %08llx\n";</pre>
+<pre>LAB_004011e8:</pre>
+<pre>                      printf(pcVar10,"flash_erase",uVar11,uVar12);</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>LAB_00401064:</pre>
+<pre>                    if (quiet == 0) {</pre>
+<pre>                      if (local_40 == 0) {</pre>
+<pre>                        trap(0x1c00);</pre>
+<pre>                      }</pre>
+<pre>                      printf("\rErasing %d Kibyte &commat; %llx -- %2i %% complete ",</pre>
+<pre>                             (int)(((uint)(mtd.eb_size &gt;&gt; 0x1f) &gt;&gt; 0x16) + mtd.eb_size) &gt;&gt; 10,uVar11</pre>
+<pre>                             ,uVar12,(((int)eb - (int)pvVar7) * 100) / (int)local_40);</pre>
+<pre>                    }</pre>
+<pre>                    fflush(stdout);</pre>
+<pre>                    if ((unlock == 0) || (iVar6 = mtd_unlock(&amp</span>td,iVar5,(int)eb), iVar6 == 0)) {</pre>
+<pre>                      data = eb;</pre>
+<pre>                      iVar6 = mtd_erase(desc,&amp</span>td,iVar5,(int)eb);</pre>
+<pre>                      if (iVar6 == 0) {</pre>
+<pre>                        if (jffs2 == 0) goto joined_r0x00401170;</pre>
+<pre>                        if (bVar1 || bVar3) {</pre>
+<pre>                          iVar6 = mtd_write_oob(desc,&amp</span>td,iVar5,</pre>
+<pre>                                                CONCAT44((uint)(uVar11 + local_30 &lt; uVar11) +</pre>
+<pre>                                                         uVar12 + ((int)local_30 &gt;&gt; 0x1f),</pre>
+<pre>                                                         uVar11 + local_30),(longlong)(int)local_34,</pre>
+<pre>                                                data);</pre>
+<pre>                          if (iVar6 == 0) {</pre>
+<pre>LAB_00401158:</pre>
+<pre>                            if (quiet == 0) {</pre>
+<pre>                              pcVar10 = "%s:  Cleanmarker written at %llx\n";</pre>
+<pre>                              goto LAB_004011e8;</pre>
+<pre>                            }</pre>
+<pre>                            goto joined_r0x00401170;</pre>
+<pre>                          }</pre>
+<pre>                          piVar9 = __errno_location();</pre>
+<pre>                          iVar6 = *piVar9;</pre>
+<pre>                          pcVar10 = "%s: error!: %s: MTD writeoob failure\n";</pre>
+<pre>                        }</pre>
+<pre>                        else {</pre>
+<pre>                          sVar8 = pwrite64(iVar5,&amp;cleanmarker,0xc,</pre>
+<pre>                                           uVar2 &amp; 0xffffffff | (ulonglong)uVar12 &lt;&lt; 0x20);</pre>
+<pre>                          if (sVar8 == 0xc) goto LAB_00401158;</pre>
+<pre>                          piVar9 = __errno_location();</pre>
+<pre>                          iVar6 = *piVar9;</pre>
+<pre>                          pcVar10 = "%s: error!: %s: MTD write failure\n";</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                      else {</pre>
+<pre>                        piVar9 = __errno_location();</pre>
+<pre>                        iVar6 = *piVar9;</pre>
+<pre>                        pcVar10 = "%s: error!: %s: MTD Erase failure\n";</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                    else {</pre>
+<pre>                      piVar9 = __errno_location();</pre>
+<pre>                      iVar6 = *piVar9;</pre>
+<pre>                      pcVar10 = "%s: error!: %s: MTD unlock failure\n";</pre>
+<pre>                    }</pre>
+<pre>                    fprintf(stderr,pcVar10,"flash_erase",mtd_device);</pre>
+<pre>                    pFVar4 = stderr;</pre>
+<pre>                    pcVar10 = strerror(iVar6);</pre>
+<pre>                    fprintf(pFVar4,"%*serror %d (%s)\n",0xd,"",iVar6,pcVar10);</pre>
+<pre>                  }</pre>
+<pre>joined_r0x00401170:</pre>
+<pre>                  eb = (void *)((int)eb + 1);</pre>
+<pre>                } while (eb &lt; (void *)(local_40 + (int)pvVar7));</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                uVar12 = 0;</pre>
+<pre>              }</pre>
+<pre>              if (quiet == 0) {</pre>
+<pre>                if (local_40 == 0) {</pre>
+<pre>                  trap(0x1c00);</pre>
+<pre>                }</pre>
+<pre>                printf("\rErasing %d Kibyte &commat; %llx -- %2i %% complete ",</pre>
+<pre>                       (int)(((uint)(mtd.eb_size &gt;&gt; 0x1f) &gt;&gt; 0x16) + mtd.eb_size) &gt;&gt; 10,uVar11,</pre>
+<pre>                       uVar12,(((int)eb - (int)pvVar7) * 100) / (int)local_40);</pre>
+<pre>              }</pre>
+<pre>              fflush(stdout);</pre>
+<pre>              if (quiet != 0) {</pre>
+<pre>                return 0;</pre>
+<pre>              }</pre>
+<pre>              putchar(10);</pre>
+<pre>              return 0;</pre>
+<pre>            }</pre>
+<pre>            pcVar10 = "%s: error!: JFFS2 cannot support MLC NAND.\n";</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>LAB_00401784:</pre>
+<pre>        fprintf(stderr,pcVar10,"flash_erase");</pre>
+<pre>        return -1;</pre>
+<pre>      }</pre>
+<pre>      fprintf(stderr,"%s: error!: %s: unable to parse the number \'%s\'\n","flash_erase","strtoul",</pre>
+<pre>              pcVar10);</pre>
+<pre>      goto LAB_00400da0;</pre>
+<pre>    }</pre>
+<pre>    if (iVar5 != 1) {</pre>
+<pre>      fprintf(stderr,"%s: error!: no MTD device specified\n","flash_erase");</pre>
+<pre>    }</pre>
+<pre>    fprintf(stderr,"%s: error!: no start erase block specified\n","flash_erase");</pre>
+<pre>  }</pre>
+<pre>  fprintf(stderr,"%s: error!: no erase block count specified\n","flash_erase");</pre>
+<pre>LAB_00400da0:</pre>
+<pre>  fprintf(stderr,"%s: error!: Try `--help\' for more information\n","flash_erase");</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 9dc05953a72269d2</pre>

@@ -1,0 +1,107 @@
+<br />
+<pre>int mtd_get_dev_info1(libmtd_t desc,int mtd_num,mtd_dev_info *mtd)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  uint uVar3;</pre>
+<pre>  uint uVar4;</pre>
+<pre>  undefined4 *puVar5;</pre>
+<pre>  char *buf;</pre>
+<pre>  uint uVar6;</pre>
+<pre>  DItype DVar7;</pre>
+<pre>  undefined *puVar8;</pre>
+<pre>  undefined4 in_stack_ffffffdc;</pre>
+<pre>  undefined4 in_stack_ffffffe4;</pre>
+<pre>  </pre>
+<pre>  puVar8 = &amp;_gp;</pre>
+<pre><span class="green">  memset(mtd,0,0x100)</span></span></pre>
+<pre>  mtd-&gt</span>td_num = mtd_num;</pre>
+<pre>  iVar1 = mtd_dev_present(desc,mtd_num);</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    iVar1 = -1;</pre>
+<pre>    puVar5 = (undefined4 *)(**(code **)(puVar8 + -0x7ef0))();</pre>
+<pre>    *puVar5 = 0x13;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    if ((*(uint *)((int)desc + 0x30) &amp; 1) == 0) {</pre>
+<pre>      iVar1 = legacy_get_dev_info1(mtd_num,mtd);</pre>
+<pre>      return iVar1;</pre>
+<pre>    }</pre>
+<pre>    iVar2 = dev_get_major((libmtd *)desc,mtd_num,&amp</span>td-&gt</span>ajor,&amp</span>td-&gt</span>inor);</pre>
+<pre>    iVar1 = -1;</pre>
+<pre>    if (iVar2 == 0) {</pre>
+<pre>      iVar2 = dev_read_data(*(char **)((int)desc + 0xc),mtd_num,mtd-&gt;name,0x80);</pre>
+<pre>      if (-1 &lt; iVar2) {</pre>
+<pre>        mtd-&gt;type_str[iVar2 + 0x40] = '\0';</pre>
+<pre>        buf = mtd-&gt;type_str;</pre>
+<pre>        uVar3 = dev_read_data(*(char **)((int)desc + 0x10),mtd_num,buf,0x41);</pre>
+<pre>        if (-1 &lt; (int)uVar3) {</pre>
+<pre>          mtd-&gt;type_str[uVar3 - 1] = '\0';</pre>
+<pre>          iVar2 = dev_read_pos_int(*(char **)((int)desc + 0x14),mtd_num,&amp</span>td-&gt;eb_size);</pre>
+<pre>          if ((((iVar2 == 0) &amp;&amp;</pre>
+<pre>               (iVar2 = dev_read_pos_ll(*(char **)((int)desc + 0x18),mtd_num,&amp</span>td-&gt;size), iVar2 == 0</pre>
+<pre>               )) &amp;&amp; (iVar2 = dev_read_pos_int(*(char **)((int)desc + 0x1c),mtd_num,</pre>
+<pre>                                               &amp</span>td-&gt</span>in_io_size), iVar2 == 0)) &amp;&amp;</pre>
+<pre>             (((iVar2 = dev_read_pos_int(*(char **)((int)desc + 0x20),mtd_num,&amp</span>td-&gt;subpage_size),</pre>
+<pre>               iVar2 == 0 &amp;&amp;</pre>
+<pre>               (iVar2 = dev_read_pos_int(*(char **)((int)desc + 0x24),mtd_num,&amp</span>td-&gt;oob_size),</pre>
+<pre>               iVar2 == 0)) &amp;&amp;</pre>
+<pre>              ((iVar2 = dev_read_pos_int(*(char **)((int)desc + 0x28),mtd_num,&amp</span>td-&gt;region_cnt),</pre>
+<pre>               iVar2 == 0 &amp;&amp;</pre>
+<pre>               (iVar2 = dev_read_hex_int(*(char **)((int)desc + 0x2c),mtd_num,</pre>
+<pre>                                         (int *)&amp;stack0xffffffe0), iVar2 == 0)))))) {</pre>
+<pre>            uVar6 = *(uint *)&amp</span>td-&gt;field_0xf8;</pre>
+<pre>            uVar4 = uVar3 &gt;&gt; 10 &amp; 1;</pre>
+<pre>            *(uint *)&amp</span>td-&gt;field_0xf8 = uVar6 &amp; 0xfffffffe | uVar4;</pre>
+<pre>            DVar7 = __divdi3(CONCAT44(in_stack_ffffffdc,puVar8),CONCAT44(in_stack_ffffffe4,uVar3));</pre>
+<pre>            mtd-&gt;eb_cnt = (int)DVar7;</pre>
+<pre>            iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,"nand");</pre>
+<pre>            if (iVar1 == 0) {</pre>
+<pre>              mtd-&gt;type = 4;</pre>
+<pre>              iVar1 = 1;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,"mlc-nand");</pre>
+<pre>              if (iVar1 == 0) {</pre>
+<pre>                mtd-&gt;type = 8;</pre>
+<pre>                iVar1 = 1;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,&amp;DAT_00410170);</pre>
+<pre>                uVar3 = 3;</pre>
+<pre>                if (iVar1 != 0) {</pre>
+<pre>                  iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,&amp;DAT_00410174);</pre>
+<pre>                  uVar3 = 2;</pre>
+<pre>                  if (iVar1 != 0) {</pre>
+<pre>                    iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,"absent");</pre>
+<pre>                    uVar3 = 0;</pre>
+<pre>                    if (iVar1 != 0) {</pre>
+<pre>                      iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,"dataflash");</pre>
+<pre>                      uVar3 = 6;</pre>
+<pre>                      if (iVar1 != 0) {</pre>
+<pre>                        iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,&amp;DAT_0041018c);</pre>
+<pre>                        uVar3 = 1;</pre>
+<pre>                        if (iVar1 != 0) {</pre>
+<pre>                          iVar1 = (**(code **)(puVar8 + -0x7edc))(buf,&amp;DAT_00410190);</pre>
+<pre>                          uVar3 = -(uint)(iVar1 != 0) | 7;</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                mtd-&gt;type = uVar3;</pre>
+<pre>                iVar1 = 0;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            *(uint *)&amp</span>td-&gt;field_0xf8 = uVar6 &amp; 0xfffffffc | uVar4 | iVar1 &lt;&lt; 1;</pre>
+<pre>            iVar1 = 0;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return iVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] ac33a0312db512d1</pre>

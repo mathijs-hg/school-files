@@ -1,0 +1,69 @@
+<pre>[</span><span class="orange">*</span>] Binary protection state of </span><span class="orange">libreadline.so.5.2</span></pre>
+<br />
+<pre>  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      </pre>
+<pre>  	<span class="red">No RELRO</span>       <span class="red">No Canary found</span>   <span class="red">NX disabled</span>  <span class="orange">DSO</span>          <span class="red">RPATH</span>        <span class="green">No RUNPATH</span>   <span class="red">Symbols</span></pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcat</span> tear down of </span><span class="orange">libreadline.so.5.2</span></pre>
+<br />
+<pre>   190bc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>   190c0:	1000ff8d 	b	18ef8 &lt;rl_invoking_keyseqs_in_map+0x1e8&gt;</pre>
+<pre>   190c4:	00000000 	nop</pre>
+<pre>   190c8:	2402007f 	li	v0,127</pre>
+<pre>   190cc:	16020006 	bne	s0,v0,190e8 &lt;rl_invoking_keyseqs_in_map+0x3d8&gt;</pre>
+<pre>   190d0:	2402005c 	li	v0,92</pre>
+<pre>   190d4:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>   190d8:	02402021 	move	a0,s2</pre>
+<pre>   190dc:	8f998878 	lw	t9,-30600(gp)</pre>
+<pre>   190e0:	1000ff82 	b	18eec &lt;rl_invoking_keyseqs_in_map+0x1dc&gt;</pre>
+<pre>   190e4:	24a507bc 	addiu	a1,a1,1980</pre>
+<pre>   190e8:	12020003 	beq	s0,v0,190f8 &lt;rl_invoking_keyseqs_in_map+0x3e8&gt;</pre>
+<pre>   190ec:	24020022 	li	v0,34</pre>
+<pre>   190f0:	16020007 	bne	s0,v0,19110 &lt;rl_invoking_keyseqs_in_map+0x400&gt;</pre>
+<pre>   190f4:	00000000 	nop</pre>
+<pre>   190f8:	8fa30024 	lw	v1,36(sp)</pre>
+<pre>   190fc:	2402005c 	li	v0,92</pre>
+<pre>   19100:	a2420000 	sb	v0,0(s2)</pre>
+<pre>   19104:	a2430001 	sb	v1,1(s2)</pre>
+<pre>   19108:	10000004 	b	1911c &lt;rl_invoking_keyseqs_in_map+0x40c&gt;</pre>
+<pre>   1910c:	a2400002 	sb	zero,2(s2)</pre>
+<pre>   19110:	8fa30024 	lw	v1,36(sp)</pre>
+<pre>   19114:	a2400001 	sb	zero,1(s2)</pre>
+<pre>   19118:	a2430000 	sb	v1,0(s2)</pre>
+<pre>   1911c:	8fa30018 	lw	v1,24(sp)</pre>
+<pre><span class="red">   19120:	8f9984e0 	lw	t9,strcat</span></pre>
+<pre>   19124:	02402021 	move	a0,s2</pre>
+<pre>   19128:	8c650000 	lw	a1,0(v1)</pre>
+<pre>--</pre>
+<pre>   21618:	00000000 	nop</pre>
+<pre>   2161c:	0320f809 	jalr	t9</pre>
+<pre>   21620:	00409821 	move	s3,v0</pre>
+<pre>   21624:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>   21628:	02621021 	addu	v0,s3,v0</pre>
+<pre>   2162c:	8f99888c 	lw	t9,-30580(gp)</pre>
+<pre>   21630:	00000000 	nop</pre>
+<pre>   21634:	0320f809 	jalr	t9</pre>
+<pre>   21638:	24440001 	addiu	a0,v0,1</pre>
+<pre>   2163c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>   21640:	00409821 	move	s3,v0</pre>
+<pre>   21644:	8f998878 	lw	t9,-30600(gp)</pre>
+<pre>   21648:	12c00007 	beqz	s6,21668 &lt;_rl_copy_to_kill_ring+0x1b0&gt;</pre>
+<pre>   2164c:	00402021 	move	a0,v0</pre>
+<pre>   21650:	0320f809 	jalr	t9</pre>
+<pre>   21654:	02802821 	move	a1,s4</pre>
+<pre>   21658:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>   2165c:	02602021 	move	a0,s3</pre>
+<pre>   21660:	10000006 	b	2167c &lt;_rl_copy_to_kill_ring+0x1c4&gt;</pre>
+<pre>   21664:	02402821 	move	a1,s2</pre>
+<pre>   21668:	0320f809 	jalr	t9</pre>
+<pre>   2166c:	02402821 	move	a1,s2</pre>
+<pre>   21670:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>   21674:	02602021 	move	a0,s3</pre>
+<pre>   21678:	02802821 	move	a1,s4</pre>
+<pre><span class="red">   2167c:	8f9984e0 	lw	t9,strcat</span></pre>
+<pre>   21680:	00000000 	nop</pre>
+<pre>   21684:	0320f809 	jalr	t9</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcat</span> used </span><span class="orange">2</span> times </span><span class="orange">libreadline.so.5.2</span></pre>
+<br />

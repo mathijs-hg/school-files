@@ -1,0 +1,220 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>int legacy_get_dev_info(char *node,mtd_dev_info *mtd)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  int *piVar3;</pre>
+<pre>  char *pcVar4;</pre>
+<pre>  uint uVar5;</pre>
+<pre>  uint uVar6;</pre>
+<pre>  FILE *pFVar7;</pre>
+<pre>  DItype DVar8;</pre>
+<pre>  int in_stack_fffffe60;</pre>
+<pre>  char *in_stack_fffffe64;</pre>
+<pre>  undefined4 in_stack_fffffe68;</pre>
+<pre>  undefined4 in_stack_fffffe6c;</pre>
+<pre>  loff_t offs;</pre>
+<pre>  mtd_info_user ui;</pre>
+<pre>  proc_parse_info pi;</pre>
+<pre>  stat st;</pre>
+<pre>  </pre>
+<pre>  offs._0_4_ = 0;</pre>
+<pre>  offs._4_4_ = 0;</pre>
+<pre>  iVar1 = stat64(node,(stat64 *)&amp;st);</pre>
+<pre>  if (iVar1 != 0) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    in_stack_fffffe60 = *piVar3;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot open \"%s\"\n","libmtd",node);</pre>
+<pre>    pFVar7 = stderr;</pre>
+<pre>    in_stack_fffffe64 = strerror(in_stack_fffffe60);</pre>
+<pre>    fprintf(pFVar7,"%*serror %d (%s)\n",8,"");</pre>
+<pre>    if (*piVar3 == 2) {</pre>
+<pre>      printf("%s: MTD subsystem is old and does not support sysfs, so MTD character device nodes have to exist\n"</pre>
+<pre>             ,"libmtd");</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if ((st.st_mode &amp; 0xf000) != 0x2000) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    pFVar7 = stderr;</pre>
+<pre>    *piVar3 = 0x16;</pre>
+<pre>    fprintf(pFVar7,"%s: error!: \"%s\" is not a character device\n","libmtd",node);</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre><span class="green">  memset(mtd,0,0x100)</span></span></pre>
+<pre>  uVar6 = st.st_rdev._4_4_ &amp; 0xfffff000 | (uint)st.st_rdev &gt;&gt; 8 &amp; 0xfff;</pre>
+<pre>  uVar5 = st.st_rdev._4_4_ &lt;&lt; 0x14 | (uint)st.st_rdev &gt;&gt; 0xc &amp; 0xffffff00 | (uint)st.st_rdev &amp; 0xff;</pre>
+<pre>  mtd-&gt</span>ajor = uVar6;</pre>
+<pre>  mtd-&gt</span>inor = uVar5;</pre>
+<pre>  if (uVar6 != 0x5a) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    *piVar3 = 0x16;</pre>
+<pre>    fprintf(stderr,"%s: error!: \"%s\" has major number %d, MTD devices have major %d\n","libmtd",</pre>
+<pre>            node,mtd-&gt</span>ajor,0x5a);</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  mtd-&gt</span>td_num = (int)uVar5 / 2;</pre>
+<pre><span class="green">  iVar1 = open64(node,0)</span></span></pre>
+<pre>  if (iVar1 == -1) {</pre>
+<pre>    piVar3 = __errno_location();</pre>
+<pre>    iVar1 = *piVar3;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot open \"%s\"\n","libmtd",node);</pre>
+<pre>    pFVar7 = stderr;</pre>
+<pre>    pcVar4 = strerror(iVar1);</pre>
+<pre>    fprintf(pFVar7,"%*serror %d (%s)\n",8,"",iVar1,pcVar4);</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  iVar2 = ioctl(iVar1,0x40204d01,&amp;ui);</pre>
+<pre>  if (iVar2 == 0) {</pre>
+<pre>    iVar2 = ioctl(iVar1,0x80084d0b,&amp;offs);</pre>
+<pre>    if (iVar2 == -1) {</pre>
+<pre>      piVar3 = __errno_location();</pre>
+<pre>      iVar2 = *piVar3;</pre>
+<pre>      if (iVar2 != 0x7a) {</pre>
+<pre>        fprintf(stderr,"%s: error!: MEMGETBADBLOCK ioctl failed\n","libmtd");</pre>
+<pre>        pFVar7 = stderr;</pre>
+<pre>        pcVar4 = strerror(iVar2);</pre>
+<pre>        goto LAB_0040512c;</pre>
+<pre>      }</pre>
+<pre>      *piVar3 = 0;</pre>
+<pre>      *(uint *)&amp</span>td-&gt;field_0xf8 = *(uint *)&amp</span>td-&gt;field_0xf8 &amp; 0xfffffffd;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      *(uint *)&amp</span>td-&gt;field_0xf8 = *(uint *)&amp</span>td-&gt;field_0xf8 | 2;</pre>
+<pre>    }</pre>
+<pre>    mtd-&gt;type = (uint)ui.type;</pre>
+<pre>    *(__u32 *)&amp</span>td-&gt;size = ui.size;</pre>
+<pre>    *(undefined4 *)((int)&amp</span>td-&gt;size + 4) = 0;</pre>
+<pre>    mtd-&gt;eb_size = ui.erasesize;</pre>
+<pre>    mtd-&gt</span>in_io_size = ui.writesize;</pre>
+<pre>    mtd-&gt;oob_size = ui.oobsize;</pre>
+<pre>    if ((int)ui.writesize &lt; 1) {</pre>
+<pre>      fprintf(stderr,"%s: error!: mtd%d (%s) has insane min. I/O unit size %d\n","libmtd",</pre>
+<pre>              mtd-&gt</span>td_num,node,ui.writesize);</pre>
+<pre>      goto out_close;</pre>
+<pre>    }</pre>
+<pre>    if (((int)ui.erasesize &lt; 1) || ((int)ui.erasesize &lt; (int)ui.writesize)) {</pre>
+<pre>      fprintf(stderr,"%s: error!: mtd%d (%s) has insane eraseblock size %d\n","libmtd",mtd-&gt</span>td_num,</pre>
+<pre>              node,ui.erasesize);</pre>
+<pre>      goto out_close;</pre>
+<pre>    }</pre>
+<pre>    if ((ui.size == 0) || ((-1 &lt; (int)ui.erasesize &amp;&amp; (ui.size &lt; ui.erasesize)))) {</pre>
+<pre>      fprintf(stderr,"%s: error!: mtd%d (%s) has insane size %lld\n","libmtd",mtd-&gt</span>td_num,node);</pre>
+<pre>      goto out_close;</pre>
+<pre>    }</pre>
+<pre>    DVar8 = __divdi3(CONCAT44(in_stack_fffffe64,in_stack_fffffe60),</pre>
+<pre>                     CONCAT44(in_stack_fffffe6c,in_stack_fffffe68));</pre>
+<pre>    mtd-&gt;eb_cnt = (int)DVar8;</pre>
+<pre>    switch((uint)ui.type) {</pre>
+<pre>    case 0:</pre>
+<pre>      fprintf(stderr,"%s: error!: mtd%d (%s) is removable and is not present\n","libmtd",</pre>
+<pre>              mtd-&gt</span>td_num,node);</pre>
+<pre>    default:</pre>
+<pre>out_close:</pre>
+<pre>      close(iVar1);</pre>
+<pre>      return -1;</pre>
+<pre>    case 1:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x6d6172U &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x6d6172 &lt;&lt; uVar5 * 8;</pre>
+<pre>      break;</pre>
+<pre>    case 2:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x6d6f72U &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x6d6f72 &lt;&lt; uVar5 * 8;</pre>
+<pre>      break;</pre>
+<pre>    case 3:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x726f6eU &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x726f6e &lt;&lt; uVar5 * 8;</pre>
+<pre>      break;</pre>
+<pre>    case 4:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x646e616eU &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x646e616e &lt;&lt; uVar5 * 8;</pre>
+<pre>      mtd-&gt;type_str[4] = '\0';</pre>
+<pre>      break;</pre>
+<pre>    case 6:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x61746164U &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x61746164 &lt;&lt; uVar5 * 8;</pre>
+<pre>      *(undefined4 *)(mtd-&gt;type_str + 4) = 0x73616c66;</pre>
+<pre>      mtd-&gt;type_str[8] = 'h';</pre>
+<pre>      mtd-&gt;type_str[9] = '\0';</pre>
+<pre>      break;</pre>
+<pre>    case 7:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x696275U &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x696275 &lt;&lt; uVar5 * 8;</pre>
+<pre>      break;</pre>
+<pre>    case 8:</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + 3;</pre>
+<pre>      uVar5 = (uint)pcVar4 &amp; 3;</pre>
+<pre>      *(uint *)(pcVar4 + -uVar5) =</pre>
+<pre>           *(uint *)(pcVar4 + -uVar5) &amp; -1 &lt;&lt; (uVar5 + 1) * 8 | 0x2d636c6dU &gt;&gt; (3 - uVar5) * 8;</pre>
+<pre>      uVar5 = (uint)mtd-&gt;type_str &amp; 3;</pre>
+<pre>      pcVar4 = mtd-&gt;type_str + -uVar5;</pre>
+<pre>      *(uint *)pcVar4 = *(uint *)pcVar4 &amp; 0xffffffffU &gt;&gt; (4 - uVar5) * 8 | 0x2d636c6d &lt;&lt; uVar5 * 8;</pre>
+<pre>      *(undefined4 *)(mtd-&gt;type_str + 4) = 0x646e616e;</pre>
+<pre>      mtd-&gt;type_str[8] = '\0';</pre>
+<pre>    }</pre>
+<pre>    if ((ui.flags &amp; 0x400) != 0) {</pre>
+<pre>      *(uint *)&amp</span>td-&gt;field_0xf8 = *(uint *)&amp</span>td-&gt;field_0xf8 | 1;</pre>
+<pre>    }</pre>
+<pre>    mtd-&gt;subpage_size = mtd-&gt</span>in_io_size;</pre>
+<pre>    close(iVar1);</pre>
+<pre>    iVar1 = proc_parse_start(&amp;pi);</pre>
+<pre>    iVar2 = -1;</pre>
+<pre>    if (iVar1 == 0) {</pre>
+<pre>      do {</pre>
+<pre>        iVar1 = proc_parse_next(&amp;pi);</pre>
+<pre>        if (iVar1 == 0) {</pre>
+<pre>          fprintf(stderr,"%s: error!: mtd%d not found in \"%s\"\n","libmtd",mtd-&gt</span>td_num,"/proc/mtd"</pre>
+<pre>                 );</pre>
+<pre>          piVar3 = __errno_location();</pre>
+<pre>          *piVar3 = 2;</pre>
+<pre>          return -1;</pre>
+<pre>        }</pre>
+<pre>      } while (pi.mtd_num != mtd-&gt</span>td_num);</pre>
+<pre><span class="green"><span class="green">      strcpy(mtd-&gt;name,pi.name)</span></span></span></pre>
+<pre>      iVar2 = 0;</pre>
+<pre>    }</pre>
+<pre>    return iVar2;</pre>
+<pre>  }</pre>
+<pre>  piVar3 = __errno_location();</pre>
+<pre>  iVar2 = *piVar3;</pre>
+<pre>  fprintf(stderr,"%s: error!: MEMGETINFO ioctl request failed\n","libmtd");</pre>
+<pre>  pFVar7 = stderr;</pre>
+<pre>  pcVar4 = strerror(iVar2);</pre>
+<pre>LAB_0040512c:</pre>
+<pre>  fprintf(pFVar7,"%*serror %d (%s)\n",8,"",iVar2,pcVar4);</pre>
+<pre>  goto out_close;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] ee565e8ba07789ba</pre>

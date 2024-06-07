@@ -1,0 +1,24 @@
+<br />
+<pre>int mtd_dev_present(libmtd_t desc,int mtd_num)</pre>
+<br />
+<pre>{</pre>
+<pre>  size_t sVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  char *__s;</pre>
+<pre>  undefined *local_c0;</pre>
+<pre>  stat st;</pre>
+<pre>  </pre>
+<pre>  local_c0 = &amp;_gp;</pre>
+<pre>  if ((*(uint *)((int)desc + 0x30) &amp; 1) != 0) {</pre>
+<pre>    __s = *(char **)((int)desc + 4);</pre>
+<pre>    sVar1 = strlen(__s);</pre>
+<pre><span class="green">    iVar2 = (int)&amp;local_c0 - (sVar1 + 0x18 &amp; 0xfffffff8)</span></span></pre>
+<pre>    (**(code **)(local_c0 + -0x7ee4))(iVar2,__s,mtd_num);</pre>
+<pre>    iVar2 = (**(code **)(local_c0 + -0x7e5c))(iVar2,&amp;st);</pre>
+<pre>    return (uint)(iVar2 == 0);</pre>
+<pre>  }</pre>
+<pre>  iVar2 = legacy_dev_present(mtd_num);</pre>
+<pre>  return (uint)(iVar2 == 1);</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 8d3a5c89394fc3ea</pre>

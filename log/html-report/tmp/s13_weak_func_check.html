@@ -1,0 +1,281 @@
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold">Check binaries for weak functions (intense)</span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>This module identifies the usage of critical binary functions in firmware via </span><span class="orange">objdump</span>.</pre>
+<pre>Examples of binary functions are system, strcpy, printf and strcat. These functions are configured in the configuration</pre>
+<pre>file config/functions.cfg. The module counts the usages per binary. For strcpy functions it also counts strlen functions</pre>
+<pre>right before the strcpy function. Additionally it checks if the binary is a known Linux binary or unknown and probably</pre>
+<pre>a vendor binary.</pre>
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Vulnerable functions: fprintf mmap popen printf sprintf strcat strcpy system</pre>
+<br />
+<a class="reference" href="./s13_weak_func_check/vul_func_14_fprintf-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_14_fprintf-libreadline.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 14 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_fprintf-libhistory.so.5.2.html" title="./s13_weak_func_check/vul_func_1_fprintf-libhistory.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_5_sprintf-libreadline.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 5 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_sprintf-libhistory.so.5.2.html" title="./s13_weak_func_check/vul_func_2_sprintf-libhistory.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 2 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcat-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_2_strcat-libreadline.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcat </span>/ </span><span class="red">Function count: 2 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_30_strcpy-libhistory.so.5.2.html" title="./s13_weak_func_check/vul_func_30_strcpy-libhistory.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 30 </span>/ </span><span class="orange">strlen: 25 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_85_strcpy-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_85_strcpy-libreadline.so.5.2.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 85 </span>/ </span><span class="orange">strlen: 71 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_3_printf-mii_mgr.html" title="./s13_weak_func_check/vul_func_3_printf-mii_mgr.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/mii_mgr (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 3 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_51_printf-hw_nat.html" title="./s13_weak_func_check/vul_func_51_printf-hw_nat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/hw_nat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 51 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_4_fprintf-regs.html" title="./s13_weak_func_check/vul_func_4_fprintf-regs.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/regs (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 4 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_3_fprintf-mpstat.html" title="./s13_weak_func_check/vul_func_3_fprintf-mpstat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/mpstat (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 3 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-hw_nat.html" title="./s13_weak_func_check/vul_func_1_strcpy-hw_nat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/hw_nat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_mmap-regs.html" title="./s13_weak_func_check/vul_func_1_mmap-regs.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/regs (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">mmap </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">Correct error handling: 1 </span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_20_printf-mpstat.html" title="./s13_weak_func_check/vul_func_20_printf-mpstat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/mpstat (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 20 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_3_printf-regs.html" title="./s13_weak_func_check/vul_func_3_printf-regs.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/regs (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 3 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_fprintf-switch.html" title="./s13_weak_func_check/vul_func_1_fprintf-switch.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/switch (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcpy-mpstat.html" title="./s13_weak_func_check/vul_func_2_strcpy-mpstat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/mpstat (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 2 </span>/ </span><span class="orange">strlen: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_236_printf-switch.html" title="./s13_weak_func_check/vul_func_236_printf-switch.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/switch (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 236 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_sprintf-switch.html" title="./s13_weak_func_check/vul_func_1_sprintf-switch.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/switch (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-switch.html" title="./s13_weak_func_check/vul_func_1_strcpy-switch.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/switch (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_23_fprintf-iwpriv.html" title="./s13_weak_func_check/vul_func_23_fprintf-iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwpriv (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 23 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_system-switch.html" title="./s13_weak_func_check/vul_func_1_system-switch.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/bin/switch (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">system </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_17_printf-iwpriv.html" title="./s13_weak_func_check/vul_func_17_printf-iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwpriv (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 17 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwpriv.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwpriv (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 5 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_16_strcpy-iwpriv.html" title="./s13_weak_func_check/vul_func_16_strcpy-iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwpriv (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 16 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_28_fprintf-iwlist.html" title="./s13_weak_func_check/vul_func_28_fprintf-iwlist.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwlist (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 28 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_24_fprintf-iwconfig.html" title="./s13_weak_func_check/vul_func_24_fprintf-iwconfig.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwconfig (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 24 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_216_fprintf-ubiformat.html" title="./s13_weak_func_check/vul_func_216_fprintf-ubiformat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiformat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 216 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_56_fprintf-ubiattach.html" title="./s13_weak_func_check/vul_func_56_fprintf-ubiattach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiattach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 56 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_62_printf-iwlist.html" title="./s13_weak_func_check/vul_func_62_printf-iwlist.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwlist (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 62 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_33_printf-iwconfig.html" title="./s13_weak_func_check/vul_func_33_printf-iwconfig.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwconfig (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 33 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_45_printf-ubiformat.html" title="./s13_weak_func_check/vul_func_45_printf-ubiformat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiformat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 45 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_12_printf-ubiattach.html" title="./s13_weak_func_check/vul_func_12_printf-ubiattach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiattach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 12 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_106_fprintf-flash_erase.html" title="./s13_weak_func_check/vul_func_106_fprintf-flash_erase.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/flash_erase (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 106 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwlist.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwlist.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwlist (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 5 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_49_fprintf-ubidetach.html" title="./s13_weak_func_check/vul_func_49_fprintf-ubidetach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubidetach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 49 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_fprintf-rt2860apd.html" title="./s13_weak_func_check/vul_func_1_fprintf-rt2860apd.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/rt2860apd (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwconfig.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwconfig.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwconfig (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 5 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_63_fprintf-ubirmvol.html" title="./s13_weak_func_check/vul_func_63_fprintf-ubirmvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubirmvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 63 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubiformat.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubiformat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiformat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 9 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_4_sprintf-ubiattach.html" title="./s13_weak_func_check/vul_func_4_sprintf-ubiattach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiattach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 4 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_7_printf-flash_erase.html" title="./s13_weak_func_check/vul_func_7_printf-flash_erase.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/flash_erase (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 7 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_3_printf-ubidetach.html" title="./s13_weak_func_check/vul_func_3_printf-ubidetach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubidetach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 3 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_16_strcpy-iwlist.html" title="./s13_weak_func_check/vul_func_16_strcpy-iwlist.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwlist (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 16 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_372_printf-rt2860apd.html" title="./s13_weak_func_check/vul_func_372_printf-rt2860apd.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/rt2860apd (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 372 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_17_strcpy-iwconfig.html" title="./s13_weak_func_check/vul_func_17_strcpy-iwconfig.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /usr/sbin/iwconfig (-rwxrwxr-x root root)</span><span class="cyan"> - common linux file: yes - </span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 17 </span>/ </span><span class="orange">strlen: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-ubiformat.html" title="./s13_weak_func_check/vul_func_1_strcpy-ubiformat.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubiformat (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_3_printf-ubirmvol.html" title="./s13_weak_func_check/vul_func_3_printf-ubirmvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubirmvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 3 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_72_fprintf-ubimkvol.html" title="./s13_weak_func_check/vul_func_72_fprintf-ubimkvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubimkvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 72 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_sprintf-flash_erase.html" title="./s13_weak_func_check/vul_func_8_sprintf-flash_erase.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/flash_erase (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 8 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_sprintf-ubidetach.html" title="./s13_weak_func_check/vul_func_1_sprintf-ubidetach.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubidetach (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_sprintf-rt2860apd.html" title="./s13_weak_func_check/vul_func_8_sprintf-rt2860apd.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/rt2860apd (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 8 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubirmvol.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubirmvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubirmvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 9 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_11_printf-ubimkvol.html" title="./s13_weak_func_check/vul_func_11_printf-ubimkvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubimkvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 11 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_75_fprintf-ubinfo.html" title="./s13_weak_func_check/vul_func_75_fprintf-ubinfo.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubinfo (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 75 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-flash_erase.html" title="./s13_weak_func_check/vul_func_1_strcpy-flash_erase.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/flash_erase (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_25_fprintf-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_25_fprintf-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">fprintf </span>/ </span><span class="red">Function count: 25 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_strcpy-rt2860apd.html" title="./s13_weak_func_check/vul_func_8_strcpy-rt2860apd.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/rt2860apd (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 8 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubimkvol.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubimkvol.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubimkvol (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 9 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_33_printf-ubinfo.html" title="./s13_weak_func_check/vul_func_33_printf-ubinfo.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubinfo (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 33 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_popen-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_1_popen-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">popen </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_10_sprintf-ubinfo.html" title="./s13_weak_func_check/vul_func_10_sprintf-ubinfo.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ubinfo (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 10 </span>/ </span><span class="green">networking: no</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_15_printf-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_15_printf-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">printf </span>/ </span><span class="red">Function count: 15 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_5_sprintf-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">sprintf </span>/ </span><span class="red">Function count: 5 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcpy-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_2_strcpy-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">strcpy </span>/ </span><span class="red">Function count: 2 </span>/ </span><span class="orange">strlen: 0 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_system-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_1_system-ated_iwpriv.html" ><pre>[</span><span class="green">+</span>]</span><span class="green"> /sbin/ated_iwpriv (-rwxrwxr-x root root)</span><span class="red"> - common linux file: no -</span> Vulnerable function: </span><span class="cyan">system </span>/ </span><span class="red">Function count: 1 </span>/ </span><span class="orange">networking: yes</span></span></span></pre></a>
+
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="top10legacycfunctionsobjdumpdisasmmode">Top 10 legacy C functions - Objdump disasm mode</a></span></pre>
+<pre><hr class="mono" /></pre>
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> fprintf - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_216_fprintf-ubiformat.html" title="./s13_weak_func_check/vul_func_216_fprintf-ubiformat.html" ><pre></span><span class="orange">	216   : ubiformat       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_106_fprintf-flash_erase.html" title="./s13_weak_func_check/vul_func_106_fprintf-flash_erase.html" ><pre></span><span class="orange">	106   : flash_erase     : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_75_fprintf-ubinfo.html" title="./s13_weak_func_check/vul_func_75_fprintf-ubinfo.html" ><pre></span><span class="orange">	75    : ubinfo          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_72_fprintf-ubimkvol.html" title="./s13_weak_func_check/vul_func_72_fprintf-ubimkvol.html" ><pre></span><span class="orange">	72    : ubimkvol        : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_63_fprintf-ubirmvol.html" title="./s13_weak_func_check/vul_func_63_fprintf-ubirmvol.html" ><pre></span><span class="orange">	63    : ubirmvol        : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_56_fprintf-ubiattach.html" title="./s13_weak_func_check/vul_func_56_fprintf-ubiattach.html" ><pre></span><span class="orange">	56    : ubiattach       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_49_fprintf-ubidetach.html" title="./s13_weak_func_check/vul_func_49_fprintf-ubidetach.html" ><pre></span><span class="orange">	49    : ubidetach       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_28_fprintf-iwlist.html" title="./s13_weak_func_check/vul_func_28_fprintf-iwlist.html" ><pre></span><span class="green">	28    : iwlist          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_25_fprintf-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_25_fprintf-ated_iwpriv.html" ><pre></span><span class="orange">	25    : ated_iwpriv     : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_24_fprintf-iwconfig.html" title="./s13_weak_func_check/vul_func_24_fprintf-iwconfig.html" ><pre></span><span class="green">	24    : iwconfig        : common linux file: yes</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> mmap - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_1_mmap-regs.html" title="./s13_weak_func_check/vul_func_1_mmap-regs.html" ><pre></span><span class="orange">	1     : regs            : common linux file: no</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> popen - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_1_popen-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_1_popen-ated_iwpriv.html" ><pre></span><span class="orange">	1     : ated_iwpriv     : common linux file: no</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> printf - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_372_printf-rt2860apd.html" title="./s13_weak_func_check/vul_func_372_printf-rt2860apd.html" ><pre></span><span class="orange">	372   : rt2860apd       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_236_printf-switch.html" title="./s13_weak_func_check/vul_func_236_printf-switch.html" ><pre></span><span class="orange">	236   : switch          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_62_printf-iwlist.html" title="./s13_weak_func_check/vul_func_62_printf-iwlist.html" ><pre></span><span class="green">	62    : iwlist          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_51_printf-hw_nat.html" title="./s13_weak_func_check/vul_func_51_printf-hw_nat.html" ><pre></span><span class="orange">	51    : hw_nat          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_45_printf-ubiformat.html" title="./s13_weak_func_check/vul_func_45_printf-ubiformat.html" ><pre></span><span class="orange">	45    : ubiformat       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_33_printf-ubinfo.html" title="./s13_weak_func_check/vul_func_33_printf-ubinfo.html" ><pre></span><span class="orange">	33    : ubinfo          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_33_printf-iwconfig.html" title="./s13_weak_func_check/vul_func_33_printf-iwconfig.html" ><pre></span><span class="green">	33    : iwconfig        : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_20_printf-mpstat.html" title="./s13_weak_func_check/vul_func_20_printf-mpstat.html" ><pre></span><span class="green">	20    : mpstat          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_17_printf-iwpriv.html" title="./s13_weak_func_check/vul_func_17_printf-iwpriv.html" ><pre></span><span class="green">	17    : iwpriv          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_15_printf-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_15_printf-ated_iwpriv.html" ><pre></span><span class="orange">	15    : ated_iwpriv     : common linux file: no</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> sprintf - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_10_sprintf-ubinfo.html" title="./s13_weak_func_check/vul_func_10_sprintf-ubinfo.html" ><pre></span><span class="orange">	10    : ubinfo          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubirmvol.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubirmvol.html" ><pre></span><span class="orange">	9     : ubirmvol        : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubimkvol.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubimkvol.html" ><pre></span><span class="orange">	9     : ubimkvol        : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_9_sprintf-ubiformat.html" title="./s13_weak_func_check/vul_func_9_sprintf-ubiformat.html" ><pre></span><span class="orange">	9     : ubiformat       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_sprintf-rt2860apd.html" title="./s13_weak_func_check/vul_func_8_sprintf-rt2860apd.html" ><pre></span><span class="orange">	8     : rt2860apd       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_sprintf-flash_erase.html" title="./s13_weak_func_check/vul_func_8_sprintf-flash_erase.html" ><pre></span><span class="orange">	8     : flash_erase     : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_5_sprintf-libreadline.so.5.2.html" ><pre></span><span class="green">	5     : libreadline.so. : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwpriv.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwpriv.html" ><pre></span><span class="green">	5     : iwpriv          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwlist.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwlist.html" ><pre></span><span class="green">	5     : iwlist          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_5_sprintf-iwconfig.html" title="./s13_weak_func_check/vul_func_5_sprintf-iwconfig.html" ><pre></span><span class="green">	5     : iwconfig        : common linux file: yes</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> strcat - top 10 results:</span></pre>
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcat-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_2_strcat-libreadline.so.5.2.html" ><pre></span><span class="green">	2     : libreadline.so. : common linux file: yes</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> strcpy - top 10 results:</span></pre>
+<a class="anc" id="anchor_strcpysummary"></a>
+<a class="reference" href="./s13_weak_func_check/vul_func_85_strcpy-libreadline.so.5.2.html" title="./s13_weak_func_check/vul_func_85_strcpy-libreadline.so.5.2.html" ><pre></span><span class="green">	85    : libreadline.so. : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_30_strcpy-libhistory.so.5.2.html" title="./s13_weak_func_check/vul_func_30_strcpy-libhistory.so.5.2.html" ><pre></span><span class="green">	30    : libhistory.so.5 : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_17_strcpy-iwconfig.html" title="./s13_weak_func_check/vul_func_17_strcpy-iwconfig.html" ><pre></span><span class="green">	17    : iwconfig        : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_16_strcpy-iwpriv.html" title="./s13_weak_func_check/vul_func_16_strcpy-iwpriv.html" ><pre></span><span class="green">	16    : iwpriv          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_16_strcpy-iwlist.html" title="./s13_weak_func_check/vul_func_16_strcpy-iwlist.html" ><pre></span><span class="green">	16    : iwlist          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_8_strcpy-rt2860apd.html" title="./s13_weak_func_check/vul_func_8_strcpy-rt2860apd.html" ><pre></span><span class="orange">	8     : rt2860apd       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcpy-mpstat.html" title="./s13_weak_func_check/vul_func_2_strcpy-mpstat.html" ><pre></span><span class="green">	2     : mpstat          : common linux file: yes</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_2_strcpy-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_2_strcpy-ated_iwpriv.html" ><pre></span><span class="orange">	2     : ated_iwpriv     : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-ubiformat.html" title="./s13_weak_func_check/vul_func_1_strcpy-ubiformat.html" ><pre></span><span class="orange">	1     : ubiformat       : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_strcpy-switch.html" title="./s13_weak_func_check/vul_func_1_strcpy-switch.html" ><pre></span><span class="orange">	1     : switch          : common linux file: no</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> system - top 10 results:</span></pre>
+<a class="anc" id="anchor_systemsummary"></a>
+<a class="reference" href="./s13_weak_func_check/vul_func_1_system-switch.html" title="./s13_weak_func_check/vul_func_1_system-switch.html" ><pre></span><span class="orange">	1     : switch          : common linux file: no</span></pre></a>
+
+<a class="reference" href="./s13_weak_func_check/vul_func_1_system-ated_iwpriv.html" title="./s13_weak_func_check/vul_func_1_system-ated_iwpriv.html" ><pre></span><span class="orange">	1     : ated_iwpriv     : common linux file: no</span></pre></a>
+
+<br />
+<br />
+<br />
+<br />

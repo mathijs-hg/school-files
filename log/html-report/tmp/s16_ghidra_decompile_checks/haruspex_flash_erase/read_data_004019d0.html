@@ -1,0 +1,59 @@
+<br />
+<pre>int read_data(char *file,void *buf,int buf_len)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *pFVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  ssize_t sVar3;</pre>
+<pre>  ssize_t sVar4;</pre>
+<pre>  int *piVar5;</pre>
+<pre>  char *pcVar6;</pre>
+<pre>  int __errnum;</pre>
+<pre>  int tmp;</pre>
+<pre>  </pre>
+<pre><span class="green">  iVar2 = open64(file,0x80000)</span></span></pre>
+<pre>  if (iVar2 == -1) {</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre><span class="green"><span class="green">  sVar3 = read(iVar2,buf,buf_len)</span></span></span></pre>
+<pre>  if (sVar3 == -1) {</pre>
+<pre>LAB_00401bd8:</pre>
+<pre>    piVar5 = __errno_location();</pre>
+<pre>    __errnum = *piVar5;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot read \"%s\"\n","libmtd",file);</pre>
+<pre>    pFVar1 = stderr;</pre>
+<pre>    pcVar6 = strerror(__errnum);</pre>
+<pre>    fprintf(pFVar1,"%*serror %d (%s)\n",8,"",__errnum,pcVar6);</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    if (sVar3 == buf_len) {</pre>
+<pre>      fprintf(stderr,"%s: error!: contents of \"%s\" is too long\n","libmtd",file);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      *(undefined *)((int)buf + sVar3) = 0;</pre>
+<pre><span class="green"><span class="green">      sVar4 = read(iVar2,&amp;tmp,1)</span></span></span></pre>
+<pre>      if (sVar4 == 1) goto LAB_00401bd8;</pre>
+<pre>      if (sVar4 == 0) {</pre>
+<pre>        iVar2 = close(iVar2);</pre>
+<pre>        if (iVar2 == 0) {</pre>
+<pre>          return sVar3;</pre>
+<pre>        }</pre>
+<pre>        piVar5 = __errno_location();</pre>
+<pre>        iVar2 = *piVar5;</pre>
+<pre>        fprintf(stderr,"%s: error!: close failed on \"%s\"\n","libmtd",file);</pre>
+<pre>        pFVar1 = stderr;</pre>
+<pre>        pcVar6 = strerror(iVar2);</pre>
+<pre>        fprintf(pFVar1,"%*serror %d (%s)\n",8,"",iVar2,pcVar6);</pre>
+<pre>        return -1;</pre>
+<pre>      }</pre>
+<pre>      fprintf(stderr,"%s: error!: file \"%s\" contains too much data (&gt; %d bytes)\n","libmtd",file,</pre>
+<pre>              buf_len);</pre>
+<pre>    }</pre>
+<pre>    piVar5 = __errno_location();</pre>
+<pre>    *piVar5 = 0x16;</pre>
+<pre>  }</pre>
+<pre>  close(iVar2);</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 982227af59127483</pre>

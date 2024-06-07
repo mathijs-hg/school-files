@@ -1,0 +1,56 @@
+<br />
+<pre>int proc_parse_next(proc_parse_info *pi)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  void *pvVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  size_t __n;</pre>
+<pre>  void *__s;</pre>
+<pre>  char *pcVar4;</pre>
+<pre>  </pre>
+<pre>  iVar3 = (int)pi-&gt;next - (int)pi-&gt;buf;</pre>
+<pre>  if (pi-&gt;data_size &lt;= iVar3) {</pre>
+<pre>    free(pi-&gt;buf);</pre>
+<pre>    return 0;</pre>
+<pre>  }</pre>
+<pre><span class="green">  iVar1 = sscanf(pi-&gt;next,"mtd%d: %llx %x",pi,&amp;pi-&gt;size,&amp;pi-&gt;eb_size)</span></span></pre>
+<pre>  if (iVar1 != 3) {</pre>
+<pre>    fprintf(stderr,"%s: error!: \"%s\" pattern not found\n","libmtd","mtd%d: %llx %x");</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = pi-&gt;data_size;</pre>
+<pre>  pvVar2 = memchr(pi-&gt;next,0x22,iVar1 - iVar3);</pre>
+<pre>  __s = (void *)((int)pvVar2 + 1);</pre>
+<pre>  if (pvVar2 != (void *)0x0) {</pre>
+<pre>    pcVar4 = pi-&gt;buf;</pre>
+<pre>    iVar3 = (int)__s - (int)pcVar4;</pre>
+<pre>    if (iVar3 &lt; iVar1) {</pre>
+<pre>      pvVar2 = memchr(__s,0x22,iVar1 - iVar3);</pre>
+<pre>      if ((pvVar2 == (void *)0x0) ||</pre>
+<pre><span class="green">         (__n = (int)pvVar2 - (int)__s, iVar1 &lt;= (int)pvVar2 - (int)pcVar4)) {</span></pre>
+<pre>        pcVar4 = "%s: error!: closing \" not found\n";</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if (0x7f &lt; (int)__n) {</pre>
+<pre>          fprintf(stderr,"%s: error!: too long mtd%d device name\n","libmtd",pi-&gt</span>td_num);</pre>
+<pre>          return -1;</pre>
+<pre>        }</pre>
+<pre><span class="green">        memcpy(pi-&gt;name,__s,__n)</span></span></pre>
+<pre>        *(undefined *)((int)pi + __n + 0x10) = 0;</pre>
+<pre>        if (*(char *)((int)pvVar2 + 1) == '\n') {</pre>
+<pre>          pi-&gt;next = (char *)((int)pvVar2 + 2);</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        pcVar4 = "%s: error!: opening \"\n\" not found\n";</pre>
+<pre>      }</pre>
+<pre>      goto LAB_00404944;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  pcVar4 = "%s: error!: opening \" not found\n";</pre>
+<pre>LAB_00404944:</pre>
+<pre>  fprintf(stderr,pcVar4,"libmtd");</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] f0fb9d00550e4598</pre>

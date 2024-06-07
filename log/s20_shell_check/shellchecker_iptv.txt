@@ -1,0 +1,237 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 4:[0m
+[0mSTART=83[0m
+[33m^---^ SC2034 (warning): START appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 5:[0m
+[0mSTOP=83[0m
+[33m^--^ SC2034 (warning): STOP appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 6:[0m
+[0mUSE_PROCD=1[0m
+[33m^-------^ SC2034 (warning): USE_PROCD appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 10:[0m
+[0m. /lib/iptv/iptv.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/iptv/iptv.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 11:[0m
+[0mlocal device_id=$(getfirm DEV_ID)[0m
+[33m^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^---------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 12:[0m
+[0mlocal role=$(uci get bind_device_list."$device_id".role 2>/dev/null)[0m
+[33m^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m           ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 13:[0m
+[0mlocal port_count=0[0m
+[33m^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 25:[0m
+[0m    local cfg=$1[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local cfg="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 29:[0m
+[0m    if [ "$port_enable" = "1" ] && [ "$port_idx" != "-1" ]; then[0m
+[33m          ^----------^ SC2154 (warning): port_enable is referenced but not assigned.[0m
+[33m                                      ^-------^ SC2154 (warning): port_idx is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 36:[0m
+[0m    local portlist [0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------^ SC2034 (warning): portlist appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 41:[0m
+[0m    if [  "$role" = "AP" ] && [ "$iptv_enable" = "1" -o "$iptv_type" = "bridge" ]; then[0m
+[33m                                                     ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 42:[0m
+[0m	port_count = 0[0m
+[31m                   ^-- SC2283 (error): Remove spaces around = to assign (or use [ ] to compare, or quote '=' if literal).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 102:[0m
+[0m    local iptv_enable=$1[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local iptv_enable="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 103:[0m
+[0m    local iptv_type=$2[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local iptv_type="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 116:[0m
+[0m    local old_guest_eth_enable[0m
+[33m    ^------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 117:[0m
+[0m    local br=$(brctl show | grep br-iptv)[0m
+[33m    ^------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-- SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m             ^--------------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 118:[0m
+[0m    local sysmode[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 119:[0m
+[0m    local iptv_port[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 142:[0m
+[0m    local eth_num eth_num_seq[0m
+[33m    ^-----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 143:[0m
+[0m    local port_mask[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 144:[0m
+[0m    local iptv_port_count=0[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 166:[0m
+[0m        if [ "$iptv_enable" == 1 ] || [ "$iptv_type" == "bridge" ]; then[0m
+[33m                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 176:[0m
+[0m            if [ "$iptv_enable" == 1 ]; then[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 177:[0m
+[0m                setup_iptv "$iptv_vid" "$iptv_prio" "normal" "ap_mode" "$iptv_port"[0m
+[33m                            ^-------^ SC2154 (warning): iptv_vid is referenced but not assigned.[0m
+[33m                                        ^--------^ SC2154 (warning): iptv_prio is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 178:[0m
+[0m            elif [ "$iptv_type" == "bridge" ]; then[0m
+[33m                                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 183:[0m
+[0m            if [ "$iptv_port" == "other" ] && [ "$old_guest_eth_enable" = "0" ]; then[0m
+[33m                              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 186:[0m
+[0m                uci_toggle_state wifi guest iptv_port $iptv_port[0m
+[32m                                                      ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                uci_toggle_state wifi guest iptv_port "$iptv_port"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 194:[0m
+[0m            if [ "$old_guest_eth_enable" = "0" ] || [ "$old_guest_iptv_ports" != "other" ]  ; then[0m
+[33m                                                       ^-------------------^ SC2154 (warning): old_guest_iptv_ports is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 207:[0m
+[0m            if [ $iptv_port_count -eq $eth_num ] && [ "$old_guest_eth_enable" = "1" ]; then[0m
+[32m                                      ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            if [ $iptv_port_count -eq "$eth_num" ] && [ "$old_guest_eth_enable" = "1" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 216:[0m
+[0m            if [ $iptv_port_count -ne $eth_num ] && [ "$old_guest_eth_enable" = "0" -o  "$old_guest_iptv_ports" != "$iptv_port" ]; then[0m
+[32m                                      ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                                                                    ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+[1mDid you mean: [0m
+            if [ $iptv_port_count -ne "$eth_num" ] && [ "$old_guest_eth_enable" = "0" -o  "$old_guest_iptv_ports" != "$iptv_port" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 219:[0m
+[0m                uci_toggle_state wifi guest iptv_port $iptv_port[0m
+[32m                                                      ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                uci_toggle_state wifi guest iptv_port "$iptv_port"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 232:[0m
+[0m    local old_iptv_id=`cat /tmp/apsd.json | grep iptv_vlan_id | tr -cd "[0-9]"`[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                      ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                           ^------------^ SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+[32m                                                                       ^-----^ SC2021 (info): Don't use [] around classes in tr, it replaces literal square brackets.[0m
+
+[1mDid you mean: [0m
+    local old_iptv_id=$(cat /tmp/apsd.json | grep iptv_vlan_id | tr -cd "[0-9]")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 233:[0m
+[0m    local old_iptv_backhaul_id=`cat /tmp/apsd.json | grep iptv_vlan_backhaul_id | tr -cd "[0-9]"`[0m
+[33m    ^------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                               ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                    ^------------^ SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+[32m                                                                                         ^-----^ SC2021 (info): Don't use [] around classes in tr, it replaces literal square brackets.[0m
+
+[1mDid you mean: [0m
+    local old_iptv_backhaul_id=$(cat /tmp/apsd.json | grep iptv_vlan_backhaul_id | tr -cd "[0-9]")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 234:[0m
+[0m    local is_br_wan_exist=$(grep "br-wan" /tmp/apsd.json)[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                          ^-----------------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/iptv line 235:[0m
+[0m    if [ "$old_iptv_id" != "$iptv_vid" ] || [ "$old_iptv_backhaul_id" != "$iptv_backhaul_vid" ] || [ "$iptv_type" = "bridge" -a -z $is_br_wan_exist ]; then[0m
+[33m                                                                          ^----------------^ SC2154 (warning): iptv_backhaul_vid is referenced but not assigned.[0m
+[33m                                                                                                                             ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[32m                                                                                                                                   ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    if [ "$old_iptv_id" != "$iptv_vid" ] || [ "$old_iptv_backhaul_id" != "$iptv_backhaul_vid" ] || [ "$iptv_type" = "bridge" -a -z "$is_br_wan_exist" ]; then
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2283 -- Remove spaces around = to assign ...
+  https://www.shellcheck.net/wiki/SC2034 -- START appears unused. Verify use ...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...

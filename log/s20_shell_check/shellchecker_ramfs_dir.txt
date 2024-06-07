@@ -1,0 +1,52 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 3:[0m
+[0mfor dir in $@[0m
+[31m           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 5:[0m
+[0m    tmp_dir=/tmp/`basename ${dir}`_tmp[0m
+[32m                 ^---------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                           ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    tmp_dir=/tmp/$(basename "${dir}")_tmp
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 6:[0m
+[0m    cp -a ${dir} ${tmp_dir}[0m
+[32m          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                 ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    cp -a "${dir}" "${tmp_dir}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 7:[0m
+[0m    mount -t ramfs -n none ${dir}[0m
+[32m                           ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    mount -t ramfs -n none "${dir}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 8:[0m
+[0m    cp -a ${tmp_dir}/* ${dir}[0m
+[32m          ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                       ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    cp -a "${tmp_dir}"/* "${dir}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/ramfs_dir line 9:[0m
+[0m    rm -rf ${tmp_dir} [0m
+[32m           ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    rm -rf "${tmp_dir}" 
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2068 -- Double quote array expansions to ...
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
+  https://www.shellcheck.net/wiki/SC2006 -- Use $(...) notation instead of le...

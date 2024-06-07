@@ -1,0 +1,32 @@
+<br />
+<pre>int read_major(char *file,int *major,int *minor)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  int iVar1;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  char buf [50];</pre>
+<pre>  </pre>
+<pre>  iVar1 = read_data(file,buf,0x32);</pre>
+<pre>  if (-1 &lt; iVar1) {</pre>
+<pre><span class="green">    iVar1 = sscanf(buf,"%d:%d\n",major,minor)</span></span></pre>
+<pre>    if (iVar1 == 2) {</pre>
+<pre>      if ((*major &lt; 0) || (iVar1 = 0, *minor &lt; 0)) {</pre>
+<pre>        piVar2 = __errno_location();</pre>
+<pre>        *piVar2 = 0x16;</pre>
+<pre>        fprintf(stderr,"%s: error!: bad major:minor %d:%d in \"%s\"\n","libubi",*major,*minor,file);</pre>
+<pre>        iVar1 = -1;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      piVar2 = __errno_location();</pre>
+<pre>      __stream = stderr;</pre>
+<pre>      *piVar2 = 0x16;</pre>
+<pre>      fprintf(__stream,"%s: error!: \"%s\" does not have major:minor format\n","libubi",file);</pre>
+<pre>      iVar1 = -1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return iVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 54b65c3c3ad22827</pre>

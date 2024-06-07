@@ -1,0 +1,24 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/tsched.d/reboot_schedule line 4:[0m
+[0m. /lib/functions.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/tsched.d/reboot_schedule line 29:[0m
+[0m        eval $cmd_notify_re[0m
+[32m             ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        eval "$cmd_notify_re"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/tsched.d/reboot_schedule line 31:[0m
+[0m        eval $cmd_save_tmp_config[0m
+[32m             ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        eval "$cmd_save_tmp_config"
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: /lib/functions.sh ...
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...

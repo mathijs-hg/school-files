@@ -1,0 +1,40 @@
+[[0;33m*[0m] Binary protection state of [0;33mubiformat[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mubiformat[0m
+
+  40aff4:	10400005 	beqz	v0,40b00c <legacy_get_dev_info+0x358>
+  40aff8:	00000000 	nop
+  40affc:	8e0200f8 	lw	v0,248(s0)
+  40b000:	00000000 	nop
+  40b004:	34420001 	ori	v0,v0,0x1
+  40b008:	ae0200f8 	sw	v0,248(s0)
+  40b00c:	8e0200e8 	lw	v0,232(s0)
+  40b010:	8f9980f0 	lw	t9,-32528(gp)
+  40b014:	02202021 	move	a0,s1
+  40b018:	0320f809 	jalr	t9
+  40b01c:	ae0200ec 	sw	v0,236(s0)
+  40b020:	0c1029c7 	jal	40a71c <proc_parse_start>
+  40b024:	27a40050 	addiu	a0,sp,80
+  40b028:	1440ff97 	bnez	v0,40ae88 <legacy_get_dev_info+0x1d4>
+  40b02c:	2403ffff 	li	v1,-1
+  40b030:	0c102a67 	jal	40a99c <proc_parse_next>
+  40b034:	27a40050 	addiu	a0,sp,80
+  40b038:	8fbc0020 	lw	gp,32(sp)
+  40b03c:	10400049 	beqz	v0,40b164 <legacy_get_dev_info+0x4b0>
+  40b040:	3c050041 	lui	a1,0x41
+  40b044:	8e020000 	lw	v0,0(s0)
+  40b048:	8fa30050 	lw	v1,80(sp)
+  40b04c:	00000000 	nop
+  40b050:	1462fff7 	bne	v1,v0,40b030 <legacy_get_dev_info+0x37c>
+  40b054:	26040051 	addiu	a0,s0,81
+[31m  40b058:	8f9981b8 	lw	t9,strcpy[0m
+  40b05c:	00000000 	nop
+  40b060:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m1[0m times [0;33mubiformat[0m
+

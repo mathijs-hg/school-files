@@ -1,0 +1,30 @@
+<br />
+<pre>undefined4 iw_print_version_info(int param_1)</pre>
+<br />
+<pre>{</pre>
+<pre>  int __fd;</pre>
+<pre>  undefined4 uVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  </pre>
+<pre><span class="green">  __fd = iw_sockets_open()</span></span></pre>
+<pre>  if (__fd &lt; 0) {</pre>
+<pre>    perror("socket");</pre>
+<pre>    uVar1 = 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    if (param_1 != 0) {</pre>
+<pre>      printf("%-8.16s  Wireless-Tools version %d\n",param_1,0x1d);</pre>
+<pre>    }</pre>
+<pre>    printf("          Compatible with Wireless Extension v11 to v%d.\n\n",0x16);</pre>
+<pre>    iVar2 = iw_get_kernel_we_version();</pre>
+<pre>    if (0xf &lt; iVar2) {</pre>
+<pre>      printf("Kernel    Currently compiled with Wireless Extension v%d.\n\n",iVar2);</pre>
+<pre>    }</pre>
+<pre>    iw_enum_devices(__fd,print_iface_version_info,0,0);</pre>
+<pre>    close(__fd);</pre>
+<pre>    uVar1 = 0;</pre>
+<pre>  }</pre>
+<pre>  return uVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] e1bb710984c9f354</pre>

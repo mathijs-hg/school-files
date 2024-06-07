@@ -1,0 +1,386 @@
+/lib/ld-uClibc.so.0
+_fini
+__uClibc_main
+__deregister_frame_info
+__register_frame_info
+_Jv_RegisterClasses
+mdInit
+evloopRunPrepare
+evloopOnce
+evloopIsAbort
+mcsS
+Dbgf
+exit
+strcmp
+interface_init
+signal
+dbgInit1
+dbgModuleFind
+daemon
+perror
+profileInit
+mcManagerInit
+dbgServiceInit
+cshInit
+pluginManagerInit
+mdDoListenInitCB
+libhyficommon.so
+_DYNAMIC_LINKING
+__RLD_MAP
+_GLOBAL_OFFSET_TABLE_
+libpthread.so.0
+cmdWordEq
+cmdWordNext
+cmdWordCopy
+cmdf
+stderr
+fprintf
+fflush
+malloc
+evloopTimeoutRegister
+memcpy
+__divdi3
+__moddi3
+gettimeofday
+free
+memset
+cmdMainMenuAdd
+evloopTimeoutCreate
+cmdMenu
+cmdHelpShort
+cmdHelpShortHelp
+cmdHelpLong
+cmdHelpLongHelp
+cmdQuit
+cmdQuitHelp
+atoi
+sprintf
+profileS
+configstring
+strlcpy
+strchr
+splitByToken
+strncmp
+fopen
+fgets
+fclose
+strtok_r
+strtoul
+profileGetOpts_bySubIdx
+if_nametoindex
+__ctype_b
+strdup
+fgetc
+__fgetc_unlocked
+__ctype_toupper
+snprintf
+bufrdDestroy
+socket
+fcntl
+getpid
+bind
+bufrdCreate
+bufrdConsume
+interface_getBridge
+interface_getFirst
+interface_getNext
+interface_getInterfaceFromSystemIndex
+memcmp
+bridgeAllocTableBuf
+bridgeTableAction
+bridgeFreeTableBuf
+interface_getBridge_byName
+bridgeSetEventInfo
+mdListenInitCBRegister
+strcasecmp
+mdCreateEvent
+dbgServiceS
+poll
+sendto
+recvfrom
+libc.so.0
+_ftext
+_fdata
+_edata
+__bss_start
+_fbss
+_end
+<! @
+<! @
+Q&! `
+'!(`
+B$@C
+B$! 
+$& D
+0&!(
+B$! 
+q&!0
+$!(@
+$!(@
+c$! `
+B$! 
+D&!(
+<!8@
+<!0@
+<! @
+<!0@
+<!0@
+'! @
+4! @
+<!  
+'! @
+4! @
+<!  
+$& D
+1&! 
+$!(%
+$!(%
+1&! 
+'!  
+1&! 
+$! D
+$! D
+s&! D
+'!  
+&! @
+<! @
+&!(@
+'!(@
+'!(@
+'!(@
+'!0@
+$!  
+$&!(`
+'Usage: mcsd [-d] [-C conf-file]
+       -d: Do NOT fork into the background: run in debug mode.
+       -C: Specify configuration file.
+INVALID ARG: %s
+mcsd
+Entering main of mcsd executive program
+daemon
+Entering evloopRun
+Leaving mcsd executive program
+MCSD
+MCSD_DBG_LEVELS
+plugin
+Initializing plugin manager
+Invalid queue threshold value
+Invalid queue dispatch once number
+Not supported option:%s
+QueueThreshold = %d QueueDispatchOnce = %d
+QueueThreshold=%d, QueueDispatchOnce=%d
+%s:%d: Assertion error in function '%s' for condition '%s': Invalid parameters: ModuleID %d, CB %p
+module.c
+!(ModuleID >= mdModuleID_MaxNum || !CB)
+Enter %s
+%s:%d: Assertion error in function '%s' for condition '%s': Invalid parameters: Priority %d, ModuleID %d
+!(Priority >= mdEventPriority_MaxNum || ModuleID >= mdModuleID_MaxNum)
+%s:%d: Assertion error in function '%s' for condition '%s': Memory allocation failure
+Event
+Event->Data
+%s: Priority=%d, QueueLen=%d
+%s: Invalid event id!
+%s: There is no listeners on event %d
+%s: Dispatch event %d from module %d
+%s:%d: Assertion error in function '%s' for condition '%s': Event is NULL
+*Event
+mdS.EventDispatchTimer
+mdInit Done.
+%s:%d: Assertion error in function '%s' for condition '%s': Invalid parameters: ModuleID %d, EventCB %p
+!(ModuleID >= mdModuleID_MaxNum || !EventCB)
+%s:%d: Assertion error in function '%s' for condition '%s': Event table is not registered yet!
+ModuleTable->EventNum && ModuleTable->EventNum > EventID
+ListenNode
+%s:%d: Assertion error in function '%s' for condition '%s': Invalid parameters: ModuleID %d, EventNum %d
+!(ModuleID >= mdModuleID_MaxNum || !EventNum || EventNum > 256)
+%s: Event table is already registered.
+ModuleTable->EventTable
+p -- Print all parameters
+s -- set md queue limit parameters
+Usage: s [-l QueueLimitLength] [-d DispatchOnceNumber]
+help
+md -- core module menu
+mdListenInitCBRegister
+mdEventTableRegister
+mdEventTableRegister
+mdCreateEvent
+mdCreateEvent
+mdListenTableRegister
+mdListenTableRegister
+mdGetEvent
+mdEventDispatch
+mdEventDestroy
+mdEventDestroy
+%s:%d: Assertion error in function '%s' for condition '%s': Invalid parameters: ModuleID %d, Element %p
+profile.c
+!(ModuleID >= mdModuleID_MaxNum || !Element)
+%s_%u
+profile
+%s: File %s
+MAIN
+INTERFACE
+PLUGIN
+profileGetOpts
+profileGetOpts_bySubIdx
+profileInit
+UNKNOWN
+WLAN2G
+mcif
+BridgeName
+%s: Please specify the interface name of the bridge.
+%s: BridgeName = %s
+ManagedInterfacesList
+%s: ManagedInterfacesList = %s
+%s: No interfaces specified!
+%s: Invalid interface type specified devFile ManagedInterfacesList: %s
+%s: Invalid format devFile ManagedInterfacesList. Should be if:type,if:type,...
+/proc/net/dev
+WLAN5G
+ETHER
+MOCA
+BRIDGE
+WLAN
+WLAN_VLAN
+ESWITCH
+interface_init
+Nonblock Listed Sources
+Block Listed Sources
+%03d.%03d.%03d.%03d
+%04x:%04x:%04x:%04x:%04x:%04x:%04x:%04x
+	%-6d%-42s
+Node %d of %d:%02x:%02x:%02x:%02x:%02x:%02x
+	                                                Node %d of %d:%02x:%02x:%02x:%02x:%02x:%02x
+	                                                 --Source Mode:%s
+	                                                 --Num of Sources:%d
+	                                                  `--Source %d of %d:%s
+	                                                  |--Source %d of %d:%s
+------------------------Interface Forwarding Table for %s-------------------------
+Interface %-10s forwarding table is empty
+Interface %-10ss forwarding table contains %d entries
+	Index IGMP-Group                                Listen-Node-MAC-List
+	Index MLD-Group                                 Listen-Node-MAC-List
+--Num of QCA device:%d
+	                                                --QCA device MAC %d of %d:%02x:%02x:%02x:%02x:%02x:%02x
+	                                                    --Num of Non blocked sources:%d
+	                                                     `--Non blocked sources %d of %d:%s
+	                                                     |--Non blocked sources %d of %d:%s
+	                                                    --Num of blocked sources:0
+	                                                    --Num of blocked sources:%d
+	                                                     `--Blocked sources %d of %d:%s
+	                                                     |--Blocked sources %d of %d:%s
+---------------------------Multicast Encapsulation Table-----------------------------
+Encap table is empty!
+Encap table contains %d entries
+	Index IGMP-Group                                QCA-DEV-LIST
+	Index MLD-Group                                 QCA-DEV-LIST
+	                                                %s
+----------------------------Multicast Flood Table for bridge %s----------------------------
+Flood table is empty!
+Flood table contains %d entries
+	Index IGMP-Group                                Flood-Interface-List
+	Index MLD-Group                                 Flood-Interface-List
+%s: Create netlink socket failed
+%s fcntl() failed
+%s: Bind netlink socket failed
+%s:%d: Assertion error in function '%s' for condition '%s': Failed to create Netlink socket for multicast snooping
+mcManager.c
+mcManagerS.MCNLSock >= 0
+mcManager-rd-mc
+%s: error, group is null
+%s: error, no memory for EncapTable
+%s: encap table is full!!
+Sources List buffer is full!
+%s: encap device table is full!!
+%s: Add Encap Entry failed
+%s: Update Encap Entry failed
+%s: error, no memory for FloodTable
+%s: flood table is full
+%s: flood interface table is full
+%s: Add Flood Entry failed
+%s: Update Flood Entry failed
+%s: error, no memory for IFTable
+%s: if table is full!!
+%s: if node table is full
+%s: Add IF Entry failed
+%s: Update IF Entry failed
+%s: Clear multicast table %d failed!
+%s: bridge isn't inited.
+%s: can't alloc buffer of num_entries %d
+%s: failed to execute mdb command, num_entries %d
+%s: vlan node %d - %02X:%02X:%02X:%02X:%02X:%02X, add it to encap table
+%s: Legacy node %d - %02X:%02X:%02X:%02X:%02X:%02X, add it to flood table
+%s: Invalid interface index %d
+%s: Legacy node %d, update forwarding table
+%s: Encap table is changed, update multicast encap table
+%s: Encap table is empty, flush multicast encap table
+%s: Encap table is non-empty, update multicast encap table, entry count is %d, table size is %d
+%s: Update multicast encap table failed
+%s: Flood table is changed, update multicast flood table
+%s: Flood table is empty, flush multicast flood table
+%s: Flood table is non-empty, update multicast flood table, entry count is %d
+%s: Update multicast flood table failed
+%s: Interface %s's forwarding table is changed
+%s: Flush Interface %s's forwarding table
+%s: Updated interface %s forwarding table successfully
+ENTER %s
+%s: Read error!
+%s: Receive evnet from invaild bridge %s 
+Get netlink MSG %d size %d from %s
+%s: Receive mdb updated event from %s 
+No enough buffer for mdb entries %d
+Invalid mdb entries %d/%d
+Invalid MDB message size max %d header %d data %d
+Failed to get mdb entries
+Failed to execute netlink command %d
+%s: Unknown netlink message type %d
+mcManager
+ENTER mcManagerInit
+encap
+flood
+iffwd
+mc (mcManager) -- Multicast manager service
+encap -- print encapsulation table
+flood -- print flood table
+iffwd-- print interface forwarding table
+mcManagerFindEncapEntryByGroup
+mcManagerAddEncapEntry
+mcManagerUpdateEncapEntry
+mcManagerEncapTUpdate
+mcManagerFindFloodEntryByGroup
+mcManagerAddFloodEntry
+mcManagerUpdateFloodEntry
+mcManagerFloodTUpdate
+mcManagerFindIFEntryByGroup
+mcManagerAddIFEntry
+mcManagerUpdateIFEntry
+mcManagerIFTUpdate
+mcManagerEncapTableCLR
+mcManagerGetMDB
+mcManagerMCProcess
+mcManagerMCReadBufCB
+mcManagerCreateNLSock
+mcManagerMCReadbufRegister
+Module %d: %s
+	Event %d: %s
+high
+Invalid priority value: %s!
+Illegal input!
+Invalid module id!
+Create event failed!
+main
+dbgService
+ENTER dbgServiceInit
+dbgService -- debug service menu
+c [-m ModuleID] [-e EventID] [-p Priority[high,low]] -- create event
+l -- list all events
+%s: Invalid request
+%s: Buffer too small (requested %d, allocated %d)
+%s: netlink failed, error: %s 
+MC_STATUS_SUCCESS
+MC_STATUS_NOT_SUPPORTED
+MC_STATUS_RESOURCES
+MC_STATUS_INVALID_PARAMETER
+MC_STATUS_BUFFER_OVERFLOW
+MC_STATUS_FAILURE
+MC_STATUS_NOT_FOUND
+bridgeTableAction

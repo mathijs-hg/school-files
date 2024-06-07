@@ -1,0 +1,1790 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s17_cwe_checker.html" title="./../s17_cwe_checker.html" >&laquo; Back to s17_cwe_checker</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405f08"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405f08_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 00405f08"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00406ecc"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00406ecc_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "printf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to printf at 00406ecc"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040734c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040734c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 0040734c"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004074e4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004074e4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 004074e4"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040783c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040783c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 0040783c"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004078d8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004078d8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 004078d8"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407a04"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407a04_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 00407a04"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407e38"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407e38_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 00407e38"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408a38"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408a38_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sprintf"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Externally Controlled Format String) Potential externally controlled format string for call to sprintf at 00408a38"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00403b24"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00403b24_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "malloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 00403b24"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040448c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040448c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "calloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Integer Overflow or Wraparound) Potential overflow due to multiplication before call to calloc at 0040448c"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040448c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040448c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "calloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Integer Overflow or Wraparound) Potential overflow due to multiplication before call to calloc at 0040448c"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00404a24"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00404a24_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "malloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 00404a24"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408128"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408128_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "malloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Integer Overflow or Wraparound) Potential overflow due to multiplication before call to malloc at 00408128"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/215.html" title="215" target="_blank" >CWE215</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [],</pre>
+<pre>    "tids": [],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Information Exposure Through Debug Information) The binary contains debug symbols."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401618"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401618_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 00401618 may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004028f0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004028f0_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 004028f0 may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00402b7c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00402b7c_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 00402b7c may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a534"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a534_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 0040a534 may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a54c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a54c_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 0040a54c may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a600"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a600_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 0040a600 may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a618"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a618_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) Memory access at 0040a618 may result in a NULL dereference"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.3",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a23c",</pre>
+<pre>      "0040a258"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a23c_6",</pre>
+<pre>      "instr_0040a258_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "malloc"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) There is no check if the return value is NULL at 0040a23c (malloc)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00403b48"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00403b48_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "format"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) format (00403b48) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004045f4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004045f4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubigen_init_ec_hdr"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubigen_init_ec_hdr (004045f4) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004047b0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004047b0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubigen_init_vid_hdr"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubigen_init_vid_hdr (004047b0) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00404a44"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00404a44_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubigen_write_layout_vol"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubigen_write_layout_vol (00404a44) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00404a64"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00404a64_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubigen_write_layout_vol"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubigen_write_layout_vol (00404a64) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00404a90"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00404a90_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubigen_write_layout_vol"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubigen_write_layout_vol (00404a90) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405ba4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405ba4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "read_positive_ll"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) read_positive_ll (00405ba4) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405edc"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405edc_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_int (00405edc) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405f08"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405f08_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_int (00405f08) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405f70"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405f70_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00405f70) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405f88"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405f88_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00405f88) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405fc4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405fc4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00405fc4) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00405ff8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00405ff8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00405ff8) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004060fc"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004060fc_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "read_major"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) read_major (004060fc) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00406860"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00406860_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubi_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubi_get_info (00406860) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004068fc"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004068fc_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubi_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubi_get_info (004068fc) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00406924"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00406924_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "ubi_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) ubi_get_info (00406924) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407320"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407320_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_get_major"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_get_major (00407320) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040734c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040734c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_get_major"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_get_major (0040734c) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407380"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407380_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_get_major"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_get_major (00407380) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004074b8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004074b8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_data"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_data (004074b8) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004074e4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004074e4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_data"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_data (004074e4) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004075a8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004075a8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "read_pos_ll"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) read_pos_ll (004075a8) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407810"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407810_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_pos_ll"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_pos_ll (00407810) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040783c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040783c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_pos_ll"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_pos_ll (0040783c) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004078ac"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004078ac_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_pos_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_pos_int (004078ac) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004078d8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004078d8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_pos_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_pos_int (004078d8) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004079d8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004079d8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_hex_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_hex_int (004079d8) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407a04"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407a04_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_hex_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_hex_int (00407a04) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407a74"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407a74_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "dev_read_hex_int"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) dev_read_hex_int (00407a74) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407d5c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407d5c_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sysfs_is_supported"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) sysfs_is_supported (00407d5c) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407dc4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407dc4_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sysfs_is_supported"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) sysfs_is_supported (00407dc4) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407dec"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407dec_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sysfs_is_supported"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) sysfs_is_supported (00407dec) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00407e38"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00407e38_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "sysfs_is_supported"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) sysfs_is_supported (00407e38) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408214"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408214_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00408214) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040822c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040822c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (0040822c) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408258"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408258_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00408258) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408288"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408288_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mkpath"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mkpath (00408288) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040835c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040835c_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_get_info (0040835c) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408384"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408384_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_get_info (00408384) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408a08"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408a08_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_dev_present"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_dev_present (00408a08) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408a38"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408a38_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_dev_present"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_dev_present (00408a38) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408ae0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408ae0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_get_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_get_info (00408ae0) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00408b74"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00408b74_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_get_dev_info1"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_get_dev_info1 (00408b74) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a258"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a258_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_write"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_write (0040a258) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a2ac"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a2ac_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_write"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_write (0040a2ac) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a3c0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a3c0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_write"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_write (0040a3c0) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a570"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a570_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_torture"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_torture (0040a570) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a5bc"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a5bc_8"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_torture"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) mtd_torture (0040a5bc) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a7c8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a7c8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "proc_parse_start"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcmp"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) proc_parse_start (0040a7c8) -&gt; memcmp"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a9f8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a9f8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "proc_parse_next"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sscanf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) proc_parse_next (0040a9f8) -&gt; sscanf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040aa90"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040aa90_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "proc_parse_next"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) proc_parse_next (0040aa90) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040ad2c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040ad2c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "legacy_get_dev_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) legacy_get_dev_info (0040ad2c) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040b060"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040b060_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "legacy_get_dev_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) legacy_get_dev_info (0040b060) -&gt; strcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040b48c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040b48c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "legacy_get_dev_info1"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "sprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) legacy_get_dev_info1 (0040b48c) -&gt; sprintf"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040c7d4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040c7d4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "_fpadd_parts"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memcpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) _fpadd_parts (0040c7d4) -&gt; memcpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004091f8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004091f8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_erase"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_erase (004091f8). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040928c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040928c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_erase"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_erase (0040928c). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004094e0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004094e0_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_is_bad"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_is_bad (004094e0). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00409628"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00409628_10"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_mark_bad"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_mark_bad (00409628). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00409a90"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00409a90_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "do_oob_op"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at do_oob_op (00409a90). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00409bb8"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00409bb8_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "do_oob_op"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at do_oob_op (00409bb8). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00409f8c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00409f8c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_write"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_write (00409f8c). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040a220"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040a220_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "mtd_write"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at mtd_write (0040a220). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040adc0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040adc0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "legacy_get_dev_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at legacy_get_dev_info (0040adc0). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040ade0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040ade0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "legacy_get_dev_info"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Exposed IOCTL with Insufficient Access Control) Program uses ioctl at legacy_get_dev_info (0040ade0). Be sure to double check the program and the corresponding driver."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/787.html" title="787" target="_blank" >CWE787</a>",</pre>
+<pre>    "version": "0.3",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00402d98"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00402d98_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "For the object ID sub_00402d40 &commat; sp:i32 access to the offset 0 (size 4) may overflow the upper object bound of 0.",</pre>
+<pre>        "Relevant callgraph TIDs: [sub_00402d40]"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Out-of-bounds Write) Memory write at 00402d98 may be out of bounds."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/787.html" title="787" target="_blank" >CWE787</a>",</pre>
+<pre>    "version": "0.3",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00404e14"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00404e14_3"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "For the object ID sub_00404dc8 &commat; sp:i32 access to the offset 8 (size 4) may overflow the upper object bound of 0.",</pre>
+<pre>        "Relevant callgraph TIDs: [sub_00404dc8]"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Out-of-bounds Write) Memory write at 00404e14 may be out of bounds."</pre>
+<pre>  }</pre>
+<pre>]</pre>  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

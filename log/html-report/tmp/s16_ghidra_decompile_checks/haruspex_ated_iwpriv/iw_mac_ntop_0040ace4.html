@@ -1,0 +1,19 @@
+<br />
+<pre>char * iw_mac_ntop(byte *param_1,int param_2,char *param_3,int param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  int local_10;</pre>
+<pre>  </pre>
+<pre>  if (param_4 &lt; param_2 * 3) {</pre>
+<pre>    param_3 = (char *)0x0;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    sprintf(param_3,"%02X",(uint)*param_1,param_4,&amp;_gp)</span></span></pre>
+<pre>    for (local_10 = 1; local_10 &lt; param_2; local_10 = local_10 + 1) {</pre>
+<pre><span class="green">      sprintf(param_3 + local_10 * 3 + -1,":%02X",(uint)param_1[local_10])</span></span></pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return param_3;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] b6145464d5ea47d8</pre>

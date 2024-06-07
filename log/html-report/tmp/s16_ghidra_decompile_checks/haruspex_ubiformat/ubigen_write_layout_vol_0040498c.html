@@ -1,0 +1,98 @@
+<br />
+<pre>int ubigen_write_layout_vol</pre>
+<pre>              (ubigen_info *ui,int peb1,int peb2,longlong ec1,longlong ec2,ubi_vtbl_record *vtbl,</pre>
+<pre>              int fd)</pre>
+<br />
+<pre>{</pre>
+<pre>  ubi_ec_hdr *hdr;</pre>
+<pre>  int iVar1;</pre>
+<pre>  ssize_t sVar2;</pre>
+<pre>  char *pcVar3;</pre>
+<pre>  int *piVar4;</pre>
+<pre>  FILE *pFVar5;</pre>
+<pre>  int iVar6;</pre>
+<pre>  ubi_ec_hdr *__whence;</pre>
+<pre>  size_t __size;</pre>
+<pre>  int iVar7;</pre>
+<pre>  __off64_t _Var8;</pre>
+<pre>  int in_stack_00000024;</pre>
+<pre>  undefined4 uVar9;</pre>
+<pre>  uint in_stack_ffffff94;</pre>
+<pre>  uint uVar10;</pre>
+<pre>  ubigen_vol_info vi;</pre>
+<pre>  </pre>
+<pre>  vi.usable_leb_size = ui-&gt;leb_size;</pre>
+<pre>  vi.alignment = 1;</pre>
+<pre>  vi.type = 1;</pre>
+<pre>  __size = ui-&gt;peb_size;</pre>
+<pre>  vi.bytes._0_4_ = vi.usable_leb_size &lt;&lt; 1;</pre>
+<pre>  vi.bytes._4_4_ = (int)vi.bytes &gt;&gt; 0x1f;</pre>
+<pre>  vi.name = "layout volume";</pre>
+<pre>  vi.name_len = 0xd;</pre>
+<pre>  vi.id = 0x7fffefff;</pre>
+<pre>  vi.data_pad = 0;</pre>
+<pre>  vi.compat = 5;</pre>
+<pre><span class="green">  hdr = (ubi_ec_hdr *)malloc(__size)</span></span></pre>
+<pre>  if (hdr == (ubi_ec_hdr *)0x0) {</pre>
+<pre>    piVar4 = __errno_location();</pre>
+<pre>    iVar1 = *piVar4;</pre>
+<pre>    fprintf(stderr,"%s: error!: failed to allocate %d bytes\n","libubigen",__size);</pre>
+<pre>    pFVar5 = stderr;</pre>
+<pre>    pcVar3 = strerror(iVar1);</pre>
+<pre>    fprintf(pFVar5,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c,iVar1,pcVar3);</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  memset(hdr,0xff,ui-&gt;data_offs);</pre>
+<pre>  iVar7 = ui-&gt;vid_hdr_offs;</pre>
+<pre><span class="green">  memcpy(hdr-&gt;padding1 + ui-&gt;data_offs + -5,(void *)fd,ui-&gt;vtbl_size)</span></span></pre>
+<pre>  iVar6 = 0xff;</pre>
+<pre>  memset(hdr-&gt;padding1 + ui-&gt;vtbl_size + ui-&gt;data_offs + -5,0xff,</pre>
+<pre>         (ui-&gt;peb_size - ui-&gt;data_offs) - ui-&gt;vtbl_size);</pre>
+<pre>  iVar1 = ui-&gt;peb_size;</pre>
+<pre>  uVar9 = 0;</pre>
+<pre>  _Var8 = lseek64(in_stack_00000024,(ulonglong)in_stack_ffffff94 &lt;&lt; 0x20,iVar6);</pre>
+<pre>  if ((longlong)peb1 * (longlong)iVar1 == _Var8) {</pre>
+<pre>    ubigen_init_ec_hdr(ui,hdr,CONCAT44(in_stack_ffffff94,uVar9));</pre>
+<pre>    uVar10 = 0;</pre>
+<pre>    ubigen_init_vid_hdr(ui,&amp;vi,(ubi_vid_hdr *)(hdr-&gt;padding1 + iVar7 + -5),0,(void *)0x0,0);</pre>
+<pre>    __whence = hdr;</pre>
+<pre>    sVar2 = write(in_stack_00000024,hdr,ui-&gt;peb_size);</pre>
+<pre>    iVar1 = ui-&gt;peb_size;</pre>
+<pre>    if (iVar1 != sVar2) {</pre>
+<pre>      piVar4 = __errno_location();</pre>
+<pre>      iVar6 = *piVar4;</pre>
+<pre>      fprintf(stderr,"%s: error!: cannot write %d bytes\n","libubigen",iVar1);</pre>
+<pre>      pFVar5 = stderr;</pre>
+<pre>      pcVar3 = strerror(iVar6);</pre>
+<pre>      goto out_free;</pre>
+<pre>    }</pre>
+<pre>    uVar9 = 0;</pre>
+<pre>    _Var8 = lseek64(in_stack_00000024,(ulonglong)uVar10 &lt;&lt; 0x20,(int)__whence);</pre>
+<pre>    if (_Var8 != (longlong)peb2 * (longlong)iVar1) goto LAB_00404c00;</pre>
+<pre>    ubigen_init_ec_hdr(ui,hdr,CONCAT44(uVar10,uVar9));</pre>
+<pre>    ubigen_init_vid_hdr(ui,&amp;vi,(ubi_vid_hdr *)(hdr-&gt;padding1 + iVar7 + -5),1,(void *)0x0,0);</pre>
+<pre>    sVar2 = write(in_stack_00000024,hdr,ui-&gt;peb_size);</pre>
+<pre>    iVar1 = ui-&gt;peb_size;</pre>
+<pre>    if (iVar1 == sVar2) {</pre>
+<pre>      free(hdr);</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>    piVar4 = __errno_location();</pre>
+<pre>    iVar6 = *piVar4;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot write %d bytes\n","libubigen",iVar1);</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>LAB_00404c00:</pre>
+<pre>    piVar4 = __errno_location();</pre>
+<pre>    iVar6 = *piVar4;</pre>
+<pre>    fprintf(stderr,"%s: error!: cannot seek output file\n","libubigen");</pre>
+<pre>  }</pre>
+<pre>  pFVar5 = stderr;</pre>
+<pre>  pcVar3 = strerror(iVar6);</pre>
+<pre>out_free:</pre>
+<pre>  fprintf(pFVar5,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c,iVar6,pcVar3);</pre>
+<pre>  free(hdr);</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 68198f3610dcedfb</pre>

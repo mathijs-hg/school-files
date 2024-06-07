@@ -1,0 +1,100 @@
+<br />
+<pre>void vlan_dump(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  undefined4 uVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  undefined *puVar3;</pre>
+<pre>  int local_18;</pre>
+<pre>  int local_14;</pre>
+<pre>  uint local_10;</pre>
+<pre>  undefined auStack_c [4];</pre>
+<pre>  </pre>
+<pre>  puVar3 = &amp;_gp;</pre>
+<pre>  puts("  vid  fid  portmap    s-tag");</pre>
+<pre>  for (local_18 = 1; local_18 &lt; 0xfff; local_18 = local_18 + 1) {</pre>
+<pre>    local_10 = local_18 + 0x80000000;</pre>
+<pre>    reg_write(0x90,local_10,param_3,param_4,puVar3);</pre>
+<pre>    local_14 = 0;</pre>
+<pre><span class="green">    while ((local_14 &lt; 0x14 &amp;&amp; (reg_read(0x90,&amp;local_10), (int)local_10 &lt; 0))) {</span></pre>
+<pre>      usleep(1000);</pre>
+<pre>      local_14 = local_14 + 1;</pre>
+<pre>    }</pre>
+<pre>    if (local_14 == 0x14) {</pre>
+<pre>      puts("timeout.");</pre>
+<pre>    }</pre>
+<pre><span class="green">    reg_read(0x94,&amp;local_10)</span></span></pre>
+<pre><span class="green">    reg_read(0x98,auStack_c)</span></span></pre>
+<pre>    if ((local_10 &amp; 1) == 0) {</pre>
+<pre>      if (local_18 &lt; 0x11) {</pre>
+<pre>        printf(" %4d  ",local_18);</pre>
+<pre>        printf(" %2d ",(int)(local_10 &amp; 0xe) &gt;&gt; 1);</pre>
+<pre>        puts(" invalid");</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      printf(" %4d  ",local_18);</pre>
+<pre>      printf(" %2d ",(int)(local_10 &amp; 0xe) &gt;&gt; 1);</pre>
+<pre>      if ((local_10 &amp; 0x10000) == 0) {</pre>
+<pre>        uVar1 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        uVar1 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      printf(" %c",uVar1);</pre>
+<pre>      if ((local_10 &amp; 0x20000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x40000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x80000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x100000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x200000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x400000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      if ((local_10 &amp; 0x800000) == 0) {</pre>
+<pre>        iVar2 = 0x2d;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar2 = 0x31;</pre>
+<pre>      }</pre>
+<pre>      putchar(iVar2);</pre>
+<pre>      printf("    %4d\n",(int)(local_10 &amp; 0xfff0) &gt;&gt; 4);</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] ee3f31cb480d8d51</pre>

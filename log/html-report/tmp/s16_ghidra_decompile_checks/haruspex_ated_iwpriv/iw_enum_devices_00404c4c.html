@@ -1,0 +1,70 @@
+<br />
+<pre>void iw_enum_devices(int param_1,code *param_2,undefined4 param_3,undefined4 param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *pFVar1;</pre>
+<pre>  char *pcVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  int *piVar4;</pre>
+<pre>  char *local_450;</pre>
+<pre>  uint local_44c;</pre>
+<pre>  char *local_438;</pre>
+<pre>  char local_430;</pre>
+<pre>  char local_42f;</pre>
+<pre>  uint local_30;</pre>
+<pre>  char *local_2c;</pre>
+<pre>  undefined auStack_28 [24];</pre>
+<pre>  </pre>
+<pre><span class="green">  pFVar1 = fopen("/proc/net/dev","r")</span></span></pre>
+<pre>  if (pFVar1 == (FILE *)0x0) {</pre>
+<pre>    local_30 = 0x400;</pre>
+<pre>    local_2c = &amp;local_430;</pre>
+<pre>    iVar3 = ioctl(param_1,0x8912,&amp;local_30);</pre>
+<pre>    pFVar1 = stderr;</pre>
+<pre>    if (iVar3 &lt; 0) {</pre>
+<pre>      piVar4 = __errno_location();</pre>
+<pre>      pcVar2 = strerror(*piVar4);</pre>
+<pre>      fprintf(pFVar1,"SIOCGIFCONF: %s\n",pcVar2);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_450 = local_2c;</pre>
+<pre>      local_44c = local_30 &gt;&gt; 5;</pre>
+<pre>      while (local_44c = local_44c - 1, -1 &lt; (int)local_44c) {</pre>
+<pre>        (*param_2)(param_1,local_450,param_3,param_4);</pre>
+<pre>        local_450 = local_450 + 0x20;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    fgets(&amp;local_430,0x400,pFVar1)</span></span></pre>
+<pre><span class="green">    fgets(&amp;local_430,0x400,pFVar1)</span></span></pre>
+<pre>    while( true ) {</pre>
+<pre><span class="green">      pcVar2 = fgets(&amp;local_430,0x400,pFVar1)</span></span></pre>
+<pre>      if (pcVar2 == (char *)0x0) break;</pre>
+<pre>      if ((local_430 != '\0') &amp;&amp; (local_42f != '\0')) {</pre>
+<pre>        local_438 = &amp;local_430;</pre>
+<pre>        while ((*(ushort *)(__ctype_b + *local_438 * 2) &amp; 0x20) != 0) {</pre>
+<pre>          local_438 = local_438 + 1;</pre>
+<pre>        }</pre>
+<pre>        pcVar2 = strrchr(local_438,0x3a);</pre>
+<pre>        if ((pcVar2 == (char *)0x0) || (0x11 &lt; (int)(pcVar2 + (1 - (int)local_438)))) {</pre>
+<pre>          pcVar2 = (char *)0x0;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre><span class="green"><span class="green"><span class="green">          memcpy(auStack_28,local_438,(int)pcVar2 - (int)local_438)</span></span></span></span></pre>
+<pre><span class="green">          auStack_28[(int)pcVar2 - (int)local_438] = 0</span></span></pre>
+<pre>        }</pre>
+<pre>        if (pcVar2 == (char *)0x0) {</pre>
+<pre>          fwrite("Cannot parse /proc/net/dev\n",1,0x1b,stderr);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          (*param_2)(param_1,auStack_28,param_3,param_4);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    fclose(pFVar1);</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 816c7c566bd7d90d</pre>

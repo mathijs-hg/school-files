@@ -1,0 +1,61 @@
+<br />
+<pre>undefined4 WaitForCmd(int param_1)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  ssize_t sVar3;</pre>
+<pre>  uint local_658;</pre>
+<pre>  timeval local_648;</pre>
+<pre>  fd_set fStack_640;</pre>
+<pre>  undefined auStack_5c0 [1464];</pre>
+<pre>  </pre>
+<pre>LAB_00401258:</pre>
+<pre>  do {</pre>
+<pre>    iVar1 = listen(param_1,5);</pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre>      perror("socket listen error\n");</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    l_connSock = accept(param_1,(sockaddr *)0x0,(socklen_t *)0x0);</pre>
+<pre>    if ((int)l_connSock &lt; 0) {</pre>
+<pre>      perror("socket accept error\n");</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    while( true ) {</pre>
+<pre>      while( true ) {</pre>
+<pre>        for (local_658 = 0; local_658 &lt; 0x20; local_658 = local_658 + 1) {</pre>
+<pre>          fStack_640.fds_bits[local_658] = 0;</pre>
+<pre>        }</pre>
+<pre>        fStack_640.fds_bits[l_connSock &gt;&gt; 5] =</pre>
+<pre>             fStack_640.fds_bits[l_connSock &gt;&gt; 5] | 1 &lt;&lt; (l_connSock &amp; 0x1f);</pre>
+<pre>        local_648.tv_sec = 0x3c;</pre>
+<pre>        local_648.tv_usec = 0;</pre>
+<pre>        iVar1 = select(l_connSock + 1,&amp;fStack_640,(fd_set *)0x0,(fd_set *)0x0,&amp;local_648);</pre>
+<pre>        if (-1 &lt; iVar1) break;</pre>
+<pre>        piVar2 = __errno_location();</pre>
+<pre>        if (*piVar2 != 4) {</pre>
+<pre>          perror("socket select error\n");</pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      if (iVar1 == 0) {</pre>
+<pre>        perror("socket timeout, return to listen\n");</pre>
+<pre>        close(l_connSock);</pre>
+<pre>        goto LAB_00401258;</pre>
+<pre>      }</pre>
+<pre><span class="green">      memset(auStack_5c0,0,0x5b4)</span></span></pre>
+<pre><span class="green"><span class="green">      sVar3 = recvfrom(l_connSock,auStack_5c0,0x5b4,0,(sockaddr *)0x0,(socklen_t *)0x0)</span></span></span></pre>
+<pre>      if (sVar3 &lt; 1) break;</pre>
+<pre>      ProcessCmd(l_connSock,auStack_5c0,sVar3);</pre>
+<pre>    }</pre>
+<pre>    if (sVar3 != 0) {</pre>
+<pre>      perror("socket recv error\n");</pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    puts("socket close, return to listen");</pre>
+<pre>    close(l_connSock);</pre>
+<pre>  } while( true );</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] a22864e7aacdabdd</pre>

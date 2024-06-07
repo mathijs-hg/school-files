@@ -1,0 +1,220 @@
+[[0;34m+[0m] [0;36m[1mCheck binaries for weak functions (radare mode)[0m
+[1m=================================================================[0m
+This module identifies the usage of critical binary functions in firmware via [0;33mradare2[0m.
+Examples of binary functions are system, strcpy, printf and strcat. These functions are configured in the configuration
+file config/functions.cfg. The module counts the usages per binary. For strcpy functions it also counts strlen functions
+right before the strcpy function. Additionally it checks if the binary is a known Linux binary or unknown and probably
+a vendor binary.
+
+
+[[0;33m*[0m] Vulnerable functions: fprintf mmap popen printf sprintf strcat strcpy system
+
+[[0;32m+[0m][0;32m /lib/libfstools.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 23 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_23_fprintf-libfstools.so.txt
+[[0;32m+[0m][0;32m /lib/libdl-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_fprintf-libdl-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 44 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_44_fprintf-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/librt-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_printf-librt-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libdl-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_printf-libdl-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libfstools.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 54 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_54_printf-libfstools.so.txt
+[[0;32m+[0m][0;32m /lib/librt-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-librt-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libcrypt-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libcrypt-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libplcapi.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 89 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_89_printf-libplcapi.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 2 [0m/ [0;33mCorrect error handling: NA [0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_mmap-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libvalidate.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_strcpy-libvalidate.so.txt
+[[0;32m+[0m][0;32m /lib/libplcapi.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_sprintf-libplcapi.so.txt
+[[0;32m+[0m][0;32m /lib/libfstools.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_strcpy-libfstools.so.txt
+[[0;32m+[0m][0;32m /lib/libubox.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_5_fprintf-libubox.so.txt
+[[0;32m+[0m][0;32m /lib/libfstools.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_9_system-libfstools.so.txt
+[[0;32m+[0m][0;32m /lib/libplcapi.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libplcapi.so.txt
+[[0;32m+[0m][0;32m /lib/libubox.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 14 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_14_printf-libubox.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 81 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_81_printf-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libubox.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-libubox.so.txt
+[[0;32m+[0m][0;32m /lib/libubox.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_strcpy-libubox.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_20_sprintf-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_strcat-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libuClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 31 [0m/ [0;33mstrlen: 15 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_31_strcpy-libuClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libstdc++.so (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_printf-libstdc++.so.txt
+[[0;32m+[0m][0;32m /lib/libstdc++.so (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_sprintf-libstdc++.so.txt
+[[0;32m+[0m][0;32m /lib/libstdc++.so (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libstdc++.so.txt
+[[0;32m+[0m][0;32m /lib/ld-uClibc-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 24 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_24_printf-ld-uClibc-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libm-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_printf-libm-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libpthread-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 4 [0m/ [0;33mCorrect error handling: NA [0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_mmap-libpthread-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libm-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_sprintf-libm-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libpthread-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_printf-libpthread-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libblobmsg_json.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_printf-libblobmsg_json.so.txt
+[[0;32m+[0m][0;32m /lib/libblobmsg_json.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_sprintf-libblobmsg_json.so.txt
+[[0;32m+[0m][0;32m /lib/libpthread-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-libpthread-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libubus.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_printf-libubus.so.txt
+[[0;32m+[0m][0;32m /lib/libblobmsg_json.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libblobmsg_json.so.txt
+[[0;32m+[0m][0;32m /lib/libuci.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_10_fprintf-libuci.so.txt
+[[0;32m+[0m][0;32m /lib/libubus.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-libubus.so.txt
+[[0;32m+[0m][0;32m /lib/libpthread-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_system-libpthread-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libutil-0.9.33.2.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libutil-0.9.33.2.so.txt
+[[0;32m+[0m][0;32m /lib/libblkid-tiny.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_fprintf-libblkid-tiny.so.txt
+[[0;32m+[0m][0;32m /lib/libuci.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 25 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_25_printf-libuci.so.txt
+[[0;32m+[0m][0;32m /lib/libjson_script.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_strcpy-libjson_script.so.txt
+[[0;32m+[0m][0;32m /lib/libuci.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_11_sprintf-libuci.so.txt
+[[0;32m+[0m][0;32m /lib/libblkid-tiny.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 12 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_12_printf-libblkid-tiny.so.txt
+[[0;32m+[0m][0;32m /bin/ubus (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_fprintf-ubus.txt
+[[0;32m+[0m][0;32m /lib/libuci.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_9_strcat-libuci.so.txt
+[[0;32m+[0m][0;32m /lib/libblkid-tiny.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_sprintf-libblkid-tiny.so.txt
+[[0;32m+[0m][0;32m /lib/libuci.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 6 [0m/ [0;33mstrlen: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_strcpy-libuci.so.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_18_fprintf-opkg.txt
+[[0;32m+[0m][0;32m /bin/ubus (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_printf-ubus.txt
+[[0;32m+[0m][0;32m /lib/libblkid-tiny.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_strcpy-libblkid-tiny.so.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 44 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_44_fprintf-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_5_fprintf-libcurl.so.4.3.0.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 27 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_27_printf-opkg.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-opkg.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_strcat-opkg.txt
+[[0;32m+[0m][0;32m /usr/lib/libmenu.so.5.7 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libmenu.so.5.7.txt
+[[0;32m+[0m][0;32m /usr/lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 80 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_80_printf-libcurl.so.4.3.0.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_strcpy-opkg.txt
+[[0;32m+[0m][0;32m /bin/opkg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_system-opkg.txt
+[[0;32m+[0m][0;32m /usr/lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-libcurl.so.4.3.0.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_popen-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libpcap.so.1.1.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_fprintf-libpcap.so.1.1.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libtsched.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_printf-libtsched.so.txt
+[[0;32m+[0m][0;32m /usr/lib/uhttpd_ubus.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_7_printf-uhttpd_ubus.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 5 [0m/ [0;33mstrlen: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_5_strcpy-libcurl.so.4.3.0.txt
+[[0;32m+[0m][0;32m /usr/lib/libiptext6.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 135 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_135_printf-libiptext6.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libtsched.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_sprintf-libtsched.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libintl.so.8.1.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 8 [0m/ [0;33mstrlen: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_8_strcpy-libintl.so.8.1.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libtsched.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_strcat-libtsched.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libpcap.so.1.1.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 107 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_107_printf-libpcap.so.1.1.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libssh.so.4.4.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 8 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_8_fprintf-libssh.so.4.4.1.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_fprintf-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 530 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_530_printf-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_popen-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_7_printf-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 75 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_75_sprintf-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libtmpv2.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_fprintf-libtmpv2.so.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_sprintf-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /usr/lib/libssh.so.4.4.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 34 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_34_printf-libssh.so.4.4.1.txt
+[[0;32m+[0m][0;32m /usr/lib/liblog.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_5_printf-liblog.so.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_3_strcat-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /usr/lib/libtmpv2.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_printf-libtmpv2.so.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_strcpy-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /usr/lib/liblua.so.5.1.5 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_system-liblua.so.5.1.5.txt
+[[0;32m+[0m][0;32m /usr/lib/libssh.so.4.4.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcat-libssh.so.4.4.1.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 36 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_36_strcat-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libssh.so.4.4.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libssh.so.4.4.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libjson-c.so.2.0.1 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_fprintf-libjson-c.so.2.0.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libiptext4.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 80 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_80_printf-libiptext4.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libssh.so.4.4.1 (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_2_system-libssh.so.4.4.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libjson-c.so.2.0.1 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_7_printf-libjson-c.so.2.0.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libnl-tiny.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 15 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_15_fprintf-libnl-tiny.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libiptext4.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_strcpy-libiptext4.so.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 78 [0m/ [0;33mstrlen: 27 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_78_strcpy-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libjson-c.so.2.0.1 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_1_sprintf-libjson-c.so.2.0.1.txt
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rw-r--r-- root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 10 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_10_fprintf-libcrypto.so.1.0.0.txt
+[[0;32m+[0m][0;32m /usr/lib/libnl-tiny.so (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 16 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_16_printf-libnl-tiny.so.txt
+[[0;32m+[0m][0;32m /usr/lib/libssl.so.1.0.0 (-rw-r--r-- root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_4_fprintf-libssl.so.1.0.0.txt
+[[0;32m+[0m][0;32m /usr/lib/libnetfilter_queue.so.1.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 35 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_35_printf-libnetfilter_queue.so.1.3.0.txt
+[[0;32m+[0m][0;32m /usr/lib/libip6tc.so.0.1.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_fprintf-libip6tc.so.0.1.0.txt
+[[0;32m+[0m][0;32m /bin/busybox (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_6_system-busybox.txt
+[[0;32m+[0m][0;32m /usr/lib/libip6tc.so.0.1.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 23 [0m/ [0;32mnetworking: no[0m[0m[0m
+[REF] /logs/s14_weak_func_radare_check/vul_func_23_printf-libip6tc.so.0.1.0.txt
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

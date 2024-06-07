@@ -1,0 +1,40 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibhistory.so.5.2[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [31mRPATH[0m        [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mlibhistory.so.5.2[0m
+
+    1324:	00000000 	nop
+    1328:	04110001 	bal	1330 <_init+0x54>
+    132c:	00000000 	nop
+    1330:	3c1c0002 	lui	gp,0x2
+    1334:	279cd9d0 	addiu	gp,gp,-9776
+    1338:	039fe021 	addu	gp,gp,ra
+    133c:	8f998024 	lw	t9,-32732(gp)
+    1340:	00000000 	nop
+    1344:	273968c0 	addiu	t9,t9,26816
+    1348:	0411155d 	bal	68c0 <__do_global_ctors_aux>
+    134c:	00000000 	nop
+    1350:	8fbc0010 	lw	gp,16(sp)
+    1354:	00000000 	nop
+    1358:	8fbf001c 	lw	ra,28(sp)
+    135c:	03e00008 	jr	ra
+    1360:	27bd0020 	addiu	sp,sp,32
+
+Disassembly of section .text:
+
+00001370 <memory_error_and_abort>:
+    1370:	3c1c0002 	lui	gp,0x2
+    1374:	279cd990 	addiu	gp,gp,-9840
+    1378:	0399e021 	addu	gp,gp,t9
+    137c:	8f828074 	lw	v0,-32652(gp)
+    1380:	8f858024 	lw	a1,-32732(gp)
+[31m    1384:	8f9980d8 	lw	t9,fprintf[0m
+    1388:	00803021 	move	a2,a0
+    138c:	8c440000 	lw	a0,0(v0)
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m1[0m times [0;33mlibhistory.so.5.2[0m
+

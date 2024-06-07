@@ -1,0 +1,49 @@
+<br />
+<pre>void iw_print_key(char *param_1,size_t param_2,byte *param_3,int param_4,uint param_5)</pre>
+<br />
+<pre>{</pre>
+<pre>  char *local_res0;</pre>
+<pre>  uint local_10;</pre>
+<pre>  </pre>
+<pre>  if ((int)param_2 &lt; param_4 * 3) {</pre>
+<pre><span class="green">    snprintf(param_1,param_2,"&lt;too big&gt;")</span></span></pre>
+<pre>  }</pre>
+<pre>  else if ((param_5 &amp; 0x800) == 0) {</pre>
+<pre><span class="green">    sprintf(param_1,"%.2X",(uint)*param_3,param_4,&amp;_gp)</span></span></pre>
+<pre>    local_res0 = param_1 + 2;</pre>
+<pre>    for (local_10 = 1; (int)local_10 &lt; param_4; local_10 = local_10 + 1) {</pre>
+<pre>      if ((local_10 &amp; 1) == 0) {</pre>
+<pre>        *local_res0 = '-';</pre>
+<pre>        local_res0[1] = '\0';</pre>
+<pre>        local_res0 = local_res0 + 1;</pre>
+<pre>      }</pre>
+<pre><span class="green">      sprintf(local_res0,"%.2X",(uint)param_3[local_10])</span></span></pre>
+<pre>      local_res0 = local_res0 + 2;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else if (param_4 &lt; 1) {</pre>
+<pre>    *param_1 = 'o';</pre>
+<pre>    param_1[1] = 'n';</pre>
+<pre>    param_1[2] = '\0';</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    *param_1 = '*';</pre>
+<pre>    param_1[1] = '*';</pre>
+<pre>    param_1[2] = '\0';</pre>
+<pre>    local_res0 = param_1 + 2;</pre>
+<pre>    for (local_10 = 1; (int)local_10 &lt; param_4; local_10 = local_10 + 1) {</pre>
+<pre>      if ((local_10 &amp; 1) == 0) {</pre>
+<pre>        *local_res0 = '-';</pre>
+<pre>        local_res0[1] = '\0';</pre>
+<pre>        local_res0 = local_res0 + 1;</pre>
+<pre>      }</pre>
+<pre>      *local_res0 = '*';</pre>
+<pre>      local_res0[1] = '*';</pre>
+<pre>      local_res0[2] = '\0';</pre>
+<pre>      local_res0 = local_res0 + 2;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 3c202abbd9ce02cd</pre>

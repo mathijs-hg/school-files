@@ -1,0 +1,69 @@
+<pre>[</span><span class="orange">*</span>] Binary protection state of </span><span class="orange">mpstat</span></pre>
+<br />
+<pre>  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      </pre>
+<pre>  	<span class="red">No RELRO</span>       <span class="red">No Canary found</span>   <span class="red">NX disabled</span>  <span class="red">No PIE</span>       <span class="green">No RPATH</span>     <span class="green">No RUNPATH</span>   <span class="green">No Symbols</span></pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> tear down of </span><span class="orange">mpstat</span></pre>
+<br />
+<pre>  409198:	02602821 	move	a1,s3</pre>
+<pre>  40919c:	0320f809 	jalr	t9</pre>
+<pre>  4091a0:	27a40124 	addiu	a0,sp,292</pre>
+<pre>  4091a4:	0c10114c 	jal	404530 &lt;oct2chr&gt;</pre>
+<pre>  4091a8:	27a400a4 	addiu	a0,sp,164</pre>
+<pre>  4091ac:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  4091b0:	27a400a4 	addiu	a0,sp,164</pre>
+<pre>  4091b4:	8f99819c 	lw	t9,-32356(gp)</pre>
+<pre>  4091b8:	00000000 	nop</pre>
+<pre>  4091bc:	0320f809 	jalr	t9</pre>
+<pre>  4091c0:	27a50018 	addiu	a1,sp,24</pre>
+<pre>  4091c4:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  4091c8:	0440ffe3 	bltz	v0,409158 &lt;read_stat_irq+0x4520&gt;</pre>
+<pre>  4091cc:	00000000 	nop</pre>
+<pre>  4091d0:	8fa70024 	lw	a3,36(sp)</pre>
+<pre>  4091d4:	00000000 	nop</pre>
+<pre>  4091d8:	10e0ffdf 	beqz	a3,409158 &lt;read_stat_irq+0x4520&gt;</pre>
+<pre>  4091dc:	00112140 	sll	a0,s1,0x5</pre>
+<pre>  4091e0:	8fa3001c 	lw	v1,28(sp)</pre>
+<pre>  4091e4:	8fa60028 	lw	a2,40(sp)</pre>
+<pre>  4091e8:	00670018 	mult	v1,a3</pre>
+<pre>  4091ec:	001111c0 	sll	v0,s1,0x7</pre>
+<pre>  4091f0:	00821021 	addu	v0,a0,v0</pre>
+<pre>  4091f4:	02821021 	addu	v0,s4,v0</pre>
+<pre>  4091f8:	8fa4002c 	lw	a0,44(sp)</pre>
+<pre><span class="red">  4091fc:	8f9981e8 	lw	t9,strcpy</span></pre>
+<pre>  409200:	ac400004 	sw	zero,4(v0)</pre>
+<pre>  409204:	ac440030 	sw	a0,48(v0)</pre>
+<pre>--</pre>
+<pre>  40a96c:	0320f809 	jalr	t9</pre>
+<pre>  40a970:	02802821 	move	a1,s4</pre>
+<pre>  40a974:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  40a978:	02802821 	move	a1,s4</pre>
+<pre>  40a97c:	03c02021 	move	a0,s8</pre>
+<pre>  40a980:	8f998130 	lw	t9,-32464(gp)</pre>
+<pre>  40a984:	1040ffef 	beqz	v0,40a944 &lt;count_bits+0x578&gt;</pre>
+<pre>  40a988:	0217b021 	addu	s6,s0,s7</pre>
+<pre>  40a98c:	0320f809 	jalr	t9</pre>
+<pre>  40a990:	00000000 	nop</pre>
+<pre>  40a994:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  40a998:	1040ffea 	beqz	v0,40a944 &lt;count_bits+0x578&gt;</pre>
+<pre>  40a99c:	00000000 	nop</pre>
+<pre>  40a9a0:	8f9980fc 	lw	t9,strlen</pre>
+<pre>  40a9a4:	00000000 	nop</pre>
+<pre>  40a9a8:	0320f809 	jalr	t9</pre>
+<pre>  40a9ac:	02802021 	move	a0,s4</pre>
+<pre>  40a9b0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  40a9b4:	24440001 	addiu	a0,v0,1</pre>
+<pre>  40a9b8:	8f998180 	lw	t9,-32384(gp)</pre>
+<pre>  40a9bc:	00000000 	nop</pre>
+<pre>  40a9c0:	0320f809 	jalr	t9</pre>
+<pre>  40a9c4:	24050001 	li	a1,1</pre>
+<pre>  40a9c8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  40a9cc:	00402021 	move	a0,v0</pre>
+<pre><span class="red">  40a9d0:	8f9981e8 	lw	t9,strcpy</span></pre>
+<pre>  40a9d4:	10400012 	beqz	v0,40aa20 &lt;count_bits+0x654&gt;</pre>
+<pre>  40a9d8:	aec20000 	sw	v0,0(s6)</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> used </span><span class="orange">2</span> times </span><span class="orange">mpstat</span></pre>
+<br />

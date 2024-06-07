@@ -1,0 +1,18 @@
+#!/bin/sh
+. /usr/lib/eth-encap/eth_encap.sh
+
+if [ "$POINT" == "END" -a "$DSTMODE" == "FAP" ]; then
+	done_boot=$(cat /tmp/done_boot)
+	nss_support=$(get_qos_nss_enable)
+	if [ "$done_boot" = "DONE" ]; then
+		if [ -n "$nss_support" ] && [ "$nss_support" == "yes" ]; then
+			/etc/init.d/qos reload &
+		else
+			/etc/init.d/qos stop &
+			sleep 5
+			/etc/init.d/qos start &
+		fi
+	fi
+elif [ "$POINT" = "END" -a "$DSTMODE" = "RE" ]; then
+	/etc/init.d/qos stop &
+fi

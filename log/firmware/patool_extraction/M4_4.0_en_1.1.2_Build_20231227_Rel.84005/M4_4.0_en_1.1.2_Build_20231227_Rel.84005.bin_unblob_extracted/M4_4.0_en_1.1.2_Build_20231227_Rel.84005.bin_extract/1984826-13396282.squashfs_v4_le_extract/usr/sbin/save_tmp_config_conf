@@ -1,0 +1,62 @@
+#!/bin/sh
+
+# Copyright (c) 2021 TP Link, Inc.
+#
+# All Rights Reserved.
+
+local cmd=$1
+local conf_range=$2
+local conf_arg=$3
+local lock_file="/var/run/save_tmp_config.lock"
+
+setUpdateFlag() {
+	[ ! -f /etc/tsched.conf.d/update.d/save_tmp_config ] && touch /etc/tsched.conf.d/update.d/save_tmp_config
+}
+
+reloadFunction() {
+	local count=0
+	local range
+	local arg
+
+	[ ! -f /etc/tsched.conf.d/save_tmp_config ] && touch /etc/tsched.conf.d/save_tmp_config
+
+	while [ 1 ]
+	do
+		range=$(uci -c /etc/tsched.conf.d/ get save_tmp_config.@entry[${count}].ranges)
+		arg=$(uci -c /etc/tsched.conf.d/ get save_tmp_config.@entry[${count}].entry_arg)
+		if [ "$range" = "" ] && [ "$arg" = "" ]; then
+			break
+		fi
+		if [ "$arg" = "$conf_arg" ]; then
+			uci -c /etc/tsched.conf.d/ set save_tmp_config.@entry[${count}].ranges="$conf_range"
+			uci -c /etc/tsched.conf.d/ set save_tmp_config.@entry[${count}].entry_arg="$conf_arg"
+			uci -c /etc/tsched.conf.d/ commit save_tmp_config
+			echo "update old conf $conf_arg " > /dev/console
+			return 1
+		fi
+		count=$(($count+1))
+	done
+
+	uci -c /etc/tsched.conf.d/ add save_tmp_config entry
+	uci -c /etc/tsched.conf.d/ set save_tmp_config.@entry[${count}].ranges="$conf_range"
+	uci -c /etc/tsched.conf.d/ set save_tmp_config.@entry[${count}].entry_arg="$conf_arg"
+	uci -c /etc/tsched.conf.d/ commit save_tmp_config
+	echo "register save tmp config $conf_arg" > /dev/console
+}
+
+if [ "$cmd" = "a" ]; then
+	lock $lock_file
+	reloadFunction
+	setUpdateFlag
+	lock -u $lock_file
+elif [ "$cmd" = "d" ]; then
+	lock $lock_file
+	tsched_conf -D  save_tmp_config
+	setUpdateFlag
+	lock -u $lock_file
+else
+	echo "tsched_conf option error" > /dev/console
+fi
+
+# tsched_conf -u save_tmp_config
+

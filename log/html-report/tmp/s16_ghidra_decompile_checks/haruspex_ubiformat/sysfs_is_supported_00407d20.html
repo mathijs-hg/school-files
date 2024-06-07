@@ -1,0 +1,109 @@
+<br />
+<pre>int sysfs_is_supported(libmtd *lib)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  size_t sVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  uint uVar5;</pre>
+<pre>  int *piVar6;</pre>
+<pre>  undefined4 *puVar7;</pre>
+<pre>  undefined4 uVar8;</pre>
+<pre>  char *pcVar9;</pre>
+<pre>  char *pcVar10;</pre>
+<pre>  int iVar11;</pre>
+<pre>  undefined4 uVar12;</pre>
+<pre>  undefined4 *puVar13;</pre>
+<pre>  undefined4 uVar14;</pre>
+<pre>  code *pcVar15;</pre>
+<pre>  int aiStack_138 [2];</pre>
+<pre>  undefined *local_130;</pre>
+<pre>  int local_128;</pre>
+<pre>  char tmp_buf [256];</pre>
+<pre>  </pre>
+<pre>  local_130 = &amp;_gp;</pre>
+<pre>  sVar2 = strlen(lib-&gt</span>td_name);</pre>
+<pre><span class="green">  iVar1 = -(sVar2 + 0x18 &amp; 0xfffffff8)</span></span></pre>
+<pre>  iVar3 = (**(code **)(local_130 + -0x7ed8))(lib-&gt;sysfs_mtd);</pre>
+<pre>  pcVar10 = (char *)((int)&amp;local_130 + iVar1);</pre>
+<pre>  if (iVar3 == 0) {</pre>
+<pre>    piVar6 = (int *)(**(code **)(local_130 + -0x7ef0))();</pre>
+<pre>    iVar3 = *piVar6;</pre>
+<pre>    if (iVar3 == 2) {</pre>
+<pre>      *piVar6 = 0;</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>    puVar7 = *(undefined4 **)(local_130 + -0x7ee8);</pre>
+<pre>    (**(code **)(local_130 + -0x7e90))</pre>
+<pre>              (*puVar7,"%s: error!: cannot open \"%s\"\n","libmtd",lib-&gt;sysfs_mtd);</pre>
+<pre>    uVar12 = *puVar7;</pre>
+<pre>    uVar8 = (**(code **)(local_130 + -0x7e58))(iVar3);</pre>
+<pre>    pcVar15 = *(code **)(local_130 + -0x7e90);</pre>
+<pre>    *(int *)((int)aiStack_138 + iVar1) = iVar3;</pre>
+<pre>    *(undefined4 *)((int)aiStack_138 + iVar1 + 4) = uVar8;</pre>
+<pre>    (*pcVar15)(uVar12,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c);</pre>
+<pre>    return -1;</pre>
+<pre>  }</pre>
+<pre>  do {</pre>
+<pre>    iVar4 = (**(code **)(local_130 + -0x7eb4))(iVar3);</pre>
+<pre>    iVar11 = iVar4 + 0x13;</pre>
+<pre>    if (iVar4 == 0) {</pre>
+<pre>      local_128 = -1;</pre>
+<pre>      break;</pre>
+<pre>    }</pre>
+<pre>    uVar5 = (**(code **)(local_130 + -0x7efc))(iVar11);</pre>
+<pre>    if (0xfe &lt; uVar5) {</pre>
+<pre>      pcVar10 = lib-&gt;sysfs_mtd;</pre>
+<pre>      pcVar15 = *(code **)(local_130 + -0x7e90);</pre>
+<pre>      uVar8 = **(undefined4 **)(local_130 + -0x7ee8);</pre>
+<pre>      *(int *)((int)aiStack_138 + iVar1) = iVar11;</pre>
+<pre>      (*pcVar15)(uVar8,"%s: error!: invalid entry in %s: \"%s\"\n","libmtd",pcVar10);</pre>
+<pre>      puVar7 = (undefined4 *)(**(code **)(local_130 + -0x7ef0))();</pre>
+<pre>      *puVar7 = 0x16;</pre>
+<pre>      (**(code **)(local_130 + -0x7f04))(iVar3);</pre>
+<pre>      return -1;</pre>
+<pre>    }</pre>
+<pre>    iVar4 = (**(code **)(local_130 + -0x7ebc))(iVar11,"mtd%d%s",&amp;local_128,tmp_buf);</pre>
+<pre>  } while (iVar4 != 1);</pre>
+<pre>  iVar3 = (**(code **)(local_130 + -0x7f04))(iVar3);</pre>
+<pre>  if (iVar3 == 0) {</pre>
+<pre>    if (local_128 == -1) {</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>    (**(code **)(local_130 + -0x7ee4))(pcVar10,lib-&gt</span>td_name,local_128);</pre>
+<pre>    iVar3 = (**(code **)(local_130 + -0x7ed4))(pcVar10,0x80000);</pre>
+<pre>    if (iVar3 == -1) {</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>    iVar3 = (**(code **)(local_130 + -0x7f10))(iVar3);</pre>
+<pre>    if (iVar3 == 0) {</pre>
+<pre>      return 1;</pre>
+<pre>    }</pre>
+<pre>    puVar13 = *(undefined4 **)(local_130 + -0x7ee8);</pre>
+<pre>    puVar7 = (undefined4 *)(**(code **)(local_130 + -0x7ef0))();</pre>
+<pre>    uVar8 = *puVar13;</pre>
+<pre>    uVar12 = *puVar7;</pre>
+<pre>    pcVar15 = *(code **)(local_130 + -0x7e90);</pre>
+<pre>    pcVar9 = "%s: error!: close failed on \"%s\"\n";</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    puVar13 = *(undefined4 **)(local_130 + -0x7ee8);</pre>
+<pre>    puVar7 = (undefined4 *)(**(code **)(local_130 + -0x7ef0))();</pre>
+<pre>    pcVar10 = lib-&gt;sysfs_mtd;</pre>
+<pre>    uVar8 = *puVar13;</pre>
+<pre>    pcVar15 = *(code **)(local_130 + -0x7e90);</pre>
+<pre>    uVar12 = *puVar7;</pre>
+<pre>    pcVar9 = "%s: error!: closedir failed on \"%s\"\n";</pre>
+<pre>  }</pre>
+<pre>  (*pcVar15)(uVar8,pcVar9,"libmtd",pcVar10);</pre>
+<pre>  uVar14 = *puVar13;</pre>
+<pre>  uVar8 = (**(code **)(local_130 + -0x7e58))(uVar12);</pre>
+<pre>  pcVar15 = *(code **)(local_130 + -0x7e90);</pre>
+<pre>  *(undefined4 *)((int)aiStack_138 + iVar1) = uVar12;</pre>
+<pre>  *(undefined4 *)((int)aiStack_138 + iVar1 + 4) = uVar8;</pre>
+<pre>  (*pcVar15)(uVar14,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c);</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 9d2e018946b0f5d5</pre>

@@ -1,0 +1,616 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_ubiformat.html" title="./../semgrep_ubiformat.html" >&laquo; Back to semgrep_ubiformat</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>/* WARNING: Removing unreachable block (ram,0x004023e8) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040146c) */</pre>
+<br />
+<pre>int main(int argc,char **argv)</pre>
+<br />
+<pre>{</pre>
+<pre>  bool bVar1;</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  ubi_scan_info *puVar2;</pre>
+<pre>  _Bool _Var3;</pre>
+<pre>  libmtd_t desc;</pre>
+<pre>  uint32_t uVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  uint uVar6;</pre>
+<pre>  libubi_t desc_00;</pre>
+<pre>  SItype SVar7;</pre>
+<pre>  undefined3 extraout_var;</pre>
+<pre>  int *piVar8;</pre>
+<pre>  undefined def;</pre>
+<pre>  char *pcVar9;</pre>
+<pre>  int iVar10;</pre>
+<pre>  SItype arg_a;</pre>
+<pre>  FLO_type in_f12_13;</pre>
+<pre>  FLO_type in_f14_15;</pre>
+<pre>  longlong lVar11;</pre>
+<pre>  ulonglong uVar12;</pre>
+<pre>  ulonglong in_stack_fffffe70;</pre>
+<pre>  char *local_178;</pre>
+<pre>  int local_174;</pre>
+<pre>  ubi_scan_info *local_170;</pre>
+<pre>  mtd_info mtd_info;</pre>
+<pre>  ubigen_info ui;</pre>
+<pre>  mtd_dev_info mtd;</pre>
+<pre>  </pre>
+<pre><span class="green">  desc = libmtd_open()</span></span></pre>
+<pre>  if (desc != (libmtd_t)0x0) {</pre>
+<pre><span class="green">    ubiutils_srand()</span></span></pre>
+<pre><span class="green"><span class="green">    uVar4 = rand()</span></span></span></pre>
+<pre>    args.ec = CONCAT44(args.ec._4_4_,(undefined4)args.ec);</pre>
+<pre>    args.image_sz = CONCAT44(args.image_sz._4_4_,(undefined4)args.image_sz);</pre>
+<pre>LAB_0040118c:</pre>
+<pre>    while( true ) {</pre>
+<pre>      args.image_seq = uVar4;</pre>
+<pre>      local_174 = 0;</pre>
+<pre>      in_stack_fffffe70 = in_stack_fffffe70 &amp; 0xffffffff00000000;</pre>
+<pre><span class="green">      iVar5 = getopt_long(argc,argv,"nh?Vyqve:x:s:O:f:S:",long_options)</span></span></pre>
+<pre>      pcVar9 = optarg;</pre>
+<pre>      if (iVar5 == -1) break;</pre>
+<pre>      uVar4 = args.image_seq;</pre>
+<pre>      switch(iVar5) {</pre>
+<pre>      case 0x3a:</pre>
+<pre>        fprintf(stderr,"%s: error!: parameter is missing\n","ubiformat");</pre>
+<pre>        goto out_close_mtd;</pre>
+<pre>      default:</pre>
+<pre>        fwrite("Use -h for help\n",1,0x10,stderr);</pre>
+<pre>        goto out_close_mtd;</pre>
+<pre>      case 0x3f:</pre>
+<pre>      case 0x68:</pre>
+<pre>        printf("%s\n\n",</pre>
+<pre>               "ubiformat version 1.5.2 - a tool to format MTD devices and flash UBI images");</pre>
+<pre>        printf("%s\n\n",</pre>
+<pre>               "Usage: ubiformat &lt;MTD device node file name&gt; [-s &lt;bytes&gt;] [-O &lt;offs&gt;] [-n]\n\t\t\t[-Q &lt;num&gt;] [-f &lt;file&gt;] [-S &lt;bytes&gt;] [-e &lt;value&gt;] [-x &lt;num&gt;] [-y] [-q] [-v] [-h]\n\t\t\t[--sub-page-size=&lt;bytes&gt;] [--vid-hdr-offset=&lt;offs&gt;] [--no-volume-table]\n\t\t\t[--flash-image=&lt;file&gt;] [--image-size=&lt;bytes&gt;] [--erase-counter=&lt;value&gt;]\n\t\t\t[--image-seq=&lt;num&gt;] [--ubi-ver=&lt;num&gt;] [--yes] [--quiet] [--verbose]\n\t\t\t[--help] [--version]\n\nExample 1: ubiformat /dev/mtd0 -y - format MTD device number 0 and do\n           not ask questions.\nExample 2: ubiformat /dev/mtd0 -q -e 0 - format MTD device number 0,\n           be quiet and force erase counter value 0."</pre>
+<pre>              );</pre>
+<pre>        puts(</pre>
+<pre>            "-s, --sub-page-size=&lt;bytes&gt;  minimum input/output unit used for UBI\n                             headers, e.g. sub-page size in case of NAND\n                             flash (equivalent to the minimum input/output\n                             unit size by default)\n-O, --vid-hdr-offset=&lt;offs&gt;  offset if the VID header from start of the\n                             physical eraseblock (default is the next\n                             minimum I/O unit or sub-page after the EC\n                             header)\n-n, --no-volume-table        only erase all eraseblock and preserve erase\n                             counters, do not write empty volume table\n-f, --flash-image=&lt;file&gt;     flash image file, or \'-\' for stdin\n-S, --image-size=&lt;bytes&gt;     bytes in input, if not reading from file\n-e, --erase-counter=&lt;value&gt;  use &lt;value&gt; as the erase counter value for all\n                             eraseblocks\n-x, --ubi-ver=&lt;num&gt;          UBI version number to put to EC headers\n                             (default is 1)\n-Q, --image-seq=&lt;num&gt;        32-bit UBI image sequence number to use\n                             (by default a random number is picked)\n-y, --yes                    assume the answer is \"yes\" for all question\n                             this program would otherwise ask\n-q, --quiet                  suppress progress percentage information\n-v, --verbose                be verbose\n-h, -?, --help               print help message\n-V, --version                print program version\n"</pre>
+<pre>            );</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>        exit(0);</pre>
+<pre>      case 0x4f:</pre>
+<pre>        args.vid_hdr_offs = simple_strtoul(optarg,&amp;local_174);</pre>
+<pre>        if ((local_174 != 0) || (uVar4 = args.image_seq, args.vid_hdr_offs &lt; 1)) {</pre>
+<pre>          fprintf(stderr,"%s: error!: bad VID header offset: \"%s\"\n","ubiformat",optarg);</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        break;</pre>
+<pre>      case 0x51:</pre>
+<pre>        uVar4 = simple_strtoul(optarg,&amp;local_174);</pre>
+<pre>        if (local_174 != 0) {</pre>
+<pre>          fprintf(stderr,"%s: error!: bad UBI image sequence number: \"%s\"\n","ubiformat",optarg);</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        break;</pre>
+<pre>      case 0x53:</pre>
+<pre>        lVar11 = ubiutils_get_bytes(optarg);</pre>
+<pre>        uVar4 = args.image_seq;</pre>
+<pre>        args.image_sz = lVar11;</pre>
+<pre>        if (lVar11 &lt; 1) {</pre>
+<pre>          fprintf(stderr,"%s: error!: bad image-size: \"%s\"\n","ubiformat",optarg);</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        break;</pre>
+<pre>      case 0x56:</pre>
+<pre>        printf("%s %s\n","ubiformat","1.5.2");</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>        exit(0);</pre>
+<pre>      case 0x65:</pre>
+<pre>        uVar12 = strtoull(optarg,&amp;local_178,0);</pre>
+<pre>        if ((*pcVar9 == '\0') || (*local_178 != '\0')) {</pre>
+<pre>          in_stack_fffffe70 = in_stack_fffffe70 &amp; 0xffffffff00000000 | ZEXT48(pcVar9);</pre>
+<pre>          fprintf(stderr,"%s: error!: %s: unable to parse the number \'%s\'\n","ubiformat",</pre>
+<pre>                  "strtoull",pcVar9);</pre>
+<pre>          local_174 = 1;</pre>
+<pre>        }</pre>
+<pre>        args.ec = uVar12;</pre>
+<pre>        if ((local_174 != 0) || ((longlong)uVar12 &lt; 0)) {</pre>
+<pre>          fprintf(stderr,"%s: error!: bad erase counter value: \"%s\"\n","ubiformat",optarg,</pre>
+<pre>                  in_stack_fffffe70);</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        if (0x7ffffffe &lt; (longlong)uVar12) {</pre>
+<pre>          fprintf(stderr,"%s: error!: too high erase %llu, counter, max is %u\n","ubiformat");</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        args._0_4_ = args._0_4_ | 8;</pre>
+<pre>        uVar4 = args.image_seq;</pre>
+<pre>        break;</pre>
+<pre>      case 0x66:</pre>
+<pre>        args.image = optarg;</pre>
+<pre>        break;</pre>
+<pre>      case 0x6e:</pre>
+<pre>        args._0_4_ = args._0_4_ | 0x10;</pre>
+<pre>        break;</pre>
+<pre>      case 0x71:</pre>
+<pre>        args._0_4_ = args._0_4_ | 2;</pre>
+<pre>        break;</pre>
+<pre>      case 0x73:</pre>
+<pre>        lVar11 = ubiutils_get_bytes(optarg);</pre>
+<pre>        args.subpage_size = (int)lVar11;</pre>
+<pre>        if (args.subpage_size &lt; 1) {</pre>
+<pre>          fprintf(stderr,"%s: error!: bad sub-page size: \"%s\"\n","ubiformat",optarg);</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        uVar4 = args.image_seq;</pre>
+<pre>        if ((args.subpage_size - 1U &amp; args.subpage_size |</pre>
+<pre>            (uint)(args.subpage_size - 1U &lt; (uint)args.subpage_size) +</pre>
+<pre>            ((args.subpage_size &gt;&gt; 0x1f) - 1U) &amp; args.subpage_size &gt;&gt; 0x1f) != 0) {</pre>
+<pre>          fprintf(stderr,"%s: error!: sub-page size should be power of 2\n","ubiformat");</pre>
+<pre>          goto out_close_mtd;</pre>
+<pre>        }</pre>
+<pre>        break;</pre>
+<pre>      case 0x76:</pre>
+<pre>        args._0_4_ = args._0_4_ | 4;</pre>
+<pre>        break;</pre>
+<pre>      case 0x78:</pre>
+<pre>        goto switchD_00401200_caseD_78;</pre>
+<pre>      case 0x79:</pre>
+<pre>        args._0_4_ = args._0_4_ | 1;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    if ((args._0_4_ &amp; 6) == 6) {</pre>
+<pre>      fprintf(stderr,"%s: error!: using \"-q\" and \"-v\" at the same time does not make sense\n",</pre>
+<pre>              "ubiformat");</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    if (argc == optind) {</pre>
+<pre>      fprintf(stderr,"%s: error!: MTD device name was not specified (use -h for help)\n","ubiformat"</pre>
+<pre>             );</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    if (optind != argc + -1) {</pre>
+<pre>      fprintf(stderr,"%s: error!: more then one MTD device specified (use -h for help)\n",</pre>
+<pre>              "ubiformat");</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    if ((args.image != (char *)0x0) &amp;&amp; ((args._0_4_ &amp; 0x10) != 0)) {</pre>
+<pre>      fprintf(stderr,"%s: error!: -n cannot be used together with -f\n","ubiformat");</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    args.node = argv[optind];</pre>
+<pre>    iVar5 = mtd_get_info(desc,&amp</span>td_info);</pre>
+<pre>    if (iVar5 != 0) {</pre>
+<pre>      piVar8 = __errno_location();</pre>
+<pre>      iVar5 = *piVar8;</pre>
+<pre>      if (iVar5 == 0x13) {</pre>
+<pre>        fprintf(stderr,"%s: error!: MTD is not present\n","ubiformat");</pre>
+<pre>        iVar5 = *piVar8;</pre>
+<pre>      }</pre>
+<pre>      fprintf(stderr,"%s: error!: cannot get MTD information\n","ubiformat");</pre>
+<pre>LAB_00402154:</pre>
+<pre>      __stream = stderr;</pre>
+<pre>      pcVar9 = strerror(iVar5);</pre>
+<pre>      fprintf(__stream,"%*serror %d (%s)\n",0xb,&amp;DAT_0040e38c,iVar5,pcVar9);</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    iVar5 = mtd_get_dev_info(desc,args.node,&amp</span>td);</pre>
+<pre>    if (iVar5 != 0) {</pre>
+<pre>      piVar8 = __errno_location();</pre>
+<pre>      iVar5 = *piVar8;</pre>
+<pre>      pcVar9 = "%s: error!: cannot get information about \"%s\"\n";</pre>
+<pre>LAB_00402260:</pre>
+<pre>      fprintf(stderr,pcVar9,"ubiformat",args.node);</pre>
+<pre>      goto LAB_00402154;</pre>
+<pre>    }</pre>
+<pre>    uVar6 = mtd.min_io_size &gt;&gt; 0x1f;</pre>
+<pre>    if (((mtd.min_io_size | uVar6) == 0) ||</pre>
+<pre>       ((mtd.min_io_size - 1U &amp; mtd.min_io_size |</pre>
+<pre>        (uint)(mtd.min_io_size - 1U &lt; (uint)mtd.min_io_size) + (uVar6 - 1) &amp; uVar6) != 0)) {</pre>
+<pre>      fprintf(stderr,"%s: error!: min. I/O size is %d, but should be power of 2\n","ubiformat");</pre>
+<pre>      goto out_close_mtd;</pre>
+<pre>    }</pre>
+<pre>    if ((mtd_info._12_4_ &amp; 1) == 0) {</pre>
+<pre>      if (args.subpage_size == 0) {</pre>
+<pre>        fprintf(stderr,</pre>
+<pre>                "%s: warning!: your MTD system is old and it is impossible to detect sub-page size. Use -s to get rid of this warning\n"</pre>
+<pre>                ,"ubiformat");</pre>
+<pre>        printf("%s: assume sub-page to be %d\n","ubiformat",mtd.subpage_size);</pre>
+<pre>        goto LAB_00401bf8;</pre>
+<pre>      }</pre>
+<pre>LAB_004016ec:</pre>
+<pre>      mtd.subpage_size = args.subpage_size;</pre>
+<pre>      args.manual_subpage = 1;</pre>
+<pre>LAB_004016f8:</pre>
+<pre>      if (mtd.min_io_size &lt; args.subpage_size) {</pre>
+<pre>        fprintf(stderr,"%s: error!: sub-page cannot be larger than min. I/O unit\n","ubiformat");</pre>
+<pre>        goto out_close_mtd;</pre>
+<pre>      }</pre>
+<pre>      if (args.subpage_size == 0) {</pre>
+<pre>        trap(0x1c00);</pre>
+<pre>      }</pre>
+<pre>      if (mtd.min_io_size % args.subpage_size != 0) {</pre>
+<pre>        fprintf(stderr,"%s: error!: min. I/O unit size should be multiple of sub-page size\n",</pre>
+<pre>                "ubiformat");</pre>
+<pre>        goto out_close_mtd;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if ((args.subpage_size != 0) &amp;&amp; (args.subpage_size != mtd.subpage_size)) goto LAB_004016ec;</pre>
+<pre>LAB_00401bf8:</pre>
+<pre>      if (args.manual_subpage != 0) goto LAB_004016f8;</pre>
+<pre>    }</pre>
+<pre><span class="green">    args.node_fd = open64(args.node,2)</span></span></pre>
+<pre>    if (args.node_fd == -1) {</pre>
+<pre>      piVar8 = __errno_location();</pre>
+<pre>      iVar5 = *piVar8;</pre>
+<pre>      pcVar9 = "%s: error!: cannot open \"%s\"\n";</pre>
+<pre>      goto LAB_00402260;</pre>
+<pre>    }</pre>
+<pre>    if (args.vid_hdr_offs != 0) {</pre>
+<pre>      if ((args.vid_hdr_offs &amp; 7U) != 0) {</pre>
+<pre>        fprintf(stderr,"%s: error!: VID header offset has to be multiple of min. I/O unit size\n",</pre>
+<pre>                "ubiformat");</pre>
+<pre>        goto out_close;</pre>
+<pre>      }</pre>
+<pre>      if (mtd.eb_size &lt;= args.vid_hdr_offs + 0x3f) {</pre>
+<pre>        fprintf(stderr,"%s: error!: bad VID header offset\n","ubiformat");</pre>
+<pre>        goto out_close;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    if ((mtd._248_4_ &amp; 1) == 0) {</pre>
+<pre>      pcVar9 = "%s: error!: mtd%d (%s) is a read-only device\n";</pre>
+<pre>      uVar12 = in_stack_fffffe70 &amp; 0xffffffff00000000 | ZEXT48(args.node);</pre>
+<pre>LAB_004021c8:</pre>
+<pre>      fprintf(stderr,pcVar9,"ubiformat",mtd.mtd_num,uVar12);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre><span class="green">      desc_00 = libubi_open()</span></span></pre>
+<pre>      if (desc_00 != (libubi_t)0x0) {</pre>
+<pre>        iVar5 = mtd_num2ubi_dev(desc_00,mtd.mtd_num,&amp;local_174);</pre>
+<pre>        libubi_close(desc_00);</pre>
+<pre>        if (iVar5 == 0) {</pre>
+<pre>          pcVar9 = "%s: error!: please, first detach mtd%d (%s) from ubi%d\n";</pre>
+<pre>          uVar12 = CONCAT44(local_174,args.node);</pre>
+<pre>          goto LAB_004021c8;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      iVar5 = 0;</pre>
+<pre>      if ((args._0_4_ &amp; 2) == 0) {</pre>
+<pre>        printf("%s: mtd%d (%s), size ","ubiformat",mtd.mtd_num,mtd.type_str);</pre>
+<pre>        ubiutils_print_bytes(in_stack_fffffe70,(int)mtd.size);</pre>
+<pre>        printf(", %d eraseblocks of ",mtd.eb_cnt);</pre>
+<pre>        ubiutils_print_bytes(in_stack_fffffe70,mtd.eb_size);</pre>
+<pre>        printf(", min. I/O size %d bytes\n",mtd.min_io_size);</pre>
+<pre>        if ((args._0_4_ &amp; 2) == 0) {</pre>
+<pre>          iVar5 = 2 - (uint)((args._0_4_ &amp; 4) == 0);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      iVar5 = ubi_scan(&amp</span>td,args.node_fd,&amp;local_170,iVar5);</pre>
+<pre>      if (iVar5 != 0) {</pre>
+<pre>        pcVar9 = "%s: error!: failed to scan mtd%d (%s)\n";</pre>
+<pre>        uVar12 = in_stack_fffffe70 &amp; 0xffffffff00000000 | ZEXT48(args.node);</pre>
+<pre>        goto LAB_004021c8;</pre>
+<pre>      }</pre>
+<pre>      iVar5 = local_170-&gt;good_cnt;</pre>
+<pre>      if (iVar5 == 0) {</pre>
+<pre>        fprintf(stderr,"%s: error!: all %d eraseblocks are bad\n","ubiformat",local_170-&gt;bad_cnt);</pre>
+<pre>      }</pre>
+<pre>      else if ((iVar5 &lt; 2) &amp;&amp; (((args._0_4_ &amp; 0x10) == 0 || (args.image != (char *)0x0)))) {</pre>
+<pre>        fprintf(stderr,"%s: error!: too few non-bad eraseblocks (%d) on mtd%d\n","ubiformat",iVar5,</pre>
+<pre>                mtd.mtd_num);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if ((args._0_4_ &amp; 2) == 0) {</pre>
+<pre>          if (local_170-&gt;ok_cnt != 0) {</pre>
+<pre>            printf("%s: %d eraseblocks have valid erase counter, mean value is %lld\n","ubiformat",</pre>
+<pre>                   local_170-&gt;ok_cnt,local_170,*(undefined4 *)&amp;local_170-&gt</span>ean_ec);</pre>
+<pre>          }</pre>
+<pre>          if (local_170-&gt;empty_cnt != 0) {</pre>
+<pre>            printf("%s: %d eraseblocks are supposedly empty\n","ubiformat");</pre>
+<pre>          }</pre>
+<pre>          if (local_170-&gt;corrupted_cnt != 0) {</pre>
+<pre>            printf("%s: %d corrupted erase counters\n","ubiformat");</pre>
+<pre>          }</pre>
+<pre>          puVar2 = local_170;</pre>
+<pre>          if (local_170-&gt;bad_cnt != 0) {</pre>
+<pre>            printf("%s: %d bad eraseblocks found, numbers: ","ubiformat");</pre>
+<pre>            iVar10 = 0;</pre>
+<pre>            bVar1 = true;</pre>
+<pre>            iVar5 = mtd.eb_cnt;</pre>
+<pre>            while (iVar10 &lt; iVar5) {</pre>
+<pre>              if (puVar2-&gt;ec[iVar10] == 0xfffffffc) {</pre>
+<pre>                if (bVar1) {</pre>
+<pre>                  printf("%d",iVar10);</pre>
+<pre>                  bVar1 = false;</pre>
+<pre>                  iVar10 = iVar10 + 1;</pre>
+<pre>                  iVar5 = mtd.eb_cnt;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  printf(", %d",iVar10);</pre>
+<pre>                  iVar10 = iVar10 + 1;</pre>
+<pre>                  iVar5 = mtd.eb_cnt;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar10 = iVar10 + 1;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            putchar(10);</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        if (local_170-&gt;alien_cnt == 0) {</pre>
+<pre>LAB_004018ec:</pre>
+<pre>          uVar6 = args._0_4_;</pre>
+<pre>          if (((args._0_4_ &amp; 8) == 0) &amp;&amp; (iVar5 = local_170-&gt;good_cnt, local_170-&gt;empty_cnt &lt; iVar5)</pre>
+<pre>             ) {</pre>
+<pre>            arg_a = local_170-&gt;ok_cnt;</pre>
+<pre>            __floatsidf(arg_a);</pre>
+<pre>            __floatsidf(iVar5);</pre>
+<pre>            __divdf3(in_f12_13,in_f14_15);</pre>
+<pre>            __muldf3(in_f12_13,in_f14_15);</pre>
+<pre>            SVar7 = __fixdfsi(in_f12_13);</pre>
+<pre>            if (SVar7 &lt; 0x32) {</pre>
+<pre>              if ((uVar6 &amp; 3) != 3) {</pre>
+<pre>                fprintf(stderr,"%s: warning!: only %d of %d eraseblocks have valid erase counter\n",</pre>
+<pre>                        "ubiformat",arg_a,iVar5);</pre>
+<pre>                printf("%s: erase counter 0 will be used for all eraseblocks\n","ubiformat");</pre>
+<pre>                printf("%s: note, arbitrary erase counter value may be specified using -e option\n",</pre>
+<pre>                       "ubiformat");</pre>
+<pre>              }</pre>
+<pre>              if ((args._0_4_ &amp; 1) == 0) {</pre>
+<pre>                iVar5 = want_exit();</pre>
+<pre>                if (iVar5 != 0) goto LAB_00401ea0;</pre>
+<pre>              }</pre>
+<pre>              args._0_4_ = args._0_4_ | 8;</pre>
+<pre>              args.ec = 0;</pre>
+<pre>            }</pre>
+<pre>            else if (SVar7 &lt; 0x5f) {</pre>
+<pre>              if ((uVar6 &amp; 3) != 3) {</pre>
+<pre>                fprintf(stderr,"%s: warning!: only %d of %d eraseblocks have valid erase counter\n",</pre>
+<pre>                        "ubiformat",arg_a,iVar5);</pre>
+<pre>                printf("%s: mean erase counter %lld will be used for the rest of eraseblock\n",</pre>
+<pre>                       "ubiformat",*(undefined4 *)&amp;local_170-&gt</span>ean_ec,</pre>
+<pre>                       *(undefined4 *)((int)&amp;local_170-&gt</span>ean_ec + 4));</pre>
+<pre>              }</pre>
+<pre>              if ((args._0_4_ &amp; 1) == 0) {</pre>
+<pre>                iVar5 = want_exit();</pre>
+<pre>                if (iVar5 != 0) goto LAB_00401ea0;</pre>
+<pre>              }</pre>
+<pre>              args.ec = local_170-&gt</span>ean_ec;</pre>
+<pre>              args._0_4_ = args._0_4_ | 8;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          args.ec._4_4_ = (undefined4)((ulonglong)args.ec &gt;&gt; 0x20);</pre>
+<pre>          if ((args._0_4_ &amp; 10) == 8) {</pre>
+<pre>            printf("%s: use erase counter %lld for all eraseblocks\n","ubiformat",</pre>
+<pre>                   (undefined4)args.ec,args.ec._4_4_);</pre>
+<pre>          }</pre>
+<pre>          iVar5 = mtd.eb_size;</pre>
+<pre>          ubigen_info_init(&amp;ui,mtd.eb_size,mtd.min_io_size,mtd.subpage_size,args.vid_hdr_offs,</pre>
+<pre>                           args.ubi_ver,args.image_seq);</pre>
+<pre>          def = (undefined)iVar5;</pre>
+<pre>          iVar5 = local_170-&gt;vid_hdr_offs;</pre>
+<pre>          if ((iVar5 != -1) &amp;&amp; (iVar5 != ui.vid_hdr_offs)) {</pre>
+<pre>            if ((args._0_4_ &amp; 3) != 3) {</pre>
+<pre>              fprintf(stderr,</pre>
+<pre>                      "%s: warning!: VID header and data offsets on flash are %d and %d, which is different to requested offsets %d and %d\n"</pre>
+<pre>                      ,"ubiformat",iVar5,local_170-&gt;data_offs,ui.vid_hdr_offs,ui.data_offs);</pre>
+<pre>              def = 0xe4;</pre>
+<pre>              printf("%s: use new offsets %d and %d? ","ubiformat",ui.vid_hdr_offs,ui.data_offs);</pre>
+<pre>            }</pre>
+<pre>            if ((args._0_4_ &amp; 1) == 0) {</pre>
+<pre>              _Var3 = prompt("continue?",(_Bool)def);</pre>
+<pre>              if (CONCAT31(extraout_var,_Var3) != 0) goto LAB_00401ae0;</pre>
+<pre>              ubigen_info_init(&amp;ui,mtd.eb_size,mtd.min_io_size,0,local_170-&gt;vid_hdr_offs,</pre>
+<pre>                               args.ubi_ver,args.image_seq);</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>LAB_00401ae0:</pre>
+<pre>              if ((args._0_4_ &amp; 3) == 1) {</pre>
+<pre>                puts("yes");</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            printf("%s: use offsets %d and %d\n","ubiformat",ui.vid_hdr_offs,ui.data_offs);</pre>
+<pre>          }</pre>
+<pre>          if (args.image == (char *)0x0) {</pre>
+<pre>            iVar5 = format(desc,&amp</span>td,&amp;ui,local_170,0,args._0_4_ &gt;&gt; 4 &amp; 1);</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar5 = flash_image(desc,&amp</span>td,&amp;ui,local_170);</pre>
+<pre>            if (iVar5 &lt; 0) goto out_free;</pre>
+<pre>            iVar5 = format(desc,&amp</span>td,&amp;ui,local_170,iVar5,1);</pre>
+<pre>          }</pre>
+<pre>          if (iVar5 == 0) {</pre>
+<pre>            ubi_scan_free(local_170);</pre>
+<pre>            close(args.node_fd);</pre>
+<pre>            libmtd_close(desc);</pre>
+<pre>            iVar5 = 0;</pre>
+<pre>            goto LAB_004015cc;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          if ((args._0_4_ &amp; 3) != 3) {</pre>
+<pre>            fprintf(stderr,"%s: warning!: %d of %d eraseblocks contain non-UBI data\n","ubiformat",</pre>
+<pre>                    local_170-&gt;alien_cnt,local_170-&gt;good_cnt);</pre>
+<pre>          }</pre>
+<pre>          if ((args._0_4_ &amp; 1) != 0) goto LAB_004018ec;</pre>
+<pre>          iVar5 = want_exit();</pre>
+<pre>          if (iVar5 == 0) goto LAB_004018ec;</pre>
+<pre>LAB_00401ea0:</pre>
+<pre>          if ((args._0_4_ &amp; 3) == 1) {</pre>
+<pre>            puts("yes");</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>out_free:</pre>
+<pre>      ubi_scan_free(local_170);</pre>
+<pre>    }</pre>
+<pre>out_close:</pre>
+<pre>    close(args.node_fd);</pre>
+<pre>    goto out_close_mtd;</pre>
+<pre>  }</pre>
+<pre>  fprintf(stderr,"%s: error!: MTD subsystem is not present\n","ubiformat");</pre>
+<pre>  iVar5 = -1;</pre>
+<pre>LAB_004015cc:</pre>
+<pre>  args.ec._4_4_ = (undefined4)((ulonglong)args.ec &gt;&gt; 0x20);</pre>
+<pre>  args.image_sz._4_4_ = (undefined4)((ulonglong)args.image_sz &gt;&gt; 0x20);</pre>
+<pre>  return iVar5;</pre>
+<pre>switchD_00401200_caseD_78:</pre>
+<pre>  args.ubi_ver = simple_strtoul(optarg,&amp;local_174);</pre>
+<pre>  if ((local_174 != 0) || (uVar4 = args.image_seq, args.ubi_ver &lt; 0)) goto LAB_00401248;</pre>
+<pre>  goto LAB_0040118c;</pre>
+<pre>LAB_00401248:</pre>
+<pre>  fprintf(stderr,"%s: error!: bad UBI version: \"%s\"\n","ubiformat",optarg);</pre>
+<pre>out_close_mtd:</pre>
+<pre>  libmtd_close(desc);</pre>
+<pre>  iVar5 = -1;</pre>
+<pre>  goto LAB_004015cc;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] f86971734fbbfadd</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

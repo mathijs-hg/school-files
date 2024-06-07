@@ -1,0 +1,91 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>undefined4 iw_get_stats(int param_1,char *param_2,undefined2 *param_3,int param_4,int param_5)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  undefined4 uVar2;</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  size_t sVar3;</pre>
+<pre>  char *pcVar4;</pre>
+<pre>  char *pcVar5;</pre>
+<pre>  char *local_128;</pre>
+<pre>  undefined4 local_110;</pre>
+<pre>  char acStack_10c [16];</pre>
+<pre>  undefined2 *local_fc;</pre>
+<pre>  undefined2 local_f8;</pre>
+<pre>  undefined2 local_f6;</pre>
+<pre>  </pre>
+<pre>  if ((param_5 == 0) || (*(byte *)(param_4 + 0x118) &lt; 0xc)) {</pre>
+<pre><span class="green">    __stream = fopen("/proc/net/wireless","r")</span></span></pre>
+<pre>    if (__stream == (FILE *)0x0) {</pre>
+<pre>      uVar2 = 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      do {</pre>
+<pre><span class="green">        pcVar5 = fgets(acStack_10c,0xff,__stream)</span></span></pre>
+<pre>        if (pcVar5 == (char *)0x0) {</pre>
+<pre>          fclose(__stream);</pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        local_128 = acStack_10c;</pre>
+<pre>        while ((*local_128 != '\0' &amp;&amp; ((*(ushort *)(__ctype_b + *local_128 * 2) &amp; 0x20) != 0))) {</pre>
+<pre>          local_128 = local_128 + 1;</pre>
+<pre>        }</pre>
+<pre>        sVar3 = strlen(param_2);</pre>
+<pre><span class="green">        iVar1 = strncmp(local_128,param_2,sVar3)</span></span></pre>
+<pre>      } while ((iVar1 != 0) || (sVar3 = strlen(param_2), local_128[sVar3] != ':'));</pre>
+<pre>      pcVar5 = strchr(local_128,0x3a);</pre>
+<pre><span class="green">      pcVar5 = strtok(pcVar5 + 1," ")</span></span></pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%X",&amp;local_110)</span></span></span></pre>
+<pre>      *param_3 = (short)local_110;</pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre>      pcVar4 = strchr(pcVar5,0x2e);</pre>
+<pre>      if (pcVar4 != (char *)0x0) {</pre>
+<pre>        *(byte *)((int)param_3 + 5) = *(byte *)((int)param_3 + 5) | 1;</pre>
+<pre>      }</pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",&amp;local_110)</span></span></span></pre>
+<pre>      *(undefined *)(param_3 + 1) = (undefined)local_110;</pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre>      pcVar4 = strchr(pcVar5,0x2e);</pre>
+<pre>      if (pcVar4 != (char *)0x0) {</pre>
+<pre>        *(byte *)((int)param_3 + 5) = *(byte *)((int)param_3 + 5) | 2;</pre>
+<pre>      }</pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",&amp;local_110)</span></span></span></pre>
+<pre>      *(undefined *)((int)param_3 + 3) = (undefined)local_110;</pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre>      pcVar4 = strchr(pcVar5,0x2e);</pre>
+<pre>      if (pcVar4 != (char *)0x0) {</pre>
+<pre>        *(char *)((int)param_3 + 5) = *(char *)((int)param_3 + 5) + '\x04';</pre>
+<pre>      }</pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",&amp;local_110)</span></span></span></pre>
+<pre>      *(undefined *)(param_3 + 2) = (undefined)local_110;</pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",param_3 + 4)</span></span></span></pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",param_3 + 6)</span></span></span></pre>
+<pre><span class="green">      pcVar5 = strtok((char *)0x0," ")</span></span></pre>
+<pre><span class="green"><span class="green">      sscanf(pcVar5,"%d",param_3 + 0xc)</span></span></span></pre>
+<pre>      fclose(__stream);</pre>
+<pre>      uVar2 = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_f8 = 0x20;</pre>
+<pre>    local_f6 = 1;</pre>
+<pre>    local_fc = param_3;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_10c,param_2,0x10)</span></span></span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_10c,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar1 = ioctl(param_1,0x8b0f,acStack_10c);</pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre>      uVar2 = 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      uVar2 = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return uVar2;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] e3995c290da9d1d3</pre>

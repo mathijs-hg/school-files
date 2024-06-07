@@ -1,0 +1,583 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 18:[0m
+[0m    DEBUG=echo[0m
+[33m    ^---^ SC2209 (warning): Use var=$(command) to assign output (or quote to assign string).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 28:[0m
+[0m        wpa_cli -g /var/run/hostapd/global raw REMOVE $1[0m
+[32m                                                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        wpa_cli -g /var/run/hostapd/global raw REMOVE "$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 29:[0m
+[0m        rm /var/run/hostapd-$1.lock[0m
+[32m                            ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        rm /var/run/hostapd-"$1".lock
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 32:[0m
+[0m        wpa_cli -g /var/run/wpa_supplicantglobal  interface_remove  $1[0m
+[32m                                                                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        wpa_cli -g /var/run/wpa_supplicantglobal  interface_remove  "$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 33:[0m
+[0m        rm /var/run/wpa_supplicant-$1.lock[0m
+[32m                                   ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        rm /var/run/wpa_supplicant-"$1".lock
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 42:[0m
+[0m    [ ! -d /sys/class/net/$1 ] && return[0m
+[32m                          ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    [ ! -d /sys/class/net/"$1" ] && return
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 47:[0m
+[0m    uci_revert_state wireless $1 up [0m
+[32m                              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    uci_revert_state wireless "$1" up 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 56:[0m
+[0m    local _vif="$1"[0m
+[33m    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 57:[0m
+[0m    local vif="$2"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 58:[0m
+[0m    if [ "$vif" == "$_vif" ]; then[0m
+[33m                ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 64:[0m
+[0m    local vif="$1"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 65:[0m
+[0m    local is_wps="0"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 73:[0m
+[0m    if [ "$is_wps" == "1" ]; then[0m
+[33m                   ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 74:[0m
+[0m        config_iwpriv_set $vif WscConfMode 7[0m
+[32m                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        config_iwpriv_set "$vif" WscConfMode 7
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 75:[0m
+[0m        config_iwpriv_set $vif WscConfStatus 2[0m
+[32m                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        config_iwpriv_set "$vif" WscConfStatus 2
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 80:[0m
+[0m    local vif="$1"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 83:[0m
+[0m    local enc key mode ifname wds channel=""[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 85:[0m
+[0m    local country txpower country[0m
+[33m    ^---------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 106:[0m
+[0m    local band[0m
+[33m    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 112:[0m
+[0m    [ "$vaptype" = "backhaul" -a "ap" = "$mode" ] &&  {[0m
+[33m                              ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 117:[0m
+[0m    iwpriv "$vif" set "HideSSID=$hidden"[0m
+[33m                                ^-----^ SC2154 (warning): hidden is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 216:[0m
+[0m    case "$macfilter_sec" in[0m
+[33m          ^------------^ SC2154 (warning): macfilter_sec is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 267:[0m
+[0m    local maxsta[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 269:[0m
+[0m    [ "$band" = "5g" -o "$band" = "2g" ] && {[0m
+[33m                     ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 290:[0m
+[0m    config_wps $vif[0m
+[32m               ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    config_wps "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 292:[0m
+[0m    wifiextend set_edcca $vif[0m
+[32m                         ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    wifiextend set_edcca "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 303:[0m
+[0m    local vif="$1"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 306:[0m
+[0m    local enc key mode ifname wds channel=""[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 319:[0m
+[0m    tpdbg "setup_vif_sta ifname($ifname) ssid($ssid) bssid($bssid) encrytion($enc) password($key)"[0m
+[33m                                                           ^----^ SC2154 (warning): bssid is referenced but not assigned (did you mean 'ssid'?).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 342:[0m
+[0m    rm -f /var/run/wpa_supplicant-$vif.conf[0m
+[32m                                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    rm -f /var/run/wpa_supplicant-"$vif".conf
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 343:[0m
+[0m    cat > /var/run/wpa_supplicant-$vif.conf <<EOF[0m
+[32m                                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    cat > /var/run/wpa_supplicant-"$vif".conf <<EOF
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 355:[0m
+[0m    local vif="$1" mode="$2" brname="$3" start_hostapd="$4" start_wapid="$5"[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 365:[0m
+[0m                uci_revert_state wireless $vif up [0m
+[32m                                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                uci_revert_state wireless "$vif" up 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 374:[0m
+[0m                    touch /var/run/wpa_supplicant-update-$vif.lock[0m
+[32m                                                         ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    touch /var/run/wpa_supplicant-update-"$vif".lock
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 377:[0m
+[0m                        uci_revert_state wireless $vif up [0m
+[32m                                                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                        uci_revert_state wireless "$vif" up 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 380:[0m
+[0m                        rm /var/run/wpa_supplicant-update-$vif.lock[0m
+[32m                                                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                        rm /var/run/wpa_supplicant-update-"$vif".lock
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 383:[0m
+[0m                    rm /var/run/wpa_supplicant-update-$vif.lock[0m
+[32m                                                      ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    rm /var/run/wpa_supplicant-update-"$vif".lock
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 395:[0m
+[0m	local section="$1"[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 397:[0m
+[0m	mac=${mac//-/:}[0m
+[33m            ^---------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 403:[0m
+[0m    local vif="$1" device="$2"    [0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 404:[0m
+[0m    local start_hostapd= vif_txpower= nosbeacon= wlanaddr=""[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                        ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+[33m                         ^---------^ SC2034 (warning): vif_txpower appears unused. Verify use (or export if used externally).[0m
+[33m                                     ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+[33m                                      ^-------^ SC2034 (warning): nosbeacon appears unused. Verify use (or export if used externally).[0m
+[33m                                                ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+[33m                                                 ^------^ SC2034 (warning): wlanaddr appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 405:[0m
+[0m    local wlanmode disabled vaptype[0m
+[33m    ^-----------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------^ SC2034 (warning): wlanmode appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 414:[0m
+[0m    if [ ! -d /sys/class/net/${ifname} ]; then[0m
+[32m                             ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    if [ ! -d /sys/class/net/"${ifname}" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 415:[0m
+[0m        ifconfig  ${ifname} up[0m
+[32m                  ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        ifconfig  "${ifname}" up
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 421:[0m
+[0m    [ $? -ne 0 ] && {[0m
+[32m      ^-- SC2181 (style): Check exit code directly with e.g. 'if ! mycmd;', not indirectly with $?.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 429:[0m
+[0m    local net_cfg [0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 430:[0m
+[0m    local bridge=[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 448:[0m
+[0m    local vlanid=3 gvlan=2[0m
+[33m    ^------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^----^ SC2034 (warning): vlanid appears unused. Verify use (or export if used externally).[0m
+[33m                   ^---^ SC2034 (warning): gvlan appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 449:[0m
+[0m    local start_hostapd= start_wapid=[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                        ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 456:[0m
+[0m            if [ -d /sys/class/net/$vif ]; then[0m
+[32m                                   ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            if [ -d /sys/class/net/"$vif" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 457:[0m
+[0m                local brname=[0m
+[33m                ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 461:[0m
+[0m                [ "$disabled" = "1" -o "$dev_disabled" = "1" ] && {[0m
+[33m                                    ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 462:[0m
+[0m                    [ -n "$brname" ] && [ -e /sys/class/net/$brname/brif/$vif ] && {[0m
+[32m                                                            ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                         ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    [ -n "$brname" ] && [ -e /sys/class/net/"$brname"/brif/"$vif" ] && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 463:[0m
+[0m                        brctl delif $brname $vif[0m
+[32m                                    ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                        brctl delif "$brname" "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 465:[0m
+[0m                        [ "$?" = "0" ] && brchanged=1[0m
+[32m                          ^--^ SC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 470:[0m
+[0m                local up=$(uci_get_state wireless.$vif.up)[0m
+[33m                ^------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-- SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                         ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                local up=$(uci_get_state wireless."$vif".up)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 493:[0m
+[0m                 [ "backhaul" == "$vif_type" ] && wifiextend set_backhaul_down "$vif"[0m
+[33m                              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                  ^-------^ SC2154 (warning): vif_type is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 495:[0m
+[0m                 [ -n "$brname" ] && [ ! -e /sys/class/net/$brname/brif/$vif ] && {[0m
+[32m                                                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                        ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                 [ -n "$brname" ] && [ ! -e /sys/class/net/"$brname"/brif/"$vif" ] && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 498:[0m
+[0m                    [ "$?" = "0" ] && brchanged=1[0m
+[32m                      ^--^ SC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 509:[0m
+[0m    local vif="$1" action="$2" start_hostapd= start_wapid= hasvif=[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                                             ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+[33m                                                          ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 510:[0m
+[0m    local net_cfg= brname=[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                  ^-- SC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 511:[0m
+[0m    local mode phy disabled[0m
+[33m    ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 512:[0m
+[0m    local is_main_vif=[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 521:[0m
+[0m    [ -z "$mode" -o -z "phy" ] && return[0m
+[33m                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[31m                        ^-^ SC2157 (error): Argument to -z is always false due to literal strings.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 525:[0m
+[0m    [ -d /sys/class/net/$vif ] && hasvif="1"[0m
+[32m                        ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    [ -d /sys/class/net/"$vif" ] && hasvif="1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 528:[0m
+[0m        [ -n "$hasvif" ] && down_vap $vif[0m
+[32m                                     ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        [ -n "$hasvif" ] && down_vap "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 535:[0m
+[0m        [ -n "$hasvif" -a "$is_main_vif" = "false" ] && down_vap $vif[0m
+[33m                       ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[32m                                                                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        [ -n "$hasvif" -a "$is_main_vif" = "false" ] && down_vap "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 538:[0m
+[0m    [ -z "$hasvif" -o "$action" = "reload" ] && create_vap "$vif" "$phy" "$mode" &>$STDOUT && return 0   [0m
+[33m                   ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m
+[33m                                                                                 ^-------^ SC3020 (warning): In POSIX sh, &> is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 620:[0m
+[0m    local device="$1" vif="$2" mode="$3" chan="$4" txpower="$5"[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 621:[0m
+[0m    local hwmode htbw vhtbw[0m
+[33m    ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 773:[0m
+[0m    wifiextend set_edcca $vif[0m
+[32m                         ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    wifiextend set_edcca "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 778:[0m
+[0m    local dev vif[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 779:[0m
+[0m    local mode hwmode htmode channel txpower[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 781:[0m
+[0m    local wifi_mode_vap="backhaul"[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 782:[0m
+[0m    [ -f $FACTORYMODE_FILE -a "$(/sbin/is_cal)" = "true" ] && wifi_mode_vap="lan"[0m
+[33m                           ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 788:[0m
+[0m                [ -d /sys/class/net/$vif ]  && down_vap "$vif" &>$STDOUT[0m
+[32m                                    ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                                               ^-------^ SC3020 (warning): In POSIX sh, &> is undefined.[0m
+
+[1mDid you mean: [0m
+                [ -d /sys/class/net/"$vif" ]  && down_vap "$vif" &>$STDOUT
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 801:[0m
+[0m        local vifs=""[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 803:[0m
+[0m            [ -d /sys/class/net/$vif ] && append vifs "$vif"[0m
+[32m                                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            [ -d /sys/class/net/"$vif" ] && append vifs "$vif"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 807:[0m
+[0m            if [ "$vap_mode" == "ap" -a "$vap_type" == "$wifi_mode_vap" ]; then[0m
+[33m                  ^-------^ SC2154 (warning): vap_mode is referenced but not assigned.[0m
+[33m                             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                     ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                         ^-------^ SC2154 (warning): vap_type is referenced but not assigned (did you mean 'vaptype'?).[0m
+[33m                                                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 808:[0m
+[0m                config_vap_mode "$dev" "$vif" "$hwmode:$htmode" "$channel" "$txpower" &>$STDOUT[0m
+[33m                                                                                      ^-------^ SC3020 (warning): In POSIX sh, &> is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 820:[0m
+[0m    local device vifs disabled dev_disabled dev_disabled_all[0m
+[33m    ^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                 ^--^ SC2034 (warning): vifs appears unused. Verify use (or export if used externally).[0m
+[33m                                            ^--------------^ SC2034 (warning): dev_disabled_all appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 837:[0m
+[0m        config_vap "$vap" &>$STDOUT[0m
+[33m                          ^-------^ SC3020 (warning): In POSIX sh, &> is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 845:[0m
+[0m    local action="${1//,/ }"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                  ^-------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 846:[0m
+[0m    local device="${2//,/ }"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                  ^-------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 847:[0m
+[0m    local vap="${3//,/ }"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m               ^-------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 856:[0m
+[0m    brchanged=0[0m
+[33m    ^-------^ SC2034 (warning): brchanged appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 859:[0m
+[0m        if [ "$cmd" == "vap" ]; then[0m
+[33m                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 861:[0m
+[0m            wifi_$cmd "$vap"[0m
+[32m                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            wifi_"$cmd" "$vap"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 863:[0m
+[0m            wifi_$cmd "$device"       [0m
+[32m                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            wifi_"$cmd" "$device"       
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/wifi/wifiupdate_ralink.sh line 867:[0m
+[0m    up_all_vap &>$STDOUT[0m
+[33m               ^-------^ SC3020 (warning): In POSIX sh, &> is undefined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2157 -- Argument to -z is always false du...
+  https://www.shellcheck.net/wiki/SC1007 -- Remove space after = if trying to...
+  https://www.shellcheck.net/wiki/SC2034 -- brchanged appears unused. Verify ...

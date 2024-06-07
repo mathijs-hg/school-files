@@ -1,0 +1,101 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 4:</span></pre>
+<pre></span>SERVICE_DAEMONIZE=1</span></pre>
+<pre><span class="orange">^---------------^ SC2034 (warning): SERVICE_DAEMONIZE appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 6:</span></pre>
+<pre></span>START=84</span></pre>
+<pre><span class="orange">^---^ SC2034 (warning): START appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 7:</span></pre>
+<pre></span>STOP=84</span></pre>
+<pre><span class="orange">^--^ SC2034 (warning): STOP appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 15:</span></pre>
+<pre></span>	local section=$1</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="green">                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	local section="$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 16:</span></pre>
+<pre></span>	config_get value  $section mac</span></pre>
+<pre><span class="green">                          ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	config_get value  "$section" mac</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 17:</span></pre>
+<pre></span>	echo "mac:$value" &gt; /dev/console</span></pre>
+<pre><span class="orange">                  ^----^ SC2154 (warning): value is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 18:</span></pre>
+<pre></span>	echo  -n "$value;" &gt;&gt; $TMP_FILE</span></pre>
+<pre><span class="orange">              ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 19:</span></pre>
+<pre></span>	bind_device_num=$(($bind_device_num + 1)) </span></pre>
+<pre><span class="green">                           ^--------------^ SC2004 (style): $/${} is unnecessary on arithmetic variables.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 23:</span></pre>
+<pre></span>	local cap_mac_str</span></pre>
+<pre><span class="orange">        ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 24:</span></pre>
+<pre></span>	local cap_mac</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 25:</span></pre>
+<pre></span>	cap_mac_str=$(cat /tmp/work_mode|awk -F '"cap_mac":' '{print $2}' | cut -d\" -f2)</span></pre>
+<pre><span class="green">                          ^------------^ SC2002 (style): Useless cat. Consider 'cmd &lt; file | ..' or 'cmd file | ..' instead.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 26:</span></pre>
+<pre></span>	cap_mac=${cap_mac_str//\:/-}</span></pre>
+<pre><span class="orange">                ^------------------^ SC3060 (warning): In POSIX sh, string replacement is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 30:</span></pre>
+<pre></span>		cat /etc/config/bind_device_list | grep "$cap_mac"</span></pre>
+<pre><span class="green">                    ^--------------------------^ SC2002 (style): Useless cat. Consider 'cmd &lt; file | ..' or 'cmd file | ..' instead.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 31:</span></pre>
+<pre></span>		if [ $? -ne 0 ]; then</span></pre>
+<pre><span class="green">                     ^-- SC2181 (style): Check exit code directly with e.g. 'if ! mycmd;', not indirectly with $?.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 32:</span></pre>
+<pre></span>			echo  -n "$cap_mac;" &gt;&gt; $TMP_FILE</span></pre>
+<pre><span class="orange">                              ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 34:</span></pre>
+<pre></span>			bind_device_num=$(($bind_device_num + 1)) </span></pre>
+<pre><span class="green">                                           ^--------------^ SC2004 (style): $/${} is unnecessary on arithmetic variables.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 43:</span></pre>
+<pre></span>	if [ "$system_mode" != "AP" ]; then</span></pre>
+<pre><span class="orange">              ^----------^ SC2154 (warning): system_mode is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp_hook_d line 45:</span></pre>
+<pre></span>		echo -n "" &gt; $TMP_FILE</span></pre>
+<pre><span class="orange">                     ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- SERVICE_DAEMONIZE appears unused....</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2154" title="https://www.shellcheck.net/wiki/SC2154" target="_blank" >https://www.shellcheck.net/wiki/SC2154</a> -- system_mode is referenced but not...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3037" title="https://www.shellcheck.net/wiki/SC3037" target="_blank" >https://www.shellcheck.net/wiki/SC3037</a> -- In POSIX sh, echo flags are undef...</pre>

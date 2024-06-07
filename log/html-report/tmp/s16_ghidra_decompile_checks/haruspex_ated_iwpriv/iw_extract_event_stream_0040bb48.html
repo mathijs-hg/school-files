@@ -1,0 +1,135 @@
+<br />
+<pre>undefined4 iw_extract_event_stream(uint *param_1,undefined4 *param_2,int param_3)</pre>
+<br />
+<pre>{</pre>
+<pre>  ushort uVar1;</pre>
+<pre>  ushort uVar2;</pre>
+<pre>  undefined4 uVar3;</pre>
+<pre>  uint uVar4;</pre>
+<pre>  uint uVar5;</pre>
+<pre>  void *pvVar6;</pre>
+<pre>  byte *local_30;</pre>
+<pre>  uint local_2c;</pre>
+<pre>  uint local_28;</pre>
+<pre>  ushort *local_24;</pre>
+<pre>  uint local_20;</pre>
+<pre>  </pre>
+<pre>  local_30 = (byte *)0x0;</pre>
+<pre>  local_2c = 0;</pre>
+<pre>  if (*param_1 &lt; param_1[1] + 4) {</pre>
+<pre>    uVar3 = 0;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    *param_2 = *(undefined4 *)param_1[1];</pre>
+<pre>    if (*(ushort *)param_2 &lt; 5) {</pre>
+<pre>      uVar3 = 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (*(ushort *)((int)param_2 + 2) &lt; 0x8c00) {</pre>
+<pre>        uVar4 = *(ushort *)((int)param_2 + 2) - 0x8b00;</pre>
+<pre>        if (uVar4 &lt; 0x37) {</pre>
+<pre>          local_30 = standard_ioctl_descr + uVar4 * 0xc;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        uVar4 = *(ushort *)((int)param_2 + 2) - 0x8c00;</pre>
+<pre>        if (uVar4 &lt; 10) {</pre>
+<pre>          local_30 = standard_event_descr + uVar4 * 0xc;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      if (local_30 != (byte *)0x0) {</pre>
+<pre>        local_2c = (uint)*local_30;</pre>
+<pre>      }</pre>
+<pre>      local_28 = *(uint *)(event_type_size + local_2c * 4);</pre>
+<pre>      if ((param_3 &lt; 0x13) &amp;&amp; (local_2c == 8)) {</pre>
+<pre>        local_28 = local_28 + 4;</pre>
+<pre>      }</pre>
+<pre>      if (local_28 &lt; 5) {</pre>
+<pre>        param_1[1] = param_1[1] + (uint)*(ushort *)param_2;</pre>
+<pre>        uVar3 = 2;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        uVar4 = local_28 - 4;</pre>
+<pre>        if (param_1[2] == 0) {</pre>
+<pre>          local_24 = (ushort *)(param_1[1] + 4);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          local_24 = (ushort *)param_1[2];</pre>
+<pre>        }</pre>
+<pre>        if (*param_1 &lt; (int)local_24 + uVar4) {</pre>
+<pre>          param_1[1] = param_1[1] + (uint)*(ushort *)param_2;</pre>
+<pre>          uVar3 = 0xfffffffe;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          if ((param_3 &lt; 0x13) || (local_2c != 8)) {</pre>
+<pre><span class="green">            memcpy(param_2 + 1,local_24,uVar4)</span></span></pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre><span class="green">            memcpy(param_2 + 2,local_24,uVar4)</span></span></pre>
+<pre>          }</pre>
+<pre>          local_24 = (ushort *)((int)local_24 + uVar4);</pre>
+<pre>          if (local_2c == 8) {</pre>
+<pre>            uVar5 = (*(ushort *)param_2 - uVar4) - 4;</pre>
+<pre>            if (*(ushort *)param_2 - uVar4 == 4) {</pre>
+<pre>              param_2[1] = 0;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              param_2[1] = local_24;</pre>
+<pre>              if (local_30 == (byte *)0x0) {</pre>
+<pre>                param_2[1] = 0;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                local_20 = (uint)*(ushort *)(param_2 + 2) * (uint)*(ushort *)(local_30 + 2);</pre>
+<pre>                if ((local_20 != uVar5) &amp;&amp; (3 &lt; uVar5)) {</pre>
+<pre>                  uVar1 = *local_24;</pre>
+<pre>                  uVar2 = *(ushort *)(local_30 + 2);</pre>
+<pre>                  if ((uint)uVar1 * (uint)uVar2 + 8 == uVar5) {</pre>
+<pre>                    pvVar6 = (void *)((int)local_24 + (4 - uVar4));</pre>
+<pre><span class="green">                    memcpy(param_2 + 2,pvVar6,uVar4)</span></span></pre>
+<pre>                    param_2[1] = (int)pvVar6 + local_28;</pre>
+<pre>                    local_20 = (uint)uVar1 * (uint)uVar2;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                if (uVar5 &lt; local_20) {</pre>
+<pre>                  param_2[1] = 0;</pre>
+<pre>                }</pre>
+<pre>                if ((*(ushort *)(local_30 + 6) &lt; *(ushort *)(param_2 + 2)) &amp;&amp;</pre>
+<pre>                   ((*(uint *)(local_30 + 8) &amp; 8) == 0)) {</pre>
+<pre>                  param_2[1] = 0;</pre>
+<pre>                }</pre>
+<pre>                if (*(ushort *)(param_2 + 2) &lt; *(ushort *)(local_30 + 4)) {</pre>
+<pre>                  param_2[1] = 0;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            param_1[1] = param_1[1] + (uint)*(ushort *)param_2;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            if (param_1[2] == 0) {</pre>
+<pre>              if (uVar4 == 0) {</pre>
+<pre>                trap(0x1c00);</pre>
+<pre>              }</pre>
+<pre>              if (((*(ushort *)param_2 - 4) % uVar4 == 4) ||</pre>
+<pre>                 ((*(ushort *)param_2 == 0xc &amp;&amp; ((local_2c == 4 || (local_2c == 10)))))) {</pre>
+<pre>                pvVar6 = (void *)((int)local_24 + (4 - uVar4));</pre>
+<pre><span class="green">                memcpy(param_2 + 1,pvVar6,uVar4)</span></span></pre>
+<pre>                local_24 = (ushort *)((int)pvVar6 + uVar4);</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            if (param_1[1] + (uint)*(ushort *)param_2 &lt; (int)local_24 + uVar4) {</pre>
+<pre>              param_1[2] = 0;</pre>
+<pre>              param_1[1] = param_1[1] + (uint)*(ushort *)param_2;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              param_1[2] = (uint)local_24;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          uVar3 = 1;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return uVar3;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] b1573f3334ca7404</pre>

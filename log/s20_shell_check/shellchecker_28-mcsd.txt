@@ -1,0 +1,54 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 3:[0m
+[0m. /lib/functions.sh[0m
+[32m  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 6:[0m
+[0m	local fileflag="/tmp/.mcsd.restart.pending"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 18:[0m
+[0m	local exescript[0m
+[33m        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 19:[0m
+[0m	local enabled[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 24:[0m
+[0m	[ $enabled -eq 0 ] && return[0m
+[32m          ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ "$enabled" -eq 0 ] && return
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 26:[0m
+[0m	exescript=`ls /etc/hotplug.d/net/*mcsd* 2>&-`[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	exescript=$(ls /etc/hotplug.d/net/*mcsd* 2>&-)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 31:[0m
+[0m	eval $exescript[0m
+[32m             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	eval "$exescript"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/net/28-mcsd line 37:[0m
+[0m		ath*|eth*|eth*.*|br*)[0m
+[33m                     ^--^ SC2221 (warning): This pattern always overrides a later one on line 37.[0m
+[33m                          ^----^ SC2222 (warning): This pattern never matches because of a previous pattern on line 37.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2221 -- This pattern always overrides a l...
+  https://www.shellcheck.net/wiki/SC2222 -- This pattern never matches becaus...
+  https://www.shellcheck.net/wiki/SC3043 -- In POSIX sh, 'local' is undefined.

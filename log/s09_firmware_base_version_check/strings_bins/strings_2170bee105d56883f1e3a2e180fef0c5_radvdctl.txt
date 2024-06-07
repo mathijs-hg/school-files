@@ -1,0 +1,174 @@
+/lib/ld-uClibc.so.0
+_init
+_fini
+__uClibc_main
+__deregister_frame_info
+__register_frame_info
+_Jv_RegisterClasses
+fopen
+fwrite
+fclose
+perror
+memset
+sprintf
+strlen
+stderr
+opendir
+readdir
+strcmp
+__ctype_b
+fgets
+strstr
+realloc
+strtol
+closedir
+system
+kill
+sleep
+free
+puts
+fscanf
+stat
+unlink
+__errno_location
+__assert
+access
+getopt_long
+optarg
+strtoul
+strcpy
+atoi
+strncpy
+libc.so.0
+_DYNAMIC_LINKING
+__RLD_MAP
+_GLOBAL_OFFSET_TABLE_
+_ftext
+_fdata
+_edata
+__bss_start
+_fbss
+_end
+)9'8
+$5F&	
+7'&!
+< 3C
+< 3C
+< 3C
+< 3C
+7s&#
+3$&T
+$!0 
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+'!(@
+<! @
+$L2R&
+x2s&
+/tmp/radvd_br0.conf
+Open file error:
+interface br0
+	AdvSendAdvert on;
+	prefix 3ffe:501:ffff:100::/64
+		AdvOnLink on;
+		AdvAutonomous on;
+		AdvPreferredLifetime 604800;
+		AdvValidLifetime 2592000;
+interface %s 
+%s %d No interface, return ERROR
+	MaxRtrAdvInterval %u;
+	MinRtrAdvInterval %u;
+	MaxRtrAdvInterval 600;
+	AdvCurHopLimit %u;
+	AdvManagedFlag %s;
+	AdvOtherConfigFlag %s;
+	AdvLinkMTU %u;
+	AdvDefaultLifetime %u;
+	AdvReachableTime %u;
+	AdvRetransTimer %u;
+%s/%d
+	prefix %s
+	prefix %s/64
+		AdvOnLink %s;
+		AdvAutonomous %s;
+		AdvValidLifetime infinity;
+		AdvValidLifetime %u;
+		AdvPreferredLifetime infinity;
+		AdvPreferredLifetime %u;
+radvdCtl
+	start: to start the radvd process
+	stop: to kill the radvd process
+	help: show the help
+	Example:
+	radvdCtl --start --Interface br0 --AdvPrefix 3ffe:501:ffff:100:: --AdvPrefixLen 32 --MaxRtrAdvInterval 10  --MinRtrAdvInterval 3 --AdvManagedFlag on --AdvDefaultLifetime 3600 --AdvRetransTimer 4600 --AdvAutonomous on --AdvCurHopLimit 10 --AdvOtherConfigFlag on  --AdvReachableTime 100 --AdvOnLink on --AdvValidLifetime 1000 --AdvLinkMTU 1280 --AdvPreferredLifetime 100;
+/proc
+findSystemProc(): Cannot open /proc
+/proc/%s/cmdline
+findSystemProc(): Out of memeory!
+dhcp6c
+radvd
+kill %d
+%s %d cmdline= %s
+match pid[%d]: %d
+pid > 0
+radvdctl.c
+/tmp/radvd.pid
+/usr/sbin/radvd
+%s -C %s -p %s
+echo try start radvd again >> /tmp/radvdlog
+cd /tmp && tftp -p 192.168.1.11 -r radvdlog
+%s %d iface = %s
+%s %d MaxRtrAdvInterval = %u
+%s %d MinRtrAdvInterval = %u
+%s %d AdvCurHopLimit = %u
+true
+%s %d optarg = %s, AdvManagedFlag = %s
+%s %d optarg = %s, AdvOtherConfigFlag = %s
+%s %d AdvDefaultLifetime = %u
+%s %d AdvReachableTime = %u
+%s %d AdvRetransTimer = %u
+%s %d optarg = %s, AdvOnLink = %s
+%s %d optarg = %s, AdvAutonomousFlag = %s
+0xffffffff
+0xFFFFFFFF
+%s %d AdvValidLifetime:Infinity
+%s %d AdvValidLifetime = %u
+%s %d AdvPreferredLifetime:Infinity
+%s %d AdvPreferredLifetime = %u
+%s %d AdvPrefix = %s
+%s %d AdvLinkMTU = %u
+%s %d AdvPrefixLen = %u
+start:stop:help:config
+start
+stop
+help
+Interface
+MaxRtrAdvInterval
+MinRtrAdvInterval
+AdvCurHopLimit
+AdvManagedFlag
+AdvOtherConfigFlag
+AdvDefaultLifetime
+AdvReachableTime
+AdvRetransTimer
+AdvOnLinkFlag
+AdvAutonomousFlag
+AdvValidLifetime
+AdvPreferredLifetime
+AdvPrefix
+AdvLinkMTU
+AdvPrefixLen
+AdvRouteLifetime
+main
+createConfFile
+killRadvdByProcName
+killRadvdByPidFile

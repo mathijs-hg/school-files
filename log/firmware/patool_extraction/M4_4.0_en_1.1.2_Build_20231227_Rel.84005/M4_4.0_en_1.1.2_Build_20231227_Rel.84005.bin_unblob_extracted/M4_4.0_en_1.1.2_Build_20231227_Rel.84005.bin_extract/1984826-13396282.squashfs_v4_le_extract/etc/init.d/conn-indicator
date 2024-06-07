@@ -1,0 +1,56 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2017 Tp-link.com
+# Author: Xu Shengfu <xushengfu@tp-link.com.cn>
+# Date: 27Nov17
+
+START=85
+# Stop before leds
+STOP=20
+
+USE_PROCD=1
+PROG=/usr/sbin/conn-indicator
+
+. /lib/functions.sh
+
+
+# For LTE mobile
+kill_prog_force() {
+    local i=0
+    while [ 1 ] ; do
+        [ $i -gt 3 ] && return 0
+        if [ -z "$(ps | grep -v grep | grep -w '/usr/sbin/conn-indicator')" ]; then
+            return 0
+        else
+            sleep 1
+        fi
+        i=$(( i + 1 ))
+    done
+
+    if [ -n "$(ps | grep -v grep | grep -w 'conn-indicator')" ]; then
+        killall -9 conn-indicator
+        echo "$(date +'%Y-%m-%dT%H:%M:%S') force kill conn-indicator" > /dev/console
+    fi
+}
+
+start_service() {
+
+    local isMobile=$(isMobile 2>/dev/null)
+    config_load conn_indicator
+    config_get_bool enabled conn_indicator 'enabled' '1'
+
+    [ "${enabled}" -gt 0 ] || {
+        return 1
+    }
+    config_clear
+
+    if [ "$isMobile" = "yes" ]; then
+        kill_prog_force
+    fi
+
+    procd_open_instance
+    procd_set_param command "$PROG" -l i
+    procd_set_param respawn
+    procd_close_instance
+
+    ubus call leds power "{\"state\":\"on\"}" > /dev/null 2>&1 &
+}

@@ -1,0 +1,550 @@
+#!/bin/sh /etc/rc.common
+
+START=41
+STOP=90
+
+
+USE_PROCD=1
+
+. /lib/wifi/wificommon.sh
+
+WIFI_CONFIG_USE_REPACD=1
+
+DEFAULT_DAT_2G="/etc/wireless/RT2860AP/RT2860_2G.dat"
+DEFAULT_DAT_5G="/etc/wireless/RT2860AP/RT2860_5G.dat"
+
+
+CALCMODE_FILE="/tmp/calcmode"
+FACTORYMODE_FILE="/tmp/factorymode"
+
+TFTP_SERVER="192.168.0.100"
+MMT_SERVER="mmt_server"
+MMTSERVER_FILE="/tmp/mmt_server"
+ATED_IWPRIV="ated_iwpriv"
+ATED_IWPRIV_FILE="/tmp/ated_iwpriv"
+
+dev_lan="br-lan"
+
+# backhual ap vap
+backhual_vap_2g=""
+backhual_vap_5g=""
+
+# config ap vap
+config_vap_2g=""
+config_vap_5g=""
+
+# main ap vap
+main_vap_2g=""
+main_vap_5g=""
+
+mwds_disable="0"
+mwds_enable="1"
+
+config_profile_set() {
+	local band="$1"
+	local profile_path
+
+	[ "$band" = "2g" ] && profile_path=${DEFAULT_DAT_2G} || profile_path=${DEFAULT_DAT_5G}
+
+	[ -n "$3" ] && sed -i "s/^"$2"=.*$/"$2"=$3/g" ${profile_path}
+}
+
+config_country() {
+	local country='US'
+    local sid=$(getfirm SPECIAL_ID)
+
+    case $sid in
+        55530000)
+            country='US'
+            ;;
+        45550000|5A470000|45470000)
+            country='DE'
+            ;;
+        4A500000)
+            country='JP'
+            ;;
+        43410000)
+            country='CA'
+            ;;
+        41550000)
+            country='AU'
+            ;;
+        4B520000)
+            country='KR'
+            ;;
+        49440000)
+            country='ID'
+            ;;
+        54570000)
+            country='TW'
+            ;;
+        42340000)
+            country='B4'
+            ;;
+    esac
+
+	local regulatory="FCC"
+	case $country in
+		US) regulatory="FCC";;
+		CA) regulatory="CA";;
+		RU|KR) regulatory="CE";;
+		DE|EU) regulatory="EU";;
+		JP) regulatory="JP";;
+		TW) regulatory="TW";;
+		BR) regulatory="BR";;
+		B4) regulatory="B4";;
+	esac
+
+    echo "country:$country regulatory:$regulatory" > /dev/console
+
+    [ -f /etc/MT7603E_EEPROM_$country.bin ] && {
+        mv /etc/MT7603E_EEPROM_$country.bin /etc/MT7603E_EEPROM.bin
+        mv /etc/MT7613E_EEPROM_$country.bin /etc/MT7613E_EEPROM.bin
+        rm -rf /etc/MT7603E_EEPROM_*
+        rm -rf /etc/MT7613E_EEPROM_*
+    }
+
+    [ -f /etc/MT7915_EEPROM_$country.bin ] && {
+        mv /etc/MT7915_EEPROM_$country.bin /etc/MT7915_EEPROM.bin
+        rm -rf /etc/MT7915_EEPROM_*
+    }
+
+	[ -f /etc/wireless/RT2860AP/SingleSKU_5G_${regulatory}.dat ] && {
+		mv /etc/wireless/RT2860AP/SingleSKU_${regulatory}.dat /etc/wireless/RT2860AP/SingleSKU.dat
+		mv /etc/wireless/RT2860AP/SingleSKU_5G_${regulatory}.dat /etc/wireless/RT2860AP/SingleSKU_5G.dat
+		mv /etc/wireless/RT2860AP/SingleSKU_BF_5G_${regulatory}.dat /etc/wireless/RT2860AP/SingleSKU_BF_5G.dat
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_BF_5G_*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_5G_*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_CE*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_EU*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_JP*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_FCC*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_TW*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_BR*
+		rm -rf /etc/wireless/RT2860AP/SingleSKU_CA*
+	}
+
+	if [ "$country" = "US" ];then
+		#A6 US 3.0 2G channel 1-13
+		config_profile_set 2g CountryRegion "0"
+		config_profile_set 2g CountryNum "840"
+		config_profile_set 2g CountryCode "US"
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 2g SkuTableIdx "1"
+		#A6 US 3.0 5G channel band1,band4, auto skip band1
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryNum "840"
+		config_profile_set 5g CountryCode "US"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 5g SkuTableIdx "1"
+	elif [ "$country" = "JP" ];then
+		#A6 JP 3.0 2G channel 1-13
+		config_profile_set 2g CountryRegion "1"
+		config_profile_set 2g CountryNum "392"
+		config_profile_set 2g CountryCode "JP"
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 2g SkuTableIdx "3"
+		#A6 JP 3.0 5G channel 36-48
+		config_profile_set 5g CountryRegionABand "6"
+		config_profile_set 5g CountryNum "392"
+		config_profile_set 5g CountryCode "JP"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 5g SkuTableIdx "3"
+	elif [ "$country" = "CA" ];then
+	#follow US
+		config_profile_set 2g CountryRegion "0"
+		config_profile_set 2g CountryNum "124"
+		config_profile_set 2g CountryCode "CA"
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		#A6 JP 3.0 5G channel 36-48
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryNum "124"
+		config_profile_set 5g CountryCode "CA"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;36;40;44;48;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140"
+    elif [ "$country" = "B4" ];then
+		config_profile_set 2g CountryRegion "0"
+		config_profile_set 2g CountryNum "840"
+		config_profile_set 2g CountryCode "US"
+		#mt7915 wireless driver will merge RT2860_2G.dat and RT2860_5G.dat to DBDC_card0.dat, and then parse it; so the AutoChannelSkipList is repetitive
+		if [ "$(wifiextend is_mt7915)" = "true" ];then
+			config_profile_set 2g SkuTableIdx "2"
+			config_profile_set 2g AutoChannelSkipList "1;11;12;13"
+		else
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		fi
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryNum "840"
+		config_profile_set 5g CountryCode "US"
+		if [ "$(wifiextend is_mt7915)" = "true" ];then
+			config_profile_set 5g SkuTableIdx "2"
+			config_profile_set 5g AutoChannelSkipList "36;40;44;48;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140,165"
+		else
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;36;40;44;48;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140,165"
+		fi
+	elif [ "$country" = "DE" ];then
+        echo "C6 EU 3.0 2G channel 1-13"
+		config_profile_set 2g CountryRegion "1"
+		config_profile_set 2g CountryCode "DE"
+		config_profile_set 2g CountryNum "276"
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 2g SkuTableIdx "0"
+		#C6 EU 3.0 5G channel 36-48
+		config_profile_set 5g CountryRegionABand "6"
+		config_profile_set 5g CountryNum "276"
+		config_profile_set 5g CountryCode "DE"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140"
+		[ "$(wifiextend is_mt7915)" = "true" ] && config_profile_set 5g SkuTableIdx "0"
+	elif [ "$country" = "RU" ];then
+		#C6 RU 3.0 2G channel 1-13
+		config_profile_set 2g CountryRegion "1"
+		config_profile_set 2g CountryCode "DE"
+		config_profile_set 2g CountryNum "276"
+		config_profile_set 2g AutoChannelSkipList="1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		#C6 RU 3.0 5G channel band1 band2 band 4
+		config_profile_set 5g CountryNum "643"
+		config_profile_set 5g CountryRegionABand "0"
+		config_profile_set 5g CountryCode "RU"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+	elif [ "$country" = "KR" ];then
+		#C6 KR 3.20 2G channel 1-13,basically KR follows RU.
+		config_profile_set 2g CountryRegion "1"
+		config_profile_set 2g CountryCode "KR"
+		config_profile_set 2g CountryNum "410"
+		config_profile_set 2g AutoChannelSkipList="1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		#C6 KR 3.0 5G band1 band4
+		config_profile_set 5g CountryNum "410"
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryCode "KR"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+	elif [ "$country" = "TW" ];then
+		config_profile_set 2g CountryRegion "0"
+		config_profile_set 2g CountryNum "158"
+		config_profile_set 2g CountryCode "TW"
+		config_profile_set 2g AutoChannelSkipList "1;2;6;10;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryNum "158"
+		config_profile_set 5g CountryCode "TW"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;36;40;44;48;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140"
+	elif [ "$country" = "BR" ];then
+		#A6 BR 3.0 2G channel 1-13
+		config_profile_set 2g CountryRegion "1"
+		config_profile_set 2g CountryCode "BR"
+		config_profile_set 2g CountryNum "76"
+		config_profile_set 2g AutoChannelSkipList "1;11;12;13;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140;149;153;157;161;165"
+		config_profile_set 5g CountryRegionABand "10"
+		config_profile_set 5g CountryNum "76"
+		config_profile_set 5g CountryCode "BR"
+		config_profile_set 5g AutoChannelSkipList "1;11;12;13;36;40;44;48;52;56;60;64;100;104;108;112;116;120;124;128;132;136;140"
+	fi
+}
+
+config_wifi_dat() {
+	local mac_2g=""
+
+	#set MacAddress to dat
+	#MacAddress=1C:FA:68:30:50:06
+
+	config_load wifi
+	config_get radio_bssid_2g radio_2g bssid
+	config_get radio_bssid_5g radio_5g bssid
+	config_get bridge_lan_mac ap bridge_lan_mac
+
+	config_get radio_country radio_2g country 'US'
+
+	echo "MacAddress=$radio_bssid_2g" >> $DEFAULT_DAT_2G
+	echo "MacAddress=$radio_bssid_5g" >> $DEFAULT_DAT_5G
+
+	echo "CountryCode=$radio_country" >> $DEFAULT_DAT_2G
+	echo "CountryCode=$radio_country" >> $DEFAULT_DAT_5G
+	
+	echo "BridgeLanMacAddress=$bridge_lan_mac" >> $DEFAULT_DAT_2G
+	echo "BridgeLanMacAddress=$bridge_lan_mac" >> $DEFAULT_DAT_5G
+
+	# 2.4G and 5G has the same UUID
+	#WSC_UUID_Str: 	28802880-2880-1880-a880-52c2bfeed334    (52c2bfeed334 rax MAC address)
+	#WSC_UUID_E:	2880288028801880a88052c2bfeed334
+
+	#get br-lan mac
+	mac_2g=$(echo $radio_bssid_2g | sed 's/\://g')
+
+	# attention: ra0:WSC_UUID_Str1 ra2 WSC_UUID_Str3
+	echo "WSC_UUID_Str3=28802880-2880-1880-a880-$mac_2g" >> $DEFAULT_DAT_2G
+	echo "WSC_UUID_E3=2880288028801880a880$mac_2g" >> $DEFAULT_DAT_2G
+
+	echo "WSC_UUID_Str3=28802880-2880-1880-a880-$mac_2g" >> $DEFAULT_DAT_5G
+	echo "WSC_UUID_E3=2880288028801880a880$mac_2g" >> $DEFAULT_DAT_5G
+
+	echo "WscDeviceName=Deco $(getfirm MODEL) $(getfirm HARDVERSION)" >> $DEFAULT_DAT_2G
+	echo "WscModelName=Deco $(getfirm MODEL)" >> $DEFAULT_DAT_2G
+
+	echo "WscDeviceName=Deco $(getfirm MODEL) $(getfirm HARDVERSION)" >> $DEFAULT_DAT_5G
+	echo "WscModelName=Deco $(getfirm MODEL)" >> $DEFAULT_DAT_5G
+
+	if [ $radio_country = "BR" -o $radio_country = "KR" ]; then
+		sed -i "s/RDRegion=CE/RDRegion=/g" $DEFAULT_DAT_5G
+	elif [ $radio_country = "US" -o $radio_country = "AU" -o $radio_country = "CA" -o $radio_country = "TW" ]; then
+		sed -i "s/RDRegion=CE/RDRegion=FCC/g" $DEFAULT_DAT_5G
+	elif [ $radio_country = "JP" ]; then
+		sed -i "s/RDRegion=CE/RDRegion=JAP/g" $DEFAULT_DAT_5G
+	fi
+
+	# we only use band1 yet, so disable dfs
+	echo "IEEE80211H=0" >> $DEFAULT_DAT_5G
+
+
+    config_country
+}
+
+up_wifi_interface_for_cal() {
+
+	#echo "up backhual ap vap and add interface to br-lan" > /dev/console
+	# backhual ap vap
+	ifconfig "$backhual_vap_2g" up
+	brctl addif $dev_lan "$backhual_vap_2g"
+
+	info_2g=`iwconfig "$backhual_vap_2g"`
+
+	res_2g=`echo "$info_2g" | grep -o Channel`
+	[ "$res_2g" = "" ] && {
+		echo "--------Failed to up ra0 and retry--------" > /dev/console
+		ifconfig "$backhual_vap_2g" up
+		brctl addif $dev_lan "$backhual_vap_2g"
+	}
+
+	ifconfig "$backhual_vap_5g" up
+	brctl addif $dev_lan "$backhual_vap_5g"
+
+}
+
+
+start_mmt_server() {
+
+    if [ `which $MMT_SERVER` ]; then
+        echo "find $MMT_SERVER in FS, return(just for debug version)"
+		$MMT_SERVER &
+        return
+    fi
+
+	echo "to tftp-down $MMT_SERVER from $TFTP_SERVER" > /dev/console
+
+	for i in `seq 20`
+	do
+		tftp -g $TFTP_SERVER -r $MMT_SERVER -l $MMTSERVER_FILE
+
+		if [ -f $MMTSERVER_FILE ]; then
+			#echo "tftp-down mmt_server successfully" > /dev/console
+			break
+		else
+			#echo "tftp-down mmt_server fail to down again" > /dev/console
+			sleep 5
+		fi
+	done
+
+	if [ -f $MMTSERVER_FILE ]; then
+		chmod 777 $MMTSERVER_FILE
+		$MMTSERVER_FILE &
+	else
+		echo "tftp-down mmt_server fail to user default mmt_server" > /dev/console
+		$MMT_SERVER &
+	fi
+}
+
+start_ated_iwpriv() {
+
+    if [ `which $ATED_IWPRIV` ]; then
+        echo "find $ATED_IWPRIV in FS, return(just for debug version)"
+		$ATED_IWPRIV &
+		$ATED_IWPRIV &
+        return
+    fi
+
+	echo "to tftp-down $ATED_IWPRIV from $TFTP_SERVER" > /dev/console
+
+	for i in `seq 20`
+	do
+		tftp -g $TFTP_SERVER -r $ATED_IWPRIV -l $ATED_IWPRIV_FILE
+
+		if [ -f $ATED_IWPRIV_FILE ]; then
+			#echo "tftp-down ated_iwpriv successfully" > /dev/console
+			break
+		else
+			#echo "tftp-down ated_iwpriv fail to down again" > /dev/console
+			sleep 5
+		fi
+	done
+
+	if [ -f $ATED_IWPRIV_FILE ]; then
+		chmod 777 $ATED_IWPRIV_FILE
+		$ATED_IWPRIV_FILE &
+		$ATED_IWPRIV_FILE &
+	else
+		echo "tftp-down ated_iwpriv fail to user default ated_iwpriv" > /dev/console
+		$ATED_IWPRIV &
+		$ATED_IWPRIV &
+	fi
+}
+
+phy_link_up() {
+    /etc/init.d/phyLinkUp start
+}
+
+wifi_calibrate_prepare() {
+	up_wifi_interface_for_cal
+    #phy_link_up
+	#start_mmt_server
+	#start_ated_iwpriv
+}
+
+generate_channel_for_factorymode() {
+	local rand_num=$(head /dev/urandom | tr -dc 1-9 | head -c 6)
+	local channel_2g=$((rand_num % 9 + 2))
+	local channel_5g=$((rand_num % 4 * 4 + 36))
+
+	uci set wifi.radio_2g.channel=$channel_2g
+	uci set wifi.radio_5g.channel=$channel_5g
+	uci commit wifi
+}
+
+generate_wifi_config_for_factorymode() {
+	config_load wifi
+	if [ ! -f $FACTORYMODE_FILE ]; then
+		config_get factorymode ap factorymode '0'
+		if [ "$factorymode" = 1 ]; then
+			touch $FACTORYMODE_FILE
+			generate_channel_for_factorymode
+		else
+			return 0
+		fi
+	fi
+}
+
+install_wifi_ko() {
+    module_file="/lib/wifi/ralink-wifi-modules"
+    if [ ! -f "$module_file" ]; then
+        return
+    fi
+    for mod in $(cat "$module_file"); do
+        insmod ${mod} || echo "load wifi modules($mod) failed" > /dev/console
+    done
+}
+
+_update_vap_name() {
+    local iface="$1"
+    local band="$2"
+    local type
+    local mode
+
+    config_get mode "$iface" mode
+    [ "$mode" != "ap" ] && return
+
+    config_get type "$iface" type
+    if [ "$type" = "backhaul" ]; then
+        if [ "$band" = "2g" ]; then
+            backhual_vap_2g="$iface"
+        else
+            backhual_vap_5g="$iface"
+        fi
+    elif [ "$type" = "config" ]; then
+        if [ "$band" = "2g" ]; then
+            config_vap_2g="$iface"
+        else
+            config_vap_5g="$iface"
+        fi
+    elif [ "$type" = "lan" ]; then
+        if [ "$band" = "2g" ]; then
+            main_vap_2g="$iface"
+        else
+            main_vap_5g="$iface"
+        fi
+    # else
+    #     echo "not require type:$type" > /dev/console
+    fi
+}
+
+get_iface() {
+    local iface="$1"
+    local device
+    local device_2g="$2"
+    local device_5g="$3"
+    config_get device "$iface" device
+    # echo "device:$device"
+    if [ "$device" = "$device_2g" ]; then
+        _update_vap_name "$iface" 2g
+    elif [ "$device" = "$device_5g" ]; then
+        _update_vap_name "$iface" 5g
+    else
+        echo "no need to check iface:$iface for $device"
+    fi
+}
+
+get_wifi_dev() {
+    local device="$1"
+    local band_2g="$2"
+    local band_5g="$3"
+    local band
+    config_get band "$device" band
+    if [ "$band" = "$band_2g" ]; then
+         eval "$4='$device'"
+    fi
+    if [ "$band" = "$band_5g" ]; then
+         eval "$5='$device'"
+    fi
+}
+
+update_vap_from_cfg() {
+    local dev_2g=""
+    local dev_5g=""
+
+    config_load wireless
+    config_foreach get_wifi_dev wifi-device 2g 5g dev_2g dev_5g
+    [ "$device_2g" = "" ] && dev_2g="wifi0"
+    [ "$device_5g" = "" ] && dev_5g="wifi1"
+
+    config_foreach get_iface wifi-iface "$dev_2g" "$dev_5g"
+    echo "backhual_vap_2g:$backhual_vap_2g" > /dev/console
+    echo "backhual_vap_5g:$backhual_vap_5g" > /dev/console
+    echo "config_vap_2g:$config_vap_2g" > /dev/console
+    echo "config_vap_5g:$config_vap_5g" > /dev/console
+    echo "main_vap_2g:$main_vap_2g" > /dev/console
+    echo "main_vap_5g:$main_vap_5g" > /dev/console
+}
+
+start_service() {
+	# echo 3 > /proc/sys/vm/drop_caches
+
+    update_vap_from_cfg
+
+	wifi_init_wifi_mac
+
+	config_wifi_dat
+
+	install_wifi_ko
+
+	if [ "$(/sbin/is_cal)" = "true" ]; then
+		echo 1 > $CALCMODE_FILE
+		touch /tmp/wifi_is_cal
+	else
+		# config main interface for wifi cal
+		echo 0 > $CALCMODE_FILE
+		wifi_calibrate_prepare
+		return 0
+	fi
+
+	generate_wifi_config_for_factorymode
+
+	return 0
+}
+
+service_triggers() {
+    procd_add_reload_trigger "wifi" "iptv_v2"
+}
+
+reload_service() {
+
+	if [ -f $FACTORYMODE_FILE ]; then
+		generate_wifi_config_for_factorymode
+	fi
+
+    /etc/init.d/repacd restart &
+
+}

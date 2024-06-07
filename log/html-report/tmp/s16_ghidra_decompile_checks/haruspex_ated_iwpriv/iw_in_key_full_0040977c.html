@@ -1,0 +1,52 @@
+<br />
+<pre>size_t iw_in_key_full(undefined4 param_1,undefined4 param_2,char *param_3,char *param_4,</pre>
+<pre>                     ushort *param_5)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  char *pcVar2;</pre>
+<pre>  size_t local_260;</pre>
+<pre>  undefined auStack_258 [240];</pre>
+<pre>  byte local_168;</pre>
+<pre>  byte local_140;</pre>
+<pre>  </pre>
+<pre>  iVar1 = strncmp(param_3,"l:",2);</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre><span class="green">    local_260 = strlen(param_3 + 2)</span></span></pre>
+<pre><span class="green">    local_260 = local_260 + 1</span></span></pre>
+<pre>    if (0x40 &lt; (int)local_260) {</pre>
+<pre><span class="green">      local_260 = 0x40</span></span></pre>
+<pre>    }</pre>
+<pre><span class="green">    memcpy(param_4,param_3 + 2,local_260)</span></span></pre>
+<pre>    pcVar2 = strchr(param_4,0x3a);</pre>
+<pre>    if (pcVar2 == (char *)0x0) {</pre>
+<pre>      fwrite("Error: Invalid login format\n",1,0x1c,stderr);</pre>
+<pre><span class="green">      local_260 = 0xffffffff</span></span></pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      *pcVar2 = '\0';</pre>
+<pre>      iVar1 = iw_get_range_info(param_1,param_2,auStack_258);</pre>
+<pre>      if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">        memset(auStack_258,0,0x24c)</span></span></pre>
+<pre>      }</pre>
+<pre>      if (0xf &lt; local_140) {</pre>
+<pre>        printf("flags = %X, index = %X\n",(uint)*param_5,(uint)local_168);</pre>
+<pre>        if ((*param_5 &amp; 0xff) == 0) {</pre>
+<pre>          iVar1 = iw_get_range_info(param_1,param_2,auStack_258);</pre>
+<pre>          if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">            memset(auStack_258,0,0x24c)</span></span></pre>
+<pre>          }</pre>
+<pre>          printf("flags = %X, index = %X\n",(uint)*param_5,(uint)local_168);</pre>
+<pre>          *param_5 = *param_5 | (ushort)local_168;</pre>
+<pre>        }</pre>
+<pre>        printf("flags = %X, index = %X\n",(uint)*param_5,(uint)local_168);</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_260 = iw_in_key(param_3,param_4);</pre>
+<pre>  }</pre>
+<pre>  return local_260;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 54639bae8db019d1</pre>

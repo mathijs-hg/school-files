@@ -1,0 +1,28 @@
+<br />
+<pre>void iw_print_bitrate(FLO_type param_1,FLO_type param_2,char *param_3,size_t param_4,SItype param_5)</pre>
+<br />
+<pre>{</pre>
+<pre>  CMPtype CVar1;</pre>
+<pre>  SItype local_1c;</pre>
+<pre>  </pre>
+<pre>  __floatsidf(param_5);</pre>
+<pre>  CVar1 = __gedf2(param_1,param_2);</pre>
+<pre>  if (CVar1 &lt; 0) {</pre>
+<pre>    CVar1 = __gedf2(param_1,param_2);</pre>
+<pre>    if (CVar1 &lt; 0) {</pre>
+<pre>      local_1c = 1000;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_1c = 1000000;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_1c = 1000000000;</pre>
+<pre>  }</pre>
+<pre>  __floatsidf(local_1c);</pre>
+<pre>  __divdf3(param_1,param_2);</pre>
+<pre><span class="green">  snprintf(param_3,param_4,"%g %cb/s")</span></span></pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 8f13dfd0901c15b7</pre>

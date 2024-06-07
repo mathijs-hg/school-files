@@ -1,0 +1,45 @@
+<br />
+<pre>undefined4 print_iface_version_info(int param_1,char *param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  undefined4 uVar2;</pre>
+<pre>  char acStack_4c4 [16];</pre>
+<pre>  undefined *local_4b4;</pre>
+<pre>  ushort local_4b0;</pre>
+<pre>  undefined2 local_4ae;</pre>
+<pre>  undefined auStack_4a4 [280];</pre>
+<pre>  byte bStack_38c;</pre>
+<pre>  byte bStack_38b;</pre>
+<pre>  </pre>
+<pre><span class="green"><span class="green"><span class="green">  strncpy(acStack_4c4,param_2,0x10)</span></span></span></span></pre>
+<pre>  iVar1 = ioctl(param_1,0x8b01,acStack_4c4);</pre>
+<pre>  if (iVar1 &lt; 0) {</pre>
+<pre>    uVar2 = 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    memset(auStack_4a4,0,0x498)</span></span></pre>
+<pre>    local_4b4 = auStack_4a4;</pre>
+<pre>    local_4b0 = 0x498;</pre>
+<pre>    local_4ae = 0;</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_4c4,param_2,0x10)</span></span></span></span></pre>
+<pre>    iVar1 = ioctl(param_1,0x8b0b,acStack_4c4);</pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre>      fprintf(stderr,"%-8.16s  Driver has no Wireless Extension version information.\n\n",param_2);</pre>
+<pre>      uVar2 = 0;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (local_4b0 &lt; 300) {</pre>
+<pre>        fprintf(stderr,"%-8.16s  Wireless Extension version too old.\n\n",param_2);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        printf("%-8.16s  Recommend Wireless Extension v%d or later,\n",param_2,(uint)bStack_38b);</pre>
+<pre>        printf("          Currently compiled with Wireless Extension v%d.\n\n",(uint)bStack_38c);</pre>
+<pre>      }</pre>
+<pre>      uVar2 = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return uVar2;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] e5827b41429db4fa</pre>

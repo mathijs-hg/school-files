@@ -1,0 +1,54 @@
+<br />
+<pre>void table_del_vid(undefined4 param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  size_t sVar1;</pre>
+<pre>  ulong uVar2;</pre>
+<pre>  int local_20;</pre>
+<pre>  uint local_18;</pre>
+<pre>  char acStack_14 [4];</pre>
+<pre>  undefined local_10;</pre>
+<pre>  undefined local_c;</pre>
+<pre>  </pre>
+<pre><span class="green">  if ((*(int *)(param_2 + 0xc) == 0) || (sVar1 = strlen(*(char **)(param_2 + 0xc)), sVar1 != 0xc)) {</span></pre>
+<pre>    puts("MAC address format error, should be of length 12");</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre><span class="green"><span class="green"><span class="green">  strncpy(acStack_14,*(char **)(param_2 + 0xc),8)</span></span></span></span></pre>
+<pre>  local_c = 0;</pre>
+<pre>  local_18 = strtoul(acStack_14,(char **)0x0,0x10);</pre>
+<pre>  reg_write(0x74,local_18);</pre>
+<pre><span class="green"><span class="green"><span class="green">  strncpy(acStack_14,(char *)(*(int *)(param_2 + 0xc) + 8),4)</span></span></span></span></pre>
+<pre>  local_10 = 0;</pre>
+<pre>  uVar2 = strtoul(acStack_14,(char **)0x0,0x10);</pre>
+<pre>  local_18 = uVar2 &lt;&lt; 0x10;</pre>
+<pre>  uVar2 = strtoul(*(char **)(param_2 + 0x14),(char **)0x0,0);</pre>
+<pre>  if ((-1 &lt; (int)uVar2) &amp;&amp; ((int)uVar2 &lt; 0x1000)) {</pre>
+<pre>    local_18 = local_18 | uVar2 | 0x8000;</pre>
+<pre>    reg_write(0x78,local_18);</pre>
+<pre>    local_18 = 0;</pre>
+<pre>    reg_write(0x7c,0);</pre>
+<pre>    local_18 = 0x8001;</pre>
+<pre>    reg_write(0x80,0x8001);</pre>
+<pre>    for (local_20 = 0; local_20 &lt; 0x14; local_20 = local_20 + 1) {</pre>
+<pre><span class="green">      reg_read(0x80,&amp;local_18)</span></span></pre>
+<pre>      if ((local_18 &amp; 0x8000) == 0) {</pre>
+<pre>        if (*(int *)(param_2 + 4) == 0) {</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        puts("done.");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      usleep(1000);</pre>
+<pre>    }</pre>
+<pre>    if (local_20 != 0x14) {</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    puts("timeout.");</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  puts("wrong fid range, should be within 0~4095");</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 96e18453325c8cf4</pre>

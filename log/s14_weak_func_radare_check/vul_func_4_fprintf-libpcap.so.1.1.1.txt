@@ -1,0 +1,198 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibpcap.so.1.1.1[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mlibpcap.so.1.1.1[0m
+
+bnez s2, 0x4874
+addiu v0, zero, 1
+b 0x4874
+sw v0, 0x6c(s0)
+lw t9, -sym.imp.__errno_location(gp)
+nop
+jalr t9
+nop
+lw a0, (v0)
+addiu v0, zero, 0x63
+lw gp, 0x18(sp)
+beq a0, v0, 0x4874
+addiu v0, zero, 0x7a
+beq a0, v0, 0x4874
+nop
+lw t9, -sym.pcap_strerror(gp)
+lw v0, -0x7ef4(gp)
+nop
+lw s1, (v0)
+jalr t9
+nop
+lw gp, 0x18(sp)
+move a0, s1
+move a2, v0
+lw a1, -0x7fd4(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+nop
+jalr t9
+addiu a1, a1, 0x1834
+lw gp, 0x18(sp)
+lw v0, 0x6c(s0)
+nop
+bnez v0, 0x489c
+nop
+lw t9, -0x7fd8(gp)
+nop
+addiu t9, t9, 0x3d30
+bal 0x3d30
+move a0, s0
+lw gp, 0x18(sp)
+lw a0, 0x28(sp)
+nop
+beqz a0, 0x48bc
+addiu s1, zero, -2
+lw t9, -sym.imp.free(gp)
+nop
+--
+and v0, v0, v1
+sh v0, 0x28(sp)
+ori a1, zero, 0x8914
+jalr t9
+addiu a2, sp, 0x18
+lw gp, 0x10(sp)
+bne v0, s1, 0x543c
+nop
+lw t9, -sym.imp.__errno_location(gp)
+lw v0, -0x7ef4(gp)
+nop
+lw s1, (v0)
+jalr t9
+nop
+lw gp, 0x10(sp)
+lw a0, (v0)
+lw t9, -sym.imp.strerror(gp)
+nop
+jalr t9
+nop
+lw gp, 0x10(sp)
+move a0, s1
+lw a1, -0x7fd4(gp)
+nop
+addiu a1, a1, 0x1a38
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+nop
+jalr t9
+move a2, v0
+lw gp, 0x10(sp)
+nop
+lw t9, -sym.pcap_remove_from_pcaps_to_close(gp)
+nop
+jalr t9
+move a0, s0
+lw gp, 0x10(sp)
+lw a0, 0xac(s0)
+nop
+beqz a0, 0x5478
+nop
+lw t9, -sym.imp.free(gp)
+nop
+jalr t9
+nop
+lw gp, 0x10(sp)
+sw zero, 0xac(s0)
+--
+lw v0, 0x38(a0)
+jr ra
+nop
+lw v0, 0x44(a0)
+jr ra
+nop
+lw v0, 0x48(a0)
+jr ra
+nop
+lw v0, 0x30(a0)
+jr ra
+nop
+lw v0, (a0)
+jr ra
+nop
+lw v0, 4(a0)
+jr ra
+nop
+lui gp, 4
+addiu gp, gp, 0x209c
+addu gp, gp, t9
+lw v0, -0x7ef4(gp)
+move a2, a1
+lw a1, -0x7fd4(gp)
+addiu a3, a0, segment.DYNAMIC
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+lw a0, (v0)
+jr t9
+addiu a1, a1, 0x2064
+jr ra
+addiu v0, a0, segment.DYNAMIC
+lw t9, 0x110(a0)
+nop
+jr t9
+nop
+lw t9, segment.LOPROC(a0)
+nop
+jr t9
+nop
+lui gp, 4
+addiu gp, gp, 0x2048
+addu gp, gp, t9
+addiu sp, sp, -0x20
+addiu v0, a0, 9
+sw gp, 0x10(sp)
+sltiu v1, v0, 0xc
+--
+nop
+lw a1, 0x10(v0)
+lw v0, 8(v0)
+sw a1, 0x2e7c(a0)
+lw a0, -0x7fe8(gp)
+nop
+sw v0, 0x2e6c(a0)
+lw a0, -obj.pcap_text(gp)
+nop
+sw v0, (a0)
+lw v1, (v1)
+nop
+lw a0, (v1)
+lw v1, -obj.pcap_in(gp)
+nop
+sw a0, (v1)
+lbu v1, (v0)
+lw v0, -0x7fe8(gp)
+jr ra
+sb v1, 0x2e70(v0)
+lui gp, 3
+addiu gp, gp, -0x2030
+addu gp, gp, t9
+lw v0, -0x7ef4(gp)
+lw a1, -0x7fd4(gp)
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+move a2, a0
+lw a0, (v0)
+addiu sp, sp, -0x20
+sw gp, 0x10(sp)
+sw ra, 0x1c(sp)
+jalr t9
+addiu a1, a1, 0x2068
+lw gp, 0x10(sp)
+nop
+lw t9, -sym.imp.exit(gp)
+nop
+jalr t9
+addiu a0, zero, 2
+lui gp, 3
+addiu gp, gp, -0x207c
+addu gp, gp, t9
+beqz a0, 0x1c400
+nop
+lw v0, 4(a0)
+sw zero, 0x10(a0)
+
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m4[0m times [0;33mlibpcap.so.1.1.1[0m
+

@@ -1,0 +1,371 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 4:</span></pre>
+<pre></span>SERVICE_USE_PID=1</span></pre>
+<pre><span class="orange">^-------------^ SC2034 (warning): SERVICE_USE_PID appears unused. Verify use (or export if used externally).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 8:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "dhcp6s" "starting dhcp6s server"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "dhcp6s" "starting dhcp6s server"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 9:</span></pre>
+<pre></span>	[ ! -e /etc/dhcp6sctlkey ] &amp;&amp; `dd if=/dev/urandom count=1 2&gt; /dev/null | md5sum | cut -d" " -f1 &gt; /etc/dhcp6sctlkey`</span></pre>
+<pre><span class="orange">                                      ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).</span></pre>
+<pre><span class="green">                                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ ! -e /etc/dhcp6sctlkey ] &amp;&amp; $(dd if=/dev/urandom count=1 2&gt; /dev/null | md5sum | cut -d" " -f1 &gt; /etc/dhcp6sctlkey)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 13:</span></pre>
+<pre></span>        local dhc=`ps|grep dhcp6s | grep -v "grep"|wc -l`</span></pre>
+<pre><span class="orange">        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">              ^-^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                  ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<pre><span class="green">                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<pre><span class="green">                   ^-- SC2009 (info): Consider using pgrep instead of grepping ps output.</span></pre>
+<pre><span class="green">                                    ^------------^ SC2126 (style): Consider using 'grep -c' instead of 'grep|wc -l'.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        local dhc=$(ps|grep dhcp6s | grep -v "grep"|wc -l)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 14:</span></pre>
+<pre></span>        if [ ${dhc} -eq 1 ];then</span></pre>
+<pre><span class="green">             ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        if [ "${dhc}" -eq 1 ];then</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 15:</span></pre>
+<pre></span>				network_echo $LOG_PRI_WARNING "dhcp6s" "dhcp6s server is existing"</span></pre>
+<pre><span class="green">                                             ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>				network_echo "$LOG_PRI_WARNING" "dhcp6s" "dhcp6s server is existing"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 19:</span></pre>
+<pre></span>				network_echo $LOG_PRI_WARNING "dhcp6s" "dhcp6s is not running,but pid file is exist."</span></pre>
+<pre><span class="green">                                             ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>				network_echo "$LOG_PRI_WARNING" "dhcp6s" "dhcp6s is not running,but pid file is exist."</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 25:</span></pre>
+<pre></span>	. /lib/functions/network.sh</span></pre>
+<pre><span class="green">          ^-----------------------^ SC1091 (info): Not following: /lib/functions/network.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 27:</span></pre>
+<pre></span>	local enabled</span></pre>
+<pre><span class="orange">        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 28:</span></pre>
+<pre></span>    local proto</span></pre>
+<pre><span class="orange">    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 29:</span></pre>
+<pre></span>    local interface</span></pre>
+<pre><span class="orange">    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 30:</span></pre>
+<pre></span>    local ifname</span></pre>
+<pre><span class="orange">    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 31:</span></pre>
+<pre></span>    local startip</span></pre>
+<pre><span class="orange">    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 32:</span></pre>
+<pre></span>    local endip</span></pre>
+<pre><span class="orange">    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 33:</span></pre>
+<pre></span>    local dns1</span></pre>
+<pre><span class="orange">    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 34:</span></pre>
+<pre></span>    local dns2</span></pre>
+<pre><span class="orange">    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 35:</span></pre>
+<pre></span>    local leasetime</span></pre>
+<pre><span class="orange">    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 36:</span></pre>
+<pre></span>	local config_file</span></pre>
+<pre><span class="orange">        ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 37:</span></pre>
+<pre></span>    local wanv6_conn_status</span></pre>
+<pre><span class="orange">    ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 38:</span></pre>
+<pre></span>	local isMobile=$(isMobile 2&gt;/dev/null)</span></pre>
+<pre><span class="orange">        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">              ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                       ^---------------------^ SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 54:</span></pre>
+<pre></span>	[ $enabled -eq 0 ] &amp;&amp; return 0</span></pre>
+<pre><span class="green">          ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ "$enabled" -eq 0 ] &amp;&amp; return 0</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 56:</span></pre>
+<pre></span>	[ ! -e $config_file ] &amp;&amp; touch $config_file</span></pre>
+<pre><span class="green">               ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                       ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	[ ! -e "$config_file" ] &amp;&amp; touch "$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 62:</span></pre>
+<pre></span>    cat /dev/null &gt;$config_file</span></pre>
+<pre><span class="green">                   ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    cat /dev/null &gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 63:</span></pre>
+<pre></span>    if [ -n "$dns1" -a "$dns1" != "none" ]; then</span></pre>
+<pre><span class="orange">                    ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 64:</span></pre>
+<pre></span>        echo -e "option domain-name-servers $dns1;\n" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                                        ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        echo -e "option domain-name-servers $dns1;\n" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 66:</span></pre>
+<pre></span>    if [ -n "$dns2" -a "$dns2" != "none" -a "$dns1" != "$dns2" ]; then</span></pre>
+<pre><span class="orange">                    ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<pre><span class="orange">                                         ^-- SC2166 (warning): Prefer [ p ] &amp;&amp; [ q ] as [ p -a q ] is not well defined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 67:</span></pre>
+<pre></span>        echo -e "option domain-name-servers $dns2;\n" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                                        ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        echo -e "option domain-name-servers $dns2;\n" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 72:</span></pre>
+<pre></span>            echo -e "pool pool1 {" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "pool pool1 {" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 73:</span></pre>
+<pre></span>            echo -e "    range $startip to $endip ;" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                                       ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "    range $startip to $endip ;" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 74:</span></pre>
+<pre></span>            echo -e "};\n" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                             ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "};\n" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 75:</span></pre>
+<pre></span>            echo -e "interface $ifname {" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                            ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "interface $ifname {" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 76:</span></pre>
+<pre></span>            echo -e "    address-pool pool1 $leasetime;" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                                                           ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "    address-pool pool1 $leasetime;" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 77:</span></pre>
+<pre></span>            echo -e "};" &gt;&gt;$config_file</span></pre>
+<pre><span class="orange">                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.</span></pre>
+<pre><span class="green">                           ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>            echo -e "};" &gt;&gt;"$config_file"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 89:</span></pre>
+<pre></span>    wanv6_conn_status=`ubus call network.interface.wanv6 status | grep "\"state\""`</span></pre>
+<pre><span class="green">                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    wanv6_conn_status=$(ubus call network.interface.wanv6 status | grep "\"state\"")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 91:</span></pre>
+<pre></span>        wanv6_conn_status=`ubus call network.interface.internet status | grep "\"state\""`</span></pre>
+<pre><span class="green">                          ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        wanv6_conn_status=$(ubus call network.interface.internet status | grep "\"state\"")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 94:</span></pre>
+<pre></span>    wanv6_conn_status=${wanv6_conn_status:4:9}</span></pre>
+<pre><span class="orange">                      ^----------------------^ SC3057 (warning): In POSIX sh, string indexing is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 99:</span></pre>
+<pre></span>			local dns_flag=$(cat /tmp/dns_flag)</span></pre>
+<pre><span class="orange">                        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                              ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                                       ^------------------^ SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 101:</span></pre>
+<pre></span>			network_echo $LOG_PRI_DEBUG "dhcp6s" "down off re client"</span></pre>
+<pre><span class="green">                                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			network_echo "$LOG_PRI_DEBUG" "dhcp6s" "down off re client"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 102:</span></pre>
+<pre></span>			if [ $dns_flag == 1 ]; then</span></pre>
+<pre><span class="green">                             ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			if [ "$dns_flag" == 1 ]; then</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 110:</span></pre>
+<pre></span>		local dhcp6s_log=$(cat ${config_file})</span></pre>
+<pre><span class="orange">                ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                      ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                                 ^-------------------^ SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<pre><span class="green">                                       ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		local dhcp6s_log=$(cat "${config_file}")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 111:</span></pre>
+<pre></span>		network_echo $LOG_PRI_DEBUG "dhcp6s" "call dhcp6s,ifname=$ifname, config:$dhcp6s_log"</span></pre>
+<pre><span class="green">                             ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		network_echo "$LOG_PRI_DEBUG" "dhcp6s" "call dhcp6s,ifname=$ifname, config:$dhcp6s_log"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 112:</span></pre>
+<pre></span>        /usr/sbin/dhcp6s -c $config_file -P $pid_file $ifname</span></pre>
+<pre><span class="green">                            ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                                      ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>        /usr/sbin/dhcp6s -c "$config_file" -P $pid_file "$ifname"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 117:</span></pre>
+<pre></span>		local mobilelanv6=$(uci get mobile_lanv6.basic.enabled)</span></pre>
+<pre><span class="orange">                ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                      ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                                  ^-- SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 119:</span></pre>
+<pre></span>			local dhcp6s_log=$(cat ${config_file})</span></pre>
+<pre><span class="orange">                        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<pre><span class="orange">                              ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.</span></pre>
+<pre><span class="orange">                                         ^-------------------^ SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<pre><span class="green">                                               ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			local dhcp6s_log=$(cat "${config_file}")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 120:</span></pre>
+<pre></span>			network_echo $LOG_PRI_DEBUG "dhcp6s" "call dhcp6s,ifname=$ifname, config:$dhcp6s_log"</span></pre>
+<pre><span class="green">                                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			network_echo "$LOG_PRI_DEBUG" "dhcp6s" "call dhcp6s,ifname=$ifname, config:$dhcp6s_log"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 121:</span></pre>
+<pre></span>			/usr/sbin/dhcp6s -c $config_file -P $pid_file $ifname</span></pre>
+<pre><span class="green">                                            ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                                                                      ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>			/usr/sbin/dhcp6s -c "$config_file" -P $pid_file "$ifname"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 125:</span></pre>
+<pre></span>		network_echo $LOG_PRI_WARNING "dhcp6s" "wanv6_conn_status is not connected, do not start dhcp6s now"</span></pre>
+<pre><span class="green">                             ^--------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		network_echo "$LOG_PRI_WARNING" "dhcp6s" "wanv6_conn_status is not connected, do not start dhcp6s now"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 130:</span></pre>
+<pre></span>	network_echo $LOG_PRI_NOTICE "dhcp6s" "stop dhcp6s server"</span></pre>
+<pre><span class="green">                     ^-------------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	network_echo "$LOG_PRI_NOTICE" "dhcp6s" "stop dhcp6s server"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/init.d/dhcp6s line 134:</span></pre>
+<pre></span>    [ -e $pid_file ] &amp;&amp; kill -15 `cat "$pid_file"`</span></pre>
+<pre><span class="orange">                                 ^---------------^ SC2046 (warning): Quote this to prevent word splitting.</span></pre>
+<pre><span class="green">                                 ^---------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>    [ -e $pid_file ] &amp;&amp; kill -15 $(cat "$pid_file")</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2034" title="https://www.shellcheck.net/wiki/SC2034" target="_blank" >https://www.shellcheck.net/wiki/SC2034</a> -- SERVICE_USE_PID appears unused. V...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2046" title="https://www.shellcheck.net/wiki/SC2046" target="_blank" >https://www.shellcheck.net/wiki/SC2046</a> -- Quote this to prevent word splitt...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2092" title="https://www.shellcheck.net/wiki/SC2092" target="_blank" >https://www.shellcheck.net/wiki/SC2092</a> -- Remove backticks to avoid executi...</pre>

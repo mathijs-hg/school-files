@@ -1,0 +1,55 @@
+<br />
+<pre>int proc_parse_start(proc_parse_info *pi)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *pFVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  char *pcVar3;</pre>
+<pre>  uint uVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  int *piVar6;</pre>
+<pre>  </pre>
+<pre><span class="green">  iVar2 = open64("/proc/mtd",0)</span></span></pre>
+<pre>  if (iVar2 != -1) {</pre>
+<pre><span class="green"><span class="green">    pcVar3 = (char *)malloc(0x1000)</span></span></span></pre>
+<pre>    if (pcVar3 == (char *)0x0) {</pre>
+<pre>      piVar6 = __errno_location();</pre>
+<pre>      iVar2 = *piVar6;</pre>
+<pre>      fprintf(stderr,"%s: error!: out of memory\n","libmtd");</pre>
+<pre>      pFVar1 = stderr;</pre>
+<pre>      pcVar3 = strerror(iVar2);</pre>
+<pre>      fprintf(pFVar1,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar2,pcVar3);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>      exit(-1);</pre>
+<pre>    }</pre>
+<pre>    pi-&gt;buf = pcVar3;</pre>
+<pre><span class="green"><span class="green">    uVar4 = read(iVar2,pcVar3,0x1000)</span></span></span></pre>
+<pre>    if (uVar4 == 0xffffffff) {</pre>
+<pre>      piVar6 = __errno_location();</pre>
+<pre>      iVar5 = *piVar6;</pre>
+<pre>      fprintf(stderr,"%s: error!: cannot read \"%s\"\n","libmtd","/proc/mtd");</pre>
+<pre>      pFVar1 = stderr;</pre>
+<pre>      pcVar3 = strerror(iVar5);</pre>
+<pre>      fprintf(pFVar1,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar5,pcVar3);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (0x1e &lt; uVar4) {</pre>
+<pre>        pcVar3 = pi-&gt;buf;</pre>
+<pre>        iVar5 = memcmp(pcVar3,"dev:    size   erasesize  name\n",0x1f);</pre>
+<pre>        if (iVar5 == 0) {</pre>
+<pre>          pi-&gt;data_size = uVar4;</pre>
+<pre>          pi-&gt;next = pcVar3 + 0x1f;</pre>
+<pre>          close(iVar2);</pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      fprintf(stderr,"%s: error!: \"%s\" does not start with \"%s\"\n","libmtd","/proc/mtd",</pre>
+<pre>              "dev:    size   erasesize  name\n");</pre>
+<pre>    }</pre>
+<pre>    free(pi-&gt;buf);</pre>
+<pre>    close(iVar2);</pre>
+<pre>  }</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 76c072055357682a</pre>

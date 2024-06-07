@@ -1,0 +1,87 @@
+<br />
+<pre>int mtd_get_info(libmtd_t desc,mtd_info *info)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *pFVar1;</pre>
+<pre>  DIR *__dirp;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  dirent64 *pdVar3;</pre>
+<pre>  size_t sVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  char *pcVar6;</pre>
+<pre>  undefined4 uVar7;</pre>
+<pre>  int local_128;</pre>
+<pre>  char tmp_buf [256];</pre>
+<pre>  </pre>
+<pre>  *(uint *)&amp;info-&gt;field_0xc = *(uint *)&amp;info-&gt;field_0xc | 1;</pre>
+<pre>                    /* WARNING: Load size is inaccurate */</pre>
+<pre>  __dirp = opendir(*desc);</pre>
+<pre>  if (__dirp == (DIR *)0x0) {</pre>
+<pre>    piVar2 = __errno_location();</pre>
+<pre>    iVar5 = *piVar2;</pre>
+<pre>    if (iVar5 == 2) {</pre>
+<pre>      *piVar2 = 0x13;</pre>
+<pre>      return -1;</pre>
+<pre>    }</pre>
+<pre>                    /* WARNING: Load size is inaccurate */</pre>
+<pre>    uVar7 = *desc;</pre>
+<pre>    pcVar6 = "%s: error!: cannot open \"%s\"\n";</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    info-&gt;lowest_mtd_num = 0x7fffffff;</pre>
+<pre>    piVar2 = __errno_location();</pre>
+<pre>    while( true ) {</pre>
+<pre>      *piVar2 = 0;</pre>
+<pre>      pdVar3 = readdir64(__dirp);</pre>
+<pre>      pcVar6 = pdVar3-&gt;d_name;</pre>
+<pre>      if (pdVar3 == (dirent64 *)0x0) break;</pre>
+<pre>      sVar4 = strlen(pcVar6);</pre>
+<pre>      if (0xfe &lt; sVar4) {</pre>
+<pre>                    /* WARNING: Load size is inaccurate */</pre>
+<pre>        fprintf(stderr,"%s: error!: invalid entry in %s: \"%s\"\n","libmtd",*desc,pcVar6);</pre>
+<pre>        *piVar2 = 0x16;</pre>
+<pre>        goto out_close;</pre>
+<pre>      }</pre>
+<pre><span class="green"><span class="green">      iVar5 = sscanf(pcVar6,"mtd%d%s",&amp;local_128,tmp_buf)</span></span></span></pre>
+<pre>      if (iVar5 == 1) {</pre>
+<pre>        info-&gt</span>td_dev_cnt = info-&gt</span>td_dev_cnt + 1;</pre>
+<pre>        if (info-&gt;highest_mtd_num &lt; local_128) {</pre>
+<pre>          info-&gt;highest_mtd_num = local_128;</pre>
+<pre>        }</pre>
+<pre>        if (local_128 &lt; info-&gt;lowest_mtd_num) {</pre>
+<pre>          info-&gt;lowest_mtd_num = local_128;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    iVar5 = *piVar2;</pre>
+<pre>    if (iVar5 != 0) {</pre>
+<pre>                    /* WARNING: Load size is inaccurate */</pre>
+<pre>      fprintf(stderr,"%s: error!: readdir failed on \"%s\"\n","libmtd",*desc);</pre>
+<pre>      pFVar1 = stderr;</pre>
+<pre>      pcVar6 = strerror(iVar5);</pre>
+<pre>      fprintf(pFVar1,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar5,pcVar6);</pre>
+<pre>out_close:</pre>
+<pre>      closedir(__dirp);</pre>
+<pre>      return -1;</pre>
+<pre>    }</pre>
+<pre>    iVar5 = closedir(__dirp);</pre>
+<pre>    if (iVar5 == 0) {</pre>
+<pre>      if (info-&gt;lowest_mtd_num != 0x7fffffff) {</pre>
+<pre>        return 0;</pre>
+<pre>      }</pre>
+<pre>      info-&gt;lowest_mtd_num = 0;</pre>
+<pre>      return 0;</pre>
+<pre>    }</pre>
+<pre>                    /* WARNING: Load size is inaccurate */</pre>
+<pre>    uVar7 = *desc;</pre>
+<pre>    iVar5 = *piVar2;</pre>
+<pre>    pcVar6 = "%s: error!: closedir failed on \"%s\"\n";</pre>
+<pre>  }</pre>
+<pre>  fprintf(stderr,pcVar6,"libmtd",uVar7);</pre>
+<pre>  pFVar1 = stderr;</pre>
+<pre>  pcVar6 = strerror(iVar5);</pre>
+<pre>  fprintf(pFVar1,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar5,pcVar6);</pre>
+<pre>  return -1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 8f071e881737afe4</pre>

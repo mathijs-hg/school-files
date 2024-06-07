@@ -1,0 +1,151 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibubox.so[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibubox.so[0m
+
+move s0, a2
+lw s0, -0x7fdc(gp)
+nop
+addiu s0, s0, -0x638c
+lw t9, -sym.imp.strlen(gp)
+move a0, s0
+sw a1, 0x18(sp)
+jalr t9
+sw a3, 0x1c(sp)
+lw gp, 0x10(sp)
+lw a3, 0x1c(sp)
+addiu a2, v0, 6
+lw t9, -sym.blob_new(gp)
+move s2, v0
+lw a1, 0x18(sp)
+addiu v0, zero, -4
+and a2, a2, v0
+move a0, s1
+jalr t9
+addu a2, a2, a3
+lw gp, 0x10(sp)
+beqz v0, 0x368c
+move s1, v0
+lwl v0, 3(v0)
+sll v1, s2, 8
+[31mlw t9, -sym.imp.strcpy(gp)[0m
+lwr v0, (s1)
+addiu a0, s1, 6
+move a1, s0
+ori v0, v0, 0x80
+swl v0, 3(s1)
+swr v0, (s1)
+andi v0, s2, 0xffff
+srl v0, v0, 8
+or v0, v0, v1
+andi v0, v0, 0xffff
+sb v0, 4(s1)
+srl v0, v0, 8
+jalr t9
+sb v0, 5(s1)
+lw gp, 0x10(sp)
+move a0, s1
+addiu s3, s1, 4
+lw t9, -0x7fd8(gp)
+nop
+addiu t9, t9, 0x3510
+--
+lw t9, -sym.imp.memset(gp)
+beqz v0, 0x5558
+andi s3, s3, 1
+addiu a0, sp, 0x44
+move a1, zero
+jalr t9
+addiu a2, zero, 0x6e
+lw gp, 0x18(sp)
+addiu v0, zero, 1
+sh v0, 0x44(sp)
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move a0, s1
+sltiu v0, v0, 0x6c
+lw gp, 0x18(sp)
+bnez v0, 0x5518
+addiu a0, sp, 0x46
+lw t9, -sym.imp.__errno_location(gp)
+nop
+jalr t9
+nop
+addiu v1, zero, 0x16
+b 0x5630
+sw v1, (v0)
+[31mlw t9, -sym.imp.strcpy(gp)[0m
+nop
+jalr t9
+move a1, s1
+lw gp, 0x18(sp)
+sw s2, 0x10(sp)
+sw s3, 0x14(sp)
+lw t9, -0x7fd8(gp)
+move a0, s0
+addiu a1, sp, 0x44
+addiu a2, zero, 0x6e
+addiu t9, t9, 0x5230
+bal 0x5230
+addiu a3, zero, 1
+b 0x5628
+nop
+addiu a0, sp, 0x24
+move a1, zero
+jalr t9
+addiu a2, zero, 0x20
+andi v0, s0, 0x800
+--
+nop
+jalr t9
+move s2, v0
+lw gp, 0x10(sp)
+nop
+lw t9, -sym.imp.strlen(gp)
+nop
+jalr t9
+move a0, s1
+lw gp, 0x10(sp)
+move a3, zero
+addiu a0, s2, 0x1c
+lw t9, -sym.__calloc_a(gp)
+addiu a1, sp, 0x18
+jalr t9
+addiu a2, v0, 1
+lw gp, 0x10(sp)
+move a2, s2
+move a1, s3
+lw t9, -sym.imp.memcpy(gp)
+addiu a0, v0, 0x1c
+jalr t9
+move s4, v0
+lw gp, 0x10(sp)
+lw a0, 0x18(sp)
+[31mlw t9, -sym.imp.strcpy(gp)[0m
+nop
+jalr t9
+move a1, s1
+lw gp, 0x10(sp)
+move a0, s0
+move a1, s4
+lw t9, -sym.avl_insert(gp)
+nop
+jalr t9
+sw v0, 0x14(s4)
+lw ra, 0x34(sp)
+lw s4, 0x30(sp)
+lw s3, 0x2c(sp)
+lw s2, 0x28(sp)
+lw s1, 0x24(sp)
+lw s0, 0x20(sp)
+jr ra
+addiu sp, sp, 0x38
+lui gp, 2
+addiu gp, gp, -0x6cf8
+
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m3[0m times [0;33mlibubox.so[0m
+

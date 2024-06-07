@@ -1,0 +1,52 @@
+<br />
+<pre>int dev_get_major(libmtd *lib,int mtd_num,int *major,int *minor)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  size_t sVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  undefined4 *puVar4;</pre>
+<pre>  undefined4 uVar5;</pre>
+<pre>  char *file;</pre>
+<pre>  char *__s;</pre>
+<pre>  code *pcVar6;</pre>
+<pre>  int iStack_68;</pre>
+<pre>  char *pcStack_64;</pre>
+<pre>  undefined *local_60;</pre>
+<pre>  char buf [50];</pre>
+<pre>  </pre>
+<pre>  __s = lib-&gt</span>td_dev;</pre>
+<pre>  local_60 = &amp;_gp;</pre>
+<pre>  sVar2 = strlen(__s);</pre>
+<pre><span class="green">  iVar1 = -(sVar2 + 0x40 &amp; 0xfffffff8)</span></span></pre>
+<pre>  file = (char *)((int)&amp;local_60 + iVar1);</pre>
+<pre>  (**(code **)(local_60 + -0x7f70))(file,__s,mtd_num);</pre>
+<pre>  iVar3 = read_data(file,buf,0x32);</pre>
+<pre>  if (-1 &lt; iVar3) {</pre>
+<pre>    iVar3 = (**(code **)(local_60 + -0x7f54))(buf,"%d:%d\n",major,minor);</pre>
+<pre>    if (iVar3 == 2) {</pre>
+<pre>      if ((*major &lt; 0) || (iVar3 = 0, *minor &lt; 0)) {</pre>
+<pre>        puVar4 = (undefined4 *)(**(code **)(local_60 + -0x7f78))();</pre>
+<pre>        *puVar4 = 0x16;</pre>
+<pre>        iVar3 = *major;</pre>
+<pre>        pcVar6 = *(code **)(local_60 + -0x7f38);</pre>
+<pre>        uVar5 = **(undefined4 **)(local_60 + -0x7f74);</pre>
+<pre>        *(int *)((int)&amp;iStack_68 + iVar1) = *minor;</pre>
+<pre>        *(char **)((int)&amp;pcStack_64 + iVar1) = file;</pre>
+<pre>        (*pcVar6)(uVar5,"%s: error!: bad major:minor %d:%d in \"%s\"\n","libmtd",iVar3);</pre>
+<pre>        iVar3 = -1;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      puVar4 = (undefined4 *)(**(code **)(local_60 + -0x7f78))();</pre>
+<pre>      pcVar6 = *(code **)(local_60 + -0x7f38);</pre>
+<pre>      uVar5 = **(undefined4 **)(local_60 + -0x7f74);</pre>
+<pre>      *puVar4 = 0x16;</pre>
+<pre>      (*pcVar6)(uVar5,"%s: error!: \"%s\" does not have major:minor format\n","libmtd",file);</pre>
+<pre>      iVar3 = -1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return iVar3;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] e19c8193e8bce51f</pre>

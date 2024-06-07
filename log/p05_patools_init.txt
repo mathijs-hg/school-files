@@ -1,0 +1,68 @@
+[[0;34m+[0m] [0;36m[1mInitial extractor of different archive types via patools[0m
+[1m=================================================================[0m
+The patools module extracts zip, tar and tgz firmware images with patool.
+
+
+
+
+[0;34m==>[0m [0;36mPatool filesystem extractor[0m
+-----------------------------------------------------------------
+INFO patool: Testing /firmware ...
+INFO patool: running /usr/bin/7z t -- /firmware
+INFO patool:     with input=''
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=C.UTF-8 Threads:128 OPEN_MAX:1048576
+
+Scanning the drive for archives:
+1 file, 13408772 bytes (13 MiB)
+
+Testing archive: /firmware
+--
+Path = /firmware
+Type = zip
+Physical Size = 13408772
+
+Everything is Ok
+
+Folders: 1
+Files: 1
+Size:       13416280
+Compressed: 13408772
+INFO patool: ... tested ok.
+
+
+[[0;33m*[0m] Valid compressed file detected - extraction process via patool started
+INFO patool: Extracting /firmware ...
+INFO patool: running /usr/bin/7z x -o/logs/firmware/patool_extraction/ -- /firmware
+INFO patool:     with input=''
+
+7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20
+ 64-bit locale=C.UTF-8 Threads:128 OPEN_MAX:1048576
+
+Scanning the drive for archives:
+1 file, 13408772 bytes (13 MiB)
+
+Extracting archive: /firmware
+--
+Path = /firmware
+Type = zip
+Physical Size = 13408772
+
+Everything is Ok
+
+Folders: 1
+Files: 1
+Size:       13416280
+Compressed: 13408772
+INFO patool: ... /firmware extracted to `/logs/firmware/patool_extraction/'.
+
+
+[[0;33m*[0m] Using the following firmware directory ([0;33m/logs/firmware/patool_extraction/[0m) as base directory:
+   106314      4 drwxr-xr-x   3 root     root         4096 Jun  5 15:18 /logs/firmware/patool_extraction/
+   106315      4 drwxr-xr-x   2 root     root         4096 Jan 18 08:45 /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005
+
+
+[[0;33m*[0m] Extracted [0;33m1[0m files and [0;33m2[0m directories from the firmware image.
+
+

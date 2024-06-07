@@ -1,0 +1,106 @@
+<br />
+<pre>void table_add(int param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  char cVar1;</pre>
+<pre>  bool bVar2;</pre>
+<pre>  size_t sVar3;</pre>
+<pre>  ulong uVar4;</pre>
+<pre>  uint local_28;</pre>
+<pre>  int local_24;</pre>
+<pre>  uint local_18;</pre>
+<pre>  char acStack_14 [4];</pre>
+<pre>  undefined local_10;</pre>
+<pre>  undefined local_c;</pre>
+<pre>  </pre>
+<pre>  bVar2 = **(char **)(param_2 + 4) == 'f';</pre>
+<pre><span class="green">  cVar1 = **(char **)(param_2 + 4)</span></span></pre>
+<pre><span class="green">  if ((*(int *)(param_2 + 8) == 0) || (sVar3 = strlen(*(char **)(param_2 + 8)), sVar3 != 0xc)) {</span></pre>
+<pre>    puts("MAC address format error, should be of length 12");</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_14,*(char **)(param_2 + 8),8)</span></span></span></span></pre>
+<pre>    local_c = 0;</pre>
+<pre>    local_18 = strtoul(acStack_14,(char **)0x0,0x10);</pre>
+<pre>    reg_write(0x74,local_18);</pre>
+<pre>    printf("REG_ESW_WT_MAC_ATA1 is 0x%x\n\r",local_18);</pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(acStack_14,(char *)(*(int *)(param_2 + 8) + 8),4)</span></span></span></span></pre>
+<pre>    local_10 = 0;</pre>
+<pre>    uVar4 = strtoul(acStack_14,(char **)0x0,0x10);</pre>
+<pre>    local_18 = uVar4 &lt;&lt; 0x10 | 0x8000;</pre>
+<pre>    if (4 &lt; param_1) {</pre>
+<pre>      uVar4 = strtoul(*(char **)(param_2 + 0x10),(char **)0x0,0);</pre>
+<pre>      if (0xfff &lt; uVar4) {</pre>
+<pre>        puts("wrong vid range, should be within 0~4095");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      local_18 = local_18 | uVar4;</pre>
+<pre>    }</pre>
+<pre>    reg_write(0x78,local_18);</pre>
+<pre>    printf("REG_ESW_WT_MAC_ATA2 is 0x%x\n\r",local_18);</pre>
+<pre><span class="green">    if ((*(int *)(param_2 + 0xc) == 0) || (sVar3 = strlen(*(char **)(param_2 + 0xc)), sVar3 != 8)) {</span></pre>
+<pre>      if (!bVar2) {</pre>
+<pre>        puts("portmap format error, should be of length 7");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      *(char **)(param_2 + 0xc) = "1111111";</pre>
+<pre>    }</pre>
+<pre>    local_24 = 0;</pre>
+<pre>    for (local_28 = 0; local_28 &lt; 7; local_28 = local_28 + 1) {</pre>
+<pre>      if ((*(char *)(*(int *)(param_2 + 0xc) + local_28) != '0') &amp;&amp;</pre>
+<pre>         (*(char *)(*(int *)(param_2 + 0xc) + local_28) != '1')) {</pre>
+<pre>        puts("portmap format error, should be of combination of 0 or 1");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      local_24 = local_24 +</pre>
+<pre>                 (*(char *)(*(int *)(param_2 + 0xc) + local_28) + -0x30 &lt;&lt; (local_28 &amp; 0x1f));</pre>
+<pre>    }</pre>
+<pre>    local_18 = local_24 &lt;&lt; 4;</pre>
+<pre>    if (param_1 &lt; 6) {</pre>
+<pre>      local_18 = local_18 | 0xff00000c;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      uVar4 = strtoul(*(char **)(param_2 + 0x14),(char **)0x0,0);</pre>
+<pre>      if ((uVar4 == 0) || (0xff &lt; uVar4)) {</pre>
+<pre>        puts("wrong age range, should be within 1~255");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      local_18 = uVar4 &lt;&lt; 0x18 | local_18 | 4;</pre>
+<pre>    }</pre>
+<pre>    if (6 &lt; param_1) {</pre>
+<pre>      uVar4 = strtoul(*(char **)(param_2 + 0x18),(char **)0x0,0);</pre>
+<pre>      if (7 &lt; uVar4) {</pre>
+<pre>        puts("wrong eg-tag range, should be within 0~7");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      local_18 = uVar4 &lt;&lt; 0xd | local_18;</pre>
+<pre>    }</pre>
+<pre>    if (bVar2) {</pre>
+<pre>      local_18 = local_18 | 0x700000;</pre>
+<pre>    }</pre>
+<pre>    if (cVar1 == 'm') {</pre>
+<pre>      local_18 = local_18 | 0x800000;</pre>
+<pre>    }</pre>
+<pre>    reg_write(0x7c,local_18);</pre>
+<pre>    usleep(5000);</pre>
+<pre><span class="green">    reg_read(0x7c,&amp;local_18)</span></span></pre>
+<pre>    printf("REG_ESW_WT_MAC_ATWD is 0x%x\n\r",local_18);</pre>
+<pre>    local_18 = 0x8001;</pre>
+<pre>    reg_write(0x80,0x8001);</pre>
+<pre>    usleep(1000);</pre>
+<pre>    for (local_28 = 0; local_28 &lt; 0x14; local_28 = local_28 + 1) {</pre>
+<pre><span class="green">      reg_read(0x80,&amp;local_18)</span></span></pre>
+<pre>      if ((local_18 &amp; 0x8000) == 0) {</pre>
+<pre>        puts("done.");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      usleep(1000);</pre>
+<pre>    }</pre>
+<pre>    if (local_28 == 0x14) {</pre>
+<pre>      puts("timeout.");</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 6cdd70b7bc70126b</pre>

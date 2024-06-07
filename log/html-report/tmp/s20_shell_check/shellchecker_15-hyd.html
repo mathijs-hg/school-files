@@ -1,0 +1,79 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 3:</span></pre>
+<pre></span>. /lib/functions.sh</span></pre>
+<pre><span class="green">  ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 4:</span></pre>
+<pre></span>. /lib/functions/network.sh</span></pre>
+<pre><span class="green">  ^-----------------------^ SC1091 (info): Not following: /lib/functions/network.sh was not specified as input (see shellcheck -x).</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 10:</span></pre>
+<pre></span>	local fileflag="/tmp/.hyd.restart.pending"</span></pre>
+<pre><span class="orange">        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 18:</span></pre>
+<pre></span>	a=`stat -c %Y $fileflag`</span></pre>
+<pre><span class="green">          ^--------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	a=$(stat -c %Y $fileflag)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 19:</span></pre>
+<pre></span>	b=`date +%s`</span></pre>
+<pre><span class="green">          ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	b=$(date +%s)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 20:</span></pre>
+<pre></span>	c=`expr $b - $a`</span></pre>
+<pre><span class="green">          ^------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<pre><span class="green">           ^--^ SC2003 (style): expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].</span></pre>
+<pre><span class="green">                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="green">                     ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	c=$(expr "$b" - "$a")</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 30:</span></pre>
+<pre></span>	local exescript</span></pre>
+<pre><span class="orange">        ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 32:</span></pre>
+<pre></span>	exescript=`ls /etc/hotplug.d/iface/*hyd* 2&gt;&amp;-`</span></pre>
+<pre><span class="green">                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	exescript=$(ls /etc/hotplug.d/iface/*hyd* 2&gt;&amp;-)</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 37:</span></pre>
+<pre></span>	eval $exescript</span></pre>
+<pre><span class="green">             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	eval "$exescript"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/iface/15-hyd line 43:</span></pre>
+<pre></span>	[ "$ACTION" == "ifup" ] &amp;&amp; [ "$INTERFACE" == "lan" -o  "$INTERFACE" == "guest" -o  "$INTERFACE" == "wan" -o  "$INTERFACE" == "lanv6" ] &amp;&amp; {</span></pre>
+<pre><span class="orange">                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<pre><span class="orange">                                                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<pre><span class="orange">                                                           ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<pre><span class="orange">                                                                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<pre><span class="orange">                                                                                       ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<pre><span class="orange">                                                                                                        ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<pre><span class="orange">                                                                                                                 ^-- SC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.</span></pre>
+<pre><span class="orange">                                                                                                                                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.</span></pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2166" title="https://www.shellcheck.net/wiki/SC2166" target="_blank" >https://www.shellcheck.net/wiki/SC2166</a> -- Prefer [ p ] || [ q ] as [ p -o q...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3014" title="https://www.shellcheck.net/wiki/SC3014" target="_blank" >https://www.shellcheck.net/wiki/SC3014</a> -- In POSIX sh, == in place of = is ...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC3043" title="https://www.shellcheck.net/wiki/SC3043" target="_blank" >https://www.shellcheck.net/wiki/SC3043</a> -- In POSIX sh, 'local' is undefined.</pre>

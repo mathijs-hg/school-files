@@ -1,0 +1,351 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 12:[0m
+[0m. /usr/lib/ddns/dynamic_dns_functions.sh[0m
+[32m  ^-- SC1091 (info): Not following: /usr/lib/ddns/dynamic_dns_functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 29:[0m
+[0m	verbose_mode="$2"[0m
+[33m        ^----------^ SC2034 (warning): verbose_mode appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 69:[0m
+[0mif [ "$enabled" != "on" ] [0m
+[33m      ^------^ SC2154 (warning): enabled is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 75:[0m
+[0mddns_syslog $DDNS_LOG_INF_LOGIN_START $service_id[0m
+[32m            ^-----------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                      ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+ddns_syslog "$DDNS_LOG_INF_LOGIN_START" "$service_id"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 78:[0m
+[0m    ${service_id}_state_init[0m
+[32m    ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    "${service_id}"_state_init
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 87:[0m
+[0melif [ "$check_interval" == "-1" ][0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 133:[0m
+[0mif [ "x$use_https" = "x1" ][0m
+[32m     ^-----------^ SC2268 (style): Avoid x-prefix in comparisons as it no longer serves a purpose.[0m
+
+[1mDid you mean: [0m
+if [ "$use_https" = "1" ]
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 137:[0m
+[0m	if [ -f "$cacert" ][0m
+[33m                 ^-----^ SC2154 (warning): cacert is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 147:[0m
+[0m        retrieve_prog=$(${service_id}_retrieve_prog)[0m
+[32m                        ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        retrieve_prog=$("${service_id}"_retrieve_prog)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 156:[0m
+[0mip_regex="[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}"[0m
+[33m^------^ SC2034 (warning): ip_regex appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 175:[0m
+[0m		next_name=$(echo $service_line | grep -o "^[\t ]*\"[^\"]*\"" | xargs -r -n1 echo)[0m
+[32m                                 ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		next_name=$(echo "$service_line" | grep -o "^[\t ]*\"[^\"]*\"" | xargs -r -n1 echo)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 176:[0m
+[0m		next_url=$(echo $service_line | grep -o "\"[^\"]*\"[\t ]*$" | xargs -r -n1 echo)[0m
+[32m                                ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		next_url=$(echo "$service_line" | grep -o "\"[^\"]*\"[\t ]*$" | xargs -r -n1 echo)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 186:[0m
+[0mif [ "x$use_https" = "x1" ][0m
+[32m     ^-----------^ SC2268 (style): Avoid x-prefix in comparisons as it no longer serves a purpose.[0m
+
+[1mDid you mean: [0m
+if [ "$use_https" = "1" ]
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 188:[0m
+[0m	update_url=$(echo $update_url | sed -e 's/^http:/https:/')[0m
+[32m                          ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	update_url=$(echo "$update_url" | sed -e 's/^http:/https:/')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 218:[0m
+[0m[ "$check_interval" == "never" ] && check_interval_seconds=$((1*60*60)) # An hour as default[0m
+[33m                    ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 242:[0m
+[0mcase "$retry_unit" in[0m
+[33m      ^---------^ SC2154 (warning): retry_unit is referenced but not assigned.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 272:[0m
+[0m		old_pid=$(cat /var/run/dynamic_dns/$service_id.pid)[0m
+[32m                                                   ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		old_pid=$(cat /var/run/dynamic_dns/"$service_id".pid)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 273:[0m
+[0m		test_match=$(ps | grep "^[\t ]*$old_pid")[0m
+[32m                             ^-- SC2009 (info): Consider using pgrep instead of grepping ps output.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 278:[0m
+[0m			kill $old_pid[0m
+[32m                             ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			kill "$old_pid"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 286:[0m
+[0mecho $$ > /var/run/dynamic_dns/$service_id.pid[0m
+[32m                               ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+echo $$ > /var/run/dynamic_dns/"$service_id".pid
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 293:[0m
+[0m	last_update=$(cat /var/run/dynamic_dns/$service_id.update)[0m
+[32m                                               ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	last_update=$(cat /var/run/dynamic_dns/"$service_id".update)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 303:[0m
+[0mexternal_reconn_time=0[0m
+[33m^------------------^ SC2034 (warning): external_reconn_time appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 306:[0m
+[0mlocal need_update_interval_check[0m
+[33m^-- SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 343:[0m
+[0m            ddns_set_state $service_id[0m
+[32m                           ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            ddns_set_state "$service_id"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 349:[0m
+[0m	is_public_ip=$(ddns_check_public_ip $current_ip)[0m
+[32m                                            ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	is_public_ip=$(ddns_check_public_ip "$current_ip")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 359:[0m
+[0m	if [ "$current_ip" != "$registered_ip" ]  || [ $force_interval_seconds -lt $time_since_update ] \[0m
+[32m                                                       ^---------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ "$current_ip" != "$registered_ip" ]  || [ "$force_interval_seconds" -lt $time_since_update ] \
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 360:[0m
+[0m        || [ "$need_update_interval_check" == "true" ] || ! ddns_state_good $service_id # ddns_state_good remember to remove when you don't want to use tp device[0m
+[33m                                           ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[32m                                                                            ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        || [ "$need_update_interval_check" == "true" ] || ! ddns_state_good "$service_id" # ddns_state_good remember to remove when you don't want to use tp device
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 371:[0m
+[0m				replace_name=$(echo "\[$option_var\]" | tr 'a-z' 'A-Z')[0m
+[32m                                                                           ^---^ SC2018 (info): Use '[:lower:]' to support accents and foreign alphabets.[0m
+[32m                                                                                 ^---^ SC2019 (info): Use '[:upper:]' to support accents and foreign alphabets.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 373:[0m
+[0m				replace_value=$(echo $replace_value | sed -f /usr/lib/ddns/url_escape.sed)[0m
+[32m                                                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				replace_value=$(echo "$replace_value" | sed -f /usr/lib/ddns/url_escape.sed)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 374:[0m
+[0m				final_url=$(echo $final_url | sed s^"$replace_name"^"$replace_value"^g )[0m
+[32m                                                 ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				final_url=$(echo "$final_url" | sed s^"$replace_name"^"$replace_value"^g )
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 377:[0m
+[0m		final_url=$(echo $final_url | sed s^"\[HTTPAUTH\]"^"${username//^/\\^}${password:+:${password//^/\\^}}"^g )[0m
+[32m                                 ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[33m                                                                  ^-- SC2140 (warning): Word is of the form "A"B"C" (B indicated). Did you mean "ABC" or "A\"B\"C"?[0m
+[33m                                                                    ^----------------^ SC2154 (warning): username is referenced but not assigned.[0m
+[33m                                                                    ^----------------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+[33m                                                                                                   ^----------------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+[1mDid you mean: [0m
+		final_url=$(echo "$final_url" | sed s^"\[HTTPAUTH\]"^"${username//^/\\^}${password:+:${password//^/\\^}}"^g )
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 381:[0m
+[0m			final_url=$(echo $final_url | sed s/"\[IP\]"/"$current_ip"/g )[0m
+[32m                                         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			final_url=$(echo "$final_url" | sed s/"\[IP\]"/"$current_ip"/g )
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 391:[0m
+[0m            update_output=$(${service_id}_update "$retrieve_prog" "$final_url" "$current_ip" "$is_public_ip")[0m
+[32m                            ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            update_output=$("${service_id}"_update "$retrieve_prog" "$final_url" "$current_ip" "$is_public_ip")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 392:[0m
+[0m            ret_code=$(ddns_parse_retcode $service_id)[0m
+[32m                                          ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            ret_code=$(ddns_parse_retcode "$service_id")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 396:[0m
+[0m            ddns_set_state $service_id $ret_code[0m
+[32m                           ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                       ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            ddns_set_state "$service_id" "$ret_code"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 398:[0m
+[0m            ! ddns_state_good $service_id && ! ddns_update_check $service_id "$current_ip" "$is_public_ip" && {[0m
+[32m                              ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                 ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            ! ddns_state_good "$service_id" && ! ddns_update_check "$service_id" "$current_ip" "$is_public_ip" && {
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 400:[0m
+[0m                retry_temp_seconds=$(ddns_retry_interval $service_id)[0m
+[32m                                                         ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                retry_temp_seconds=$(ddns_retry_interval "$service_id")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 405:[0m
+[0m                if [ $retry_count -lt $retry_times ]; then[0m
+[33m                                      ^----------^ SC2154 (warning): retry_times is referenced but not assigned.[0m
+[32m                                      ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                if [ $retry_count -lt "$retry_times" ]; then
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 407:[0m
+[0m                    sleep $retry_temp_seconds     [0m
+[32m                          ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    sleep "$retry_temp_seconds"     
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 410:[0m
+[0m                    ddns_set_state $service_id[0m
+[32m                                   ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    ddns_set_state "$service_id"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 412:[0m
+[0m                    sleep $check_interval_seconds[0m
+[32m                          ^---------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    sleep "$check_interval_seconds"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 413:[0m
+[0m                    ddns_set_state $service_id $DYNDNS_RETCODE_UNKNOWN[0m
+[32m                                   ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                               ^---------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                    ddns_set_state "$service_id" "$DYNDNS_RETCODE_UNKNOWN"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 419:[0m
+[0m		    if [ $? -gt 0 ][0m
+[32m                         ^-- SC2181 (style): Check exit code directly with e.g. 'if ! mycmd;', not indirectly with $?.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 422:[0m
+[0m			    sleep $retry_interval_seconds[0m
+[32m                                  ^---------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			    sleep "$retry_interval_seconds"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 446:[0m
+[0m        ddns_syslog $DDNS_LOG_DBG_REG_IP $service_id $registered_ip[0m
+[32m                    ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                         ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                     ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        ddns_syslog "$DDNS_LOG_DBG_REG_IP" "$service_id" "$registered_ip"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 447:[0m
+[0m        [ "$check_interval" == "never" ] && break[0m
+[33m                            ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/usr/lib/ddns/dynamic_dns_updater.sh line 457:[0m
+[0m	sleep $check_interval_seconds[0m
+[32m              ^---------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	sleep "$check_interval_seconds"
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- external_reconn_time appears unus...
+  https://www.shellcheck.net/wiki/SC2140 -- Word is of the form "A"B"C" (B in...
+  https://www.shellcheck.net/wiki/SC2154 -- cacert is referenced but not assi...

@@ -1,0 +1,26 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/99-qos line 2:[0m
+[0m. /usr/lib/eth-encap/eth_encap.sh[0m
+[32m  ^-----------------------------^ SC1091 (info): Not following: /usr/lib/eth-encap/eth_encap.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/99-qos line 4:[0m
+[0mif [ "$POINT" == "END" -a "$DSTMODE" == "FAP" ]; then[0m
+[33m              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                       ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+[33m                                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/99-qos line 8:[0m
+[0m		if [ -n "$nss_support" ] && [ "$nss_support" == "yes" ]; then[0m
+[33m                                                             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/hotplug.d/mode/99-qos line 16:[0m
+[0melif [ "$POINT" = "END" -a "$DSTMODE" = "RE" ]; then[0m
+[33m                        ^-- SC2166 (warning): Prefer [ p ] && [ q ] as [ p -a q ] is not well defined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2166 -- Prefer [ p ] && [ q ] as [ p -a q...
+  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: /usr/lib/eth-encap...

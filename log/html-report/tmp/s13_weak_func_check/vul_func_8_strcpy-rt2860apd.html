@@ -1,0 +1,243 @@
+<pre>[</span><span class="orange">*</span>] Binary protection state of </span><span class="orange">rt2860apd</span></pre>
+<br />
+<pre>  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      </pre>
+<pre>  	<span class="red">No RELRO</span>       <span class="red">No Canary found</span>   <span class="red">NX disabled</span>  <span class="red">No PIE</span>       <span class="green">No RPATH</span>     <span class="green">No RUNPATH</span>   <span class="red">Symbols</span></pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> tear down of </span><span class="orange">rt2860apd</span></pre>
+<br />
+<pre>  402ee4:	8fa60060 	lw	a2,96(sp)</pre>
+<pre>  402ee8:	27b00018 	addiu	s0,sp,24</pre>
+<pre>  402eec:	3c050041 	lui	a1,0x41</pre>
+<pre>  402ef0:	02002021 	move	a0,s0</pre>
+<pre>  402ef4:	24a503b8 	addiu	a1,a1,952</pre>
+<pre>  402ef8:	0320f809 	jalr	t9</pre>
+<pre>  402efc:	00403821 	move	a3,v0</pre>
+<pre>  402f00:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>  402f04:	8fa20068 	lw	v0,104(sp)</pre>
+<pre>  402f08:	8f9981dc 	lw	t9,-32292(gp)</pre>
+<pre>  402f0c:	a7b4002c 	sh	s4,44(sp)</pre>
+<pre>  402f10:	afb30028 	sw	s3,40(sp)</pre>
+<pre>  402f14:	02402021 	move	a0,s2</pre>
+<pre>  402f18:	02202821 	move	a1,s1</pre>
+<pre>  402f1c:	02003021 	move	a2,s0</pre>
+<pre>  402f20:	0320f809 	jalr	t9</pre>
+<pre>  402f24:	a7a2002e 	sh	v0,46(sp)</pre>
+<pre>  402f28:	8fbf004c 	lw	ra,76(sp)</pre>
+<pre>  402f2c:	8fb40048 	lw	s4,72(sp)</pre>
+<pre>  402f30:	8fb30044 	lw	s3,68(sp)</pre>
+<pre>  402f34:	8fb20040 	lw	s2,64(sp)</pre>
+<pre>  402f38:	8fb1003c 	lw	s1,60(sp)</pre>
+<pre>  402f3c:	8fb00038 	lw	s0,56(sp)</pre>
+<pre>  402f40:	03e00008 	jr	ra</pre>
+<pre>  402f44:	27bd0050 	addiu	sp,sp,80</pre>
+<pre><span class="red">  402f48:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  402f4c:	8f85804c 	lw	a1,-32692(gp)</pre>
+<pre>  402f50:	27b00018 	addiu	s0,sp,24</pre>
+<pre>--</pre>
+<pre>  403134:	00000000 	nop</pre>
+<pre>  403138:	8c4305cc 	lw	v1,1484(v0)</pre>
+<pre>  40313c:	00000000 	nop</pre>
+<pre>  403140:	0243182a 	slt	v1,s2,v1</pre>
+<pre>  403144:	10600047 	beqz	v1,403264 &lt;Apd_init_sockets+0x218&gt;</pre>
+<pre>  403148:	26310004 	addiu	s1,s1,4</pre>
+<pre>  40314c:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>  403150:	24040011 	li	a0,17</pre>
+<pre>  403154:	24050003 	li	a1,3</pre>
+<pre>  403158:	0320f809 	jalr	t9</pre>
+<pre>  40315c:	3406c788 	li	a2,0xc788</pre>
+<pre>  403160:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>  403164:	27b0003c 	addiu	s0,sp,60</pre>
+<pre>  403168:	00003821 	move	a3,zero</pre>
+<pre>  40316c:	02603021 	move	a2,s3</pre>
+<pre>  403170:	02a02821 	move	a1,s5</pre>
+<pre>  403174:	00402021 	move	a0,v0</pre>
+<pre>  403178:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>  40317c:	044000be 	bltz	v0,403478 &lt;Apd_init_sockets+0x42c&gt;</pre>
+<pre>  403180:	ae22004c 	sw	v0,76(s1)</pre>
+<pre>  403184:	041101c7 	bal	4038a4 &lt;eloop_register_read_sock&gt;</pre>
+<pre>  403188:	00000000 	nop</pre>
+<pre>  40318c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>  403190:	00121900 	sll	v1,s2,0x4</pre>
+<pre>  403194:	02002021 	move	a0,s0</pre>
+<pre><span class="red">  403198:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  40319c:	144000bc 	bnez	v0,403490 &lt;Apd_init_sockets+0x444&gt;</pre>
+<pre>  4031a0:	26520001 	addiu	s2,s2,1</pre>
+<pre>--</pre>
+<pre>  403310:	00000000 	nop</pre>
+<pre>  403314:	8c4304c8 	lw	v1,1224(v0)</pre>
+<pre>  403318:	00000000 	nop</pre>
+<pre>  40331c:	0243182a 	slt	v1,s2,v1</pre>
+<pre>  403320:	10600072 	beqz	v1,4034ec &lt;Apd_init_sockets+0x4a0&gt;</pre>
+<pre>  403324:	26310004 	addiu	s1,s1,4</pre>
+<pre>  403328:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>  40332c:	24040011 	li	a0,17</pre>
+<pre>  403330:	24050003 	li	a1,3</pre>
+<pre>  403334:	0320f809 	jalr	t9</pre>
+<pre>  403338:	34068e88 	li	a2,0x8e88</pre>
+<pre>  40333c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>  403340:	27b0003c 	addiu	s0,sp,60</pre>
+<pre>  403344:	00003821 	move	a3,zero</pre>
+<pre>  403348:	02603021 	move	a2,s3</pre>
+<pre>  40334c:	02a02821 	move	a1,s5</pre>
+<pre>  403350:	00402021 	move	a0,v0</pre>
+<pre>  403354:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>  403358:	044000e5 	bltz	v0,4036f0 &lt;Apd_init_sockets+0x6a4&gt;</pre>
+<pre>  40335c:	ae22000c 	sw	v0,12(s1)</pre>
+<pre>  403360:	04110150 	bal	4038a4 &lt;eloop_register_read_sock&gt;</pre>
+<pre>  403364:	00000000 	nop</pre>
+<pre>  403368:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>  40336c:	00121900 	sll	v1,s2,0x4</pre>
+<pre>  403370:	02002021 	move	a0,s0</pre>
+<pre><span class="red">  403374:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  403378:	144000e3 	bnez	v0,403708 &lt;Apd_init_sockets+0x6bc&gt;</pre>
+<pre>  40337c:	26520001 	addiu	s2,s2,1</pre>
+<pre>--</pre>
+<pre>  4034c0:	00000000 	nop</pre>
+<pre>  4034c4:	0320f809 	jalr	t9</pre>
+<pre>  4034c8:	24840410 	addiu	a0,a0,1040</pre>
+<pre>  4034cc:	08100d03 	j	40340c &lt;Apd_init_sockets+0x3c0&gt;</pre>
+<pre>  4034d0:	00000000 	nop</pre>
+<pre>  4034d4:	8f9981c0 	lw	t9,-32320(gp)</pre>
+<pre>  4034d8:	3c040041 	lui	a0,0x41</pre>
+<pre>  4034dc:	0320f809 	jalr	t9</pre>
+<pre>  4034e0:	24840464 	addiu	a0,a0,1124</pre>
+<pre>  4034e4:	08100d03 	j	40340c &lt;Apd_init_sockets+0x3c0&gt;</pre>
+<pre>  4034e8:	2410ffff 	li	s0,-1</pre>
+<pre>  4034ec:	8c420014 	lw	v0,20(v0)</pre>
+<pre>  4034f0:	00000000 	nop</pre>
+<pre>  4034f4:	1840ffc5 	blez	v0,40340c &lt;Apd_init_sockets+0x3c0&gt;</pre>
+<pre>  4034f8:	00008021 	move	s0,zero</pre>
+<pre>  4034fc:	3c170041 	lui	s7,0x41</pre>
+<pre>  403500:	3c160041 	lui	s6,0x41</pre>
+<pre>  403504:	3c1e0041 	lui	s8,0x41</pre>
+<pre>  403508:	02608821 	move	s1,s3</pre>
+<pre>  40350c:	00009021 	move	s2,zero</pre>
+<pre>  403510:	26f703b8 	addiu	s7,s7,952</pre>
+<pre>  403514:	3c150042 	lui	s5,0x42</pre>
+<pre>  403518:	26d600f0 	addiu	s6,s6,240</pre>
+<pre>  40351c:	08100d7c 	j	4035f0 &lt;Apd_init_sockets+0x5a4&gt;</pre>
+<pre>  403520:	27de05a0 	addiu	s8,s8,1440</pre>
+<pre><span class="red">  403524:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  403528:	8e650008 	lw	a1,8(s3)</pre>
+<pre>  40352c:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>  408790:	ac620404 	sw	v0,1028(v1)</pre>
+<pre>  408794:	8fa30090 	lw	v1,144(sp)</pre>
+<pre>  408798:	00000000 	nop</pre>
+<pre>  40879c:	8c620000 	lw	v0,0(v1)</pre>
+<pre>  4087a0:	00000000 	nop</pre>
+<pre>  4087a4:	34420001 	ori	v0,v0,0x1</pre>
+<pre>  4087a8:	ac620000 	sw	v0,0(v1)</pre>
+<pre>  4087ac:	8ee20000 	lw	v0,0(s7)</pre>
+<pre>  4087b0:	00000000 	nop</pre>
+<pre>  4087b4:	2c420003 	sltiu	v0,v0,3</pre>
+<pre>  4087b8:	104002fb 	beqz	v0,4093a8 &lt;Query_config_from_driver+0xd84&gt;</pre>
+<pre>  4087bc:	3c040041 	lui	a0,0x41</pre>
+<pre>  4087c0:	8fa30040 	lw	v1,64(sp)</pre>
+<pre>  4087c4:	00000000 	nop</pre>
+<pre>  4087c8:	18600299 	blez	v1,409230 &lt;Query_config_from_driver+0xc0c&gt;</pre>
+<pre>  4087cc:	27a30028 	addiu	v1,sp,40</pre>
+<pre>  4087d0:	8fb10088 	lw	s1,136(sp)</pre>
+<pre>  4087d4:	0240f021 	move	s8,s2</pre>
+<pre>  4087d8:	afa00048 	sw	zero,72(sp)</pre>
+<pre>  4087dc:	afa00044 	sw	zero,68(sp)</pre>
+<pre>  4087e0:	afa0003c 	sw	zero,60(sp)</pre>
+<pre>  4087e4:	00009821 	move	s3,zero</pre>
+<pre>  4087e8:	afa30038 	sw	v1,56(sp)</pre>
+<pre>  4087ec:	1660013c 	bnez	s3,408ce0 &lt;Query_config_from_driver+0x6bc&gt;</pre>
+<pre>  4087f0:	3c060041 	lui	a2,0x41</pre>
+<pre><span class="red">  4087f4:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  4087f8:	8f85804c 	lw	a1,-32692(gp)</pre>
+<pre>  4087fc:	8fa40038 	lw	a0,56(sp)</pre>
+<pre>--</pre>
+<pre>  408a00:	2844003c 	slti	a0,v0,60</pre>
+<pre>  408a04:	10800003 	beqz	a0,408a14 &lt;Query_config_from_driver+0x3f0&gt;</pre>
+<pre>  408a08:	aca206dc 	sw	v0,1756(a1)</pre>
+<pre>  408a0c:	2402003c 	li	v0,60</pre>
+<pre>  408a10:	aca206dc 	sw	v0,1756(a1)</pre>
+<pre>  408a14:	106002b5 	beqz	v1,4094ec &lt;Query_config_from_driver+0xec8&gt;</pre>
+<pre>  408a18:	3c040041 	lui	a0,0x41</pre>
+<pre>  408a1c:	8fa30040 	lw	v1,64(sp)</pre>
+<pre>  408a20:	00000000 	nop</pre>
+<pre>  408a24:	1860004c 	blez	v1,408b58 &lt;Query_config_from_driver+0x534&gt;</pre>
+<pre>  408a28:	27a30028 	addiu	v1,sp,40</pre>
+<pre>  408a2c:	8fb40088 	lw	s4,136(sp)</pre>
+<pre>  408a30:	0000b021 	move	s6,zero</pre>
+<pre>  408a34:	3c1e0041 	lui	s8,0x41</pre>
+<pre>  408a38:	02409821 	move	s3,s2</pre>
+<pre>  408a3c:	02408821 	move	s1,s2</pre>
+<pre>  408a40:	afb2003c 	sw	s2,60(sp)</pre>
+<pre>  408a44:	00008021 	move	s0,zero</pre>
+<pre>  408a48:	afa30038 	sw	v1,56(sp)</pre>
+<pre>  408a4c:	27de00f0 	addiu	s8,s8,240</pre>
+<pre>  408a50:	afb60044 	sw	s6,68(sp)</pre>
+<pre>  408a54:	02809021 	move	s2,s4</pre>
+<pre>  408a58:	0060a821 	move	s5,v1</pre>
+<pre>  408a5c:	160000a9 	bnez	s0,408d04 &lt;Query_config_from_driver+0x6e0&gt;</pre>
+<pre>  408a60:	3c050041 	lui	a1,0x41</pre>
+<pre><span class="red">  408a64:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  408a68:	8f85804c 	lw	a1,-32692(gp)</pre>
+<pre>  408a6c:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>  409920:	97a2005c 	lhu	v0,92(sp)</pre>
+<pre>  409924:	0320f809 	jalr	t9</pre>
+<pre>  409928:	ae820228 	sw	v0,552(s4)</pre>
+<pre>  40992c:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  409930:	8fa30068 	lw	v1,104(sp)</pre>
+<pre>  409934:	8e860228 	lw	a2,552(s4)</pre>
+<pre>  409938:	8f9981c4 	lw	t9,-32316(gp)</pre>
+<pre>  40993c:	00752021 	addu	a0,v1,s5</pre>
+<pre>  409940:	0320f809 	jalr	t9</pre>
+<pre>  409944:	27a50028 	addiu	a1,sp,40</pre>
+<pre>  409948:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  40994c:	00000000 	nop</pre>
+<pre>  409950:	8f82806c 	lw	v0,-32660(gp)</pre>
+<pre>  409954:	00000000 	nop</pre>
+<pre>  409958:	8c420000 	lw	v0,0(v0)</pre>
+<pre>  40995c:	00000000 	nop</pre>
+<pre>  409960:	2c420003 	sltiu	v0,v0,3</pre>
+<pre>  409964:	1040009d 	beqz	v0,409bdc &lt;Config_read+0x4ec&gt;</pre>
+<pre>  409968:	3c040041 	lui	a0,0x41</pre>
+<pre>  40996c:	8e620014 	lw	v0,20(s3)</pre>
+<pre>  409970:	26520001 	addiu	s2,s2,1</pre>
+<pre>  409974:	26940004 	addiu	s4,s4,4</pre>
+<pre>  409978:	0242102a 	slt	v0,s2,v0</pre>
+<pre>  40997c:	1040002a 	beqz	v0,409a28 &lt;Config_read+0x338&gt;</pre>
+<pre>  409980:	26b50021 	addiu	s5,s5,33</pre>
+<pre><span class="red">  409984:	8f8281e0 	lw	v0,strcpy</span></pre>
+<pre>  409988:	8f85804c 	lw	a1,-32692(gp)</pre>
+<pre>  40998c:	8f998148 	lw	t9,-32440(gp)</pre>
+<pre>--</pre>
+<pre>  4099e8:	0320f809 	jalr	t9</pre>
+<pre>  4099ec:	03c03021 	move	a2,s8</pre>
+<pre>  4099f0:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  4099f4:	08102635 	j	4098d4 &lt;Config_read+0x1e4&gt;</pre>
+<pre>  4099f8:	00000000 	nop</pre>
+<pre>  4099fc:	8f9981c0 	lw	t9,-32320(gp)</pre>
+<pre>  409a00:	3c040041 	lui	a0,0x41</pre>
+<pre>  409a04:	0320f809 	jalr	t9</pre>
+<pre>  409a08:	248417b4 	addiu	a0,a0,6068</pre>
+<pre>  409a0c:	8e620014 	lw	v0,20(s3)</pre>
+<pre>  409a10:	26520001 	addiu	s2,s2,1</pre>
+<pre>  409a14:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  409a18:	0242102a 	slt	v0,s2,v0</pre>
+<pre>  409a1c:	26940004 	addiu	s4,s4,4</pre>
+<pre>  409a20:	1440ffd8 	bnez	v0,409984 &lt;Config_read+0x294&gt;</pre>
+<pre>  409a24:	26b50021 	addiu	s5,s5,33</pre>
+<pre>  409a28:	8f92806c 	lw	s2,-32660(gp)</pre>
+<pre>  409a2c:	3c150041 	lui	s5,0x41</pre>
+<pre>  409a30:	3c160041 	lui	s6,0x41</pre>
+<pre>  409a34:	0000a021 	move	s4,zero</pre>
+<pre>  409a38:	3c170041 	lui	s7,0x41</pre>
+<pre>  409a3c:	26b500f0 	addiu	s5,s5,240</pre>
+<pre>  409a40:	26d61800 	addiu	s6,s6,6144</pre>
+<pre>  409a44:	16800074 	bnez	s4,409c18 &lt;Config_read+0x528&gt;</pre>
+<pre>  409a48:	02202021 	move	a0,s1</pre>
+<pre><span class="red">  409a4c:	8f9981e0 	lw	t9,strcpy</span></pre>
+<pre>  409a50:	8f85804c 	lw	a1,-32692(gp)</pre>
+<pre>  409a54:	0320f809 	jalr	t9</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> used </span><span class="orange">8</span> times </span><span class="orange">rt2860apd</span></pre>
+<br />

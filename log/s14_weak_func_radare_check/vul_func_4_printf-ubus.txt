@@ -1,0 +1,185 @@
+[[0;33m*[0m] Binary protection state of [0;33mubus[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m tear down of [0;33mubus[0m
+
+move a0, s3
+move a1, s4
+jalr t9
+move a2, s1
+lw gp, 0x10(sp)
+bnez v0, 0x401448
+addiu s0, s0, -1
+blez s0, 0x4014b4
+addiu s2, s2, 4
+lw s1, (s2)
+j 0x401414
+nop
+lui v1, 0x41
+lbu v1, 0x21c0(v1)
+nop
+bnez v1, 0x401490
+addiu s0, zero, -1
+lw v1, -0x7fac(gp)
+lw t9, -sym.imp.ubus_strerror(gp)
+lw s2, (v1)
+jalr t9
+move a0, v0
+lw gp, 0x10(sp)
+lui a1, 0x40
+move a0, s2
+[31mlw t9, -sym.imp.fprintf(gp)[0m
+addiu a1, a1, 0x1d24
+move a2, s1
+jalr t9
+move a3, v0
+lw ra, 0x2c(sp)
+move v0, s0
+lw s4, 0x28(sp)
+lw s3, 0x24(sp)
+lw s2, 0x20(sp)
+lw s1, 0x1c(sp)
+lw s0, 0x18(sp)
+jr ra
+addiu sp, sp, 0x30
+lw t9, -sym.imp.uloop_init(gp)
+nop
+jalr t9
+move s0, zero
+lw gp, 0x10(sp)
+addiu a0, s3, 0x2c
+lw t9, -sym.imp.uloop_fd_add(gp)
+--
+lw t9, -sym.imp.uloop_done(gp)
+nop
+jalr t9
+nop
+j 0x401490
+nop
+lui gp, 0x42
+addiu gp, gp, -0x5f30
+lw t9, -sym.imp.blobmsg_format_json_with_cb(gp)
+addiu sp, sp, -0x30
+addiu v0, zero, -1
+sw ra, 0x2c(sp)
+sw s1, 0x28(sp)
+sw s0, 0x24(sp)
+sw gp, 0x18(sp)
+move s0, a2
+move a0, a3
+sw v0, 0x10(sp)
+move a3, zero
+addiu a1, zero, 1
+jalr t9
+move a2, zero
+lw gp, 0x18(sp)
+lui a0, 0x40
+move a1, s0
+[31mlw t9, -sym.imp.printf(gp)[0m
+addiu a0, a0, 0x1d50
+move a2, v0
+jalr t9
+move s1, v0
+lw gp, 0x18(sp)
+nop
+lw v0, -0x7f40(gp)
+lw t9, -sym.imp.fflush(gp)
+lw a0, (v0)
+jalr t9
+nop
+lw gp, 0x18(sp)
+move a0, s1
+lw ra, 0x2c(sp)
+lw s1, 0x28(sp)
+lw s0, 0x24(sp)
+lw t9, -sym.imp.free(gp)
+nop
+jr t9
+addiu sp, sp, 0x30
+--
+sw s4, 0x34(sp)
+sw s3, 0x30(sp)
+sw s2, 0x2c(sp)
+sw s1, 0x28(sp)
+sw gp, 0x18(sp)
+lw a1, 8(a1)
+bnez v0, 0x4018e8
+lui v0, 0x41
+lw v0, 0x21c4(v0)
+nop
+bnez v0, 0x40191c
+nop
+lw ra, 0x44(sp)
+lw s7, 0x40(sp)
+lw s6, 0x3c(sp)
+lw s5, 0x38(sp)
+lw s4, 0x34(sp)
+lw s3, 0x30(sp)
+lw s2, 0x2c(sp)
+lw s1, 0x28(sp)
+lw s0, 0x24(sp)
+lw t9, -sym.imp.puts(gp)
+move a0, a1
+jr t9
+addiu sp, sp, 0x48
+[31mlw t9, -sym.imp.printf(gp)[0m
+lw a2, (s0)
+lui a0, 0x40
+jalr t9
+addiu a0, a0, 0x1d80
+lw s0, 0xc(s0)
+lw gp, 0x18(sp)
+beqz s0, 0x401a3c
+lui s1, 0xff
+lwl a0, 3(s0)
+lw t9, -sym.imp.__bswapsi2(gp)
+lwr a0, (s0)
+ori s1, s1, 0xffff
+jalr t9
+lui s5, 0x40
+and s1, v0, s1
+lui s4, 0x40
+lw gp, 0x18(sp)
+addiu s1, s1, -4
+addiu s0, s0, 4
+lui s6, 0xff
+addiu s5, s5, 0x12b4
+j 0x4019fc
+addiu s4, s4, 0x1d8c
+lw t9, -sym.imp.blobmsg_format_json_with_cb(gp)
+move a2, s5
+move a3, zero
+move a0, s0
+move a1, zero
+jalr t9
+sw v0, 0x10(sp)
+lw gp, 0x18(sp)
+move a1, v0
+move a0, s4
+[31mlw t9, -sym.imp.printf(gp)[0m
+nop
+jalr t9
+move s7, v0
+lw gp, 0x18(sp)
+nop
+lw t9, -sym.imp.free(gp)
+nop
+jalr t9
+move a0, s7
+lw gp, 0x18(sp)
+lwl a0, 3(s0)
+lw t9, -sym.imp.__bswapsi2(gp)
+lwr a0, (s0)
+jalr t9
+nop
+and s2, v0, s2
+addiu s2, s2, 3
+lw gp, 0x18(sp)
+and s3, s2, s3
+subu s1, s1, s3
+
+[[0;33m*[0m] Function [0;33mprintf[0m used [0;33m4[0m times [0;33mubus[0m
+

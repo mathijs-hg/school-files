@@ -1,0 +1,91 @@
+<br />
+<pre>/* WARNING: Removing unreachable block (ram,0x0040bea8) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040bcb0) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040b9e8) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040bc38) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040be1c) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0040c05c) */</pre>
+<br />
+<pre>void igmp_on(int param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  ulong local_20;</pre>
+<pre>  uint local_1c;</pre>
+<pre>  uint local_10 [2];</pre>
+<pre>  </pre>
+<pre>  local_20 = 0;</pre>
+<pre>  if (3 &lt; param_1) {</pre>
+<pre>    local_20 = strtoul(*(char **)(param_2 + 0xc),(char **)0x0,10);</pre>
+<pre>  }</pre>
+<pre>  if (local_20 == 1) {</pre>
+<pre><span class="green">    reg_read(0x2410,local_10)</span></span></pre>
+<pre>    reg_write(0x2410,local_10[0] | 8);</pre>
+<pre><span class="green">    reg_read(0x2010,local_10)</span></span></pre>
+<pre>    reg_write(0x2010,local_10[0] &amp; 0xfffffff7);</pre>
+<pre>    reg_write(0x18,0x10027d10);</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    reg_write(0x18,0x10027d60);</pre>
+<pre>  }</pre>
+<pre><span class="green">  reg_read(0x10,local_10)</span></span></pre>
+<pre>  reg_write(0x10,local_10[0] &amp; 0xff00ffff);</pre>
+<pre>  reg_write(0x1c,0x8100810);</pre>
+<pre>  reg_write(0x2008,0xb3ff);</pre>
+<pre>  reg_write(0x2108,0xb3ff);</pre>
+<pre>  reg_write(0x2208,0xb3ff);</pre>
+<pre>  reg_write(0x2308,0xb3ff);</pre>
+<pre>  reg_write(0x2408,0xb3ff);</pre>
+<pre>  reg_write(0x2608,0xb3ff);</pre>
+<pre>  for (local_1c = 0; local_1c &lt; 7; local_1c = local_1c + 1) {</pre>
+<pre>    iVar1 = local_1c * 0x100 + 0x2004;</pre>
+<pre><span class="green">    reg_read(iVar1,local_10)</span></span></pre>
+<pre>    reg_write(iVar1,local_10[0] | 0x400);</pre>
+<pre>  }</pre>
+<pre>  reg_write(0x94,0xff0002);</pre>
+<pre>  reg_write(0x98,0xa1008);</pre>
+<pre>  reg_write(0x90,0x80005000);</pre>
+<pre>  reg_write(0x94,0xff001100);</pre>
+<pre>  reg_write(0x98,0xb1000);</pre>
+<pre>  reg_write(0x90,0x80005001);</pre>
+<pre>  reg_write(0x94,3);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x80009000);</pre>
+<pre>  reg_write(0x94,0x1a002080);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x8000b000);</pre>
+<pre>  reg_write(0x94,0xff0002);</pre>
+<pre>  reg_write(0x98,0xa2008);</pre>
+<pre>  reg_write(0x90,0x80005002);</pre>
+<pre>  reg_write(0x94,4);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x80009001);</pre>
+<pre>  reg_write(0x94,0x1a001080);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x8000b001);</pre>
+<pre>  reg_write(0x94,0xff0002);</pre>
+<pre>  reg_write(0x98,0xa0f08);</pre>
+<pre>  reg_write(0x90,0x80005003);</pre>
+<pre>  reg_write(0x94,8);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x80009002);</pre>
+<pre>  reg_write(0x94,0x1a004080);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x8000b002);</pre>
+<pre>  reg_write(0x94,0xff0002);</pre>
+<pre>  reg_write(0x98,0xa4008);</pre>
+<pre>  reg_write(0x90,0x80005004);</pre>
+<pre>  reg_write(0x94,0xff001100);</pre>
+<pre>  reg_write(0x98,0xb4000);</pre>
+<pre>  reg_write(0x90,0x80005005);</pre>
+<pre>  reg_write(0x94,0x30);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x80009003);</pre>
+<pre>  reg_write(0x94,0x1a000f80);</pre>
+<pre>  reg_write(0x98,0);</pre>
+<pre>  reg_write(0x90,0x8000b003);</pre>
+<pre><span class="green">  system("echo 2 &gt; /sys/devices/virtual/net/br0/brif/eth0/multicast_router")</span></span></pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 4e8b45428367ce7d</pre>

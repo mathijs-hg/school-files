@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Copyright (c) 2020 TP Link, Inc.
+#
+# All Rights Reserved.
+
+if [ $1 = "a" ]; then
+	tsched_conf -a  reboot_schedule reboot  $2
+elif [ $1 = "d" ]; then
+	tsched_conf -D  reboot_schedule
+else
+	echo "rsched_conf option error"
+fi
+
+tsched_conf -u reboot_schedule
+
+echo "rsched_conf end" > /dev/console

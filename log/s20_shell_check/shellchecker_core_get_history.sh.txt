@@ -1,0 +1,1529 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 24:[0m
+[0m    local write_flash="0"[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------^ SC2034 (warning): write_flash appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 25:[0m
+[0m    local line=1[0m
+[33m    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 26:[0m
+[0m    for i in `seq 0 15`[0m
+[32m             ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    for i in $(seq 0 15)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 28:[0m
+[0m        let line=${i}+1[0m
+[33m        ^-------------^ SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 29:[0m
+[0m        pctl_owner=`uci get ${G_PCTL_CONFIG_FILE}.${i} 2>/dev/null`[0m
+[32m                   ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        pctl_owner=$(uci get ${G_PCTL_CONFIG_FILE}."${i}" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 30:[0m
+[0m        insi_owner=`uci get ${G_UCI_CONFIG_FILE}.${i} 2>/dev/null`[0m
+[32m                   ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        insi_owner=$(uci get ${G_UCI_CONFIG_FILE}."${i}" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 31:[0m
+[0m        tmp_insi_owner=`$uci_r get ${G_UCI_CONFIG_FILE}.${i} 2>/dev/null`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                        ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        tmp_insi_owner=$($uci_r get ${G_UCI_CONFIG_FILE}."${i}" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 34:[0m
+[0m            uci delete ${G_UCI_CONFIG_FILE}.${i}[0m
+[32m                                            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            uci delete ${G_UCI_CONFIG_FILE}."${i}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 39:[0m
+[0m            echo "f">/proc/pctl/${i}[0m
+[32m                                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            echo "f">/proc/pctl/"${i}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 47:[0m
+[0m            $uci_r delete ${G_UCI_CONFIG_FILE}.${i}[0m
+[32m                                               ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r delete ${G_UCI_CONFIG_FILE}."${i}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 49:[0m
+[0m            echo "f">/proc/pctl/${i}[0m
+[32m                                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            echo "f">/proc/pctl/"${i}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 64:[0m
+[0m    local owner_id=$1[0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                   ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner_id="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 65:[0m
+[0m	local owner_name=$2[0m
+[33m        ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                         ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local owner_name="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 67:[0m
+[0m    $uci_r set $G_UCI_CONFIG_FILE.${owner_id}="owner"[0m
+[32m                                  ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    $uci_r set $G_UCI_CONFIG_FILE."${owner_id}"="owner"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 68:[0m
+[0m	$uci_r set $G_UCI_CONFIG_FILE.${owner_id}.owner_name="$owner_name"[0m
+[32m                                      ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	$uci_r set $G_UCI_CONFIG_FILE."${owner_id}".owner_name="$owner_name"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 69:[0m
+[0m	$uci_r set $G_UCI_CONFIG_FILE.${owner_id}.owner_id="$owner_id"[0m
+[32m                                      ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	$uci_r set $G_UCI_CONFIG_FILE."${owner_id}".owner_id="$owner_id"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 73:[0m
+[0m    local day_log=`$uci_r get $G_UCI_CONFIG_FILE.$owner_id.day_1 2>/dev/null`[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                  ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                 ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day_log=$($uci_r get $G_UCI_CONFIG_FILE."$owner_id".day_1 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 75:[0m
+[0m        for day in `seq 1 7`[0m
+[32m                   ^-------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+        for day in $(seq 1 7)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 77:[0m
+[0m            $uci_r set $G_UCI_CONFIG_FILE.$owner_id.day_$day="-1;0;"[0m
+[32m                                          ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                        ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r set $G_UCI_CONFIG_FILE."$owner_id".day_"$day"="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 81:[0m
+[0m    day_log=`$uci_r get $G_UCI_CONFIG_FILE.$owner_id.month_access_ll 2>/dev/null`[0m
+[32m            ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                           ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    day_log=$($uci_r get $G_UCI_CONFIG_FILE."$owner_id".month_access_ll 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 84:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_access_t="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_access_t="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 85:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_access_l="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_access_l="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 86:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_access_ll="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_access_ll="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 87:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_forbid_t="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_forbid_t="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 88:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_forbid_l="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_forbid_l="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 89:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner_id.month_forbid_ll="-1;0;"[0m
+[32m                                      ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner_id".month_forbid_ll="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 96:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 97:[0m
+[0m    local day_num=$2[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                  ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day_num="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 98:[0m
+[0m    local option=$3[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local option="$3"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 99:[0m
+[0m    local day_info=""[0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 101:[0m
+[0m    day_info=`cat  ${G_PROC_PCTL_PATH}/${owner}|grep -v ","|tr '\n' ','`[0m
+[32m             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                       ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    day_info=$(cat  ${G_PROC_PCTL_PATH}/"${owner}"|grep -v ","|tr '\n' ',')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 105:[0m
+[0m        key_words=`echo $day_info|awk -v num="${day_num}" 'BEGIN{FS=","}{print $num}'`[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                        ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        key_words=$(echo "$day_info"|awk -v num="${day_num}" 'BEGIN{FS=","}{print $num}')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 106:[0m
+[0m        result=`grep -n "$key_words" ${G_PROC_PCTL_PATH}/${owner}|cut -d : -f 1` [0m
+[32m               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        result=$(grep -n "$key_words" ${G_PROC_PCTL_PATH}/"${owner}"|cut -d : -f 1) 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 111:[0m
+[0m        result=`echo $day_info|awk -v num="${day_num}" 'BEGIN{FS=","}{print $num}'\[0m
+[32m               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                     ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        result=$(echo "$day_info"|awk -v num="${day_num}" 'BEGIN{FS=","}{print $num}'\
+                                |awk -v num="${option}" 'BEGIN{FS=" "}{print $num}')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 116:[0m
+[0m    echo $result[0m
+[32m         ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$result"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 121:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 122:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 123:[0m
+[0m    local type=$3[0m
+[33m    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m               ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local type="$3"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 124:[0m
+[0m    local day_url=""[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 125:[0m
+[0m    if [ "$type" == "access_entry" ] || [ "$type" == "forbid_entry" ];then[0m
+[33m                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                  ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 126:[0m
+[0m        day_url=`cat  ${G_PROC_PCTL_PATH}/${owner}|grep  "$type"|cut -d "," -f2-|tr '\n' ';'`[0m
+[32m                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                          ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        day_url=$(cat  ${G_PROC_PCTL_PATH}/"${owner}"|grep  "$type"|cut -d "," -f2-|tr '\n' ';')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 128:[0m
+[0m    echo $day_url[0m
+[32m         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$day_url"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 133:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 134:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 135:[0m
+[0m    local type=$3[0m
+[33m    ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m               ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local type="$3"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 136:[0m
+[0m    local option="4"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 138:[0m
+[0m    local row="1"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 139:[0m
+[0m    local num=$(get_day_url_num "$owner" "${day}")[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m              ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 147:[0m
+[0m        url_entry=`tail -n +2 ${G_PROC_PCTL_PATH}/${owner}|tail -n +$row|head -n $num\[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        url_entry=$(tail -n +2 ${G_PROC_PCTL_PATH}/"${owner}"|tail -n +$row|head -n "$num"\
+                |awk 'BEGIN{FS=","}{print $2","$3}'|tr '\n' ';')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 152:[0m
+[0m        url_entry=`tail -n +2 ${G_PROC_PCTL_PATH}/${owner}|tail -n +$row|head -n $num\[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                                 ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        url_entry=$(tail -n +2 ${G_PROC_PCTL_PATH}/"${owner}"|tail -n +$row|head -n "$num"\
+                |awk 'BEGIN{FS=","}{print $2","$4}'|tr '\n' ';')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 157:[0m
+[0m    echo $url_entry  [0m
+[32m         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$url_entry"  
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 161:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 162:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 163:[0m
+[0m    local option="3"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 164:[0m
+[0m    local url_num=$(get_day_info "$owner" "${day}" "${option}")[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                  ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 165:[0m
+[0m    echo $url_num[0m
+[32m         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$url_num"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 171:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 172:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 173:[0m
+[0m    local option="1"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 174:[0m
+[0m    local day_time=$(get_day_info "$owner" "${day}" "${option}")[0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 175:[0m
+[0m    echo $day_time[0m
+[32m         ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$day_time"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 179:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 180:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 181:[0m
+[0m    local option="2"[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 182:[0m
+[0m    local day_timestamp=$(get_day_info "$owner" "${day}" "${option}")[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 183:[0m
+[0m    echo $day_timestamp[0m
+[32m         ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$day_timestamp"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 188:[0m
+[0m    local entry1=$1[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local entry1="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 189:[0m
+[0m    local entry2=$2[0m
+[33m    ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local entry2="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 190:[0m
+[0m    local entry_num=$3[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local entry_num="$3"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 191:[0m
+[0m    local time_total=0[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 192:[0m
+[0m    local entry=""[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 194:[0m
+[0m    local time_stamp1=$(echo ${entry1}|cut -d ";" -f2)[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                      ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                             ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local time_stamp1=$(echo "${entry1}"|cut -d ";" -f2)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 195:[0m
+[0m    local time1=$(echo ${entry1}|cut -d ";" -f1)[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                       ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local time1=$(echo "${entry1}"|cut -d ";" -f1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 197:[0m
+[0m    local time2=$(echo ${entry2}|cut -d ";" -f1)[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                       ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local time2=$(echo "${entry2}"|cut -d ";" -f1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 199:[0m
+[0m        let time_total=${time1}+${time2} [0m
+[33m        ^-- SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 203:[0m
+[0m    entry1=$(echo ${entry1}|cut -d ";" -f3-|tr ' ' '_')[0m
+[32m                  ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    entry1=$(echo "${entry1}"|cut -d ";" -f3-|tr ' ' '_')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 204:[0m
+[0m    entry2=$(echo ${entry2}|cut -d ";" -f3-|tr ' ' '_')[0m
+[32m                  ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    entry2=$(echo "${entry2}"|cut -d ";" -f3-|tr ' ' '_')
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 209:[0m
+[0m    entry=$(echo -n ${entry1}${entry2}|tr ";" "\n"|tr "," " " \[0m
+[33m                 ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+[32m                    ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                             ^-------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    entry=$(echo -n "${entry1}""${entry2}"|tr ";" "\n"|tr "," " " \
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 213:[0m
+[0m            |tr ' ' ','|tr '\n' ';'|tr '_' ' '|cut -d ";" -f1-${entry_num})[0m
+[32m                                                              ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            |tr ' ' ','|tr '\n' ';'|tr '_' ' '|cut -d ";" -f1-"${entry_num}")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 217:[0m
+[0m    end_with_semicolon=$(echo $entry|grep ";$")[0m
+[32m                              ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    end_with_semicolon=$(echo "$entry"|grep ";$")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 229:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 231:[0m
+[0m    local today_log=`$uci_r get $G_UCI_CONFIG_FILE.$owner.day_1 2>/dev/null`[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                    ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                   ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local today_log=$($uci_r get $G_UCI_CONFIG_FILE."$owner".day_1 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 232:[0m
+[0m    local month_access_t=`$uci_r get $G_UCI_CONFIG_FILE.$owner.month_access_t 2>/dev/null`[0m
+[33m    ^------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                         ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                        ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local month_access_t=$($uci_r get $G_UCI_CONFIG_FILE."$owner".month_access_t 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 233:[0m
+[0m    local forbid_today_log=`$uci_r get $G_UCI_CONFIG_FILE.$owner.forbid_day_1 2>/dev/null`[0m
+[33m    ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^--------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                           ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                           ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local forbid_today_log=$($uci_r get $G_UCI_CONFIG_FILE."$owner".forbid_day_1 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 234:[0m
+[0m    local month_forbid_t=`$uci_r get $G_UCI_CONFIG_FILE.$owner.month_forbid_t 2>/dev/null`[0m
+[33m    ^------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                         ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                        ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local month_forbid_t=$($uci_r get $G_UCI_CONFIG_FILE."$owner".month_forbid_t 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 236:[0m
+[0m    today_url=$(echo ${today_log}|cut -d ";" -f3-)[0m
+[32m                     ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    today_url=$(echo "${today_log}"|cut -d ";" -f3-)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 237:[0m
+[0m    forbid_url=$(echo ${forbid_today_log}|cut -d ";" -f3-)[0m
+[32m                      ^-----------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    forbid_url=$(echo "${forbid_today_log}"|cut -d ";" -f3-)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 240:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_access_t="$month_access_t"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_access_t="$month_access_t"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 244:[0m
+[0m         $uci_r set $G_UCI_CONFIG_FILE.$owner.month_forbid_t="$month_forbid_t"[0m
+[32m                                       ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+         $uci_r set $G_UCI_CONFIG_FILE."$owner".month_forbid_t="$month_forbid_t"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 248:[0m
+[0m    for day in `seq 6 -1 1`[0m
+[32m               ^----------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    for day in $(seq 6 -1 1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 250:[0m
+[0m        let last_day=${day}+1[0m
+[33m        ^-------------------^ SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 251:[0m
+[0m        today_log=`$uci_r get $G_UCI_CONFIG_FILE.$owner.day_$day 2>/dev/null`[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                 ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                            ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        today_log=$($uci_r get $G_UCI_CONFIG_FILE."$owner".day_"$day" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 253:[0m
+[0m            $uci_r set $G_UCI_CONFIG_FILE.$owner.day_$last_day="${today_log}"[0m
+[32m                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r set $G_UCI_CONFIG_FILE."$owner".day_$last_day="${today_log}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 254:[0m
+[0m            $uci_r set $G_UCI_CONFIG_FILE.$owner.day_$day="-1;0;"[0m
+[32m                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                     ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r set $G_UCI_CONFIG_FILE."$owner".day_"$day"="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 256:[0m
+[0m            $uci_r set $G_UCI_CONFIG_FILE.$owner.day_$last_day="-1;0;"[0m
+[32m                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r set $G_UCI_CONFIG_FILE."$owner".day_$last_day="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 257:[0m
+[0m            $uci_r set $G_UCI_CONFIG_FILE.$owner.day_$day="-1;0;"[0m
+[32m                                          ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                     ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r set $G_UCI_CONFIG_FILE."$owner".day_"$day"="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 262:[0m
+[0m    $uci_r set $G_UCI_CONFIG_FILE.$owner.forbid_day_1="-1;0;"[0m
+[32m                                  ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    $uci_r set $G_UCI_CONFIG_FILE."$owner".forbid_day_1="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 266:[0m
+[0m    local now_timestamp=`date +%s`[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^--------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                        ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local now_timestamp=$(date +%s)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 267:[0m
+[0m    let now_timestamp=${now_timestamp}+86400 [0m
+[33m    ^-- SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 268:[0m
+[0m    next_day=`date -d @${now_timestamp} +%d`[0m
+[32m             ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    next_day=$(date -d @${now_timestamp} +%d)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 269:[0m
+[0m    if [ "$next_day" == "01" ];then[0m
+[33m                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 270:[0m
+[0m        month_access_l=`$uci_r get $G_UCI_CONFIG_FILE.$owner.month_access_l 2>/dev/null`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        month_access_l=$($uci_r get $G_UCI_CONFIG_FILE."$owner".month_access_l 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 271:[0m
+[0m        month_forbid_l=`$uci_r get $G_UCI_CONFIG_FILE.$owner.month_forbid_l 2>/dev/null`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        month_forbid_l=$($uci_r get $G_UCI_CONFIG_FILE."$owner".month_forbid_l 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 272:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_access_l="$month_access_t"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_access_l="$month_access_t"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 273:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_forbid_l="$month_forbid_t"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_forbid_l="$month_forbid_t"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 274:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_access_ll="$month_access_l"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_access_ll="$month_access_l"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 275:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_forbid_ll="$month_forbid_l"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_forbid_ll="$month_forbid_l"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 276:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_access_t="-1;0;"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_access_t="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 277:[0m
+[0m        $uci_r set $G_UCI_CONFIG_FILE.$owner.month_forbid_t="-1;0;"[0m
+[32m                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        $uci_r set $G_UCI_CONFIG_FILE."$owner".month_forbid_t="-1;0;"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 286:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 287:[0m
+[0m    local time_before_reboot=`uci get ${G_UCI_CONFIG_FILE}.${owner}.day_1|cut -d ";" -f1 2>/dev/null`[0m
+[33m    ^----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^----------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                             ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local time_before_reboot=$(uci get ${G_UCI_CONFIG_FILE}."${owner}".day_1|cut -d ";" -f1 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 296:[0m
+[0m    local last_time=""[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 297:[0m
+[0m    for i in `seq 0 15`[0m
+[32m             ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    for i in $(seq 0 15)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 300:[0m
+[0m	echo $last_time>>$G_LAST_DAY_TIME[0m
+[32m             ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo "$last_time">>$G_LAST_DAY_TIME
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 306:[0m
+[0m    let line=1+$1[0m
+[33m    ^-----------^ SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 307:[0m
+[0m    last_time=`cat ${G_LAST_DAY_TIME}|head -n "$line"|tail -n 1`[0m
+[32m              ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    last_time=$(cat ${G_LAST_DAY_TIME}|head -n "$line"|tail -n 1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 308:[0m
+[0m    echo $last_time[0m
+[32m         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$last_time"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 315:[0m
+[0m    for i in `seq 0 15`[0m
+[32m             ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    for i in $(seq 0 15)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 324:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 325:[0m
+[0m    local new_time=$2[0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                   ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local new_time="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 326:[0m
+[0m    local limit_time="0"[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 327:[0m
+[0m    local weekend_limit=`uci get ${G_PCTL_CONFIG_FILE}.${owner}.weekend_limit 2>/dev/null`[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                        ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                       ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local weekend_limit=$(uci get ${G_PCTL_CONFIG_FILE}."${owner}".weekend_limit 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 328:[0m
+[0m    local workday_limit=`uci get ${G_PCTL_CONFIG_FILE}.${owner}.workday_limit 2>/dev/null`[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                        ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                        ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                       ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local workday_limit=$(uci get ${G_PCTL_CONFIG_FILE}."${owner}".workday_limit 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 330:[0m
+[0m    local date1=`date +%A`[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^--------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local date1=$(date +%A)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 332:[0m
+[0m        if [ "$weekend_limit" == "0" ];then[0m
+[33m                              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 335:[0m
+[0m        limit_time=`uci get ${G_PCTL_CONFIG_FILE}.${owner}.weekend_time 2>/dev/null`[0m
+[32m                   ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        limit_time=$(uci get ${G_PCTL_CONFIG_FILE}."${owner}".weekend_time 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 337:[0m
+[0m        if [ "$workday_limit" == "0" ];then[0m
+[33m                              ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 340:[0m
+[0m        limit_time=`uci get ${G_PCTL_CONFIG_FILE}.${owner}.workday_time 2>/dev/null`[0m
+[32m                   ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        limit_time=$(uci get ${G_PCTL_CONFIG_FILE}."${owner}".workday_time 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 343:[0m
+[0m    local time_before_reboot=$(get_day_time_from_file "$owner")[0m
+[33m    ^----------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^----------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                             ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 349:[0m
+[0m    local time_saved=$(get_owner_day_time_from_flash "$owner")[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                     ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 368:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 369:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 370:[0m
+[0m    local day_time="0"[0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 371:[0m
+[0m    local day_timestamp="0"[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 372:[0m
+[0m    local day_url_entry=""[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 373:[0m
+[0m    local forbid_url_entry=""[0m
+[33m    ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 374:[0m
+[0m    local uci_day_info="-1,0;"[0m
+[33m    ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 375:[0m
+[0m    local uci_forbid_info="-1,0;"[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 376:[0m
+[0m    local last_day_info="-1;0;"[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 377:[0m
+[0m    local last_forbid_info="-1;0;"[0m
+[33m    ^--------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 380:[0m
+[0m    local day_time_reboot=$(get_day_time_from_file "$owner")[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                          ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 381:[0m
+[0m    let all_time=${day_time}+${day_time_reboot}[0m
+[33m    ^-- SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 396:[0m
+[0m        last_day_info=`$uci_b get $G_UCI_CONFIG_FILE.$owner.day_$day 2>/dev/null`[0m
+[32m                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                     ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        last_day_info=$($uci_b get $G_UCI_CONFIG_FILE."$owner".day_"$day" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 398:[0m
+[0m        last_forbid_info=`$uci_b get $G_UCI_CONFIG_FILE.$owner.forbid_day_$day 2>/dev/null`[0m
+[32m                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                        ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                          ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        last_forbid_info=$($uci_b get $G_UCI_CONFIG_FILE."$owner".forbid_day_"$day" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 403:[0m
+[0m    $uci_r set $G_UCI_CONFIG_FILE.$owner.day_$day="${uci_day_info}"[0m
+[32m                                  ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                             ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    $uci_r set $G_UCI_CONFIG_FILE."$owner".day_"$day"="${uci_day_info}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 404:[0m
+[0m    $uci_r set $G_UCI_CONFIG_FILE.$owner.forbid_day_$day="${uci_forbid_info}"[0m
+[32m                                  ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                    ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    $uci_r set $G_UCI_CONFIG_FILE."$owner".forbid_day_"$day"="${uci_forbid_info}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 412:[0m
+[0m    local day_url_entry=$1[0m
+[33m    ^-----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                        ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day_url_entry="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 413:[0m
+[0m    local OLD_IFS=$IFS[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local OLD_IFS="$IFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 420:[0m
+[0m    echo $tmp[0m
+[32m         ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    echo "$tmp"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 425:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 426:[0m
+[0m    local tmp_history=`$uci_r -d "|" get $G_UCI_CONFIG_FILE.$owner.history 2>/dev/null`[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                      ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                      ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                            ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local tmp_history=$($uci_r -d "|" get $G_UCI_CONFIG_FILE."$owner".history 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 428:[0m
+[0m    local count=`echo ${tmp_history}|grep -o ";"|wc -l`[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                      ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local count=$(echo "${tmp_history}"|grep -o ";"|wc -l)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 432:[0m
+[0m        let num=${count}-100[0m
+[33m        ^------------------^ SC3039 (warning): In POSIX sh, 'let' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 434:[0m
+[0m        tmp_history=`echo $tmp_history|cut -d ";" -f "-${num}"`[0m
+[32m                    ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                          ^----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        tmp_history=$(echo "$tmp_history"|cut -d ";" -f "-${num}")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 441:[0m
+[0m            list=${list//"'"/}[0m
+[33m                 ^-----------^ SC3060 (warning): In POSIX sh, string replacement is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 442:[0m
+[0m            $uci_r del_list $G_UCI_CONFIG_FILE.$owner.history="${list}"[0m
+[32m                                               ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            $uci_r del_list $G_UCI_CONFIG_FILE."$owner".history="${list}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 451:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 452:[0m
+[0m    local day="1"[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 453:[0m
+[0m    local day_url_num=$(get_day_url_num "$owner" "${day}" )[0m
+[33m    ^---------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                      ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 460:[0m
+[0m        last_timestamp=`$uci_r get $G_UCI_CONFIG_FILE.$owner.history 2>/dev/null \[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                      ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+        last_timestamp=$($uci_r get $G_UCI_CONFIG_FILE."$owner".history 2>/dev/null \
+        |awk 'BEGIN{FS=","}{print $NF}'|cut -d ";" -f1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 463:[0m
+[0m        for i in `seq 1 ${INSIGHTS_HISTORY_MAX}`[0m
+[32m                 ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+        for i in $(seq 1 ${INSIGHTS_HISTORY_MAX})
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 466:[0m
+[0m            history_url_entry=`echo $day_url_entry|cut -d ";" -f $i 2>/dev/null`[0m
+[32m                              ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                    ^------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            history_url_entry=$(echo "$day_url_entry"|cut -d ";" -f "$i" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 468:[0m
+[0m            history_timestamp=`echo ${history_url_entry}|cut -d "," -f2`[0m
+[32m                              ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                    ^------------------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            history_timestamp=$(echo "${history_url_entry}"|cut -d "," -f2)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 472:[0m
+[0m                $uci_r add_list $G_UCI_CONFIG_FILE.$owner.history="${history_url_entry};"[0m
+[32m                                                   ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+                $uci_r add_list $G_UCI_CONFIG_FILE."$owner".history="${history_url_entry};"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 483:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 489:[0m
+[0m    local last_year_mon_day=`cat $G_LAST_TIME 2>/dev/null`[0m
+[33m    ^---------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                            ^----------------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                            ^----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local last_year_mon_day=$(cat $G_LAST_TIME 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 490:[0m
+[0m    local year_mon_day=`date "+%G-%m-%d"`[0m
+[33m    ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                       ^----------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                       ^----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local year_mon_day=$(date "+%G-%m-%d")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 496:[0m
+[0m    local hour_min=`date +%T|cut -c1-5` [0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                   ^------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                   ^------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local hour_min=$(date +%T|cut -c1-5) 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 512:[0m
+[0m    local ntp_uptime=`cat $G_NTP_TIME 2>/dev/null`[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^--------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                     ^---------------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                     ^---------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local ntp_uptime=$(cat $G_NTP_TIME 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 513:[0m
+[0m    local last_ntp_uptime=`cat $G_LAST_NTP_TIME 2>/dev/null`[0m
+[33m    ^-------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-------------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                          ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                          ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local last_ntp_uptime=$(cat $G_LAST_NTP_TIME 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 525:[0m
+[0m    local ip=""[0m
+[33m    ^------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 526:[0m
+[0m    local owner_macs="$1"[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 531:[0m
+[0m    local OLD_IFS=$IFS[0m
+[33m    ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                  ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local OLD_IFS="$IFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 536:[0m
+[0m        ip=`cat /proc/net/arp |grep -i "$mac"|cut -d " " -f1`[0m
+[32m           ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                ^-----------^ SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+
+[1mDid you mean: [0m
+        ip=$(cat /proc/net/arp |grep -i "$mac"|cut -d " " -f1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 549:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 550:[0m
+[0m    local owner_macs=""[0m
+[33m    ^--------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 556:[0m
+[0m    local last_flag=`$uci_r get $G_BLOCK_STATUS.${owner}.owner_block 2>/dev/null`[0m
+[33m    ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                    ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local last_flag=$($uci_r get $G_BLOCK_STATUS."${owner}".owner_block 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 557:[0m
+[0m    flag=`cat ${G_PROC_PCTL_PATH}/${owner}|head -n 1|cut  -d " " -f4`[0m
+[32m         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                  ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    flag=$(cat ${G_PROC_PCTL_PATH}/"${owner}"|head -n 1|cut  -d " " -f4)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 560:[0m
+[0m        if [ "$flag" == "1" ][0m
+[33m                     ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 562:[0m
+[0m            owner_macs=`uci -p /var/state get parental_control.core.id_${owner} 2>/dev/null`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                                       ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+            owner_macs=$(uci -p /var/state get parental_control.core.id_"${owner}" 2>/dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 570:[0m
+[0m    $uci_r set $G_BLOCK_STATUS.${owner}="owner"[0m
+[32m                               ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    $uci_r set $G_BLOCK_STATUS."${owner}"="owner"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 571:[0m
+[0m	$uci_r set $G_BLOCK_STATUS.${owner}.owner_block="$flag"[0m
+[32m                                   ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	$uci_r set $G_BLOCK_STATUS."${owner}".owner_block="$flag"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 577:[0m
+[0m    local owner=$1[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local owner="$1"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 578:[0m
+[0m    local day=$2[0m
+[33m    ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+    local day="$2"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 579:[0m
+[0m    local hour_min=`date +%T|cut -c1-5` [0m
+[33m    ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                   ^------------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                   ^------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local hour_min=$(date +%T|cut -c1-5) 
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/parental_control/core_get_history.sh line 584:[0m
+[0m    local state=`cat ${G_UPDATE_STATUS} 2>/dev/null`[0m
+[33m    ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m          ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+    local state=$(cat ${G_UPDATE_STATUS} 2>/dev/null)
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- write_flash appears unused. Verif...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...

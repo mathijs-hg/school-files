@@ -1,0 +1,21 @@
+<br />
+<pre>int ubiutils_srand(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  __pid_t _Var2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  timezone tz;</pre>
+<pre>  timeval tv;</pre>
+<pre>  </pre>
+<pre>  iVar1 = gettimeofday((timeval *)&amp;tv,(__timezone_ptr_t)&amp;tz);</pre>
+<pre>  iVar3 = -1;</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    _Var2 = getpid();</pre>
+<pre><span class="green"><span class="green">    srand((uint)(_Var2 * (tv.tv_sec + tv.tv_usec)) % 0x7fffffff)</span></span></span></pre>
+<pre>    iVar3 = 0;</pre>
+<pre>  }</pre>
+<pre>  return iVar3;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 67a21e7a5457fc53</pre>

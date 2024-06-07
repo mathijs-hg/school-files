@@ -1,0 +1,30 @@
+<br />
+<pre>undefined4</pre>
+<pre>HwNatDelEntry(undefined4 param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  int __fd;</pre>
+<pre>  undefined4 uVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  </pre>
+<pre><span class="green">  __fd = open("/dev/hwnat0",0,param_3,param_4,&amp;_gp)</span></span></pre>
+<pre>  if (__fd &lt; 0) {</pre>
+<pre>    printf("Open %s pseudo device failed\n","/dev/hwnat0");</pre>
+<pre>    uVar1 = 1;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    iVar2 = ioctl(__fd,2,param_1);</pre>
+<pre>    if (iVar2 &lt; 0) {</pre>
+<pre>      puts("HW_NAT_API: ioctl error");</pre>
+<pre>      close(__fd);</pre>
+<pre>      uVar1 = 1;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      close(__fd);</pre>
+<pre>      uVar1 = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return uVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 7bb760601012344b</pre>

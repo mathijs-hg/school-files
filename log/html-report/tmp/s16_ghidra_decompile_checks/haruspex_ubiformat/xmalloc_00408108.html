@@ -1,0 +1,25 @@
+<br />
+<pre>void * xmalloc(size_t size)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  void *pvVar1;</pre>
+<pre>  int *piVar2;</pre>
+<pre>  char *pcVar3;</pre>
+<pre>  int __errnum;</pre>
+<pre>  </pre>
+<pre><span class="green">  pvVar1 = malloc(size)</span></span></pre>
+<pre>  if ((pvVar1 == (void *)0x0) &amp;&amp; (size != 0)) {</pre>
+<pre>    piVar2 = __errno_location();</pre>
+<pre>    __errnum = *piVar2;</pre>
+<pre>    fprintf(stderr,"%s: error!: out of memory\n","libmtd");</pre>
+<pre>    __stream = stderr;</pre>
+<pre>    pcVar3 = strerror(__errnum);</pre>
+<pre>    fprintf(__stream,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,__errnum,pcVar3);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>    exit(-1);</pre>
+<pre>  }</pre>
+<pre>  return pvVar1;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 977d58e96da97bc1</pre>

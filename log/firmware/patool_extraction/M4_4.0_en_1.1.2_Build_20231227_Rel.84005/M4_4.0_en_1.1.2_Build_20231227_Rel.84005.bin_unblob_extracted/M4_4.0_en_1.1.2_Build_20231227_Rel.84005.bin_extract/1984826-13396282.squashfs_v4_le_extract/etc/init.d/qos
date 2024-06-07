@@ -1,0 +1,119 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2008-2010 OpenWrt.org
+
+START=99
+USE_PROCD=1
+
+PC_LIBDIR=/lib/qos
+
+. /usr/lib/eth-encap/eth_encap.sh
+
+local isMobile=$(isMobile 2>/dev/null)
+
+pc() {
+	. $PC_LIBDIR/core.sh
+	nss_support=$(get_qos_nss_enable)
+	if [ -n "$nss_support" ] && [ "$nss_support" == "yes" ]; then
+		fw_$1
+	else
+		lock /var/tmp/qos_lock
+		fw_$1
+		lock -u /var/tmp/qos_lock
+	fi
+}
+is_qos_necessary()
+{
+	local ret="1"
+	config_load sysmode
+	config_get system_mode sysmode mode "Router"
+	if [ "$system_mode" == "AP" ]; then
+		ret="0"
+	fi
+
+	config_load repacd
+    config_get device_type repacd DeviceType 'RE'	
+    if [ "$device_type" = 'RE' ]; then
+    	ret="0"
+    fi
+	echo "$ret"
+}
+
+start_service() {
+
+	local bandwidth_ver
+	local qos_switch
+
+	local ret=$(is_qos_necessary)
+	if [ "$ret" == "0" ];then
+		return
+	fi
+
+	bandwidth_ver="$(uci get component-router-owner.list.avira_bandwidth -c /etc/profile.d 2>&1)"
+	if [ "$(echo $bandwidth_ver | grep [0-9])" ]; then
+		qos_switch=$(uci get qos_v2.settings.qos_switch) || ""
+		if [ "$qos_switch" == "off" ];then
+			pc stop &
+			return
+		fi
+		# for the case if xt_connmark is not loaded
+		linux_ver=$(grep -o "Linux version [0-9A-Za-z_.-]*" /proc/version | grep -o "[0-9A-Za-z_.-]*$")
+		if [[ -f /lib/modules/$linux_ver/kernel/net/netfilter/xt_connmark.ko ]]; then
+			insmod /lib/modules/$linux_ver/kernel/net/netfilter/xt_connmark.ko
+		fi
+	else
+		echo "bandwidth_ver:$bandwidth_ver is not correct version" > /dev/console
+	fi
+
+
+    echo "qos_v2 start " > /dev/console
+
+	pc start
+}
+
+stop_service() {
+    echo "qos_v2 stop " > /dev/console
+	pc stop
+	
+}
+
+restart_service() {
+    echo "qos_v2 restart " > /dev/console
+	pc restart
+}
+
+reload_service() {
+
+	local bandwidth_ver
+	local qos_switch
+
+	local ret=$(is_qos_necessary)
+	if [ "$ret" == "0" ];then
+		return
+	fi
+	if [ "$isMobile" = "yes" ]; then
+	#do not ues ecm-sfe backend and ues sfe_cm, so do not change acceleration engine
+	#lua -e 'require("luci.model.ecm").detect_ecm_status()'
+		echo "isMobile is true, juse do pc restart" > /dev/console
+	else
+	nss_support=$(get_qos_nss_enable)
+	if [ -z "$nss_support" ] || [ "$nss_support" == "no" ]; then
+		lua -e 'require("luci.model.ecm").detect_ecm_status()'
+	fi
+
+	bandwidth_ver="$(uci get component-router-owner.list.avira_bandwidth -c /etc/profile.d 2>&1)"
+	if [ "$(echo $bandwidth_ver | grep [0-9])" ]; then
+		qos_switch=$(uci get qos_v2.settings.qos_switch) || ""
+		if [ "$qos_switch" == "off" ];then
+			pc stop &
+			return
+		fi
+	else
+		echo "bandwidth_ver:$bandwidth_ver is not correct version" > /dev/console
+	fi
+
+	fi
+	pc restart &
+}
+service_triggers(){
+	procd_add_reload_trigger "client_mgmt" "qos_v2"
+}

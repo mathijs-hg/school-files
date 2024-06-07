@@ -1,0 +1,75 @@
+<br />
+<pre>void iw_print_pm_mode(undefined4 *param_1,size_t param_2,uint param_3,undefined4 param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  if ((int)param_2 &lt; 0x1c) {</pre>
+<pre><span class="green">    snprintf((char *)param_1,param_2,"&lt;too big&gt;",param_4,&amp;_gp)</span></span></pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    param_3 = param_3 &amp; 0xf00;</pre>
+<pre>    if (param_3 == 0x300) {</pre>
+<pre>      *param_1 = 0x65646f6d;</pre>
+<pre>      param_1[1] = 0x6c6c413a;</pre>
+<pre>      param_1[2] = 0x63617020;</pre>
+<pre>      param_1[3] = 0x7374656b;</pre>
+<pre>      param_1[4] = 0x63657220;</pre>
+<pre>      param_1[5] = 0x65766965;</pre>
+<pre>      *(char *)(param_1 + 6) = 'd';</pre>
+<pre>      *(char *)((int)param_1 + 0x19) = '\0';</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (param_3 &lt; 0x301) {</pre>
+<pre>        if (param_3 == 0x100) {</pre>
+<pre>          *param_1 = 0x65646f6d;</pre>
+<pre>          param_1[1] = 0x696e553a;</pre>
+<pre>          param_1[2] = 0x74736163;</pre>
+<pre>          param_1[3] = 0x6c6e6f20;</pre>
+<pre>          param_1[4] = 0x65722079;</pre>
+<pre>          param_1[5] = 0x76696563;</pre>
+<pre>          *(char *)(param_1 + 6) = 'e';</pre>
+<pre>          *(char *)((int)param_1 + 0x19) = 'd';</pre>
+<pre>          *(char *)((int)param_1 + 0x1a) = '\0';</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        if (param_3 == 0x200) {</pre>
+<pre>          *param_1 = 0x65646f6d;</pre>
+<pre>          param_1[1] = 0x6c754d3a;</pre>
+<pre>          param_1[2] = 0x61636974;</pre>
+<pre>          param_1[3] = 0x6f207473;</pre>
+<pre>          param_1[4] = 0x20796c6e;</pre>
+<pre>          param_1[5] = 0x65636572;</pre>
+<pre>          param_1[6] = 0x64657669;</pre>
+<pre>          *(char *)(param_1 + 7) = '\0';</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if (param_3 == 0x400) {</pre>
+<pre>          *param_1 = 0x65646f6d;</pre>
+<pre>          param_1[1] = 0x726f463a;</pre>
+<pre>          param_1[2] = 0x73206563;</pre>
+<pre>          param_1[3] = 0x69646e65;</pre>
+<pre>          *(char *)(param_1 + 4) = 'n';</pre>
+<pre>          *(char *)((int)param_1 + 0x11) = 'g';</pre>
+<pre>          *(char *)((int)param_1 + 0x12) = '\0';</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        if (param_3 == 0x800) {</pre>
+<pre>          *param_1 = 0x65646f6d;</pre>
+<pre>          param_1[1] = 0x7065523a;</pre>
+<pre>          param_1[2] = 0x20746165;</pre>
+<pre>          param_1[3] = 0x746c756d;</pre>
+<pre>          param_1[4] = 0x73616369;</pre>
+<pre>          *(char *)(param_1 + 5) = 't';</pre>
+<pre>          *(char *)((int)param_1 + 0x15) = 's';</pre>
+<pre>          *(char *)((int)param_1 + 0x16) = '\0';</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      *(undefined *)param_1 = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 60656311ddc6e25f</pre>

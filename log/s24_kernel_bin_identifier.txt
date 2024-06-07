@@ -1,0 +1,54 @@
+[[0;34m+[0m] [0;36m[1mKernel Binary and Configuration Identifier[0m
+[1m=================================================================[0m
+This module tries to identify the Linux kernel binary and extracts the kernel with the vmlinux-to-elf project
+Additionally, it tries to extract the kernel configuration.
+Based on this extraction it is possible to further analyze the kernel configuration and the kernel
+
+
+[[0;33m*[0m] Unique and limited file array generation for [0;33m/logs/firmware[0m (could take some time)
+
+
+
+[[0;32m+[0m][0;32m Possible Linux Kernel found: [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed[0m[0m
+
+
+    [0;33mLinux version 3.10.108 (mfy@ubuntu) (gcc version 4.6.3 (Buildroot 2012.11.1) ) #66 SMP Wed Dec 27 23:05:23 +08 2023[0m
+
+
+[[0;33m*[0m] Testing possible Linux kernel file [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed[0m with [0;33mvmlinux-to-elf:[0m
+
+
+[+] Version string: Linux version 3.10.108 (mfy@ubuntu) (gcc version 4.6.3 (Buildroot 2012.11.1) ) #66 SMP Wed Dec 27 23:05:23 +08 2023
+[+] Guessed architecture: mipsle successfully in 3.34 seconds
+[+] Found kallsyms_token_table at file offset 0x004c12d0
+[+] Found kallsyms_token_index at file offset 0x004c1640
+[+] Found kallsyms_markers at file offset 0x004c10f0
+[+] Found kallsyms_names at file offset 0x0046ccf0
+[+] Found kallsyms_num_syms at file offset 0x0046cce0
+[i] Null addresses overall: 0 %
+[+] Found kallsyms_addresses at file offset 0x0044eff0
+[+] Successfully wrote the new ELF kernel to /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed.elf
+
+
+[[0;32m+[0m][0;32m Successfully generated Linux kernel elf file: [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed.elf[0m[0m
+
+
+[[0;33m*[0m] Trying to extract kernel configuration from [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed[0m
+[[0;32m+[0m][0;32m Extracted kernel configuration ([0;33m1768 configuration entries[0;32m) from [0;33mlzma.uncompressed[0m[0m
+[[0;33m*[0m] Testing kernel configuration file [0;33m/logs/s24_kernel_bin_identifier/kernel_config_extracted_lzma.uncompressed.log[0m with kconfig-hardened-check
+
+
+[[0;32m+[0m][0;32m Possible Linux Kernel found: [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed_extract/0-4154056.unknown[0m[0m
+
+
+    [0;33mLinux version 3.10.108 (mfy@ubuntu) (gcc version 4.6.3 (Buildroot 2012.11.1) ) #66 SMP Wed Dec 27 23:05:23 +08 2023[0m
+
+
+[[0;33m*[0m] Testing possible Linux kernel file [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed_extract/0-4154056.unknown[0m with [0;33mvmlinux-to-elf:[0m
+
+
+[+] Version string: Linux version 3.10.108 (mfy@ubuntu) (gcc version 4.6.3 (Buildroot 2012.11.1) ) #66 SMP Wed Dec 27 23:05:23 +08 2023
+[+] Guessed architecture: mipsle successfully in 1.84 seconds
+
+
+[[0;33m*[0m] Trying to extract kernel configuration from [0;33m/logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/8276-1984825.lzma_extract/lzma.uncompressed_extract/0-4154056.unknown[0m

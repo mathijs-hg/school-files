@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ "$POINT" = "BEGIN" ] && [ "$DSTMODE" = "RE" ]; then
+    /etc/init.d/guest-schedule stop
+    /etc/init.d/guest-bandwidth stop
+elif [ "$POINT" = "END" ] && [ "$DSTMODE" = "FAP" ]; then
+    /etc/init.d/guest-schedule start
+    /etc/init.d/guest-bandwidth start
+fi

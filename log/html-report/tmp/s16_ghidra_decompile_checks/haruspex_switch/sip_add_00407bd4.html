@@ -1,0 +1,54 @@
+<br />
+<pre>void sip_add(undefined4 param_1,int param_2,undefined4 param_3,undefined4 param_4)</pre>
+<br />
+<pre>{</pre>
+<pre>  size_t sVar1;</pre>
+<pre>  uint local_20;</pre>
+<pre>  int local_1c;</pre>
+<pre>  uint local_18 [4];</pre>
+<pre>  </pre>
+<pre>  str_to_ip(local_18,*(undefined4 *)(param_2 + 0xc),param_3,param_4,&amp;_gp);</pre>
+<pre>  reg_write(0x78,local_18[0]);</pre>
+<pre>  printf("REG_ESW_WT_MAC_ATA2 is 0x%x\n\r",local_18[0]);</pre>
+<pre>  local_18[0] = 0;</pre>
+<pre>  str_to_ip(local_18,*(undefined4 *)(param_2 + 0x10));</pre>
+<pre>  reg_write(0x74,local_18[0]);</pre>
+<pre>  printf("REG_ESW_WT_MAC_ATA1 is 0x%x\n\r",local_18[0]);</pre>
+<pre><span class="green">  if ((*(int *)(param_2 + 0x14) == 0) || (sVar1 = strlen(*(char **)(param_2 + 0x14)), sVar1 != 8)) {</span></pre>
+<pre>    puts("portmap format error, should be of length 7");</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_1c = 0;</pre>
+<pre>    for (local_20 = 0; local_20 &lt; 7; local_20 = local_20 + 1) {</pre>
+<pre>      if ((*(char *)(*(int *)(param_2 + 0x14) + local_20) != '0') &amp;&amp;</pre>
+<pre>         (*(char *)(*(int *)(param_2 + 0x14) + local_20) != '1')) {</pre>
+<pre>        puts("portmap format error, should be of combination of 0 or 1");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      local_1c = local_1c +</pre>
+<pre>                 (*(char *)(*(int *)(param_2 + 0x14) + local_20) + -0x30 &lt;&lt; (local_20 &amp; 0x1f));</pre>
+<pre>    }</pre>
+<pre>    local_18[0] = local_1c &lt;&lt; 4 | 0xc;</pre>
+<pre>    reg_write(0x7c,local_18[0]);</pre>
+<pre>    usleep(5000);</pre>
+<pre><span class="green">    reg_read(0x7c,local_18)</span></span></pre>
+<pre>    printf("REG_ESW_WT_MAC_ATWD is 0x%x\n\r",local_18[0]);</pre>
+<pre>    local_18[0] = 0x8021;</pre>
+<pre>    reg_write(0x80,0x8021);</pre>
+<pre>    usleep(1000);</pre>
+<pre>    for (local_20 = 0; local_20 &lt; 0x14; local_20 = local_20 + 1) {</pre>
+<pre><span class="green">      reg_read(0x80,local_18)</span></span></pre>
+<pre>      if ((local_18[0] &amp; 0x8000) == 0) {</pre>
+<pre>        puts("done.");</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      usleep(1000);</pre>
+<pre>    }</pre>
+<pre>    if (local_20 == 0x14) {</pre>
+<pre>      puts("timeout.");</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 88e5ef1304ba3156</pre>

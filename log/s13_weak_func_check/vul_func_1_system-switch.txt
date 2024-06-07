@@ -1,0 +1,40 @@
+[[0;33m*[0m] Binary protection state of [0;33mswitch[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [31mNo PIE[0m       [32mNo RPATH[0m     [32mNo RUNPATH[0m   [31mSymbols[0m
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mswitch[0m
+
+  40c044:	34450f80 	ori	a1,v0,0xf80
+  40c048:	0c10059c 	jal	401670 <reg_write>
+  40c04c:	00000000 	nop
+  40c050:	8fdc0010 	lw	gp,16(s8)
+  40c054:	0810301d 	j	40c074 <igmp_on+0x7cc>
+  40c058:	00000000 	nop
+  40c05c:	24040094 	li	a0,148
+  40c060:	3c021a00 	lui	v0,0x1a00
+  40c064:	34451e80 	ori	a1,v0,0x1e80
+  40c068:	0c10059c 	jal	401670 <reg_write>
+  40c06c:	00000000 	nop
+  40c070:	8fdc0010 	lw	gp,16(s8)
+  40c074:	24040098 	li	a0,152
+  40c078:	00002821 	move	a1,zero
+  40c07c:	0c10059c 	jal	401670 <reg_write>
+  40c080:	00000000 	nop
+  40c084:	8fdc0010 	lw	gp,16(s8)
+  40c088:	24040090 	li	a0,144
+  40c08c:	3c028000 	lui	v0,0x8000
+  40c090:	3445b003 	ori	a1,v0,0xb003
+  40c094:	0c10059c 	jal	401670 <reg_write>
+  40c098:	00000000 	nop
+  40c09c:	8fdc0010 	lw	gp,16(s8)
+  40c0a0:	3c020041 	lui	v0,0x41
+  40c0a4:	24441a88 	addiu	a0,v0,6792
+[31m  40c0a8:	8f82807c 	lw	v0,system[0m
+  40c0ac:	00000000 	nop
+  40c0b0:	0040c821 	move	t9,v0
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m1[0m times [0;33mswitch[0m
+

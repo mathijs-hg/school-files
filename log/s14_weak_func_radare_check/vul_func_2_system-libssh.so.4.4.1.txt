@@ -1,0 +1,104 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibssh.so.4.4.1[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[31mNo RELRO[0m       [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mlibssh.so.4.4.1[0m
+
+move a0, s0
+addiu a1, a1, 0x564c
+move a2, s1
+addiu t9, t9, -0x5990
+bal 0xa670
+addiu a3, zero, 1
+lw gp, 0x18(sp)
+move s2, v0
+lw t9, -sym.ssh_buffer_free(gp)
+nop
+jalr t9
+move a0, s1
+lw ra, 0x34(sp)
+move v0, s2
+lw s1, 0x2c(sp)
+lw s2, 0x30(sp)
+lw s0, 0x28(sp)
+jr ra
+addiu sp, sp, 0x38
+lui gp, 6
+addiu gp, gp, 0x1e8
+addu gp, gp, t9
+beqz a0, 0xd7f0
+nop
+lw a1, -0x7fd4(gp)
+[31mlw t9, -sym.ssh_channel_request_subsystem(gp)[0m
+nop
+jr t9
+addiu a1, a1, 0x5658
+jr ra
+addiu v0, zero, -1
+lui gp, 6
+addiu gp, gp, 0x1b8
+addu gp, gp, t9
+addiu sp, sp, -0x80
+sw gp, 0x20(sp)
+sw s6, 0x78(sp)
+sw s5, 0x74(sp)
+sw s4, 0x70(sp)
+sw s3, 0x6c(sp)
+sw s0, 0x60(sp)
+sw ra, 0x7c(sp)
+sw s2, 0x68(sp)
+sw s1, 0x64(sp)
+move s0, a0
+move s4, a1
+--
+nop
+lui gp, 5
+addiu gp, gp, 0x68b0
+addu gp, gp, t9
+lw t9, -sym.ssh_channel_request_shell(gp)
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x6894
+addu gp, gp, t9
+lw t9, -sym.ssh_channel_request_send_signal(gp)
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x6878
+addu gp, gp, t9
+lw t9, -sym.ssh_channel_request_sftp(gp)
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x685c
+addu gp, gp, t9
+[31mlw t9, -sym.ssh_channel_request_subsystem(gp)[0m
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x6840
+addu gp, gp, t9
+lw t9, -sym.ssh_channel_request_x11(gp)
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x6824
+addu gp, gp, t9
+lw t9, -sym.ssh_channel_send_eof(gp)
+nop
+jr t9
+nop
+lui gp, 5
+addiu gp, gp, 0x6808
+addu gp, gp, t9
+
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m2[0m times [0;33mlibssh.so.4.4.1[0m
+

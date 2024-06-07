@@ -1,0 +1,57 @@
+[[0;33m*[0m] Binary protection state of [0;33mlibpthread-0.9.33.2.so[0m
+
+  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      
+  	[32mFull RELRO[0m     [31mNo Canary found[0m   [31mNX disabled[0m  [33mDSO[0m          [32mNo RPATH[0m     [32mNo RUNPATH[0m   [32mNo Symbols
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mlibpthread-0.9.33.2.so[0m
+
+lw s0, 0x20(sp)
+b 0xfcb8
+addiu sp, sp, 0x30
+lw t9, -0x7fb4(gp)
+bal 0x9780
+nop
+move a0, s1
+addiu t9, s0, -0x348
+bal 0xfcb8
+move s2, v0
+lw gp, 0x10(sp)
+sw v0, 0x18(sp)
+lw t9, -0x7fb0(gp)
+bal 0x983c
+move a0, s2
+lw v0, 0x18(sp)
+lw ra, 0x2c(sp)
+lw s2, 0x28(sp)
+lw s1, 0x24(sp)
+lw s0, 0x20(sp)
+jr ra
+addiu sp, sp, 0x30
+lui gp, 2
+addiu gp, gp, -0x5284
+addu gp, gp, t9
+[31mlw t9, -sym.__libc_system(gp)[0m
+jr t9
+nop
+nop
+lui gp, 2
+addiu gp, gp, -sym.__syscall_rt_sigaction
+addu gp, gp, t9
+rdhwr v1, 29
+move v0, v1
+lw v1, -0x7cf0(gp)
+addu v0, v1, v0
+jr ra
+lw v0, (v0)
+nop
+nop
+nop
+lui gp, 2
+addiu gp, gp, -0x52d0
+addu gp, gp, t9
+lw v0, (a0)
+lw v1, -0x7fa0(gp)
+
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m1[0m times [0;33mlibpthread-0.9.33.2.so[0m
+

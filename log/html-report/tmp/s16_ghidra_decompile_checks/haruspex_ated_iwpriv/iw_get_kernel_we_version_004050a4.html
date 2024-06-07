@@ -1,0 +1,44 @@
+<br />
+<pre>undefined4 iw_get_kernel_we_version(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  char *pcVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  char acStack_410 [1024];</pre>
+<pre>  undefined4 local_10 [2];</pre>
+<pre>  </pre>
+<pre><span class="green">  __stream = fopen("/proc/net/wireless","r")</span></span></pre>
+<pre>  if (__stream == (FILE *)0x0) {</pre>
+<pre>    fwrite("Cannot read /proc/net/wireless\n",1,0x1f,stderr);</pre>
+<pre>    local_10[0] = 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    fgets(acStack_410,0x400,__stream)</span></span></pre>
+<pre>    pcVar1 = strstr(acStack_410,"| WE");</pre>
+<pre>    if (pcVar1 == (char *)0x0) {</pre>
+<pre>      pcVar1 = strstr(acStack_410,"| Missed");</pre>
+<pre>      if (pcVar1 == (char *)0x0) {</pre>
+<pre>        local_10[0] = 0xb;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_10[0] = 0xf;</pre>
+<pre>      }</pre>
+<pre>      fclose(__stream);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre><span class="green">      fgets(acStack_410,0x400,__stream)</span></span></pre>
+<pre>      pcVar1 = strrchr(acStack_410,0x7c);</pre>
+<pre><span class="green">      if ((pcVar1 != (char *)0x0) &amp;&amp; (iVar2 = sscanf(pcVar1 + 1,"%d",local_10), iVar2 == 1)) {</span></pre>
+<pre>        fclose(__stream);</pre>
+<pre>        return local_10[0];</pre>
+<pre>      }</pre>
+<pre>      fwrite("Cannot parse /proc/net/wireless\n",1,0x20,stderr);</pre>
+<pre>      fclose(__stream);</pre>
+<pre>      local_10[0] = 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return local_10[0];</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 082a028e69619dc5</pre>

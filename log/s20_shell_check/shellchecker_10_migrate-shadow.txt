@@ -1,0 +1,15 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/uci-defaults/10_migrate-shadow line 3:[0m
+[0mlocal ppwd="$(sed -ne '/^root:/s/^root:\([^:]*\):.*$/\1/p' /etc/passwd)"[0m
+[33m^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/etc/uci-defaults/10_migrate-shadow line 4:[0m
+[0mlocal spwd="$(sed -ne '/^root:/s/^root:\([^:]*\):.*$/\1/p' /etc/shadow)"[0m
+[33m^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m      ^--^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2155 -- Declare and assign separately to ...
+  https://www.shellcheck.net/wiki/SC3043 -- In POSIX sh, 'local' is undefined.

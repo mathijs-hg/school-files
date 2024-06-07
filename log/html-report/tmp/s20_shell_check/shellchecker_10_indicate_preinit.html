@@ -1,0 +1,69 @@
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 9:</span></pre>
+<pre></span>		pi_ifname=$ifname</span></pre>
+<pre><span class="orange">                          ^-----^ SC2154 (warning): ifname is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 13:</span></pre>
+<pre></span>		ifconfig $pi_ifname $pi_ip netmask $pi_netmask broadcast $pi_broadcast up</span></pre>
+<pre><span class="green">                         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                    ^----^ SC2154 (warning): pi_ip is referenced but not assigned.</span></pre>
+<pre><span class="green">                                    ^----^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                                   ^---------^ SC2154 (warning): pi_netmask is referenced but not assigned.</span></pre>
+<pre><span class="green">                                                   ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<pre><span class="orange">                                                                         ^-----------^ SC2154 (warning): pi_broadcast is referenced but not assigned.</span></pre>
+<pre><span class="green">                                                                         ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		ifconfig "$pi_ifname" "$pi_ip" netmask "$pi_netmask" broadcast "$pi_broadcast" up</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 19:</span></pre>
+<pre></span>		ifconfig $pi_ifname 0.0.0.0 down</span></pre>
+<pre><span class="green">                         ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		ifconfig "$pi_ifname" 0.0.0.0 down</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 26:</span></pre>
+<pre></span>			[ "$pi_preinit_net_messages" = "y" ] || {</span></pre>
+<pre><span class="orange">                           ^----------------------^ SC2154 (warning): pi_preinit_net_messages is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 27:</span></pre>
+<pre></span>				[ "$pi_failsafe_net_message" = "true" ] &amp;&amp</span></span></pre>
+<pre><span class="orange">                                   ^----------------------^ SC2154 (warning): pi_failsafe_net_message is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 28:</span></pre>
+<pre></span>					[ "$pi_preinit_no_failsafe_netmsg" != "y" ]</span></pre>
+<pre><span class="orange">                                           ^----------------------------^ SC2154 (warning): pi_preinit_no_failsafe_netmsg is referenced but not assigned.</span></pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 30:</span></pre>
+<pre></span>		} &amp;&amp; netmsg $pi_broadcast "$1"</span></pre>
+<pre><span class="green">                            ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>		} &amp;&amp; netmsg "$pi_broadcast" "$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 35:</span></pre>
+<pre></span>	preinit_net_echo $1</span></pre>
+<pre><span class="green">                         ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	preinit_net_echo "$1"</pre>
+<br />
+<br />
+<pre><span class="bold">In /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/preinit/10_indicate_preinit line 36:</span></pre>
+<pre></span>	echo $1</span></pre>
+<pre><span class="green">             ^-- SC2086 (info): Double quote to prevent globbing and word splitting.</span></pre>
+<br />
+<pre><span class="bold">Did you mean: </span></pre>
+<pre>	echo "$1"</pre>
+<br />
+<pre>For more information:</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2154" title="https://www.shellcheck.net/wiki/SC2154" target="_blank" >https://www.shellcheck.net/wiki/SC2154</a> -- ifname is referenced but not assi...</pre>
+<pre>  <a href="https://www.shellcheck.net/wiki/SC2086" title="https://www.shellcheck.net/wiki/SC2086" target="_blank" >https://www.shellcheck.net/wiki/SC2086</a> -- Double quote to prevent globbing ...</pre>

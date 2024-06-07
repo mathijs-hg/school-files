@@ -1,0 +1,84 @@
+#!/bin/sh /etc/rc.common
+# Copyright (c) 2016 Qualcomm Atheros, Inc.
+#
+# All Rights Reserved.
+# Qualcomm Atheros Confidential and Proprietary.
+
+START=42
+
+local ieee1905managed_bridge=lan
+local iptv_bridge=iptv
+
+start() {
+	[ ! -d /sys/class/net/br-$ieee1905managed_bridge ] && \
+		brctl addbr br-$ieee1905managed_bridge
+
+    if [ ! -d /sys/class/net/br-$iptv_bridge ]; then
+        brctl addbr br-$iptv_bridge
+        ifconfig br-$iptv_bridge mtu 1500
+        ifconfig br-$iptv_bridge up
+    fi
+
+
+	# Enable hyfi-netfilter
+	if [ -f /proc/sys/net/bridge/bridge-nf-call-custom ]; then
+		sysctl -w net.bridge.bridge-nf-call-custom=1
+	fi
+
+	# Bail out from starting hyd if attach fails.
+	if ! hyctl attach br-$ieee1905managed_bridge; then
+		stop
+		return 1
+	fi
+
+	local device_type
+	config_load repacd
+	config_get device_type repacd DeviceType 'RE'
+
+        config_load iptv_v2
+        config_get iptv_type info iptv_type ""
+        config_get iptv_enable info enable "0" 
+
+	if [ "$device_type" = "AP" ];  then
+		. /lib/iptv/iptv.sh
+		
+		check_iptv_only_on_ap
+		local iptv_not_only_on_ap=$?
+
+		# 3-port device always attach br-iptv/wan
+		eth_num=$(uci -c /etc/profile.d/ get profile.@DEVINFO[0].eth_port_num)
+		[ -z "$eth_num" ] && { eth_num=2; }
+		
+		if [ "$iptv_enable" = "1" -o "$iptv_type" = "bridge" ] && [ $iptv_not_only_on_ap -eq 1 -o $eth_num -gt 2 ]; then
+			if [ "$iptv_type" = "bridge"  ]; then
+				hyctl attach br-wan
+				hyctl setmc br-wan mcrouter enable
+			else
+				hyctl attach br-iptv
+			fi
+		fi 
+
+	else
+
+		if [ -n "$iptv_bridge" ]; then
+			if ! hyctl attach br-$iptv_bridge; then
+				stop
+				return 1
+			fi
+		fi
+	fi
+
+
+	ubus send apsd.configure '{"mode":"'"$device_type"'"}'
+}
+
+stop() {
+	# Disable hyfi-netfilter
+	hyctl detach br-$ieee1905managed_bridge
+
+	if [ -n "$iptv_bridge" ]; then
+	    hyctl detach br-$iptv_bridge
+	fi
+	hyctl detach br-wan
+
+}

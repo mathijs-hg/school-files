@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$INTERFACE" == "wan" -a "$ACTION" == "ifup" ]; then
+	/etc/init.d/sysntpd restart
+	/etc/init.d/time_settings reload
+fi
+
+if [ "$INTERFACE" == "wanb"  -a "$ACTION" == "ifup" ]; then
+	/etc/init.d/sysntpd restart
+fi

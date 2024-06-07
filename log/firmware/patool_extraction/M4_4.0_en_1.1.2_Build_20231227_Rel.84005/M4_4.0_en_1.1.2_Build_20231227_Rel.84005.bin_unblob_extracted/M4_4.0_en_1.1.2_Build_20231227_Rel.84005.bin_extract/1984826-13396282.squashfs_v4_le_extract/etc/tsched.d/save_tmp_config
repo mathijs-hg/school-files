@@ -1,0 +1,59 @@
+#!/bin/sh	
+# Copyright (c) 2021 Shenzhen TP-LINK Technologies Co.Ltd.	
+# Author		Fang Jiekun<fangjiekun@tp-link.com.cn>
+		
+cmd=$1
+entry_arg=$2
+script_path="/etc/tsched.d/script.d/"
+
+case $cmd in
+    *ACTIVE)
+        #save tmp config
+        echo "start saving tmp config" > /dev/console
+        # cp -pf ${tmp_config_path}${entry_arg} ${config_path}${entry_arg}
+        $($script_path$entry_arg)
+        
+        # the configuration has been saved before.
+        #saveconfig
+    ;;
+
+    *DORM)
+        #wait
+        #echo "wait for saving tmp config " > /dev/console
+    ;;
+
+    *RESET)
+        #reset
+        echo "reset tmp config" > /dev/console
+    ;;
+
+    *EXECUTE)
+        #execute
+        echo "execute save tmp config" > /dev/console
+        for var in $(echo $entry_arg | tr '|' ' ')
+        do
+            $($script_path$var)
+        done
+        saveconfig
+    ;;
+
+    *EXECUTEALL)
+        #execute save all tmp config
+        echo "execute save all tmp config" > /dev/console
+        local flag=1
+        local count=0
+        while [ $flag -gt 0 ]
+        do
+            var=$(uci -c /etc/tsched.conf.d/ get save_tmp_config.@entry[${count}].entry_arg)
+            if [ -n "$var" ]
+            then
+                $($script_path$var) 
+                count=$(($count+1))
+            else
+                flag=0
+                break
+            fi
+        done
+        saveconfig
+    ;;
+esac

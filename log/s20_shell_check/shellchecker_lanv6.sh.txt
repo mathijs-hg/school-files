@@ -1,0 +1,325 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 6:[0m
+[0m	. /lib/functions.sh[0m
+[32m          ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 7:[0m
+[0m	. /lib/functions/network.sh[0m
+[32m          ^-----------------------^ SC1091 (info): Not following: /lib/functions/network.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 8:[0m
+[0m	. /usr/share/libubox/jshn.sh[0m
+[32m          ^------------------------^ SC1091 (info): Not following: /usr/share/libubox/jshn.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 9:[0m
+[0m	. ../netifd-proto.sh[0m
+[32m          ^----------------^ SC1091 (info): Not following: ../netifd-proto.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 14:[0m
+[0m	local ifname="$1"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 15:[0m
+[0m	local __var="$2"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 17:[0m
+[0m	local __tmp=`ubus call network.device status "{\"name\":\"$ifname\"}" 2>/dev/null`	[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m              ^---^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                    ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                    ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	local __tmp=$(ubus call network.device status "{\"name\":\"$ifname\"}" 2>/dev/null)	
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 25:[0m
+[0m	local macaddr="$1"[0m
+[33m        ^-----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 26:[0m
+[0m	local __var="$2"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 28:[0m
+[0m	local oIFS="$IFS"; IFS=":"; set -- $macaddr; IFS="$oIFS"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                                           ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local oIFS="$IFS"; IFS=":"; set -- "$macaddr"; IFS="$oIFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 29:[0m
+[0m	local tmp="0x$1"[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 30:[0m
+[0m	tmp=$(($tmp))		[0m
+[32m               ^--^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 31:[0m
+[0m	tmp=$(($tmp^2))[0m
+[32m               ^--^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 32:[0m
+[0m	tmp=`printf %02x $tmp`[0m
+[32m            ^----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	tmp=$(printf %02x $tmp)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 34:[0m
+[0m	local id="$tmp$2:$3ff:fe$4:$5$6"[0m
+[33m        ^------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 40:[0m
+[0m	local ip4="$1"[0m
+[33m        ^-------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 41:[0m
+[0m	local oIFS="$IFS"; IFS="."; set -- $ip4; IFS="$oIFS"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                                           ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local oIFS="$IFS"; IFS="."; set -- "$ip4"; IFS="$oIFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 42:[0m
+[0m	printf "2002:%02x%02x:%02x%02x:1::\n" $1 $2 $3 $4[0m
+[32m                                              ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                 ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                    ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                       ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	printf "2002:%02x%02x:%02x%02x:1::\n" "$1" "$2" "$3" "$4"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 46:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 47:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 49:[0m
+[0m	local ip6addr macaddr ifaceid[0m
+[33m        ^---------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 50:[0m
+[0m	local wan_type [0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 52:[0m
+[0m	local prefix prefixlen proto[0m
+[33m        ^--------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 58:[0m
+[0m	get_ifname_macaddr $ifname macaddr[0m
+[32m                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	get_ifname_macaddr "$ifname" macaddr
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 75:[0m
+[0m	[ "$wan_type" == "6to4" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 76:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 90:[0m
+[0m	[ "$wan_type" == "6rd" ] && {[0m
+[33m                      ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 91:[0m
+[0m		local wanif ipaddr[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 102:[0m
+[0m		local ip6prefix=$(uci get network.wanv6.ip6prefix)[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 103:[0m
+[0m		local ip6prefixlen=$(uci get network.wanv6.ip6prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 104:[0m
+[0m		local ip4prefixlen=$(uci get network.wanv6.ip4prefixlen)[0m
+[33m                ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^----------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                   ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 105:[0m
+[0m		local ip6subnet=$(6rdcalc "$ip6prefix/$ip6prefixlen" "$ipaddr/$ip4prefixlen")[0m
+[33m                ^-------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                      ^-------^ SC2155 (warning): Declare and assign separately to avoid masking return values.[0m
+[33m                                ^-- SC2046 (warning): Quote this to prevent word splitting.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 113:[0m
+[0m	[ "$lanv6_proto" == "ndp" ] && {[0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 125:[0m
+[0m	local oIFS="$IFS"; IFS=":"; set -- $prefix; IFS="$oIFS"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local oIFS="$IFS"; IFS=":"; set -- "$prefix"; IFS="$oIFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 126:[0m
+[0m	[ "$#" == "5" ] && {[0m
+[33m               ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 129:[0m
+[0m	[ "$#" == "6" ] && {[0m
+[33m               ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 156:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 157:[0m
+[0m	local radvddir="/tmp/radvd-$ifname"[0m
+[33m        ^------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 158:[0m
+[0m	local radvdpidfile="$radvddir/radvd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 159:[0m
+[0m	local ndppdpidfile="/var/run/ndppd.pid"[0m
+[33m        ^----------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 162:[0m
+[0m	[ -f "$radvdpidfile" ] &&  kill -15 `cat $radvdpidfile`[0m
+[33m                                            ^-----------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                            ^-----------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                 ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	[ -f "$radvdpidfile" ] &&  kill -15 $(cat "$radvdpidfile")
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 171:[0m
+[0m	proto_lan_teardown $@[0m
+[31m                           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 184:[0m
+[0m	proto_lan_teardown $@[0m
+[31m                           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 197:[0m
+[0m	proto_lan_teardown $@[0m
+[31m                           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 211:[0m
+[0m	proto_lan_teardown $@[0m
+[31m                           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 220:[0m
+[0m	local iface="$1"[0m
+[33m        ^---------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 221:[0m
+[0m	local ifname="$2"[0m
+[33m        ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 223:[0m
+[0m	local ip6addr macaddr ifaceid[0m
+[33m        ^---------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 224:[0m
+[0m	local prefix prefixlen proto[0m
+[33m        ^--------------------------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                               ^---^ SC2034 (warning): proto appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 230:[0m
+[0m	get_ifname_macaddr $ifname macaddr[0m
+[32m                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	get_ifname_macaddr "$ifname" macaddr
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 249:[0m
+[0m	local oIFS="$IFS"; IFS=":"; set -- $prefix; IFS="$oIFS"[0m
+[33m        ^--------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[32m                                           ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	local oIFS="$IFS"; IFS=":"; set -- "$prefix"; IFS="$oIFS"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 250:[0m
+[0m	[ "$#" == "5" ] && {[0m
+[33m               ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 253:[0m
+[0m	[ "$#" == "6" ] && {[0m
+[33m               ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/lib/netifd/proto/lanv6.sh line 268:[0m
+[0m	proto_lan_teardown $@[0m
+[31m                           ^-- SC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2068 -- Double quote array expansions to ...
+  https://www.shellcheck.net/wiki/SC2034 -- proto appears unused. Verify use ...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...

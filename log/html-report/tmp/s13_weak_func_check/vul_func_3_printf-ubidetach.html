@@ -1,0 +1,78 @@
+<pre>[</span><span class="orange">*</span>] Binary protection state of </span><span class="orange">ubidetach</span></pre>
+<br />
+<pre>  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      </pre>
+<pre>  	<span class="red">No RELRO</span>       <span class="red">No Canary found</span>   <span class="red">NX disabled</span>  <span class="red">No PIE</span>       <span class="green">No RPATH</span>     <span class="green">No RUNPATH</span>   <span class="red">Symbols</span></pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">printf</span> tear down of </span><span class="orange">ubidetach</span></pre>
+<br />
+<pre>  400ae0:	00000000 	nop</pre>
+<pre>  400ae4:	8ec30000 	lw	v1,0(s6)</pre>
+<pre>  400ae8:	26a23ba4 	addiu	v0,s5,15268</pre>
+<pre>  400aec:	08100291 	j	400a44 &lt</span>ain+0x54&gt;</pre>
+<pre>  400af0:	ac43000c 	sw	v1,12(v0)</pre>
+<pre>  400af4:	8ec40000 	lw	a0,0(s6)</pre>
+<pre>  400af8:	8f9780f4 	lw	s7,-32524(gp)</pre>
+<pre>  400afc:	0c100484 	jal	401210 &lt;simple_strtoul&gt;</pre>
+<pre>  400b00:	27a50020 	addiu	a1,sp,32</pre>
+<pre>  400b04:	26a33ba4 	addiu	v1,s5,15268</pre>
+<pre>  400b08:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  400b0c:	ac620004 	sw	v0,4(v1)</pre>
+<pre>  400b10:	8fa30020 	lw	v1,32(sp)</pre>
+<pre>  400b14:	00000000 	nop</pre>
+<pre>  400b18:	14600003 	bnez	v1,400b28 &lt</span>ain+0x138&gt;</pre>
+<pre>  400b1c:	00000000 	nop</pre>
+<pre>  400b20:	0441ffc8 	bgez	v0,400a44 &lt</span>ain+0x54&gt;</pre>
+<pre>  400b24:	00000000 	nop</pre>
+<pre>  400b28:	8f8280a4 	lw	v0,-32604(gp)</pre>
+<pre>  400b2c:	3c050040 	lui	a1,0x40</pre>
+<pre>  400b30:	8f9980e8 	lw	t9,-32536(gp)</pre>
+<pre>  400b34:	8ee70000 	lw	a3,0(s7)</pre>
+<pre>  400b38:	8c440000 	lw	a0,0(v0)</pre>
+<pre>  400b3c:	081002fa 	j	400be8 &lt</span>ain+0x1f8&gt;</pre>
+<pre>  400b40:	24a52dc4 	addiu	a1,a1,11716</pre>
+<pre><span class="red">  400b44:	8f998118 	lw	t9,printf</span></pre>
+<pre>  400b48:	3c100040 	lui	s0,0x40</pre>
+<pre>  400b4c:	3c050040 	lui	a1,0x40</pre>
+<pre>  400b50:	26042df0 	addiu	a0,s0,11760</pre>
+<pre>  400b54:	0320f809 	jalr	t9</pre>
+<pre>  400b58:	24a531b4 	addiu	a1,a1,12724</pre>
+<pre>  400b5c:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  400b60:	3c050040 	lui	a1,0x40</pre>
+<pre>  400b64:	26042df0 	addiu	a0,s0,11760</pre>
+<pre><span class="red">  400b68:	8f998118 	lw	t9,printf</span></pre>
+<pre>  400b6c:	00000000 	nop</pre>
+<pre>  400b70:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>  400b98:	8f998098 	lw	t9,-32616(gp)</pre>
+<pre>  400b9c:	00000000 	nop</pre>
+<pre>  400ba0:	0320f809 	jalr	t9</pre>
+<pre>  400ba4:	00002021 	move	a0,zero</pre>
+<pre>  400ba8:	8ec40000 	lw	a0,0(s6)</pre>
+<pre>  400bac:	8f9780f4 	lw	s7,-32524(gp)</pre>
+<pre>  400bb0:	0c100484 	jal	401210 &lt;simple_strtoul&gt;</pre>
+<pre>  400bb4:	27a50020 	addiu	a1,sp,32</pre>
+<pre>  400bb8:	8fa30020 	lw	v1,32(sp)</pre>
+<pre>  400bbc:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>  400bc0:	14600003 	bnez	v1,400bd0 &lt</span>ain+0x1e0&gt;</pre>
+<pre>  400bc4:	aea23ba4 	sw	v0,15268(s5)</pre>
+<pre>  400bc8:	0441ff9e 	bgez	v0,400a44 &lt</span>ain+0x54&gt;</pre>
+<pre>  400bcc:	00000000 	nop</pre>
+<pre>  400bd0:	8f8280a4 	lw	v0,-32604(gp)</pre>
+<pre>  400bd4:	8f9980e8 	lw	t9,-32536(gp)</pre>
+<pre>  400bd8:	8ee70000 	lw	a3,0(s7)</pre>
+<pre>  400bdc:	8c440000 	lw	a0,0(v0)</pre>
+<pre>  400be0:	3c050040 	lui	a1,0x40</pre>
+<pre>  400be4:	24a52d98 	addiu	a1,a1,11672</pre>
+<pre>  400be8:	3c060040 	lui	a2,0x40</pre>
+<pre>  400bec:	0320f809 	jalr	t9</pre>
+<pre>  400bf0:	24c62d78 	addiu	a2,a2,11640</pre>
+<pre>  400bf4:	081002a9 	j	400aa4 &lt</span>ain+0xb4&gt;</pre>
+<pre>  400bf8:	2402ffff 	li	v0,-1</pre>
+<pre><span class="red">  400bfc:	8f998118 	lw	t9,printf</span></pre>
+<pre>  400c00:	3c040040 	lui	a0,0x40</pre>
+<pre>  400c04:	3c050040 	lui	a1,0x40</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">printf</span> used </span><span class="orange">3</span> times </span><span class="orange">ubidetach</span></pre>
+<br />

@@ -1,0 +1,23 @@
+<br />
+<pre>char * mkpath(char *path,char *name)</pre>
+<br />
+<pre>{</pre>
+<pre>  size_t __n;</pre>
+<pre>  size_t sVar1;</pre>
+<pre>  char *__dest;</pre>
+<pre>  char *__dest_00;</pre>
+<pre>  </pre>
+<pre>  __n = strlen(path);</pre>
+<pre>  sVar1 = strlen(name);</pre>
+<pre><span class="green">  __dest = (char *)xmalloc(__n + sVar1 + 2)</span></span></pre>
+<pre><span class="green">  memcpy(__dest,path,__n)</span></span></pre>
+<pre>  __dest_00 = __dest + __n;</pre>
+<pre>  if (__dest_00[-1] != '/') {</pre>
+<pre>    *__dest_00 = '/';</pre>
+<pre>    __dest_00 = __dest + __n + 1;</pre>
+<pre>  }</pre>
+<pre><span class="green">  memcpy(__dest_00,name,sVar1 + 1)</span></span></pre>
+<pre>  return __dest;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] d7865e8c5fa427c9</pre>

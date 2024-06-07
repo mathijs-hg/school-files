@@ -1,0 +1,203 @@
+#!/bin/ash
+
+. /lib/functions.sh
+. /lib/iptv/iptv.sh
+. /usr/lib/eth-encap/eth_encap.sh
+
+DEBUG_OUTOUT=1
+
+device_id=$(getfirm DEV_ID)
+
+config_load iptv_v2
+config_get iptv_enable info enable 0
+config_get iptv_vid info iptv_vid
+config_get iptv_prio info iptv_prio
+config_get iptv_type info iptv_type
+#config_get iptv_port "$device_id" port "other"
+config_clear
+
+count_self_iptv_ports "$device_id" iptv_port
+
+config_load sysmode
+config_get sysmode sysmode mode 'Router'
+config_clear
+
+wan_echo() {
+    if [ "$DEBUG_OUTOUT" -gt 0 ]; then
+            echo "wandetect: ""$1"> /dev/console
+        fi
+}
+
+
+move_interface_wan_bridge() {
+    local iface="$1"
+    local device_id=$(getfirm DEV_ID)
+    local role=$(uci get bind_device_list."$device_id".role)
+    wan_echo "move $iface to wan bridge"
+
+    [ -n "$iface" ] && {
+        if [ "$role" != "RE" -a "$sysmode" = "Router" ] && [ "$iptv_enable" = "1" -o "$iptv_type" = "bridge" ] && [ "$iptv_port" != "other" ] ; then
+            if [ -d "/sys/class/net/br-iptv/brif/$iface" ]; then
+                wan_echo "iptv enable, $iface at br-iptv"
+                brctl delif br-iptv "$iface";
+            elif [ -d "/sys/class/net/br-lan/brif/$iface" ]; then
+                wan_echo "iptv enable, $iface at br-lan"
+                brctl delif br-lan "$iface";
+            fi
+        else
+            if [ -d "/sys/class/net/br-lan/brif/$iface" ]; then
+                wan_echo "iptv disable, $iface at br-lan"
+                brctl delif br-lan "$iface";
+            elif [ -d "/sys/class/net/br-iptv/brif/$iface" ]; then
+                wan_echo "iptv disable, $iface at br-iptv"
+                brctl delif br-iptv "$iface";
+            fi
+        fi
+
+        brctl addif br-wan "$iface";
+
+        # bcm set wan flag
+        if [ -f /sbin/ethswctl ]; then
+            ethswctl -c wan -o enable -i "$iface"
+            # fc flush
+        fi
+
+        # bcm(-f /sbin/ethctl) qca (-f /usr/sbin/ssdk_sh)
+        # if gro on, nss will be unavailable
+        local wan_gro_on=$(uci get profile.eth_feature.wan_gro_on -c /etc/profile.d)
+        if [ "$wan_gro_on" = "yes" ]  && [ -n "$(which is ethtool)" ]; then
+            echo "ethtool -K gro on" > /dev/console
+            ethtool -K "$iface" gro on;
+        fi
+
+        if [ -f /sys/class/net/br-wan/brif/"$iface"/isolate_mode ]; then
+            echo 1 > /sys/class/net/br-wan/brif/"$iface"/isolate_mode
+        fi
+    }
+
+}
+
+move_interface_other_bridge() {
+    local iface="$1"
+    local device_id=$(getfirm DEV_ID)
+    local role=$(uci get bind_device_list."$device_id".role)
+    local eth_num=$(get_eth_port_num)
+    local eth_num_seq=$((eth_num-1))
+
+    wan_echo "move $iface to other bridge"
+
+    [ -n "$iface" ] && {
+
+        if [ "$role" != "RE" -a "$sysmode" = "Router" ] && [ "$iptv_enable" = "1" -o "$iptv_type" = "bridge" ] && [ "$iptv_port" != "other" ] ; then
+            if [ "$iptv_enable" == "1" ] || [ "$iptv_type" = "bridge" ]; then
+                # 针对双网口设备，保持跟Deco M5的设计，iptv口自适应
+                # added by liujianan 20210519
+                if [ $eth_num -eq 2 ]; then
+                    if [ "$iptv_enable" == "1" ]; then
+                        wan_echo "move $iface to iptv bridge"
+                        brctl delif br-wan "$iface";
+                        brctl addif br-iptv "$iface";
+                    elif [ "$iptv_type" = "bridge" ]; then
+                        i=0
+                        while [ $i -lt $eth_num ]
+                        do
+                            if [ -d "/sys/class/net/br-wan/brif/eth$i" ]; then
+                                echo 0 > /sys/class/net/br-wan/brif/eth$i/isolate_mode
+                            fi
+                            i=$((i+1))
+                        done
+                    fi
+                else
+                    local port_mask port_seq logic_port
+                    
+                    for i in $(seq 0 1 $eth_num_seq)
+                    do
+                        port_mask=$((1<<i))
+                        port_seq=$((i+1))
+
+                        phy_port=$(get_eth_port_by_seq $port_seq)
+                        logic_port=$(get_eth_by_port $phy_port)
+
+                        if [ "$iface" = "$logic_port" ]; then
+                            if [ $((port_mask&iptv_port)) -gt 0 ]; then
+                                if [ "$iptv_type" = "bridge" ]; then
+                                    wan_echo "bridge mode : $iface stays at br-wan"
+                                    if [ -d "/sys/class/net/br-wan/brif/$logic_port" ]; then
+                                        echo 0 > /sys/class/net/br-wan/brif/$logic_port/isolate_mode
+                                    fi
+                                else
+                                    wan_echo "move $iface to iptv bridge"
+                                    brctl delif br-wan "$iface";
+                                    brctl addif br-iptv "$iface";
+                                fi
+                            else
+                                wan_echo "move $iface to lan bridge"
+                                brctl delif br-wan "$iface";
+                                brctl addif br-lan "$iface";
+                            fi
+                        fi
+                    done
+
+                    if [ "$iptv_type" = "bridge" ] && [ "$iptv_port" != "other" ]; then
+                        for i in $(seq 0 1 $eth_num_seq)
+                        do
+                            if [ "$(isWan eth$i)" = "true" ]; then
+                                if [ -d "/sys/class/net/br-wan/brif/eth$i" ]; then
+                                    echo 0 > /sys/class/net/br-wan/brif/eth$i/isolate_mode
+                                fi
+                                break
+                            fi
+                        done
+                    fi
+                fi
+            else
+                wan_echo "move $iface to wan bridge"
+
+                i=0
+                while [ $i -lt $eth_num ]
+                do
+                    if [ -d "/sys/class/net/br-wan/brif/eth$i" ]; then
+                        echo 0 > /sys/class/net/br-wan/brif/eth$i/isolate_mode
+                    fi
+                    i=$((i+1))
+                done
+            fi
+
+        else
+            wan_echo "move $iface to lan bridge"
+            brctl delif br-wan "$iface";
+            brctl addif br-lan "$iface";
+
+            if [ "$iptv_type" = "bridge" ] ; then
+                wan_echo "FAP has bridge mode without IPTV port, also need to clean isolate_mode."
+
+                i=0
+                while [ $i -lt $eth_num ]
+                do
+                    if [ -d "/sys/class/net/br-wan/brif/eth$i" ]; then
+                        echo 0 > /sys/class/net/br-wan/brif/eth$i/isolate_mode
+                    fi
+                    i=$((i+1))
+                done
+            fi
+        fi
+        # bcm clear wan flag
+        if [ -f /sbin/ethswctl ]; then
+            ethswctl -c wan -o disable -i "$iface"
+            # fc flush
+        fi
+
+        # bcm(-f /sbin/ethctl) qca (-f /usr/sbin/ssdk_sh)
+        if [ -n "$(which is ethtool)" ]; then
+            ethtool -K "$iface" gro off
+        fi
+    }
+}
+
+
+trap '' INT TERM ABRT QUIT ALRM 
+
+case "$1" in
+    wan) move_interface_wan_bridge "$2" ;;
+    other) move_interface_other_bridge "$2" ;;
+esac

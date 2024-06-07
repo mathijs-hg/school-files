@@ -1,0 +1,98 @@
+<pre>[</span><span class="orange">*</span>] Binary protection state of </span><span class="orange">regs</span></pre>
+<br />
+<pre>  	RELRO          CANARY            NX           PIE          RPATH        RUNPATH      SYMBOLS      </pre>
+<pre>  	<span class="red">No RELRO</span>       <span class="red">No Canary found</span>   <span class="red">NX disabled</span>  <span class="red">No PIE</span>       <span class="green">No RPATH</span>     <span class="green">No RUNPATH</span>   <span class="red">Symbols</span></pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">printf</span> tear down of </span><span class="orange">regs</span></pre>
+<br />
+<pre>  400894:	00621023 	subu	v0,v1,v0</pre>
+<pre>  400898:	00021083 	sra	v0,v0,0x2</pre>
+<pre>  40089c:	00021080 	sll	v0,v0,0x2</pre>
+<pre>  4008a0:	8fc30040 	lw	v1,64(s8)</pre>
+<pre>  4008a4:	00000000 	nop</pre>
+<pre>  4008a8:	00622821 	addu	a1,v1,v0</pre>
+<pre>  4008ac:	8fc20020 	lw	v0,32(s8)</pre>
+<pre>  4008b0:	00000000 	nop</pre>
+<pre>  4008b4:	8c430000 	lw	v1,0(v0)</pre>
+<pre>  4008b8:	8fc20020 	lw	v0,32(s8)</pre>
+<pre>  4008bc:	00000000 	nop</pre>
+<pre>  4008c0:	24420004 	addiu	v0,v0,4</pre>
+<pre>  4008c4:	8c420000 	lw	v0,0(v0)</pre>
+<pre>  4008c8:	8fc60020 	lw	a2,32(s8)</pre>
+<pre>  4008cc:	00000000 	nop</pre>
+<pre>  4008d0:	24c60008 	addiu	a2,a2,8</pre>
+<pre>  4008d4:	8cc70000 	lw	a3,0(a2)</pre>
+<pre>  4008d8:	8fc60020 	lw	a2,32(s8)</pre>
+<pre>  4008dc:	00000000 	nop</pre>
+<pre>  4008e0:	24c6000c 	addiu	a2,a2,12</pre>
+<pre>  4008e4:	8cc60000 	lw	a2,0(a2)</pre>
+<pre>  4008e8:	afa70010 	sw	a3,16(sp)</pre>
+<pre>  4008ec:	afa60014 	sw	a2,20(sp)</pre>
+<pre>  4008f0:	00603021 	move	a2,v1</pre>
+<pre>  4008f4:	00403821 	move	a3,v0</pre>
+<pre><span class="red">  4008f8:	8f828070 	lw	v0,printf</span></pre>
+<pre>  4008fc:	00000000 	nop</pre>
+<pre>  400900:	0040c821 	move	t9,v0</pre>
+<pre>--</pre>
+<pre>  400e3c:	8fdc0018 	lw	gp,24(s8)</pre>
+<pre>  400e40:	24040001 	li	a0,1</pre>
+<pre>  400e44:	8f828040 	lw	v0,-32704(gp)</pre>
+<pre>  400e48:	00000000 	nop</pre>
+<pre>  400e4c:	0040c821 	move	t9,v0</pre>
+<pre>  400e50:	0320f809 	jalr	t9</pre>
+<pre>  400e54:	00000000 	nop</pre>
+<pre>  400e58:	8fc2003c 	lw	v0,60(s8)</pre>
+<pre>  400e5c:	00000000 	nop</pre>
+<pre>  400e60:	30420fff 	andi	v0,v0,0xfff</pre>
+<pre>  400e64:	8fc30024 	lw	v1,36(s8)</pre>
+<pre>  400e68:	00000000 	nop</pre>
+<pre>  400e6c:	00621021 	addu	v0,v1,v0</pre>
+<pre>  400e70:	afc20028 	sw	v0,40(s8)</pre>
+<pre>  400e74:	8fc20028 	lw	v0,40(s8)</pre>
+<pre>  400e78:	00000000 	nop</pre>
+<pre>  400e7c:	8c420000 	lw	v0,0(v0)</pre>
+<pre>  400e80:	00000000 	nop</pre>
+<pre>  400e84:	afc2002c 	sw	v0,44(s8)</pre>
+<pre>  400e88:	3c020040 	lui	v0,0x40</pre>
+<pre>  400e8c:	24421614 	addiu	v0,v0,5652</pre>
+<pre>  400e90:	00402021 	move	a0,v0</pre>
+<pre>  400e94:	8fc5003c 	lw	a1,60(s8)</pre>
+<pre>  400e98:	8fc60028 	lw	a2,40(s8)</pre>
+<pre>  400e9c:	8fc7002c 	lw	a3,44(s8)</pre>
+<pre><span class="red">  400ea0:	8f828070 	lw	v0,printf</span></pre>
+<pre>  400ea4:	00000000 	nop</pre>
+<pre>  400ea8:	0040c821 	move	t9,v0</pre>
+<pre>--</pre>
+<pre>  40105c:	00602021 	move	a0,v1</pre>
+<pre>  401060:	00402821 	move	a1,v0</pre>
+<pre>  401064:	8fc60040 	lw	a2,64(s8)</pre>
+<pre>  401068:	8f828058 	lw	v0,-32680(gp)</pre>
+<pre>  40106c:	00000000 	nop</pre>
+<pre>  401070:	0040c821 	move	t9,v0</pre>
+<pre>  401074:	0320f809 	jalr	t9</pre>
+<pre>  401078:	00000000 	nop</pre>
+<pre>  40107c:	8fdc0018 	lw	gp,24(s8)</pre>
+<pre>  401080:	24040002 	li	a0,2</pre>
+<pre>  401084:	8f828040 	lw	v0,-32704(gp)</pre>
+<pre>  401088:	00000000 	nop</pre>
+<pre>  40108c:	0040c821 	move	t9,v0</pre>
+<pre>  401090:	0320f809 	jalr	t9</pre>
+<pre>  401094:	00000000 	nop</pre>
+<pre>  401098:	8fc20028 	lw	v0,40(s8)</pre>
+<pre>  40109c:	00000000 	nop</pre>
+<pre>  4010a0:	8c420000 	lw	v0,0(v0)</pre>
+<pre>  4010a4:	00000000 	nop</pre>
+<pre>  4010a8:	afc2002c 	sw	v0,44(s8)</pre>
+<pre>  4010ac:	3c020040 	lui	v0,0x40</pre>
+<pre>  4010b0:	2442164c 	addiu	v0,v0,5708</pre>
+<pre>  4010b4:	00402021 	move	a0,v0</pre>
+<pre>  4010b8:	8fc50020 	lw	a1,32(s8)</pre>
+<pre>  4010bc:	8fc6002c 	lw	a2,44(s8)</pre>
+<pre><span class="red">  4010c0:	8f828070 	lw	v0,printf</span></pre>
+<pre>  4010c4:	00000000 	nop</pre>
+<pre>  4010c8:	0040c821 	move	t9,v0</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">printf</span> used </span><span class="orange">3</span> times </span><span class="orange">regs</span></pre>
+<br />

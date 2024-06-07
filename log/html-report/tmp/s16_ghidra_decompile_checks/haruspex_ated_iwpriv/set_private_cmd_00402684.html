@@ -1,0 +1,327 @@
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>undefined4</pre>
+<pre>set_private_cmd(FLO_type param_1,FLO_type param_2,int param_3,char **param_4,uint param_5_00,</pre>
+<pre>               char *param_6_00,char *param_5,int param_6,int param_7,char *param_8,size_t param_9)</pre>
+<br />
+<pre>{</pre>
+<pre>  uint uVar1;</pre>
+<pre>  ushort uVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  size_t sVar5;</pre>
+<pre>  size_t sVar6;</pre>
+<pre>  char *pcVar7;</pre>
+<pre>  CMPtype CVar8;</pre>
+<pre>  size_t sVar9;</pre>
+<pre>  char **local_res4;</pre>
+<pre>  uint local_res8;</pre>
+<pre>  int local_1100;</pre>
+<pre>  int local_10fc;</pre>
+<pre>  undefined4 ******local_10f8;</pre>
+<pre>  int local_10f4;</pre>
+<pre>  undefined4 local_10f0;</pre>
+<pre>  int local_10ec;</pre>
+<pre>  int local_10e8;</pre>
+<pre>  uint local_10e4;</pre>
+<pre>  undefined4 ******local_10e0;</pre>
+<pre>  char acStack_10c8 [16];</pre>
+<pre>  undefined4 ******local_10b8;</pre>
+<pre>  undefined4 local_10b4;</pre>
+<pre>  undefined4 local_10b0;</pre>
+<pre>  undefined4 local_10ac;</pre>
+<pre>  undefined4 ******local_10a8;</pre>
+<pre>  uint local_10a4;</pre>
+<pre>  undefined4 local_10a0;</pre>
+<pre>  undefined4 local_109c;</pre>
+<pre>  undefined local_a9;</pre>
+<pre>  undefined4 ******local_a8 [2];</pre>
+<pre>  undefined4 local_a0;</pre>
+<pre>  undefined4 local_9c;</pre>
+<pre>  undefined auStack_98 [132];</pre>
+<pre>  </pre>
+<pre>  local_1100 = 0;</pre>
+<pre>  local_10f8 = (undefined4 ******)0x0;</pre>
+<pre>  local_10f4 = 0;</pre>
+<pre>  local_10f0 = 0;</pre>
+<pre>  memset(param_8,0,param_9);</pre>
+<pre>  local_res4 = param_4;</pre>
+<pre>  local_res8 = param_5_00;</pre>
+<pre><span class="green">  if ((0 &lt; (int)param_5_00) &amp;&amp; (iVar3 = sscanf(*param_4,"[%i]",local_a8), iVar3 == 1)) {</span></pre>
+<pre>    local_10f8 = local_a8[0];</pre>
+<pre>    local_res4 = param_4 + 1;</pre>
+<pre>    local_res8 = param_5_00 - 1;</pre>
+<pre>  }</pre>
+<pre>  local_10fc = -1;</pre>
+<pre>  do {</pre>
+<pre>    iVar3 = local_10fc + 1;</pre>
+<pre>    local_10fc = iVar3;</pre>
+<pre>    if (param_7 &lt;= iVar3) break;</pre>
+<pre>    iVar4 = strcmp((char *)(param_6 + iVar3 * 0x18 + 8),param_5);</pre>
+<pre>  } while (iVar4 != 0);</pre>
+<pre>  if (iVar3 == param_7) {</pre>
+<pre>    sVar5 = strlen(param_8);</pre>
+<pre>    sVar6 = strlen(param_8);</pre>
+<pre><span class="green">    snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Invalid command : %s\n",param_5)</span></span></pre>
+<pre>    return 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  if (*(uint *)(param_6 + iVar3 * 0x18) &lt; 0x89f0) {</pre>
+<pre>    local_10ec = -1;</pre>
+<pre>    do {</pre>
+<pre>      local_10fc = local_10ec + 1;</pre>
+<pre>      if (param_7 &lt;= local_10fc) break;</pre>
+<pre>      local_10ec = local_10fc;</pre>
+<pre>    } while (((*(char *)(param_6 + local_10fc * 0x18 + 8) != '\0') ||</pre>
+<pre>             (*(short *)(param_6 + local_10fc * 0x18 + 4) != *(short *)(param_6 + iVar3 * 0x18 + 4))</pre>
+<pre>             ) || (*(short *)(param_6 + local_10fc * 0x18 + 6) !=</pre>
+<pre>                   *(short *)(param_6 + iVar3 * 0x18 + 6)));</pre>
+<pre>    if (local_10fc == param_7) {</pre>
+<pre>      sVar5 = strlen(param_8);</pre>
+<pre>      sVar6 = strlen(param_8);</pre>
+<pre>      snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Invalid private ioctl definition for : %s\n",</pre>
+<pre><span class="green">               param_5)</span></span></pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>    local_10f8 = *(undefined4 *******)(param_6 + iVar3 * 0x18);</pre>
+<pre>    local_10f4 = 4;</pre>
+<pre>  }</pre>
+<pre>  if (((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7000) == 0) ||</pre>
+<pre>     ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) == 0)) {</pre>
+<pre>    local_10b4 = (uint)local_10b4._2_2_ &lt;&lt; 0x10;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    uVar2 = *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7000;</pre>
+<pre>    if (uVar2 == 0x4000) {</pre>
+<pre>      uVar1 = local_10b4 &amp; 0xffff0000;</pre>
+<pre>      local_10b4 = uVar1 | local_res8 &amp; 0xffff;</pre>
+<pre>      if ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) &lt; (local_res8 &amp; 0xffff)) {</pre>
+<pre>        local_10b4 = uVar1 | *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0xffff07ff;</pre>
+<pre>      }</pre>
+<pre>      for (; local_1100 &lt; (int)(local_10b4 &amp; 0xffff); local_1100 = local_1100 + 1) {</pre>
+<pre><span class="green"><span class="green">        sscanf(local_res4[local_1100],"%i",local_a8)</span></span></span></pre>
+<pre>        (&amp;local_10a8)[local_1100] = local_a8[0];</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else if (uVar2 &lt; 0x4001) {</pre>
+<pre>      if (uVar2 == 0x1000) {</pre>
+<pre>        uVar1 = local_10b4 &amp; 0xffff0000;</pre>
+<pre>        local_10b4 = uVar1 | local_res8 &amp; 0xffff;</pre>
+<pre>        if ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) &lt; (local_res8 &amp; 0xffff)) {</pre>
+<pre>          local_10b4 = uVar1 | *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0xffff07ff;</pre>
+<pre>        }</pre>
+<pre>        for (; local_1100 &lt; (int)(local_10b4 &amp; 0xffff); local_1100 = local_1100 + 1) {</pre>
+<pre><span class="green"><span class="green">          sscanf(local_res4[local_1100],"%i",local_a8)</span></span></span></pre>
+<pre>          *(char *)((int)&amp;local_10a8 + local_1100) = (char)local_a8[0];</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if (uVar2 != 0x2000) {</pre>
+<pre>LAB_00403554:</pre>
+<pre>          sVar5 = strlen(param_8);</pre>
+<pre>          sVar6 = strlen(param_8);</pre>
+<pre><span class="green">          snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Not implemented...\n")</span></span></pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        if ((int)local_res8 &lt; 1) {</pre>
+<pre>          local_10b4 = CONCAT22(local_10b4._2_2_,1);</pre>
+<pre>          local_10a8 = (undefined4 ******)((uint)local_10a8 &amp; 0xffffff00);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          sVar5 = strlen(*local_res4);</pre>
+<pre>          uVar2 = (short)sVar5 + 1;</pre>
+<pre>          if ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) &lt; uVar2) {</pre>
+<pre>            uVar2 = *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff;</pre>
+<pre>          }</pre>
+<pre>          local_10b4 = CONCAT22(local_10b4._2_2_,uVar2);</pre>
+<pre><span class="green">          memcpy(&amp;local_10a8,*local_res4,(uint)uVar2)</span></span></pre>
+<pre>          local_a9 = 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else if (uVar2 == 0x5000) {</pre>
+<pre>      uVar1 = local_10b4 &amp; 0xffff0000;</pre>
+<pre>      local_10b4 = uVar1 | local_res8 &amp; 0xffff;</pre>
+<pre>      if ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) &lt; (local_res8 &amp; 0xffff)) {</pre>
+<pre>        local_10b4 = uVar1 | *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0xffff07ff;</pre>
+<pre>      }</pre>
+<pre>      for (; local_1100 &lt; (int)(local_10b4 &amp; 0xffff); local_1100 = local_1100 + 1) {</pre>
+<pre><span class="green">        iVar3 = sscanf(local_res4[local_1100],"%lg",&amp;local_a0)</span></span></pre>
+<pre>        if (iVar3 != 1) {</pre>
+<pre>          sVar5 = strlen(param_8);</pre>
+<pre>          sVar6 = strlen(param_8);</pre>
+<pre>          snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Invalid float [%s]...\n",</pre>
+<pre><span class="green">                   local_res4[local_1100])</span></span></pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        pcVar7 = strchr(local_res4[local_1100],0x47);</pre>
+<pre>        if (pcVar7 != (char *)0x0) {</pre>
+<pre>          __muldf3(param_1,param_2);</pre>
+<pre>        }</pre>
+<pre>        pcVar7 = strchr(local_res4[local_1100],0x4d);</pre>
+<pre>        if (pcVar7 != (char *)0x0) {</pre>
+<pre>          __muldf3(param_1,param_2);</pre>
+<pre>        }</pre>
+<pre>        pcVar7 = strchr(local_res4[local_1100],0x6b);</pre>
+<pre>        if (pcVar7 != (char *)0x0) {</pre>
+<pre>          __muldf3(param_1,param_2);</pre>
+<pre>        }</pre>
+<pre><span class="green"><span class="green">        sscanf(local_res4[local_1100],"%i",local_a8)</span></span></span></pre>
+<pre>        iw_float2freq(local_a0,local_9c,&amp;local_10a8 + local_1100 * 2);</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (uVar2 != 0x6000) goto LAB_00403554;</pre>
+<pre>      uVar1 = local_10b4 &amp; 0xffff0000;</pre>
+<pre>      local_10b4 = uVar1 | local_res8 &amp; 0xffff;</pre>
+<pre>      if ((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff) &lt; (local_res8 &amp; 0xffff)) {</pre>
+<pre>        local_10b4 = uVar1 | *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0xffff07ff;</pre>
+<pre>      }</pre>
+<pre>      for (; local_1100 &lt; (int)(local_10b4 &amp; 0xffff); local_1100 = local_1100 + 1) {</pre>
+<pre>        iVar3 = iw_in_addr(param_3,param_6_00,local_res4[local_1100],&amp;local_10a8 + local_1100 * 4);</pre>
+<pre>        if (iVar3 &lt; 0) {</pre>
+<pre>          sVar5 = strlen(param_8);</pre>
+<pre>          sVar6 = strlen(param_8);</pre>
+<pre>          snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Invalid address [%s]...\n",</pre>
+<pre><span class="green">                   local_res4[local_1100])</span></span></pre>
+<pre>          return 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    if (((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x800) != 0) &amp;&amp;</pre>
+<pre>       ((local_10b4 &amp; 0xffff) != (*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff))) {</pre>
+<pre>      sVar5 = strlen(param_8);</pre>
+<pre>      sVar6 = strlen(param_8);</pre>
+<pre>      snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,</pre>
+<pre>               "The command %s needs exactly %d argument(s)...\n",param_5,</pre>
+<pre><span class="green">               *(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x7ff)</span></span></pre>
+<pre>      return 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre><span class="green"><span class="green"><span class="green">  strncpy(acStack_10c8,param_6_00,0x10)</span></span></span></span></pre>
+<pre>  if (((*(ushort *)(param_6 + local_10fc * 0x18 + 4) &amp; 0x800) == 0) ||</pre>
+<pre>     (iVar3 = iw_get_priv_size(*(undefined2 *)(param_6 + local_10fc * 0x18 + 4)),</pre>
+<pre>     0x10 &lt; iVar3 + local_10f4)) {</pre>
+<pre>    if ((*(short *)(param_6 + local_10fc * 0x18 + 4) == 0) &amp;&amp;</pre>
+<pre>       (((*(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x800) != 0 &amp;&amp;</pre>
+<pre>        (iVar3 = iw_get_priv_size(*(undefined2 *)(param_6 + local_10fc * 0x18 + 6)), iVar3 &lt; 0x11)))</pre>
+<pre>       ) {</pre>
+<pre>      if (local_10f4 != 0) {</pre>
+<pre>        local_10b8 = local_10f8;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_10b8 = &amp;local_10a8;</pre>
+<pre>      local_10b4 = local_10b4 &amp; 0xffff | (int)local_10f8 &lt;&lt; 0x10;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    if (local_10f4 != 0) {</pre>
+<pre>      local_10b8 = local_10f8;</pre>
+<pre>    }</pre>
+<pre><span class="green"><span class="green">    memcpy((void *)((int)&amp;local_10b8 + local_10f4),&amp;local_10a8,0x10 - local_10f4)</span></span></span></pre>
+<pre>  }</pre>
+<pre>  iVar3 = ioctl(param_3,*(ulong *)(param_6 + local_10fc * 0x18),acStack_10c8);</pre>
+<pre>  if (((-1 &lt; iVar3) &amp;&amp; ((*(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x7000) != 0)) &amp;&amp;</pre>
+<pre>     ((*(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x7ff) != 0)) {</pre>
+<pre>    if (((*(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x800) == 0) ||</pre>
+<pre>       (iVar3 = iw_get_priv_size(*(undefined2 *)(param_6 + local_10fc * 0x18 + 6)), 0x10 &lt; iVar3)) {</pre>
+<pre>      local_10e4 = local_10b4 &amp; 0xffff;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_10a8 = local_10b8;</pre>
+<pre>      local_10a4 = local_10b4;</pre>
+<pre>      local_10a0 = local_10b0;</pre>
+<pre>      local_109c = local_10ac;</pre>
+<pre>      local_10e4 = *(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x7ff;</pre>
+<pre>    }</pre>
+<pre>    uVar2 = *(ushort *)(param_6 + local_10fc * 0x18 + 6) &amp; 0x7000;</pre>
+<pre>    if (uVar2 == 0x4000) {</pre>
+<pre>      for (local_10e8 = 0; local_10e8 &lt; (int)local_10e4; local_10e8 = local_10e8 + 1) {</pre>
+<pre>        sVar5 = strlen(param_8);</pre>
+<pre>        sVar6 = strlen(param_8);</pre>
+<pre><span class="green">        snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%d  ",(&amp;local_10a8)[local_10e8])</span></span></pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (uVar2 &lt; 0x4001) {</pre>
+<pre>        if (uVar2 == 0x1000) {</pre>
+<pre>          for (local_10e8 = 0; local_10e8 &lt; (int)local_10e4; local_10e8 = local_10e8 + 1) {</pre>
+<pre>            sVar5 = strlen(param_8);</pre>
+<pre>            sVar6 = strlen(param_8);</pre>
+<pre>            snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%d  ",</pre>
+<pre><span class="green">                     (uint)*(byte *)((int)&amp;local_10a8 + local_10e8))</span></span></pre>
+<pre>          }</pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>        if (uVar2 == 0x2000) {</pre>
+<pre>          *(undefined *)((int)&amp;local_10a8 + local_10e4) = 0;</pre>
+<pre>          sVar5 = strlen(param_8);</pre>
+<pre>          sVar6 = strlen(param_8);</pre>
+<pre><span class="green">          snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%s",&amp;local_10a8)</span></span></pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if (uVar2 == 0x5000) {</pre>
+<pre>          for (local_10e8 = 0; local_10e8 &lt; (int)local_10e4; local_10e8 = local_10e8 + 1) {</pre>
+<pre>            iw_freq2float(&amp;local_10a8 + local_10e8 * 2);</pre>
+<pre>            CVar8 = __gedf2(param_1,param_2);</pre>
+<pre>            if (CVar8 &lt; 0) {</pre>
+<pre>              CVar8 = __gedf2(param_1,param_2);</pre>
+<pre>              if (CVar8 &lt; 0) {</pre>
+<pre>                sVar5 = strlen(param_8);</pre>
+<pre>                sVar6 = strlen(param_8);</pre>
+<pre>                __divdf3(param_1,param_2);</pre>
+<pre><span class="green">                snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%gk  ")</span></span></pre>
+<pre>                __divdf3(param_1,param_2);</pre>
+<pre>                printf("%gk  ");</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                sVar5 = strlen(param_8);</pre>
+<pre>                sVar6 = strlen(param_8);</pre>
+<pre>                __divdf3(param_1,param_2);</pre>
+<pre><span class="green">                snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%gM  ")</span></span></pre>
+<pre>                __divdf3(param_1,param_2);</pre>
+<pre>                printf("%gM  ");</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              sVar5 = strlen(param_8);</pre>
+<pre>              sVar6 = strlen(param_8);</pre>
+<pre>              __divdf3(param_1,param_2);</pre>
+<pre><span class="green">              snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%gG  ")</span></span></pre>
+<pre>              __divdf3(param_1,param_2);</pre>
+<pre>              printf("%gG  ");</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>        if (uVar2 == 0x6000) {</pre>
+<pre>          for (local_10e8 = 0; local_10e8 &lt; (int)local_10e4; local_10e8 = local_10e8 + 1) {</pre>
+<pre>            local_10e0 = &amp;local_10a8 + local_10e8 * 4;</pre>
+<pre>            if (local_10e8 != 0) {</pre>
+<pre>              sVar5 = strlen(param_8);</pre>
+<pre>              sVar6 = strlen(param_8);</pre>
+<pre>              sVar9 = strlen(param_5);</pre>
+<pre>              snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"           %.*s",sVar9,</pre>
+<pre><span class="green">                       "                ")</span></span></pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          sVar5 = strlen(param_8);</pre>
+<pre>          sVar6 = strlen(param_8);</pre>
+<pre>          iw_ether_ntop((int)local_10e0 + 2,auStack_98);</pre>
+<pre><span class="green">          snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"%s",auStack_98)</span></span></pre>
+<pre>          return 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      sVar5 = strlen(param_8);</pre>
+<pre>      sVar6 = strlen(param_8);</pre>
+<pre><span class="green">      snprintf(param_8 + sVar5,(param_9 - sVar6) - 1,"Not yet implemented...\n")</span></span></pre>
+<pre>      local_10f0 = 0xffffffff;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return local_10f0;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 44310ae0a9a35dad</pre>

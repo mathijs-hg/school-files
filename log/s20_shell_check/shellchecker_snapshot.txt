@@ -1,0 +1,125 @@
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 8:[0m
+[0m	cd /tmp/snapshot[0m
+[33m        ^--------------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.[0m
+
+[1mDid you mean: [0m
+	cd /tmp/snapshot || exit
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 10:[0m
+[0m	block=`ls block*.tar.gz 2> /dev/null`[0m
+[32m              ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	block=$(ls block*.tar.gz 2> /dev/null)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 12:[0m
+[0m		tar xzf $a -C /[0m
+[32m                        ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		tar xzf "$a" -C /
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 13:[0m
+[0m		rm -f $a[0m
+[32m                      ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		rm -f "$a"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 27:[0m
+[0m	cd /volatile[0m
+[33m        ^----------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.[0m
+
+[1mDid you mean: [0m
+	cd /volatile || exit
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 28:[0m
+[0m	tar czf /tmp/snapshot.tar.gz *[0m
+[32m                                     ^-- SC2035 (info): Use ./*glob* or -- *glob* so names with dashes won't become options.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 34:[0m
+[0m	cd /volatile[0m
+[33m        ^----------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.[0m
+
+[1mDid you mean: [0m
+	cd /volatile || exit
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 35:[0m
+[0m	tar czf /tmp/config.tar.gz *[0m
+[32m                                   ^-- SC2035 (info): Use ./*glob* or -- *glob* so names with dashes won't become options.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 41:[0m
+[0m	[ $? == 0 ] || exit 1[0m
+[32m          ^-- SC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m
+[33m             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 44:[0m
+[0m	[ $? == 0 ] || exit 2[0m
+[32m          ^-- SC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m
+[33m             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 46:[0m
+[0m	UPDATES=`opkg list-upgradable | cut -d" " -f1`[0m
+[32m                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	UPDATES=$(opkg list-upgradable | cut -d" " -f1)
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 49:[0m
+[0m	opkg upgrade ${UPDATES}[0m
+[32m                     ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	opkg upgrade "${UPDATES}"
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 50:[0m
+[0m	[ $? == 0 ] || exit 3[0m
+[32m          ^-- SC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m
+[33m             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 65:[0m
+[0m	. /lib/functions.sh[0m
+[32m          ^---------------^ SC1091 (info): Not following: /lib/functions.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 66:[0m
+[0m	. /lib/upgrade/common.sh[0m
+[32m          ^--------------------^ SC1091 (info): Not following: /lib/upgrade/common.sh was not specified as input (see shellcheck -x).[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 69:[0m
+[0m	cd /overlay[0m
+[33m        ^---------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.[0m
+
+[1mDid you mean: [0m
+	cd /overlay || exit
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 70:[0m
+[0m	tar czf /tmp/snapshot.tar.gz *[0m
+[32m                                     ^-- SC2035 (info): Use ./*glob* or -- *glob* so names with dashes won't become options.[0m
+
+
+[1mIn /logs/firmware/patool_extraction/M4_4.0_en_1.1.2_Build_20231227_Rel.84005/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_unblob_extracted/M4_4.0_en_1.1.2_Build_20231227_Rel.84005.bin_extract/1984826-13396282.squashfs_v4_le_extract/sbin/snapshot line 77:[0m
+[0m[ -n "$(cat /proc/mounts|grep /overlay|grep jffs2)" ] && {[0m
+[32m  ^-- SC2143 (style): Use grep -q instead of comparing output with [ -n .. ].[0m
+[32m            ^----------^ SC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2164 -- Use 'cd ... || exit' or 'cd ... |...
+  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: /lib/functions.sh ...

@@ -1,0 +1,67 @@
+<br />
+<pre>int mtd_read(mtd_dev_info *mtd,int fd,int eb,int offs,void *buf,int len)</pre>
+<br />
+<pre>{</pre>
+<pre>  longlong lVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  ssize_t sVar3;</pre>
+<pre>  int *piVar4;</pre>
+<pre>  char *pcVar5;</pre>
+<pre>  FILE *__stream;</pre>
+<pre>  uint uVar6;</pre>
+<pre>  int iVar7;</pre>
+<pre>  __off64_t _Var8;</pre>
+<pre>  uint in_stack_ffffffc4;</pre>
+<pre>  </pre>
+<pre>  iVar7 = eb;</pre>
+<pre>  iVar2 = mtd_valid_erase_block(mtd,eb);</pre>
+<pre>  if (iVar2 == 0) {</pre>
+<pre>    iVar2 = mtd-&gt;eb_size;</pre>
+<pre>    if (-1 &lt; offs) {</pre>
+<pre>      lVar1 = (longlong)eb * (longlong)iVar2;</pre>
+<pre>      if (offs + len &lt;= iVar2) {</pre>
+<pre>        uVar6 = (uint)lVar1 + offs;</pre>
+<pre>        _Var8 = lseek64(fd,(ulonglong)in_stack_ffffffc4 &lt;&lt; 0x20,iVar7);</pre>
+<pre>        if (_Var8 == lVar1 + offs) {</pre>
+<pre>          iVar7 = 0;</pre>
+<pre>          if (len &lt; 1) {</pre>
+<pre>            return 0;</pre>
+<pre>          }</pre>
+<pre>          while( true ) {</pre>
+<pre><span class="green"><span class="green">            sVar3 = read(fd,buf,len)</span></span></span></pre>
+<pre>            iVar7 = iVar7 + sVar3;</pre>
+<pre>            if (sVar3 &lt; 0) break;</pre>
+<pre>            if (len &lt;= iVar7) {</pre>
+<pre>              return 0;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          piVar4 = __errno_location();</pre>
+<pre>          iVar7 = *piVar4;</pre>
+<pre>          fprintf(stderr,"%s: error!: cannot read %d bytes from mtd%d (eraseblock %d, offset %d)\n",</pre>
+<pre>                  "libmtd",len,mtd-&gt</span>td_num,eb,offs);</pre>
+<pre>          __stream = stderr;</pre>
+<pre>          pcVar5 = strerror(iVar7);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          piVar4 = __errno_location();</pre>
+<pre>          iVar7 = *piVar4;</pre>
+<pre>          fprintf(stderr,"%s: error!: cannot seek mtd%d to offset %lld\n","libmtd",mtd-&gt</span>td_num,</pre>
+<pre>                  uVar6,(uint)(uVar6 &lt; (uint)lVar1) +</pre>
+<pre>                        (int)((ulonglong)lVar1 &gt;&gt; 0x20) + (offs &gt;&gt; 0x1f));</pre>
+<pre>          __stream = stderr;</pre>
+<pre>          pcVar5 = strerror(iVar7);</pre>
+<pre>        }</pre>
+<pre>        fprintf(__stream,"%*serror %d (%s)\n",8,&amp;DAT_0040e38c,iVar7,pcVar5);</pre>
+<pre>        return -1;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    fprintf(stderr,"%s: error!: bad offset %d or length %d, mtd%d eraseblock size is %d\n","libmtd",</pre>
+<pre>            offs,len,mtd-&gt</span>td_num,iVar2);</pre>
+<pre>    iVar2 = -1;</pre>
+<pre>    piVar4 = __errno_location();</pre>
+<pre>    *piVar4 = 0x16;</pre>
+<pre>  }</pre>
+<pre>  return iVar2;</pre>
+<pre>}</pre>
+<br />
+<pre>[ASK_GPT] 0969aa58cc4ab7ac</pre>
