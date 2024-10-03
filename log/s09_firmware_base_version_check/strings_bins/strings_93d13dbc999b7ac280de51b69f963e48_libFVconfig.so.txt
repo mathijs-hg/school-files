@@ -1,0 +1,98 @@
+_GLOBAL_OFFSET_TABLE_
+_init
+_gp_disp
+_fini
+__cxa_finalize
+__deregister_frame_info
+__register_frame_info
+_Jv_RegisterClasses
+libUserConfig.so
+libcfgbackup.so
+unpackCFG
+memset
+cfgRead
+strncmp
+fopen64
+fwrite
+fclose
+system
+rmdir
+unlink
+cfgrestore
+remove
+stat64
+cfgbackup
+malloc
+fread
+free
+strncpy
+libc.so.0
+libgcc_s.so.1
+_ftext
+_fdata
+_edata
+__bss_start
+_fbss
+_end
+libFVconfig.so
+GLIBC_2.0
+ (!&
+@8!$
+ System
+ModelName
+/tmp/cfgbackup.ini
+/tmp/config.tar.gz
+cp -f /mnt/flash/config/config-cam.dat /tmp/config-cam.dat
+cp -f /mnt/flash/config/auto_apmode_config_key /tmp/auto_apmode_config_key
+cp -f /mnt/flash/config/image_default.ini /tmp/image_default.ini
+cp -f /mnt/flash/config/bundle.ini /tmp/bundle.ini
+cp -f /mnt/flash/config/NETIPCAS.ini /tmp/NETIPCAS.ini
+cp -f /mnt/flash/config/pincode.ini /tmp/pincode.ini
+cp -f /mnt/flash/config/stunnel.pem /tmp/stunnel.pem
+/mnt/flash/config
+cd /mnt/flash/config;tar zxf /tmp/config.tar.gz .
+mv -f /tmp/config-cam.dat /mnt/flash/config/config-cam.dat
+rm -f /mnt/flash/config/auto_apmode_config_key
+rm -f /mnt/flash/config/image_default.ini
+rm -f /mnt/flash/config/bundle.ini
+rm -f /mnt/flash/config/NETIPCAS.ini
+rm -f /mnt/flash/config/pincode.ini
+rm -f /mnt/flash/config/stunnel.pem
+mv -f /tmp/auto_apmode_config_key /mnt/flash/config/auto_apmode_config_key
+mv -f /tmp/image_default.ini /mnt/flash/config/image_default.ini
+mv -f /tmp/bundle.ini /mnt/flash/config/bundle.ini
+mv -f /tmp/NETIPCAS.ini /mnt/flash/config/NETIPCAS.ini
+mv -f /tmp/pincode.ini /mnt/flash/config/pincode.ini
+mv -f /tmp/stunnel.pem /mnt/flash/config/stunnel.pem
+/etc/init.d/restore_wifi_ap.sh 2>/dev/null 1>/dev/null
+cd /mnt/flash/config;tar cf /tmp/config.tar .
+gzip -f /tmp/config.tar
+pcfg
+ConfigVersion
+GCC: (GNU) 3.3.2
+GCC: (GNU) 4.4.5-1.5.5p4
+.shstrtab
+.reginfo
+.dynamic
+.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rel.dyn
+.init
+.text
+.MIPS.stubs
+.fini
+.rodata
+.eh_frame
+.ctors
+.dtors
+.jcr
+.got
+.sdata
+.bss
+.pdr
+.comment
+.gnu.attributes
+.mdebug.abi32

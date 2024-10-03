@@ -1,0 +1,1 @@
+../wireless_ext.cgi

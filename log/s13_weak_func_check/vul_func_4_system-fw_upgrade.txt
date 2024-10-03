@@ -1,0 +1,110 @@
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mfw_upgrade[0m
+
+  400adc:	240200a4 	li	v0,164
+  400ae0:	8fbc0020 	lw	gp,32(sp)
+  400ae4:	3c050040 	lui	a1,0x40
+  400ae8:	8e640000 	lw	a0,0(s3)
+  400aec:	24a514d8 	addiu	a1,a1,5336
+  400af0:	afa20014 	sw	v0,20(sp)
+  400af4:	262614b8 	addiu	a2,s1,5304
+  400af8:	8fa20028 	lw	v0,40(sp)
+  400afc:	260714c4 	addiu	a3,s0,5316
+  400b00:	8f998070 	lw	t9,-32656(gp)
+  400b04:	afa20018 	sw	v0,24(sp)
+  400b08:	0320f809 	jalr	t9
+  400b0c:	afb20010 	sw	s2,16(sp)
+  400b10:	24020001 	li	v0,1
+  400b14:	8fa30028 	lw	v1,40(sp)
+  400b18:	8fbc0020 	lw	gp,32(sp)
+  400b1c:	10620020 	beq	v1,v0,400ba0 <_ftext@@Base+0x370>
+  400b20:	27b5002c 	addiu	s5,sp,44
+  400b24:	3c050040 	lui	a1,0x40
+  400b28:	02803021 	move	a2,s4
+  400b2c:	8f998048 	lw	t9,-32696(gp)
+  400b30:	24a514fc 	addiu	a1,a1,5372
+  400b34:	0320f809 	jalr	t9
+  400b38:	02a02021 	move	a0,s5
+  400b3c:	8fbc0020 	lw	gp,32(sp)
+[31m  400b40:	8f99808c 	lw	t9,system[0m
+  400b44:	0320f809 	jalr	t9
+  400b48:	02a02021 	move	a0,s5
+--
+  400cfc:	0320f809 	jalr	t9
+  400d00:	24a515d4 	addiu	a1,a1,5588
+  400d04:	8fbc0020 	lw	gp,32(sp)
+  400d08:	1040014d 	beqz	v0,401240 <main@@Base+0x678>
+  400d0c:	00409021 	move	s2,v0
+  400d10:	24040001 	li	a0,1
+  400d14:	3c130040 	lui	s3,0x40
+  400d18:	8f978044 	lw	s7,-32700(gp)
+  400d1c:	0c100274 	jal	4009d0 <_ftext@@Base+0x1a0>
+  400d20:	26731a2c 	addiu	s3,s3,6700
+  400d24:	3c160040 	lui	s6,0x40
+  400d28:	8fbc0020 	lw	gp,32(sp)
+  400d2c:	3c150040 	lui	s5,0x40
+  400d30:	8ee40000 	lw	a0,0(s7)
+  400d34:	24020052 	li	v0,82
+  400d38:	8f998070 	lw	t9,-32656(gp)
+  400d3c:	3c050040 	lui	a1,0x40
+  400d40:	26c614b8 	addiu	a2,s6,5304
+  400d44:	24a51600 	addiu	a1,a1,5632
+  400d48:	26a714c4 	addiu	a3,s5,5316
+  400d4c:	afa20014 	sw	v0,20(sp)
+  400d50:	0320f809 	jalr	t9
+  400d54:	afb30010 	sw	s3,16(sp)
+  400d58:	3c040040 	lui	a0,0x40
+  400d5c:	8fbc0020 	lw	gp,32(sp)
+[31m  400d60:	8f99808c 	lw	t9,system[0m
+  400d64:	0320f809 	jalr	t9
+  400d68:	2484163c 	addiu	a0,a0,5692
+--
+  400ec0:	2402006f 	li	v0,111
+  400ec4:	8f998070 	lw	t9,-32656(gp)
+  400ec8:	3c050040 	lui	a1,0x40
+  400ecc:	24a51710 	addiu	a1,a1,5904
+  400ed0:	26c614b8 	addiu	a2,s6,5304
+  400ed4:	afa30018 	sw	v1,24(sp)
+  400ed8:	26a714c4 	addiu	a3,s5,5316
+  400edc:	afa20014 	sw	v0,20(sp)
+  400ee0:	3c110040 	lui	s1,0x40
+  400ee4:	0320f809 	jalr	t9
+  400ee8:	afb30010 	sw	s3,16(sp)
+  400eec:	02402021 	move	a0,s2
+  400ef0:	8fbc0020 	lw	gp,32(sp)
+  400ef4:	8f998050 	lw	t9,-32688(gp)
+  400ef8:	8f9e8044 	lw	s8,-32700(gp)
+  400efc:	0320f809 	jalr	t9
+  400f00:	3c120040 	lui	s2,0x40
+  400f04:	8fbc0020 	lw	gp,32(sp)
+  400f08:	8fa50064 	lw	a1,100(sp)
+  400f0c:	8f99803c 	lw	t9,-32708(gp)
+  400f10:	0320f809 	jalr	t9
+  400f14:	02802021 	move	a0,s4
+  400f18:	8fbc0020 	lw	gp,32(sp)
+  400f1c:	14400098 	bnez	v0,401180 <main@@Base+0x5b8>
+  400f20:	24020073 	li	v0,115
+[31m  400f24:	8f99808c 	lw	t9,system[0m
+  400f28:	3c040040 	lui	a0,0x40
+  400f2c:	0320f809 	jalr	t9
+  400f30:	24841768 	addiu	a0,a0,5992
+  400f34:	2402007d 	li	v0,125
+  400f38:	8fbc0020 	lw	gp,32(sp)
+  400f3c:	3c050040 	lui	a1,0x40
+  400f40:	8fc40000 	lw	a0,0(s8)
+  400f44:	24a51798 	addiu	a1,a1,6040
+  400f48:	8f998070 	lw	t9,-32656(gp)
+  400f4c:	264614b8 	addiu	a2,s2,5304
+  400f50:	262714c4 	addiu	a3,s1,5316
+  400f54:	afa20014 	sw	v0,20(sp)
+  400f58:	0320f809 	jalr	t9
+  400f5c:	afb30010 	sw	s3,16(sp)
+  400f60:	3c040040 	lui	a0,0x40
+  400f64:	8fbc0020 	lw	gp,32(sp)
+[31m  400f68:	8f99808c 	lw	t9,system[0m
+  400f6c:	0320f809 	jalr	t9
+  400f70:	248417c0 	addiu	a0,a0,6080
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m4[0m times [0;33mfw_upgrade[0m
+

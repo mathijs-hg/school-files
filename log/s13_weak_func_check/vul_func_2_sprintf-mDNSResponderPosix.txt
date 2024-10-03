@@ -1,0 +1,64 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mmDNSResponderPosix[0m
+
+  407058:	27bdffc0 	addiu	sp,sp,-64
+  40705c:	afbf003c 	sw	ra,60(sp)
+  407060:	afbe0038 	sw	s8,56(sp)
+  407064:	afb70034 	sw	s7,52(sp)
+  407068:	afb60030 	sw	s6,48(sp)
+  40706c:	afb5002c 	sw	s5,44(sp)
+  407070:	afb40028 	sw	s4,40(sp)
+  407074:	afb30024 	sw	s3,36(sp)
+  407078:	afb20020 	sw	s2,32(sp)
+  40707c:	afb1001c 	sw	s1,28(sp)
+  407080:	afb00018 	sw	s0,24(sp)
+  407084:	3c1c0047 	lui	gp,0x47
+  407088:	279c7100 	addiu	gp,gp,28928
+  40708c:	afbc0010 	sw	gp,16(sp)
+  407090:	3c1e0045 	lui	s8,0x45
+  407094:	3c170045 	lui	s7,0x45
+  407098:	00808821 	move	s1,a0
+  40709c:	27ded99c 	addiu	s8,s8,-9828
+  4070a0:	00a09021 	move	s2,a1
+  4070a4:	26f76114 	addiu	s7,s7,24852
+  4070a8:	00008021 	move	s0,zero
+  4070ac:	24130010 	li	s3,16
+  4070b0:	3416ffff 	li	s6,0xffff
+  4070b4:	24150008 	li	s5,8
+  4070b8:	2a340011 	slti	s4,s1,17
+[31m  4070bc:	8f99819c 	lw	t9,sprintf[0m
+  4070c0:	02601021 	move	v0,s3
+  4070c4:	0234100b 	0x234100b
+--
+  4072a8:	24040001 	li	a0,1
+  4072ac:	8fbc0040 	lw	gp,64(sp)
+  4072b0:	8f998364 	lw	t9,-31900(gp)
+  4072b4:	0320f809 	jalr	t9
+  4072b8:	24050038 	li	a1,56
+  4072bc:	8fbc0040 	lw	gp,64(sp)
+  4072c0:	104000a6 	beqz	v0,40755c <free_ifi_info@@Base+0x5c4>
+  4072c4:	00408021 	move	s0,v0
+  4072c8:	8e620000 	lw	v0,0(s3)
+  4072cc:	02a03821 	move	a3,s5
+  4072d0:	8fa40160 	lw	a0,352(sp)
+  4072d4:	03c02821 	move	a1,s8
+  4072d8:	afa2016c 	sw	v0,364(sp)
+  4072dc:	02c03021 	move	a2,s6
+  4072e0:	ae700000 	sw	s0,0(s3)
+  4072e4:	8fa30144 	lw	v1,324(sp)
+  4072e8:	8fa20148 	lw	v0,328(sp)
+  4072ec:	afa30010 	sw	v1,16(sp)
+  4072f0:	afa20014 	sw	v0,20(sp)
+  4072f4:	8fa3014c 	lw	v1,332(sp)
+  4072f8:	8fa20150 	lw	v0,336(sp)
+  4072fc:	afa30018 	sw	v1,24(sp)
+  407300:	afa2001c 	sw	v0,28(sp)
+  407304:	8fa30154 	lw	v1,340(sp)
+  407308:	8fa20158 	lw	v0,344(sp)
+[31m  40730c:	8f99819c 	lw	t9,sprintf[0m
+  407310:	afa30020 	sw	v1,32(sp)
+  407314:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m2[0m times [0;33mmDNSResponderPosix[0m
+

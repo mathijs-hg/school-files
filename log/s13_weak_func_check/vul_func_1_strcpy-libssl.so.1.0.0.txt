@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibssl.so.1.0.0[0m
+
+   36738:	28c20002 	slti	v0,a2,2
+   3673c:	14400033 	bnez	v0,3680c <SSL_get_shared_ciphers@@Base+0x120>
+   36740:	00000000 	nop
+   36744:	8f99843c 	lw	t9,-31684(gp)
+   36748:	0320f809 	jalr	t9
+   3674c:	02602021 	move	a0,s3
+   36750:	8fbc0010 	lw	gp,16(sp)
+   36754:	1040002d 	beqz	v0,3680c <SSL_get_shared_ciphers@@Base+0x120>
+   36758:	02008821 	move	s1,s0
+   3675c:	00009021 	move	s2,zero
+   36760:	1000001e 	b	367dc <SSL_get_shared_ciphers@@Base+0xf0>
+   36764:	2416003a 	li	s6,58
+   36768:	0320f809 	jalr	t9
+   3676c:	00000000 	nop
+   36770:	8fbc0010 	lw	gp,16(sp)
+   36774:	8c450004 	lw	a1,4(v0)
+   36778:	8f998748 	lw	t9,strlen
+   3677c:	00a02021 	move	a0,a1
+   36780:	0320f809 	jalr	t9
+   36784:	afa50018 	sw	a1,24(sp)
+   36788:	8fbc0010 	lw	gp,16(sp)
+   3678c:	0040a821 	move	s5,v0
+   36790:	24420001 	addiu	v0,v0,1
+   36794:	0282102a 	slt	v0,s4,v0
+   36798:	8fa50018 	lw	a1,24(sp)
+[31m   3679c:	8f998078 	lw	t9,strcpy[0m
+   367a0:	10400006 	beqz	v0,367bc <SSL_get_shared_ciphers@@Base+0xd0>
+   367a4:	02202021 	move	a0,s1
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m1[0m times [0;33mlibssl.so.1.0.0[0m
+

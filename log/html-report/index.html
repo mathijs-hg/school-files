@@ -35,20 +35,34 @@ Author(s) and contributors from the EMBA project are listed here: https://github
       <a class="backButton hidden" href="./index.html">&laquo; Back to main</a>
       <!-- navigation start -->
 <a class="modul p" data="p02" href="./p02_firmware_bin_file_check.html" title="./p02_firmware_bin_file_check.html">Binary firmware file analyzer</a>
-<a class="modul p" data="p05" href="./p05_patools_init.html" title="./p05_patools_init.html">Initial extractor of different archive types via patools</a>
-<a class="modul p" data="p60" href="./p60_deep_extractor.html" title="./p60_deep_extractor.html">Binary firmware deep extractor</a>
+<a class="modul p" data="p55" href="./p55_unblob_extractor.html" title="./p55_unblob_extractor.html">Unblob binary firmware extractor</a>
 <a class="modul p" data="p99" href="./p99_prepare_analyzer.html" title="./p99_prepare_analyzer.html">Analysis preparation</a>
 <a class="modul s" data="s03" href="./s03_firmware_bin_base_analyzer.html" title="./s03_firmware_bin_base_analyzer.html">Binary firmware basic analyzer</a>
 <a class="modul s" data="s05" href="./s05_firmware_details.html" title="./s05_firmware_details.html">Firmware and testing details</a>
-<a class="modul s" data="s06" href="./s06_distribution_identification.html" title="./s06_distribution_identification.html">System identification</a>
 <a class="modul s" data="s07" href="./s07_bootloader_check.html" title="./s07_bootloader_check.html">Check bootloader and system startup</a>
-<a class="modul s" data="s08" href="./s08_package_mgmt_extractor.html" title="./s08_package_mgmt_extractor.html">Search package management details</a>
+<a class="modul s" data="s09" href="./s09_firmware_base_version_check.html" title="./s09_firmware_base_version_check.html">Static binary firmware versions detection</a>
 <a class="modul s" data="s12" href="./s12_binary_protection.html" title="./s12_binary_protection.html">Check binary protection mechanisms</a>
 <a class="modul s" data="s13" href="./s13_weak_func_check.html" title="./s13_weak_func_check.html">Check binaries for weak functions (intense)</a>
+<a class="modul s" data="s14" href="./s14_weak_func_radare_check.html" title="./s14_weak_func_radare_check.html">Check binaries for weak functions (radare mode)</a>
 <a class="modul s" data="s16" href="./s16_ghidra_decompile_checks.html" title="./s16_ghidra_decompile_checks.html">Check decompiled binary source code for vulnerabilities</a>
 <a class="modul s" data="s17" href="./s17_cwe_checker.html" title="./s17_cwe_checker.html">Check binaries for vulnerabilities with cwe-checker</a>
 <a class="modul s" data="s20" href="./s20_shell_check.html" title="./s20_shell_check.html">Check scripts with shellcheck and semgrep</a>
 <a class="modul s" data="s24" href="./s24_kernel_bin_identifier.html" title="./s24_kernel_bin_identifier.html">Kernel Binary and Configuration Identifier</a>
+<a class="modul s" data="s25" href="./s25_kernel_check.html" title="./s25_kernel_check.html">Identify and analyze kernel version</a>
+<a class="modul s" data="s35" href="./s35_http_file_check.html" title="./s35_http_file_check.html">Check HTTP files</a>
+<a class="modul s" data="s40" href="./s40_weak_perm_check.html" title="./s40_weak_perm_check.html">Search files with weak permissions</a>
+<a class="modul s" data="s45" href="./s45_pass_file_check.html" title="./s45_pass_file_check.html">Search password files</a>
+<a class="modul s" data="s50" href="./s50_authentication_check.html" title="./s50_authentication_check.html">Check users, groups and authentication</a>
+<a class="modul s" data="s60" href="./s60_cert_file_check.html" title="./s60_cert_file_check.html">Search certificates</a>
+<a class="modul s" data="s65" href="./s65_config_file_check.html" title="./s65_config_file_check.html">Search/scan config files</a>
+<a class="modul s" data="s95" href="./s95_interesting_files_check.html" title="./s95_interesting_files_check.html">Check for interesting files</a>
+<a class="modul s" data="s108" href="./s108_stacs_password_search.html" title="./s108_stacs_password_search.html">Stacs analysis of firmware for password hashes</a>
+<a class="modul s" data="s115" href="./s115_usermode_emulator.html" title="./s115_usermode_emulator.html">Qemu user-mode emulation</a>
+<a class="modul s" data="s116" href="./s116_qemu_version_detection.html" title="./s116_qemu_version_detection.html">Identified software components - via usermode emulation.</a>
+<a class="modul s" data="s118" href="./s118_busybox_verifier.html" title="./s118_busybox_verifier.html">Busybox vulnerability identification and verification</a>
+<a class="modul f" data="f02" href="./f02_toolchain.html" title="./f02_toolchain.html">Toolchain overview</a>
+<a class="modul f" data="f10" href="./f10_license_summary.html" title="./f10_license_summary.html">License inventory</a>
+<a class="modul f" data="f50" href="./f50_base_aggregator.html" title="./f50_base_aggregator.html">Final aggregator</a>
       <!-- navigation end -->
       <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
       <div class="expand_area">
@@ -56,11 +70,47 @@ Author(s) and contributors from the EMBA project are listed here: https://github
         <!-- etc end -->
       </div>
   </div>
-  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <a href="./emba.html"><div id="buttonTime" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
   <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
 </div>
 <div id="main" class="main">
   <!-- content start -->
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold"><a id="final_aggregator">Final aggregator</a></span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>The main aggregator module compiles and summarizes results from various analysis modules into a comprehensive overview by processing and logging detailed information from each identified element.</pre>
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested firmware:</span><span class="orange"> /home/kali/Downloads/DCS-935L_A1_FW_1.09.02_20160713_r3952.bin</span></span></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> EMBA start command:</span><span class="orange"> ./emba -l /home/kali/log -f /home/kali/Downloads/DCS-935L_A1_FW_1.09.02_20160713_r3952.bin -p ./scan-profiles/default-scan.emba</span></span></pre>
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<a class="refmodul" href="./p99_prepare_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> </span><span class="orange">779</span><span class="green"> files and </span><span class="orange">96 </span><span class="green">directories detected.</span></pre></a>
+
+<a class="refmodul" href="./s116_qemu_version_detection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">15</span><span class="green"> successful emulated processes </span><span class="orange">(</span><span class="green">user mode emulation</span><span class="orange">)</span><span class="green">.</span></span></pre></a>
+
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<a class="refmodul" href="./s17_cwe_checker.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> cwe-checker found a total of </span><span class="orange">0</span><span class="green"> security issues in </span><span class="orange">0</span><span class="green"> tested binaries:</span></pre></a>
+
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/119.html" title="119" target="_blank" >CWE119</a></span><span class="green"> - Buffer Overflow - </span><span class="orange">1 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/125.html" title="125" target="_blank" >CWE125</a></span><span class="green"> - Out-of-bounds Read - </span><span class="orange">1 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/134.html" title="134" target="_blank" >CWE134</a></span><span class="green"> - Externally Controlled Format String - </span><span class="orange">38 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/190.html" title="190" target="_blank" >CWE190</a></span><span class="green"> - Integer Overflow or Wraparound - </span><span class="orange">10 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/252.html" title="252" target="_blank" >CWE252</a></span><span class="green"> - Unchecked Return Value - </span><span class="orange">254 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/332.html" title="332" target="_blank" >CWE332</a></span><span class="green"> - Insufficient Entropy in PRNG - </span><span class="orange">2 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/337.html" title="337" target="_blank" >CWE337</a></span><span class="green"> - RNG seed function srand at 004146e4 is seeded with predictable seed source. - </span><span class="orange">1 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/415.html" title="415" target="_blank" >CWE415</a></span><span class="green"> - Double Free - </span><span class="orange">4 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/416.html" title="416" target="_blank" >CWE416</a></span><span class="green"> - Use After Free - </span><span class="orange">6 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/467.html" title="467" target="_blank" >CWE467</a></span><span class="green"> - Use of sizeof on a Pointer Type - </span><span class="orange">20 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a></span><span class="green"> - NULL Pointer Dereference - </span><span class="orange">1388 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a></span><span class="green"> - Use of Potentially Dangerous Function - </span><span class="orange">1306 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/782.html" title="782" target="_blank" >CWE782</a></span><span class="green"> - Exposed IOCTL with Insufficient Access Control - </span><span class="orange">55 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/787.html" title="787" target="_blank" >CWE787</a></span><span class="green"> - Out-of-bounds Write - </span><span class="orange">299 times.</span></pre>
+<pre>    </span><span class="orange"><a href="https://cwe.mitre.org/data/definitions/789.html" title="789" target="_blank" >CWE789</a></span><span class="green"> - Large memory allocation - </span><span class="orange">10 times.</span></pre>
+<br />
+<br />
   <!-- content end -->
 </div>
 
@@ -69,7 +119,7 @@ Author(s) and contributors from the EMBA project are listed here: https://github
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
   </div>
 </a>
-<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<a href="./p02_firmware_bin_file_check.html" title="./p02_firmware_bin_file_check.html" ><div id="buttonBack" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
 <div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
 <div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
 <div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 

@@ -1,0 +1,137 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33msetconf.cgi[0m
+
+  401318:	279cc130 	addiu	gp,gp,-16080
+  40131c:	afbc0010 	sw	gp,16(sp)
+  401320:	8f99806c 	lw	t9,-32660(gp)
+  401324:	0320f809 	jalr	t9
+  401328:	00a08021 	move	s0,a1
+  40132c:	8fbc0010 	lw	gp,16(sp)
+  401330:	1440000a 	bnez	v0,40135c <_ftext@@Base+0x6bc>
+  401334:	3c050040 	lui	a1,0x40
+  401338:	8f828060 	lw	v0,-32672(gp)
+  40133c:	8c440000 	lw	a0,0(v0)
+  401340:	24a53914 	addiu	a1,a1,14612
+  401344:	3c060040 	lui	a2,0x40
+  401348:	8f99809c 	lw	t9,-32612(gp)
+  40134c:	0320f809 	jalr	t9
+  401350:	24c640e0 	addiu	a2,a2,16608
+  401354:	1000000d 	b	40138c <_ftext@@Base+0x6ec>
+  401358:	2402ffff 	li	v0,-1
+  40135c:	8c420010 	lw	v0,16(v0)
+  401360:	8c420000 	lw	v0,0(v0)
+  401364:	8c440000 	lw	a0,0(v0)
+  401368:	8f998074 	lw	t9,-32652(gp)
+  40136c:	0320f809 	jalr	t9
+  401370:	00000000 	nop
+  401374:	8fbc0010 	lw	gp,16(sp)
+  401378:	02002021 	move	a0,s0
+[31m  40137c:	8f9980f4 	lw	t9,strcpy[0m
+  401380:	0320f809 	jalr	t9
+  401384:	00402821 	move	a1,v0
+--
+  402718:	00002821 	move	a1,zero
+  40271c:	8f99807c 	lw	t9,-32644(gp)
+  402720:	0320f809 	jalr	t9
+  402724:	240600ff 	li	a2,255
+  402728:	8fbc0028 	lw	gp,40(sp)
+  40272c:	92023f80 	lbu	v0,16256(s0)
+  402730:	a3a20360 	sb	v0,864(sp)
+  402734:	27a40361 	addiu	a0,sp,865
+  402738:	00002821 	move	a1,zero
+  40273c:	8f99807c 	lw	t9,-32644(gp)
+  402740:	0320f809 	jalr	t9
+  402744:	240600ff 	li	a2,255
+  402748:	8fbc0028 	lw	gp,40(sp)
+  40274c:	afa0003c 	sw	zero,60(sp)
+  402750:	27b0003c 	addiu	s0,sp,60
+  402754:	8f998034 	lw	t9,-32716(gp)
+  402758:	0320f809 	jalr	t9
+  40275c:	02002021 	move	a0,s0
+  402760:	8fbc0028 	lw	gp,40(sp)
+  402764:	8e040000 	lw	a0,0(s0)
+  402768:	8f998074 	lw	t9,-32652(gp)
+  40276c:	0320f809 	jalr	t9
+  402770:	00000000 	nop
+  402774:	8fbc0028 	lw	gp,40(sp)
+  402778:	27a40060 	addiu	a0,sp,96
+[31m  40277c:	8f9980f4 	lw	t9,strcpy[0m
+  402780:	0320f809 	jalr	t9
+  402784:	00402821 	move	a1,v0
+--
+  402b30:	26310001 	addiu	s1,s1,1
+  402b34:	8fbc0028 	lw	gp,40(sp)
+  402b38:	afa20038 	sw	v0,56(sp)
+  402b3c:	1000000d 	b	402b74 <_ftext@@Base+0x1ed4>
+  402b40:	afb5048c 	sw	s5,1164(sp)
+  402b44:	8fa504a0 	lw	a1,1184(sp)
+  402b48:	8f998070 	lw	t9,-32656(gp)
+  402b4c:	0320f809 	jalr	t9
+  402b50:	02402021 	move	a0,s2
+  402b54:	8fbc0028 	lw	gp,40(sp)
+  402b58:	14400005 	bnez	v0,402b70 <_ftext@@Base+0x1ed0>
+  402b5c:	26220080 	addiu	v0,s1,128
+  402b60:	00021080 	sll	v0,v0,0x2
+  402b64:	02028021 	addu	s0,s0,v0
+  402b68:	8e100004 	lw	s0,4(s0)
+  402b6c:	afb00494 	sw	s0,1172(sp)
+  402b70:	26310001 	addiu	s1,s1,1
+  402b74:	8e700058 	lw	s0,88(s3)
+  402b78:	8e020000 	lw	v0,0(s0)
+  402b7c:	0222102a 	slt	v0,s1,v0
+  402b80:	1440ff6c 	bnez	v0,402934 <_ftext@@Base+0x1c94>
+  402b84:	00111080 	sll	v0,s1,0x2
+  402b88:	8fa5047c 	lw	a1,1148(sp)
+  402b8c:	10a00012 	beqz	a1,402bd8 <_ftext@@Base+0x1f38>
+  402b90:	3c040040 	lui	a0,0x40
+[31m  402b94:	8f9980f4 	lw	t9,strcpy[0m
+  402b98:	0320f809 	jalr	t9
+  402b9c:	27a40160 	addiu	a0,sp,352
+  402ba0:	8fbc0028 	lw	gp,40(sp)
+  402ba4:	10000013 	b	402bf4 <_ftext@@Base+0x1f54>
+  402ba8:	00000000 	nop
+  402bac:	afa00484 	sw	zero,1156(sp)
+  402bb0:	0000f021 	move	s8,zero
+  402bb4:	0000b021 	move	s6,zero
+  402bb8:	afa00474 	sw	zero,1140(sp)
+  402bbc:	afa0047c 	sw	zero,1148(sp)
+  402bc0:	afa00480 	sw	zero,1152(sp)
+  402bc4:	afa00470 	sw	zero,1136(sp)
+  402bc8:	afa00464 	sw	zero,1124(sp)
+  402bcc:	afa0046c 	sw	zero,1132(sp)
+  402bd0:	afa00494 	sw	zero,1172(sp)
+  402bd4:	3c040040 	lui	a0,0x40
+  402bd8:	24843dd4 	addiu	a0,a0,15828
+  402bdc:	3c050040 	lui	a1,0x40
+  402be0:	24a53e28 	addiu	a1,a1,15912
+  402be4:	8f998044 	lw	t9,-32700(gp)
+  402be8:	0320f809 	jalr	t9
+  402bec:	27a60160 	addiu	a2,sp,352
+  402bf0:	8fbc0028 	lw	gp,40(sp)
+  402bf4:	8fa20480 	lw	v0,1152(sp)
+  402bf8:	10400007 	beqz	v0,402c18 <_ftext@@Base+0x1f78>
+  402bfc:	27a40260 	addiu	a0,sp,608
+[31m  402c00:	8f9980f4 	lw	t9,strcpy[0m
+  402c04:	0320f809 	jalr	t9
+  402c08:	00402821 	move	a1,v0
+  402c0c:	8fbc0028 	lw	gp,40(sp)
+  402c10:	10000009 	b	402c38 <_ftext@@Base+0x1f98>
+  402c14:	00000000 	nop
+  402c18:	3c040040 	lui	a0,0x40
+  402c1c:	24843dd4 	addiu	a0,a0,15828
+  402c20:	3c050040 	lui	a1,0x40
+  402c24:	24a53e3c 	addiu	a1,a1,15932
+  402c28:	8f998044 	lw	t9,-32700(gp)
+  402c2c:	0320f809 	jalr	t9
+  402c30:	27a60260 	addiu	a2,sp,608
+  402c34:	8fbc0028 	lw	gp,40(sp)
+  402c38:	8fa20470 	lw	v0,1136(sp)
+  402c3c:	10400007 	beqz	v0,402c5c <_ftext@@Base+0x1fbc>
+  402c40:	27a40360 	addiu	a0,sp,864
+[31m  402c44:	8f9980f4 	lw	t9,strcpy[0m
+  402c48:	0320f809 	jalr	t9
+  402c4c:	00402821 	move	a1,v0
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m5[0m times [0;33msetconf.cgi[0m
+

@@ -1,0 +1,45 @@
+
+-----------------------------------------------------------------
+
+[[0;33m*[0m] Emulating binary name: [0;33mserverreport.cgi[0m
+[[0;33m*[0m] Emulator used: [0;33mqemu-mips-static[0m
+[[0;33m*[0m] Using root directory: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m ([0;33m1/1[0m)
+[[0;33m*[0m] Using CPU config: [0;33mNONE[0m
+[[0;33m*[0m] Emulating binary: [0;33m/web/cgi-bin/cgi/serverreport.cgi[0m
+
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33mNONE[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m-v[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m-V[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m-h[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m-help[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m--help[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33m--version[0m
+[XCEPTION] rfc2616.c hoInit 240
+[[0;33m*[0m] Emulating binary [0;33m./web/cgi-bin/cgi/serverreport.cgi[0m with parameter [0;33mversion[0m
+[XCEPTION] rfc2616.c hoInit 240
+
+-----------------------------------------------------------------
+
+
+
+For reproducing the EMBA user-mode emulation mechanism, the following commands could be used as starting point:
+
+ - Start EMBA docker container with the firmware directory as log directory:
+      # [0;33mEMBA="." FIRMWARE="/home/kali/Downloads/DCS-935L_A1_FW_1.09.02_20160713_r3952.bin" LOG="/absolute/path/to/EMBA/log/directory" docker-compose run emba[0m
+
+ - Change your working directory to the root directory of your firmware:
+      # [0;33mcd /logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m
+
+ - Copy the static compiled user-mode emulator to your current working directory
+      # [0;33mcp $(which qemu-mips-static) .[0m
+
+ - Start the emulation with the following command: 
+      # [0;33mjchroot  . -- ./qemu-mips-static ./web/cgi-bin/cgi/serverreport.cgi <parameters like -v or --help>[0m
+
+[0;33mWARNING: EMBA is doing some more magic in the background. Probably it is not that easy, but give it a try.[0m

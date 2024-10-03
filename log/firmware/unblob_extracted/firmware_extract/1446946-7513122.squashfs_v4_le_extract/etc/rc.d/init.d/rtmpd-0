@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# crtmpserver: This starts and stops rtmp server.
+#
+# chkconfig: 2345 94 10
+# description: crtmpserver
+#
+# processname: /usr/sbin/rtmp/crtmpserver
+
+# automatically export variables to the environment
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+#config=`/usr/sbin/userconfig -read INFO ModelNumber`
+config=crtmpserver
+
+start() {
+        echo "Starting crtmpserver $config.lua"
+        sleep 3
+        /usr/sbin/rtmp/crtmpserver /usr/sbin/rtmp/$config.lua
+}
+
+stop() {
+        kill `pidof crtmpserver`
+        sleep 1
+}
+
+restart() {
+        stop
+        start
+}
+
+case "$1" in
+        start)
+                start
+                ;;
+        stop)
+                stop
+                ;;
+        restart)
+                restart
+                ;;
+        *)
+                echo "Usage $0 {start|stop|restart}"
+                exit 1
+esac
+
+exit $?
+

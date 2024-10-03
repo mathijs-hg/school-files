@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33mlibcfg.so[0m
+
+    1d80:	8fbc0010 	lw	gp,16(sp)
+    1d84:	8f998124 	lw	t9,-32476(gp)
+    1d88:	0320f809 	jalr	t9
+    1d8c:	02002021 	move	a0,s0
+    1d90:	8fbc0010 	lw	gp,16(sp)
+    1d94:	8f99804c 	lw	t9,strlen
+    1d98:	0320f809 	jalr	t9
+    1d9c:	02002021 	move	a0,s0
+    1da0:	00001821 	move	v1,zero
+    1da4:	8fbc0010 	lw	gp,16(sp)
+    1da8:	00002021 	move	a0,zero
+    1dac:	2407002f 	li	a3,47
+    1db0:	10000008 	b	1dd4 <get_link_pathname@@Base+0xa8>
+    1db4:	24060001 	li	a2,1
+    1db8:	80a80000 	lb	t0,0(a1)
+    1dbc:	15070006 	bne	t0,a3,1dd8 <get_link_pathname@@Base+0xac>
+    1dc0:	0082402a 	slt	t0,a0,v0
+    1dc4:	14660004 	bne	v1,a2,1dd8 <get_link_pathname@@Base+0xac>
+    1dc8:	24030001 	li	v1,1
+    1dcc:	10000005 	b	1de4 <get_link_pathname@@Base+0xb8>
+    1dd0:	a0a00001 	sb	zero,1(a1)
+    1dd4:	0082402a 	slt	t0,a0,v0
+    1dd8:	02042821 	addu	a1,s0,a0
+    1ddc:	1500fff6 	bnez	t0,1db8 <get_link_pathname@@Base+0x8c>
+    1de0:	24840001 	addiu	a0,a0,1
+[31m    1de4:	8f9980c4 	lw	t9,strcat[0m
+    1de8:	27b00018 	addiu	s0,sp,24
+    1dec:	02202821 	move	a1,s1
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m1[0m times [0;33mlibcfg.so[0m
+

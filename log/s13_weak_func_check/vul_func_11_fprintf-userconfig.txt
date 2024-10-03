@@ -1,0 +1,179 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33muserconfig[0m
+
+  401708:	10570003 	beq	v0,s7,401718 <_ftext@@Base+0xbd8>
+  40170c:	2403005c 	li	v1,92
+  401710:	14430005 	bne	v0,v1,401728 <_ftext@@Base+0xbe8>
+  401714:	02701821 	addu	v1,s3,s0
+  401718:	02701821 	addu	v1,s3,s0
+  40171c:	a07e020c 	sb	s8,524(v1)
+  401720:	26100001 	addiu	s0,s0,1
+  401724:	02701821 	addu	v1,s3,s0
+  401728:	a062020c 	sb	v0,524(v1)
+  40172c:	26100001 	addiu	s0,s0,1
+  401730:	26310001 	addiu	s1,s1,1
+  401734:	02209021 	move	s2,s1
+  401738:	8f998048 	lw	t9,strlen
+  40173c:	0320f809 	jalr	t9
+  401740:	02802021 	move	a0,s4
+  401744:	8fbc0018 	lw	gp,24(sp)
+  401748:	0222102b 	sltu	v0,s1,v0
+  40174c:	1440ffea 	bnez	v0,4016f8 <_ftext@@Base+0xbb8>
+  401750:	00000000 	nop
+  401754:	8f828060 	lw	v0,-32672(gp)
+  401758:	8c440000 	lw	a0,0(v0)
+  40175c:	afb40010 	sw	s4,16(sp)
+  401760:	8fa50ac8 	lw	a1,2760(sp)
+  401764:	8fa60ab4 	lw	a2,2740(sp)
+  401768:	8fa70ab8 	lw	a3,2744(sp)
+[31m  40176c:	8f9980ac 	lw	t9,fprintf[0m
+  401770:	0320f809 	jalr	t9
+  401774:	00000000 	nop
+--
+  401fa8:	27bd0238 	addiu	sp,sp,568
+  401fac:	27bdffd0 	addiu	sp,sp,-48
+  401fb0:	afbf002c 	sw	ra,44(sp)
+  401fb4:	afb40028 	sw	s4,40(sp)
+  401fb8:	afb30024 	sw	s3,36(sp)
+  401fbc:	afb20020 	sw	s2,32(sp)
+  401fc0:	afb1001c 	sw	s1,28(sp)
+  401fc4:	afb00018 	sw	s0,24(sp)
+  401fc8:	3c1c0042 	lui	gp,0x42
+  401fcc:	279cb0e0 	addiu	gp,gp,-20256
+  401fd0:	afbc0010 	sw	gp,16(sp)
+  401fd4:	00808021 	move	s0,a0
+  401fd8:	10800051 	beqz	a0,402120 <_ftext@@Base+0x15e0>
+  401fdc:	00e09021 	move	s2,a3
+  401fe0:	2cc20015 	sltiu	v0,a2,21
+  401fe4:	1040004e 	beqz	v0,402120 <_ftext@@Base+0x15e0>
+  401fe8:	00061880 	sll	v1,a2,0x2
+  401fec:	3c020040 	lui	v0,0x40
+  401ff0:	24423058 	addiu	v0,v0,12376
+  401ff4:	00431021 	addu	v0,v0,v1
+  401ff8:	8c420000 	lw	v0,0(v0)
+  401ffc:	00400008 	jr	v0
+  402000:	00000000 	nop
+  402004:	3c050040 	lui	a1,0x40
+  402008:	8ce60000 	lw	a2,0(a3)
+[31m  40200c:	8f9980ac 	lw	t9,fprintf[0m
+  402010:	0320f809 	jalr	t9
+  402014:	24a52dc8 	addiu	a1,a1,11720
+  402018:	10000041 	b	402120 <_ftext@@Base+0x15e0>
+  40201c:	00000000 	nop
+  402020:	3c050040 	lui	a1,0x40
+  402024:	84e60000 	lh	a2,0(a3)
+[31m  402028:	8f9980ac 	lw	t9,fprintf[0m
+  40202c:	0320f809 	jalr	t9
+  402030:	24a52dc8 	addiu	a1,a1,11720
+  402034:	1000003a 	b	402120 <_ftext@@Base+0x15e0>
+  402038:	00000000 	nop
+  40203c:	3c050040 	lui	a1,0x40
+  402040:	80e60000 	lb	a2,0(a3)
+[31m  402044:	8f9980ac 	lw	t9,fprintf[0m
+  402048:	0320f809 	jalr	t9
+  40204c:	24a52dc8 	addiu	a1,a1,11720
+  402050:	10000033 	b	402120 <_ftext@@Base+0x15e0>
+  402054:	00000000 	nop
+  402058:	3c050040 	lui	a1,0x40
+  40205c:	8ce60000 	lw	a2,0(a3)
+[31m  402060:	8f9980ac 	lw	t9,fprintf[0m
+  402064:	0320f809 	jalr	t9
+  402068:	24a52dcc 	addiu	a1,a1,11724
+  40206c:	1000002c 	b	402120 <_ftext@@Base+0x15e0>
+  402070:	00000000 	nop
+  402074:	3c050040 	lui	a1,0x40
+  402078:	94e60000 	lhu	a2,0(a3)
+[31m  40207c:	8f9980ac 	lw	t9,fprintf[0m
+  402080:	0320f809 	jalr	t9
+  402084:	24a52dd4 	addiu	a1,a1,11732
+  402088:	10000025 	b	402120 <_ftext@@Base+0x15e0>
+  40208c:	00000000 	nop
+  402090:	3c050040 	lui	a1,0x40
+  402094:	90e60000 	lbu	a2,0(a3)
+[31m  402098:	8f9980ac 	lw	t9,fprintf[0m
+  40209c:	0320f809 	jalr	t9
+  4020a0:	24a52ddc 	addiu	a1,a1,11740
+  4020a4:	1000001e 	b	402120 <_ftext@@Base+0x15e0>
+  4020a8:	00000000 	nop
+  4020ac:	3c050040 	lui	a1,0x40
+  4020b0:	24a52db0 	addiu	a1,a1,11696
+[31m  4020b4:	8f9980ac 	lw	t9,fprintf[0m
+  4020b8:	0320f809 	jalr	t9
+  4020bc:	00e03021 	move	a2,a3
+  4020c0:	10000017 	b	402120 <_ftext@@Base+0x15e0>
+  4020c4:	00000000 	nop
+  4020c8:	24c6fffb 	addiu	a2,a2,-5
+  4020cc:	24130001 	li	s3,1
+  4020d0:	00d39804 	sllv	s3,s3,a2
+  4020d4:	1a60000e 	blez	s3,402110 <_ftext@@Base+0x15d0>
+  4020d8:	00008821 	move	s1,zero
+  4020dc:	3c140040 	lui	s4,0x40
+  4020e0:	26942de4 	addiu	s4,s4,11748
+  4020e4:	02511021 	addu	v0,s2,s1
+  4020e8:	02002021 	move	a0,s0
+  4020ec:	90460000 	lbu	a2,0(v0)
+[31m  4020f0:	8f9980ac 	lw	t9,fprintf[0m
+  4020f4:	0320f809 	jalr	t9
+  4020f8:	02802821 	move	a1,s4
+--
+  4021e0:	8fbc0010 	lw	gp,16(sp)
+  4021e4:	1440004b 	bnez	v0,402314 <_ftext@@Base+0x17d4>
+  4021e8:	3c040040 	lui	a0,0x40
+  4021ec:	24842d18 	addiu	a0,a0,11544
+  4021f0:	02002821 	move	a1,s0
+  4021f4:	8f998034 	lw	t9,-32716(gp)
+  4021f8:	0320f809 	jalr	t9
+  4021fc:	27a6021c 	addiu	a2,sp,540
+  402200:	8fbc0010 	lw	gp,16(sp)
+  402204:	8fbe021c 	lw	s8,540(sp)
+  402208:	13c0003b 	beqz	s8,4022f8 <_ftext@@Base+0x17b8>
+  40220c:	3c170040 	lui	s7,0x40
+  402210:	3c020040 	lui	v0,0x40
+  402214:	24422d50 	addiu	v0,v0,11600
+  402218:	afa20220 	sw	v0,544(sp)
+  40221c:	26f72e00 	addiu	s7,s7,11776
+  402220:	27b50018 	addiu	s5,sp,24
+  402224:	8f998050 	lw	t9,-32688(gp)
+  402228:	0320f809 	jalr	t9
+  40222c:	03c02021 	move	a0,s8
+  402230:	8fbc0010 	lw	gp,16(sp)
+  402234:	0440002d 	bltz	v0,4022ec <_ftext@@Base+0x17ac>
+  402238:	00409821 	move	s3,v0
+  40223c:	02802021 	move	a0,s4
+  402240:	8fa50220 	lw	a1,544(sp)
+[31m  402244:	8f9980ac 	lw	t9,fprintf[0m
+  402248:	0320f809 	jalr	t9
+  40224c:	03c03021 	move	a2,s8
+--
+  40225c:	8f998080 	lw	t9,-32640(gp)
+  402260:	0320f809 	jalr	t9
+  402264:	02202821 	move	a1,s1
+  402268:	8fbc0010 	lw	gp,16(sp)
+  40226c:	1040001f 	beqz	v0,4022ec <_ftext@@Base+0x17ac>
+  402270:	00409021 	move	s2,v0
+  402274:	02602021 	move	a0,s3
+  402278:	8f9980bc 	lw	t9,-32580(gp)
+  40227c:	0320f809 	jalr	t9
+  402280:	02202821 	move	a1,s1
+  402284:	8fbc0010 	lw	gp,16(sp)
+  402288:	00408021 	move	s0,v0
+  40228c:	8f99806c 	lw	t9,-32660(gp)
+  402290:	0320f809 	jalr	t9
+  402294:	00402021 	move	a0,v0
+  402298:	8fbc0010 	lw	gp,16(sp)
+  40229c:	0040b021 	move	s6,v0
+  4022a0:	02002021 	move	a0,s0
+  4022a4:	8f998038 	lw	t9,-32712(gp)
+  4022a8:	0320f809 	jalr	t9
+  4022ac:	02a02821 	move	a1,s5
+  4022b0:	8fbc0010 	lw	gp,16(sp)
+  4022b4:	0440000d 	bltz	v0,4022ec <_ftext@@Base+0x17ac>
+  4022b8:	02802021 	move	a0,s4
+  4022bc:	02e02821 	move	a1,s7
+[31m  4022c0:	8f9980ac 	lw	t9,fprintf[0m
+  4022c4:	0320f809 	jalr	t9
+  4022c8:	02403021 	move	a2,s2
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m11[0m times [0;33muserconfig[0m
+

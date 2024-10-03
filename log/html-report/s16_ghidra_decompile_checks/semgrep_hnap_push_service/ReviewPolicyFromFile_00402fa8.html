@@ -1,0 +1,698 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_hnap_push_service.html" title="./../semgrep_hnap_push_service.html" >&laquo; Back to semgrep_hnap_push_service</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>undefined4 ReviewPolicyFromFile(void)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  undefined4 uVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  int iVar6;</pre>
+<pre>  int iVar7;</pre>
+<pre>  int iVar8;</pre>
+<pre>  int iVar9;</pre>
+<pre>  int *piVar10;</pre>
+<pre>  int *piVar11;</pre>
+<pre>  int *piVar12;</pre>
+<pre>  int aiStack_55888 [10];</pre>
+<pre>  char acStack_5585f [71];</pre>
+<pre>  undefined auStack_55818 [24];</pre>
+<pre>  undefined auStack_55800 [33];</pre>
+<pre>  char acStack_557df [35];</pre>
+<pre>  int iStack_557bc;</pre>
+<pre>  undefined auStack_557b8 [5152];</pre>
+<pre>  undefined auStack_54398 [24];</pre>
+<pre>  undefined auStack_54380 [33];</pre>
+<pre>  char acStack_5435f [35];</pre>
+<pre>  int iStack_5433c;</pre>
+<pre>  undefined auStack_54338 [68];</pre>
+<pre>  int aiStack_542f4 [1336];</pre>
+<pre>  int iStack_52e14;</pre>
+<pre>  undefined auStack_52e10 [338824];</pre>
+<pre>  char local_288;</pre>
+<pre>  undefined auStack_287 [511];</pre>
+<pre>  int local_88;</pre>
+<pre>  int local_84;</pre>
+<pre>  int local_80;</pre>
+<pre>  int local_7c;</pre>
+<pre>  int local_78;</pre>
+<pre>  char *local_70;</pre>
+<pre>  char *local_6c;</pre>
+<pre>  char *local_68;</pre>
+<pre>  char *local_64;</pre>
+<pre>  char *local_60;</pre>
+<pre>  char *local_5c;</pre>
+<pre>  char *local_58;</pre>
+<pre>  char *local_54;</pre>
+<pre>  char *local_50;</pre>
+<pre>  char *local_4c;</pre>
+<pre>  char *local_48;</pre>
+<pre>  int *local_44;</pre>
+<pre>  int local_40;</pre>
+<pre>  int *local_3c;</pre>
+<pre>  int local_38;</pre>
+<pre>  int local_34;</pre>
+<pre>  int local_30;</pre>
+<pre>  </pre>
+<pre>  local_288 = '\0';</pre>
+<pre><span class="green">  memset(auStack_287,0,0x1ff)</span></span></pre>
+<pre>  local_88 = 0;</pre>
+<pre>  local_84 = 0;</pre>
+<pre>  local_30 = ixmlLoadDocument("/mnt/flash/config/hnap_policy.xml");</pre>
+<pre>  if (local_30 == 0) {</pre>
+<pre>    return 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  local_38 = ixmlElement_getElementsByTagName(local_30,"PolicyInfo");</pre>
+<pre>  if (local_38 == 0) {</pre>
+<pre><span class="green">    memset(aiStack_55888,0,0x55600)</span></span></pre>
+<pre>LAB_00404c9c:</pre>
+<pre>    ixmlNodeList_free(local_38);</pre>
+<pre>    ixmlDocument_free(local_30);</pre>
+<pre>LAB_00404cdc:</pre>
+<pre>    local_34 = 0;</pre>
+<pre>    local_30 = 0;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_34 = ixmlNodeList_length(local_38);</pre>
+<pre><span class="green">    memset(aiStack_55888,0,0x55600)</span></span></pre>
+<pre>    if (local_34 &lt; 1) goto LAB_00404c9c;</pre>
+<pre>    local_40 = 0;</pre>
+<pre>    local_70 = "ModuleID";</pre>
+<pre>    local_6c = "ModuleType";</pre>
+<pre>    local_68 = "SubType";</pre>
+<pre>    local_58 = "EventID";</pre>
+<pre>    local_54 = "EventDesc";</pre>
+<pre>    local_50 = "ActionID";</pre>
+<pre>    local_4c = "ActionDesc";</pre>
+<pre>    local_48 = "DelayAction";</pre>
+<pre>    local_3c = aiStack_55888;</pre>
+<pre>    do {</pre>
+<pre>      local_44 = (int *)ixmlNodeList_item(local_38,local_40);</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,"Index",&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        iVar2 = atoi(&amp;local_288);</pre>
+<pre>        *local_3c = iVar2;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        *local_3c = 0;</pre>
+<pre>      }</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,"PolicyEnabled",&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        iVar2 = strcasecmp(&amp;local_288,"true");</pre>
+<pre>        if (iVar2 == 0) {</pre>
+<pre>          local_3c[1] = 1;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          local_3c[1] = 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_3c[1] = 0;</pre>
+<pre>      }</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,"PolicyName",&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre><span class="green"><span class="green">        strcpy((char *)(aiStack_55888 + (local_40 * 0x556 + 1) * 2),&amp;local_288)</span></span></span></pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        *(undefined *)(aiStack_55888 + (local_40 * 0x556 + 1) * 2) = 0;</pre>
+<pre>      }</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,"PolicyDesc",&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre><span class="green"><span class="green">        strcpy(acStack_5585f + local_40 * 0x2ab0,&amp;local_288)</span></span></span></pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        acStack_5585f[local_40 * 0x2ab0] = '\0';</pre>
+<pre>      }</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,"PolicyNotification",&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        iVar2 = strcasecmp(&amp;local_288,"true");</pre>
+<pre>        if (iVar2 == 0) {</pre>
+<pre>          local_3c[0x1b] = 1;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          local_3c[0x1b] = 0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_3c[0x1b] = 0;</pre>
+<pre>      }</pre>
+<pre>      iVar2 = ixmlGetElementByTag_s(local_44,"Sender",&amp;local_88);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        local_60 = (char *)ixmlElement_getElementsByTagName(local_88,"Notifier");</pre>
+<pre>        if (local_60 == (char *)0x0) {</pre>
+<pre>          iVar8 = 0;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar9 = ixmlNodeList_length(local_60);</pre>
+<pre>          iVar2 = local_40;</pre>
+<pre>          if (iVar9 &lt; 1) goto LAB_004039d0;</pre>
+<pre>          piVar11 = &amp;iStack_557bc + local_40 * 0xaac;</pre>
+<pre>          iVar8 = 0;</pre>
+<pre>          iVar4 = local_40 * 0x2ab0;</pre>
+<pre>          do {</pre>
+<pre>            uVar3 = ixmlNodeList_item(local_60,iVar8);</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,"DeviceMacID",&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar8 * 0x29 + 0x1c),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_55818[iVar8 * 0xa4 + iVar4] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,local_70,&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre>              iVar5 = atoi(&amp;local_288);</pre>
+<pre>              piVar11[-0x12] = iVar5;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              piVar11[-0x12] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,local_6c,&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar8 * 0x29 + 0x22),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_55800[iVar8 * 0xa4 + iVar4] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,local_68,&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy(acStack_557df + iVar8 * 0xa4 + iVar4,&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              acStack_557df[iVar8 * 0xa4 + iVar4] = '\0';</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,local_58,&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre>              iVar5 = atoi(&amp;local_288);</pre>
+<pre>              *piVar11 = iVar5;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              *piVar11 = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar5 = ixmlGetElementValueByTag_s(uVar3,local_54,&amp;local_288,0x200);</pre>
+<pre>            if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar8 * 0x29 + 0x34),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_557b8[iVar8 * 0xa4 + iVar4] = 0;</pre>
+<pre>            }</pre>
+<pre>            iVar8 = iVar8 + 1;</pre>
+<pre>          } while ((iVar8 &lt; iVar9) &amp;&amp; (piVar11 = piVar11 + 0x29, iVar8 != 0x20));</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_88 = 0;</pre>
+<pre>        local_60 = (char *)0x0;</pre>
+<pre>LAB_004039d0:</pre>
+<pre>        iVar8 = 0;</pre>
+<pre>      }</pre>
+<pre>      local_3c[0xa9c] = iVar8;</pre>
+<pre>      iVar2 = ixmlGetElementByTag_s(local_44,"Receiver",&amp;local_84);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre>        local_64 = (char *)ixmlElement_getElementsByTagName(local_84,"Reactor");</pre>
+<pre>        if (local_64 == (char *)0x0) {</pre>
+<pre>          iVar9 = 0;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          local_5c = (char *)ixmlNodeList_length(local_64);</pre>
+<pre>          iVar2 = local_40;</pre>
+<pre>          if ((int)local_5c &lt; 1) goto LAB_00403e74;</pre>
+<pre>          piVar11 = aiStack_542f4 + local_40 * 0xaac;</pre>
+<pre>          iVar9 = 0;</pre>
+<pre>          iVar8 = local_40 * 0x2ab0;</pre>
+<pre>          do {</pre>
+<pre>            uVar3 = ixmlNodeList_item(local_64,iVar9);</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,"DeviceMacID",&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar9 * 0x2b + 0x53c),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_54398[iVar9 * 0xac + iVar8] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_70,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              iVar4 = atoi(&amp;local_288);</pre>
+<pre>              piVar11[-0x24] = iVar4;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              piVar11[-0x24] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_6c,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar9 * 0x2b + 0x542),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_54380[iVar9 * 0xac + iVar8] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_68,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy(acStack_5435f + iVar9 * 0xac + iVar8,&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              acStack_5435f[iVar9 * 0xac + iVar8] = '\0';</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_50,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              iVar4 = atoi(&amp;local_288);</pre>
+<pre>              piVar11[-0x12] = iVar4;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              piVar11[-0x12] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_4c,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre><span class="green"><span class="green">              strcpy((char *)(aiStack_55888 + iVar2 * 0xaac + iVar9 * 0x2b + 0x554),&amp;local_288)</span></span></span></pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              auStack_54338[iVar9 * 0xac + iVar8] = 0;</pre>
+<pre>            }</pre>
+<pre><span class="green">            memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>            iVar4 = ixmlGetElementValueByTag_s(uVar3,local_48,&amp;local_288,0x200);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              iVar4 = atoi(&amp;local_288);</pre>
+<pre>              *piVar11 = iVar4;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              *piVar11 = 0;</pre>
+<pre>            }</pre>
+<pre>            iVar9 = iVar9 + 1;</pre>
+<pre>          } while ((iVar9 &lt; (int)local_5c) &amp;&amp; (piVar11 = piVar11 + 0x2b, iVar9 != 0x20));</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_84 = 0;</pre>
+<pre>        local_64 = (char *)0x0;</pre>
+<pre>LAB_00403e74:</pre>
+<pre>        iVar9 = 0;</pre>
+<pre>      }</pre>
+<pre>      local_3c[0xa9d] = iVar9;</pre>
+<pre><span class="green">      memset(&amp;local_288,0,0x200)</span></span></pre>
+<pre>      iVar2 = ixmlGetElementValueByTag_s(local_44,&amp;DAT_00414cec,&amp;local_288,0x200);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre><span class="green"><span class="green">        strcpy((char *)(aiStack_55888 + local_40 * 0xaac + 0xa9e),&amp;local_288)</span></span></span></pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        auStack_52e10[local_40 * 0x2ab0] = 0;</pre>
+<pre>      }</pre>
+<pre>      ixmlNodeList_free(local_64);</pre>
+<pre>      ixmlNodeList_free(local_60);</pre>
+<pre>      if (local_84 != 0) {</pre>
+<pre>        ixmlNode_free();</pre>
+<pre>        local_84 = 0;</pre>
+<pre>      }</pre>
+<pre>      if (local_88 != 0) {</pre>
+<pre>        ixmlNode_free();</pre>
+<pre>        local_88 = 0;</pre>
+<pre>      }</pre>
+<pre>      local_40 = local_40 + 1;</pre>
+<pre>      if (local_34 &lt;= local_40) {</pre>
+<pre>        ixmlNodeList_free(local_38);</pre>
+<pre>        ixmlDocument_free(local_30);</pre>
+<pre>        if (local_40 &lt; 1) goto LAB_00404cdc;</pre>
+<pre>        goto LAB_004040b4;</pre>
+<pre>      }</pre>
+<pre>      local_3c = local_3c + 0xaac;</pre>
+<pre>    } while (local_40 != 0x20);</pre>
+<pre>    ixmlNodeList_free(local_38);</pre>
+<pre>    ixmlDocument_free(local_30);</pre>
+<pre>LAB_004040b4:</pre>
+<pre>    piVar11 = &amp;iStack_52e14;</pre>
+<pre>    local_30 = 0;</pre>
+<pre>    local_34 = 0;</pre>
+<pre>    local_38 = 0;</pre>
+<pre>    local_48 = (char *)0x0;</pre>
+<pre>    local_44 = &amp;local_80;</pre>
+<pre>    local_70 = "422015";</pre>
+<pre>    local_6c = "422017";</pre>
+<pre>    local_68 = "422019";</pre>
+<pre>    local_64 = "422021";</pre>
+<pre>    local_60 = "420011";</pre>
+<pre>    local_5c = "420010";</pre>
+<pre>    local_58 = "422022";</pre>
+<pre>    local_54 = "422023";</pre>
+<pre>    local_50 = "422210";</pre>
+<pre>    local_4c = "422230";</pre>
+<pre>    do {</pre>
+<pre>      piVar10 = local_44;</pre>
+<pre>      *local_44 = 0;</pre>
+<pre>      piVar10[1] = 0;</pre>
+<pre>      piVar10[2] = 0;</pre>
+<pre>      if ((piVar11[-0xa9c] == 1) &amp;&amp; (0 &lt; *piVar11)) {</pre>
+<pre>        piVar10 = &amp;iStack_5433c + (int)local_48 * 0xaac;</pre>
+<pre>        piVar12 = &amp;iStack_557bc + (int)local_48 * 0xaac;</pre>
+<pre>        local_3c = (int *)0x0;</pre>
+<pre>        iVar2 = 0;</pre>
+<pre>        iVar9 = (int)local_48 * 0x2ab0;</pre>
+<pre>        do {</pre>
+<pre>          iVar8 = FUN_00402d50(*piVar10);</pre>
+<pre>          iVar4 = FUN_00402e94(auStack_54398 + iVar2 * 0xac + iVar9);</pre>
+<pre>          iVar7 = *piVar10;</pre>
+<pre>          iVar5 = atoi(local_70);</pre>
+<pre>          if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>            fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_SNAP_NOTIFY\n",*piVar12);</pre>
+<pre>            local_38 = 1;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar5 = atoi(local_6c);</pre>
+<pre>            if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>              fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_SNAP_MYDLINK\n",*piVar12);</pre>
+<pre>              local_38 = 1;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar5 = atoi(local_68);</pre>
+<pre>              if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_VCLIP_NOTIFY\n",*piVar12</pre>
+<pre>                       );</pre>
+<pre>                local_34 = 1;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar5 = atoi(local_64);</pre>
+<pre>                if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                  fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_VCLIP_MYDLINK\n",</pre>
+<pre>                          *piVar12);</pre>
+<pre>                  local_34 = 1;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  iVar5 = atoi(local_60);</pre>
+<pre>                  if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                    fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_NOTIFY_MYDLINK\n",</pre>
+<pre>                            *piVar12);</pre>
+<pre>                    local_30 = 1;</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>                    iVar5 = atoi(local_5c);</pre>
+<pre>                    if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                      fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_EMAIL_MYDLINK\n",</pre>
+<pre>                              *piVar12);</pre>
+<pre>                      local_30 = 1;</pre>
+<pre>                    }</pre>
+<pre>                    else {</pre>
+<pre>                      iVar5 = atoi(local_58);</pre>
+<pre>                      if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                        fprintf(stderr,"ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_SNAP_STORAGE\n",</pre>
+<pre>                                *piVar12);</pre>
+<pre>                        local_38 = 1;</pre>
+<pre>                      }</pre>
+<pre>                      else {</pre>
+<pre>                        iVar5 = atoi(local_54);</pre>
+<pre>                        if (((iVar7 == iVar5) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                          fprintf(stderr,</pre>
+<pre>                                  "ReviewPolicyFromFile -&gt; Event: %d ACTION_ID_VCLIP_STORAGE\n",</pre>
+<pre>                                  *piVar12);</pre>
+<pre>                          local_34 = 1;</pre>
+<pre>                        }</pre>
+<pre>                        else {</pre>
+<pre>                          iVar6 = atoi(local_50);</pre>
+<pre>                          iVar1 = local_78;</pre>
+<pre>                          iVar5 = local_7c;</pre>
+<pre>                          if (((iVar7 == iVar6) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                            if (local_80 == 0) {</pre>
+<pre>                              local_80 = iVar7;</pre>
+<pre>                              if ((((local_3c == (int *)0x0) &amp;&amp; (iVar7 != 0)) &amp;&amp; (local_7c != 0)) &amp;&amp;</pre>
+<pre>                                 ((local_78 != 0 &amp;&amp; (iVar8 = atoi(local_50), iVar7 == iVar8)))) {</pre>
+<pre>                                iVar8 = atoi(local_4c);</pre>
+<pre>                                if ((iVar5 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8)) {</pre>
+<pre>LAB_00404a90:</pre>
+<pre>                                  local_38 = 1;</pre>
+<pre>                                }</pre>
+<pre>                                else {</pre>
+<pre>                                  iVar8 = atoi("422231");</pre>
+<pre>                                  if ((iVar5 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8))</pre>
+<pre>                                  {</pre>
+<pre>LAB_00404aa8:</pre>
+<pre>                                    local_34 = 1;</pre>
+<pre>                                  }</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                            }</pre>
+<pre>                            else {</pre>
+<pre>LAB_00404abc:</pre>
+<pre>                              local_3c = (int *)0x1;</pre>
+<pre>                            }</pre>
+<pre>                          }</pre>
+<pre>                          else {</pre>
+<pre>                            iVar6 = atoi(local_4c);</pre>
+<pre>                            iVar1 = local_78;</pre>
+<pre>                            iVar5 = local_80;</pre>
+<pre>                            if (((iVar7 == iVar6) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                              if (local_7c != 0) goto LAB_00404abc;</pre>
+<pre>                              local_7c = iVar7;</pre>
+<pre>                              if ((((local_3c == (int *)0x0) &amp;&amp; (local_80 != 0)) &amp;&amp; (iVar7 != 0)) &amp;&amp;</pre>
+<pre>                                 ((local_78 != 0 &amp;&amp; (iVar8 = atoi(local_50), iVar5 == iVar8)))) {</pre>
+<pre>                                iVar8 = atoi(local_4c);</pre>
+<pre>                                if ((iVar7 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8))</pre>
+<pre>                                goto LAB_00404a90;</pre>
+<pre>                                iVar8 = atoi("422231");</pre>
+<pre>                                if ((iVar7 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8))</pre>
+<pre>                                goto LAB_00404aa8;</pre>
+<pre>                              }</pre>
+<pre>                            }</pre>
+<pre>                            else {</pre>
+<pre>                              iVar6 = atoi("422231");</pre>
+<pre>                              iVar1 = local_78;</pre>
+<pre>                              iVar5 = local_80;</pre>
+<pre>                              if (((iVar7 == iVar6) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                                if (local_7c != 0) goto LAB_00404abc;</pre>
+<pre>                                local_7c = iVar7;</pre>
+<pre>                                if ((((local_3c == (int *)0x0) &amp;&amp; (local_80 != 0)) &amp;&amp; (iVar7 != 0))</pre>
+<pre>                                   &amp;&amp; ((local_78 != 0 &amp;&amp; (iVar8 = atoi(local_50), iVar5 == iVar8))))</pre>
+<pre>                                {</pre>
+<pre>                                  iVar8 = atoi(local_4c);</pre>
+<pre>                                  if ((iVar7 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8))</pre>
+<pre>                                  goto LAB_00404a90;</pre>
+<pre>                                  iVar8 = atoi("422231");</pre>
+<pre>                                  if ((iVar7 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar1 == iVar8))</pre>
+<pre>                                  goto LAB_00404aa8;</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                              else {</pre>
+<pre>                                iVar6 = atoi("422243");</pre>
+<pre>                                iVar1 = local_7c;</pre>
+<pre>                                iVar5 = local_80;</pre>
+<pre>                                if (((iVar7 == iVar6) &amp;&amp; (iVar8 == 0)) &amp;&amp; (iVar4 == 0)) {</pre>
+<pre>                                  if (local_78 != 0) goto LAB_00404abc;</pre>
+<pre>                                  local_78 = iVar7;</pre>
+<pre>                                  if ((((local_3c == (int *)0x0) &amp;&amp; (local_80 != 0)) &amp;&amp;</pre>
+<pre>                                      (local_7c != 0)) &amp;&amp;</pre>
+<pre>                                     ((iVar7 != 0 &amp;&amp; (iVar8 = atoi(local_50), iVar5 == iVar8)))) {</pre>
+<pre>                                    iVar8 = atoi(local_4c);</pre>
+<pre>                                    if ((iVar1 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar7 == iVar8)</pre>
+<pre>                                       ) goto LAB_00404a90;</pre>
+<pre>                                    iVar8 = atoi("422231");</pre>
+<pre>                                    if ((iVar1 == iVar8) &amp;&amp; (iVar8 = atoi("422243"), iVar7 == iVar8)</pre>
+<pre>                                       ) goto LAB_00404aa8;</pre>
+<pre>                                  }</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                            }</pre>
+<pre>                          }</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          iVar2 = iVar2 + 1;</pre>
+<pre>          piVar10 = piVar10 + 0x2b;</pre>
+<pre>          piVar12 = piVar12 + 0x29;</pre>
+<pre>        } while (iVar2 &lt; *piVar11);</pre>
+<pre>      }</pre>
+<pre>      local_48 = local_48 + 1;</pre>
+<pre>      piVar11 = piVar11 + 0xaac;</pre>
+<pre>    } while ((int)local_48 &lt; local_40);</pre>
+<pre>    if (local_38 != 0) {</pre>
+<pre><span class="green">      system("/usr/sbin/msger eventd 0 eiotenablesnapshot 0 1 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>      goto LAB_00404b94;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre><span class="green">  system("/usr/sbin/msger eventd 0 eiotenablesnapshot 0 0 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>LAB_00404b94:</pre>
+<pre>  if (local_34 == 0) {</pre>
+<pre><span class="green">    system("/usr/sbin/msger eventd 0 eiotenablevideoclip 0 0 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    system("/usr/sbin/msger eventd 0 eiotenablevideoclip 0 1 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>  }</pre>
+<pre>  if (local_30 == 0) {</pre>
+<pre><span class="green">    system("/usr/sbin/msger eventd 0 eiotenablenotification 0 0 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre><span class="green">    system("/usr/sbin/msger eventd 0 eiotenablenotification 0 1 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>  }</pre>
+<pre>  return 0;</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

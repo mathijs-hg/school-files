@@ -1,0 +1,532 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s13_weak_func_check.html" title="./../s13_weak_func_check.html" >&laquo; Back to s13_weak_func_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> tear down of </span><span class="orange">libweb.so.0</span></pre>
+<br />
+<pre>    38bc:	8f99810c 	lw	t9,-32500(gp)</pre>
+<pre>    38c0:	0320f809 	jalr	t9</pre>
+<pre>    38c4:	00402021 	move	a0,v0</pre>
+<pre>    38c8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    38cc:	8e040020 	lw	a0,32(s0)</pre>
+<pre>    38d0:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    38d4:	0320f809 	jalr	t9</pre>
+<pre>    38d8:	ae020008 	sw	v0,8(s0)</pre>
+<pre>    38dc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    38e0:	8f99810c 	lw	t9,-32500(gp)</pre>
+<pre>    38e4:	0320f809 	jalr	t9</pre>
+<pre>    38e8:	00402021 	move	a0,v0</pre>
+<pre>    38ec:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    38f0:	8e040020 	lw	a0,32(s0)</pre>
+<pre>    38f4:	8f998118 	lw	t9,-32488(gp)</pre>
+<pre>    38f8:	0320f809 	jalr	t9</pre>
+<pre>    38fc:	ae020010 	sw	v0,16(s0)</pre>
+<pre>    3900:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    3904:	8f99810c 	lw	t9,-32500(gp)</pre>
+<pre>    3908:	0320f809 	jalr	t9</pre>
+<pre>    390c:	00402021 	move	a0,v0</pre>
+<pre>    3910:	02402021 	move	a0,s2</pre>
+<pre>    3914:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    3918:	ae02000c 	sw	v0,12(s0)</pre>
+<pre>    391c:	8f838018 	lw	v1,-32744(gp)</pre>
+<pre><span class="red">    3920:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    3924:	8c7315f4 	lw	s3,5620(v1)</pre>
+<pre>    3928:	a2200000 	sb	zero,0(s1)</pre>
+<pre>--</pre>
+<pre>    4d84:	0320f809 	jalr	t9</pre>
+<pre>    4d88:	0040b021 	move	s6,v0</pre>
+<pre>    4d8c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4d90:	8fa50074 	lw	a1,116(sp)</pre>
+<pre>    4d94:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    4d98:	8fa40070 	lw	a0,112(sp)</pre>
+<pre>    4d9c:	0320f809 	jalr	t9</pre>
+<pre>    4da0:	00000000 	nop</pre>
+<pre>    4da4:	02403821 	move	a3,s2</pre>
+<pre>    4da8:	27c5fd60 	addiu	a1,s8,-672</pre>
+<pre>    4dac:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4db0:	00403021 	move	a2,v0</pre>
+<pre>    4db4:	02c02021 	move	a0,s6</pre>
+<pre>    4db8:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    4dbc:	0320f809 	jalr	t9</pre>
+<pre>    4dc0:	afb40010 	sw	s4,16(sp)</pre>
+<pre>    4dc4:	02c02021 	move	a0,s6</pre>
+<pre>    4dc8:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4dcc:	8fa3007c 	lw	v1,124(sp)</pre>
+<pre>    4dd0:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    4dd4:	0320f809 	jalr	t9</pre>
+<pre>    4dd8:	00602821 	move	a1,v1</pre>
+<pre>    4ddc:	02a02021 	move	a0,s5</pre>
+<pre>    4de0:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4de4:	00402821 	move	a1,v0</pre>
+<pre><span class="red">    4de8:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    4dec:	0320f809 	jalr	t9</pre>
+<pre>    4df0:	0040b821 	move	s7,v0</pre>
+<pre>--</pre>
+<pre>    4e74:	0040b821 	move	s7,v0</pre>
+<pre>    4e78:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4e7c:	02e2b821 	addu	s7,s7,v0</pre>
+<pre>    4e80:	26e40002 	addiu	a0,s7,2</pre>
+<pre>    4e84:	8f9981ec 	lw	t9,-32276(gp)</pre>
+<pre>    4e88:	0320f809 	jalr	t9</pre>
+<pre>    4e8c:	26f70001 	addiu	s7,s7,1</pre>
+<pre>    4e90:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4e94:	00402021 	move	a0,v0</pre>
+<pre>    4e98:	8fa600b0 	lw	a2,176(sp)</pre>
+<pre>    4e9c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    4ea0:	8fa700c4 	lw	a3,196(sp)</pre>
+<pre>    4ea4:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    4ea8:	24a5fd90 	addiu	a1,a1,-624</pre>
+<pre>    4eac:	0320f809 	jalr	t9</pre>
+<pre>    4eb0:	afa2007c 	sw	v0,124(sp)</pre>
+<pre>    4eb4:	02e02821 	move	a1,s7</pre>
+<pre>    4eb8:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4ebc:	8fa3007c 	lw	v1,124(sp)</pre>
+<pre>    4ec0:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    4ec4:	0320f809 	jalr	t9</pre>
+<pre>    4ec8:	00602021 	move	a0,v1</pre>
+<pre>    4ecc:	02002021 	move	a0,s0</pre>
+<pre>    4ed0:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4ed4:	00402821 	move	a1,v0</pre>
+<pre><span class="red">    4ed8:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    4edc:	0320f809 	jalr	t9</pre>
+<pre>    4ee0:	0040b821 	move	s7,v0</pre>
+<pre>--</pre>
+<pre>    4fa0:	02c2b021 	addu	s6,s6,v0</pre>
+<pre>    4fa4:	8f9981ec 	lw	t9,-32276(gp)</pre>
+<pre>    4fa8:	0320f809 	jalr	t9</pre>
+<pre>    4fac:	26c40001 	addiu	a0,s6,1</pre>
+<pre>    4fb0:	02a03021 	move	a2,s5</pre>
+<pre>    4fb4:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4fb8:	0040a821 	move	s5,v0</pre>
+<pre>    4fbc:	8fa200cc 	lw	v0,204(sp)</pre>
+<pre>    4fc0:	02403821 	move	a3,s2</pre>
+<pre>    4fc4:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    4fc8:	02a02021 	move	a0,s5</pre>
+<pre>    4fcc:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    4fd0:	24a5fd84 	addiu	a1,a1,-636</pre>
+<pre>    4fd4:	afa20010 	sw	v0,16(sp)</pre>
+<pre>    4fd8:	afb40014 	sw	s4,20(sp)</pre>
+<pre>    4fdc:	afb10018 	sw	s1,24(sp)</pre>
+<pre>    4fe0:	0320f809 	jalr	t9</pre>
+<pre>    4fe4:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    4fe8:	02c02821 	move	a1,s6</pre>
+<pre>    4fec:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    4ff0:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    4ff4:	0320f809 	jalr	t9</pre>
+<pre>    4ff8:	02a02021 	move	a0,s5</pre>
+<pre>    4ffc:	02602021 	move	a0,s3</pre>
+<pre>    5000:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre><span class="red">    5004:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5008:	0320f809 	jalr	t9</pre>
+<pre>    500c:	00402821 	move	a1,v0</pre>
+<pre>--</pre>
+<pre>    50b0:	00a31821 	addu	v1,a1,v1</pre>
+<pre>    50b4:	24630002 	addiu	v1,v1,2</pre>
+<pre>    50b8:	00621821 	addu	v1,v1,v0</pre>
+<pre>    50bc:	8f9981ec 	lw	t9,-32276(gp)</pre>
+<pre>    50c0:	24640001 	addiu	a0,v1,1</pre>
+<pre>    50c4:	0320f809 	jalr	t9</pre>
+<pre>    50c8:	afa3007c 	sw	v1,124(sp)</pre>
+<pre>    50cc:	02e03021 	move	a2,s7</pre>
+<pre>    50d0:	27c5fd60 	addiu	a1,s8,-672</pre>
+<pre>    50d4:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    50d8:	00402021 	move	a0,v0</pre>
+<pre>    50dc:	8fa70080 	lw	a3,128(sp)</pre>
+<pre>    50e0:	0040b821 	move	s7,v0</pre>
+<pre>    50e4:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    50e8:	0320f809 	jalr	t9</pre>
+<pre>    50ec:	afb60010 	sw	s6,16(sp)</pre>
+<pre>    50f0:	02e02021 	move	a0,s7</pre>
+<pre>    50f4:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    50f8:	8fa3007c 	lw	v1,124(sp)</pre>
+<pre>    50fc:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    5100:	0320f809 	jalr	t9</pre>
+<pre>    5104:	00602821 	move	a1,v1</pre>
+<pre>    5108:	02a02021 	move	a0,s5</pre>
+<pre>    510c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5110:	00402821 	move	a1,v0</pre>
+<pre><span class="red">    5114:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5118:	0320f809 	jalr	t9</pre>
+<pre>    511c:	0040b021 	move	s6,v0</pre>
+<pre>--</pre>
+<pre>    515c:	8f998070 	lw	t9,strlen</pre>
+<pre>    5160:	02402021 	move	a0,s2</pre>
+<pre>    5164:	0320f809 	jalr	t9</pre>
+<pre>    5168:	00000000 	nop</pre>
+<pre>    516c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5170:	24440043 	addiu	a0,v0,67</pre>
+<pre>    5174:	8f9981ec 	lw	t9,-32276(gp)</pre>
+<pre>    5178:	0320f809 	jalr	t9</pre>
+<pre>    517c:	24540042 	addiu	s4,v0,66</pre>
+<pre>    5180:	02a03021 	move	a2,s5</pre>
+<pre>    5184:	27c5fd60 	addiu	a1,s8,-672</pre>
+<pre>    5188:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    518c:	02403821 	move	a3,s2</pre>
+<pre>    5190:	00402021 	move	a0,v0</pre>
+<pre>    5194:	afb00010 	sw	s0,16(sp)</pre>
+<pre>    5198:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    519c:	0320f809 	jalr	t9</pre>
+<pre>    51a0:	00408821 	move	s1,v0</pre>
+<pre>    51a4:	02802821 	move	a1,s4</pre>
+<pre>    51a8:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    51ac:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    51b0:	0320f809 	jalr	t9</pre>
+<pre>    51b4:	02202021 	move	a0,s1</pre>
+<pre>    51b8:	02602021 	move	a0,s3</pre>
+<pre>    51bc:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre><span class="red">    51c0:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    51c4:	0320f809 	jalr	t9</pre>
+<pre>    51c8:	00402821 	move	a1,v0</pre>
+<pre>--</pre>
+<pre>    5204:	0320f809 	jalr	t9</pre>
+<pre>    5208:	0040a021 	move	s4,v0</pre>
+<pre>    520c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5210:	0282a021 	addu	s4,s4,v0</pre>
+<pre>    5214:	26840002 	addiu	a0,s4,2</pre>
+<pre>    5218:	8f9981ec 	lw	t9,-32276(gp)</pre>
+<pre>    521c:	0320f809 	jalr	t9</pre>
+<pre>    5220:	26940001 	addiu	s4,s4,1</pre>
+<pre>    5224:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5228:	00402021 	move	a0,v0</pre>
+<pre>    522c:	8fa600b0 	lw	a2,176(sp)</pre>
+<pre>    5230:	00408821 	move	s1,v0</pre>
+<pre>    5234:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    5238:	8fa700c4 	lw	a3,196(sp)</pre>
+<pre>    523c:	8f9980cc 	lw	t9,-32564(gp)</pre>
+<pre>    5240:	0320f809 	jalr	t9</pre>
+<pre>    5244:	24a5fd90 	addiu	a1,a1,-624</pre>
+<pre>    5248:	02802821 	move	a1,s4</pre>
+<pre>    524c:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5250:	8f9981b0 	lw	t9,-32336(gp)</pre>
+<pre>    5254:	0320f809 	jalr	t9</pre>
+<pre>    5258:	02202021 	move	a0,s1</pre>
+<pre>    525c:	02002021 	move	a0,s0</pre>
+<pre>    5260:	8fbc0020 	lw	gp,32(sp)</pre>
+<pre>    5264:	00402821 	move	a1,v0</pre>
+<pre><span class="red">    5268:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    526c:	0320f809 	jalr	t9</pre>
+<pre>    5270:	0040a021 	move	s4,v0</pre>
+<pre>--</pre>
+<pre>    5364:	8fbc0030 	lw	gp,48(sp)</pre>
+<pre>    5368:	24060040 	li	a2,64</pre>
+<pre>    536c:	8fa40500 	lw	a0,1280(sp)</pre>
+<pre>    5370:	8f998100 	lw	t9,-32512(gp)</pre>
+<pre>    5374:	afa000fc 	sw	zero,252(sp)</pre>
+<pre>    5378:	aec00004 	sw	zero,4(s6)</pre>
+<pre>    537c:	aec00008 	sw	zero,8(s6)</pre>
+<pre>    5380:	aec0000c 	sw	zero,12(s6)</pre>
+<pre>    5384:	aec00010 	sw	zero,16(s6)</pre>
+<pre>    5388:	aec00014 	sw	zero,20(s6)</pre>
+<pre>    538c:	aec00018 	sw	zero,24(s6)</pre>
+<pre>    5390:	aec0001c 	sw	zero,28(s6)</pre>
+<pre>    5394:	0320f809 	jalr	t9</pre>
+<pre>    5398:	aec00020 	sw	zero,32(s6)</pre>
+<pre>    539c:	24060040 	li	a2,64</pre>
+<pre>    53a0:	02002021 	move	a0,s0</pre>
+<pre>    53a4:	8fbc0030 	lw	gp,48(sp)</pre>
+<pre>    53a8:	8f998100 	lw	t9,-32512(gp)</pre>
+<pre>    53ac:	0320f809 	jalr	t9</pre>
+<pre>    53b0:	00002821 	move	a1,zero</pre>
+<pre>    53b4:	27a20058 	addiu	v0,sp,88</pre>
+<pre>    53b8:	02c02021 	move	a0,s6</pre>
+<pre>    53bc:	8fbc0030 	lw	gp,48(sp)</pre>
+<pre>    53c0:	26a50007 	addiu	a1,s5,7</pre>
+<pre>    53c4:	ac400020 	sw	zero,32(v0)</pre>
+<pre><span class="red">    53c8:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    53cc:	afa00058 	sw	zero,88(sp)</pre>
+<pre>    53d0:	ac400004 	sw	zero,4(v0)</pre>
+<pre>--</pre>
+<pre>    59b4:	27a50038 	addiu	a1,sp,56</pre>
+<pre>    59b8:	afa0001c 	sw	zero,28(sp)</pre>
+<pre>    59bc:	afa00020 	sw	zero,32(sp)</pre>
+<pre>    59c0:	afa00024 	sw	zero,36(sp)</pre>
+<pre>    59c4:	afa00028 	sw	zero,40(sp)</pre>
+<pre>    59c8:	afa0002c 	sw	zero,44(sp)</pre>
+<pre>    59cc:	afa00030 	sw	zero,48(sp)</pre>
+<pre>    59d0:	afa00034 	sw	zero,52(sp)</pre>
+<pre>    59d4:	0320f809 	jalr	t9</pre>
+<pre>    59d8:	afb30018 	sw	s3,24(sp)</pre>
+<pre>    59dc:	27a40018 	addiu	a0,sp,24</pre>
+<pre>    59e0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    59e4:	00402821 	move	a1,v0</pre>
+<pre>    59e8:	8f9981f4 	lw	t9,-32268(gp)</pre>
+<pre>    59ec:	0320f809 	jalr	t9</pre>
+<pre>    59f0:	2406003a 	li	a2,58</pre>
+<pre>    59f4:	24030001 	li	v1,1</pre>
+<pre>    59f8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    59fc:	10430005 	beq	v0,v1,5a14 &lt;usrDecBasic&commat;&commat;Base+0xdc&gt;</pre>
+<pre>    5a00:	02402021 	move	a0,s2</pre>
+<pre>    5a04:	1053000b 	beq	v0,s3,5a34 &lt;usrDecBasic&commat;&commat;Base+0xfc&gt;</pre>
+<pre>    5a08:	00000000 	nop</pre>
+<pre>    5a0c:	1000ffdf 	b	598c &lt;usrDecBasic&commat;&commat;Base+0x54&gt;</pre>
+<pre>    5a10:	2402fffe 	li	v0,-2</pre>
+<pre>    5a14:	8f828024 	lw	v0,-32732(gp)</pre>
+<pre><span class="red">    5a18:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5a1c:	9042fbe8 	lbu	v0,-1048(v0)</pre>
+<pre>    5a20:	8fa50020 	lw	a1,32(sp)</pre>
+<pre>    5a24:	0320f809 	jalr	t9</pre>
+<pre>    5a28:	a2220000 	sb	v0,0(s1)</pre>
+<pre>    5a2c:	1000ffd7 	b	598c &lt;usrDecBasic&commat;&commat;Base+0x54&gt;</pre>
+<pre>    5a30:	00001021 	move	v0,zero</pre>
+<pre><span class="red">    5a34:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5a38:	8fa50030 	lw	a1,48(sp)</pre>
+<pre>    5a3c:	0320f809 	jalr	t9</pre>
+<pre>    5a40:	02202021 	move	a0,s1</pre>
+<pre>    5a44:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5a48:	8fa50020 	lw	a1,32(sp)</pre>
+<pre><span class="red">    5a4c:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5a50:	0320f809 	jalr	t9</pre>
+<pre>    5a54:	02402021 	move	a0,s2</pre>
+<pre>--</pre>
+<pre>    5e14:	0320f809 	jalr	t9</pre>
+<pre>    5e18:	00403021 	move	a2,v0</pre>
+<pre>    5e1c:	02601021 	move	v0,s3</pre>
+<pre>    5e20:	8fbf0044 	lw	ra,68(sp)</pre>
+<pre>    5e24:	8fbe0040 	lw	s8,64(sp)</pre>
+<pre>    5e28:	8fb7003c 	lw	s7,60(sp)</pre>
+<pre>    5e2c:	8fb60038 	lw	s6,56(sp)</pre>
+<pre>    5e30:	8fb50034 	lw	s5,52(sp)</pre>
+<pre>    5e34:	8fb40030 	lw	s4,48(sp)</pre>
+<pre>    5e38:	8fb3002c 	lw	s3,44(sp)</pre>
+<pre>    5e3c:	8fb20028 	lw	s2,40(sp)</pre>
+<pre>    5e40:	8fb10024 	lw	s1,36(sp)</pre>
+<pre>    5e44:	8fb00020 	lw	s0,32(sp)</pre>
+<pre>    5e48:	03e00008 	jr	ra</pre>
+<pre>    5e4c:	27bd0048 	addiu	sp,sp,72</pre>
+<pre>    5e50:	8f9980e0 	lw	t9,-32544(gp)</pre>
+<pre>    5e54:	8e460000 	lw	a2,0(s2)</pre>
+<pre>    5e58:	0320f809 	jalr	t9</pre>
+<pre>    5e5c:	02202821 	move	a1,s1</pre>
+<pre>    5e60:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5e64:	1840ffcf 	blez	v0,5da4 &lt;usrAuthByAuthenticate&commat;&commat;Base+0x1cc&gt;</pre>
+<pre>    5e68:	00000000 	nop</pre>
+<pre>    5e6c:	8fa30054 	lw	v1,84(sp)</pre>
+<pre>    5e70:	1060ffea 	beqz	v1,5e1c &lt;usrAuthByAuthenticate&commat;&commat;Base+0x244&gt;</pre>
+<pre>    5e74:	00602021 	move	a0,v1</pre>
+<pre><span class="red">    5e78:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    5e7c:	0320f809 	jalr	t9</pre>
+<pre>    5e80:	02002821 	move	a1,s0</pre>
+<pre>--</pre>
+<pre>    60c8:	2652000c 	addiu	s2,s2,12</pre>
+<pre>    60cc:	02002021 	move	a0,s0</pre>
+<pre>    60d0:	24060006 	li	a2,6</pre>
+<pre>    60d4:	8e420004 	lw	v0,4(s2)</pre>
+<pre>    60d8:	8f99813c 	lw	t9,-32452(gp)</pre>
+<pre>    60dc:	1040fff7 	beqz	v0,60bc &lt;usrAuth&commat;&commat;Base+0x1b4&gt;</pre>
+<pre>    60e0:	02802821 	move	a1,s4</pre>
+<pre>    60e4:	0320f809 	jalr	t9</pre>
+<pre>    60e8:	00000000 	nop</pre>
+<pre>    60ec:	02002021 	move	a0,s0</pre>
+<pre>    60f0:	24060007 	li	a2,7</pre>
+<pre>    60f4:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    60f8:	8f99813c 	lw	t9,-32452(gp)</pre>
+<pre>    60fc:	1440ffea 	bnez	v0,60a8 &lt;usrAuth&commat;&commat;Base+0x1a0&gt;</pre>
+<pre>    6100:	02a02821 	move	a1,s5</pre>
+<pre>    6104:	8f9980e0 	lw	t9,-32544(gp)</pre>
+<pre>    6108:	8e260000 	lw	a2,0(s1)</pre>
+<pre>    610c:	0320f809 	jalr	t9</pre>
+<pre>    6110:	02402821 	move	a1,s2</pre>
+<pre>    6114:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    6118:	1840ffe8 	blez	v0,60bc &lt;usrAuth&commat;&commat;Base+0x1b4&gt;</pre>
+<pre>    611c:	00000000 	nop</pre>
+<pre>    6120:	8fa20054 	lw	v0,84(sp)</pre>
+<pre>    6124:	10400004 	beqz	v0,6138 &lt;usrAuth&commat;&commat;Base+0x230&gt;</pre>
+<pre>    6128:	00402021 	move	a0,v0</pre>
+<pre><span class="red">    612c:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    6130:	0320f809 	jalr	t9</pre>
+<pre>    6134:	02002821 	move	a1,s0</pre>
+<pre>--</pre>
+<pre>    f064:	27bd0030 	addiu	sp,sp,48</pre>
+<pre>    f068:	8f828178 	lw	v0,-32392(gp)</pre>
+<pre>    f06c:	8c440000 	lw	a0,0(v0)</pre>
+<pre>    f070:	10800006 	beqz	a0,f08c &lt;scmdl&commat;&commat;Base+0x90&gt;</pre>
+<pre>    f074:	02402821 	move	a1,s2</pre>
+<pre>    f078:	8f99818c 	lw	t9,-32372(gp)</pre>
+<pre>    f07c:	0320f809 	jalr	t9</pre>
+<pre>    f080:	afa70018 	sw	a3,24(sp)</pre>
+<pre>    f084:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    f088:	8fa70018 	lw	a3,24(sp)</pre>
+<pre>    f08c:	8f9980e8 	lw	t9,-32536(gp)</pre>
+<pre>    f090:	02202021 	move	a0,s1</pre>
+<pre>    f094:	00e03021 	move	a2,a3</pre>
+<pre>    f098:	0320f809 	jalr	t9</pre>
+<pre>    f09c:	02002821 	move	a1,s0</pre>
+<pre>    f0a0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    f0a4:	1840ffe9 	blez	v0,f04c &lt;scmdl&commat;&commat;Base+0x50&gt;</pre>
+<pre>    f0a8:	2411fffe 	li	s1,-2</pre>
+<pre>    f0ac:	8f998024 	lw	t9,-32732(gp)</pre>
+<pre>    f0b0:	2739ed98 	addiu	t9,t9,-4712</pre>
+<pre>    f0b4:	0320f809 	jalr	t9</pre>
+<pre>    f0b8:	02002021 	move	a0,s0</pre>
+<pre>    f0bc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    f0c0:	1040ffe2 	beqz	v0,f04c &lt;scmdl&commat;&commat;Base+0x50&gt;</pre>
+<pre>    f0c4:	00408821 	move	s1,v0</pre>
+<pre><span class="red">    f0c8:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    f0cc:	02002021 	move	a0,s0</pre>
+<pre>    f0d0:	0320f809 	jalr	t9</pre>
+<pre>    f0d4:	26050003 	addiu	a1,s0,3</pre>
+<pre>    f0d8:	80430000 	lb	v1,0(v0)</pre>
+<pre>    f0dc:	24020020 	li	v0,32</pre>
+<pre>    f0e0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    f0e4:	1462ffd9 	bne	v1,v0,f04c &lt;scmdl&commat;&commat;Base+0x50&gt;</pre>
+<pre>    f0e8:	02002021 	move	a0,s0</pre>
+<pre><span class="red">    f0ec:	8f998294 	lw	t9,strcpy</span></pre>
+<pre>    f0f0:	0320f809 	jalr	t9</pre>
+<pre>    f0f4:	26050001 	addiu	a1,s0,1</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> used </span><span class="orange">15</span> times </span><span class="orange">libweb.so.0</span></pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

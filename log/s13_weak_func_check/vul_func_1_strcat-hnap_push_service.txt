@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33mhnap_push_service[0m
+
+  412ed0:	afb00024 	sw	s0,36(sp)
+  412ed4:	3c1c0043 	lui	gp,0x43
+  412ed8:	279cf1a0 	addiu	gp,gp,-3680
+  412edc:	afbc0010 	sw	gp,16(sp)
+  412ee0:	0080a021 	move	s4,a0
+  412ee4:	00a09821 	move	s3,a1
+  412ee8:	00c09021 	move	s2,a2
+  412eec:	10c00019 	beqz	a2,412f54 <encrypt@@Base+0x210>
+  412ef0:	a0a00000 	sb	zero,0(a1)
+  412ef4:	00008021 	move	s0,zero
+  412ef8:	3c110041 	lui	s1,0x41
+  412efc:	26316980 	addiu	s1,s1,27008
+  412f00:	27b50018 	addiu	s5,sp,24
+  412f04:	02901021 	addu	v0,s4,s0
+  412f08:	90420000 	lbu	v0,0(v0)
+  412f0c:	00021902 	srl	v1,v0,0x4
+  412f10:	00711821 	addu	v1,v1,s1
+  412f14:	90630000 	lbu	v1,0(v1)
+  412f18:	a3a30018 	sb	v1,24(sp)
+  412f1c:	3042000f 	andi	v0,v0,0xf
+  412f20:	00511021 	addu	v0,v0,s1
+  412f24:	90420000 	lbu	v0,0(v0)
+  412f28:	a3a20019 	sb	v0,25(sp)
+  412f2c:	a3a0001a 	sb	zero,26(sp)
+  412f30:	02602021 	move	a0,s3
+[31m  412f34:	8f99814c 	lw	t9,strcat[0m
+  412f38:	0320f809 	jalr	t9
+  412f3c:	02a02821 	move	a1,s5
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m1[0m times [0;33mhnap_push_service[0m
+

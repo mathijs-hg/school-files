@@ -1,0 +1,100 @@
+#!/bin/sh
+
+# config: This starts and stops userconfig.
+#
+# chkconfig: 2345 01 99
+# description: userconfig
+#
+# processname: /usr/sbin/userconfig
+
+# automatically export variables to the environment
+set -a
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+proc=userconfig
+binpath="/usr/sbin/userconfig"
+restore_file="/mnt/flash/config/restore.ini"
+
+start(){
+	$binpath -initial
+	if [ $? != 0 ]; then
+		factory_reset
+	fi
+	/etc/init.d/check_other_config.sh
+	$binpath -restore $restore_file
+	rm -f $restore_file
+}
+
+factory_reset(){
+	has_ap_key=0
+	has_image_key=0
+	has_NETIPCAS=0
+	has_bundle=0
+	has_pincode=0
+	if [ -f /mnt/flash/config/auto_apmode_config_key ]; then
+		cp -f /mnt/flash/config/auto_apmode_config_key /var/
+		has_ap_key=1
+	fi
+	if [ -f /mnt/flash/config/image_default.ini ]; then
+		cp -f /mnt/flash/config/image_default.ini /var/
+		has_image_key=1
+	fi
+	if [ -f /mnt/flash/config/NETIPCAS.ini ]; then
+		cp -f /mnt/flash/config/NETIPCAS.ini /var/
+		has_NETIPCAS=1
+	fi
+	if [ -f /mnt/flash/config/bundle.ini ]; then
+		cp -f /mnt/flash/config/bundle.ini /var/
+		has_bundle=1
+	fi
+	if [ -f /mnt/flash/config/pincode.ini ]; then
+		cp -f /mnt/flash/config/pincode.ini /var/
+		has_pincode=1
+	fi
+	rm -rf /mnt/flash/config
+	mkdir -p /mnt/flash/config
+	cp -f /etc/config-cam.dat /mnt/flash/config
+	if [ $has_ap_key = 1 ]; then
+		mv -f /var/auto_apmode_config_key /mnt/flash/config/
+	fi
+	if [ $has_image_key = 1 ]; then
+		mv -f /var/image_default.ini /mnt/flash/config/
+	fi
+	if [ $has_NETIPCAS = 1 ]; then
+		mv -f /var/NETIPCAS.ini /mnt/flash/config/
+	fi
+	if [ $has_bundle = 1 ]; then
+		mv -f /var/bundle.ini /mnt/flash/config/
+	fi
+	if [ $has_pincode = 1 ]; then
+		mv -f /var/pincode.ini /mnt/flash/config/
+	fi
+	$binpath -factory
+	if [ $has_bundle = 1 ]; then
+		/usr/sbin/bundle_restore
+	fi
+}
+
+stop(){
+	sync;sync;sync
+}
+
+
+# See how we were called.
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	reset)
+		factory_reset
+		;;
+	*)
+		echo "Usage: $0 {start|stop|reset}"
+		exit 1
+esac
+
+exit 0

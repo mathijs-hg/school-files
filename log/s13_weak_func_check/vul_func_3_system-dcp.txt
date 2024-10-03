@@ -1,0 +1,80 @@
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mdcp[0m
+
+  4049a4:	ac430064 	sw	v1,100(v0)
+  4049a8:	8f838084 	lw	v1,-32636(gp)
+  4049ac:	ac430068 	sw	v1,104(v0)
+  4049b0:	8f838138 	lw	v1,-32456(gp)
+  4049b4:	ac43006c 	sw	v1,108(v0)
+  4049b8:	8f8382ac 	lw	v1,-32084(gp)
+  4049bc:	03e00008 	jr	ra
+  4049c0:	ac430070 	sw	v1,112(v0)
+[31m  4049c4:	10800003 	beqz	a0,4049d4 <system_init@@Base+0x214>[0m
+  4049c8:	00000000 	nop
+  4049cc:	ac800000 	sw	zero,0(a0)
+  4049d0:	a0800004 	sb	zero,4(a0)
+  4049d4:	03e00008 	jr	ra
+  4049d8:	00000000 	nop
+
+004049dc <dcp_system@@Base>:
+  4049dc:	27bdffc8 	addiu	sp,sp,-56
+  4049e0:	afbf0034 	sw	ra,52(sp)
+  4049e4:	afb10030 	sw	s1,48(sp)
+  4049e8:	afb0002c 	sw	s0,44(sp)
+  4049ec:	3c1c0043 	lui	gp,0x43
+  4049f0:	279cfcc0 	addiu	gp,gp,-832
+  4049f4:	afbc0020 	sw	gp,32(sp)
+[31m  4049f8:	10800037 	beqz	a0,404ad8 <dcp_system@@Base+0xfc>[0m
+  4049fc:	00808821 	move	s1,a0
+[31m  404a00:	8f998268 	lw	t9,system[0m
+  404a04:	0320f809 	jalr	t9
+  404a08:	00000000 	nop
+--
+  40c810:	000210c0 	sll	v0,v0,0x3
+  40c814:	03a2e823 	subu	sp,sp,v0
+  40c818:	108000f6 	beqz	a0,40cbf4 <tdb_get_wlan_ap_list@@Base+0x440>
+  40c81c:	27b20028 	addiu	s2,sp,40
+  40c820:	8f99807c 	lw	t9,-32644(gp)
+  40c824:	3c020041 	lui	v0,0x41
+  40c828:	a2400000 	sb	zero,0(s2)
+  40c82c:	2444228c 	addiu	a0,v0,8844
+  40c830:	a2000000 	sb	zero,0(s0)
+  40c834:	00002821 	move	a1,zero
+  40c838:	0320f809 	jalr	t9
+  40c83c:	a3c00030 	sb	zero,48(s8)
+  40c840:	8fdc0028 	lw	gp,40(s8)
+  40c844:	0440000b 	bltz	v0,40c874 <tdb_get_wlan_ap_list@@Base+0xc0>
+  40c848:	00408821 	move	s1,v0
+  40c84c:	8f998300 	lw	t9,-32000(gp)
+  40c850:	00402021 	move	a0,v0
+  40c854:	24050571 	li	a1,1393
+  40c858:	0320f809 	jalr	t9
+  40c85c:	00003021 	move	a2,zero
+  40c860:	8fdc0028 	lw	gp,40(s8)
+  40c864:	8f99804c 	lw	t9,-32692(gp)
+  40c868:	0320f809 	jalr	t9
+  40c86c:	02202021 	move	a0,s1
+  40c870:	8fdc0028 	lw	gp,40(s8)
+[31m  40c874:	8f998268 	lw	t9,system[0m
+  40c878:	3c040041 	lui	a0,0x41
+  40c87c:	0320f809 	jalr	t9
+  40c880:	24842298 	addiu	a0,a0,8856
+  40c884:	0c1031cb 	jal	40c72c <tdb_set_time@@Base+0x368>
+  40c888:	00000000 	nop
+  40c88c:	8fdc0028 	lw	gp,40(s8)
+  40c890:	144000a2 	bnez	v0,40cb1c <tdb_get_wlan_ap_list@@Base+0x368>
+  40c894:	3c030041 	lui	v1,0x41
+  40c898:	8f998258 	lw	t9,-32168(gp)
+  40c89c:	3c020041 	lui	v0,0x41
+  40c8a0:	24040008 	li	a0,8
+  40c8a4:	afc300b8 	sw	v1,184(s8)
+  40c8a8:	0320f809 	jalr	t9
+  40c8ac:	afc200bc 	sw	v0,188(s8)
+  40c8b0:	8fdc0028 	lw	gp,40(s8)
+[31m  40c8b4:	8f998268 	lw	t9,system[0m
+  40c8b8:	3c040041 	lui	a0,0x41
+  40c8bc:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m3[0m times [0;33mdcp[0m
+

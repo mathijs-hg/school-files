@@ -1,0 +1,77 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33msetconf.cgi[0m
+
+  400e74:	00c09021 	move	s2,a2
+  400e78:	30f300ff 	andi	s3,a3,0xff
+  400e7c:	3c100040 	lui	s0,0x40
+  400e80:	92023f80 	lbu	v0,16256(s0)
+  400e84:	a3a20020 	sb	v0,32(sp)
+  400e88:	27a40021 	addiu	a0,sp,33
+  400e8c:	00002821 	move	a1,zero
+  400e90:	8f99807c 	lw	t9,-32644(gp)
+  400e94:	0320f809 	jalr	t9
+  400e98:	240600ff 	li	a2,255
+  400e9c:	8fbc0018 	lw	gp,24(sp)
+  400ea0:	92023f80 	lbu	v0,16256(s0)
+  400ea4:	a3a20120 	sb	v0,288(sp)
+  400ea8:	27a40121 	addiu	a0,sp,289
+  400eac:	00002821 	move	a1,zero
+  400eb0:	8f99807c 	lw	t9,-32644(gp)
+  400eb4:	0320f809 	jalr	t9
+  400eb8:	240600ff 	li	a2,255
+  400ebc:	8fbc0018 	lw	gp,24(sp)
+  400ec0:	27b00120 	addiu	s0,sp,288
+  400ec4:	afb30010 	sw	s3,16(sp)
+  400ec8:	02002021 	move	a0,s0
+  400ecc:	3c050040 	lui	a1,0x40
+  400ed0:	24a53730 	addiu	a1,a1,14128
+  400ed4:	02203021 	move	a2,s1
+[31m  400ed8:	8f998064 	lw	t9,sprintf[0m
+  400edc:	0320f809 	jalr	t9
+  400ee0:	02403821 	move	a3,s2
+--
+  401790:	3c060040 	lui	a2,0x40
+  401794:	24c639e4 	addiu	a2,a2,14820
+  401798:	8f9980d4 	lw	t9,-32556(gp)
+  40179c:	0320f809 	jalr	t9
+  4017a0:	02c03821 	move	a3,s6
+  4017a4:	8fbc0020 	lw	gp,32(sp)
+  4017a8:	8f99804c 	lw	t9,strlen
+  4017ac:	0320f809 	jalr	t9
+  4017b0:	02002021 	move	a0,s0
+  4017b4:	8fbc0020 	lw	gp,32(sp)
+  4017b8:	02002021 	move	a0,s0
+  4017bc:	00402821 	move	a1,v0
+  4017c0:	8f998050 	lw	t9,-32688(gp)
+  4017c4:	0320f809 	jalr	t9
+  4017c8:	27a606dc 	addiu	a2,sp,1756
+  4017cc:	8fbc0020 	lw	gp,32(sp)
+  4017d0:	24020050 	li	v0,80
+  4017d4:	1622000d 	bne	s1,v0,40180c <_ftext@@Base+0xb6c>
+  4017d8:	27a206dc 	addiu	v0,sp,1756
+  4017dc:	afbe0010 	sw	s8,16(sp)
+  4017e0:	afb50014 	sw	s5,20(sp)
+  4017e4:	27a40028 	addiu	a0,sp,40
+  4017e8:	3c050040 	lui	a1,0x40
+  4017ec:	24a539ec 	addiu	a1,a1,14828
+  4017f0:	02603021 	move	a2,s3
+[31m  4017f4:	8f998064 	lw	t9,sprintf[0m
+  4017f8:	0320f809 	jalr	t9
+  4017fc:	27a706dc 	addiu	a3,sp,1756
+  401800:	8fbc0020 	lw	gp,32(sp)
+  401804:	1000000d 	b	40183c <_ftext@@Base+0xb9c>
+  401808:	27b00028 	addiu	s0,sp,40
+  40180c:	afa20010 	sw	v0,16(sp)
+  401810:	afbe0014 	sw	s8,20(sp)
+  401814:	afb50018 	sw	s5,24(sp)
+  401818:	27a40028 	addiu	a0,sp,40
+  40181c:	3c050040 	lui	a1,0x40
+  401820:	24a53a94 	addiu	a1,a1,14996
+  401824:	02603021 	move	a2,s3
+[31m  401828:	8f998064 	lw	t9,sprintf[0m
+  40182c:	0320f809 	jalr	t9
+  401830:	02203821 	move	a3,s1
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m3[0m times [0;33msetconf.cgi[0m
+

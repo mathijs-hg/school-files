@@ -1,0 +1,89 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mdcp[0m
+
+  405afc:	279cfcc0 	addiu	gp,gp,-832
+  405b00:	afbc0018 	sw	gp,24(sp)
+  405b04:	8f828158 	lw	v0,-32424(gp)
+  405b08:	00a01821 	move	v1,a1
+  405b0c:	8fb30050 	lw	s3,80(sp)
+  405b10:	8c450000 	lw	a1,0(v0)
+  405b14:	00c01021 	move	v0,a2
+  405b18:	24060001 	li	a2,1
+  405b1c:	8fb20054 	lw	s2,84(sp)
+  405b20:	10a60033 	beq	a1,a2,405bf0 <dcp_log@@Base+0x110>
+  405b24:	00e08821 	move	s1,a3
+  405b28:	28a50002 	slti	a1,a1,2
+  405b2c:	14a00003 	bnez	a1,405b3c <dcp_log@@Base+0x5c>
+  405b30:	00000000 	nop
+  405b34:	14e00008 	bnez	a3,405b58 <dcp_log@@Base+0x78>
+  405b38:	00803021 	move	a2,a0
+  405b3c:	8fbf003c 	lw	ra,60(sp)
+  405b40:	8fb30038 	lw	s3,56(sp)
+  405b44:	8fb20034 	lw	s2,52(sp)
+  405b48:	8fb10030 	lw	s1,48(sp)
+  405b4c:	8fb0002c 	lw	s0,44(sp)
+  405b50:	03e00008 	jr	ra
+  405b54:	27bd0040 	addiu	sp,sp,64
+  405b58:	8f9080e0 	lw	s0,-32544(gp)
+  405b5c:	3c050041 	lui	a1,0x41
+[31m  405b60:	8f9981d8 	lw	t9,fprintf[0m
+  405b64:	24a5111c 	addiu	a1,a1,4380
+  405b68:	00603821 	move	a3,v1
+--
+  405ba4:	8fbc0018 	lw	gp,24(sp)
+  405ba8:	24841154 	addiu	a0,a0,4436
+  405bac:	8e070000 	lw	a3,0(s0)
+  405bb0:	8f9980b8 	lw	t9,-32584(gp)
+  405bb4:	24050001 	li	a1,1
+  405bb8:	0320f809 	jalr	t9
+  405bbc:	24060005 	li	a2,5
+  405bc0:	8fbc0018 	lw	gp,24(sp)
+  405bc4:	8e040000 	lw	a0,0(s0)
+  405bc8:	8f998238 	lw	t9,-32200(gp)
+  405bcc:	0320f809 	jalr	t9
+  405bd0:	00000000 	nop
+  405bd4:	8fbf003c 	lw	ra,60(sp)
+  405bd8:	8fb30038 	lw	s3,56(sp)
+  405bdc:	8fb20034 	lw	s2,52(sp)
+  405be0:	8fb10030 	lw	s1,48(sp)
+  405be4:	8fb0002c 	lw	s0,44(sp)
+  405be8:	03e00008 	jr	ra
+  405bec:	27bd0040 	addiu	sp,sp,64
+  405bf0:	14e0001c 	bnez	a3,405c64 <dcp_log@@Base+0x184>
+  405bf4:	3c050041 	lui	a1,0x41
+  405bf8:	3c050041 	lui	a1,0x41
+  405bfc:	00803021 	move	a2,a0
+  405c00:	8f9080e0 	lw	s0,-32544(gp)
+  405c04:	24a51138 	addiu	a1,a1,4408
+[31m  405c08:	8f9981d8 	lw	t9,fprintf[0m
+  405c0c:	8e040000 	lw	a0,0(s0)
+  405c10:	00603821 	move	a3,v1
+  405c14:	0320f809 	jalr	t9
+  405c18:	afa20010 	sw	v0,16(sp)
+  405c1c:	8fbc0018 	lw	gp,24(sp)
+  405c20:	16600025 	bnez	s3,405cb8 <dcp_log@@Base+0x1d8>
+  405c24:	3c040041 	lui	a0,0x41
+  405c28:	27a20058 	addiu	v0,sp,88
+  405c2c:	02402821 	move	a1,s2
+  405c30:	8f998044 	lw	t9,-32700(gp)
+  405c34:	00403021 	move	a2,v0
+  405c38:	8e040000 	lw	a0,0(s0)
+  405c3c:	0320f809 	jalr	t9
+  405c40:	afa20020 	sw	v0,32(sp)
+  405c44:	8fbc0018 	lw	gp,24(sp)
+  405c48:	8f8280e0 	lw	v0,-32544(gp)
+  405c4c:	12200013 	beqz	s1,405c9c <dcp_log@@Base+0x1bc>
+  405c50:	3c040041 	lui	a0,0x41
+  405c54:	8c470000 	lw	a3,0(v0)
+  405c58:	8f9980b8 	lw	t9,-32584(gp)
+  405c5c:	1000ffd5 	b	405bb4 <dcp_log@@Base+0xd4>
+  405c60:	24841154 	addiu	a0,a0,4436
+  405c64:	00803021 	move	a2,a0
+  405c68:	8f9080e0 	lw	s0,-32544(gp)
+[31m  405c6c:	8f9981d8 	lw	t9,fprintf[0m
+  405c70:	1000ffe6 	b	405c0c <dcp_log@@Base+0x12c>
+  405c74:	24a5111c 	addiu	a1,a1,4380
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m3[0m times [0;33mdcp[0m
+

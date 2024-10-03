@@ -1,0 +1,161 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mlibutl.so.0[0m
+
+    2738:	afb0003c 	sw	s0,60(sp)
+    273c:	afbc0028 	sw	gp,40(sp)
+    2740:	10800026 	beqz	a0,27dc <gettimes@@Base+0xbc>
+    2744:	00808021 	move	s0,a0
+    2748:	8f998084 	lw	t9,-32636(gp)
+    274c:	8f918018 	lw	s1,-32744(gp)
+    2750:	0320f809 	jalr	t9
+    2754:	02002021 	move	a0,s0
+    2758:	8c43000c 	lw	v1,12(v0)
+    275c:	26243b80 	addiu	a0,s1,15232
+    2760:	8c460014 	lw	a2,20(v0)
+    2764:	8c470010 	lw	a3,16(v0)
+    2768:	afa30010 	sw	v1,16(sp)
+    276c:	24c6076c 	addiu	a2,a2,1900
+    2770:	8c430008 	lw	v1,8(v0)
+    2774:	24e70001 	addiu	a3,a3,1
+    2778:	8fbc0028 	lw	gp,40(sp)
+    277c:	afa30014 	sw	v1,20(sp)
+    2780:	8c430004 	lw	v1,4(v0)
+    2784:	8f858024 	lw	a1,-32732(gp)
+    2788:	afa30018 	sw	v1,24(sp)
+    278c:	3c0368db 	lui	v1,0x68db
+    2790:	8c420000 	lw	v0,0(v0)
+    2794:	34638bad 	ori	v1,v1,0x8bad
+    2798:	24a5372c 	addiu	a1,a1,14124
+[31m    279c:	8f99806c 	lw	t9,sprintf[0m
+    27a0:	afa2001c 	sw	v0,28(sp)
+    27a4:	8e020004 	lw	v0,4(s0)
+--
+    29b4:	afbf0134 	sw	ra,308(sp)
+    29b8:	afb30130 	sw	s3,304(sp)
+    29bc:	afb2012c 	sw	s2,300(sp)
+    29c0:	afb10128 	sw	s1,296(sp)
+    29c4:	afb00124 	sw	s0,292(sp)
+    29c8:	afbc0018 	sw	gp,24(sp)
+    29cc:	8f998050 	lw	t9,-32688(gp)
+    29d0:	00809021 	move	s2,a0
+    29d4:	00c02021 	move	a0,a2
+    29d8:	0320f809 	jalr	t9
+    29dc:	00e09821 	move	s3,a3
+    29e0:	8fbc0018 	lw	gp,24(sp)
+    29e4:	14400009 	bnez	v0,2a0c <killed@@Base+0x210>
+    29e8:	00408021 	move	s0,v0
+    29ec:	02001021 	move	v0,s0
+    29f0:	8fbf0134 	lw	ra,308(sp)
+    29f4:	8fb30130 	lw	s3,304(sp)
+    29f8:	8fb2012c 	lw	s2,300(sp)
+    29fc:	8fb10128 	lw	s1,296(sp)
+    2a00:	8fb00124 	lw	s0,292(sp)
+    2a04:	03e00008 	jr	ra
+    2a08:	27bd0138 	addiu	sp,sp,312
+    2a0c:	8f858024 	lw	a1,-32732(gp)
+    2a10:	27b10020 	addiu	s1,sp,32
+    2a14:	02403021 	move	a2,s2
+[31m    2a18:	8f99806c 	lw	t9,sprintf[0m
+    2a1c:	02202021 	move	a0,s1
+    2a20:	0320f809 	jalr	t9
+--
+    2b94:	afb10428 	sw	s1,1064(sp)
+    2b98:	afb00424 	sw	s0,1060(sp)
+    2b9c:	afbc0018 	sw	gp,24(sp)
+    2ba0:	8f99804c 	lw	t9,strlen
+    2ba4:	0320f809 	jalr	t9
+    2ba8:	00808021 	move	s0,a0
+    2bac:	2442000c 	addiu	v0,v0,12
+    2bb0:	2c420400 	sltiu	v0,v0,1024
+    2bb4:	8fbc0018 	lw	gp,24(sp)
+    2bb8:	1440000c 	bnez	v0,2bec <mkdirx@@Base+0x6c>
+    2bbc:	24020079 	li	v0,121
+    2bc0:	8f858024 	lw	a1,-32732(gp)
+    2bc4:	8f868024 	lw	a2,-32732(gp)
+    2bc8:	24040003 	li	a0,3
+    2bcc:	8f878024 	lw	a3,-32732(gp)
+    2bd0:	24a53764 	addiu	a1,a1,14180
+    2bd4:	8f9980d4 	lw	t9,-32556(gp)
+    2bd8:	24c63770 	addiu	a2,a2,14192
+    2bdc:	afa20010 	sw	v0,16(sp)
+    2be0:	0320f809 	jalr	t9
+    2be4:	24e737ec 	addiu	a3,a3,14316
+    2be8:	8fbc0018 	lw	gp,24(sp)
+    2bec:	8f858024 	lw	a1,-32732(gp)
+    2bf0:	27b10020 	addiu	s1,sp,32
+    2bf4:	02003021 	move	a2,s0
+[31m    2bf8:	8f99806c 	lw	t9,sprintf[0m
+    2bfc:	02202021 	move	a0,s1
+    2c00:	0320f809 	jalr	t9
+--
+    2f40:	8fb60600 	lw	s6,1536(sp)
+    2f44:	8fb505fc 	lw	s5,1532(sp)
+    2f48:	8fb405f8 	lw	s4,1528(sp)
+    2f4c:	8fb305f4 	lw	s3,1524(sp)
+    2f50:	8fb205f0 	lw	s2,1520(sp)
+    2f54:	8fb105ec 	lw	s1,1516(sp)
+    2f58:	8fb005e8 	lw	s0,1512(sp)
+    2f5c:	03e00008 	jr	ra
+    2f60:	27bd0610 	addiu	sp,sp,1552
+    2f64:	83a200dc 	lb	v0,220(sp)
+    2f68:	1051ffcf 	beq	v0,s1,2ea8 <search@@Base+0x84>
+    2f6c:	00000000 	nop
+    2f70:	1440ffdb 	bnez	v0,2ee0 <search@@Base+0xbc>
+    2f74:	02402021 	move	a0,s2
+    2f78:	8f998064 	lw	t9,-32668(gp)
+    2f7c:	02a02821 	move	a1,s5
+    2f80:	0320f809 	jalr	t9
+    2f84:	02803021 	move	a2,s4
+    2f88:	8fbc0018 	lw	gp,24(sp)
+    2f8c:	1040ffce 	beqz	v0,2ec8 <search@@Base+0xa4>
+    2f90:	00001821 	move	v1,zero
+    2f94:	1000ffe1 	b	2f1c <search@@Base+0xf8>
+    2f98:	00000000 	nop
+    2f9c:	8f858024 	lw	a1,-32732(gp)
+    2fa0:	02c02021 	move	a0,s6
+[31m    2fa4:	8f99806c 	lw	t9,sprintf[0m
+    2fa8:	02003021 	move	a2,s0
+    2fac:	24a537b0 	addiu	a1,a1,14256
+--
+    322c:	afb0002c 	sw	s0,44(sp)
+    3230:	afbc0018 	sw	gp,24(sp)
+    3234:	3c117fff 	lui	s1,0x7fff
+    3238:	00a08021 	move	s0,a1
+    323c:	8f858024 	lw	a1,-32732(gp)
+    3240:	27a70020 	addiu	a3,sp,32
+    3244:	8f998108 	lw	t9,-32504(gp)
+    3248:	3631ffff 	ori	s1,s1,0xffff
+    324c:	24a528a0 	addiu	a1,a1,10400
+    3250:	afb10020 	sw	s1,32(sp)
+    3254:	00a03021 	move	a2,a1
+    3258:	a2000000 	sb	zero,0(s0)
+    325c:	0320f809 	jalr	t9
+    3260:	afa00010 	sw	zero,16(sp)
+    3264:	8fbc0018 	lw	gp,24(sp)
+    3268:	1440000c 	bnez	v0,329c <getoldest@@Base+0x88>
+    326c:	3c020003 	lui	v0,0x3
+    3270:	8fa60020 	lw	a2,32(sp)
+    3274:	344299b8 	ori	v0,v0,0x99b8
+    3278:	00c2102a 	slt	v0,a2,v0
+    327c:	1440000d 	bnez	v0,32b4 <getoldest@@Base+0xa0>
+    3280:	02002021 	move	a0,s0
+    3284:	10d10006 	beq	a2,s1,32a0 <getoldest@@Base+0x8c>
+    3288:	02001021 	move	v0,s0
+    328c:	8f858024 	lw	a1,-32732(gp)
+[31m    3290:	8f99806c 	lw	t9,sprintf[0m
+    3294:	0320f809 	jalr	t9
+    3298:	24a537c8 	addiu	a1,a1,14280
+    329c:	02001021 	move	v0,s0
+    32a0:	8fbf0034 	lw	ra,52(sp)
+    32a4:	8fb10030 	lw	s1,48(sp)
+    32a8:	8fb0002c 	lw	s0,44(sp)
+    32ac:	03e00008 	jr	ra
+    32b0:	27bd0038 	addiu	sp,sp,56
+    32b4:	8f858024 	lw	a1,-32732(gp)
+[31m    32b8:	8f99806c 	lw	t9,sprintf[0m
+    32bc:	0320f809 	jalr	t9
+    32c0:	24a537c0 	addiu	a1,a1,14272
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m6[0m times [0;33mlibutl.so.0[0m
+

@@ -7,557 +7,90 @@ This module tries to identify shell scripts and analyses them with shellcheck - 
 
 [0;34m==>[0m [0;36mCheck scripts with shellcheck[0m
 -----------------------------------------------------------------
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /bin/ipcalc.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ipcalc.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /bin/board_detect (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_board_detect.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /bin/config_generate (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_config_generate.txt
-[[0;32m+[0m][0;32m Found [0;33m12 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/bridge/02-alter-wanif (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_02-alter-wanif.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/firewall/10-nat-reflection (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_10-nat-reflection.txt
-[[0;32m+[0m][0;32m Found [0;31m41 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/bridge/01-vlanstate (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_01-vlanstate.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/firewall/50-improxy (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_50-improxy.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/firewall/65-domain_login (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_65-domain_login.txt
-[[0;32m+[0m][0;32m Found [0;33m20 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/01-ipv6 (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_01-ipv6.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/07-Internet_detection (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_07-Internet_detection.txt
-[[0;32m+[0m][0;32m Found [0;33m11 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/15-hyd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_15-hyd.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/20-firewall (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_20-firewall.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/20-nat (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_20-nat.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/21-basic_security (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_21-basic_security.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/25-ddns (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_25-ddns.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/25-dnsproxy (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_25-dnsproxy.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/50-improxy (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_50-improxy.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/50-miniupnpd (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_50-miniupnpd.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/60-dnsmasq (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_60-dnsmasq.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/80-tcpmss (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_80-tcpmss.txt
-[[0;32m+[0m][0;32m Found [0;31m262 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/03-lanv6 (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_03-lanv6.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/98-cloud-brd (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_98-cloud-brd.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/98-sysntpd (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_98-sysntpd.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/99-qos (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-qos.txt
-[[0;32m+[0m][0;32m Found [0;31m46 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/iface/65-domain_login (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_65-domain_login.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/ip/00-sync (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_00-sync.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/00-apsd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_00-apsd.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/00-network (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_00-network.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/00-smartip (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_00-smartip.txt
-[[0;32m+[0m][0;32m Found [0;31m32 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/ip/01-domain_login (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_01-domain_login.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/00-sync (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_00-sync.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/05-iptv (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_05-iptv.txt
-[[0;32m+[0m][0;32m Found [0;33m15 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/10-dns_correct (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_10-dns_correct.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/20-dnsproxy (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_20-dnsproxy.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/20-nrd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_20-nrd.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/30-tfaffic-stats (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_30-tfaffic-stats.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/50-cloud-reconnect (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_50-cloud-reconnect.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/50-miniupnpd (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_50-miniupnpd.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/90-radvd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_90-radvd.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/98-sysntpd (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_98-sysntpd.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-cloud-awn-update (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-cloud-awn-update.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-guest (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-guest.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-ipv6-firewall (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-ipv6-firewall.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-msgcenter (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-msgcenter.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-parental-control (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-parental-control.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/mode/99-qos (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_99-qos.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/nat/10-nat-dnsproxy (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_10-nat-dnsproxy.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/net/03-vlanset (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_03-vlanset.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/hotplug.d/net/28-mcsd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_28-mcsd.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/apsd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_apsd.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/basic_security (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_basic_security.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/blacklist (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_blacklist.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/boot (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_boot.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/client_mgmt (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_client_mgmt.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/cloud_account (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_cloud_account.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/conn-indicator (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_conn-indicator.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/ddns (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ddns.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/dhcp_hook_d (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp_hook_d.txt
-[[0;32m+[0m][0;32m Found [0;33m20 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/dhcp6s (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp6s.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/done (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_done.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/domain_login (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_domain_login.txt
-[[0;32m+[0m][0;32m Found [0;33m13 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/dnsmasq (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dnsmasq.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/dropbear (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dropbear.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/firewall (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_firewall.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/guest-bandwidth (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_guest-bandwidth.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/guest-schedule (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_guest-schedule.txt
-[[0;32m+[0m][0;32m Found [0;33m11 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/guest_eth (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_guest_eth.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/handheld_radar (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_handheld_radar.txt
-[[0;32m+[0m][0;32m Found [0;33m12 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/hnat-start (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_hnat-start.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/hyfi-bridging (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_hyfi-bridging.txt
-[[0;32m+[0m][0;32m Found [0;31m23 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/improxy (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_improxy.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/ipv6-firewall (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ipv6-firewall.txt
-[[0;32m+[0m][0;32m Found [0;33m18 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/iptv (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_iptv.txt
-[[0;32m+[0m][0;32m Found [0;33m14 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/led (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_led.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/leds (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_leds.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/log (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_log.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/luarsa_keys_gen (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_luarsa_keys_gen.txt
-[[0;32m+[0m][0;32m Found [0;33m13 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/miniupnpd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_miniupnpd.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/nat (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_nat.txt
-[[0;32m+[0m][0;32m Found [0;31m24 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/mcsd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_mcsd.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/nrd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_nrd.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/parental_control (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_parental_control.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/passthrough.init (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_passthrough.init.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/phyLinkUp (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_phyLinkUp.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/plc-led (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_plc-led.txt
-[[0;32m+[0m][0;32m Found [0;33m14 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/qos (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_qos.txt
-[[0;32m+[0m][0;32m Found [0;31m38 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/network (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_network.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/repacd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_repacd.txt
-[[0;32m+[0m][0;32m Found [0;33m18 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/radvd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_radvd.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/shortcut-fe (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_shortcut-fe.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/smart_home (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_smart_home.txt
-[[0;32m+[0m][0;32m Found [0;31m37 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/smartip (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_smartip.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/switch (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_switch.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/sysctl (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sysctl.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/sysmode (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sysmode.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/sysntpd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sysntpd.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/init.d/system (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_system.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/time_settings (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_time_settings.txt
-[[0;32m+[0m][0;32m Found [0;33m12 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/uhttpd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_uhttpd.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/wpsd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wpsd.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/init.d/wifi (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifi.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/profile (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_profile.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/rc.button/reset (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_reset.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/rc.button/rfkill (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_rfkill.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.common (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_rc.common.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/S99smp (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_S99smp.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/tsched.d/leds_schedule (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_leds_schedule.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/autodetect/autodetect.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_autodetect.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/autodetect/dhcp6c_autodet.script (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp6c_autodet.script.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/config/uci.sh (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_uci.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m16 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/domain_login/domain_login_core.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_domain_login_core.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/domain_login/domain_login_log.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_domain_login_log.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m9 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/essid/essid.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_essid.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/fs/fs_common.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_fs_common.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/functions/leds.sh (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_leds.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m33 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /lib/functions.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_functions.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m23 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/functions/preinit.sh (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_preinit.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/functions/whc-network.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_whc-network.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m60 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/functions/uci-defaults.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_uci-defaults.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/led_switch (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_led_switch.txt
-[[0;32m+[0m][0;32m Found [0;31m30 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/functions/nrd-config.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_nrd-config.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m27 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/guest-eth/guest-eth.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_guest-eth.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m39 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/dhcp.script (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp.script.txt
-[[0;32m+[0m][0;32m Found [0;33m11 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/dhcp6c_slaac.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp6c_slaac.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m21 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/dhcp6c.script (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp6c.script.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/passthrough_reload.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_passthrough_reload.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m22 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/ppp-dhcp6c.script (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ppp-dhcp6c.script.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/ppp-down (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ppp-down.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/ppp-up (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ppp-up.txt
-[[0;32m+[0m][0;32m Found [0;31m27 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/pppshare-dhcp6c.script (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_pppshare-dhcp6c.script.txt
-[[0;32m+[0m][0;32m Found [0;31m48 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/pppshare-up (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_pppshare-up.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/6rd.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_6rd.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m62 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/pppv6-up (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_pppv6-up.txt
-[[0;32m+[0m][0;32m Found [0;31m24 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/6to4.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_6to4.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/dhcp.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m34 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/dhcp6c.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dhcp6c.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /lib/netifd/proto/l2tp.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_l2tp.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m12 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/dslite.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dslite.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m22 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/lanv6.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_lanv6.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/passthrough.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_passthrough.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/ppp.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ppp.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/proto/v6plus.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_v6plus.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /lib/network/config.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_config.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m30 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/netifd/v6plus-dial.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_v6plus-dial.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m20 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/network/switch.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_switch.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/preinit/10_indicate_preinit (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_10_indicate_preinit.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/preinit/30_failsafe_wait (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_30_failsafe_wait.txt
-[[0;32m+[0m][0;32m Found [0;31m107 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/parental_control/core_get_history.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_core_get_history.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/switch/core_phy.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_core_phy.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m15 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/sbin/wifi_try (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifi_try.txt
-[[0;32m+[0m][0;32m Found [0;31m30 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /lib/upgrade/common.sh (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_common.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m11 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/wifi/wps_button (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wps_button.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/firstboot (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_firstboot.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/fw (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_fw.txt
-[[0;32m+[0m][0;32m Found [0;31m28 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/wifi/ralinkwifi.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ralinkwifi.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/gen_passwd (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_gen_passwd.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/hotplug-call (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_hotplug-call.txt
-[[0;32m+[0m][0;32m Found [0;31m39 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/wifi/wifiupdate_ralink.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifiupdate_ralink.sh.txt
-[[0;32m+[0m][0;32m Found [0;31m50 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/getfirm (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_getfirm.txt
-[[0;32m+[0m][0;32m Found [0;31m101 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /lib/wifi/wificommon.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wificommon.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/ifup (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ifup.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/led.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_led.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/luci-reload (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_luci-reload.txt
-[[0;32m+[0m][0;32m Found [0;33m8 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/nat (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_nat.txt
-[[0;32m+[0m][0;32m Found [0;33m19 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/network_get_firm (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_network_get_firm.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/pctl_log_update (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_pctl_log_update.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/portset (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_portset.txt
-[[0;32m+[0m][0;32m Found [0;33m9 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/portspeed (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_portspeed.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/ramfs_dir (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ramfs_dir.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/reload_config (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_reload_config.txt
-[[0;32m+[0m][0;32m Found [0;33m13 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/snapshot (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_snapshot.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/tddp_hook_setmac (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_tddp_hook_setmac.txt
-[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/sysupgrade (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sysupgrade.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /usr/bin/sa1 (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sa1.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /sbin/wifi (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifi.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /usr/bin/sa2 (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_sa2.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/ddns/dynamic_dns_dyndns.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dynamic_dns_dyndns.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/ddns/dynamic_dns_functions.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dynamic_dns_functions.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/ddns/dynamic_dns_log.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dynamic_dns_log.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/ddns/dynamic_dns_noip.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dynamic_dns_noip.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/disconnect_lan.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_disconnect_lan.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/dnsproxy/dnsproxy_api.sh (-rw-rw-r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dnsproxy_api.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m9 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/ddns/dynamic_dns_updater.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dynamic_dns_updater.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/dnsproxy/dnsproxy_deamon.sh (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_dnsproxy_deamon.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /usr/sbin/autodetect (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_autodetect.txt
-[[0;32m+[0m][0;32m Found [0;33m20 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/lib/eth-encap/eth_encap.sh (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_eth_encap.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m18 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/bridge-control (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_bridge-control.txt
-[[0;32m+[0m][0;32m Found [0;33m11 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/bridge-hyfi-extend (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_bridge-hyfi-extend.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/cloud_download (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_cloud_download.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/ddns (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_ddns.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/domain_login (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_domain_login.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/leds_set_nightmode (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_leds_set_nightmode.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/rsched_conf (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_rsched_conf.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/save_tmp_config_conf (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_save_tmp_config_conf.txt
-[[0;32m+[0m][0;32m Found [0;31m24 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/smartip_add_reservation_list (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_smartip_add_reservation_list.txt
-[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/start_nrd (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_start_nrd.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/updateassoclist.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_updateassoclist.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/updateneigh.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_updateneigh.sh.txt
-[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/share/miniupnpd/firewall.include (-rw-r--r-- root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_firewall.include.txt
-[[0;32m+[0m][0;32m Found [0;33m15 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/wifi_try (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifi_try.txt
-[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/share/udhcpc/default.script (-rwxrwxr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_default.script.txt
-[[0;32m+[0m][0;32m Found [0;31m61 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/sbin/wifi_led.sh (-rwxr-xr-x root root)[0m
-[REF] /logs/s20_shell_check/shellchecker_wifi_led.sh.txt
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/HNAPPushService-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/camsvr-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/RTS5826_FW_check.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ddns-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m13 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/bonjour-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ddp-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/eventd-0 (-rwxrwxrwx root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/force_conifg.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/generate_certification.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/httpd-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/httpd-manager-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/https-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/hwmon-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ipfind-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;31m32 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ipv4 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/llmnr-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/rc.d/init.d/network (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ntpc.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ntpcdo.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/pppoe.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/ptctl.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/restore_other_config.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/restore_wifi_ap.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/rtspd-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/schboot-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/service.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/smtps-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m6 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/smtps-snapshot-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/sysmgr-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/udhcpd.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/upnp-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;31m26 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/udhcpc.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m5 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/upnp_igd-https.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/upnp_igd-http.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/upnp_igd-rtsp.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;31m22 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/upnp_igd.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m1 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/userconfig (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m14 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/verify_user.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/wanip_detect-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m2 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /etc/rc.d/init.d/wscd-0 (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m10 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /etc/rc.d/rcS (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /mydlink/opt.local (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m17 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /mydlink/mydlink-watch-dog.sh (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m9 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/pppoe-start (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/pppoe-status (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m3 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/pppoe-connect (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/pppoe-stop (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m7 issues[0;32m in script ([0;36mcommon linux file: yes[0;32m):[0m /sbin/pppoe-setup (-rwxr-xr-x root root)[0m
+[[0;32m+[0m][0;32m Found [0;33m4 issues[0;32m in script ([0;31mcommon linux file: no[0;32m):[0m /usr/share/udhcpc/default.script (-rwxr-xr-x root root)[0m
 
 
 
 
 [0;34m==>[0m [0;36mSummary of shell issues (shellcheck)[0m
 -----------------------------------------------------------------
-[[0;32m+[0m][0;32m Found [0;33m2385 issues[0;32m in [0;33m286[0;32m shell scripts[0m
+[[0;32m+[0m][0;32m Found [0;33m293 issues[0;32m in [0;33m57[0;32m shell scripts[0m
 [0m
 
-[*] Statistics:2385:286
-    [0m[[0;32m+[0m][0;32m [31mSC1019 (error): Expected this to be an argument to the unary condition.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC1020 (error): You need a space before the ].[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC1037 (error): Braces are required for positionals over 9, e.g. ${10}.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC1055 (error): You need at least one command here. Use 'true;' as a no-op.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC1072 (error): Missing space before ]. Fix any mentioned problems and try again.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC1073 (error): Couldn't parse this test expression. Fix to allow more checks.[0m[0m
+[*] Statistics:293:57
     [0m[[0;32m+[0m][0;32m [31mSC2068 (error): Double quote array expansions to avoid re-splitting elements.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC2108 (error): In [[..]], use && instead of -a.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC2144 (error): -f doesn't work with globs. Use a for loop.[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC2283 (error): Remove spaces around = to assign (or use [ ] to compare, or quote '=' if literal).[0m[0m
-    [0m[[0;32m+[0m][0;32m [31mSC2286 (error): This empty string is interpreted as a command name. Double check syntax (or use 'true' as a no-op).[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC1009 (info): The mentioned syntax error was in this then clause.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC1091 (info): Not following: /lib/domain_login/domain_login_core.sh was not specified as input (see shellcheck -x).[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2002 (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2004 (style): $/${} is unnecessary on arithmetic variables.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2005 (style): Useless echo? Instead of 'echo $(cmd)', just use 'cmd'.[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2009 (info): Consider using pgrep instead of grepping ps output.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2013 (info): To read lines rather than words, pipe/redirect to a 'while read' loop.[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2015 (info): Note that A && B || C is not if-then-else. C may run when A is true.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2035 (info): Use ./*glob* or -- *glob* so names with dashes won't become options.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2059 (info): Don't use variables in the printf format string. Use printf '..%s..' "$foo".[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2086 (info): Double quote to prevent globbing and word splitting.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2116 (style): Useless echo? Instead of 'cmd $(echo foo)', just use 'cmd foo'.[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2129 (style): Consider using { cmd1; cmd2; } >> file instead of individual redirects.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2143 (style): Use ! grep -q instead of comparing output with [ -z .. ].[0m[0m
     [0m[[0;32m+[0m][0;32m [32mSC2161 (style): Instead of '[ 1 ]', use 'true'.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2181 (style): Check exit code directly with e.g. 'if ! mycmd;', not indirectly with $?.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2235 (style): Use { ..; } instead of (..) to avoid subshell overhead.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2236 (style): Use -z instead of ! -n.[0m[0m
-    [0m[[0;32m+[0m][0;32m [32mSC2317 (info): Command appears to be unreachable. Check usage (or ignore if invoked indirectly).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC1007 (warning): Remove space after = if trying to assign a value (for empty string, use var='' ... ).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC1010 (warning): Use semicolon or linefeed before 'done' (or quote to make it literal).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC1083 (warning): This { is literal. Check expression (missing ;/
-?) or quote it.[0m[0m
+    [0m[[0;32m+[0m][0;32m [32mSC2181 (style): Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.[0m[0m
+    [0m[[0;32m+[0m][0;32m [32mSC2236 (style): Use -n instead of ! -z.[0m[0m
     [0m[[0;32m+[0m][0;32m [33mSC1090 (warning): ShellCheck can't follow non-constant source. Use a directive to specify location.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2010 (warning): Don't use ls | grep. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2034 (warning): N appears unused. Verify use (or export if used externally).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2044 (warning): For loops over find output are fragile. Use find -exec or a while read loop.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2046 (warning): Quote this to prevent word splitting.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2048 (warning): Use "$@" (with quotes) to prevent whitespace problems.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2050 (warning): This expression is constant. Did you forget the $ on a variable?[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2057 (warning): Unknown binary operator.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2089 (warning): Quotes/backslashes will be treated literally. Rewrite using set/"$@" or functions.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2091 (warning): Remove surrounding $() to avoid executing output (or use eval if intentional).[0m[0m
+    [0m[[0;32m+[0m][0;32m [33mSC2034 (warning): p appears unused. Verify use (or export if used externally).[0m[0m
     [0m[[0;32m+[0m][0;32m [33mSC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2120 (warning): scan_wifi references arguments, but none are ever passed.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2140 (warning): Word is of the form "A"B"C" (B indicated). Did you mean "ABC" or "A\"B\"C"?[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2154 (warning): new_domain_name_servers is referenced but not assigned.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2155 (warning): Declare and assign separately to avoid masking return values.[0m[0m
     [0m[[0;32m+[0m][0;32m [33mSC2166 (warning): Prefer [ p ] || [ q ] as [ p -o q ] is not well defined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2171 (warning): Found trailing ] outside test. Add missing [ or quote if intentional.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2188 (warning): This redirection doesn't have a command. Move to its command (or use 'true' as no-op).[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2222 (warning): This pattern never matches because of a previous pattern on line 131.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2319 (warning): This $? refers to a condition, not a command. Assign to a variable to avoid it being overwritten.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC2320 (warning): This $? refers to echo/printf, not a previous command. Assign to variable to avoid it being overwritten.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3010 (warning): In POSIX sh, [[ ]] is undefined.[0m[0m
+    [0m[[0;32m+[0m][0;32m [33mSC3004 (warning): In POSIX sh, $".." is undefined.[0m[0m
     [0m[[0;32m+[0m][0;32m [33mSC3014 (warning): In POSIX sh, == in place of = is undefined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3018 (warning): In POSIX sh, -- is undefined.[0m[0m
     [0m[[0;32m+[0m][0;32m [33mSC3037 (warning): In POSIX sh, echo flags are undefined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3039 (warning): In POSIX sh, 'let' is undefined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3043 (warning): In POSIX sh, 'local' is undefined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3045 (warning): In POSIX sh, read -t is undefined.[0m[0m
-    [0m[[0;32m+[0m][0;32m [33mSC3060 (warning): In POSIX sh, string replacement is undefined.[0m[0m
 
 
 [0;34m==>[0m [0;36mCheck shell scripts with semgrep[0m
 -----------------------------------------------------------------
+[[0;32m+[0m][0;32m Found [0;33m449 issues[0;32m in [0;33m59[0;32m shell scripts[0m[0m
 
-[*] Statistics1::
+[*] Statistics1:449:59
 
 
 [0;34m==>[0m [0;36mSummary of shell eval usages[0m
 -----------------------------------------------------------------
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m01-ipv6[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/01-ipv6.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m03-lanv6[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/03-lanv6.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m15-hyd[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/15-hyd.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m65-domain_login[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/65-domain_login.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m01-domain_login[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/01-domain_login.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m28-mcsd[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/28-mcsd.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mdnsmasq[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/dnsmasq.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mmcsd[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/mcsd.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mrepacd[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/repacd.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33muhttpd[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/uhttpd.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mwifi[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/wifi.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mrc.common[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/rc.common.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mreboot_schedule[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/reboot_schedule.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33muci.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/uci.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mdomain_login_core.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/domain_login_core.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mfs_common.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/fs_common.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mfunctions.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/functions.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mnrd-config.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/nrd-config.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mpreinit.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/preinit.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33m6to4.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/6to4.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mlanv6.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/lanv6.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mcommon.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/common.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mwificommon.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/wificommon.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mwifiupdate_ralink.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/wifiupdate_ralink.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mfw[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/fw.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mgetfirm[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/getfirm.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33msysupgrade[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/sysupgrade.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mwifi[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/wifi.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mdynamic_dns_updater.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/dynamic_dns_updater.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mbridge-control[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/bridge-control.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mbridge-hyfi-extend[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/bridge-hyfi-extend.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mwifi_led.sh[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/wifi_led.sh.log
-[[0;32m+[0m][0;32m Found [0;33meval[0;32m usage in [0;33mdefault.script[0m[0m
-[REF] /logs/s20_shell_check/sh_eval_sources/default.script.log
+[[0;31m-[0m] No eval usage found in shell scripts

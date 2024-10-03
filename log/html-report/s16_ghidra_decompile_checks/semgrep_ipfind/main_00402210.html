@@ -1,0 +1,310 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_ipfind.html" title="./../semgrep_ipfind.html" >&laquo; Back to semgrep_ipfind</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>/* WARNING: Heritage AFTER dead removal. Example location: r0x00413138 : 0x00402300 */</pre>
+<pre>/* WARNING: Restarted to delay deadcode elimination for space: ram */</pre>
+<br />
+<pre>undefined4 main(int param_1,int param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  ushort uVar1;</pre>
+<pre>  undefined4 uVar2;</pre>
+<pre>  int iVar3;</pre>
+<pre>  __fd_mask *p_Var4;</pre>
+<pre>  int *piVar5;</pre>
+<pre>  uint uVar6;</pre>
+<pre>  uint uVar7;</pre>
+<pre>  undefined4 local_910;</pre>
+<pre>  undefined4 local_90c;</pre>
+<pre>  socklen_t local_908;</pre>
+<pre>  sockaddr local_904;</pre>
+<pre>  char acStack_8f4 [32];</pre>
+<pre>  uint local_8d4 [32];</pre>
+<pre>  undefined4 uStack_854;</pre>
+<pre>  uint local_850;</pre>
+<pre>  char local_84c;</pre>
+<pre>  ushort local_84b;</pre>
+<pre>  undefined2 local_849;</pre>
+<pre>  undefined auStack_843 [6];</pre>
+<pre>  ushort local_83d;</pre>
+<pre>  uint local_83b;</pre>
+<pre>  undefined auStack_54 [12];</pre>
+<pre>  uint local_48;</pre>
+<pre>  undefined4 *local_44;</pre>
+<pre>  socklen_t *local_40;</pre>
+<pre>  undefined4 *local_3c;</pre>
+<pre>  undefined *local_38;</pre>
+<pre>  undefined *local_34;</pre>
+<pre>  undefined *local_30;</pre>
+<pre>  </pre>
+<pre>  local_910 = 1;</pre>
+<pre>  local_90c = 1;</pre>
+<pre>  local_908 = 0;</pre>
+<pre>  if (param_1 &lt; 2) {</pre>
+<pre>    FUN_004013d0("Invaild ifname\n");</pre>
+<pre>    uVar2 = 0xffffffff;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    ifname = *(char **)(param_2 + 4);</pre>
+<pre>    iVar3 = FUN_00401120();</pre>
+<pre>    uVar2 = 0;</pre>
+<pre>    if (-1 &lt; iVar3) {</pre>
+<pre>      FUN_00401240();</pre>
+<pre>      server_sockfd = socket(2,1,0x11);</pre>
+<pre>      if (server_sockfd == 0xffffffff) {</pre>
+<pre>        FUN_004013d0("Can\'t get server socket\n");</pre>
+<pre>        uVar2 = 0xffffffff;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_904.sa_data._6_4_ = 0;</pre>
+<pre>        local_904.sa_data._10_4_ = 0;</pre>
+<pre>        local_904.sa_family = 2;</pre>
+<pre>        local_904.sa_data._2_4_ = 0;</pre>
+<pre>        local_904.sa_data._0_2_ = 0xf500;</pre>
+<pre><span class="green"><span class="green"><span class="green">        strncpy(acStack_8f4,ifname,0x10)</span></span></span></span></pre>
+<pre>        iVar3 = setsockopt(server_sockfd,0xffff,0x19,acStack_8f4,0x20);</pre>
+<pre>        if (iVar3 &lt; 0) {</pre>
+<pre>          FUN_004013d0("setsockopt SO_BINDTODEVICE failed\n");</pre>
+<pre>          uVar2 = 0xffffffff;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar3 = setsockopt(server_sockfd,0xffff,0x20,&amp;local_910,4);</pre>
+<pre>          if (iVar3 &lt; 0) {</pre>
+<pre>            FUN_004013d0("setsockopt SO_BROADCAST failed\n");</pre>
+<pre>            uVar2 = 0xffffffff;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar3 = setsockopt(server_sockfd,0xffff,4,&amp;local_90c,4);</pre>
+<pre>            if (iVar3 &lt; 0) {</pre>
+<pre>              FUN_004013d0("setsockopt SO_REUSEADDR failed\n");</pre>
+<pre>              uVar2 = 0xffffffff;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar3 = bind(server_sockfd,&amp;local_904,0x10);</pre>
+<pre>              if (iVar3 &lt; 0) {</pre>
+<pre>                FUN_004013d0("bind port(%d) error\n",0xf500);</pre>
+<pre>                uVar2 = 0xffffffff;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                FUN_004013d0("IPFind start(%s)...\n",ifname);</pre>
+<pre>                local_44 = &amp;uStack_854;</pre>
+<pre>                local_38 = auStack_843;</pre>
+<pre>                local_40 = &amp;local_908;</pre>
+<pre>                local_3c = &amp;DAT_00402ad0;</pre>
+<pre>                local_34 = auStack_54;</pre>
+<pre>                local_30 = &amp;DAT_00402e90;</pre>
+<pre>                do {</pre>
+<pre>                  while( true ) {</pre>
+<pre>                    p_Var4 = (__fd_mask *)local_8d4;</pre>
+<pre>                    if (DAT_00413168 != 0) goto LAB_00402748;</pre>
+<pre>                    do {</pre>
+<pre>                      *p_Var4 = 0;</pre>
+<pre>                      p_Var4 = p_Var4 + 1;</pre>
+<pre>                    } while (p_Var4 != &amp;uStack_854);</pre>
+<pre>                    local_8d4[server_sockfd &gt;&gt; 5] =</pre>
+<pre>                         local_8d4[server_sockfd &gt;&gt; 5] | 1 &lt;&lt; (server_sockfd &amp; 0x1f);</pre>
+<pre>                    iVar3 = select(server_sockfd + 1,(fd_set *)local_8d4,(fd_set *)0x0,(fd_set *)0x0</pre>
+<pre>                                   ,(timeval *)0x0);</pre>
+<pre>                    if (iVar3 &lt; 0) break;</pre>
+<pre>                    if (((int)local_8d4[server_sockfd &gt;&gt; 5] &gt;&gt; (server_sockfd &amp; 0x1f) &amp; 1U) != 0) {</pre>
+<pre>                      local_908 = 0x10;</pre>
+<pre><span class="green">                      memset(&amp;uStack_854,0,0x800)</span></span></pre>
+<pre><span class="green"><span class="green">                      recvfrom(server_sockfd,&amp;uStack_854,0x800,0,(sockaddr *)client_addr,local_40)</span></span></span></pre>
+<pre>                      local_850 = local_850 &lt;&lt; 0x18 | local_850 &gt;&gt; 0x18 |</pre>
+<pre>                                  (local_850 &amp; 0xff0000) &gt;&gt; 8 | (local_850 &amp; 0xff00) &lt;&lt; 8;</pre>
+<pre>                      uVar7 = (local_84b &amp; 0xff) &lt;&lt; 8 | (uint)(local_84b &gt;&gt; 8);</pre>
+<pre>                      local_84b = CONCAT11((char)(local_84b &amp; 0xff),(char)(local_84b &gt;&gt; 8));</pre>
+<pre>                      local_849 = CONCAT11((char)local_849,(char)((ushort)local_849 &gt;&gt; 8));</pre>
+<pre>                      uVar6 = (uint)local_83d;</pre>
+<pre>                      uVar1 = local_83d &gt;&gt; 8;</pre>
+<pre>                      local_83d = CONCAT11((char)(uVar6 &amp; 0xff),(char)(local_83d &gt;&gt; 8));</pre>
+<pre>                      local_83b = local_83b &lt;&lt; 0x18 | local_83b &gt;&gt; 0x18 |</pre>
+<pre>                                  (local_83b &amp; 0xff0000) &gt;&gt; 8 | (local_83b &amp; 0xff00) &lt;&lt; 8;</pre>
+<pre>                      local_48 = local_83b;</pre>
+<pre>                      iVar3 = strncmp((char *)local_44,(char *)local_3c,4);</pre>
+<pre>                      if ((iVar3 == 0) &amp;&amp; (local_84c == '\n')) {</pre>
+<pre>                        if (uVar7 == 1) {</pre>
+<pre>                          if (((((uVar6 &amp; 0xff) &lt;&lt; 8 | (uint)uVar1) == 0) &amp;&amp;</pre>
+<pre>                              (iVar3 = memcmp(local_38,local_30,6), iVar3 == 0)) &amp;&amp; (local_48 == 0))</pre>
+<pre>                          {</pre>
+<pre>                            FUN_0040172c(&amp;uStack_854);</pre>
+<pre>                          }</pre>
+<pre>                        }</pre>
+<pre>                        else if ((((uVar7 == 2) &amp;&amp;</pre>
+<pre>                                  (iVar3 = net_get_hwaddr(ifname,local_34), -1 &lt; iVar3)) &amp;&amp;</pre>
+<pre>                                 (iVar3 = memcmp(local_38,local_34,6), iVar3 == 0)) &amp;&amp;</pre>
+<pre>                                (local_83b == 0x8e)) {</pre>
+<pre>                          FUN_004013f4(&amp;uStack_854);</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                  piVar5 = __errno_location();</pre>
+<pre>                } while (*piVar5 == 4);</pre>
+<pre>LAB_00402748:</pre>
+<pre>                FUN_00402198(ifname);</pre>
+<pre>                uVar2 = 0;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  return uVar2;</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

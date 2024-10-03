@@ -1,0 +1,137 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mfirmwareupgrade.cgi[0m
+
+
+00400e3c <main@@Base>:
+  400e3c:	27bdff58 	addiu	sp,sp,-168
+  400e40:	afbf00a4 	sw	ra,164(sp)
+  400e44:	afbe00a0 	sw	s8,160(sp)
+  400e48:	afb7009c 	sw	s7,156(sp)
+  400e4c:	afb60098 	sw	s6,152(sp)
+  400e50:	afb50094 	sw	s5,148(sp)
+  400e54:	afb40090 	sw	s4,144(sp)
+  400e58:	afb3008c 	sw	s3,140(sp)
+  400e5c:	afb20088 	sw	s2,136(sp)
+  400e60:	afb10084 	sw	s1,132(sp)
+  400e64:	afb00080 	sw	s0,128(sp)
+  400e68:	3c1c0042 	lui	gp,0x42
+  400e6c:	279c9e70 	addiu	gp,gp,-24976
+  400e70:	afbc0010 	sw	gp,16(sp)
+  400e74:	afa00018 	sw	zero,24(sp)
+  400e78:	8f9980c0 	lw	t9,-32576(gp)
+  400e7c:	0320f809 	jalr	t9
+  400e80:	27a40018 	addiu	a0,sp,24
+  400e84:	8fbc0010 	lw	gp,16(sp)
+  400e88:	8f828060 	lw	v0,-32672(gp)
+  400e8c:	8c440000 	lw	a0,0(v0)
+  400e90:	3c050040 	lui	a1,0x40
+  400e94:	8fa60018 	lw	a2,24(sp)
+[31m  400e98:	8f99808c 	lw	t9,fprintf[0m
+  400e9c:	0320f809 	jalr	t9
+  400ea0:	24a51970 	addiu	a1,a1,6512
+--
+  400fd8:	8f998070 	lw	t9,-32656(gp)
+  400fdc:	0320f809 	jalr	t9
+  400fe0:	24a519bc 	addiu	a1,a1,6588
+  400fe4:	8fbc0010 	lw	gp,16(sp)
+  400fe8:	24040001 	li	a0,1
+  400fec:	3c050040 	lui	a1,0x40
+  400ff0:	8f9980b8 	lw	t9,-32584(gp)
+  400ff4:	0320f809 	jalr	t9
+  400ff8:	24a51cd0 	addiu	a1,a1,7376
+  400ffc:	8fbc0010 	lw	gp,16(sp)
+  401000:	02802021 	move	a0,s4
+  401004:	3c050040 	lui	a1,0x40
+  401008:	24a519ec 	addiu	a1,a1,6636
+  40100c:	8f998040 	lw	t9,-32704(gp)
+  401010:	0320f809 	jalr	t9
+  401014:	00003021 	move	a2,zero
+  401018:	8fbc0010 	lw	gp,16(sp)
+  40101c:	8e830058 	lw	v1,88(s4)
+  401020:	24420080 	addiu	v0,v0,128
+  401024:	00028080 	sll	s0,v0,0x2
+  401028:	00701021 	addu	v0,v1,s0
+  40102c:	8f838060 	lw	v1,-32672(gp)
+  401030:	8c640000 	lw	a0,0(v1)
+  401034:	3c050040 	lui	a1,0x40
+  401038:	8c460004 	lw	a2,4(v0)
+[31m  40103c:	8f99808c 	lw	t9,fprintf[0m
+  401040:	0320f809 	jalr	t9
+  401044:	24a519f4 	addiu	a1,a1,6644
+--
+  401134:	02e02821 	move	a1,s7
+  401138:	8fbc0010 	lw	gp,16(sp)
+  40113c:	1440001c 	bnez	v0,4011b0 <main@@Base+0x374>
+  401140:	00101080 	sll	v0,s0,0x2
+  401144:	00121080 	sll	v0,s2,0x2
+  401148:	00121940 	sll	v1,s2,0x5
+  40114c:	00621023 	subu	v0,v1,v0
+  401150:	02221021 	addu	v0,s1,v0
+  401154:	8c46000c 	lw	a2,12(v0)
+  401158:	80c20000 	lb	v0,0(a2)
+  40115c:	10400014 	beqz	v0,4011b0 <main@@Base+0x374>
+  401160:	00101080 	sll	v0,s0,0x2
+  401164:	00121080 	sll	v0,s2,0x2
+  401168:	00621023 	subu	v0,v1,v0
+  40116c:	02221021 	addu	v0,s1,v0
+  401170:	8c420010 	lw	v0,16(v0)
+  401174:	80420000 	lb	v0,0(v0)
+  401178:	1440000d 	bnez	v0,4011b0 <main@@Base+0x374>
+  40117c:	00101080 	sll	v0,s0,0x2
+  401180:	00121080 	sll	v0,s2,0x2
+  401184:	00628023 	subu	s0,v1,v0
+  401188:	02308821 	addu	s1,s1,s0
+  40118c:	8ea40000 	lw	a0,0(s5)
+  401190:	8fa50074 	lw	a1,116(sp)
+  401194:	8e270014 	lw	a3,20(s1)
+[31m  401198:	8f99808c 	lw	t9,fprintf[0m
+  40119c:	0320f809 	jalr	t9
+  4011a0:	26520001 	addiu	s2,s2,1
+--
+  4011d8:	8fbc0010 	lw	gp,16(sp)
+  4011dc:	144000e5 	bnez	v0,401574 <main@@Base+0x738>
+  4011e0:	00101080 	sll	v0,s0,0x2
+  4011e4:	00101940 	sll	v1,s0,0x5
+  4011e8:	00621023 	subu	v0,v1,v0
+  4011ec:	02221021 	addu	v0,s1,v0
+  4011f0:	8c420014 	lw	v0,20(v0)
+  4011f4:	1440000a 	bnez	v0,401220 <main@@Base+0x3e4>
+  4011f8:	00101080 	sll	v0,s0,0x2
+  4011fc:	8fa4007c 	lw	a0,124(sp)
+  401200:	02c02821 	move	a1,s6
+  401204:	8ea70000 	lw	a3,0(s5)
+  401208:	8f998054 	lw	t9,-32684(gp)
+  40120c:	0320f809 	jalr	t9
+  401210:	24060018 	li	a2,24
+  401214:	8fbc0010 	lw	gp,16(sp)
+  401218:	00101080 	sll	v0,s0,0x2
+  40121c:	00101940 	sll	v1,s0,0x5
+  401220:	00621023 	subu	v0,v1,v0
+  401224:	02221021 	addu	v0,s1,v0
+  401228:	8c460004 	lw	a2,4(v0)
+  40122c:	18c000cc 	blez	a2,401560 <main@@Base+0x724>
+  401230:	00000000 	nop
+  401234:	8ea40000 	lw	a0,0(s5)
+  401238:	8fa50064 	lw	a1,100(sp)
+[31m  40123c:	8f99808c 	lw	t9,fprintf[0m
+  401240:	0320f809 	jalr	t9
+  401244:	00000000 	nop
+  401248:	00101080 	sll	v0,s0,0x2
+  40124c:	00101940 	sll	v1,s0,0x5
+  401250:	00621023 	subu	v0,v1,v0
+  401254:	02221021 	addu	v0,s1,v0
+  401258:	8c440014 	lw	a0,20(v0)
+  40125c:	8c450004 	lw	a1,4(v0)
+  401260:	0c100344 	jal	400d10 <_ftext@@Base+0x1a0>
+  401264:	00000000 	nop
+  401268:	8fbc0010 	lw	gp,16(sp)
+  40126c:	00409821 	move	s3,v0
+  401270:	8ea40000 	lw	a0,0(s5)
+  401274:	8fa50068 	lw	a1,104(sp)
+[31m  401278:	8f99808c 	lw	t9,fprintf[0m
+  40127c:	0320f809 	jalr	t9
+  401280:	00403021 	move	a2,v0
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m5[0m times [0;33mfirmwareupgrade.cgi[0m
+

@@ -1,0 +1,62 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 7:[0m
+[0m	mac=`rtkmib mac|tr '[a-z]' '[A-Z]'`[0m
+[32m            ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                           ^-----^ SC2021 (info): Don't use [] around classes in tr, it replaces literal square brackets.[0m
+[32m                                   ^-----^ SC2021 (info): Don't use [] around classes in tr, it replaces literal square brackets.[0m
+
+[1mDid you mean: [0m
+	mac=$(rtkmib mac|tr '[a-z]' '[A-Z]')
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 8:[0m
+[0m	modelname=`/usr/sbin/userconfig -read System ModelName`[0m
+[32m                  ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	modelname=$(/usr/sbin/userconfig -read System ModelName)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 9:[0m
+[0m	ssid=$modelname"-"`echo $mac|cut -d: -f 5``echo $mac|cut -d: -f 6`[0m
+[32m                          ^----------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                  ^----------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                                                        ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	ssid=$modelname"-"$(echo "$mac"|cut -d: -f 5)$(echo "$mac"|cut -d: -f 6)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 10:[0m
+[0m	userconfig -write WIRELESS_AP SSID $ssid[0m
+[32m                                           ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	userconfig -write WIRELESS_AP SSID "$ssid"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 13:[0m
+[0m		psk=`dlinkpsk`[0m
+[32m                    ^--------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+		psk=$(dlinkpsk)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 14:[0m
+[0m		if [ ! -z "$psk" ]; then[0m
+[32m                     ^-- SC2236 (style): Use -n instead of ! -z.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/restore_wifi_ap.sh line 15:[0m
+[0m			userconfig -write WIRELESS_AP PreSharedKey $psk[0m
+[32m                                                                   ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+			userconfig -write WIRELESS_AP PreSharedKey "$psk"
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2021 -- Don't use [] around classes in tr...
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
+  https://www.shellcheck.net/wiki/SC2006 -- Use $(...) notation instead of le...

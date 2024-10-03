@@ -1,0 +1,10 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/force_conifg.sh line 10:[0m
+[0m	hwv=`cfg -a r -p /mnt/flash/config NETIPCAS.ini NIPCAS hwv`[0m
+[32m            ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	hwv=$(cfg -a r -p /mnt/flash/config NETIPCAS.ini NIPCAS hwv)
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2006 -- Use $(...) notation instead of le...

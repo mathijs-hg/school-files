@@ -1,0 +1,28 @@
+[0m
+[[0;33m*[0m] Function [0;33mmmap[0m tear down of [0;33mcamsvr[0m
+
+[31m  40c670:	8f828450 	lw	v0,mmap[0m
+  40c674:	0040c821 	move	t9,v0
+  40c678:	0320f809 	jalr	t9
+  40c67c:	00000000 	nop
+  40c680:	8fdc0018 	lw	gp,24(s8)
+  40c684:	00401821 	move	v1,v0
+  40c688:	8fc40038 	lw	a0,56(s8)
+  40c68c:	260200c6 	addiu	v0,s0,198
+  40c690:	00021080 	sll	v0,v0,0x2
+  40c694:	00821021 	addu	v0,a0,v0
+  40c698:	ac430000 	sw	v1,0(v0)
+  40c69c:	8fc30038 	lw	v1,56(s8)
+  40c6a0:	260200c6 	addiu	v0,s0,198
+  40c6a4:	00021080 	sll	v0,v0,0x2
+  40c6a8:	00621021 	addu	v0,v1,v0
+  40c6ac:	8c430000 	lw	v1,0(v0)
+  40c6b0:	2402ffff 	li	v0,-1
+  40c6b4:	1462000b 	bne	v1,v0,40c6e4 <VideoGetBrate@@Base+0x4284>
+  40c6b8:	00000000 	nop
+  40c6bc:	3c020044 	lui	v0,0x44
+  40c6c0:	2444ac5c 	addiu	a0,v0,-21412
+
+[0m
+[[0;33m*[0m] Function [0;33mmmap[0m used [0;33m1[0m times [0;33mcamsvr[0m
+

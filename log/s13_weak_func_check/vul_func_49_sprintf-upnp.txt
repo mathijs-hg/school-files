@@ -1,0 +1,1322 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mupnp[0m
+
+  40156c:	8fbc0020 	lw	gp,32(sp)
+  401570:	24a5c0c0 	addiu	a1,a1,-16192
+  401574:	8f9980e0 	lw	t9,-32544(gp)
+  401578:	0320f809 	jalr	t9
+  40157c:	2406000f 	li	a2,15
+  401580:	02203021 	move	a2,s1
+  401584:	34058927 	li	a1,0x8927
+  401588:	8fbc0020 	lw	gp,32(sp)
+  40158c:	8f99819c 	lw	t9,-32356(gp)
+  401590:	0320f809 	jalr	t9
+  401594:	02002021 	move	a0,s0
+  401598:	8fbc0020 	lw	gp,32(sp)
+  40159c:	8f998040 	lw	t9,-32704(gp)
+  4015a0:	0320f809 	jalr	t9
+  4015a4:	02002021 	move	a0,s0
+  4015a8:	3c050041 	lui	a1,0x41
+  4015ac:	02402021 	move	a0,s2
+  4015b0:	8fbc0020 	lw	gp,32(sp)
+  4015b4:	24a5c0c8 	addiu	a1,a1,-16184
+  4015b8:	93a9003c 	lbu	t1,60(sp)
+  4015bc:	93a8003d 	lbu	t0,61(sp)
+  4015c0:	93a3003e 	lbu	v1,62(sp)
+  4015c4:	93a2003f 	lbu	v0,63(sp)
+  4015c8:	93a6003a 	lbu	a2,58(sp)
+  4015cc:	93a7003b 	lbu	a3,59(sp)
+[31m  4015d0:	8f998090 	lw	t9,sprintf[0m
+  4015d4:	afa90010 	sw	t1,16(sp)
+  4015d8:	afa80014 	sw	t0,20(sp)
+--
+  40461c:	0320f809 	jalr	t9
+  404620:	afa50018 	sw	a1,24(sp)
+  404624:	8fa50018 	lw	a1,24(sp)
+  404628:	00408821 	move	s1,v0
+  40462c:	8fbc0010 	lw	gp,16(sp)
+  404630:	aca20000 	sw	v0,0(a1)
+  404634:	2402ffff 	li	v0,-1
+  404638:	8e030010 	lw	v1,16(s0)
+  40463c:	8f998174 	lw	t9,-32396(gp)
+  404640:	1062001f 	beq	v1,v0,4046c0 <ILibGetRawPacket@@Base+0x148>
+  404644:	3c050041 	lui	a1,0x41
+  404648:	02202021 	move	a0,s1
+  40464c:	24060005 	li	a2,5
+  404650:	0320f809 	jalr	t9
+  404654:	24a5c23c 	addiu	a1,a1,-15812
+  404658:	8fbc0010 	lw	gp,16(sp)
+  40465c:	8e05001c 	lw	a1,28(s0)
+  404660:	8f998174 	lw	t9,-32396(gp)
+  404664:	8e060020 	lw	a2,32(s0)
+  404668:	0320f809 	jalr	t9
+  40466c:	26240005 	addiu	a0,s1,5
+  404670:	3c050041 	lui	a1,0x41
+  404674:	8fbc0010 	lw	gp,16(sp)
+  404678:	24a5c244 	addiu	a1,a1,-15804
+  40467c:	8e130020 	lw	s3,32(s0)
+[31m  404680:	8f998090 	lw	t9,sprintf[0m
+  404684:	8e060010 	lw	a2,16(s0)
+  404688:	26730005 	addiu	s3,s3,5
+--
+  404914:	2c84000b 	sltiu	a0,a0,11
+  404918:	14800013 	bnez	a0,404968 <ILibGetRawPacket@@Base+0x3f0>
+  40491c:	00000000 	nop
+  404920:	10490011 	beq	v0,t1,404968 <ILibGetRawPacket@@Base+0x3f0>
+  404924:	00000000 	nop
+  404928:	1048000f 	beq	v0,t0,404968 <ILibGetRawPacket@@Base+0x3f0>
+  40492c:	00000000 	nop
+  404930:	1047000d 	beq	v0,a3,404968 <ILibGetRawPacket@@Base+0x3f0>
+  404934:	00000000 	nop
+  404938:	1043000b 	beq	v0,v1,404968 <ILibGetRawPacket@@Base+0x3f0>
+  40493c:	00000000 	nop
+  404940:	105e0009 	beq	v0,s8,404968 <ILibGetRawPacket@@Base+0x3f0>
+  404944:	00000000 	nop
+  404948:	10570007 	beq	v0,s7,404968 <ILibGetRawPacket@@Base+0x3f0>
+  40494c:	00000000 	nop
+  404950:	10560006 	beq	v0,s6,40496c <ILibGetRawPacket@@Base+0x3f4>
+  404954:	02302021 	addu	a0,s1,s0
+  404958:	10550004 	beq	v0,s5,40496c <ILibGetRawPacket@@Base+0x3f4>
+  40495c:	00000000 	nop
+  404960:	14540005 	bne	v0,s4,404978 <ILibGetRawPacket@@Base+0x400>
+  404964:	01402821 	move	a1,t2
+  404968:	02302021 	addu	a0,s1,s0
+  40496c:	26100001 	addiu	s0,s0,1
+  404970:	10000016 	b	4049cc <ILibGetRawPacket@@Base+0x454>
+  404974:	a0820000 	sb	v0,0(a0)
+[31m  404978:	8f998090 	lw	t9,sprintf[0m
+  40497c:	8fa40020 	lw	a0,32(sp)
+  404980:	afa30030 	sw	v1,48(sp)
+--
+  4077cc:	8fb40040 	lw	s4,64(sp)
+  4077d0:	8fb3003c 	lw	s3,60(sp)
+  4077d4:	8fb20038 	lw	s2,56(sp)
+  4077d8:	8fb10034 	lw	s1,52(sp)
+  4077dc:	8fb00030 	lw	s0,48(sp)
+  4077e0:	03200008 	jr	t9
+  4077e4:	27bd0048 	addiu	sp,sp,72
+  4077e8:	27bdffd8 	addiu	sp,sp,-40
+  4077ec:	afbf0024 	sw	ra,36(sp)
+  4077f0:	afb00020 	sw	s0,32(sp)
+  4077f4:	3c1c0042 	lui	gp,0x42
+  4077f8:	279c51d0 	addiu	gp,gp,20944
+  4077fc:	afbc0018 	sw	gp,24(sp)
+  407800:	8f99815c 	lw	t9,-32420(gp)
+  407804:	00808021 	move	s0,a0
+  407808:	0320f809 	jalr	t9
+  40780c:	24040010 	li	a0,16
+  407810:	3c050041 	lui	a1,0x41
+  407814:	8e060810 	lw	a2,2064(s0)
+  407818:	00402021 	move	a0,v0
+  40781c:	24a5c310 	addiu	a1,a1,-15600
+  407820:	8fbc0018 	lw	gp,24(sp)
+  407824:	00408021 	move	s0,v0
+  407828:	00061403 	sra	v0,a2,0x10
+  40782c:	304200ff 	andi	v0,v0,0xff
+[31m  407830:	8f998090 	lw	t9,sprintf[0m
+  407834:	afa20010 	sw	v0,16(sp)
+  407838:	00063a03 	sra	a3,a2,0x8
+--
+  40793c:	02602021 	move	a0,s3
+  407940:	02802021 	move	a0,s4
+  407944:	8fbc0018 	lw	gp,24(sp)
+  407948:	8f998068 	lw	t9,strlen
+  40794c:	0320f809 	jalr	t9
+  407950:	0040a821 	move	s5,v0
+  407954:	02402021 	move	a0,s2
+  407958:	8fbc0018 	lw	gp,24(sp)
+  40795c:	00408821 	move	s1,v0
+  407960:	02b18821 	addu	s1,s5,s1
+  407964:	8f998068 	lw	t9,strlen
+  407968:	0320f809 	jalr	t9
+  40796c:	26310043 	addiu	s1,s1,67
+  407970:	8fbc0018 	lw	gp,24(sp)
+  407974:	00021040 	sll	v0,v0,0x1
+  407978:	8f99815c 	lw	t9,-32420(gp)
+  40797c:	0320f809 	jalr	t9
+  407980:	02222021 	addu	a0,s1,v0
+  407984:	3c050041 	lui	a1,0x41
+  407988:	02403021 	move	a2,s2
+  40798c:	8fbc0018 	lw	gp,24(sp)
+  407990:	02603821 	move	a3,s3
+  407994:	24a5c338 	addiu	a1,a1,-15560
+  407998:	afb40010 	sw	s4,16(sp)
+  40799c:	00402021 	move	a0,v0
+[31m  4079a0:	8f998090 	lw	t9,sprintf[0m
+  4079a4:	00408821 	move	s1,v0
+  4079a8:	0320f809 	jalr	t9
+--
+  407afc:	27bdffc8 	addiu	sp,sp,-56
+  407b00:	afbf0034 	sw	ra,52(sp)
+  407b04:	afb30030 	sw	s3,48(sp)
+  407b08:	afb2002c 	sw	s2,44(sp)
+  407b0c:	afb10028 	sw	s1,40(sp)
+  407b10:	afb00024 	sw	s0,36(sp)
+  407b14:	3c1c0042 	lui	gp,0x42
+  407b18:	279c51d0 	addiu	gp,gp,20944
+  407b1c:	afbc0010 	sw	gp,16(sp)
+  407b20:	8f998068 	lw	t9,strlen
+  407b24:	00808021 	move	s0,a0
+  407b28:	afa60018 	sw	a2,24(sp)
+  407b2c:	00c02021 	move	a0,a2
+  407b30:	0320f809 	jalr	t9
+  407b34:	00a09021 	move	s2,a1
+  407b38:	8fbc0010 	lw	gp,16(sp)
+  407b3c:	8f99815c 	lw	t9,-32420(gp)
+  407b40:	0320f809 	jalr	t9
+  407b44:	2444018b 	addiu	a0,v0,395
+  407b48:	3c050041 	lui	a1,0x41
+  407b4c:	8fbc0010 	lw	gp,16(sp)
+  407b50:	24a5c4dc 	addiu	a1,a1,-15140
+  407b54:	00402021 	move	a0,v0
+  407b58:	8fa60018 	lw	a2,24(sp)
+  407b5c:	00408821 	move	s1,v0
+[31m  407b60:	8f998090 	lw	t9,sprintf[0m
+  407b64:	00c03821 	move	a3,a2
+  407b68:	0320f809 	jalr	t9
+  407b6c:	02403021 	move	a2,s2
+  407b70:	2404003b 	li	a0,59
+  407b74:	8fbc0010 	lw	gp,16(sp)
+  407b78:	8f99815c 	lw	t9,-32420(gp)
+  407b7c:	0320f809 	jalr	t9
+  407b80:	00409821 	move	s3,v0
+  407b84:	3c050041 	lui	a1,0x41
+  407b88:	02603021 	move	a2,s3
+  407b8c:	8fbc0010 	lw	gp,16(sp)
+  407b90:	24a5c660 	addiu	a1,a1,-14752
+  407b94:	00402021 	move	a0,v0
+[31m  407b98:	8f998090 	lw	t9,sprintf[0m
+  407b9c:	0320f809 	jalr	t9
+  407ba0:	00409021 	move	s2,v0
+--
+  407d6c:	8e023918 	lw	v0,14616(s0)
+  407d70:	8fbc0018 	lw	gp,24(sp)
+  407d74:	afa30020 	sw	v1,32(sp)
+  407d78:	00521021 	addu	v0,v0,s2
+  407d7c:	8c440000 	lw	a0,0(v0)
+  407d80:	24020004 	li	v0,4
+  407d84:	8f998108 	lw	t9,-32504(gp)
+  407d88:	0320f809 	jalr	t9
+  407d8c:	afa20010 	sw	v0,16(sp)
+  407d90:	8fbc0018 	lw	gp,24(sp)
+  407d94:	14400081 	bnez	v0,407f9c <UPnPGetLocalInterfaceToHost@@Base+0x328>
+  407d98:	3c150041 	lui	s5,0x41
+  407d9c:	3c140041 	lui	s4,0x41
+  407da0:	3c1e0041 	lui	s8,0x41
+  407da4:	26b5c6a0 	addiu	s5,s5,-14688
+  407da8:	2694c710 	addiu	s4,s4,-14576
+  407dac:	27dec738 	addiu	s8,s8,-14536
+  407db0:	0000b821 	move	s7,zero
+  407db4:	24130010 	li	s3,16
+  407db8:	3c020041 	lui	v0,0x41
+  407dbc:	3c070041 	lui	a3,0x41
+  407dc0:	02202021 	move	a0,s1
+  407dc4:	8e060024 	lw	a2,36(s0)
+  407dc8:	2442c728 	addiu	v0,v0,-14552
+  407dcc:	02a02821 	move	a1,s5
+[31m  407dd0:	8f998090 	lw	t9,sprintf[0m
+  407dd4:	24e7c714 	addiu	a3,a3,-14572
+  407dd8:	afa20010 	sw	v0,16(sp)
+  407ddc:	0320f809 	jalr	t9
+  407de0:	afb40014 	sw	s4,20(sp)
+  407de4:	02202821 	move	a1,s1
+  407de8:	00003821 	move	a3,zero
+  407dec:	8e033918 	lw	v1,14616(s0)
+  407df0:	00403021 	move	a2,v0
+  407df4:	8fbc0018 	lw	gp,24(sp)
+  407df8:	00721821 	addu	v1,v1,s2
+  407dfc:	8f9980dc 	lw	t9,-32548(gp)
+  407e00:	8c640000 	lw	a0,0(v1)
+  407e04:	afb60010 	sw	s6,16(sp)
+  407e08:	0320f809 	jalr	t9
+  407e0c:	afb30014 	sw	s3,20(sp)
+  407e10:	8fbc0018 	lw	gp,24(sp)
+  407e14:	0440005b 	bltz	v0,407f84 <UPnPGetLocalInterfaceToHost@@Base+0x310>
+  407e18:	02202021 	move	a0,s1
+  407e1c:	8e020024 	lw	v0,36(s0)
+[31m  407e20:	8f998090 	lw	t9,sprintf[0m
+  407e24:	02a02821 	move	a1,s5
+  407e28:	00403021 	move	a2,v0
+  407e2c:	afbe0010 	sw	s8,16(sp)
+  407e30:	02803821 	move	a3,s4
+  407e34:	0320f809 	jalr	t9
+  407e38:	afa20014 	sw	v0,20(sp)
+  407e3c:	02202821 	move	a1,s1
+  407e40:	00003821 	move	a3,zero
+  407e44:	8e033918 	lw	v1,14616(s0)
+  407e48:	00403021 	move	a2,v0
+  407e4c:	8fbc0018 	lw	gp,24(sp)
+  407e50:	00721821 	addu	v1,v1,s2
+  407e54:	8f9980dc 	lw	t9,-32548(gp)
+  407e58:	8c640000 	lw	a0,0(v1)
+  407e5c:	afb60010 	sw	s6,16(sp)
+  407e60:	0320f809 	jalr	t9
+  407e64:	afb30014 	sw	s3,20(sp)
+  407e68:	8fbc0018 	lw	gp,24(sp)
+  407e6c:	04400045 	bltz	v0,407f84 <UPnPGetLocalInterfaceToHost@@Base+0x310>
+  407e70:	02202021 	move	a0,s1
+  407e74:	8f878170 	lw	a3,-32400(gp)
+  407e78:	8e060024 	lw	a2,36(s0)
+  407e7c:	02a02821 	move	a1,s5
+[31m  407e80:	8f998090 	lw	t9,sprintf[0m
+  407e84:	24e20002 	addiu	v0,a3,2
+  407e88:	afa20010 	sw	v0,16(sp)
+  407e8c:	0320f809 	jalr	t9
+  407e90:	afb40014 	sw	s4,20(sp)
+  407e94:	02202821 	move	a1,s1
+  407e98:	00003821 	move	a3,zero
+  407e9c:	8e033918 	lw	v1,14616(s0)
+  407ea0:	00403021 	move	a2,v0
+  407ea4:	8fbc0018 	lw	gp,24(sp)
+  407ea8:	00721821 	addu	v1,v1,s2
+  407eac:	8f9980dc 	lw	t9,-32548(gp)
+  407eb0:	8c640000 	lw	a0,0(v1)
+  407eb4:	afb60010 	sw	s6,16(sp)
+  407eb8:	0320f809 	jalr	t9
+  407ebc:	afb30014 	sw	s3,20(sp)
+  407ec0:	8fbc0018 	lw	gp,24(sp)
+  407ec4:	0440002f 	bltz	v0,407f84 <UPnPGetLocalInterfaceToHost@@Base+0x310>
+  407ec8:	3c020041 	lui	v0,0x41
+  407ecc:	3c070041 	lui	a3,0x41
+  407ed0:	02202021 	move	a0,s1
+  407ed4:	8e060024 	lw	a2,36(s0)
+  407ed8:	2442c488 	addiu	v0,v0,-15224
+  407edc:	02a02821 	move	a1,s5
+[31m  407ee0:	8f998090 	lw	t9,sprintf[0m
+  407ee4:	24e7c740 	addiu	a3,a3,-14528
+  407ee8:	afa20010 	sw	v0,16(sp)
+  407eec:	0320f809 	jalr	t9
+  407ef0:	afb40014 	sw	s4,20(sp)
+  407ef4:	02202821 	move	a1,s1
+  407ef8:	00003821 	move	a3,zero
+  407efc:	8e033918 	lw	v1,14616(s0)
+  407f00:	00403021 	move	a2,v0
+  407f04:	8fbc0018 	lw	gp,24(sp)
+  407f08:	00721821 	addu	v1,v1,s2
+  407f0c:	8f9980dc 	lw	t9,-32548(gp)
+  407f10:	8c640000 	lw	a0,0(v1)
+  407f14:	afb60010 	sw	s6,16(sp)
+  407f18:	0320f809 	jalr	t9
+  407f1c:	afb30014 	sw	s3,20(sp)
+  407f20:	8fbc0018 	lw	gp,24(sp)
+  407f24:	04400017 	bltz	v0,407f84 <UPnPGetLocalInterfaceToHost@@Base+0x310>
+  407f28:	02202021 	move	a0,s1
+  407f2c:	8e023954 	lw	v0,14676(s0)
+[31m  407f30:	8f998090 	lw	t9,sprintf[0m
+  407f34:	02a02821 	move	a1,s5
+  407f38:	00403021 	move	a2,v0
+--
+  408398:	27a60020 	addiu	a2,sp,32
+  40839c:	00002821 	move	a1,zero
+  4083a0:	8fbc0018 	lw	gp,24(sp)
+  4083a4:	8f9980bc 	lw	t9,-32580(gp)
+  4083a8:	0320f809 	jalr	t9
+  4083ac:	27a40024 	addiu	a0,sp,36
+  4083b0:	02002021 	move	a0,s0
+  4083b4:	8fa30020 	lw	v1,32(sp)
+  4083b8:	8fbc0018 	lw	gp,24(sp)
+  4083bc:	8fa20024 	lw	v0,36(sp)
+  4083c0:	8f998068 	lw	t9,strlen
+  4083c4:	00621021 	addu	v0,v1,v0
+  4083c8:	0320f809 	jalr	t9
+  4083cc:	ae420024 	sw	v0,36(s2)
+  4083d0:	8fbc0018 	lw	gp,24(sp)
+  4083d4:	8f99815c 	lw	t9,-32420(gp)
+  4083d8:	0320f809 	jalr	t9
+  4083dc:	24440088 	addiu	a0,v0,136
+  4083e0:	3c050041 	lui	a1,0x41
+  4083e4:	02003821 	move	a3,s0
+  4083e8:	8fbc0018 	lw	gp,24(sp)
+  4083ec:	00409021 	move	s2,v0
+  4083f0:	24a5c7a4 	addiu	a1,a1,-14428
+  4083f4:	00402021 	move	a0,v0
+  4083f8:	8fa20020 	lw	v0,32(sp)
+[31m  4083fc:	8f998090 	lw	t9,sprintf[0m
+  408400:	8f86813c 	lw	a2,-32452(gp)
+  408404:	0320f809 	jalr	t9
+--
+  408864:	24843948 	addiu	a0,a0,14664
+  408868:	8fbc0010 	lw	gp,16(sp)
+  40886c:	1040001b 	beqz	v0,4088dc <UPnPGetLocalInterfaceToHost@@Base+0xc68>
+  408870:	00409021 	move	s2,v0
+  408874:	8c42001c 	lw	v0,28(v0)
+  408878:	2442ffff 	addiu	v0,v0,-1
+  40887c:	1440000f 	bnez	v0,4088bc <UPnPGetLocalInterfaceToHost@@Base+0xc48>
+  408880:	ae42001c 	sw	v0,28(s2)
+  408884:	8f99803c 	lw	t9,-32708(gp)
+  408888:	8e440014 	lw	a0,20(s2)
+  40888c:	0320f809 	jalr	t9
+  408890:	00000000 	nop
+  408894:	8fbc0010 	lw	gp,16(sp)
+  408898:	8e440000 	lw	a0,0(s2)
+  40889c:	8f99803c 	lw	t9,-32708(gp)
+  4088a0:	0320f809 	jalr	t9
+  4088a4:	00000000 	nop
+  4088a8:	8fbc0010 	lw	gp,16(sp)
+  4088ac:	8f99803c 	lw	t9,-32708(gp)
+  4088b0:	0320f809 	jalr	t9
+  4088b4:	02402021 	move	a0,s2
+  4088b8:	8fbc0010 	lw	gp,16(sp)
+  4088bc:	3c050041 	lui	a1,0x41
+  4088c0:	3c070041 	lui	a3,0x41
+  4088c4:	02202021 	move	a0,s1
+[31m  4088c8:	8f998090 	lw	t9,sprintf[0m
+  4088cc:	24a5c85c 	addiu	a1,a1,-14244
+  4088d0:	24e7c884 	addiu	a3,a3,-14204
+  4088d4:	10000008 	b	4088f8 <UPnPGetLocalInterfaceToHost@@Base+0xc84>
+  4088d8:	240600c8 	li	a2,200
+  4088dc:	3c050041 	lui	a1,0x41
+  4088e0:	3c070041 	lui	a3,0x41
+  4088e4:	02202021 	move	a0,s1
+[31m  4088e8:	8f998090 	lw	t9,sprintf[0m
+  4088ec:	24a5c85c 	addiu	a1,a1,-14244
+  4088f0:	24e7c888 	addiu	a3,a3,-14200
+--
+  408e14:	8fbf004c 	lw	ra,76(sp)
+  408e18:	8fbe0048 	lw	s8,72(sp)
+  408e1c:	8fb70044 	lw	s7,68(sp)
+  408e20:	8fb60040 	lw	s6,64(sp)
+  408e24:	8fb5003c 	lw	s5,60(sp)
+  408e28:	8fb40038 	lw	s4,56(sp)
+  408e2c:	8fb30034 	lw	s3,52(sp)
+  408e30:	8fb20030 	lw	s2,48(sp)
+  408e34:	8fb1002c 	lw	s1,44(sp)
+  408e38:	8fb00028 	lw	s0,40(sp)
+  408e3c:	03e00008 	jr	ra
+  408e40:	27bd0050 	addiu	sp,sp,80
+  408e44:	27bdff00 	addiu	sp,sp,-256
+  408e48:	afbf00fc 	sw	ra,252(sp)
+  408e4c:	afb300f8 	sw	s3,248(sp)
+  408e50:	afb200f4 	sw	s2,244(sp)
+  408e54:	afb100f0 	sw	s1,240(sp)
+  408e58:	afb000ec 	sw	s0,236(sp)
+  408e5c:	3c1c0042 	lui	gp,0x42
+  408e60:	279c51d0 	addiu	gp,gp,20944
+  408e64:	afbc0018 	sw	gp,24(sp)
+  408e68:	00a08021 	move	s0,a1
+  408e6c:	10a000be 	beqz	a1,409168 <UPnPGetLocalInterfaceToHost@@Base+0x14f4>
+  408e70:	00808821 	move	s1,a0
+  408e74:	27b20084 	addiu	s2,sp,132
+[31m  408e78:	8f998090 	lw	t9,sprintf[0m
+  408e7c:	1480000d 	bnez	a0,408eb4 <UPnPGetLocalInterfaceToHost@@Base+0x1240>
+  408e80:	3c050041 	lui	a1,0x41
+  408e84:	8f86813c 	lw	a2,-32452(gp)
+  408e88:	24a5c8d0 	addiu	a1,a1,-14128
+  408e8c:	02402021 	move	a0,s2
+  408e90:	0320f809 	jalr	t9
+  408e94:	27b10020 	addiu	s1,sp,32
+  408e98:	3c050041 	lui	a1,0x41
+  408e9c:	02202021 	move	a0,s1
+  408ea0:	8fbc0018 	lw	gp,24(sp)
+  408ea4:	24a5c8ec 	addiu	a1,a1,-14100
+[31m  408ea8:	8f998090 	lw	t9,sprintf[0m
+  408eac:	1000009b 	b	40911c <UPnPGetLocalInterfaceToHost@@Base+0x14a8>
+  408eb0:	afb20010 	sw	s2,16(sp)
+--
+  408f50:	24020012 	li	v0,18
+  408f54:	8e220008 	lw	v0,8(s1)
+  408f58:	90430000 	lbu	v1,0(v0)
+  408f5c:	2402002f 	li	v0,47
+  408f60:	1462003f 	bne	v1,v0,409060 <UPnPGetLocalInterfaceToHost@@Base+0x13ec>
+  408f64:	00000000 	nop
+  408f68:	1000000e 	b	408fa4 <UPnPGetLocalInterfaceToHost@@Base+0x1330>
+  408f6c:	27b10020 	addiu	s1,sp,32
+  408f70:	1642003b 	bne	s2,v0,409060 <UPnPGetLocalInterfaceToHost@@Base+0x13ec>
+  408f74:	00000000 	nop
+  408f78:	8e240008 	lw	a0,8(s1)
+  408f7c:	3c050041 	lui	a1,0x41
+  408f80:	8f9980d4 	lw	t9,-32556(gp)
+  408f84:	24a5c974 	addiu	a1,a1,-13964
+  408f88:	24840001 	addiu	a0,a0,1
+  408f8c:	0320f809 	jalr	t9
+  408f90:	24060011 	li	a2,17
+  408f94:	8fbc0018 	lw	gp,24(sp)
+  408f98:	14400031 	bnez	v0,409060 <UPnPGetLocalInterfaceToHost@@Base+0x13ec>
+  408f9c:	00000000 	nop
+  408fa0:	27b10020 	addiu	s1,sp,32
+  408fa4:	3c050041 	lui	a1,0x41
+  408fa8:	27a20084 	addiu	v0,sp,132
+  408fac:	3c070041 	lui	a3,0x41
+  408fb0:	02202021 	move	a0,s1
+[31m  408fb4:	8f998090 	lw	t9,sprintf[0m
+  408fb8:	24a5c93c 	addiu	a1,a1,-14020
+  408fbc:	afa20010 	sw	v0,16(sp)
+--
+  409010:	27b10020 	addiu	s1,sp,32
+  409014:	8e02081c 	lw	v0,2076(s0)
+  409018:	8e040814 	lw	a0,2068(s0)
+  40901c:	8c460034 	lw	a2,52(v0)
+  409020:	8c450030 	lw	a1,48(v0)
+  409024:	10000047 	b	409144 <UPnPGetLocalInterfaceToHost@@Base+0x14d0>
+  409028:	00003821 	move	a3,zero
+  40902c:	8f9980d4 	lw	t9,-32556(gp)
+  409030:	02602021 	move	a0,s3
+  409034:	24a5c99c 	addiu	a1,a1,-13924
+  409038:	0320f809 	jalr	t9
+  40903c:	24060004 	li	a2,4
+  409040:	8fbc0018 	lw	gp,24(sp)
+  409044:	1440002e 	bnez	v0,409100 <UPnPGetLocalInterfaceToHost@@Base+0x148c>
+  409048:	02202021 	move	a0,s1
+  40904c:	0c10231f 	jal	408c7c <UPnPGetLocalInterfaceToHost@@Base+0x1008>
+  409050:	02002821 	move	a1,s0
+  409054:	8fbc0018 	lw	gp,24(sp)
+  409058:	10400043 	beqz	v0,409168 <UPnPGetLocalInterfaceToHost@@Base+0x14f4>
+  40905c:	00000000 	nop
+  409060:	27b10020 	addiu	s1,sp,32
+  409064:	3c050041 	lui	a1,0x41
+  409068:	27a20084 	addiu	v0,sp,132
+  40906c:	3c070041 	lui	a3,0x41
+  409070:	02202021 	move	a0,s1
+[31m  409074:	8f998090 	lw	t9,sprintf[0m
+  409078:	24a5c8ec 	addiu	a1,a1,-14100
+  40907c:	afa20010 	sw	v0,16(sp)
+--
+  4090b0:	14400013 	bnez	v0,409100 <UPnPGetLocalInterfaceToHost@@Base+0x148c>
+  4090b4:	02202021 	move	a0,s1
+  4090b8:	0c10214e 	jal	408538 <UPnPGetLocalInterfaceToHost@@Base+0x8c4>
+  4090bc:	02002821 	move	a1,s0
+  4090c0:	1000000d 	b	4090f8 <UPnPGetLocalInterfaceToHost@@Base+0x1484>
+  4090c4:	00000000 	nop
+  4090c8:	1443000d 	bne	v0,v1,409100 <UPnPGetLocalInterfaceToHost@@Base+0x148c>
+  4090cc:	3c050041 	lui	a1,0x41
+  4090d0:	8f9980d4 	lw	t9,-32556(gp)
+  4090d4:	8e240000 	lw	a0,0(s1)
+  4090d8:	24a5c9b0 	addiu	a1,a1,-13904
+  4090dc:	0320f809 	jalr	t9
+  4090e0:	2406000b 	li	a2,11
+  4090e4:	8fbc0018 	lw	gp,24(sp)
+  4090e8:	14400005 	bnez	v0,409100 <UPnPGetLocalInterfaceToHost@@Base+0x148c>
+  4090ec:	02202021 	move	a0,s1
+  4090f0:	0c1021d9 	jal	408764 <UPnPGetLocalInterfaceToHost@@Base+0xaf0>
+  4090f4:	02002821 	move	a1,s0
+  4090f8:	1000001b 	b	409168 <UPnPGetLocalInterfaceToHost@@Base+0x14f4>
+  4090fc:	00000000 	nop
+  409100:	27b10020 	addiu	s1,sp,32
+  409104:	3c050041 	lui	a1,0x41
+  409108:	27a20084 	addiu	v0,sp,132
+  40910c:	02202021 	move	a0,s1
+  409110:	24a5c8ec 	addiu	a1,a1,-14100
+[31m  409114:	8f998090 	lw	t9,sprintf[0m
+  409118:	afa20010 	sw	v0,16(sp)
+  40911c:	3c070041 	lui	a3,0x41
+--
+  409f4c:	8fa40038 	lw	a0,56(sp)
+  409f50:	8f9980a8 	lw	t9,-32600(gp)
+  409f54:	0320f809 	jalr	t9
+  409f58:	00000000 	nop
+  409f5c:	02002021 	move	a0,s0
+  409f60:	8fa20180 	lw	v0,384(sp)
+  409f64:	8fa50178 	lw	a1,376(sp)
+  409f68:	8fa60140 	lw	a2,320(sp)
+  409f6c:	0c1026a0 	jal	409a80 <UPnPGetLocalInterfaceToHost@@Base+0x1e0c>
+  409f70:	ae021068 	sw	v0,4200(s0)
+  409f74:	3c020041 	lui	v0,0x41
+  409f78:	2442ae40 	addiu	v0,v0,-20928
+  409f7c:	ae020000 	sw	v0,0(s0)
+  409f80:	3c020041 	lui	v0,0x41
+  409f84:	24429728 	addiu	v0,v0,-26840
+  409f88:	ae020004 	sw	v0,4(s0)
+  409f8c:	3c020040 	lui	v0,0x40
+  409f90:	24427fd8 	addiu	v0,v0,32728
+  409f94:	8fbc0030 	lw	gp,48(sp)
+  409f98:	ae020008 	sw	v0,8(s0)
+  409f9c:	ae00001c 	sw	zero,28(s0)
+  409fa0:	12200067 	beqz	s1,40a140 <UPnPCreateMicroStack@@Base+0x268>
+  409fa4:	ae000038 	sw	zero,56(s0)
+  409fa8:	27b60040 	addiu	s6,sp,64
+  409fac:	3c050041 	lui	a1,0x41
+[31m  409fb0:	8f998090 	lw	t9,sprintf[0m
+  409fb4:	02c02021 	move	a0,s6
+  409fb8:	24a5caa0 	addiu	a1,a1,-13664
+--
+  40a02c:	8f9980a8 	lw	t9,-32600(gp)
+  40a030:	0320f809 	jalr	t9
+  40a034:	ae020020 	sw	v0,32(s0)
+  40a038:	8fbc0030 	lw	gp,48(sp)
+  40a03c:	8f9980f0 	lw	t9,-32528(gp)
+  40a040:	0320f809 	jalr	t9
+  40a044:	00000000 	nop
+  40a048:	0056001a 	div	zero,v0,s6
+  40a04c:	16c00002 	bnez	s6,40a058 <UPnPCreateMicroStack@@Base+0x180>
+  40a050:	00000000 	nop
+  40a054:	0007000d 	break	0x7
+  40a058:	8fbc0030 	lw	gp,48(sp)
+  40a05c:	8f9980f0 	lw	t9,-32528(gp)
+  40a060:	0320f809 	jalr	t9
+  40a064:	0000b010 	mfhi	s6
+  40a068:	24036ef0 	li	v1,28400
+  40a06c:	26d604d2 	addiu	s6,s6,1234
+  40a070:	0043001a 	div	zero,v0,v1
+  40a074:	14600002 	bnez	v1,40a080 <UPnPCreateMicroStack@@Base+0x1a8>
+  40a078:	00000000 	nop
+  40a07c:	0007000d 	break	0x7
+  40a080:	240303e8 	li	v1,1000
+  40a084:	02c03821 	move	a3,s6
+  40a088:	8fbc0030 	lw	gp,48(sp)
+  40a08c:	8e040020 	lw	a0,32(s0)
+[31m  40a090:	8f998090 	lw	t9,sprintf[0m
+  40a094:	3c050041 	lui	a1,0x41
+  40a098:	24a5caa8 	addiu	a1,a1,-13656
+--
+  40a0c0:	00004010 	mfhi	t0
+  40a0c4:	0043001a 	div	zero,v0,v1
+  40a0c8:	14600002 	bnez	v1,40a0d4 <UPnPCreateMicroStack@@Base+0x1fc>
+  40a0cc:	00000000 	nop
+  40a0d0:	0007000d 	break	0x7
+  40a0d4:	afa80018 	sw	t0,24(sp)
+  40a0d8:	00001010 	mfhi	v0
+  40a0dc:	0320f809 	jalr	t9
+  40a0e0:	afa20014 	sw	v0,20(sp)
+  40a0e4:	02202021 	move	a0,s1
+  40a0e8:	8fbc0030 	lw	gp,48(sp)
+  40a0ec:	8e020020 	lw	v0,32(s0)
+  40a0f0:	8f998068 	lw	t9,strlen
+  40a0f4:	24420005 	addiu	v0,v0,5
+  40a0f8:	0320f809 	jalr	t9
+  40a0fc:	ae020024 	sw	v0,36(s0)
+  40a100:	8fbc0030 	lw	gp,48(sp)
+  40a104:	8f99815c 	lw	t9,-32420(gp)
+  40a108:	0320f809 	jalr	t9
+  40a10c:	24440006 	addiu	a0,v0,6
+  40a110:	3c050041 	lui	a1,0x41
+  40a114:	02203021 	move	a2,s1
+  40a118:	8fbc0030 	lw	gp,48(sp)
+  40a11c:	24a5cacc 	addiu	a1,a1,-13620
+  40a120:	00402021 	move	a0,v0
+[31m  40a124:	8f998090 	lw	t9,sprintf[0m
+  40a128:	0320f809 	jalr	t9
+  40a12c:	ae023950 	sw	v0,14672(s0)
+--
+  40a134:	8fbc0030 	lw	gp,48(sp)
+  40a138:	24420005 	addiu	v0,v0,5
+  40a13c:	ae023954 	sw	v0,14676(s0)
+  40a140:	1260000f 	beqz	s3,40a180 <UPnPCreateMicroStack@@Base+0x2a8>
+  40a144:	00000000 	nop
+  40a148:	8f998068 	lw	t9,strlen
+  40a14c:	0320f809 	jalr	t9
+  40a150:	02602021 	move	a0,s3
+  40a154:	8fbc0030 	lw	gp,48(sp)
+  40a158:	8f99815c 	lw	t9,-32420(gp)
+  40a15c:	0320f809 	jalr	t9
+  40a160:	24440001 	addiu	a0,v0,1
+  40a164:	02602821 	move	a1,s3
+  40a168:	8fbc0030 	lw	gp,48(sp)
+  40a16c:	00402021 	move	a0,v0
+  40a170:	8f9981ac 	lw	t9,-32340(gp)
+  40a174:	0320f809 	jalr	t9
+  40a178:	ae020028 	sw	v0,40(s0)
+  40a17c:	8fbc0030 	lw	gp,48(sp)
+  40a180:	8f99815c 	lw	t9,-32420(gp)
+  40a184:	0320f809 	jalr	t9
+  40a188:	24040800 	li	a0,2048
+  40a18c:	24050050 	li	a1,80
+  40a190:	8fbc0030 	lw	gp,48(sp)
+  40a194:	ae020030 	sw	v0,48(s0)
+[31m  40a198:	8f998090 	lw	t9,sprintf[0m
+  40a19c:	9206105c 	lbu	a2,4188(s0)
+  40a1a0:	9207105d 	lbu	a3,4189(s0)
+--
+  40a1b8:	afa30010 	sw	v1,16(sp)
+  40a1bc:	24a5cad8 	addiu	a1,a1,-13608
+  40a1c0:	0320f809 	jalr	t9
+  40a1c4:	afa20014 	sw	v0,20(sp)
+  40a1c8:	10000007 	b	40a1e8 <UPnPCreateMicroStack@@Base+0x310>
+  40a1cc:	00000000 	nop
+  40a1d0:	3c050041 	lui	a1,0x41
+  40a1d4:	afa30010 	sw	v1,16(sp)
+  40a1d8:	24a5caec 	addiu	a1,a1,-13588
+  40a1dc:	afa20014 	sw	v0,20(sp)
+  40a1e0:	0320f809 	jalr	t9
+  40a1e4:	afb40018 	sw	s4,24(sp)
+  40a1e8:	8fbc0030 	lw	gp,48(sp)
+  40a1ec:	3c050041 	lui	a1,0x41
+  40a1f0:	8e080028 	lw	t0,40(s0)
+  40a1f4:	27a70040 	addiu	a3,sp,64
+  40a1f8:	8f8980cc 	lw	t1,-32564(gp)
+  40a1fc:	24a5cb04 	addiu	a1,a1,-13564
+  40a200:	8e030024 	lw	v1,36(s0)
+  40a204:	afa90014 	sw	t1,20(sp)
+  40a208:	8f8980f8 	lw	t1,-32520(gp)
+  40a20c:	8f82813c 	lw	v0,-32452(gp)
+  40a210:	afa90018 	sw	t1,24(sp)
+  40a214:	8f898138 	lw	t1,-32456(gp)
+  40a218:	00403021 	move	a2,v0
+[31m  40a21c:	8f998090 	lw	t9,sprintf[0m
+  40a220:	afa9001c 	sw	t1,28(sp)
+  40a224:	8f8980b8 	lw	t1,-32584(gp)
+--
+  40a440:	144000e1 	bnez	v0,40a7c8 <UPnPIPAddressListChanged@@Base+0x4dc>
+  40a444:	3c170041 	lui	s7,0x41
+  40a448:	3c130041 	lui	s3,0x41
+  40a44c:	8f95813c 	lw	s5,-32452(gp)
+  40a450:	26f7ceb0 	addiu	s7,s7,-12624
+  40a454:	2673c710 	addiu	s3,s3,-14576
+  40a458:	0000f021 	move	s8,zero
+  40a45c:	24140010 	li	s4,16
+  40a460:	8e021060 	lw	v0,4192(s0)
+  40a464:	02402021 	move	a0,s2
+  40a468:	96091076 	lhu	t1,4214(s0)
+  40a46c:	02e02821 	move	a1,s7
+  40a470:	00511021 	addu	v0,v0,s1
+  40a474:	8c460000 	lw	a2,0(v0)
+  40a478:	8e02392c 	lw	v0,14636(s0)
+  40a47c:	8e030024 	lw	v1,36(s0)
+  40a480:	00064203 	sra	t0,a2,0x8
+  40a484:	afa20028 	sw	v0,40(sp)
+  40a488:	3c020041 	lui	v0,0x41
+  40a48c:	310800ff 	andi	t0,t0,0xff
+  40a490:	2442c714 	addiu	v0,v0,-14572
+  40a494:	00063c03 	sra	a3,a2,0x10
+  40a498:	afa20024 	sw	v0,36(sp)
+  40a49c:	3c020041 	lui	v0,0x41
+  40a4a0:	30e700ff 	andi	a3,a3,0xff
+[31m  40a4a4:	8f998090 	lw	t9,sprintf[0m
+  40a4a8:	2442c728 	addiu	v0,v0,-14552
+  40a4ac:	afa80010 	sw	t0,16(sp)
+--
+  40a4dc:	8e033918 	lw	v1,14616(s0)
+  40a4e0:	00403021 	move	a2,v0
+  40a4e4:	8fbc0038 	lw	gp,56(sp)
+  40a4e8:	00711821 	addu	v1,v1,s1
+  40a4ec:	8f9980dc 	lw	t9,-32548(gp)
+  40a4f0:	8c640000 	lw	a0,0(v1)
+  40a4f4:	afb60010 	sw	s6,16(sp)
+  40a4f8:	0320f809 	jalr	t9
+  40a4fc:	afb40014 	sw	s4,20(sp)
+  40a500:	8fbc0038 	lw	gp,56(sp)
+  40a504:	044000aa 	bltz	v0,40a7b0 <UPnPIPAddressListChanged@@Base+0x4c4>
+  40a508:	02402021 	move	a0,s2
+  40a50c:	8e031060 	lw	v1,4192(s0)
+  40a510:	8e020024 	lw	v0,36(s0)
+  40a514:	02e02821 	move	a1,s7
+  40a518:	00711821 	addu	v1,v1,s1
+  40a51c:	8c660000 	lw	a2,0(v1)
+  40a520:	96091076 	lhu	t1,4214(s0)
+  40a524:	00064203 	sra	t0,a2,0x8
+  40a528:	8e03392c 	lw	v1,14636(s0)
+  40a52c:	310800ff 	andi	t0,t0,0xff
+  40a530:	afa20030 	sw	v0,48(sp)
+  40a534:	afa20020 	sw	v0,32(sp)
+  40a538:	3c020041 	lui	v0,0x41
+  40a53c:	00063c03 	sra	a3,a2,0x10
+[31m  40a540:	8f998090 	lw	t9,sprintf[0m
+  40a544:	2442c738 	addiu	v0,v0,-14536
+  40a548:	30e700ff 	andi	a3,a3,0xff
+--
+  40a578:	00003821 	move	a3,zero
+  40a57c:	8e033918 	lw	v1,14616(s0)
+  40a580:	00403021 	move	a2,v0
+  40a584:	8fbc0038 	lw	gp,56(sp)
+  40a588:	00711821 	addu	v1,v1,s1
+  40a58c:	8f9980dc 	lw	t9,-32548(gp)
+  40a590:	8c640000 	lw	a0,0(v1)
+  40a594:	afb60010 	sw	s6,16(sp)
+  40a598:	0320f809 	jalr	t9
+  40a59c:	afb40014 	sw	s4,20(sp)
+  40a5a0:	8fbc0038 	lw	gp,56(sp)
+  40a5a4:	04400082 	bltz	v0,40a7b0 <UPnPIPAddressListChanged@@Base+0x4c4>
+  40a5a8:	02402021 	move	a0,s2
+  40a5ac:	8e021060 	lw	v0,4192(s0)
+  40a5b0:	96091076 	lhu	t1,4214(s0)
+  40a5b4:	02e02821 	move	a1,s7
+  40a5b8:	00511021 	addu	v0,v0,s1
+  40a5bc:	8c460000 	lw	a2,0(v0)
+  40a5c0:	8e02392c 	lw	v0,14636(s0)
+  40a5c4:	8e030024 	lw	v1,36(s0)
+  40a5c8:	00064203 	sra	t0,a2,0x8
+  40a5cc:	afa20028 	sw	v0,40(sp)
+  40a5d0:	310800ff 	andi	t0,t0,0xff
+  40a5d4:	8f828170 	lw	v0,-32400(gp)
+  40a5d8:	00063c03 	sra	a3,a2,0x10
+[31m  40a5dc:	8f998090 	lw	t9,sprintf[0m
+  40a5e0:	30e700ff 	andi	a3,a3,0xff
+  40a5e4:	afa80010 	sw	t0,16(sp)
+--
+  40a628:	00711821 	addu	v1,v1,s1
+  40a62c:	8f9980dc 	lw	t9,-32548(gp)
+  40a630:	8c640000 	lw	a0,0(v1)
+  40a634:	afb60010 	sw	s6,16(sp)
+  40a638:	0320f809 	jalr	t9
+  40a63c:	afb40014 	sw	s4,20(sp)
+  40a640:	8fbc0038 	lw	gp,56(sp)
+  40a644:	0440005a 	bltz	v0,40a7b0 <UPnPIPAddressListChanged@@Base+0x4c4>
+  40a648:	02402021 	move	a0,s2
+  40a64c:	8e021060 	lw	v0,4192(s0)
+  40a650:	96091076 	lhu	t1,4214(s0)
+  40a654:	02e02821 	move	a1,s7
+  40a658:	00511021 	addu	v0,v0,s1
+  40a65c:	8c460000 	lw	a2,0(v0)
+  40a660:	8e02392c 	lw	v0,14636(s0)
+  40a664:	8e030024 	lw	v1,36(s0)
+  40a668:	00064203 	sra	t0,a2,0x8
+  40a66c:	afa20028 	sw	v0,40(sp)
+  40a670:	3c020041 	lui	v0,0x41
+  40a674:	310800ff 	andi	t0,t0,0xff
+  40a678:	2442c740 	addiu	v0,v0,-14528
+  40a67c:	00063c03 	sra	a3,a2,0x10
+  40a680:	afa20024 	sw	v0,36(sp)
+  40a684:	3c020041 	lui	v0,0x41
+  40a688:	30e700ff 	andi	a3,a3,0xff
+[31m  40a68c:	8f998090 	lw	t9,sprintf[0m
+  40a690:	2442c488 	addiu	v0,v0,-15224
+  40a694:	afa80010 	sw	t0,16(sp)
+--
+  40a6dc:	afb60010 	sw	s6,16(sp)
+  40a6e0:	0320f809 	jalr	t9
+  40a6e4:	afb40014 	sw	s4,20(sp)
+  40a6e8:	8fbc0038 	lw	gp,56(sp)
+  40a6ec:	04400030 	bltz	v0,40a7b0 <UPnPIPAddressListChanged@@Base+0x4c4>
+  40a6f0:	00000000 	nop
+  40a6f4:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40a6f8:	00000000 	nop
+  40a6fc:	3c060041 	lui	a2,0x41
+  40a700:	02402021 	move	a0,s2
+  40a704:	8e031060 	lw	v1,4192(s0)
+  40a708:	24c6cac8 	addiu	a2,a2,-13624
+  40a70c:	0262300a 	0x262300a
+  40a710:	3c050041 	lui	a1,0x41
+  40a714:	00711821 	addu	v1,v1,s1
+  40a718:	24a5cf70 	addiu	a1,a1,-12432
+  40a71c:	8c670000 	lw	a3,0(v1)
+  40a720:	8fbc0038 	lw	gp,56(sp)
+  40a724:	00071203 	sra	v0,a3,0x8
+  40a728:	8e03392c 	lw	v1,14636(s0)
+  40a72c:	304200ff 	andi	v0,v0,0xff
+  40a730:	8e093954 	lw	t1,14676(s0)
+  40a734:	00074403 	sra	t0,a3,0x10
+  40a738:	afa20014 	sw	v0,20(sp)
+  40a73c:	3c020041 	lui	v0,0x41
+[31m  40a740:	8f998090 	lw	t9,sprintf[0m
+  40a744:	310800ff 	andi	t0,t0,0xff
+  40a748:	2442d034 	addiu	v0,v0,-12236
+--
+  40a900:	26f7d034 	addiu	s7,s7,-12236
+  40a904:	26d6cf70 	addiu	s6,s6,-12432
+  40a908:	26b5cac8 	addiu	s5,s5,-13624
+  40a90c:	afa00058 	sw	zero,88(sp)
+  40a910:	8e020004 	lw	v0,4(s0)
+  40a914:	24030002 	li	v1,2
+  40a918:	10430027 	beq	v0,v1,40a9b8 <UPnPIPAddressListChanged@@Base+0x6cc>
+  40a91c:	28430003 	slti	v1,v0,3
+  40a920:	10600006 	beqz	v1,40a93c <UPnPIPAddressListChanged@@Base+0x650>
+  40a924:	24030003 	li	v1,3
+  40a928:	24030001 	li	v1,1
+  40a92c:	14430085 	bne	v0,v1,40ab44 <UPnPIPAddressListChanged@@Base+0x858>
+  40a930:	3c080041 	lui	t0,0x41
+  40a934:	10000007 	b	40a954 <UPnPIPAddressListChanged@@Base+0x668>
+  40a938:	02402021 	move	a0,s2
+  40a93c:	1043003a 	beq	v0,v1,40aa28 <UPnPIPAddressListChanged@@Base+0x73c>
+  40a940:	24030004 	li	v1,4
+  40a944:	1443007e 	bne	v0,v1,40ab40 <UPnPIPAddressListChanged@@Base+0x854>
+  40a948:	3c080041 	lui	t0,0x41
+  40a94c:	10000050 	b	40aa90 <UPnPIPAddressListChanged@@Base+0x7a4>
+  40a950:	02402021 	move	a0,s2
+  40a954:	8e020000 	lw	v0,0(s0)
+  40a958:	2508c714 	addiu	t0,t0,-14572
+  40a95c:	03c02821 	move	a1,s8
+  40a960:	8c431060 	lw	v1,4192(v0)
+[31m  40a964:	8f998090 	lw	t9,sprintf[0m
+  40a968:	00711821 	addu	v1,v1,s1
+  40a96c:	8c660000 	lw	a2,0(v1)
+  40a970:	00063a03 	sra	a3,a2,0x8
+  40a974:	30c300ff 	andi	v1,a2,0xff
+  40a978:	30e700ff 	andi	a3,a3,0xff
+  40a97c:	afa30014 	sw	v1,20(sp)
+  40a980:	afa70010 	sw	a3,16(sp)
+  40a984:	00063c03 	sra	a3,a2,0x10
+  40a988:	94431076 	lhu	v1,4214(v0)
+  40a98c:	00063602 	srl	a2,a2,0x18
+  40a990:	afb4001c 	sw	s4,28(sp)
+  40a994:	30e700ff 	andi	a3,a3,0xff
+  40a998:	afa30018 	sw	v1,24(sp)
+  40a99c:	8c430024 	lw	v1,36(v0)
+  40a9a0:	afa80024 	sw	t0,36(sp)
+  40a9a4:	afa30020 	sw	v1,32(sp)
+  40a9a8:	3c030041 	lui	v1,0x41
+  40a9ac:	8c42392c 	lw	v0,14636(v0)
+  40a9b0:	1000004f 	b	40aaf0 <UPnPIPAddressListChanged@@Base+0x804>
+  40a9b4:	2463c728 	addiu	v1,v1,-14552
+  40a9b8:	8e020000 	lw	v0,0(s0)
+  40a9bc:	02402021 	move	a0,s2
+[31m  40a9c0:	8f998090 	lw	t9,sprintf[0m
+  40a9c4:	03c02821 	move	a1,s8
+  40a9c8:	8c461060 	lw	a2,4192(v0)
+--
+  40a9e4:	afa70014 	sw	a3,20(sp)
+  40a9e8:	afa80010 	sw	t0,16(sp)
+  40a9ec:	00063c03 	sra	a3,a2,0x10
+  40a9f0:	94481076 	lhu	t0,4214(v0)
+  40a9f4:	00063602 	srl	a2,a2,0x18
+  40a9f8:	afb4001c 	sw	s4,28(sp)
+  40a9fc:	30e700ff 	andi	a3,a3,0xff
+  40aa00:	afa80018 	sw	t0,24(sp)
+  40aa04:	3c080041 	lui	t0,0x41
+  40aa08:	afa30020 	sw	v1,32(sp)
+  40aa0c:	2508c738 	addiu	t0,t0,-14536
+  40aa10:	afb30024 	sw	s3,36(sp)
+  40aa14:	8c42392c 	lw	v0,14636(v0)
+  40aa18:	afa30030 	sw	v1,48(sp)
+  40aa1c:	afa20028 	sw	v0,40(sp)
+  40aa20:	10000036 	b	40aafc <UPnPIPAddressListChanged@@Base+0x810>
+  40aa24:	afa8002c 	sw	t0,44(sp)
+  40aa28:	8e020000 	lw	v0,0(s0)
+  40aa2c:	02402021 	move	a0,s2
+  40aa30:	8f838170 	lw	v1,-32400(gp)
+  40aa34:	03c02821 	move	a1,s8
+  40aa38:	8c461060 	lw	a2,4192(v0)
+  40aa3c:	24680002 	addiu	t0,v1,2
+  40aa40:	00d13021 	addu	a2,a2,s1
+  40aa44:	8cc60000 	lw	a2,0(a2)
+[31m  40aa48:	8f998090 	lw	t9,sprintf[0m
+  40aa4c:	00064a03 	sra	t1,a2,0x8
+  40aa50:	30c700ff 	andi	a3,a2,0xff
+  40aa54:	312900ff 	andi	t1,t1,0xff
+  40aa58:	afa70014 	sw	a3,20(sp)
+  40aa5c:	afa90010 	sw	t1,16(sp)
+  40aa60:	00063c03 	sra	a3,a2,0x10
+  40aa64:	94491076 	lhu	t1,4214(v0)
+  40aa68:	00063602 	srl	a2,a2,0x18
+  40aa6c:	afb4001c 	sw	s4,28(sp)
+  40aa70:	30e700ff 	andi	a3,a3,0xff
+  40aa74:	afa90018 	sw	t1,24(sp)
+  40aa78:	8c490024 	lw	t1,36(v0)
+  40aa7c:	afa30024 	sw	v1,36(sp)
+  40aa80:	afa90020 	sw	t1,32(sp)
+  40aa84:	8c42392c 	lw	v0,14636(v0)
+  40aa88:	1000001a 	b	40aaf4 <UPnPIPAddressListChanged@@Base+0x808>
+  40aa8c:	afa8002c 	sw	t0,44(sp)
+  40aa90:	8e020000 	lw	v0,0(s0)
+  40aa94:	2508c740 	addiu	t0,t0,-14528
+  40aa98:	03c02821 	move	a1,s8
+  40aa9c:	8c431060 	lw	v1,4192(v0)
+[31m  40aaa0:	8f998090 	lw	t9,sprintf[0m
+  40aaa4:	00711821 	addu	v1,v1,s1
+  40aaa8:	8c660000 	lw	a2,0(v1)
+--
+  40ab4c:	00000000 	nop
+  40ab50:	28430003 	slti	v1,v0,3
+  40ab54:	10600006 	beqz	v1,40ab70 <UPnPIPAddressListChanged@@Base+0x884>
+  40ab58:	24030003 	li	v1,3
+  40ab5c:	24030001 	li	v1,1
+  40ab60:	14430085 	bne	v0,v1,40ad78 <UPnPIPAddressListChanged@@Base+0xa8c>
+  40ab64:	00000000 	nop
+  40ab68:	10000008 	b	40ab8c <UPnPIPAddressListChanged@@Base+0x8a0>
+  40ab6c:	00000000 	nop
+  40ab70:	10430039 	beq	v0,v1,40ac58 <UPnPIPAddressListChanged@@Base+0x96c>
+  40ab74:	00000000 	nop
+  40ab78:	24030004 	li	v1,4
+  40ab7c:	1443007e 	bne	v0,v1,40ad78 <UPnPIPAddressListChanged@@Base+0xa8c>
+  40ab80:	00000000 	nop
+  40ab84:	1000004d 	b	40acbc <UPnPIPAddressListChanged@@Base+0x9d0>
+  40ab88:	00000000 	nop
+  40ab8c:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40ab90:	00000000 	nop
+  40ab94:	02603021 	move	a2,s3
+  40ab98:	8e030000 	lw	v1,0(s0)
+  40ab9c:	02a2300b 	0x2a2300b
+  40aba0:	02402021 	move	a0,s2
+  40aba4:	8fbc0038 	lw	gp,56(sp)
+  40aba8:	02c02821 	move	a1,s6
+  40abac:	8c621060 	lw	v0,4192(v1)
+[31m  40abb0:	8f998090 	lw	t9,sprintf[0m
+  40abb4:	00511021 	addu	v0,v0,s1
+  40abb8:	8c470000 	lw	a3,0(v0)
+  40abbc:	afb4001c 	sw	s4,28(sp)
+  40abc0:	00071403 	sra	v0,a3,0x10
+  40abc4:	00074203 	sra	t0,a3,0x8
+  40abc8:	304200ff 	andi	v0,v0,0xff
+  40abcc:	310800ff 	andi	t0,t0,0xff
+  40abd0:	afa20010 	sw	v0,16(sp)
+  40abd4:	30e200ff 	andi	v0,a3,0xff
+  40abd8:	afa80014 	sw	t0,20(sp)
+  40abdc:	3c080041 	lui	t0,0x41
+  40abe0:	afa20018 	sw	v0,24(sp)
+  40abe4:	00073e02 	srl	a3,a3,0x18
+  40abe8:	8c623954 	lw	v0,14676(v1)
+  40abec:	1000004c 	b	40ad20 <UPnPIPAddressListChanged@@Base+0xa34>
+  40abf0:	2508c714 	addiu	t0,t0,-14572
+  40abf4:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40abf8:	00000000 	nop
+  40abfc:	02603021 	move	a2,s3
+  40ac00:	8e030000 	lw	v1,0(s0)
+  40ac04:	02a2300b 	0x2a2300b
+  40ac08:	02402021 	move	a0,s2
+  40ac0c:	8fbc0038 	lw	gp,56(sp)
+  40ac10:	02c02821 	move	a1,s6
+  40ac14:	8c621060 	lw	v0,4192(v1)
+[31m  40ac18:	8f998090 	lw	t9,sprintf[0m
+  40ac1c:	00511021 	addu	v0,v0,s1
+  40ac20:	8c470000 	lw	a3,0(v0)
+  40ac24:	afb4001c 	sw	s4,28(sp)
+  40ac28:	00071403 	sra	v0,a3,0x10
+  40ac2c:	00074203 	sra	t0,a3,0x8
+  40ac30:	304200ff 	andi	v0,v0,0xff
+  40ac34:	afa20010 	sw	v0,16(sp)
+  40ac38:	310800ff 	andi	t0,t0,0xff
+  40ac3c:	30e200ff 	andi	v0,a3,0xff
+  40ac40:	afa80014 	sw	t0,20(sp)
+  40ac44:	afa20018 	sw	v0,24(sp)
+  40ac48:	00073e02 	srl	a3,a3,0x18
+  40ac4c:	8c623954 	lw	v0,14676(v1)
+  40ac50:	10000034 	b	40ad24 <UPnPIPAddressListChanged@@Base+0xa38>
+  40ac54:	afb30024 	sw	s3,36(sp)
+  40ac58:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40ac5c:	00000000 	nop
+  40ac60:	02603021 	move	a2,s3
+  40ac64:	8e030000 	lw	v1,0(s0)
+  40ac68:	02a2300b 	0x2a2300b
+  40ac6c:	02402021 	move	a0,s2
+  40ac70:	8fbc0038 	lw	gp,56(sp)
+  40ac74:	02c02821 	move	a1,s6
+  40ac78:	8c621060 	lw	v0,4192(v1)
+[31m  40ac7c:	8f998090 	lw	t9,sprintf[0m
+  40ac80:	00511021 	addu	v0,v0,s1
+  40ac84:	8c470000 	lw	a3,0(v0)
+  40ac88:	afb4001c 	sw	s4,28(sp)
+  40ac8c:	00071403 	sra	v0,a3,0x10
+  40ac90:	00074203 	sra	t0,a3,0x8
+  40ac94:	304200ff 	andi	v0,v0,0xff
+  40ac98:	310800ff 	andi	t0,t0,0xff
+  40ac9c:	afa20010 	sw	v0,16(sp)
+  40aca0:	30e200ff 	andi	v0,a3,0xff
+  40aca4:	afa80014 	sw	t0,20(sp)
+  40aca8:	afa20018 	sw	v0,24(sp)
+  40acac:	8c623954 	lw	v0,14676(v1)
+  40acb0:	8f888170 	lw	t0,-32400(gp)
+  40acb4:	1000001a 	b	40ad20 <UPnPIPAddressListChanged@@Base+0xa34>
+  40acb8:	00073e02 	srl	a3,a3,0x18
+  40acbc:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40acc0:	00000000 	nop
+  40acc4:	02603021 	move	a2,s3
+  40acc8:	8e030000 	lw	v1,0(s0)
+  40accc:	02a2300b 	0x2a2300b
+  40acd0:	02402021 	move	a0,s2
+  40acd4:	8fbc0038 	lw	gp,56(sp)
+  40acd8:	02c02821 	move	a1,s6
+  40acdc:	8c621060 	lw	v0,4192(v1)
+[31m  40ace0:	8f998090 	lw	t9,sprintf[0m
+  40ace4:	00511021 	addu	v0,v0,s1
+  40ace8:	8c470000 	lw	a3,0(v0)
+--
+  40b2b0:	2402000f 	li	v0,15
+  40b2b4:	8fbc0038 	lw	gp,56(sp)
+  40b2b8:	16620037 	bne	s3,v0,40b398 <UPnPIPAddressListChanged@@Base+0x10ac>
+  40b2bc:	24020008 	li	v0,8
+  40b2c0:	3c030041 	lui	v1,0x41
+  40b2c4:	02802021 	move	a0,s4
+  40b2c8:	2406000f 	li	a2,15
+  40b2cc:	8f9980d4 	lw	t9,-32556(gp)
+  40b2d0:	2465c728 	addiu	a1,v1,-14552
+  40b2d4:	0320f809 	jalr	t9
+  40b2d8:	afa30060 	sw	v1,96(sp)
+  40b2dc:	8fbc0038 	lw	gp,56(sp)
+  40b2e0:	8fa30060 	lw	v1,96(sp)
+  40b2e4:	1440015a 	bnez	v0,40b850 <UPnPIPAddressListChanged@@Base+0x1564>
+  40b2e8:	2463c728 	addiu	v1,v1,-14552
+  40b2ec:	8e171068 	lw	s7,4200(s0)
+  40b2f0:	02202021 	move	a0,s1
+  40b2f4:	8e021060 	lw	v0,4192(s0)
+  40b2f8:	3c050041 	lui	a1,0x41
+  40b2fc:	0017b880 	sll	s7,s7,0x2
+  40b300:	8f88813c 	lw	t0,-32452(gp)
+  40b304:	24a5d058 	addiu	a1,a1,-12200
+  40b308:	00571021 	addu	v0,v0,s7
+  40b30c:	0257b821 	addu	s7,s2,s7
+  40b310:	8c460000 	lw	a2,0(v0)
+[31m  40b314:	8f998090 	lw	t9,sprintf[0m
+  40b318:	00063a03 	sra	a3,a2,0x8
+  40b31c:	30c200ff 	andi	v0,a2,0xff
+--
+  40b38c:	afb50010 	sw	s5,16(sp)
+  40b390:	1000012c 	b	40b844 <UPnPIPAddressListChanged@@Base+0x1558>
+  40b394:	afbe0014 	sw	s8,20(sp)
+  40b398:	166200eb 	bne	s3,v0,40b748 <UPnPIPAddressListChanged@@Base+0x145c>
+  40b39c:	24020012 	li	v0,18
+  40b3a0:	8f9980d4 	lw	t9,-32556(gp)
+  40b3a4:	3c050041 	lui	a1,0x41
+  40b3a8:	02802021 	move	a0,s4
+  40b3ac:	24a5d0ec 	addiu	a1,a1,-12052
+  40b3b0:	0320f809 	jalr	t9
+  40b3b4:	24060008 	li	a2,8
+  40b3b8:	8fbc0038 	lw	gp,56(sp)
+  40b3bc:	144000dd 	bnez	v0,40b734 <UPnPIPAddressListChanged@@Base+0x1448>
+  40b3c0:	3c050041 	lui	a1,0x41
+  40b3c4:	8e031068 	lw	v1,4200(s0)
+  40b3c8:	3c090041 	lui	t1,0x41
+  40b3cc:	02202021 	move	a0,s1
+  40b3d0:	8e021060 	lw	v0,4192(s0)
+  40b3d4:	2529c714 	addiu	t1,t1,-14572
+  40b3d8:	00031880 	sll	v1,v1,0x2
+  40b3dc:	3c170041 	lui	s7,0x41
+  40b3e0:	00431021 	addu	v0,v0,v1
+  40b3e4:	26f7c710 	addiu	s7,s7,-14576
+  40b3e8:	8c460000 	lw	a2,0(v0)
+  40b3ec:	02434021 	addu	t0,s2,v1
+[31m  40b3f0:	8f998090 	lw	t9,sprintf[0m
+  40b3f4:	00062a03 	sra	a1,a2,0x8
+  40b3f8:	30c200ff 	andi	v0,a2,0xff
+--
+  40b448:	afa30060 	sw	v1,96(sp)
+  40b44c:	afa80064 	sw	t0,100(sp)
+  40b450:	afa20028 	sw	v0,40(sp)
+  40b454:	0320f809 	jalr	t9
+  40b458:	afb70030 	sw	s7,48(sp)
+  40b45c:	02202821 	move	a1,s1
+  40b460:	00003821 	move	a3,zero
+  40b464:	8fa80064 	lw	t0,100(sp)
+  40b468:	00403021 	move	a2,v0
+  40b46c:	8fbc0038 	lw	gp,56(sp)
+  40b470:	8d040000 	lw	a0,0(t0)
+  40b474:	8f9980dc 	lw	t9,-32548(gp)
+  40b478:	afbe0014 	sw	s8,20(sp)
+  40b47c:	0320f809 	jalr	t9
+  40b480:	afb50010 	sw	s5,16(sp)
+  40b484:	3c050041 	lui	a1,0x41
+  40b488:	02202021 	move	a0,s1
+  40b48c:	8e021060 	lw	v0,4192(s0)
+  40b490:	24a5d058 	addiu	a1,a1,-12200
+  40b494:	8fa30060 	lw	v1,96(sp)
+  40b498:	8fbc0038 	lw	gp,56(sp)
+  40b49c:	00431021 	addu	v0,v0,v1
+  40b4a0:	8c460000 	lw	a2,0(v0)
+  40b4a4:	8f89813c 	lw	t1,-32452(gp)
+  40b4a8:	00063a03 	sra	a3,a2,0x8
+[31m  40b4ac:	8f998090 	lw	t9,sprintf[0m
+  40b4b0:	30c200ff 	andi	v0,a2,0xff
+  40b4b4:	30e700ff 	andi	a3,a3,0xff
+--
+  40b4f0:	afb70030 	sw	s7,48(sp)
+  40b4f4:	0320f809 	jalr	t9
+  40b4f8:	afa2002c 	sw	v0,44(sp)
+  40b4fc:	02202821 	move	a1,s1
+  40b500:	00003821 	move	a3,zero
+  40b504:	8fa80064 	lw	t0,100(sp)
+  40b508:	00403021 	move	a2,v0
+  40b50c:	8fbc0038 	lw	gp,56(sp)
+  40b510:	8d040000 	lw	a0,0(t0)
+  40b514:	8f9980dc 	lw	t9,-32548(gp)
+  40b518:	afbe0014 	sw	s8,20(sp)
+  40b51c:	0320f809 	jalr	t9
+  40b520:	afb50010 	sw	s5,16(sp)
+  40b524:	3c050041 	lui	a1,0x41
+  40b528:	02202021 	move	a0,s1
+  40b52c:	8e061060 	lw	a2,4192(s0)
+  40b530:	24a5d058 	addiu	a1,a1,-12200
+  40b534:	8fa30060 	lw	v1,96(sp)
+  40b538:	8fbc0038 	lw	gp,56(sp)
+  40b53c:	00c33021 	addu	a2,a2,v1
+  40b540:	8cc60000 	lw	a2,0(a2)
+  40b544:	8f8b813c 	lw	t3,-32452(gp)
+  40b548:	00065203 	sra	t2,a2,0x8
+  40b54c:	8f828170 	lw	v0,-32400(gp)
+  40b550:	30c700ff 	andi	a3,a2,0xff
+[31m  40b554:	8f998090 	lw	t9,sprintf[0m
+  40b558:	314a00ff 	andi	t2,t2,0xff
+  40b55c:	afa70014 	sw	a3,20(sp)
+--
+  40b584:	afa20024 	sw	v0,36(sp)
+  40b588:	afaa0020 	sw	t2,32(sp)
+  40b58c:	8e02392c 	lw	v0,14636(s0)
+  40b590:	afa9002c 	sw	t1,44(sp)
+  40b594:	afa20028 	sw	v0,40(sp)
+  40b598:	0320f809 	jalr	t9
+  40b59c:	afb70030 	sw	s7,48(sp)
+  40b5a0:	02202821 	move	a1,s1
+  40b5a4:	00003821 	move	a3,zero
+  40b5a8:	8fa80064 	lw	t0,100(sp)
+  40b5ac:	00403021 	move	a2,v0
+  40b5b0:	8fbc0038 	lw	gp,56(sp)
+  40b5b4:	8d040000 	lw	a0,0(t0)
+  40b5b8:	8f9980dc 	lw	t9,-32548(gp)
+  40b5bc:	afbe0014 	sw	s8,20(sp)
+  40b5c0:	0320f809 	jalr	t9
+  40b5c4:	afb50010 	sw	s5,16(sp)
+  40b5c8:	3c050041 	lui	a1,0x41
+  40b5cc:	02202021 	move	a0,s1
+  40b5d0:	8e021060 	lw	v0,4192(s0)
+  40b5d4:	24a5d058 	addiu	a1,a1,-12200
+  40b5d8:	8fa30060 	lw	v1,96(sp)
+  40b5dc:	8fbc0038 	lw	gp,56(sp)
+  40b5e0:	00431821 	addu	v1,v0,v1
+  40b5e4:	8c660000 	lw	a2,0(v1)
+[31m  40b5e8:	8f998090 	lw	t9,sprintf[0m
+  40b5ec:	00061a03 	sra	v1,a2,0x8
+  40b5f0:	30c200ff 	andi	v0,a2,0xff
+--
+  40b660:	8f9980dc 	lw	t9,-32548(gp)
+  40b664:	8d040000 	lw	a0,0(t0)
+  40b668:	afbe0014 	sw	s8,20(sp)
+  40b66c:	0320f809 	jalr	t9
+  40b670:	afb50010 	sw	s5,16(sp)
+  40b674:	8e1e1068 	lw	s8,4200(s0)
+  40b678:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40b67c:	00000000 	nop
+  40b680:	8fbc0038 	lw	gp,56(sp)
+  40b684:	10400003 	beqz	v0,40b694 <UPnPIPAddressListChanged@@Base+0x13a8>
+  40b688:	02e03021 	move	a2,s7
+  40b68c:	3c060041 	lui	a2,0x41
+  40b690:	24c6cac8 	addiu	a2,a2,-13624
+  40b694:	8e031060 	lw	v1,4192(s0)
+  40b698:	001ef080 	sll	s8,s8,0x2
+  40b69c:	3c020041 	lui	v0,0x41
+  40b6a0:	2442c710 	addiu	v0,v0,-14576
+  40b6a4:	3c050041 	lui	a1,0x41
+  40b6a8:	02202021 	move	a0,s1
+  40b6ac:	007e1821 	addu	v1,v1,s8
+  40b6b0:	24a5d0f8 	addiu	a1,a1,-12040
+  40b6b4:	8c670000 	lw	a3,0(v1)
+  40b6b8:	025ef021 	addu	s8,s2,s8
+  40b6bc:	8f83813c 	lw	v1,-32452(gp)
+  40b6c0:	00074203 	sra	t0,a3,0x8
+[31m  40b6c4:	8f998090 	lw	t9,sprintf[0m
+  40b6c8:	afa3001c 	sw	v1,28(sp)
+  40b6cc:	00071c03 	sra	v1,a3,0x10
+--
+  40b768:	8fbc0038 	lw	gp,56(sp)
+  40b76c:	14400038 	bnez	v0,40b850 <UPnPIPAddressListChanged@@Base+0x1564>
+  40b770:	00000000 	nop
+  40b774:	8e151068 	lw	s5,4200(s0)
+  40b778:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40b77c:	00000000 	nop
+  40b780:	8fbc0038 	lw	gp,56(sp)
+  40b784:	14400003 	bnez	v0,40b794 <UPnPIPAddressListChanged@@Base+0x14a8>
+  40b788:	3c060041 	lui	a2,0x41
+  40b78c:	10000003 	b	40b79c <UPnPIPAddressListChanged@@Base+0x14b0>
+  40b790:	24c6c710 	addiu	a2,a2,-14576
+  40b794:	3c060041 	lui	a2,0x41
+  40b798:	24c6cac8 	addiu	a2,a2,-13624
+  40b79c:	8e031060 	lw	v1,4192(s0)
+  40b7a0:	0015a880 	sll	s5,s5,0x2
+  40b7a4:	3c020041 	lui	v0,0x41
+  40b7a8:	2442c710 	addiu	v0,v0,-14576
+  40b7ac:	3c050041 	lui	a1,0x41
+  40b7b0:	02202021 	move	a0,s1
+  40b7b4:	00751821 	addu	v1,v1,s5
+  40b7b8:	24a5d0f8 	addiu	a1,a1,-12040
+  40b7bc:	8c670000 	lw	a3,0(v1)
+  40b7c0:	0255a821 	addu	s5,s2,s5
+  40b7c4:	8f83813c 	lw	v1,-32452(gp)
+  40b7c8:	00074203 	sra	t0,a3,0x8
+[31m  40b7cc:	8f998090 	lw	t9,sprintf[0m
+  40b7d0:	afa3001c 	sw	v1,28(sp)
+  40b7d4:	00071c03 	sra	v1,a3,0x10
+--
+  40b850:	8e150020 	lw	s5,32(s0)
+  40b854:	8f998068 	lw	t9,strlen
+  40b858:	0320f809 	jalr	t9
+  40b85c:	02a02021 	move	a0,s5
+  40b860:	8fbc0038 	lw	gp,56(sp)
+  40b864:	16620033 	bne	s3,v0,40b934 <UPnPIPAddressListChanged@@Base+0x1648>
+  40b868:	02802021 	move	a0,s4
+  40b86c:	8f9980d4 	lw	t9,-32556(gp)
+  40b870:	02a02821 	move	a1,s5
+  40b874:	0320f809 	jalr	t9
+  40b878:	02603021 	move	a2,s3
+  40b87c:	8fbc0038 	lw	gp,56(sp)
+  40b880:	1440002c 	bnez	v0,40b934 <UPnPIPAddressListChanged@@Base+0x1648>
+  40b884:	3c020041 	lui	v0,0x41
+  40b888:	8e171068 	lw	s7,4200(s0)
+  40b88c:	02202021 	move	a0,s1
+  40b890:	8e031060 	lw	v1,4192(s0)
+  40b894:	2442c710 	addiu	v0,v0,-14576
+  40b898:	0017b880 	sll	s7,s7,0x2
+  40b89c:	8f88813c 	lw	t0,-32452(gp)
+  40b8a0:	3c050041 	lui	a1,0x41
+  40b8a4:	00771821 	addu	v1,v1,s7
+  40b8a8:	24a5d058 	addiu	a1,a1,-12200
+  40b8ac:	8c660000 	lw	a2,0(v1)
+  40b8b0:	0257b821 	addu	s7,s2,s7
+[31m  40b8b4:	8f998090 	lw	t9,sprintf[0m
+  40b8b8:	00063a03 	sra	a3,a2,0x8
+  40b8bc:	30c300ff 	andi	v1,a2,0xff
+--
+  40b964:	8fbc0038 	lw	gp,56(sp)
+  40b968:	14400037 	bnez	v0,40ba48 <UPnPIPAddressListChanged@@Base+0x175c>
+  40b96c:	00000000 	nop
+  40b970:	8e151068 	lw	s5,4200(s0)
+  40b974:	0c1028c4 	jal	40a310 <UPnPIPAddressListChanged@@Base+0x24>
+  40b978:	00000000 	nop
+  40b97c:	8fbc0038 	lw	gp,56(sp)
+  40b980:	14400003 	bnez	v0,40b990 <UPnPIPAddressListChanged@@Base+0x16a4>
+  40b984:	3c060041 	lui	a2,0x41
+  40b988:	10000003 	b	40b998 <UPnPIPAddressListChanged@@Base+0x16ac>
+  40b98c:	24c6c710 	addiu	a2,a2,-14576
+  40b990:	3c060041 	lui	a2,0x41
+  40b994:	24c6cac8 	addiu	a2,a2,-13624
+  40b998:	8e031060 	lw	v1,4192(s0)
+  40b99c:	0015a880 	sll	s5,s5,0x2
+  40b9a0:	3c020041 	lui	v0,0x41
+  40b9a4:	2442c710 	addiu	v0,v0,-14576
+  40b9a8:	3c050041 	lui	a1,0x41
+  40b9ac:	02202021 	move	a0,s1
+  40b9b0:	00751821 	addu	v1,v1,s5
+  40b9b4:	24a5d0f8 	addiu	a1,a1,-12040
+  40b9b8:	8c670000 	lw	a3,0(v1)
+  40b9bc:	0255a821 	addu	s5,s2,s5
+  40b9c0:	8f83813c 	lw	v1,-32452(gp)
+  40b9c4:	00074203 	sra	t0,a3,0x8
+[31m  40b9c8:	8f998090 	lw	t9,sprintf[0m
+  40b9cc:	afa3001c 	sw	v1,28(sp)
+  40b9d0:	00071c03 	sra	v1,a3,0x10
+--
+  40ba48:	8f958170 	lw	s5,-32400(gp)
+  40ba4c:	8f998068 	lw	t9,strlen
+  40ba50:	0320f809 	jalr	t9
+  40ba54:	26a40002 	addiu	a0,s5,2
+  40ba58:	0262182b 	sltu	v1,s3,v0
+  40ba5c:	8fbc0038 	lw	gp,56(sp)
+  40ba60:	14600034 	bnez	v1,40bb34 <UPnPIPAddressListChanged@@Base+0x1848>
+  40ba64:	00403021 	move	a2,v0
+  40ba68:	8f9980d4 	lw	t9,-32556(gp)
+  40ba6c:	26a50002 	addiu	a1,s5,2
+  40ba70:	0320f809 	jalr	t9
+  40ba74:	02802021 	move	a0,s4
+  40ba78:	8fbc0038 	lw	gp,56(sp)
+  40ba7c:	1440002d 	bnez	v0,40bb34 <UPnPIPAddressListChanged@@Base+0x1848>
+  40ba80:	26a30002 	addiu	v1,s5,2
+  40ba84:	8e171068 	lw	s7,4200(s0)
+  40ba88:	02202021 	move	a0,s1
+  40ba8c:	8e021060 	lw	v0,4192(s0)
+  40ba90:	3c050041 	lui	a1,0x41
+  40ba94:	0017b880 	sll	s7,s7,0x2
+  40ba98:	8f88813c 	lw	t0,-32452(gp)
+  40ba9c:	24a5d058 	addiu	a1,a1,-12200
+  40baa0:	00571021 	addu	v0,v0,s7
+  40baa4:	0257b821 	addu	s7,s2,s7
+  40baa8:	8c460000 	lw	a2,0(v0)
+[31m  40baac:	8f998090 	lw	t9,sprintf[0m
+  40bab0:	00063a03 	sra	a3,a2,0x8
+  40bab4:	30c200ff 	andi	v0,a2,0xff
+--
+  40bb10:	00403021 	move	a2,v0
+  40bb14:	27a20050 	addiu	v0,sp,80
+  40bb18:	8ee40000 	lw	a0,0(s7)
+  40bb1c:	8f9980dc 	lw	t9,-32548(gp)
+  40bb20:	afa20010 	sw	v0,16(sp)
+  40bb24:	24020010 	li	v0,16
+  40bb28:	0320f809 	jalr	t9
+  40bb2c:	afa20014 	sw	v0,20(sp)
+  40bb30:	8fbc0038 	lw	gp,56(sp)
+  40bb34:	2a730027 	slti	s3,s3,39
+  40bb38:	16600037 	bnez	s3,40bc18 <UPnPIPAddressListChanged@@Base+0x192c>
+  40bb3c:	3c150041 	lui	s5,0x41
+  40bb40:	8f9980d4 	lw	t9,-32556(gp)
+  40bb44:	02802021 	move	a0,s4
+  40bb48:	26a5c488 	addiu	a1,s5,-15224
+  40bb4c:	0320f809 	jalr	t9
+  40bb50:	24060027 	li	a2,39
+  40bb54:	8fbc0038 	lw	gp,56(sp)
+  40bb58:	1440002f 	bnez	v0,40bc18 <UPnPIPAddressListChanged@@Base+0x192c>
+  40bb5c:	26b5c488 	addiu	s5,s5,-15224
+  40bb60:	8e131068 	lw	s3,4200(s0)
+  40bb64:	02202021 	move	a0,s1
+  40bb68:	8e021060 	lw	v0,4192(s0)
+  40bb6c:	3c050041 	lui	a1,0x41
+  40bb70:	00139880 	sll	s3,s3,0x2
+[31m  40bb74:	8f998090 	lw	t9,sprintf[0m
+  40bb78:	24a5d058 	addiu	a1,a1,-12200
+  40bb7c:	00531021 	addu	v0,v0,s3
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m49[0m times [0;33mupnp[0m
+

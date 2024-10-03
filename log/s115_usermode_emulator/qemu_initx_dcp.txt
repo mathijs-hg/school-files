@@ -1,0 +1,102 @@
+1  = 0x2b2c3000
+1 open("/lib/libpthread.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e790) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2c5000
+1  = 0x2b2c5000
+1  = 0x2b2e1000
+1  = 0x2b2e3000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e780) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2e9000
+1  = 0x2b2e9000
+1  = 0x2b358000
+1  = 0x2b35a000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e770) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b35f000
+1  = 0x2b35f000
+1  = 0x2b381000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e760) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e750) = 0
+1 close(3) = 0
+1 stat("/lib/ld-uClibc.so.0",0x2b18f1f4) = 0
+1 mprotect(0x2b2e1000,4096,PROT_READ) = 0
+1 mprotect(0x2b358000,4096,PROT_READ) = 0
+1 mprotect(0x2b2c0000,4096,PROT_READ) = 0
+1 ioctl(0,TCGETS,0x2b18f0b0) = -1 errno=25 (Inappropriate ioctl for device)
+1 ioctl(1,TCGETS,0x2b18f0b0) = -1 errno=25 (Inappropriate ioctl for device)
+1 getrlimit(3,0x2b18f0c0) = 0
+1 setrlimit(3,0x2b18f0c0) = 0
+1 getpid() = 1
+1 rt_sigaction(32,0x2b18f088,NULL) = 0
+1 rt_sigaction(33,0x2b18f088,NULL) = 0
+1 rt_sigaction(34,0x2b18f088,NULL) = 0
+1 rt_sigprocmask(SIG_BLOCK,0x2b18f0f0,NULL,16) = 0
+1 rt_sigprocmask(SIG_UNBLOCK,0x2b18f0f0,NULL,16) = 0
+1 brk(NULL) = 0x0042c000
+1 brk(0x0042d000) = 0x0042d000
+1 _sysctl(723054192,2,723054276,723054272,0,0) = -1 errno=89 (Function not implemented)
+1 open("/proc/sys/kernel/version",O_RDONLY) = 3
+1 read(3,0x2b18eec4,512) = 55
+1 close(3) = 0
+1 time(0,0,1,0,0,0) = 1727733860
+1 rt_sigaction(SIGPIPE,0x2b18ddd8,0x2b18ddf8) = 0
+1 pipe(723049096,0,724931504,1,0,0) = 3
+1 fcntl(3,F_GETFL) = 8192
+1 ioctl(3,TCGETS,0x2b18d988) = -1 errno=25 (Inappropriate ioctl for device)
+1 brk(0x0042e000) = 0x0042e000
+1 fork() = 0
+3 close(3) = 0
+3 dup2(4,1) = 1
+3 close(4) = 0
+3 execve("/bin/sh",{"sh","-c","mdb get mac_addr ",NULL}) = -1 errno=8 (Exec format error)
+3 exit(127)
+ = 3
+1 close(4) = 0
+1 read(3,0x42c1b8,4096) = 0
+1 close(3) = 0
+1 wait4(3,0x2b18daa0,0,(nil)) = 3
+1 pipe(723049080,0,724931504,1,0,0) = 3
+1 fcntl(3,F_GETFL) = 8192
+1 ioctl(3,TCGETS,0x2b18d978) = -1 errno=25 (Inappropriate ioctl for device)
+1 fork() = 0
+5 close(3) = 0
+5 dup2(4,1) = 1
+5 close(4) = 0
+5 execve("/bin/sh",{"sh","-c","mdb get mac_addr ",NULL}) = 5
+1 close(4) = 0
+1 read(3,0x42c1b8,4096) = -1 errno=8 (Exec format error)
+5 exit(127)
+ = 0
+1 close(3) = 0
+1 wait4(5,0x2b18da90,0,(nil)) = 5
+1 pipe(723049176,0,724931504,1,0,0) = 3
+1 fcntl(3,F_GETFL) = 8192
+1 ioctl(3,TCGETS,0x2b18d9d8) = -1 errno=25 (Inappropriate ioctl for device)
+1 fork() = 7
+1 close(4) = 0
+1 read(3,0x42c1b8,4096) = 0
+7 close(3) = 0
+7 dup2(4,1) = 1
+7 close(4) = 0
+7 execve("/bin/sh",{"sh","-c","mdb get dev_model ",NULL}) = -1 errno=8 (Exec format error)
+7 exit(127)
+ = 0
+1 close(3) = 0
+1 wait4(7,0x2b18daf0,0,(nil)) = 7
+1 exit(21)

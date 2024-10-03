@@ -1,0 +1,148 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibFVnetwork.so[0m
+
+
+00001804 <net_get_carrier@@Base>:
+    1804:	3c1c0002 	lui	gp,0x2
+    1808:	279c9c0c 	addiu	gp,gp,-25588
+    180c:	0399e021 	addu	gp,gp,t9
+    1810:	27bdffb8 	addiu	sp,sp,-72
+    1814:	afbf0044 	sw	ra,68(sp)
+    1818:	afb20040 	sw	s2,64(sp)
+    181c:	afb1003c 	sw	s1,60(sp)
+    1820:	afb00038 	sw	s0,56(sp)
+    1824:	afbc0010 	sw	gp,16(sp)
+    1828:	00808821 	move	s1,a0
+    182c:	afa5004c 	sw	a1,76(sp)
+    1830:	24040002 	li	a0,2
+    1834:	24050001 	li	a1,1
+    1838:	8f998088 	lw	t9,-32632(gp)
+    183c:	0320f809 	jalr	t9
+    1840:	00003021 	move	a2,zero
+    1844:	8fbc0010 	lw	gp,16(sp)
+    1848:	04410003 	bgez	v0,1858 <net_get_carrier@@Base+0x54>
+    184c:	00408021 	move	s0,v0
+    1850:	1000001b 	b	18c0 <net_get_carrier@@Base+0xbc>
+    1854:	2402ffff 	li	v0,-1
+    1858:	27b20018 	addiu	s2,sp,24
+    185c:	02402021 	move	a0,s2
+[31m    1860:	8f9980c0 	lw	t9,strcpy[0m
+    1864:	0320f809 	jalr	t9
+    1868:	02202821 	move	a1,s1
+--
+    29d8:	0320f809 	jalr	t9
+    29dc:	27a60018 	addiu	a2,sp,24
+    29e0:	8fbc0010 	lw	gp,16(sp)
+    29e4:	044000b0 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    29e8:	2402ffff 	li	v0,-1
+    29ec:	8fa20018 	lw	v0,24(sp)
+    29f0:	10000008 	b	2a14 <set_wlan2_rep@@Base+0x110>
+    29f4:	ae420004 	sw	v0,4(s2)
+    29f8:	24020003 	li	v0,3
+    29fc:	16020004 	bne	s0,v0,2a10 <set_wlan2_rep@@Base+0x10c>
+    2a00:	24020002 	li	v0,2
+    2a04:	24020001 	li	v0,1
+    2a08:	10000002 	b	2a14 <set_wlan2_rep@@Base+0x110>
+    2a0c:	ae420004 	sw	v0,4(s2)
+    2a10:	ae420004 	sw	v0,4(s2)
+    2a14:	02202021 	move	a0,s1
+    2a18:	8f858024 	lw	a1,-32732(gp)
+    2a1c:	24a53348 	addiu	a1,a1,13128
+    2a20:	8f998048 	lw	t9,-32696(gp)
+    2a24:	0320f809 	jalr	t9
+    2a28:	27a60020 	addiu	a2,sp,32
+    2a2c:	8fbc0010 	lw	gp,16(sp)
+    2a30:	0440009c 	bltz	v0,2ca4 <set_wlan2_rep@@Base+0x3a0>
+    2a34:	27b30020 	addiu	s3,sp,32
+    2a38:	26440008 	addiu	a0,s2,8
+[31m    2a3c:	8f9980c0 	lw	t9,strcpy[0m
+    2a40:	0320f809 	jalr	t9
+    2a44:	02602821 	move	a1,s3
+--
+    2b50:	2402ffff 	li	v0,-1
+    2b54:	8fa20018 	lw	v0,24(sp)
+    2b58:	ae420040 	sw	v0,64(s2)
+    2b5c:	02202021 	move	a0,s1
+    2b60:	8f858024 	lw	a1,-32732(gp)
+    2b64:	24a533a0 	addiu	a1,a1,13216
+    2b68:	8f998048 	lw	t9,-32696(gp)
+    2b6c:	0320f809 	jalr	t9
+    2b70:	27a60018 	addiu	a2,sp,24
+    2b74:	8fbc0010 	lw	gp,16(sp)
+    2b78:	0440004b 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    2b7c:	2402ffff 	li	v0,-1
+    2b80:	8fa20018 	lw	v0,24(sp)
+    2b84:	ae420044 	sw	v0,68(s2)
+    2b88:	02202021 	move	a0,s1
+    2b8c:	8f858024 	lw	a1,-32732(gp)
+    2b90:	24a533b0 	addiu	a1,a1,13232
+    2b94:	8f998048 	lw	t9,-32696(gp)
+    2b98:	0320f809 	jalr	t9
+    2b9c:	27a60020 	addiu	a2,sp,32
+    2ba0:	8fbc0010 	lw	gp,16(sp)
+    2ba4:	04400040 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    2ba8:	2402ffff 	li	v0,-1
+    2bac:	26500048 	addiu	s0,s2,72
+    2bb0:	02002021 	move	a0,s0
+[31m    2bb4:	8f9980c0 	lw	t9,strcpy[0m
+    2bb8:	0320f809 	jalr	t9
+    2bbc:	02602821 	move	a1,s3
+    2bc0:	8fbc0010 	lw	gp,16(sp)
+    2bc4:	02202021 	move	a0,s1
+    2bc8:	8f858024 	lw	a1,-32732(gp)
+    2bcc:	24a533b8 	addiu	a1,a1,13240
+    2bd0:	8f998048 	lw	t9,-32696(gp)
+    2bd4:	0320f809 	jalr	t9
+    2bd8:	27a60020 	addiu	a2,sp,32
+    2bdc:	8fbc0010 	lw	gp,16(sp)
+    2be0:	04400031 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    2be4:	2402ffff 	li	v0,-1
+    2be8:	26040041 	addiu	a0,s0,65
+[31m    2bec:	8f9980c0 	lw	t9,strcpy[0m
+    2bf0:	0320f809 	jalr	t9
+    2bf4:	02602821 	move	a1,s3
+    2bf8:	8fbc0010 	lw	gp,16(sp)
+    2bfc:	02202021 	move	a0,s1
+    2c00:	8f858024 	lw	a1,-32732(gp)
+    2c04:	24a533c0 	addiu	a1,a1,13248
+    2c08:	8f998048 	lw	t9,-32696(gp)
+    2c0c:	0320f809 	jalr	t9
+    2c10:	27a60020 	addiu	a2,sp,32
+    2c14:	8fbc0010 	lw	gp,16(sp)
+    2c18:	04400023 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    2c1c:	2402ffff 	li	v0,-1
+    2c20:	26040082 	addiu	a0,s0,130
+[31m    2c24:	8f9980c0 	lw	t9,strcpy[0m
+    2c28:	0320f809 	jalr	t9
+    2c2c:	02602821 	move	a1,s3
+    2c30:	8fbc0010 	lw	gp,16(sp)
+    2c34:	02202021 	move	a0,s1
+    2c38:	8f858024 	lw	a1,-32732(gp)
+    2c3c:	24a533c8 	addiu	a1,a1,13256
+    2c40:	8f998048 	lw	t9,-32696(gp)
+    2c44:	0320f809 	jalr	t9
+    2c48:	27a60020 	addiu	a2,sp,32
+    2c4c:	8fbc0010 	lw	gp,16(sp)
+    2c50:	04400015 	bltz	v0,2ca8 <set_wlan2_rep@@Base+0x3a4>
+    2c54:	2402ffff 	li	v0,-1
+    2c58:	260400c3 	addiu	a0,s0,195
+[31m    2c5c:	8f9980c0 	lw	t9,strcpy[0m
+    2c60:	0320f809 	jalr	t9
+    2c64:	02602821 	move	a1,s3
+    2c68:	8fbc0010 	lw	gp,16(sp)
+    2c6c:	02202021 	move	a0,s1
+    2c70:	8f858024 	lw	a1,-32732(gp)
+    2c74:	24a533d0 	addiu	a1,a1,13264
+    2c78:	8f998048 	lw	t9,-32696(gp)
+    2c7c:	0320f809 	jalr	t9
+    2c80:	27a60020 	addiu	a2,sp,32
+    2c84:	8fbc0010 	lw	gp,16(sp)
+    2c88:	04400006 	bltz	v0,2ca4 <set_wlan2_rep@@Base+0x3a0>
+    2c8c:	2644014c 	addiu	a0,s2,332
+[31m    2c90:	8f9980c0 	lw	t9,strcpy[0m
+    2c94:	0320f809 	jalr	t9
+    2c98:	02602821 	move	a1,s3
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m7[0m times [0;33mlibFVnetwork.so[0m
+

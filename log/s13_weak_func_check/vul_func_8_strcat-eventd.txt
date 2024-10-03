@@ -1,0 +1,216 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33meventd[0m
+
+  40bf94:	02021021 	addu	v0,s0,v0
+  40bf98:	80437a27 	lb	v1,31271(v0)
+  40bf9c:	2402002f 	li	v0,47
+  40bfa0:	1062000e 	beq	v1,v0,40bfdc <ActionFtp2Mail2_Thread@@Base+0x72c>
+  40bfa4:	00000000 	nop
+  40bfa8:	8fa40598 	lw	a0,1432(sp)
+  40bfac:	8f998098 	lw	t9,strlen
+  40bfb0:	0320f809 	jalr	t9
+  40bfb4:	00000000 	nop
+  40bfb8:	8fbc0018 	lw	gp,24(sp)
+  40bfbc:	8fa30598 	lw	v1,1432(sp)
+  40bfc0:	00621021 	addu	v0,v1,v0
+  40bfc4:	3c040042 	lui	a0,0x42
+  40bfc8:	9083ea5c 	lbu	v1,-5540(a0)
+  40bfcc:	a0430000 	sb	v1,0(v0)
+  40bfd0:	8fa505e4 	lw	a1,1508(sp)
+  40bfd4:	90a30001 	lbu	v1,1(a1)
+  40bfd8:	a0430001 	sb	v1,1(v0)
+  40bfdc:	8f998098 	lw	t9,strlen
+  40bfe0:	0320f809 	jalr	t9
+  40bfe4:	03c02021 	move	a0,s8
+  40bfe8:	8fbc0018 	lw	gp,24(sp)
+  40bfec:	24420001 	addiu	v0,v0,1
+  40bff0:	8fa40598 	lw	a0,1432(sp)
+  40bff4:	8fa3059c 	lw	v1,1436(sp)
+[31m  40bff8:	8f998290 	lw	t9,strcat[0m
+  40bffc:	0320f809 	jalr	t9
+  40c000:	00622821 	addu	a1,v1,v0
+--
+  40ce38:	02021021 	addu	v0,s0,v0
+  40ce3c:	80437697 	lb	v1,30359(v0)
+  40ce40:	2402002f 	li	v0,47
+  40ce44:	1062000e 	beq	v1,v0,40ce80 <ActionFtpMail_Thread@@Base+0x668>
+  40ce48:	00000000 	nop
+  40ce4c:	8fa4028c 	lw	a0,652(sp)
+  40ce50:	8f998098 	lw	t9,strlen
+  40ce54:	0320f809 	jalr	t9
+  40ce58:	00000000 	nop
+  40ce5c:	8fbc0018 	lw	gp,24(sp)
+  40ce60:	8fa4028c 	lw	a0,652(sp)
+  40ce64:	00821021 	addu	v0,a0,v0
+  40ce68:	3c050042 	lui	a1,0x42
+  40ce6c:	90a3ea5c 	lbu	v1,-5540(a1)
+  40ce70:	a0430000 	sb	v1,0(v0)
+  40ce74:	8fa402dc 	lw	a0,732(sp)
+  40ce78:	90830001 	lbu	v1,1(a0)
+  40ce7c:	a0430001 	sb	v1,1(v0)
+  40ce80:	8f998098 	lw	t9,strlen
+  40ce84:	0320f809 	jalr	t9
+  40ce88:	02602021 	move	a0,s3
+  40ce8c:	8fbc0018 	lw	gp,24(sp)
+  40ce90:	24420001 	addiu	v0,v0,1
+  40ce94:	8fa4028c 	lw	a0,652(sp)
+  40ce98:	8fa30290 	lw	v1,656(sp)
+[31m  40ce9c:	8f998290 	lw	t9,strcat[0m
+  40cea0:	0320f809 	jalr	t9
+  40cea4:	00622821 	addu	a1,v1,v0
+--
+  40f670:	8fa40ce8 	lw	a0,3304(sp)
+  40f674:	8f998174 	lw	t9,-32396(gp)
+  40f678:	0320f809 	jalr	t9
+  40f67c:	01002821 	move	a1,t0
+  40f680:	8fbc0020 	lw	gp,32(sp)
+  40f684:	27a405d0 	addiu	a0,sp,1488
+  40f688:	8fa50cd8 	lw	a1,3288(sp)
+  40f68c:	8fa60cdc 	lw	a2,3292(sp)
+  40f690:	8f998124 	lw	t9,-32476(gp)
+  40f694:	0320f809 	jalr	t9
+  40f698:	27a709cc 	addiu	a3,sp,2508
+  40f69c:	8fbc0020 	lw	gp,32(sp)
+  40f6a0:	10000243 	b	40ffb0 <EventSnapshot_Thread@@Base+0x236c>
+  40f6a4:	24080001 	li	t0,1
+  40f6a8:	10000163 	b	40fc38 <EventSnapshot_Thread@@Base+0x1ff4>
+  40f6ac:	ae020704 	sw	v0,1796(s0)
+  40f6b0:	afa00cdc 	sw	zero,3292(sp)
+  40f6b4:	16c00004 	bnez	s6,40f6c8 <EventSnapshot_Thread@@Base+0x1a84>
+  40f6b8:	00000000 	nop
+  40f6bc:	8fa20cdc 	lw	v0,3292(sp)
+  40f6c0:	1040000d 	beqz	v0,40f6f8 <EventSnapshot_Thread@@Base+0x1ab4>
+  40f6c4:	2642fff9 	addiu	v0,s2,-7
+  40f6c8:	83a205d0 	lb	v0,1488(sp)
+  40f6cc:	10400005 	beqz	v0,40f6e4 <EventSnapshot_Thread@@Base+0x1aa0>
+  40f6d0:	27a405d0 	addiu	a0,sp,1488
+[31m  40f6d4:	8f998290 	lw	t9,strcat[0m
+  40f6d8:	0320f809 	jalr	t9
+  40f6dc:	02202821 	move	a1,s1
+--
+  410570:	02402021 	move	a0,s2
+  410574:	3c050042 	lui	a1,0x42
+  410578:	24a50114 	addiu	a1,a1,276
+  41057c:	02003021 	move	a2,s0
+  410580:	8f998124 	lw	t9,-32476(gp)
+  410584:	0320f809 	jalr	t9
+  410588:	02803821 	move	a3,s4
+  41058c:	8fbc0018 	lw	gp,24(sp)
+  410590:	12200015 	beqz	s1,4105e8 <EventRecAudio_Thread@@Base+0x5b4>
+  410594:	27b00020 	addiu	s0,sp,32
+  410598:	82220000 	lb	v0,0(s1)
+  41059c:	10400012 	beqz	v0,4105e8 <EventRecAudio_Thread@@Base+0x5b4>
+  4105a0:	00000000 	nop
+  4105a4:	8f998098 	lw	t9,strlen
+  4105a8:	0320f809 	jalr	t9
+  4105ac:	02002021 	move	a0,s0
+  4105b0:	8fbc0018 	lw	gp,24(sp)
+  4105b4:	02021021 	addu	v0,s0,v0
+  4105b8:	3c030042 	lui	v1,0x42
+  4105bc:	9064012c 	lbu	a0,300(v1)
+  4105c0:	a0440000 	sb	a0,0(v0)
+  4105c4:	2463012c 	addiu	v1,v1,300
+  4105c8:	90630001 	lbu	v1,1(v1)
+  4105cc:	a0430001 	sb	v1,1(v0)
+  4105d0:	02002021 	move	a0,s0
+[31m  4105d4:	8f998290 	lw	t9,strcat[0m
+  4105d8:	0320f809 	jalr	t9
+  4105dc:	02202821 	move	a1,s1
+--
+  412180:	10400003 	beqz	v0,412190 <EventRecord_Thread@@Base+0x1a88>
+  412184:	24070001 	li	a3,1
+  412188:	1000000b 	b	4121b8 <EventRecord_Thread@@Base+0x1ab0>
+  41218c:	afa7408c 	sw	a3,16524(sp)
+  412190:	27a43738 	addiu	a0,sp,14136
+  412194:	3c050042 	lui	a1,0x42
+  412198:	24a5ea3c 	addiu	a1,a1,-5572
+  41219c:	27a63c34 	addiu	a2,sp,15412
+  4121a0:	8f998124 	lw	t9,-32476(gp)
+  4121a4:	0320f809 	jalr	t9
+  4121a8:	27a73b34 	addiu	a3,sp,15156
+  4121ac:	8fbc0030 	lw	gp,48(sp)
+  4121b0:	24020001 	li	v0,1
+  4121b4:	afa2408c 	sw	v0,16524(sp)
+  4121b8:	27a434bc 	addiu	a0,sp,13500
+  4121bc:	3c050042 	lui	a1,0x42
+  4121c0:	24a5ea3c 	addiu	a1,a1,-5572
+  4121c4:	27a63b34 	addiu	a2,sp,15156
+  4121c8:	8f998124 	lw	t9,-32476(gp)
+  4121cc:	0320f809 	jalr	t9
+  4121d0:	27a73a34 	addiu	a3,sp,14900
+  4121d4:	8fbc0030 	lw	gp,48(sp)
+  4121d8:	83a23738 	lb	v0,14136(sp)
+  4121dc:	10400005 	beqz	v0,4121f4 <EventRecord_Thread@@Base+0x1aec>
+  4121e0:	27a43738 	addiu	a0,sp,14136
+[31m  4121e4:	8f998290 	lw	t9,strcat[0m
+  4121e8:	0320f809 	jalr	t9
+  4121ec:	27a53a34 	addiu	a1,sp,14900
+--
+  41801c:	1440004d 	bnez	v0,418154 <Disk_cpmv@@Base+0x1f0>
+  418020:	00000000 	nop
+  418024:	8fb20050 	lw	s2,80(sp)
+  418028:	00129580 	sll	s2,s2,0x16
+  41802c:	8fa20054 	lw	v0,84(sp)
+  418030:	00021282 	srl	v0,v0,0xa
+  418034:	02429025 	or	s2,s2,v0
+  418038:	8e020000 	lw	v0,0(s0)
+  41803c:	00521023 	subu	v0,v0,s2
+  418040:	ae020000 	sw	v0,0(s0)
+  418044:	8e02003c 	lw	v0,60(s0)
+  418048:	10400004 	beqz	v0,41805c <Disk_cpmv@@Base+0xf8>
+  41804c:	27b402b8 	addiu	s4,sp,696
+  418050:	8e020004 	lw	v0,4(s0)
+  418054:	00521021 	addu	v0,v0,s2
+  418058:	ae020004 	sw	v0,4(s0)
+  41805c:	02802021 	move	a0,s4
+  418060:	3c050042 	lui	a1,0x42
+  418064:	24a5ea3c 	addiu	a1,a1,-5572
+  418068:	26060078 	addiu	a2,s0,120
+  41806c:	8f998124 	lw	t9,-32476(gp)
+  418070:	0320f809 	jalr	t9
+  418074:	02603821 	move	a3,s3
+  418078:	8fbc0010 	lw	gp,16(sp)
+  41807c:	27a400b8 	addiu	a0,sp,184
+[31m  418080:	8f998290 	lw	t9,strcat[0m
+  418084:	0320f809 	jalr	t9
+  418088:	02802821 	move	a1,s4
+--
+  4181f4:	8f998098 	lw	t9,strlen
+  4181f8:	0320f809 	jalr	t9
+  4181fc:	02202021 	move	a0,s1
+  418200:	8fbc0010 	lw	gp,16(sp)
+  418204:	02221021 	addu	v0,s1,v0
+  418208:	3c030042 	lui	v1,0x42
+  41820c:	9064ea5c 	lbu	a0,-5540(v1)
+  418210:	a0440000 	sb	a0,0(v0)
+  418214:	2463ea5c 	addiu	v1,v1,-5540
+  418218:	90630001 	lbu	v1,1(v1)
+  41821c:	a0430001 	sb	v1,1(v0)
+  418220:	26110048 	addiu	s1,s0,72
+  418224:	8f998320 	lw	t9,-31968(gp)
+  418228:	0320f809 	jalr	t9
+  41822c:	02202021 	move	a0,s1
+  418230:	8fbc0010 	lw	gp,16(sp)
+  418234:	26120078 	addiu	s2,s0,120
+  418238:	02402021 	move	a0,s2
+  41823c:	8f9983f4 	lw	t9,-31756(gp)
+  418240:	0320f809 	jalr	t9
+  418244:	26050178 	addiu	a1,s0,376
+  418248:	8fbc0010 	lw	gp,16(sp)
+  41824c:	820201b8 	lb	v0,440(s0)
+  418250:	10400005 	beqz	v0,418268 <Disk_SetSubPath@@Base+0x100>
+  418254:	02402021 	move	a0,s2
+[31m  418258:	8f998290 	lw	t9,strcat[0m
+  41825c:	0320f809 	jalr	t9
+  418260:	260501b8 	addiu	a1,s0,440
+  418264:	8fbc0010 	lw	gp,16(sp)
+  418268:	82020238 	lb	v0,568(s0)
+  41826c:	10400005 	beqz	v0,418284 <Disk_SetSubPath@@Base+0x11c>
+  418270:	02402021 	move	a0,s2
+[31m  418274:	8f998290 	lw	t9,strcat[0m
+  418278:	0320f809 	jalr	t9
+  41827c:	26050238 	addiu	a1,s0,568
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m8[0m times [0;33meventd[0m
+

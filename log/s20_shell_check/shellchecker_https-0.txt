@@ -1,0 +1,113 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 15:[0m
+[0mhttp_port=`/usr/sbin/userconfig -read HTTP Port`[0m
+[32m          ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+http_port=$(/usr/sbin/userconfig -read HTTP Port)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 16:[0m
+[0mhttps_port=`/usr/sbin/userconfig -read HTTPS Port`[0m
+[32m           ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+https_port=$(/usr/sbin/userconfig -read HTTPS Port)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 17:[0m
+[0mhttps_enable=`/usr/sbin/userconfig -read HTTPS Enable`[0m
+[32m             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+https_enable=$(/usr/sbin/userconfig -read HTTPS Enable)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 18:[0m
+[0mdevice_ip=`ifconfig br0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`[0m
+[32m          ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+device_ip=$(ifconfig br0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://')
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 19:[0m
+[0mif [ -z $https_port ]; then[0m
+[32m        ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+if [ -z "$https_port" ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 23:[0m
+[0mif [ -z $http_port ]; then[0m
+[32m        ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+if [ -z "$http_port" ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 26:[0m
+[0m/usr/sbin/cfg -a w -p /var stunnel-https.conf https accept $device_ip:$https_port[0m
+[32m                                                           ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                      ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+/usr/sbin/cfg -a w -p /var stunnel-https.conf https accept "$device_ip":"$https_port"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 27:[0m
+[0m/usr/sbin/cfg -a w -p /var stunnel-https.conf https connect $device_ip:$http_port[0m
+[32m                                                            ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                                                       ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+/usr/sbin/cfg -a w -p /var stunnel-https.conf https connect "$device_ip":"$http_port"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 28:[0m
+[0m/usr/sbin/cfg -a w -p /var stunnel-https.conf localhttps accept 127.0.0.1:$https_port[0m
+[32m                                                                          ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+/usr/sbin/cfg -a w -p /var stunnel-https.conf localhttps accept 127.0.0.1:"$https_port"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 29:[0m
+[0m/usr/sbin/cfg -a w -p /var stunnel-https.conf localhttps connect 127.0.0.1:$http_port[0m
+[32m                                                                           ^--------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+/usr/sbin/cfg -a w -p /var stunnel-https.conf localhttps connect 127.0.0.1:"$http_port"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 32:[0m
+[0m	if [ $https_enable = 0x01 ]; then[0m
+[32m             ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ "$https_enable" = 0x01 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 39:[0m
+[0m	/bin/kill `pidof stunnel`[0m
+[33m                  ^-------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                  ^-------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	/bin/kill $(pidof stunnel)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 49:[0m
+[0m	echo -n "Reloading httpd for https... "[0m
+[33m             ^-- SC3037 (warning): In POSIX sh, echo flags are undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/https-0 line 66:[0m
+[0m		echo $"Usage $0 {start|stop|restart|reload}"[0m
+[33m                     ^-- SC3004 (warning): In POSIX sh, $".." is undefined.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC3004 -- In POSIX sh, $".." is undefined.
+  https://www.shellcheck.net/wiki/SC3037 -- In POSIX sh, echo flags are undef...

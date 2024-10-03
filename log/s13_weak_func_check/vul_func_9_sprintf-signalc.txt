@@ -1,0 +1,237 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33msignalc[0m
+
+  403780:	00808021 	move	s0,a0
+  403784:	0320f809 	jalr	t9
+  403788:	00a0a021 	move	s4,a1
+  40378c:	8fbc0010 	lw	gp,16(sp)
+  403790:	10400017 	beqz	v0,4037f0 <_ftext@@Base+0x1130>
+  403794:	00409021 	move	s2,v0
+  403798:	3c040044 	lui	a0,0x44
+  40379c:	00509823 	subu	s3,v0,s0
+  4037a0:	02002821 	move	a1,s0
+  4037a4:	8f998198 	lw	t9,-32360(gp)
+  4037a8:	2490db1c 	addiu	s0,a0,-9444
+  4037ac:	02603021 	move	a2,s3
+  4037b0:	02002021 	move	a0,s0
+  4037b4:	0320f809 	jalr	t9
+  4037b8:	02709821 	addu	s3,s3,s0
+  4037bc:	02802021 	move	a0,s4
+  4037c0:	8fbc0010 	lw	gp,16(sp)
+  4037c4:	8f99828c 	lw	t9,strlen
+  4037c8:	0320f809 	jalr	t9
+  4037cc:	a2600000 	sb	zero,0(s3)
+  4037d0:	3c050042 	lui	a1,0x42
+  4037d4:	02602021 	move	a0,s3
+  4037d8:	8fbc0010 	lw	gp,16(sp)
+  4037dc:	02423821 	addu	a3,s2,v0
+  4037e0:	02203021 	move	a2,s1
+[31m  4037e4:	8f998114 	lw	t9,sprintf[0m
+  4037e8:	0320f809 	jalr	t9
+  4037ec:	24a5bbcc 	addiu	a1,a1,-17460
+--
+  408528:	24a58a30 	addiu	a1,a1,-30160
+  40852c:	afa40014 	sw	a0,20(sp)
+  408530:	24c6b2c0 	addiu	a2,a2,-19776
+  408534:	24040007 	li	a0,7
+  408538:	0320f809 	jalr	t9
+  40853c:	27b00020 	addiu	s0,sp,32
+  408540:	02002021 	move	a0,s0
+  408544:	00002821 	move	a1,zero
+  408548:	8fbc0018 	lw	gp,24(sp)
+  40854c:	24060040 	li	a2,64
+  408550:	8f99815c 	lw	t9,-32420(gp)
+  408554:	0320f809 	jalr	t9
+  408558:	27b20060 	addiu	s2,sp,96
+  40855c:	02402021 	move	a0,s2
+  408560:	00002821 	move	a1,zero
+  408564:	8fbc0018 	lw	gp,24(sp)
+  408568:	8f99815c 	lw	t9,-32420(gp)
+  40856c:	0320f809 	jalr	t9
+  408570:	24060080 	li	a2,128
+  408574:	3c050042 	lui	a1,0x42
+  408578:	02002021 	move	a0,s0
+  40857c:	8fbc0018 	lw	gp,24(sp)
+  408580:	3c060042 	lui	a2,0x42
+  408584:	3c070042 	lui	a3,0x42
+  408588:	24a59f38 	addiu	a1,a1,-24776
+[31m  40858c:	8f998114 	lw	t9,sprintf[0m
+  408590:	24c69f40 	addiu	a2,a2,-24768
+  408594:	0320f809 	jalr	t9
+--
+  40a93c:	afa20010 	sw	v0,16(sp)
+  40a940:	0320f809 	jalr	t9
+  40a944:	24061005 	li	a2,4101
+  40a948:	8fbc0018 	lw	gp,24(sp)
+  40a94c:	044000a0 	bltz	v0,40abd0 <_ftext@@Base+0x8510>
+  40a950:	3c020042 	lui	v0,0x42
+  40a954:	8f99820c 	lw	t9,-32244(gp)
+  40a958:	24020008 	li	v0,8
+  40a95c:	02002021 	move	a0,s0
+  40a960:	afa20010 	sw	v0,16(sp)
+  40a964:	3405ffff 	li	a1,0xffff
+  40a968:	02203821 	move	a3,s1
+  40a96c:	0320f809 	jalr	t9
+  40a970:	24061006 	li	a2,4102
+  40a974:	8fbc0018 	lw	gp,24(sp)
+  40a978:	04400088 	bltz	v0,40ab9c <_ftext@@Base+0x84dc>
+  40a97c:	3c020042 	lui	v0,0x42
+  40a980:	8f99832c 	lw	t9,-31956(gp)
+  40a984:	02402821 	move	a1,s2
+  40a988:	24060010 	li	a2,16
+  40a98c:	0320f809 	jalr	t9
+  40a990:	02002021 	move	a0,s0
+  40a994:	8fbc0018 	lw	gp,24(sp)
+  40a998:	04400047 	bltz	v0,40aab8 <_ftext@@Base+0x83f8>
+  40a99c:	27b20144 	addiu	s2,sp,324
+[31m  40a9a0:	8f998114 	lw	t9,sprintf[0m
+  40a9a4:	02803021 	move	a2,s4
+  40a9a8:	3c050042 	lui	a1,0x42
+--
+  40f28c:	18e0008b 	blez	a3,40f4bc <dlink_log_init_setting@@Base+0x2a8>
+  40f290:	afa500e4 	sw	a1,228(sp)
+  40f294:	34820008 	ori	v0,a0,0x8
+  40f298:	3c130042 	lui	s3,0x42
+  40f29c:	27a3005f 	addiu	v1,sp,95
+  40f2a0:	8f94816c 	lw	s4,-32404(gp)
+  40f2a4:	00c08821 	move	s1,a2
+  40f2a8:	2673c5cc 	addiu	s3,s3,-14900
+  40f2ac:	afa200ac 	sw	v0,172(sp)
+  40f2b0:	27be0028 	addiu	s8,sp,40
+  40f2b4:	27b7002a 	addiu	s7,sp,42
+  40f2b8:	24120010 	li	s2,16
+  40f2bc:	afa300a8 	sw	v1,168(sp)
+  40f2c0:	24150007 	li	s5,7
+  40f2c4:	24160020 	li	s6,32
+  40f2c8:	8f99815c 	lw	t9,-32420(gp)
+  40f2cc:	00001821 	move	v1,zero
+  40f2d0:	03c02021 	move	a0,s8
+  40f2d4:	afa300b4 	sw	v1,180(sp)
+  40f2d8:	24050020 	li	a1,32
+  40f2dc:	0320f809 	jalr	t9
+  40f2e0:	24060080 	li	a2,128
+  40f2e4:	02e02021 	move	a0,s7
+  40f2e8:	8fbc0020 	lw	gp,32(sp)
+  40f2ec:	92260000 	lbu	a2,0(s1)
+[31m  40f2f0:	8f998114 	lw	t9,sprintf[0m
+  40f2f4:	0320f809 	jalr	t9
+  40f2f8:	02602821 	move	a1,s3
+  40f2fc:	8fbc0020 	lw	gp,32(sp)
+  40f300:	02e23821 	addu	a3,s7,v0
+  40f304:	8fa300b4 	lw	v1,180(sp)
+  40f308:	24630001 	addiu	v1,v1,1
+  40f30c:	00e02021 	move	a0,a3
+  40f310:	0070102a 	slt	v0,v1,s0
+[31m  40f314:	8f998114 	lw	t9,sprintf[0m
+  40f318:	02233021 	addu	a2,s1,v1
+  40f31c:	10400015 	beqz	v0,40f374 <dlink_log_init_setting@@Base+0x160>
+  40f320:	02602821 	move	a1,s3
+  40f324:	10720013 	beq	v1,s2,40f374 <dlink_log_init_setting@@Base+0x160>
+  40f328:	00000000 	nop
+  40f32c:	90c60000 	lbu	a2,0(a2)
+  40f330:	afa300b4 	sw	v1,180(sp)
+  40f334:	0320f809 	jalr	t9
+  40f338:	afa700b0 	sw	a3,176(sp)
+  40f33c:	8fa700b0 	lw	a3,176(sp)
+  40f340:	8fa300b4 	lw	v1,180(sp)
+  40f344:	8fbc0020 	lw	gp,32(sp)
+  40f348:	1475ffef 	bne	v1,s5,40f308 <dlink_log_init_setting@@Base+0xf4>
+  40f34c:	00e23821 	addu	a3,a3,v0
+  40f350:	24630001 	addiu	v1,v1,1
+  40f354:	02602821 	move	a1,s3
+  40f358:	a0f60000 	sb	s6,0(a3)
+  40f35c:	0070102a 	slt	v0,v1,s0
+  40f360:	24e70001 	addiu	a3,a3,1
+[31m  40f364:	8f998114 	lw	t9,sprintf[0m
+  40f368:	00e02021 	move	a0,a3
+  40f36c:	1440ffed 	bnez	v0,40f324 <dlink_log_init_setting@@Base+0x110>
+--
+  410808:	27a70032 	addiu	a3,sp,50
+  41080c:	8fbc0028 	lw	gp,40(sp)
+  410810:	1440ff02 	bnez	v0,41041c <event_pkt_create_server@@Base+0xcac>
+  410814:	00408821 	move	s1,v0
+  410818:	8f9980e8 	lw	t9,-32536(gp)
+  41081c:	02e02021 	move	a0,s7
+  410820:	24051004 	li	a1,4100
+  410824:	97a60032 	lhu	a2,50(sp)
+  410828:	0320f809 	jalr	t9
+  41082c:	27b1003c 	addiu	s1,sp,60
+  410830:	27a40034 	addiu	a0,sp,52
+  410834:	8fbc0028 	lw	gp,40(sp)
+  410838:	8f9982f4 	lw	t9,-32012(gp)
+  41083c:	0320f809 	jalr	t9
+  410840:	00002821 	move	a1,zero
+  410844:	3c02000f 	lui	v0,0xf
+  410848:	02202021 	move	a0,s1
+  41084c:	8fa30034 	lw	v1,52(sp)
+  410850:	34424240 	ori	v0,v0,0x4240
+  410854:	3c050042 	lui	a1,0x42
+  410858:	8fa70038 	lw	a3,56(sp)
+  41085c:	24a5c834 	addiu	a1,a1,-14284
+  410860:	00620018 	mult	v1,v0
+  410864:	8fbc0028 	lw	gp,40(sp)
+  410868:	000737c3 	sra	a2,a3,0x1f
+[31m  41086c:	8f998114 	lw	t9,sprintf[0m
+  410870:	00001812 	mflo	v1
+  410874:	00001010 	mfhi	v0
+--
+  415224:	02c02821 	move	a1,s6
+  415228:	8f9980c4 	lw	t9,-32572(gp)
+  41522c:	1440fff0 	bnez	v0,4151f0 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x104>
+  415230:	26720002 	addiu	s2,s3,2
+  415234:	0320f809 	jalr	t9
+  415238:	00000000 	nop
+  41523c:	8fbc0020 	lw	gp,32(sp)
+  415240:	1040ffeb 	beqz	v0,4151f0 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x104>
+  415244:	02203021 	move	a2,s1
+  415248:	8f998294 	lw	t9,-32108(gp)
+  41524c:	34058927 	li	a1,0x8927
+  415250:	0320f809 	jalr	t9
+  415254:	03c02021 	move	a0,s8
+  415258:	8fbc0020 	lw	gp,32(sp)
+  41525c:	04400049 	bltz	v0,415384 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x298>
+  415260:	3c050043 	lui	a1,0x43
+  415264:	92430004 	lbu	v1,4(s2)
+  415268:	3c050043 	lui	a1,0x43
+  41526c:	02e02021 	move	a0,s7
+  415270:	92490002 	lbu	t1,2(s2)
+  415274:	24a5d2e0 	addiu	a1,a1,-11552
+  415278:	92480003 	lbu	t0,3(s2)
+  41527c:	92420005 	lbu	v0,5(s2)
+  415280:	92660002 	lbu	a2,2(s3)
+  415284:	92470001 	lbu	a3,1(s2)
+[31m  415288:	8f998114 	lw	t9,sprintf[0m
+  41528c:	afa30018 	sw	v1,24(sp)
+  415290:	afa90010 	sw	t1,16(sp)
+  415294:	afa80014 	sw	t0,20(sp)
+  415298:	0320f809 	jalr	t9
+  41529c:	afa2001c 	sw	v0,28(sp)
+  4152a0:	8e220014 	lw	v0,20(s1)
+  4152a4:	8fa30034 	lw	v1,52(sp)
+  4152a8:	8fbc0020 	lw	gp,32(sp)
+  4152ac:	1462ffd4 	bne	v1,v0,415200 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x114>
+  4152b0:	0215102a 	slt	v0,s0,s5
+  4152b4:	8f998294 	lw	t9,-32108(gp)
+  4152b8:	02203021 	move	a2,s1
+  4152bc:	34058927 	li	a1,0x8927
+  4152c0:	0320f809 	jalr	t9
+  4152c4:	03c02021 	move	a0,s8
+  4152c8:	8fbc0020 	lw	gp,32(sp)
+  4152cc:	04400039 	bltz	v0,4153b4 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x2c8>
+  4152d0:	3c050043 	lui	a1,0x43
+  4152d4:	92420005 	lbu	v0,5(s2)
+  4152d8:	3c050043 	lui	a1,0x43
+  4152dc:	92490002 	lbu	t1,2(s2)
+  4152e0:	24a5d2e0 	addiu	a1,a1,-11552
+  4152e4:	92480003 	lbu	t0,3(s2)
+  4152e8:	26310020 	addiu	s1,s1,32
+  4152ec:	92430004 	lbu	v1,4(s2)
+  4152f0:	92660002 	lbu	a2,2(s3)
+  4152f4:	92470001 	lbu	a3,1(s2)
+[31m  4152f8:	8f998114 	lw	t9,sprintf[0m
+  4152fc:	8fa402f8 	lw	a0,760(sp)
+  415300:	afa90010 	sw	t1,16(sp)
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m9[0m times [0;33msignalc[0m
+

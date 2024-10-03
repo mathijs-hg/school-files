@@ -1,0 +1,1394 @@
+
+-----------------------------------------------------------------
+
+[[0;33m*[0m] Initial strace run with [0;33mjchroot[0m on the command [0;33m./usr/sbin/hnap_push_service[0m to identify missing areas
+
+[[0;33m*[0m] Emulating binary name: [0;33mhnap_push_service[0m in [0;33mstrace[0m mode to identify missing areas (with [0;33mjchroot[0m)
+[[0;33m*[0m] Emulator used: [0;33mqemu-mips-static[0m
+[[0;33m*[0m] Chroot environment used: [0;33mjchroot[0m
+[[0;33m*[0m] Using root directory: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m ([0;33m1/1[0m)
+[[0;33m*[0m] Using CPU config: [0;33mNONE[0m
+
+1  = 0x2b2c3000
+1 open("/lib/libUserConfig.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libUserConfig.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libUserConfig.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e6b8) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2c5000
+1  = 0x2b2c5000
+1  = 0x2b2d7000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libSemafor.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libSemafor.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libSemafor.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e6a8) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2e0000
+1  = 0x2b2e0000
+1  = 0x2b2f0000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libShareInfo.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libShareInfo.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libShareInfo.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e698) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2f1000
+1  = 0x2b2f1000
+1  = 0x2b301000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libMsgctrl.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libMsgctrl.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libMsgctrl.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e688) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b302000
+1  = 0x2b302000
+1  = 0x2b313000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libweb.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libweb.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libweb.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e678) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b314000
+1  = 0x2b314000
+1  = 0x2b335000
+1  = 0x2b336000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libcfg.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libcfg.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libcfg.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e668) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b337000
+1  = 0x2b337000
+1  = 0x2b34b000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libFVsystem.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libFVsystem.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libFVsystem.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e658) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b34c000
+1  = 0x2b34c000
+1  = 0x2b365000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libFVnetwork.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e660) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b368000
+1  = 0x2b368000
+1  = 0x2b37b000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libnet.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libnet.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libnet.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e638) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b37c000
+1  = 0x2b37c000
+1  = 0x2b390000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libutl.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libutl.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libutl.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e628) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b391000
+1  = 0x2b391000
+1  = 0x2b3a4000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libsitelist.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libsitelist.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libsitelist.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e618) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b3a5000
+1  = 0x2b3a5000
+1  = 0x2b3b5000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/librtkmib.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/librtkmib.so",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/librtkmib.so",O_RDONLY) = 3
+1 fstat(3,0x2b18e608) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b3b6000
+1  = 0x2b3b6000
+1  = 0x2b3c8000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libixml.so.2",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/lib/libixml.so.2",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 open("/usr/lib/libixml.so.2",O_RDONLY) = 3
+1 fstat(3,0x2b18e5f8) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b3c9000
+1  = 0x2b3c9000
+1  = 0x2b3e3000
+1 close(3) = 0
+1  = 0x2b3e4000
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libpthread.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e600) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b3e5000
+1  = 0x2b3e5000
+1  = 0x2b401000
+1  = 0x2b403000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e5f0) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b409000
+1  = 0x2b409000
+1  = 0x2b478000
+1  = 0x2b47a000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e5e0) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b47f000
+1  = 0x2b47f000
+1  = 0x2b4a1000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e5d0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e5c0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e5b0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e5a0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e590) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e580) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e570) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e560) = 0
+1 close(3) = 0
+1 open("/lib/libcrypt.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e550) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b4a2000
+1  = 0x2b4a2000
+1  = 0x2b4b4000
+1  = 0x2b4b5000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e540) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e530) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e520) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e510) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e500) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e4f0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e4e0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e4d0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e4c0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e4b0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e4a0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e490) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e480) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e470) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e460) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e450) = 0
+1 close(3) = 0
+1 open("/lib/libpthread.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e440) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e430) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e420) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e410) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e400) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e3f0) = 0
+1 close(3) = 0
+1 stat("/lib/ld-uClibc.so.0",0x2b18f134) = 0
+1 mprotect(0x2b401000,4096,PROT_READ) = 0
+1 mprotect(0x2b478000,4096,PROT_READ) = 0
+1 mprotect(0x2b2c0000,4096,PROT_READ) = 0
+1 ioctl(0,TCGETS,0x2b18ed50) = -1 errno=25 (Inappropriate ioctl for device)
+1 ioctl(1,TCGETS,0x2b18ed50) = -1 errno=25 (Inappropriate ioctl for device)
+1 getrlimit(3,0x2b18ed60) = 0
+1 setrlimit(3,0x2b18ed60) = 0
+1 getpid() = 1
+1 rt_sigaction(32,0x2b18ed28,NULL) = 0
+1 rt_sigaction(33,0x2b18ed28,NULL) = 0
+1 rt_sigaction(34,0x2b18ed28,NULL) = 0
+1 rt_sigprocmask(SIG_BLOCK,0x2b18ed90,NULL,16) = 0
+1 rt_sigprocmask(SIG_UNBLOCK,0x2b18ed90,NULL,16) = 0
+1 brk(NULL) = 0x00428000
+1 brk(0x00429000) = 0x00429000
+1 _sysctl(723053328,2,723053412,723053408,0,0) = -1 errno=89 (Function not implemented)
+1 open("/proc/sys/kernel/version",O_RDONLY) = 3
+1 read(3,0x2b18eb64,512) = 55
+1 close(3) = 0
+1 rt_sigaction(SIGINT,0x2b18f2e8,0x2b18f308) = 0
+1 rt_sigaction(SIGTERM,0x2b18f2e8,0x2b18f308) = 0
+1 rt_sigaction(SIGQUIT,0x2b18f2e8,0x2b18f308) = 0
+1 rt_sigaction(SIGPIPE,0x2b18f2e8,0x2b18f308) = 0
+1 rt_sigaction(SIGSEGV,0x2b18f2e8,0x2b18f308) = 0
+1 ipc(23,173383681,0,0) = -1 errno=2 (No such file or directory)
+1 ipc(23,173383681,131328,950) = 0
+1 shmat(0,NULL,0) = 0
+1 ipc(2,173383681,1,1974) = 0
+1 semctl(0,0,SETVAL,0x2b17aa20) = 0
+1 ipc(1,0,2,0) = 0
+1 ipc(1,0,1,0) = 0
+1 ipc(22,0,0,0) = 0
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733668,tv_usec = 999244},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 83726},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84074},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84167},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84219},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84275},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84312},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84346},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84381},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84415},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84450},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84485},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84519},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84554},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84588},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84623},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84658},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84693},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84747},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84782},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84816},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84864},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84900},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84935},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 84969},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85004},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85039},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85113},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85148},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85183},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85217},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85252},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85286},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85321},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85355},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85390},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85439},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85475},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85509},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85558},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85604},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85639},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85674},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85708},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85743},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85778},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85812},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85857},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85892},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85926},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85961},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 85995},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86030},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86064},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86099},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86133},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86168},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86203},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86237},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86272},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86307},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86341},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86376},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86410},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86445},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86479},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86514},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86548},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86583},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86618},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86652},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86687},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86721},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86756},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86790},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86825},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86917},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 86967},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 87004},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107748},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107832},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107880},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107916},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107951},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 107985},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 108020},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 108054},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 108930},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 108968},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109003},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109037},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109072},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109106},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109141},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109175},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109209},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109244},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109278},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109313},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109347},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109381},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109416},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109451},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109485},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109520},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109555},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109589},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109624},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109659},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109694},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109730},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109764},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109799},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109837},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109878},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109913},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109948},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 109983},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110018},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110052},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110087},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110121},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110156},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110190},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110225},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110260},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110294},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110337},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110373},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110408},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110442},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110477},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110511},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110546},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110581},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110615},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110650},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110684},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110719},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110754},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110788},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110823},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110870},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110905},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 110981},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158480},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158533},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158570},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158606},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158641},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158676},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158712},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158747},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158783},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158818},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158854},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158889},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158924},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158960},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 158995},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159031},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159085},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159122},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159157},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159193},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159228},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159263},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159299},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159334},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159369},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159405},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159440},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159476},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159511},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159547},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159582},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159617},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159662},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159699},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159734},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159770},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159805},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159841},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159876},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159912},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159947},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 159982},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160018},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160054},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160089},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160124},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160160},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160195},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160230},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160266},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160301},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160337},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160372},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160408},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160443},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160478},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160514},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160549},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160584},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160620},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160655},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160691},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160726},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160762},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160797},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160833},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160868},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160904},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160939},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 160974},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161010},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161045},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161081},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161116},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161152},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161188},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161223},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161259},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161295},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161331},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161366},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161401},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161440},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161492},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161530},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161566},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 161601},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 197986},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198033},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198070},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198106},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198142},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198177},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198213},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198249},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198285},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198321},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198357},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198393},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198428},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198464},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198500},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198535},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198571},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198606},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198642},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198678},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198714},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198749},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198785},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198821},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198857},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198892},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198928},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 198964},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199000},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199035},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199091},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199126},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199162},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199198},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199233},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199269},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199305},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199340},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199376},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199411},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199447},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199483},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199518},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199554},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199589},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199633},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199671},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199706},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199742},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199777},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199813},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199849},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199885},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199920},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199956},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 199992},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200027},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200063},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200098},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200134},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200169},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200205},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200241},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200277},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200313},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200348},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200384},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200420},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200455},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200491},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200527},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200562},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200597},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200633},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200669},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200705},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200740},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200776},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200812},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200847},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200883},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200919},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200955},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 200990},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201026},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201062},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201098},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201133},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201169},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201205},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201240},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201276},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201312},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201348},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201384},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201423},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201460},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201495},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201531},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201567},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201603},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201639},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201675},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201710},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201746},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201782},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201818},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201854},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201889},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201925},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201961},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 201997},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202033},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202069},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202104},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202140},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202176},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202211},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202247},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202282},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202318},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202354},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202389},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202425},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202461},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202497},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202534},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202570},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202606},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202642},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202678},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202715},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202751},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202788},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202824},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202860},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202896},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202932},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 202969},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 203005},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298149},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298231},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298270},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298305},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298341},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298385},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298422},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298458},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298493},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298528},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298564},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298599},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298635},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298670},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298706},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298741},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298776},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298812},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298847},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298883},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298918},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298954},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 298989},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299024},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299107},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299144},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299180},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299215},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299250},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299286},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299322},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299357},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299393},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299428},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299464},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299500},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299535},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299571},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299606},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299642},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299677},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299712},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299748},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299783},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299818},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299854},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299889},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299925},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299960},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 299995},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300031},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300066},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300101},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300137},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300172},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300212},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300249},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300284},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300320},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300356},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300391},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300427},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300462},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300498},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300534},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300569},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300605},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300641},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300676},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300711},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300747},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300783},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300818},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300854},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300890},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300925},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300960},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 300996},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301032},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301067},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301103},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301138},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301174},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301209},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301245},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301281},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301316},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301351},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301387},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301422},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301458},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301494},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301529},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301564},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301600},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301635},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301671},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301706},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301742},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301777},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301812},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301848},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301884},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301919},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301955},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 301994},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302030},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302065},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302101},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302137},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302172},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302208},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302244},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302279},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302314},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302350},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302386},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302421},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302457},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302493},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302529},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302565},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302600},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302636},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302671},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302707},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302742},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302778},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302814},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302850},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302886},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302921},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302957},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 302993},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 303028},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339373},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339452},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339517},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339583},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339637},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339693},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339750},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339804},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339869},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339934},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 339991},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340047},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340103},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340163},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340223},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340286},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340351},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340405},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340463},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340519},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340597},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340657},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340718},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340783},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340849},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340911},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 340976},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 341040},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 341106},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 341171},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 350733},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 350825},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 350891},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 350957},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 351023},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362403},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362451},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362488},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362524},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362560},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362595},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362631},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362666},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362702},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362738},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362773},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362809},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362844},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362880},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362915},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362951},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 362987},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363022},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363179},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363216},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363252},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363288},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363323},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363358},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363394},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363430},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363465},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363500},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363536},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363571},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363607},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363643},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363678},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363714},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363749},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363795},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363830},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363866},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363901},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363937},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 363972},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364008},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364043},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364078},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364114},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364149},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364185},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364221},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364257},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364292},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364328},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364364},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364401},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364436},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364472},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364508},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364543},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364579},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364615},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364650},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364686},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364722},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364758},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364793},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364829},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364865},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364901},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364937},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 364973},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365008},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365044},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365080},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365116},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365151},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365187},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365223},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365259},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365295},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365331},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365367},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365403},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365438},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365475},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365510},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365546},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365586},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365623},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365660},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365696},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365732},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365768},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365805},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365841},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365877},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365913},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365950},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 365986},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 366022},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 366059},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408177},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408225},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408261},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408297},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408332},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408368},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408403},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408439},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408474},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408510},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408545},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408581},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408616},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408652},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408687},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408723},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408758},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408794},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408829},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408864},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408900},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408935},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 408971},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409006},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409042},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409078},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409113},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409149},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409184},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409220},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409256},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409292},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409327},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409363},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409399},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409434},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409480},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409516},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409551},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409587},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409622},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409658},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409693},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409729},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409764},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409799},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409835},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409871},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409906},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409942},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 409977},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410013},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410049},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410084},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410120},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410156},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410192},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410227},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410263},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410298},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410334},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410369},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410405},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410441},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410476},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410512},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410548},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410583},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410619},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410655},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410690},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410727},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410762},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410798},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410834},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410871},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410907},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410944},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 410980},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 411016},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447159},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447206},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447242},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447279},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447314},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447349},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447394},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447429},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447465},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447500},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447536},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447571},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447619},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447659},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447695},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447730},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447766},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447801},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447837},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447872},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447907},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447942},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 447978},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448013},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448049},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448084},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448149},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448189},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448225},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448260},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448296},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448331},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448366},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448402},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448437},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448473},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448508},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448543},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448579},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448614},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448650},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448686},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448721},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448757},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448792},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448828},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448863},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448899},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448934},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 448970},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449005},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449041},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449076},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449112},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449147},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449183},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449223},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 449259},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453424},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453471},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453507},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453542},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453579},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453614},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453650},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453685},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453721},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453756},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453792},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453827},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453863},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453898},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453934},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 453969},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 454005},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 454040},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 454076},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 454111},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474778},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474820},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474856},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474891},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474927},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474962},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 474998},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475033},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475084},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475119},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475155},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475190},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475225},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475261},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475296},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475332},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475367},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475402},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475438},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475473},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475508},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475544},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475579},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475615},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475650},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475686},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475721},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475756},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475800},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475836},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475871},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475906},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475942},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 475977},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476013},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476048},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476084},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476119},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476154},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476190},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476225},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476260},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476296},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476331},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476367},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476402},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476437},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476473},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476508},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476544},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476579},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476647},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476686},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476722},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476758},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476794},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476829},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476865},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476900},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476936},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 476971},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477007},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477042},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477078},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477113},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477148},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477184},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477220},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477255},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477291},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477326},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477361},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477397},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477432},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477468},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477503},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477538},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477574},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477615},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477651},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477687},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477722},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477757},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477793},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477828},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477864},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477899},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477935},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 477971},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478006},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478043},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478078},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478114},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478150},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478186},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478222},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478259},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478294},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478330},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478366},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478402},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478438},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478474},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478510},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478546},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478581},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478618},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478654},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478690},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478726},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478762},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478797},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478833},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478869},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478905},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478940},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 478976},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 479013},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525715},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525765},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525802},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525837},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525873},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525909},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525944},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 525980},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526015},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526051},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526097},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526133},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526168},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526204},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526239},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526275},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526310},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526345},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526380},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526416},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526451},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526487},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526522},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526558},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526593},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526629},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526664},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526700},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526735},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526771},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526806},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526841},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526876},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526912},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526947},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 526983},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527018},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527075},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527111},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527147},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527183},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527218},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527254},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527289},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527324},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527360},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527395},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527431},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527466},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527501},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527537},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527573},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527612},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527667},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527705},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527741},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527777},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527812},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527848},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527883},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527925},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527961},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 527997},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528033},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528068},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528104},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528139},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528200},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528245},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528282},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528318},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528354},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528389},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528425},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528460},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528496},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528532},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528567},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528603},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528638},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528674},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528710},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528745},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528781},NULL)
+1 gettimeofday(0x2b17aa98,NULL) = 0 ({tv_sec = 1727733669,tv_usec = 528816},NULL)
+1 ipc(23,173383681,0,0) = 0
+1 shmat(0,NULL,0) = 0
+1 ipc(1,0,2,0) = 0
+1 ipc(1,0,1,0) = 0
+1 ipc(22,0,0,0) = 0
+1 ipc(13,173383692,0,0) = -1 errno=2 (No such file or directory)
+1 ipc(13,173383692,950,0) = 0
+1 ipc(2,173383692,1,1974) = 1
+1 semctl(1,0,SETVAL,0x2b18f338) = 0
+1  = 0x2b4c6000
+1 brk(0x0042b000) = 0x0042b000
+1 pipe(723055264,0,12288,1,0,0) = 3
+1 clone(CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_SYSVSEM,child_stack=0x0042a238,parent_tidptr=0x00040f00,tls=0x2b402400,child_tidptr=0x2b4814e0) = -1 errno=22 (Invalid argument)
+1 close(3) = 0
+1 close(4) = 0
+1 open("/mnt/flash/config/hnap_policy.xml",O_RDONLY) = -1 errno=2 (No such file or directory)
+1 gettimeofday(0x00427404,0x2b18f388) = 0 ({tv_sec = 1727733669,tv_usec = 594536},{0,0})
+1 gettimeofday(0x0042740c,0x2b18f388) = 0 ({tv_sec = 1727733669,tv_usec = 594583},{0,0})
+1 ipc(12,0,272,0)
+[[0;33m*[0m] Identification of missing filesytem areas.
+[[0;33m*[0m] Found missing area: [0;33m/lib/libFVsystem.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibFVsystem.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/lib/libFVsystem.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/lib/libFVsystem.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libMsgctrl.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibMsgctrl.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libMsgctrl.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libMsgctrl.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libSemafor.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibSemafor.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libSemafor.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libSemafor.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libShareInfo.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibShareInfo.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libShareInfo.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libShareInfo.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libUserConfig.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibUserConfig.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libUserConfig.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libUserConfig.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libcfg.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibcfg.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libcfg.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libcfg.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libixml.so.2[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibixml.so.2[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libixml.so.2[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libixml.so.2[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libnet.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibnet.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libnet.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libnet.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/librtkmib.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibrtkmib.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/librtkmib.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/librtkmib.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libsitelist.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibsitelist.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libsitelist.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libsitelist.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libutl.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibutl.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libutl.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libutl.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/lib/libweb.so[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mlibweb.so[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libweb.so[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/libweb.so[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/lib/[0m
+[[0;33m*[0m] Found missing area: [0;33m/mnt/flash/config/hnap_policy.xml[0m
+[[0;33m*[0m] Trying to identify this missing file: [0;33mhnap_policy.xml[0m
+[[0;33m*[0m] Possible matching file found: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/hnap_policy.xml[0m
+[[0;33m*[0m] Copy file [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/hnap_policy.xml[0m to [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/mnt/flash/config/[0m
+
+-----------------------------------------------------------------
+

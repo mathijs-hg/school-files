@@ -1,1 +1,0 @@
-jQuery.su.moduleManager.define("initLogin",{views:["initLoginView"],listeners:{"ev_on_launch":function(n,i,e,u,o,t,r){}}},function(n,i,e,u,o,t){return{}});

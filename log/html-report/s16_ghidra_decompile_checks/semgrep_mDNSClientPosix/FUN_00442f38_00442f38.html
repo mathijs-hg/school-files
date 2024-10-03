@@ -1,0 +1,1744 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_mDNSClientPosix.html" title="./../semgrep_mDNSClientPosix.html" >&laquo; Back to semgrep_mDNSClientPosix</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>/* WARNING: Removing unreachable block (ram,0x00445c84) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x00445114) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0044323c) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x0044485c) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x00445a04) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x00446204) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x00444ba4) */</pre>
+<pre>/* WARNING: Removing unreachable block (ram,0x00444b60) */</pre>
+<pre>/* WARNING: Type propagation algorithm not settling */</pre>
+<br />
+<pre>void FUN_00442f38(int param_1,ushort *param_2,ushort *param_3,int param_4,uint param_5,int param_6,</pre>
+<pre>                 undefined4 param_7,uint param_8)</pre>
+<br />
+<pre>{</pre>
+<pre>  ushort uVar1;</pre>
+<pre>  bool bVar2;</pre>
+<pre>  bool bVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  int ********ppppppppiVar5;</pre>
+<pre>  short sVar16;</pre>
+<pre>  int ********ppppppppiVar6;</pre>
+<pre>  int iVar7;</pre>
+<pre>  undefined4 uVar8;</pre>
+<pre>  ushort *puVar9;</pre>
+<pre>  uint uVar10;</pre>
+<pre>  int iVar11;</pre>
+<pre>  uint uVar12;</pre>
+<pre>  undefined4 uVar13;</pre>
+<pre>  int ********ppppppppiVar14;</pre>
+<pre>  int ******ppppppiVar15;</pre>
+<pre>  int ********ppppppppiVar17;</pre>
+<pre>  uint uVar18;</pre>
+<pre>  undefined *puVar19;</pre>
+<pre>  int ********ppppppppiVar20;</pre>
+<pre>  char *pcVar21;</pre>
+<pre>  uint uVar22;</pre>
+<pre>  undefined *puVar23;</pre>
+<pre>  int ********ppppppppiVar24;</pre>
+<pre>  int ********ppppppppiVar25;</pre>
+<pre>  int ********ppppppppiVar26;</pre>
+<pre>  int ********ppppppppiVar27;</pre>
+<pre>  int ********ppppppppiVar28;</pre>
+<pre>  int *piVar29;</pre>
+<pre>  ushort *puVar30;</pre>
+<pre>  int ********ppppppppiVar31;</pre>
+<pre>  int iVar32;</pre>
+<pre>  undefined4 *puVar33;</pre>
+<pre>  undefined4 uVar34;</pre>
+<pre>  int ******ppppppiVar35;</pre>
+<pre>  int iVar36;</pre>
+<pre>  undefined4 *puVar37;</pre>
+<pre>  int *******pppppppiVar38;</pre>
+<pre>  uint uVar39;</pre>
+<pre>  code *pcVar40;</pre>
+<pre>  ushort in_stack_fffff762;</pre>
+<pre>  int local_880;</pre>
+<pre>  int ********local_87c;</pre>
+<pre>  int ******local_878;</pre>
+<pre>  int *local_874;</pre>
+<pre>  undefined auStack_870 [4];</pre>
+<pre>  undefined4 local_86c;</pre>
+<pre>  undefined auStack_71c [256];</pre>
+<pre>  undefined2 local_61c;</pre>
+<pre>  undefined auStack_5e0 [656];</pre>
+<pre>  undefined auStack_350 [4];</pre>
+<pre>  undefined4 *local_34c;</pre>
+<pre>  int *******local_1fc [64];</pre>
+<pre>  short local_fc;</pre>
+<pre>  undefined2 local_fa;</pre>
+<pre>  int ********local_c0;</pre>
+<pre>  int ********local_bc;</pre>
+<pre>  ushort *local_b8;</pre>
+<pre>  undefined *local_b4;</pre>
+<pre>  ushort *local_b0;</pre>
+<pre>  uint local_ac;</pre>
+<pre>  undefined4 *local_a8;</pre>
+<pre>  uint local_a4;</pre>
+<pre>  undefined *local_a0;</pre>
+<pre>  uint local_9c;</pre>
+<pre>  int local_98;</pre>
+<pre>  int local_94;</pre>
+<pre>  int local_90;</pre>
+<pre>  uint local_8c;</pre>
+<pre>  int local_88;</pre>
+<pre>  int local_84;</pre>
+<pre>  ushort *local_80;</pre>
+<pre>  int local_7c;</pre>
+<pre>  uint *local_78;</pre>
+<pre>  int local_74;</pre>
+<pre>  uint local_70;</pre>
+<pre>  int *******local_6c;</pre>
+<pre>  int local_68;</pre>
+<pre>  int ********local_64;</pre>
+<pre>  int local_60;</pre>
+<pre>  int local_5c;</pre>
+<pre>  uint local_58;</pre>
+<pre>  int ********local_54;</pre>
+<pre>  int ********local_50;</pre>
+<pre>  int ********local_4c;</pre>
+<pre>  int ********local_48;</pre>
+<pre>  int ********local_44;</pre>
+<pre>  int ********local_40;</pre>
+<pre>  int ********local_3c;</pre>
+<pre>  int ********local_38;</pre>
+<pre>  int ********local_34;</pre>
+<pre>  int ********local_30;</pre>
+<pre>  </pre>
+<pre>  local_58 = param_5 &gt;&gt; 0x10;</pre>
+<pre>  if (param_6 == 0) {</pre>
+<pre>LAB_00442fa8:</pre>
+<pre>    local_84 = 0;</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_84 = 1;</pre>
+<pre>    iVar4 = mDNSAddrIsDNSMulticast(param_6);</pre>
+<pre>    if (iVar4 == 0) goto LAB_00442fa8;</pre>
+<pre>  }</pre>
+<pre>  if (param_4 != 0) {</pre>
+<pre>    iVar4 = FUN_00426100(param_1,param_8,param_4);</pre>
+<pre>    local_68 = 0;</pre>
+<pre>    if (iVar4 == 0) goto LAB_00442fd4;</pre>
+<pre>  }</pre>
+<pre>  local_68 = 1;</pre>
+<pre>LAB_00442fd4:</pre>
+<pre>  local_a8 = (undefined4 *)0x0;</pre>
+<pre>  local_880 = 0;</pre>
+<pre>  local_98 = uDNS_recvLLQResponse</pre>
+<pre>                       (param_1,param_2,param_3,param_4,</pre>
+<pre>                        param_5 &amp; 0xffff0000 | (uint)in_stack_fffff762,&amp;local_880);</pre>
+<pre>  local_87c = (int ********)0x1;</pre>
+<pre>  local_878 = (int ******)0x0;</pre>
+<pre>  local_874 = (int *)0x0;</pre>
+<pre>  if (param_8 != 0) {</pre>
+<pre>    for (local_a8 = *(undefined4 **)(param_1 + 0x2174);</pre>
+<pre>        (local_a8 != (undefined4 *)0x0 &amp;&amp;</pre>
+<pre>        (((local_a8[0x548] != param_8 || (local_a8[0x549] != 4)) ||</pre>
+<pre>         ((local_a8[0x54a] &amp; 0xffff0000) != 0xa9fe0000)))); local_a8 = (undefined4 *)*local_a8) {</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  local_70 = (uint)param_2[3];</pre>
+<pre>  local_74 = param_2[4] + local_70;</pre>
+<pre>  local_60 = local_74 + (uint)param_2[5];</pre>
+<pre>  if ((param_8 == 0) &amp;&amp; ((*(byte *)(param_2 + 1) &amp; 2) != 0)) {</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  if (local_98 == 1) {</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  local_b8 = param_2 + 6;</pre>
+<pre>  local_b0 = local_b8;</pre>
+<pre>  if (((local_84 == 0) &amp;&amp; (local_98 != 3)) &amp;&amp; ((*(byte *)(param_2 + 1) &amp; 2) == 0)) {</pre>
+<pre>    local_ac = *(byte *)((int)param_2 + 3) &amp; 0xf;</pre>
+<pre>    if (((*(byte *)((int)param_2 + 3) &amp; 0xf) == 0) || (local_ac == 3)) {</pre>
+<pre>      local_9c = 0;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      local_9c = (uint)(local_ac != 9);</pre>
+<pre>    }</pre>
+<pre>    local_90 = param_1 + 0x2f;</pre>
+<pre>    local_c0 = (int ********)auStack_71c;</pre>
+<pre>    local_8c = (uint)(param_6 == 0);</pre>
+<pre>    local_a0 = auStack_870;</pre>
+<pre>    iVar4 = 0;</pre>
+<pre>    iVar32 = 0;</pre>
+<pre>    local_bc = (int ********)0x0;</pre>
+<pre>    local_88 = 0;</pre>
+<pre>    while (((iVar32 &lt; (int)(uint)param_2[2] &amp;&amp; (local_b8 != (ushort *)0x0)) &amp;&amp; (local_b8 &lt; param_3))</pre>
+<pre>          ) {</pre>
+<pre>      local_b8 = (ushort *)getQuestion(param_2,local_b8,param_3,param_8,local_a0);</pre>
+<pre>      if ((local_b8 == (ushort *)0x0) ||</pre>
+<pre>         (iVar36 = FUN_00427778(param_1,(uint)param_7._0_2_ &lt;&lt; 0x10,(uint)*param_2 &lt;&lt; 0x10,local_a0,</pre>
+<pre>                                local_8c), iVar36 == 0)) {</pre>
+<pre>LAB_00443548:</pre>
+<pre>        iVar32 = iVar32 + 1;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        if (local_9c != 0) {</pre>
+<pre>          if (((*(char *)(iVar36 + 0x266) == '\x02') &amp;&amp;</pre>
+<pre>              (ppppppppiVar14 = *(int *********)(iVar36 + 0xdc), ppppppppiVar14 != (int ********)0x0</pre>
+<pre>              )) &amp;&amp; (*(char *)(ppppppppiVar14 + 0x51) == '\0')) {</pre>
+<pre>            if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              local_34 = ppppppppiVar14;</pre>
+<pre>              uVar8 = DNSTypeName(local_61c);</pre>
+<pre>              LogMsgWithLevel(3,</pre>
+<pre>                              "mDNSCoreReceiveResponse: Server %p responded with code %d to DNSSEC Query %##s (%s), clear DO flag"</pre>
+<pre>                              ,local_34,local_ac,local_c0,uVar8);</pre>
+<pre>            }</pre>
+<pre>            local_bc = (int ********)0x1;</pre>
+<pre>            *(undefined *)(*(int *)(iVar36 + 0xdc) + 0x142) = 0;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              local_34 = *(int *********)(iVar36 + 0xdc);</pre>
+<pre>              uVar8 = DNSTypeName(local_61c);</pre>
+<pre>              LogMsgWithLevel(3,</pre>
+<pre>                              "mDNSCoreReceiveResponse: Server %p responded with code %d to query %##s (%s)"</pre>
+<pre>                              ,local_34,local_ac,local_c0,uVar8);</pre>
+<pre>            }</pre>
+<pre>            local_bc = (int ********)0x1;</pre>
+<pre>            PenalizeDNSServer(param_1,iVar36,(uint)param_2[1] &lt;&lt; 0x10);</pre>
+<pre>          }</pre>
+<pre>          goto LAB_00443548;</pre>
+<pre>        }</pre>
+<pre>        uVar10 = DomainNameHashValue(local_c0);</pre>
+<pre>        ppppppppiVar14 = (int ********)CacheGroupForName(param_1,uVar10 % 499,local_86c,local_c0);</pre>
+<pre>        iVar11 = local_88;</pre>
+<pre>        if (*param_2 != 0) {</pre>
+<pre>          if ((*(int *)(iVar36 + 0xdc) != 0) &amp;&amp;</pre>
+<pre>             (((*(char *)(iVar36 + 0x266) != '\0' || (*(char *)(iVar36 + 0xcc) != '\0')) ||</pre>
+<pre>              ((*(char *)(iVar36 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar36 + 0x268) != '\0')))))) {</pre>
+<pre>            if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              local_30 = ppppppppiVar14;</pre>
+<pre>              uVar8 = DNSTypeName(*(undefined2 *)(iVar36 + 0x254));</pre>
+<pre>              LogMsgWithLevel(3,"mDNSCoreReceiveResponse: Setting aware for %##s (%s) on %#a",</pre>
+<pre>                              iVar36 + 0x154,uVar8,*(int *)(iVar36 + 0xdc) + 0xc);</pre>
+<pre>              ppppppppiVar14 = local_30;</pre>
+<pre>            }</pre>
+<pre>            *(undefined *)(*(int *)(iVar36 + 0xdc) + 0x144) = 1;</pre>
+<pre>            *(undefined *)(*(int *)(iVar36 + 0xdc) + 0x142) = 1;</pre>
+<pre>          }</pre>
+<pre>          iVar4 = iVar36;</pre>
+<pre>          iVar11 = 1;</pre>
+<pre>          if (*(char *)(iVar36 + 0xcc) == '\0') {</pre>
+<pre>            iVar11 = local_88;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        local_88 = iVar11;</pre>
+<pre>        pppppppiVar38 = (int *******)0x0;</pre>
+<pre>        if (ppppppppiVar14 != (int ********)0x0) {</pre>
+<pre>          pppppppiVar38 = ppppppppiVar14[2];</pre>
+<pre>        }</pre>
+<pre>        local_94 = iVar4 + 0x154;</pre>
+<pre>        for (; pppppppiVar38 != (int *******)0x0; pppppppiVar38 = (int *******)*pppppppiVar38) {</pre>
+<pre>          local_30 = (int ********)(pppppppiVar38 + 1);</pre>
+<pre>          iVar11 = SameNameRecordAnswersQuestion(pppppppiVar38 + 1,iVar36);</pre>
+<pre>          if (iVar11 != 0) {</pre>
+<pre>            iVar11 = *(int *)(param_1 + 0x234);</pre>
+<pre>            iVar7 = (int)pppppppiVar38[3] * mDNSPlatformOneSecond;</pre>
+<pre>            *(undefined *)(pppppppiVar38 + 0x13) = 4;</pre>
+<pre>            *(undefined *)((int)pppppppiVar38 + 0x4d) = 0;</pre>
+<pre>            pppppppiVar38[0xd] = (int ******)((iVar11 + -1) - iVar7);</pre>
+<pre>            if ((iVar4 != 0) &amp;&amp;</pre>
+<pre>               (((*(char *)(iVar4 + 0x266) != '\0' || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>                ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))))) {</pre>
+<pre>              if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                local_34 = (int ********)</pre>
+<pre>                           GetRRDisplayString_rdb(local_30,pppppppiVar38[9] + 1,local_90);</pre>
+<pre>                uVar8 = DNSTypeName(*(undefined2 *)(iVar4 + 0x254));</pre>
+<pre>                LogMsgWithLevel(3,</pre>
+<pre>                                "mDNSCoreReceiveResponse: CRDNSSECQuestion set for record %s, question %##s (%s)"</pre>
+<pre>                                ,local_34,local_94,uVar8);</pre>
+<pre>              }</pre>
+<pre>              *(undefined *)((int)pppppppiVar38 + 0x4d) = 1;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        iVar32 = iVar32 + 1;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    if (local_bc != (int ********)0x0) {</pre>
+<pre>      if (mDNS_LoggingEnabled == 0) {</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      if (param_2[3] == 1) {</pre>
+<pre>        puVar23 = &amp;DAT_0045b344;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        puVar23 = &amp;UNK_0045b348;</pre>
+<pre>      }</pre>
+<pre>      if (param_2[4] == 1) {</pre>
+<pre>        puVar19 = &amp;DAT_0045b34c;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        puVar19 = &amp;UNK_0045b354;</pre>
+<pre>      }</pre>
+<pre>      if (param_2[5] == 1) {</pre>
+<pre>        pcVar21 = "";</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        pcVar21 = "s";</pre>
+<pre>      }</pre>
+<pre>      LogMsgWithLevel(3,"Ignoring %2d Answer%s %2d Authorit%s %2d Additional%s",param_2[3],puVar23,</pre>
+<pre>                      param_2[4],puVar19,param_2[5],pcVar21);</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    if ((iVar4 != 0) &amp;&amp;</pre>
+<pre>       (((*(char *)(iVar4 + 0x266) != '\0' || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>        ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))))) {</pre>
+<pre>      BumpDNSSECStats(param_1,3,5,(int)param_3 - (int)(param_2 + 6));</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    iVar4 = 0;</pre>
+<pre>    local_88 = 0;</pre>
+<pre>    local_ac = 0;</pre>
+<pre>    local_b8 = (ushort *)LocateAnswers(param_2,param_3);</pre>
+<pre>  }</pre>
+<pre>  if (*param_2 == 0) {</pre>
+<pre>    FUN_004382b0(param_1,param_2,param_3,param_8,&amp;local_874);</pre>
+<pre>  }</pre>
+<pre>  local_64 = (int ********)(uint)param_7._0_2_;</pre>
+<pre>  local_78 = (uint *)(param_1 + 0x801c);</pre>
+<pre>  local_a0 = (undefined *)(param_1 + 0x7fa8);</pre>
+<pre>  local_bc = (int ********)&amp;local_87c;</pre>
+<pre>  local_6c = &amp;local_878;</pre>
+<pre>  local_7c = iVar4 + 0x154;</pre>
+<pre>  iVar36 = param_1 + 0x7fac;</pre>
+<pre>  iVar32 = param_1 + 0x2f;</pre>
+<pre>  local_c0 = (int ********)0x0;</pre>
+<pre>  local_94 = 0;</pre>
+<pre>  local_8c = 0;</pre>
+<pre>  local_9c = 0;</pre>
+<pre>  local_80 = param_3;</pre>
+<pre>  local_54 = local_64;</pre>
+<pre>LAB_004450a4:</pre>
+<pre>  if ((((int)local_9c &lt; local_60) &amp;&amp; (local_b8 != (ushort *)0x0)) &amp;&amp; (local_b8 &lt; local_80)) {</pre>
+<pre>    bVar2 = true;</pre>
+<pre>    if ((local_84 == 0) &amp;&amp; (bVar2 = local_98 != 0, param_6 == 0)) {</pre>
+<pre>      bVar2 = true;</pre>
+<pre>    }</pre>
+<pre>    uVar8 = 0xc0;</pre>
+<pre>    if (((int)local_70 &lt;= (int)local_9c) &amp;&amp; (uVar8 = 0x80, (int)local_9c &lt; local_74)) {</pre>
+<pre>      uVar8 = 0xa0;</pre>
+<pre>    }</pre>
+<pre>    local_b8 = (ushort *)</pre>
+<pre>               GetLargeResourceRecord(param_1,param_2,local_b8,local_80,param_8,uVar8,local_a0);</pre>
+<pre>    if (local_b8 != (ushort *)0x0) {</pre>
+<pre>      if ((*(char *)(param_1 + 0x7fac) != -0x10) &amp;&amp;</pre>
+<pre>         (((*param_2 != 0 || (*(short *)(param_1 + 0x7fae) != 0x32)) &amp;&amp;</pre>
+<pre><span class="green">          (sVar16 = *(short *)(param_1 + 0x7fae), sVar16 != 0xfa)))) {</span></pre>
+<pre>        if (sVar16 == 0x29) {</pre>
+<pre>          ppppppppiVar14 = (int ********)0x4;</pre>
+<pre>          puVar30 = (ushort *)(*(int *)(param_1 + 0x7fcc) + 4);</pre>
+<pre>          puVar9 = (ushort *)((int)puVar30 + (uint)*(ushort *)(param_1 + 0x7fb8));</pre>
+<pre>          for (; puVar30 &lt; puVar9; puVar30 = puVar30 + 0xc) {</pre>
+<pre>            if ((((int ********)(uint)*puVar30 == ppppppppiVar14) &amp;&amp;</pre>
+<pre>                (*(char *)(puVar30 + 2) == '\0')) &amp;&amp; (*(int *)(puVar30 + 3) != 0)) {</pre>
+<pre>              local_50 = ppppppppiVar14;</pre>
+<pre>              FUN_0043cad4(param_1,puVar30 + 2,*(undefined4 *)(param_1 + 0x2164));</pre>
+<pre>              FUN_0043cad4(param_1,puVar30 + 2,*(undefined4 *)(param_1 + 0x2160));</pre>
+<pre>              ppppppppiVar14 = local_50;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          goto LAB_0044508c;</pre>
+<pre>        }</pre>
+<pre>        if ((sVar16 != 5) ||</pre>
+<pre>           (iVar11 = SameDomainName(*(undefined4 *)(param_1 + 0x7fc8),*(int *)(param_1 + 0x7fcc) + 4</pre>
+<pre>                                   ), iVar11 == 0)) {</pre>
+<pre>          if (*param_2 != 0) {</pre>
+<pre>            uVar8 = FUN_0042678c(local_98,*(undefined4 *)(param_1 + 0x7fb4));</pre>
+<pre>            *(undefined4 *)(param_1 + 0x7fb4) = uVar8;</pre>
+<pre>          }</pre>
+<pre>          if (local_84 == 0) {</pre>
+<pre>            if (local_98 == 0) {</pre>
+<pre>              if ((bVar2) &amp;&amp; (param_6 != 0)) {</pre>
+<pre>LAB_00443bf8:</pre>
+<pre>                bVar2 = true;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                ppppppppiVar14 = (int ********)(uint)*param_2;</pre>
+<pre>                for (puVar33 = *(undefined4 **)(param_1 + 0x2ac); puVar33 != (undefined4 *)0x0;</pre>
+<pre>                    puVar33 = (undefined4 *)*puVar33) {</pre>
+<pre>                  if ((puVar33[0xf] == 0) &amp;&amp;</pre>
+<pre>                     (local_30 = ppppppppiVar14,</pre>
+<pre>                     iVar11 = ResourceRecordAnswersUnicastResponse(iVar36,puVar33),</pre>
+<pre>                     ppppppppiVar14 = local_30, iVar11 != 0)) {</pre>
+<pre>                    if ((int ********)(uint)*(ushort *)((int)puVar33 + 0x152) == (int ********)0x0)</pre>
+<pre>                    {</pre>
+<pre>                      if (((local_68 != 0) &amp;&amp; (puVar33[5] != 0)) &amp;&amp;</pre>
+<pre>                         ((uint)(*(int *)(param_1 + 0x234) - puVar33[5]) &lt;</pre>
+<pre>                          (uint)(mDNSPlatformOneSecond &lt;&lt; 1))) goto LAB_00443b0c;</pre>
+<pre>                    }</pre>
+<pre>                    else if ((int ********)(uint)*(ushort *)((int)puVar33 + 0x152) == local_30) {</pre>
+<pre>                      if (param_6 == 0) {</pre>
+<pre>                        uVar1 = *(ushort *)(puVar33 + 0x44);</pre>
+<pre>                      }</pre>
+<pre>                      else {</pre>
+<pre>                        puVar30 = (ushort *)puVar33[0x36];</pre>
+<pre>                        if (puVar30 == (ushort *)0x0) {</pre>
+<pre>                          puVar30 = &amp;zeroIPPort;</pre>
+<pre>                        }</pre>
+<pre>                        uVar1 = *puVar30;</pre>
+<pre>                      }</pre>
+<pre>                      ppppppppiVar14 = (int ********)(uint)uVar1;</pre>
+<pre>                      if (ppppppppiVar14 == local_64) {</pre>
+<pre>LAB_00443b0c:</pre>
+<pre>                        bVar2 = true;</pre>
+<pre>                        if (param_8 == 0) {</pre>
+<pre>                          local_94 = puVar33[0x37];</pre>
+<pre>                          *(int *)(param_1 + 0x7fd0) = local_94;</pre>
+<pre>                        }</pre>
+<pre>                        else {</pre>
+<pre>                          if (mDNS_LoggingEnabled == 0) goto LAB_00443bf8;</pre>
+<pre>                          local_34 = (int ********)puVar33[0x4d];</pre>
+<pre>                          bVar2 = true;</pre>
+<pre>                          uVar8 = DNSTypeName(*(undefined2 *)(puVar33 + 0x95));</pre>
+<pre>                          LogMsgWithLevel(3,"mDNSCoreReceiveResponse: InterfaceID %p %##s (%s)",</pre>
+<pre>                                          local_34,puVar33 + 0x55,uVar8);</pre>
+<pre>                        }</pre>
+<pre>                        goto LAB_00443c04;</pre>
+<pre>                      }</pre>
+<pre>                      if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                        local_30 = ppppppppiVar14;</pre>
+<pre>                        local_38 = (int ********)DNSTypeName(*(undefined2 *)(puVar33 + 0x95));</pre>
+<pre>                        uVar10 = (uint)local_30 &amp; 0xff00;</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32)</pre>
+<pre>                        ;</pre>
+<pre>                        LogMsgWithLevel(3,</pre>
+<pre>                                        "WARNING: Ignoring suspect uDNS response for %##s (%s) [q-&gt;Target %#a:%d] from %#a:%d %s"</pre>
+<pre>                                        ,puVar33 + 0x55,local_38,puVar33 + 0x4f,</pre>
+<pre>                                        (uint)ppppppppiVar14 &amp; 0xff | uVar10,param_4,local_54,uVar8)</pre>
+<pre>                        ;</pre>
+<pre>                      }</pre>
+<pre>                      break;</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                if (param_8 == 0) {</pre>
+<pre>                  bVar2 = false;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              if (local_880 != 0) {</pre>
+<pre>                local_94 = *(undefined4 *)(local_880 + 0xdc);</pre>
+<pre>                *(int *)(param_1 + 0x7fd0) = local_94;</pre>
+<pre>              }</pre>
+<pre>              if ((iVar4 != 0) &amp;&amp;</pre>
+<pre>                 (((*(char *)(iVar4 + 0x266) != '\0' || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>                  ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))))) {</pre>
+<pre>                bVar2 = false;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          else if ((((local_a8 != (undefined4 *)0x0) &amp;&amp; (*(char *)((int)local_a8 + 0x1596) != '\0'))</pre>
+<pre>                   &amp;&amp; (*(short *)(param_1 + 0x7fae) == 1)) &amp;&amp;</pre>
+<pre>                  ((*local_78 &amp; 0xffff0000) == 0xa9fe0000)) {</pre>
+<pre>            if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              iVar11 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>              pcVar21 = "mDNSResponder: Dropping LinkLocal packet %s";</pre>
+<pre>              goto LAB_00443bf0;</pre>
+<pre>            }</pre>
+<pre>            goto LAB_0044508c;</pre>
+<pre>          }</pre>
+<pre>LAB_00443c04:</pre>
+<pre>          if ((*param_2 == 0) &amp;&amp; (*(short *)(param_1 + 0x7fae) != 0x2f)) {</pre>
+<pre>            iVar11 = *(int *)(param_1 + 0x216c);</pre>
+<pre>            if (iVar11 != 0) {</pre>
+<pre>              uVar8 = GetRRDisplayString_rdb(iVar11 + 4,*(int *)(iVar11 + 0x24) + 4,iVar32);</pre>
+<pre>              LogMsgWithLevel(0,"mDNSCoreReceiveResponse ERROR m-&gt;CurrentRecord already set %s",</pre>
+<pre>                              uVar8);</pre>
+<pre>            }</pre>
+<pre>            *(undefined4 *)(param_1 + 0x216c) = *(undefined4 *)(param_1 + 0x2160);</pre>
+<pre>LAB_0044430c:</pre>
+<pre>            puVar33 = *(undefined4 **)(param_1 + 0x216c);</pre>
+<pre>            if (puVar33 != (undefined4 *)0x0) {</pre>
+<pre>              *(undefined4 *)(param_1 + 0x216c) = *puVar33;</pre>
+<pre>              if ((((bVar2) || ((local_68 != 0 &amp;&amp; (*(char *)(puVar33 + 1) == '\x02')))) &amp;&amp;</pre>
+<pre>                  ((*(int *)(param_1 + 0x7fc4) == 0 ||</pre>
+<pre>                   ((puVar33[7] == 0 || (*(int *)(param_1 + 0x7fc4) == puVar33[7])))))) &amp;&amp;</pre>
+<pre>                 ((((*(byte *)(puVar33 + 1) &amp; 0x32) != 0 &amp;&amp; (*(int *)((int)puVar33 + 0x4e) == 0)) ||</pre>
+<pre>                  (*(short *)(param_1 + 0x7fae) == *(short *)((int)puVar33 + 6))))) {</pre>
+<pre>                bVar3 = false;</pre>
+<pre>                if ((*(short *)(param_1 + 0x7fb0) == *(short *)(puVar33 + 2)) &amp;&amp;</pre>
+<pre>                   (bVar3 = false, *(int *)(param_1 + 0x7fbc) == puVar33[5])) {</pre>
+<pre>                  iVar11 = SameDomainName(*(undefined4 *)(param_1 + 0x7fc8),puVar33[8]);</pre>
+<pre>                  bVar3 = true;</pre>
+<pre>                  if (iVar11 == 0) {</pre>
+<pre>                    bVar3 = false;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                if (bVar3) {</pre>
+<pre>                  if ((((*(short *)(param_1 + 0x7fae) == *(short *)((int)puVar33 + 6)) &amp;&amp;</pre>
+<pre>                       (*(short *)(param_1 + 0x7fb0) == *(short *)(puVar33 + 2))) &amp;&amp;</pre>
+<pre>                      (*(short *)(param_1 + 0x7fb8) == *(short *)(puVar33 + 4))) &amp;&amp;</pre>
+<pre>                     ((*(int *)(param_1 + 0x7fc0) == puVar33[6] &amp;&amp;</pre>
+<pre>                      (iVar11 = SameRDataBody(iVar36,puVar33[9] + 4,SameDomainName), iVar11 != 0))))</pre>
+<pre>                  {</pre>
+<pre>                    if (((uint)puVar33[3] &gt;&gt; 1 &lt;= *(uint *)(param_1 + 0x7fb4)) ||</pre>
+<pre>                       (*(char *)(param_1 + 0x275) != '\0')) {</pre>
+<pre>                      if (puVar33[0x24] == param_8) {</pre>
+<pre>                        *(undefined *)((int)puVar33 + 0x8b) = 0;</pre>
+<pre>                        puVar33[0x24] = 0;</pre>
+<pre>                      }</pre>
+<pre>                      goto LAB_0044430c;</pre>
+<pre>                    }</pre>
+<pre>                    if (puVar33[0x24] != 0) {</pre>
+<pre>                      if (puVar33[0x24] != param_8) goto LAB_004442f8;</pre>
+<pre>                      goto LAB_0044430c;</pre>
+<pre>                    }</pre>
+<pre>                    puVar33[0x24] = param_8;</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>                    if ((*(int *)(param_1 + 0x7fb4) != 0) &amp;&amp;</pre>
+<pre>                       (iVar11 = FUN_0042d4d0(param_1,puVar33,local_a0), iVar11 != 0)) {</pre>
+<pre>                      if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                        local_30 = *(int *********)(param_1 + 0x7fc0);</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32)</pre>
+<pre>                        ;</pre>
+<pre>                        LogMsgWithLevel(3,"mDNSCoreReceiveResponse: Pkt Record: %08lX %s",local_30,</pre>
+<pre>                                        uVar8);</pre>
+<pre>                      }</pre>
+<pre>                      if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                        local_30 = (int ********)puVar33[6];</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                        LogMsgWithLevel(3,"mDNSCoreReceiveResponse: Our Record: %08lX %s",local_30,</pre>
+<pre>                                        uVar8);</pre>
+<pre>                      }</pre>
+<pre>                      puVar37 = puVar33;</pre>
+<pre>                      if (puVar33[0xe] != 0) {</pre>
+<pre>                        do {</pre>
+<pre>                          puVar33 = puVar37;</pre>
+<pre>                          puVar37 = (undefined4 *)puVar33[0xe];</pre>
+<pre>                        } while ((undefined4 *)puVar33[0xe] != (undefined4 *)0x0);</pre>
+<pre>                        if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                          local_30 = (int ********)puVar33[6];</pre>
+<pre>                          uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                          LogMsgWithLevel(3,"mDNSCoreReceiveResponse: Dep Record: %08lX %s",local_30</pre>
+<pre>                                          ,uVar8);</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                      if (*(byte *)((int)puVar33 + 0x86) &lt; 4) {</pre>
+<pre>                        if (*(byte *)((int)puVar33 + 0x86) != 3) {</pre>
+<pre>                          uVar8 = GetRRDisplayString_rdb</pre>
+<pre>                                            (iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                          LogMsgWithLevel(0,"mDNSCoreReceiveResponse: Received from %#a:%d %s",</pre>
+<pre>                                          param_4,local_58,uVar8);</pre>
+<pre>                          ppppppppiVar14 = (int ********)(uint)*(byte *)(puVar33 + 1);</pre>
+<pre>                          if (ppppppppiVar14 != (int ********)0x10) {</pre>
+<pre>                            if (ppppppppiVar14 == (int ********)0x2) {</pre>
+<pre>                              for (ppppppppiVar14 = *(int *********)(param_1 + 0x2a98);</pre>
+<pre>                                  ppppppppiVar14 != (int ********)0x0;</pre>
+<pre>                                  ppppppppiVar14 = (int ********)*ppppppppiVar14) {</pre>
+<pre>                                if (((*(short *)((int)ppppppppiVar14 + 6) ==</pre>
+<pre>                                      *(short *)((int)puVar33 + 6)) &amp;&amp;</pre>
+<pre>                                    (*(short *)(ppppppppiVar14 + 2) == *(short *)(puVar33 + 2))) &amp;&amp;</pre>
+<pre>                                   ((ppppppppiVar14[5] == (int *******)puVar33[5] &amp;&amp;</pre>
+<pre>                                    ((((*(short *)(ppppppppiVar14 + 4) == *(short *)(puVar33 + 4) &amp;&amp;</pre>
+<pre>                                       (ppppppppiVar14[6] == (int *******)puVar33[6])) &amp;&amp;</pre>
+<pre>                                      (local_30 = ppppppppiVar14,</pre>
+<pre>                                      iVar11 = SameRDataBody(ppppppppiVar14 + 1,puVar33[9] + 4,</pre>
+<pre>                                                             SameDomainName),</pre>
+<pre>                                      ppppppppiVar14 = local_30, iVar11 != 0)) &amp;&amp;</pre>
+<pre>                                     (iVar11 = SameDomainName(local_30[8],puVar33[8]),</pre>
+<pre>                                     ppppppppiVar14 = local_30, iVar11 != 0)))))) {</pre>
+<pre>                                  if (mDNS_LoggingEnabled == 0) goto LAB_0044430c;</pre>
+<pre>                                  uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                                  pcVar21 = </pre>
+<pre>                                  "mDNSCoreRegisteredProxyRecord: Ignoring packet registered with sleep proxy : %s "</pre>
+<pre>                                  ;</pre>
+<pre>                                  uVar13 = 2;</pre>
+<pre>                                  goto LAB_00443fc8;</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                              if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                                LogMsgWithLevel(2,"Stored Proxy records :");</pre>
+<pre>                              }</pre>
+<pre>                              ppppppppiVar14 = (int ********)&amp</span>DNS_LoggingEnabled;</pre>
+<pre>                              for (local_30 = *(int *********)(param_1 + 0x2a98);</pre>
+<pre>                                  local_30 != (int ********)0x0; local_30 = (int ********)*local_30)</pre>
+<pre>                              {</pre>
+<pre>                                if (*ppppppppiVar14 != (int *******)0x0) {</pre>
+<pre>                                  local_38 = ppppppppiVar14;</pre>
+<pre>                                  uVar8 = GetRRDisplayString_rdb</pre>
+<pre>                                                    (local_30 + 1,(int)local_30[9] + 4,iVar32);</pre>
+<pre>                                  LogMsgWithLevel(2,"%s",uVar8);</pre>
+<pre>                                  ppppppppiVar14 = local_38;</pre>
+<pre>                                }</pre>
+<pre>                              }</pre>
+<pre>                              local_30 = (int ********)(uint)*(byte *)((int)puVar33 + 0x86);</pre>
+<pre>                              uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                              LogMsgWithLevel(0,</pre>
+<pre>                                              "mDNSCoreReceiveResponse: ProbeCount %d; will deregister %s"</pre>
+<pre>                                              ,local_30,uVar8);</pre>
+<pre>                              *(int *)(param_1 + 0x3964) = *(int *)(param_1 + 0x3964) + 1;</pre>
+<pre>                            }</pre>
+<pre>                            else {</pre>
+<pre>                              if (ppppppppiVar14 != (int ********)&amp;DAT_00000020) {</pre>
+<pre>                                local_30 = ppppppppiVar14;</pre>
+<pre>                                uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                                LogMsgWithLevel(0,</pre>
+<pre>                                                "mDNSCoreReceiveResponse: Unexpected record type %X %s"</pre>
+<pre>                                                ,local_30,uVar8);</pre>
+<pre>                                goto LAB_0044430c;</pre>
+<pre>                              }</pre>
+<pre>                              uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                              LogMsgWithLevel(0,</pre>
+<pre>                                              "mDNSCoreReceiveResponse: Unexpected conflict discarding %s"</pre>
+<pre>                                              ,uVar8);</pre>
+<pre>                              *(int *)(param_1 + 0x3968) = *(int *)(param_1 + 0x3968) + 1;</pre>
+<pre>                            }</pre>
+<pre>                            mDNS_Deregister_internal(param_1,puVar33,2);</pre>
+<pre>                            goto LAB_0044430c;</pre>
+<pre>                          }</pre>
+<pre>                          uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                          LogMsgWithLevel(0,"mDNSCoreReceiveResponse: Resetting to Probing: %s",</pre>
+<pre>                                          uVar8);</pre>
+<pre>                          *(undefined *)(puVar33 + 1) = 2;</pre>
+<pre>                          *(undefined *)((int)puVar33 + 0x87) = 4;</pre>
+<pre>                          *(undefined *)((int)puVar33 + 0x86) = 4;</pre>
+<pre>                          FUN_00428828(param_1,puVar33);</pre>
+<pre>                          FUN_004276dc(param_1,puVar33);</pre>
+<pre>                          goto LAB_0044430c;</pre>
+<pre>                        }</pre>
+<pre>                        if (mDNS_LoggingEnabled == 0) goto LAB_0044430c;</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                        pcVar21 = </pre>
+<pre>                        "mDNSCoreReceiveResponse: Ignoring response received before we even began probing: %s"</pre>
+<pre>                        ;</pre>
+<pre>                      }</pre>
+<pre>                      else {</pre>
+<pre>                        if (mDNS_LoggingEnabled == 0) goto LAB_0044430c;</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                        pcVar21 = "mDNSCoreReceiveResponse: Already reset to Probing: %s";</pre>
+<pre>                      }</pre>
+<pre>                      uVar13 = 3;</pre>
+<pre>LAB_00443fc8:</pre>
+<pre>                      LogMsgWithLevel(uVar13,pcVar21,uVar8);</pre>
+<pre>                      goto LAB_0044430c;</pre>
+<pre>                    }</pre>
+<pre>                    if (((*(short *)(param_1 + 0x7fae) != *(short *)((int)puVar33 + 6)) ||</pre>
+<pre>                        ((*(byte *)(param_1 + 0x7fac) &amp; 0x10) == 0)) ||</pre>
+<pre>                       (*(int *)(param_1 + 0x234) - puVar33[0x31] &lt;= mDNSPlatformOneSecond / 2))</pre>
+<pre>                    goto LAB_0044430c;</pre>
+<pre>LAB_004442f8:</pre>
+<pre>                    puVar33[0x24] = 0xffffffff;</pre>
+<pre>                  }</pre>
+<pre>                  *(undefined4 *)(param_1 + 0x254) = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              goto LAB_0044430c;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          bVar3 = false;</pre>
+<pre>          if (bVar2) {</pre>
+<pre>LAB_004447e8:</pre>
+<pre>            bVar2 = true;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            ppppppppiVar24 = (int ********)0x1;</pre>
+<pre>            ppppppppiVar6 = (int ********)0x2;</pre>
+<pre>            ppppppppiVar20 = (int ********)0x5;</pre>
+<pre>            ppppppppiVar17 = (int ********)&amp;DAT_0000000c;</pre>
+<pre>            ppppppppiVar14 = (int ********)0x27;</pre>
+<pre>            ppppppppiVar25 = (int ********)0x12;</pre>
+<pre>            ppppppppiVar26 = (int ********)&amp;DAT_00000015;</pre>
+<pre>            ppppppppiVar27 = (int ********)&amp;DAT_00000024;</pre>
+<pre>            ppppppppiVar28 = (int ********)&amp;DAT_00000021;</pre>
+<pre>            for (ppppppppiVar31 = local_87c; ppppppppiVar31 != ppppppppiVar24;</pre>
+<pre>                ppppppppiVar31 = (int ********)ppppppppiVar31[0x14]) {</pre>
+<pre>              ppppppppiVar5 = (int ********)(uint)*(ushort *)((int)ppppppppiVar31 + 6);</pre>
+<pre>              if ((((ppppppppiVar5 == ppppppppiVar6) || (ppppppppiVar5 == ppppppppiVar20)) ||</pre>
+<pre>                  (ppppppppiVar5 == ppppppppiVar17)) || (ppppppppiVar5 == ppppppppiVar14)) {</pre>
+<pre>                pppppppiVar38 = ppppppppiVar31[9] + 1;</pre>
+<pre>LAB_004443bc:</pre>
+<pre>                if (((pppppppiVar38 != (int *******)0x0) &amp;&amp;</pre>
+<pre>                    (ppppppppiVar31[6] == *(int ********)(param_1 + 0x7fbc))) &amp;&amp;</pre>
+<pre>                   (local_50 = ppppppppiVar24, local_4c = ppppppppiVar6, local_48 = ppppppppiVar25,</pre>
+<pre>                   local_44 = ppppppppiVar26, local_40 = ppppppppiVar27, local_3c = ppppppppiVar28,</pre>
+<pre>                   local_38 = ppppppppiVar20, local_34 = ppppppppiVar17, local_30 = ppppppppiVar14,</pre>
+<pre>                   iVar11 = SameDomainName(pppppppiVar38,*(undefined4 *)(param_1 + 0x7fc8)),</pre>
+<pre>                   ppppppppiVar14 = local_30, ppppppppiVar17 = local_34, ppppppppiVar20 = local_38,</pre>
+<pre>                   ppppppppiVar6 = local_4c, ppppppppiVar24 = local_50, ppppppppiVar25 = local_48,</pre>
+<pre>                   ppppppppiVar26 = local_44, ppppppppiVar27 = local_40, ppppppppiVar28 = local_3c,</pre>
+<pre>                   iVar11 != 0)) {</pre>
+<pre>                  if (mDNS_LoggingEnabled == 0) goto LAB_004447d4;</pre>
+<pre>                  bVar3 = false;</pre>
+<pre>                  ppppppppiVar14 = *(int *********)(param_1 + 0x7fc8);</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(ppppppppiVar31 + 1,ppppppppiVar31[9] + 1,iVar32);</pre>
+<pre>                  pcVar21 = </pre>
+<pre>                  "IsResponseAcceptable: Found a matching entry for %##s in the CacheFlushRecords %s"</pre>
+<pre>                  ;</pre>
+<pre>                  goto LAB_00444644;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                if (((ppppppppiVar5 == (int ********)0xf) || (ppppppppiVar5 == ppppppppiVar25)) ||</pre>
+<pre>                   ((ppppppppiVar5 == ppppppppiVar26 || (ppppppppiVar5 == ppppppppiVar27)))) {</pre>
+<pre>                  pppppppiVar38 = (int *******)((int)ppppppppiVar31[9] + 6);</pre>
+<pre>                  goto LAB_004443bc;</pre>
+<pre>                }</pre>
+<pre>                if (ppppppppiVar5 == ppppppppiVar28) {</pre>
+<pre>                  pppppppiVar38 = (int *******)((int)ppppppppiVar31[9] + 10);</pre>
+<pre>                  goto LAB_004443bc;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            if ((iVar4 == 0) ||</pre>
+<pre>               (((*(char *)(iVar4 + 0x266) == '\0' &amp;&amp; (*(char *)(iVar4 + 0xcc) == '\0')) &amp;&amp;</pre>
+<pre>                ((*(char *)(iVar4 + 0x267) == '\0' || (*(char *)(iVar4 + 0x268) == '\0'))))))</pre>
+<pre>            goto LAB_0044637c;</pre>
+<pre>            iVar11 = SameDomainName(local_7c,*(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>            if (iVar11 != 0) {</pre>
+<pre><span class="green">              sVar16 = *(short *)(param_1 + 0x7fae)</span></span></pre>
+<pre>              if ((*(short *)(iVar4 + 0x254) != sVar16) &amp;&amp; (sVar16 != 5)) goto LAB_00444550;</pre>
+<pre>              if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                bVar3 = false;</pre>
+<pre>                ppppppppiVar14 = (int ********)DNSTypeName();</pre>
+<pre>                uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                pcVar21 = "IsResponseAcceptable: Accepting, same name and qtype %s, CR %s";</pre>
+<pre>                goto LAB_00444644;</pre>
+<pre>              }</pre>
+<pre>LAB_004447d4:</pre>
+<pre>              bVar3 = false;</pre>
+<pre>LAB_004447e0:</pre>
+<pre>              *(int *)(param_1 + 0x7fd0) = local_94;</pre>
+<pre>              goto LAB_004447e8;</pre>
+<pre>            }</pre>
+<pre><span class="green">            sVar16 = *(short *)(param_1 + 0x7fae)</span></span></pre>
+<pre>LAB_00444550:</pre>
+<pre>            if (sVar16 == 0x2e) {</pre>
+<pre>              uVar10 = swap16(*(undefined2 *)local_78);</pre>
+<pre>              if ((iVar11 == 0) || ((*(ushort *)(iVar4 + 0x254) != uVar10 &amp;&amp; (uVar10 != 5)))) {</pre>
+<pre>                if ((uVar10 == 0x2f) || (uVar10 == 0x32)) {</pre>
+<pre>                  if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                    bVar3 = true;</pre>
+<pre>                    local_34 = (int ********)</pre>
+<pre>                               GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                    uVar8 = DNSTypeName(uVar10);</pre>
+<pre>                    pcVar21 = </pre>
+<pre>                    "IsResponseAcceptable: Accepting RRSIG %s matches %s type (nseclist = 1)";</pre>
+<pre>                    ppppppppiVar14 = local_34;</pre>
+<pre>                    goto LAB_00444644;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  if (uVar10 != 6) goto LAB_0044637c;</pre>
+<pre>                  if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                    uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                    pcVar21 = </pre>
+<pre>                    "IsResponseAcceptable: Accepting RRSIG %s matches SOA type (nseclist = 1)";</pre>
+<pre>                    goto LAB_004447bc;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                goto LAB_004447dc;</pre>
+<pre>              }</pre>
+<pre>              if (mDNS_LoggingEnabled == 0) goto LAB_004447d4;</pre>
+<pre>              bVar3 = false;</pre>
+<pre>              local_34 = (int ********)</pre>
+<pre>                         GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>              uVar8 = DNSTypeName(*(undefined2 *)(iVar4 + 0x254));</pre>
+<pre>              pcVar21 = "IsResponseAcceptable: Accepting RRSIG %s matches question type %s";</pre>
+<pre>              ppppppppiVar14 = local_34;</pre>
+<pre>LAB_00444644:</pre>
+<pre>              LogMsgWithLevel(3,pcVar21,ppppppppiVar14,uVar8);</pre>
+<pre>              goto LAB_004447e0;</pre>
+<pre>            }</pre>
+<pre>            if (sVar16 != 0x2f) {</pre>
+<pre>              if (sVar16 == 6) {</pre>
+<pre>                if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                  pcVar21 = "IsResponseAcceptable: Accepting SOA %s (nseclist = 1)";</pre>
+<pre>LAB_004447bc:</pre>
+<pre>                  bVar3 = true;</pre>
+<pre>                  LogMsgWithLevel(3,pcVar21,uVar8);</pre>
+<pre>                  goto LAB_004447e0;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                if (sVar16 != 0x32) goto LAB_0044637c;</pre>
+<pre>                if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                  pcVar21 = "IsResponseAcceptable: Accepting NSEC3 %s (nseclist = 1)";</pre>
+<pre>                  goto LAB_004447bc;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>LAB_004447dc:</pre>
+<pre>              bVar3 = true;</pre>
+<pre>              goto LAB_004447e0;</pre>
+<pre>            }</pre>
+<pre>            iVar11 = RRAssertsExistence(iVar36,0x2f);</pre>
+<pre>            if (iVar11 != 0) {</pre>
+<pre>              if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                pcVar21 = "IsResponseAcceptable: Accepting NSEC %s (nseclist = 1)";</pre>
+<pre>                goto LAB_004447bc;</pre>
+<pre>              }</pre>
+<pre>              goto LAB_004447dc;</pre>
+<pre>            }</pre>
+<pre>            uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>            LogMsgWithLevel(0,"IsResponseAcceptable: ERROR!! Not a unicast NSEC %s",uVar8);</pre>
+<pre>LAB_0044637c:</pre>
+<pre>            bVar3 = false;</pre>
+<pre>            if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              bVar3 = false;</pre>
+<pre>              uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>              LogMsgWithLevel(3,"mDNSCoreReceiveResponse ignoring %s",uVar8);</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          if ((*(int *)(param_1 + 0x2c8) != 0) &amp;&amp; (bVar2)) {</pre>
+<pre>            uVar10 = DomainNameHashValue(*(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>            local_b4 = (undefined *)(uVar10 % 499);</pre>
+<pre>            local_90 = CacheGroupForName(param_1,local_b4,*(undefined4 *)(param_1 + 0x7fbc),</pre>
+<pre>                                         *(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>            if (local_874 != (int *)0x0) {</pre>
+<pre>              InitializeAnonInfoForCR(param_1,&amp;local_874,local_a0);</pre>
+<pre>            }</pre>
+<pre>            ppppppppiVar14 = local_bc;</pre>
+<pre>            if (!bVar3) {</pre>
+<pre>              pcVar21 = (char *)0x0;</pre>
+<pre>              if (local_90 != 0) {</pre>
+<pre>                pcVar21 = *(char **)(local_90 + 8);</pre>
+<pre>              }</pre>
+<pre>              local_5c = param_1 + ((int)local_b4 + 0x2aaU) * 4;</pre>
+<pre>              for (; (int ********)pcVar21 != (int ********)0x0; pcVar21 = *(char **)pcVar21) {</pre>
+<pre>                if (param_8 == 0) {</pre>
+<pre>                  uVar10 = 0;</pre>
+<pre>                  if (*(int ********)((int)pcVar21 + 0x28) != (int *******)0x0) {</pre>
+<pre>                    uVar10 = (uint)*(ushort *)((int)*(int ********)((int)pcVar21 + 0x28) + 0x13e);</pre>
+<pre>                  }</pre>
+<pre>                  uVar39 = 0;</pre>
+<pre>                  if (*(int *)(param_1 + 0x7fd0) != 0) {</pre>
+<pre>                    uVar39 = (uint)*(ushort *)(*(int *)(param_1 + 0x7fd0) + 0x13e);</pre>
+<pre>                  }</pre>
+<pre>                  uVar10 = uVar10 ^ uVar39;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  uVar10 = param_8 ^ (uint)*(int ********)((int)pcVar21 + 0x1c);</pre>
+<pre>                }</pre>
+<pre>                if ((((uVar10 == 0) &amp;&amp;</pre>
+<pre>                     (*(short *)(param_1 + 0x7fae) == *(short *)((int)pcVar21 + 6))) &amp;&amp;</pre>
+<pre>                    (*(short *)(param_1 + 0x7fb0) == *(short *)((int)pcVar21 + 8))) &amp;&amp;</pre>
+<pre>                   (((*(short *)(param_1 + 0x7fb8) == *(short *)((int)pcVar21 + 0x10) &amp;&amp;</pre>
+<pre>                     (*(int ********)(param_1 + 0x7fc0) == *(int ********)((int)pcVar21 + 0x18))) &amp;&amp;</pre>
+<pre>                    (iVar11 = SameRDataBody(iVar36,*(int ********)((int)pcVar21 + 0x24) + 1,</pre>
+<pre>                                            SameDomainName), iVar11 != 0)))) {</pre>
+<pre>                  if ((*(byte *)(param_1 + 0x7fac) &amp; 0x10) != 0) {</pre>
+<pre>                    ppppppppiVar17 = (int ********)((int)pcVar21 + 0x50);</pre>
+<pre>                    if (((*(int ********)((int)pcVar21 + 0x50) == (int *******)0x0) &amp;&amp;</pre>
+<pre>                        (ppppppppiVar14 != ppppppppiVar17)) &amp;&amp; (local_98 != 3)) {</pre>
+<pre>                      *local_bc = (int *******)pcVar21;</pre>
+<pre>                      *(int ********)((int)pcVar21 + 0x50) = (int *******)0x1;</pre>
+<pre>                      local_bc = ppppppppiVar17;</pre>
+<pre>                      ppppppppiVar14 = ppppppppiVar17;</pre>
+<pre>                    }</pre>
+<pre>                    if ((*(byte *)((int)pcVar21 + 4) &amp; 0x10) == 0) {</pre>
+<pre>                      ppppppppiVar6 = *(int *********)(param_1 + 0x2ac);</pre>
+<pre>                      ppppppppiVar17 = local_bc;</pre>
+<pre>                      ppppppppiVar20 = (int ********)((int)pcVar21 + 4);</pre>
+<pre>                      while (ppppppppiVar6 != (int ********)0x0) {</pre>
+<pre>                        local_38 = ppppppppiVar20;</pre>
+<pre>                        local_34 = ppppppppiVar17;</pre>
+<pre>                        local_30 = ppppppppiVar6;</pre>
+<pre>                        iVar11 = ResourceRecordAnswersQuestion(ppppppppiVar20,ppppppppiVar6);</pre>
+<pre>                        if (iVar11 != 0) {</pre>
+<pre>                          local_30[0xb] = (int *******)((int)local_30[0xb] + 1);</pre>
+<pre>                        }</pre>
+<pre>                        ppppppppiVar17 = local_34;</pre>
+<pre>                        ppppppppiVar20 = local_38;</pre>
+<pre>                        ppppppppiVar6 = (int ********)*local_30;</pre>
+<pre>                      }</pre>
+<pre>                      *(undefined *)((int)pcVar21 + 4) = *(undefined *)(param_1 + 0x7fac);</pre>
+<pre>                      local_bc = ppppppppiVar17;</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                  iVar11 = SameRDataBody(iVar36,*(int ********)((int)pcVar21 + 0x24) + 1,</pre>
+<pre>                                         SameDomainNameCS);</pre>
+<pre>                  if (iVar11 == 0) {</pre>
+<pre>                    *(int ********)((int)pcVar21 + 0xc) = (int *******)0x0;</pre>
+<pre>                    pppppppiVar38 = *(int ********)(param_1 + 0x234);</pre>
+<pre>                    *(undefined *)((int)pcVar21 + 0x4c) = 4;</pre>
+<pre>                    *(int ********)((int)pcVar21 + 0x34) = pppppppiVar38;</pre>
+<pre>                    FUN_00428c90(param_1,pcVar21);</pre>
+<pre>                    if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                      uVar8 = GetRRDisplayString_rdb</pre>
+<pre>                                        ((int ********)((int)pcVar21 + 4),</pre>
+<pre>                                         *(int ********)((int)pcVar21 + 0x24) + 1,iVar32);</pre>
+<pre>                      LogMsgWithLevel(3,</pre>
+<pre>                                      "mDNSCoreReceiveCacheCheck: Discarding due to domainname case change old: %s"</pre>
+<pre>                                      ,uVar8);</pre>
+<pre>                    }</pre>
+<pre>                    if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                      uVar8 = GetRRDisplayString_rdb(iVar36,*(int *)(param_1 + 0x7fcc) + 4,iVar32);</pre>
+<pre>                      LogMsgWithLevel(3,</pre>
+<pre>                                      "mDNSCoreReceiveCacheCheck: Discarding due to domainname case change new: %s"</pre>
+<pre>                                      ,uVar8);</pre>
+<pre>                    }</pre>
+<pre>                    if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                      if (*(int ********)((int)pcVar21 + 0x44) == (int *******)0x0) {</pre>
+<pre>                        iVar11 = mDNSPlatformOneSecond * 0x3c;</pre>
+<pre>                      }</pre>
+<pre>                      else {</pre>
+<pre>                        pppppppiVar38 = *(int ********)((int)pcVar21 + 0xc);</pre>
+<pre>                        if (*(byte *)((int)pcVar21 + 0x4c) &lt; 4) {</pre>
+<pre>                          iVar11 = ((int)pppppppiVar38 * mDNSPlatformOneSecond) / 0x32;</pre>
+<pre>                        }</pre>
+<pre>                        else {</pre>
+<pre>                          iVar11 = mDNSPlatformOneSecond;</pre>
+<pre>                          if ((pppppppiVar38 &lt; (int *******)0xb) &amp;&amp;</pre>
+<pre>                             (iVar11 = 0, pppppppiVar38 != (int *******)0x0)) {</pre>
+<pre>                            iVar11 = mDNSPlatformOneSecond / 10;</pre>
+<pre>                          }</pre>
+<pre>                        }</pre>
+<pre>                      }</pre>
+<pre>                      iVar7 = *(int *)(param_1 + 0x234);</pre>
+<pre>                      LogMsgWithLevel(3,</pre>
+<pre>                                      "mDNSCoreReceiveCacheCheck: Discarding due to domainname case change in %d slot %3d in %d %d"</pre>
+<pre>                                      ,(int)*(int ********)((int)pcVar21 + 0x3c) + (iVar11 - iVar7),</pre>
+<pre>                                      local_b4,*(int *)(local_5c + 4) - iVar7,</pre>
+<pre>                                      *(int *)(param_1 + 0x248) - iVar7);</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>                    iVar11 = IdenticalAnonInfo(*(undefined4 *)(param_1 + 0x7fd4),</pre>
+<pre>                                               *(int ********)((int)pcVar21 + 0x2c));</pre>
+<pre>                    if (iVar11 != 0) {</pre>
+<pre>                      pppppppiVar38 = *(int ********)(param_1 + 0x7fb4);</pre>
+<pre>                      if (pppppppiVar38 == (int *******)0x0) {</pre>
+<pre>                        if (mDNSPlatformOneSecond &lt;</pre>
+<pre>                            (int)*(int ********)((int)pcVar21 + 0x34) +</pre>
+<pre>                            (mDNSPlatformOneSecond * (int)*(int ********)((int)pcVar21 + 0xc) -</pre>
+<pre>                            (int)*(int ********)(param_1 + 0x234))) {</pre>
+<pre>                          *(int ********)((int)pcVar21 + 0xc) = (int *******)0x1;</pre>
+<pre>                          pppppppiVar38 = *(int ********)(param_1 + 0x234);</pre>
+<pre>                          *(undefined *)((int)pcVar21 + 0x4c) = 4;</pre>
+<pre>                          *(int ********)((int)pcVar21 + 0x34) = pppppppiVar38;</pre>
+<pre>                          local_bc = ppppppppiVar14;</pre>
+<pre>                          FUN_00428c90(param_1,pcVar21);</pre>
+<pre>                          ppppppppiVar14 = local_bc;</pre>
+<pre>                        }</pre>
+<pre>                        goto LAB_00444e6c;</pre>
+<pre>                      }</pre>
+<pre>                      *(int *)(param_1 + 0x39b0) = *(int *)(param_1 + 0x39b0) + 1;</pre>
+<pre>                      *(int ********)((int)pcVar21 + 0x34) = *(int ********)(param_1 + 0x234);</pre>
+<pre>                      *(int ********)((int)pcVar21 + 0xc) = pppppppiVar38;</pre>
+<pre>                      *(undefined *)((int)pcVar21 + 0x4c) = 0;</pre>
+<pre>                      FUN_00428c90(param_1,pcVar21);</pre>
+<pre>                      *(ushort *)((int)pcVar21 + 0x4e) = param_2[1];</pre>
+<pre>                      ppppppppiVar17 = local_c0;</pre>
+<pre>                      if ((((param_2[3] != 0) &amp;&amp; (iVar4 != 0)) &amp;&amp;</pre>
+<pre>                          (*(short *)(iVar4 + 0x254) == *(short *)((int)pcVar21 + 6))) &amp;&amp;</pre>
+<pre>                         ((local_c0 == (int ********)0x0 &amp;&amp;</pre>
+<pre>                          (ppppppppiVar17 = (int ********)pcVar21, mDNS_LoggingEnabled != 0)))) {</pre>
+<pre>                        uVar8 = GetRRDisplayString_rdb</pre>
+<pre>                                          ((int ********)((int)pcVar21 + 4),</pre>
+<pre>                                           *(int ********)((int)pcVar21 + 0x24) + 1,iVar32);</pre>
+<pre>                        LogMsgWithLevel(3,"mDNSCoreReceiveCacheCheck: rescuing RR %s",uVar8);</pre>
+<pre>                      }</pre>
+<pre>                      local_c0 = ppppppppiVar17;</pre>
+<pre>                      ppppppppiVar17 = (int ********)((int)pcVar21 + 4);</pre>
+<pre>                      if ((*(byte *)((int)pcVar21 + 4) &amp; 0x10) == 0) goto LAB_00444e6c;</pre>
+<pre>                      puVar33 = *(undefined4 **)(param_1 + 0x2ac);</pre>
+<pre>                      goto LAB_00444de8;</pre>
+<pre>                    }</pre>
+<pre>                    *(int ********)((int)pcVar21 + 0xc) = (int *******)0x0;</pre>
+<pre>                    pppppppiVar38 = *(int ********)(param_1 + 0x234);</pre>
+<pre>                    *(undefined *)((int)pcVar21 + 0x4c) = 4;</pre>
+<pre>                    *(int ********)((int)pcVar21 + 0x34) = pppppppiVar38;</pre>
+<pre>                    FUN_00428c90(param_1,pcVar21);</pre>
+<pre>                    if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                      uVar8 = GetRRDisplayString_rdb</pre>
+<pre>                                        ((int ********)((int)pcVar21 + 4),</pre>
+<pre>                                         *(int ********)((int)pcVar21 + 0x24) + 1,iVar32);</pre>
+<pre>                      LogMsgWithLevel(3,"mDNSCoreReceiveCacheCheck: AnonInfo changed for %s",uVar8);</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            local_bc = ppppppppiVar14;</pre>
+<pre>            if (*(int *)(param_1 + 0x7fb4) != 0) {</pre>
+<pre>              bVar2 = false;</pre>
+<pre>              if (((*(byte *)(param_1 + 0x7fac) &amp; 0x10) == 0) || (bVar2 = local_98 != 3, !bVar2)) {</pre>
+<pre>                iVar11 = FUN_004279b4(param_1,*(undefined4 *)(param_1 + 0x7fc8),</pre>
+<pre>                                      *(undefined4 *)(param_1 + 0x7fbc),local_b4,0);</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar11 = mDNSPlatformOneSecond + *(int *)(param_1 + 0x234);</pre>
+<pre>                if (iVar11 == 0) {</pre>
+<pre>                  iVar11 = 1;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              pppppppiVar38 =</pre>
+<pre>                   (int *******)CreateNewCacheEntry(param_1,local_b4,local_90,iVar11,!bVar3,param_4)</pre>
+<pre>              ;</pre>
+<pre>              if (pppppppiVar38 != (int *******)0x0) {</pre>
+<pre>                *(ushort *)((int)pppppppiVar38 + 0x4e) = param_2[1];</pre>
+<pre>                if ((*(short *)((int)pppppppiVar38 + 6) == 0x2e) &amp;&amp; (!bVar3)) {</pre>
+<pre>                  local_8c = 1;</pre>
+<pre>                }</pre>
+<pre>                *(undefined *)((int)pppppppiVar38 + 0x4d) = 0;</pre>
+<pre>                if ((iVar4 != 0) &amp;&amp;</pre>
+<pre>                   (((*(char *)(iVar4 + 0x266) != '\0' || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>                    ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))))) {</pre>
+<pre>                  if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                    local_34 = (int ********)</pre>
+<pre>                               GetRRDisplayString_rdb(pppppppiVar38 + 1,pppppppiVar38[9] + 1,iVar32)</pre>
+<pre>                    ;</pre>
+<pre>                    uVar8 = DNSTypeName(*(undefined2 *)(iVar4 + 0x254));</pre>
+<pre>                    LogMsgWithLevel(3,</pre>
+<pre>                                    "mDNSCoreReceiveResponse: CRDNSSECQuestion set for new record %s, question %##s (%s)"</pre>
+<pre>                                    ,local_34,local_7c,uVar8);</pre>
+<pre>                  }</pre>
+<pre>                  *(undefined *)((int)pppppppiVar38 + 0x4d) = 1;</pre>
+<pre>                }</pre>
+<pre>                if (bVar3) {</pre>
+<pre>                  pppppppiVar38[0xd] = *(int *******)(param_1 + 0x234);</pre>
+<pre>                  *local_6c = (int ******)pppppppiVar38;</pre>
+<pre>                  local_6c = pppppppiVar38;</pre>
+<pre>                }</pre>
+<pre>                else if (bVar2) {</pre>
+<pre>                  *local_bc = pppppppiVar38;</pre>
+<pre>                  pppppppiVar38[0x14] = (int ******)0x1;</pre>
+<pre>                  local_bc = (int ********)(pppppppiVar38 + 0x14);</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  ppppppiVar35 = pppppppiVar38[0xe];</pre>
+<pre>                  if (ppppppiVar35 != (int ******)0x0) {</pre>
+<pre>                    iVar11 = param_1 + ((int)local_b4 + 0x2aaU) * 4;</pre>
+<pre>                    if (0 &lt; *(int *)(iVar11 + 4) - (int)ppppppiVar35) {</pre>
+<pre>                      *(int *******)(iVar11 + 4) = ppppppiVar35;</pre>
+<pre>                    }</pre>
+<pre>                    if (0 &lt; *(int *)(param_1 + 0x248) - (int)ppppppiVar35) {</pre>
+<pre>                      *(int *******)(param_1 + 0x248) = ppppppiVar35;</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          goto LAB_0044508c;</pre>
+<pre>        }</pre>
+<pre>        if (mDNS_LoggingEnabled == 0) goto LAB_0044508c;</pre>
+<pre>        iVar11 = *(int *)(param_1 + 0x7fc8);</pre>
+<pre>        pcVar21 = "mDNSCoreReceiveResponse: CNAME loop domain name %##s";</pre>
+<pre>LAB_00443bf0:</pre>
+<pre>        pcVar40 = LogMsgWithLevel;</pre>
+<pre>        iVar7 = 3;</pre>
+<pre>        goto LAB_00445084;</pre>
+<pre>      }</pre>
+<pre>      goto LAB_0044508c;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  puVar30 = local_80;</pre>
+<pre>  FUN_0042cb28(param_1);</pre>
+<pre>  while (ppppppppiVar14 = local_87c, local_87c != (int ********)0x1) {</pre>
+<pre>    puVar33 = (undefined4 *)0x0;</pre>
+<pre>    uVar10 = DomainNameHashValue(local_87c[8]);</pre>
+<pre>    local_bc = (int ********)(uVar10 % 499);</pre>
+<pre>    iVar36 = CacheGroupForName(param_1,local_bc,ppppppppiVar14[5],ppppppppiVar14[8]);</pre>
+<pre>    local_87c = (int ********)local_87c[0x14];</pre>
+<pre>    ppppppppiVar14[0x14] = (int *******)0x0;</pre>
+<pre>    if (iVar36 != 0) {</pre>
+<pre>      puVar33 = *(undefined4 **)(iVar36 + 8);</pre>
+<pre>    }</pre>
+<pre>    for (; puVar33 != (undefined4 *)0x0; puVar33 = (undefined4 *)*puVar33) {</pre>
+<pre>      ppppppppiVar17 = (int ********)0x0;</pre>
+<pre>      if (ppppppppiVar14[7] == (int *******)0x0) {</pre>
+<pre>        ppppppppiVar20 = (int ********)0x0;</pre>
+<pre>        if (ppppppppiVar14[10] != (int *******)0x0) {</pre>
+<pre>          ppppppppiVar20 = (int ********)(uint)*(ushort *)((int)ppppppppiVar14[10] + 0x13e);</pre>
+<pre>        }</pre>
+<pre>        ppppppppiVar17 = (int ********)0x0;</pre>
+<pre>        if (puVar33[10] != 0) {</pre>
+<pre>          ppppppppiVar17 = (int ********)(uint)*(ushort *)(puVar33[10] + 0x13e);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        ppppppppiVar20 = (int ********)0x0;</pre>
+<pre>      }</pre>
+<pre>      if ((*(short *)((int)puVar33 + 6) == *(short *)((int)ppppppppiVar14 + 6)) &amp;&amp;</pre>
+<pre>         (*(short *)((int)puVar33 + 6) == 0x2e)) {</pre>
+<pre>        local_34 = (int ********)puVar33[9];</pre>
+<pre>        local_38 = (int ********)((int)local_34 + 4);</pre>
+<pre>        local_50 = ppppppppiVar20;</pre>
+<pre>        local_30 = ppppppppiVar17;</pre>
+<pre>        ppppppppiVar17 = (int ********)swap16(*(undefined2 *)(ppppppppiVar14[9] + 1));</pre>
+<pre>        puVar23 = (undefined *)((int)local_34 + 4);</pre>
+<pre>        local_34 = ppppppppiVar17;</pre>
+<pre>        ppppppppiVar6 = (int ********)swap16(CONCAT11(*puVar23,*(undefined *)((int)local_38 + 1)));</pre>
+<pre>        ppppppppiVar17 = local_30;</pre>
+<pre>        ppppppppiVar20 = local_50;</pre>
+<pre>        if (local_34 == ppppppppiVar6) goto LAB_00445214;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>LAB_00445214:</pre>
+<pre>        if (((ppppppppiVar14[7] == (int *******)puVar33[7]) &amp;&amp;</pre>
+<pre>            (((ppppppppiVar14[7] != (int *******)0x0 || (ppppppppiVar20 == ppppppppiVar17)) &amp;&amp;</pre>
+<pre>             (*(short *)((int)puVar33 + 6) == *(short *)((int)ppppppppiVar14 + 6))))) &amp;&amp;</pre>
+<pre>           (*(short *)(ppppppppiVar14 + 2) == *(short *)(puVar33 + 2))) {</pre>
+<pre>          iVar36 = *(int *)(param_1 + 0x234);</pre>
+<pre>          iVar11 = puVar33[0xd];</pre>
+<pre>          if ((iVar36 - iVar11 &lt; mDNSPlatformOneSecond) &amp;&amp;</pre>
+<pre>             (ppppppppiVar17 = (int ********)puVar33[3],</pre>
+<pre>             mDNSPlatformOneSecond &lt; (iVar11 - iVar36) + (int)ppppppppiVar17 * mDNSPlatformOneSecond</pre>
+<pre>             )) {</pre>
+<pre>            ppppppppiVar20 = (int ********)ppppppppiVar14[3];</pre>
+<pre>            if ((ppppppppiVar17 != ppppppppiVar20) &amp;&amp; ((int ********)0x1 &lt; ppppppppiVar20)) {</pre>
+<pre>              if (ppppppppiVar17 == (int ********)0xf0) {</pre>
+<pre><span class="green">                sVar16 = 0x10</span></span></pre>
+<pre>                if (ppppppppiVar20 != (int ********)0x3c) goto LAB_004452d8;</pre>
+<pre>LAB_004452d0:</pre>
+<pre>                if (*(short *)((int)puVar33 + 6) != sVar16) goto LAB_004452d8;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                if ((ppppppppiVar17 == (int ********)0x78) &amp;&amp;</pre>
+<pre><span class="green">                   (sVar16 = 0x21, ppppppppiVar20 == (int ********)0x1194)) goto LAB_004452d0</span></span></pre>
+<pre>LAB_004452d8:</pre>
+<pre>                if ((*param_2 == 0) &amp;&amp; (mDNS_LoggingEnabled != 0)) {</pre>
+<pre>                  local_38 = ppppppppiVar20;</pre>
+<pre>                  local_30 = ppppppppiVar17;</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                  LogMsgWithLevel(3,"Correcting TTL from %4d to %4d for %s",local_30,local_38,uVar8)</pre>
+<pre>                  ;</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>              puVar33[3] = ppppppppiVar14[3];</pre>
+<pre>            }</pre>
+<pre>            puVar33[0xd] = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            if (iVar11 == iVar36) {</pre>
+<pre>              iVar7 = puVar33[3];</pre>
+<pre>              if (iVar7 == 1) {</pre>
+<pre>                if (*(char *)(puVar33 + 0x13) != '\x04') goto LAB_004453b8;</pre>
+<pre>                if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(puVar33 + 1,puVar33[9] + 4,iVar32);</pre>
+<pre>                  LogMsgWithLevel(3,"Cache flush for DE record %s",uVar8);</pre>
+<pre>                }</pre>
+<pre>                puVar33[3] = 0;</pre>
+<pre>                goto LAB_004453f8;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>LAB_004453b8:</pre>
+<pre>              iVar7 = puVar33[3];</pre>
+<pre>            }</pre>
+<pre>            if (mDNSPlatformOneSecond &lt; (iVar11 - iVar36) + mDNSPlatformOneSecond * iVar7) {</pre>
+<pre>              puVar33[3] = 1;</pre>
+<pre>              *(undefined *)(puVar33 + 0x13) = 4;</pre>
+<pre>              puVar33[0xd] = *(int *)(param_1 + 0x234) + -1;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>LAB_004453f8:</pre>
+<pre>          FUN_00428c90(param_1,puVar33);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    if (ppppppppiVar14[0xe] != (int *******)0x0) {</pre>
+<pre>      if (((param_2[3] != 0) &amp;&amp; (iVar4 != 0)) &amp;&amp; (local_878 != (int ******)0x0)) {</pre>
+<pre>        ppppppppiVar17 = local_c0;</pre>
+<pre>        if ((local_c0 == (int ********)0x0) &amp;&amp;</pre>
+<pre>           (ppppppppiVar17 = ppppppppiVar14, mDNS_LoggingEnabled != 0)) {</pre>
+<pre>          uVar8 = GetRRDisplayString_rdb(ppppppppiVar14 + 1,ppppppppiVar14[9] + 1,iVar32);</pre>
+<pre>          LogMsgWithLevel(3,"mDNSCoreReceiveResponse: Updating NSECCachePtr to %s",uVar8);</pre>
+<pre>        }</pre>
+<pre>        iVar36 = AddNSECSForCacheRecord(param_1,local_878,ppppppppiVar17,local_ac);</pre>
+<pre>        if (iVar36 == 0) {</pre>
+<pre>          ppppppiVar35 = local_878;</pre>
+<pre>          if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>            uVar8 = GetRRDisplayString_rdb(ppppppppiVar17 + 1,ppppppppiVar17[9] + 1,iVar32);</pre>
+<pre>            LogMsgWithLevel(3,</pre>
+<pre>                            "mDNSCoreReceiveResponse: AddNSECSForCacheRecord failed to add NSEC for %s"</pre>
+<pre>                            ,uVar8);</pre>
+<pre>            ppppppiVar35 = local_878;</pre>
+<pre>          }</pre>
+<pre>          while (ppppppiVar35 != (int ******)0x0) {</pre>
+<pre>            ppppppiVar15 = (int ******)*ppppppiVar35;</pre>
+<pre>            ReleaseCacheRecord(param_1,ppppppiVar35);</pre>
+<pre>            ppppppiVar35 = ppppppiVar15;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        local_878 = (int ******)0x0;</pre>
+<pre>        local_c0 = (int ********)0x0;</pre>
+<pre>      }</pre>
+<pre>      pppppppiVar38 =</pre>
+<pre>           (int *******)FUN_004279b4(param_1,ppppppppiVar14[8],ppppppppiVar14[5],local_bc,0);</pre>
+<pre>      ppppppppiVar14[0xe] = pppppppiVar38;</pre>
+<pre>      if (pppppppiVar38 == (int *******)0x0) {</pre>
+<pre>        FUN_00437804(param_1,ppppppppiVar14);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar36 = param_1 + ((int)local_bc + 0x2aa) * 4;</pre>
+<pre>        if (0 &lt; *(int *)(iVar36 + 4) - (int)pppppppiVar38) {</pre>
+<pre>          *(int ********)(iVar36 + 4) = pppppppiVar38;</pre>
+<pre>        }</pre>
+<pre>        if (0 &lt; *(int *)(param_1 + 0x248) - (int)pppppppiVar38) {</pre>
+<pre>          *(int ********)(param_1 + 0x248) = pppppppiVar38;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if ((local_878 != (int ******)0x0) &amp;&amp; (local_c0 != (int ********)0x0)) {</pre>
+<pre>    if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>      uVar8 = GetRRDisplayString_rdb(local_c0 + 1,local_c0[9] + 1,iVar32);</pre>
+<pre>      LogMsgWithLevel(3,"mDNSCoreReceieveResponse: Updating NSEC records in %s",uVar8);</pre>
+<pre>    }</pre>
+<pre>    iVar4 = AddNSECSForCacheRecord(param_1,local_878,local_c0,local_ac);</pre>
+<pre>    if (iVar4 == 0) {</pre>
+<pre>      ppppppiVar35 = local_878;</pre>
+<pre>      if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>        uVar8 = GetRRDisplayString_rdb(local_c0 + 1,local_c0[9] + 1,iVar32);</pre>
+<pre>        LogMsgWithLevel(3,</pre>
+<pre>                        "mDNSCoreReceiveResponse: AddNSECSForCacheRecord failed to add NSEC for %s",</pre>
+<pre>                        uVar8);</pre>
+<pre>        ppppppiVar35 = local_878;</pre>
+<pre>      }</pre>
+<pre>      while (ppppppiVar35 != (int ******)0x0) {</pre>
+<pre>        ppppppiVar15 = (int ******)*ppppppiVar35;</pre>
+<pre>        ReleaseCacheRecord(param_1,ppppppiVar35);</pre>
+<pre>        ppppppiVar35 = ppppppiVar15;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    local_878 = (int ******)0x0;</pre>
+<pre>  }</pre>
+<pre>  if ((((param_2[3] != 0) &amp;&amp; (local_8c == 0)) &amp;&amp; (local_88 != 0)) &amp;&amp; (local_878 == (int ******)0x0))</pre>
+<pre>  {</pre>
+<pre>    local_c0 = (int ********)auStack_5e0;</pre>
+<pre>    iVar4 = 0;</pre>
+<pre>    local_b8 = (ushort *)(uint)(param_6 == 0);</pre>
+<pre>    puVar9 = local_b0;</pre>
+<pre>    while (((iVar4 &lt; (int)(uint)param_2[2] &amp;&amp; (puVar9 != (ushort *)0x0)) &amp;&amp; (puVar9 &lt; puVar30))) {</pre>
+<pre>      puVar9 = (ushort *)getQuestion(param_2,puVar9,puVar30,param_8,local_c0);</pre>
+<pre>      if (((puVar9 != (ushort *)0x0) &amp;&amp;</pre>
+<pre>          (pppppppiVar38 =</pre>
+<pre>                (int *******)</pre>
+<pre>                FUN_00427778(param_1,(uint)param_7._0_2_ &lt;&lt; 0x10,(uint)*param_2 &lt;&lt; 0x10,local_c0,</pre>
+<pre>                             local_b8), pppppppiVar38 != (int *******)0x0)) &amp;&amp;</pre>
+<pre>         (*(char *)(pppppppiVar38 + 0x33) != '\0')) {</pre>
+<pre>        if (pppppppiVar38[0xf] != (int ******)0x0) {</pre>
+<pre>          uVar8 = DNSTypeName(*(undefined2 *)(pppppppiVar38 + 0x95));</pre>
+<pre>          LogMsgWithLevel(0,</pre>
+<pre>                          "mDNSCoreReceiveNoDNSSECAnswers: ERROR!! qptr %##s (%s) Duplicate question matching response"</pre>
+<pre>                          ,pppppppiVar38 + 0x55,uVar8);</pre>
+<pre>        }</pre>
+<pre>        iVar36 = *(int *)(param_1 + 0x28) + 1;</pre>
+<pre>        *(int *)(param_1 + 0x28) = iVar36;</pre>
+<pre>        if (*(int *)(param_1 + 0x24) != iVar36) {</pre>
+<pre>          LogMsgWithLevel(0,"%s: Locking Failure! mDNS_busy (%ld) != mDNS_reentrancy (%ld)",</pre>
+<pre>                          "mDNSCoreReceiveNoDNSSECAnswers",*(int *)(param_1 + 0x24),iVar36);</pre>
+<pre>        }</pre>
+<pre>        ppppppppiVar14 = (int ********)*pppppppiVar38;</pre>
+<pre>        while ((ppppppppiVar17 = ppppppppiVar14, ppppppppiVar17 != (int ********)0x0 &amp;&amp;</pre>
+<pre>               (ppppppppiVar17 != *(int *********)(param_1 + 0x2b0)))) {</pre>
+<pre>          local_bc = (int ********)*ppppppppiVar17;</pre>
+<pre>          ppppppppiVar14 = local_bc;</pre>
+<pre>          if (ppppppppiVar17[0xf] == pppppppiVar38) {</pre>
+<pre>            if (*(char *)(ppppppppiVar17 + 0x33) == '\0') {</pre>
+<pre>              uVar8 = DNSTypeName(*(undefined2 *)(ppppppppiVar17 + 0x95));</pre>
+<pre>              pcVar21 = </pre>
+<pre>              "mDNSCoreReceiveNoDNSSECAnswers: ERROR!! qptr %##s (%s) Duplicate question not ValidatingResponse"</pre>
+<pre>              ;</pre>
+<pre>              uVar13 = 0;</pre>
+<pre>LAB_00445878:</pre>
+<pre>              LogMsgWithLevel(uVar13,pcVar21,ppppppppiVar17 + 0x55,uVar8);</pre>
+<pre>            }</pre>
+<pre>            else if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>              uVar8 = DNSTypeName(*(undefined2 *)(ppppppppiVar17 + 0x95));</pre>
+<pre>              uVar13 = 3;</pre>
+<pre>              pcVar21 = "mDNSCoreReceiveNoDNSSECAnswers: qptr %##s (%s) Duplicate question found";</pre>
+<pre>              goto LAB_00445878;</pre>
+<pre>            }</pre>
+<pre>            ppppppppiVar14 = local_bc;</pre>
+<pre>            if (ppppppppiVar17[0xa2] != (int *******)0x0) {</pre>
+<pre>              (*(code *)ppppppppiVar17[0xa2])(param_1,ppppppppiVar17,0,5);</pre>
+<pre>              ppppppppiVar14 = local_bc;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        if (pppppppiVar38[0xa2] != (int ******)0x0) {</pre>
+<pre>          (*(code *)pppppppiVar38[0xa2])(param_1,pppppppiVar38,0,5);</pre>
+<pre>        }</pre>
+<pre>        iVar36 = *(int *)(param_1 + 0x28);</pre>
+<pre>        if (*(int *)(param_1 + 0x24) != iVar36) {</pre>
+<pre>          LogMsgWithLevel(0,"%s: Unlocking Failure! mDNS_busy (%ld) != mDNS_reentrancy (%ld)",</pre>
+<pre>                          "mDNSCoreReceiveNoDNSSECAnswers",*(int *)(param_1 + 0x24),iVar36);</pre>
+<pre>          iVar36 = *(int *)(param_1 + 0x28);</pre>
+<pre>        }</pre>
+<pre>        *(int *)(param_1 + 0x28) = iVar36 + -1;</pre>
+<pre>      }</pre>
+<pre>      iVar4 = iVar4 + 1;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  local_b4 = auStack_350;</pre>
+<pre>  local_bc = (int ********)puVar30;</pre>
+<pre>  local_c0 = (int ********)0x0;</pre>
+<pre>  local_b8 = (ushort *)0x0;</pre>
+<pre>  local_a4 = param_8;</pre>
+<pre>  ppppppiVar35 = local_878;</pre>
+<pre>  do {</pre>
+<pre>    if ((((int)(uint)param_2[2] &lt;= (int)local_b8) || (local_b0 == (ushort *)0x0)) ||</pre>
+<pre>       (local_bc &lt;= local_b0)) {</pre>
+<pre>      if (ppppppiVar35 != (int ******)0x0) {</pre>
+<pre>        if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>          LogMsgWithLevel(3,"mDNSCoreReceiveNoUnicastAnswers: NSECRecords not used");</pre>
+<pre>        }</pre>
+<pre>        while (ppppppiVar35 != (int ******)0x0) {</pre>
+<pre>          ppppppiVar15 = (int ******)*ppppppiVar35;</pre>
+<pre>          ReleaseCacheRecord(param_1,ppppppiVar35);</pre>
+<pre>          ppppppiVar35 = ppppppiVar15;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      piVar29 = local_874;</pre>
+<pre>      if (local_c0 != (int ********)0x0) {</pre>
+<pre>        if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>          LogMsgWithLevel(3,"mDNSCoreReceiveNoUnicastAnswers: SOARecord not used");</pre>
+<pre>        }</pre>
+<pre>        ReleaseCacheRecord(param_1,local_c0);</pre>
+<pre>        piVar29 = local_874;</pre>
+<pre>      }</pre>
+<pre>      while (piVar29 != (int *)0x0) {</pre>
+<pre>        piVar29 = (int *)*piVar29;</pre>
+<pre>        ReleaseCacheRecord(param_1);</pre>
+<pre>      }</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    local_b0 = (ushort *)getQuestion(param_2,local_b0,local_bc,local_a4,local_b4);</pre>
+<pre>    if ((local_b0 != (ushort *)0x0) &amp;&amp;</pre>
+<pre>       (iVar4 = FUN_00427778(param_1,(uint)param_7._0_2_ &lt;&lt; 0x10,(uint)*param_2 &lt;&lt; 0x10,local_b4,</pre>
+<pre>                             param_6 == 0), iVar4 != 0)) {</pre>
+<pre>      local_38 = local_1fc;</pre>
+<pre>      puVar33 = (undefined4 *)0x0;</pre>
+<pre>      uVar10 = DomainNameHashValue(local_38);</pre>
+<pre>      uVar10 = uVar10 % 499;</pre>
+<pre>      iVar36 = CacheGroupForName(param_1,uVar10,local_34c,local_38);</pre>
+<pre>      if (iVar36 != 0) {</pre>
+<pre>        puVar33 = *(undefined4 **)(iVar36 + 8);</pre>
+<pre>      }</pre>
+<pre>      puVar37 = (undefined4 *)0x0;</pre>
+<pre>      for (; puVar33 != (undefined4 *)0x0; puVar33 = (undefined4 *)*puVar33) {</pre>
+<pre>        iVar36 = SameNameRecordAnswersQuestion(puVar33 + 1,iVar4);</pre>
+<pre>        if (iVar36 != 0) {</pre>
+<pre>          if (0 &lt; (puVar33[0xd] - *(int *)(param_1 + 0x234)) + puVar33[3] * mDNSPlatformOneSecond)</pre>
+<pre>          break;</pre>
+<pre>          if (*(char *)(puVar33 + 1) == -0x10) {</pre>
+<pre>            puVar37 = puVar33;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      if (((local_a4 == 0) &amp;&amp; (local_fc != 6)) &amp;&amp;</pre>
+<pre>         (local_34 = local_1fc, iVar36 = IsLocalDomain(local_1fc), iVar36 != 0)) {</pre>
+<pre>        if (puVar33 == (undefined4 *)0x0) {</pre>
+<pre>          if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>            uVar8 = DNSTypeName(local_fc);</pre>
+<pre>            LogMsgWithLevel(3,</pre>
+<pre>                            "mDNSCoreReceiveNoUnicastAnswers: Generate negative response for %##s (%s)"</pre>
+<pre>                            ,local_34,uVar8);</pre>
+<pre>          }</pre>
+<pre>          *(int *)(param_1 + 0x2b4) = iVar4;</pre>
+<pre>          if (*(char *)(iVar4 + 0x267) != '\0') {</pre>
+<pre>            *(ushort *)(iVar4 + 300) = param_2[1];</pre>
+<pre>          }</pre>
+<pre>          FUN_004378f4(param_1,3);</pre>
+<pre>          *(undefined4 *)(param_1 + 0x2b4) = 0;</pre>
+<pre>        }</pre>
+<pre>        else if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>          uVar8 = DNSTypeName(local_fc);</pre>
+<pre>          LogMsgWithLevel(3,</pre>
+<pre>                          "mDNSCoreReceiveNoUnicastAnswers: Skipping check and not creating a negative cache entry for %##s (%s)"</pre>
+<pre>                          ,local_34,uVar8);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else if (puVar33 == (undefined4 *)0x0) {</pre>
+<pre>        local_a8 = local_34c;</pre>
+<pre>        if (local_fc == 6) {</pre>
+<pre>          iVar36 = SameDomainName(local_1fc,&amp;DAT_0044d544);</pre>
+<pre>          uVar39 = 0x15180;</pre>
+<pre>          if (iVar36 == 0) goto LAB_00445bd0;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>LAB_00445bd0:</pre>
+<pre>          uVar39 = 0x3c;</pre>
+<pre>        }</pre>
+<pre>        iVar36 = 0;</pre>
+<pre>        if (param_2[4] != 0) {</pre>
+<pre>          iVar11 = LocateAuthorities(param_2,local_bc);</pre>
+<pre>          if (iVar11 == 0) {</pre>
+<pre>            local_b0 = (ushort *)0x0;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            local_b0 = (ushort *)</pre>
+<pre>                       GetLargeResourceRecord</pre>
+<pre>                                 (param_1,param_2,iVar11,local_bc,local_a4,0xa0,local_a0);</pre>
+<pre>            if ((local_b0 == (ushort *)0x0) || (*(char *)(param_1 + 0x7fac) == -0x10)) {</pre>
+<pre>LAB_00445d7c:</pre>
+<pre>              iVar36 = 0;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar36 = 0;</pre>
+<pre>              if (*(short *)(param_1 + 0x7fae) == 6) {</pre>
+<pre>                uVar12 = DomainNameHashValue(*(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>                uVar8 = CacheGroupForName(param_1,uVar12 % 499,*(undefined4 *)(param_1 + 0x7fbc),</pre>
+<pre>                                          *(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>                uVar22 = *(uint *)(*(int *)(param_1 + 0x7fcc) + 0x214);</pre>
+<pre>                if ((uVar22 &lt;= *(uint *)(param_1 + 0x7fb4)) ||</pre>
+<pre>                   (uVar18 = *(uint *)(param_1 + 0x7fb4), **(char **)(param_1 + 0x7fc8) == '\0')) {</pre>
+<pre>                  uVar18 = uVar22;</pre>
+<pre>                }</pre>
+<pre>                if (uVar39 &lt; uVar18) {</pre>
+<pre>                  uVar39 = uVar18;</pre>
+<pre>                }</pre>
+<pre>                local_c0 = (int ********)CreateNewCacheEntry(param_1,uVar12 % 499,uVar8,1,0,0);</pre>
+<pre>                if (*(char *)(iVar4 + 0x267) == '\0') {</pre>
+<pre>                  iVar36 = 0;</pre>
+<pre>                  if (local_fc != 6) goto LAB_00445d80;</pre>
+<pre>                  local_30 = (int ********)CountLabels(local_1fc);</pre>
+<pre>                  iVar11 = CountLabels(*(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>                  if (iVar11 &lt; (int)((int)local_30 + -1)) {</pre>
+<pre>                    iVar36 = ((int)local_30 - iVar11) + -1;</pre>
+<pre>                    uVar8 = SkipLeadingLabels(local_1fc,(int)local_30 - iVar11);</pre>
+<pre>                    iVar11 = SameDomainName(uVar8,*(undefined4 *)(param_1 + 0x7fc8));</pre>
+<pre>                    if (iVar11 != 0) goto LAB_00445d80;</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>                goto LAB_00445d7c;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>LAB_00445d80:</pre>
+<pre>            *(undefined *)(param_1 + 0x7fac) = 0;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        if (puVar37 != (undefined4 *)0x0) {</pre>
+<pre>          uVar12 = puVar37[3] &lt;&lt; 1;</pre>
+<pre>          if ((uint)(puVar37[3] &lt;&lt; 1) &lt;= uVar39) {</pre>
+<pre>            uVar12 = uVar39;</pre>
+<pre>          }</pre>
+<pre>          uVar39 = 0xe10;</pre>
+<pre>          if (uVar12 &lt; 0xe11) {</pre>
+<pre>            uVar39 = uVar12;</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        uVar8 = FUN_0042678c(local_98,uVar39);</pre>
+<pre>        if (puVar37 == (undefined4 *)0x0) {</pre>
+<pre>          pppppppiVar38 = (int *******)local_1fc;</pre>
+<pre>          local_9c = 0;</pre>
+<pre>LAB_00445f68:</pre>
+<pre>          MakeNegativeCacheRecord</pre>
+<pre>                    (param_1,local_a0,pppppppiVar38,local_a8,local_fc,local_fa,uVar8,local_9c,</pre>
+<pre>                     *(undefined4 *)(iVar4 + 0xdc));</pre>
+<pre>          *(ushort *)(param_1 + 0x7ff6) = param_2[1];</pre>
+<pre>          uVar13 = CacheGroupForName(param_1,uVar10,local_a8,pppppppiVar38);</pre>
+<pre>          if ((ppppppiVar35 == (int ******)0x0) ||</pre>
+<pre>             (((*(char *)(iVar4 + 0x266) == '\0' &amp;&amp; (*(char *)(iVar4 + 0xcc) == '\0')) &amp;&amp;</pre>
+<pre>              ((*(char *)(iVar4 + 0x267) == '\0' || (*(char *)(iVar4 + 0x268) == '\0')))))) {</pre>
+<pre>            ppppppppiVar14 = (int ********)CreateNewCacheEntry(param_1,uVar10,uVar13,1,1,0);</pre>
+<pre>            if (ppppppppiVar14 != (int ********)0x0) {</pre>
+<pre>              *(undefined *)((int)ppppppppiVar14 + 0x4d) = 0;</pre>
+<pre>              if (((*(char *)(iVar4 + 0x266) != '\0') || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>                 ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))) {</pre>
+<pre>                *(undefined *)((int)ppppppppiVar14 + 0x4d) = 1;</pre>
+<pre>              }</pre>
+<pre>              ppppppppiVar14[0xe] = (int *******)0x0;</pre>
+<pre>              if (local_c0 != (int ********)0x0) {</pre>
+<pre>                if (ppppppppiVar14[0x16] != (int *******)0x0) {</pre>
+<pre>                  local_50 = ppppppppiVar14;</pre>
+<pre>                  ReleaseCacheRecord(param_1);</pre>
+<pre>                  ppppppppiVar14 = local_50;</pre>
+<pre>                }</pre>
+<pre>                ppppppppiVar14[0x16] = (int *******)local_c0;</pre>
+<pre>              }</pre>
+<pre>              local_c0 = (int ********)0x0;</pre>
+<pre>              FUN_00437804(param_1,ppppppppiVar14);</pre>
+<pre>            }</pre>
+<pre>            *(undefined *)(param_1 + 0x7fac) = 0;</pre>
+<pre>            *(undefined2 *)(param_1 + 0x7ff6) = 0;</pre>
+<pre>            if (iVar36 != 0) goto code_r0x004461c4;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar4 = CreateNewCacheEntry(param_1,uVar10,uVar13,1,1,0);</pre>
+<pre>            if (iVar4 != 0) {</pre>
+<pre>              *(undefined *)(iVar4 + 0x4d) = 0;</pre>
+<pre>              iVar36 = AddNSECSForCacheRecord(param_1,ppppppiVar35,iVar4,local_ac);</pre>
+<pre>              if (iVar36 == 0) {</pre>
+<pre>                if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(iVar4 + 4,*(int *)(iVar4 + 0x24) + 4,iVar32);</pre>
+<pre>                  LogMsgWithLevel(3,</pre>
+<pre>                                  "mDNSCoreReceiveNoUnicastAnswers: AddNSECSForCacheRecord failed to add NSEC for negcr %s"</pre>
+<pre>                                  ,uVar8);</pre>
+<pre>                }</pre>
+<pre>                do {</pre>
+<pre>                  ppppppiVar15 = (int ******)*ppppppiVar35;</pre>
+<pre>                  ReleaseCacheRecord(param_1,ppppppiVar35);</pre>
+<pre>                  ppppppiVar35 = ppppppiVar15;</pre>
+<pre>                } while (ppppppiVar15 != (int ******)0x0);</pre>
+<pre>                *(undefined4 *)(iVar4 + 0x38) = 0;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                *(undefined *)(iVar4 + 0x4d) = 1;</pre>
+<pre>                if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>                  uVar8 = GetRRDisplayString_rdb(iVar4 + 4,*(int *)(iVar4 + 0x24) + 4,iVar32);</pre>
+<pre>                  LogMsgWithLevel(3,</pre>
+<pre>                                  "mDNSCoreReceiveNoUnicastAnswers: AddNSECSForCacheRecord added neg NSEC for %s"</pre>
+<pre>                                  ,uVar8);</pre>
+<pre>                }</pre>
+<pre>                *(undefined4 *)(iVar4 + 0x38) = 0;</pre>
+<pre>              }</pre>
+<pre>              ppppppiVar35 = (int ******)0x0;</pre>
+<pre>              FUN_00437804(param_1,iVar4);</pre>
+<pre>            }</pre>
+<pre>            *(undefined *)(param_1 + 0x7fac) = 0;</pre>
+<pre>          }</pre>
+<pre>          goto LAB_00446210;</pre>
+<pre>        }</pre>
+<pre>        if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>          uVar34 = puVar37[3];</pre>
+<pre>          uVar13 = GetRRDisplayString_rdb(puVar37 + 1,puVar37[9] + 4,iVar32);</pre>
+<pre>          LogMsgWithLevel(3,</pre>
+<pre>                          "mDNSCoreReceiveNoUnicastAnswers: Renewing negative TTL from %d to %d %s",</pre>
+<pre>                          uVar34,uVar8,uVar13);</pre>
+<pre>        }</pre>
+<pre>        uVar13 = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>        puVar37[3] = uVar8;</pre>
+<pre>        puVar37[0xd] = uVar13;</pre>
+<pre>        *(undefined *)(puVar37 + 0x13) = 0;</pre>
+<pre>        FUN_00428c90(param_1,puVar37);</pre>
+<pre>        *(undefined4 *)(iVar4 + 0xc) = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>        uVar8 = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>        *(undefined4 *)(iVar4 + 0x1c) = 0;</pre>
+<pre>        *(undefined4 *)(iVar4 + 0xb4) = uVar8;</pre>
+<pre>        iVar36 = mDNSPlatformOneSecond * 0xe10;</pre>
+<pre>        *(undefined4 *)(iVar4 + 0xb0) = 0;</pre>
+<pre>        *(undefined *)(iVar4 + 0xec) = 0;</pre>
+<pre>        *(int *)(iVar4 + 0x10) = iVar36;</pre>
+<pre>        if (((*(char *)(iVar4 + 0x266) != '\0') || (*(char *)(iVar4 + 0xcc) != '\0')) ||</pre>
+<pre>           ((*(char *)(iVar4 + 0x267) != '\0' &amp;&amp; (*(char *)(iVar4 + 0x268) != '\0')))) {</pre>
+<pre>          *(undefined *)((int)puVar37 + 0x4d) = 1;</pre>
+<pre>        }</pre>
+<pre>        if ((ppppppiVar35 != (int ******)0x0) &amp;&amp;</pre>
+<pre>           (iVar4 = AddNSECSForCacheRecord(param_1,ppppppiVar35,puVar37,local_ac), iVar4 == 0)) {</pre>
+<pre>          if (mDNS_LoggingEnabled != 0) {</pre>
+<pre>            uVar8 = GetRRDisplayString_rdb(puVar37 + 1,puVar37[9] + 4,iVar32);</pre>
+<pre>            LogMsgWithLevel(3,</pre>
+<pre>                            "mDNSCoreReceiveNoUnicastAnswers: AddNSECSForCacheRecord failed to add NSEC for negcr %s during refresh"</pre>
+<pre>                            ,uVar8);</pre>
+<pre>          }</pre>
+<pre>          do {</pre>
+<pre>            ppppppiVar15 = (int ******)*ppppppiVar35;</pre>
+<pre>            ReleaseCacheRecord(param_1,ppppppiVar35);</pre>
+<pre>            ppppppiVar35 = ppppppiVar15;</pre>
+<pre>          } while (ppppppiVar15 != (int ******)0x0);</pre>
+<pre>          *(undefined *)((int)puVar37 + 0x4d) = 0;</pre>
+<pre>        }</pre>
+<pre>        ppppppiVar35 = (int ******)0x0;</pre>
+<pre>        if (local_c0 != (int ********)0x0) {</pre>
+<pre>          if (puVar37[0x16] != 0) {</pre>
+<pre>            ReleaseCacheRecord(param_1);</pre>
+<pre>          }</pre>
+<pre>          ppppppiVar35 = (int ******)0x0;</pre>
+<pre>          puVar37[0x16] = local_c0;</pre>
+<pre>          local_c0 = (int ********)0x0;</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>LAB_00446210:</pre>
+<pre>    local_b8 = (ushort *)((int)local_b8 + 1);</pre>
+<pre>  } while( true );</pre>
+<pre>LAB_00444de8:</pre>
+<pre>  if (puVar33 == (undefined4 *)0x0) goto LAB_00444e6c;</pre>
+<pre>  if (((puVar33[0xf] == 0) &amp;&amp; (*(char *)(puVar33 + 0x96) == '\0')) &amp;&amp;</pre>
+<pre>     ((0 &lt; (int)puVar33[4] &amp;&amp;</pre>
+<pre>      (local_30 = ppppppppiVar17, iVar11 = ResourceRecordAnswersQuestion(ppppppppiVar17,puVar33),</pre>
+<pre>      ppppppppiVar17 = local_30, iVar11 != 0)))) {</pre>
+<pre>    puVar33[3] = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>    uVar8 = *(undefined4 *)(param_1 + 0x234);</pre>
+<pre>    puVar33[7] = 0;</pre>
+<pre>    puVar33[0x2d] = uVar8;</pre>
+<pre>    iVar11 = mDNSPlatformOneSecond;</pre>
+<pre>    *(undefined *)(puVar33 + 0x3b) = 0;</pre>
+<pre>    puVar33[0x2c] = 0;</pre>
+<pre>    puVar33[4] = iVar11 * 0xe10;</pre>
+<pre>    goto LAB_00444e6c;</pre>
+<pre>  }</pre>
+<pre>  puVar33 = (undefined4 *)*puVar33;</pre>
+<pre>  goto LAB_00444de8;</pre>
+<pre>LAB_00444e6c:</pre>
+<pre>  local_bc = ppppppppiVar14;</pre>
+<pre>  if ((*(int ********)((int)pcVar21 + 0x2c) != (int *******)0x0) &amp;&amp;</pre>
+<pre>     (*(int *)(param_1 + 0x7fd4) != 0)) {</pre>
+<pre>    pcVar40 = CopyAnonInfoForCR;</pre>
+<pre>    iVar7 = param_1;</pre>
+<pre>    iVar11 = (int)local_a0;</pre>
+<pre>LAB_00445084:</pre>
+<pre>    (*pcVar40)(iVar7,pcVar21,iVar11);</pre>
+<pre>  }</pre>
+<pre>LAB_0044508c:</pre>
+<pre>  FUN_0042cb28(param_1);</pre>
+<pre>  local_9c = local_9c + 1;</pre>
+<pre>  goto LAB_004450a4;</pre>
+<pre>code_r0x004461c4:</pre>
+<pre>  iVar36 = iVar36 + -1;</pre>
+<pre>  pppppppiVar38 = (int *******)((int)pppppppiVar38 + *(byte *)pppppppiVar38 + 1);</pre>
+<pre>  local_a8 = (undefined4 *)DomainNameHashValue(pppppppiVar38);</pre>
+<pre>  uVar10 = DomainNameHashValue(pppppppiVar38);</pre>
+<pre>  uVar10 = uVar10 % 499;</pre>
+<pre>  goto LAB_00445f68;</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

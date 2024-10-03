@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mlibcfgbackup.so[0m
+
+ b58:	24630001 	addiu	v1,v1,1
+ b5c:	a0820200 	sb	v0,512(a0)
+ b60:	8f998040 	lw	t9,strlen
+ b64:	02002021 	move	a0,s0
+ b68:	afa30aa8 	sw	v1,2728(sp)
+ b6c:	0320f809 	jalr	t9
+ b70:	afa50aa4 	sw	a1,2724(sp)
+ b74:	8fa50aa4 	lw	a1,2724(sp)
+ b78:	8fa30aa8 	lw	v1,2728(sp)
+ b7c:	00a2102b 	sltu	v0,a1,v0
+ b80:	02052021 	addu	a0,s0,a1
+ b84:	24a50001 	addiu	a1,a1,1
+ b88:	8fbc0018 	lw	gp,24(sp)
+ b8c:	1440ffe5 	bnez	v0,b24 <cfgrestore@@Base+0x214>
+ b90:	02033021 	addu	a2,s0,v1
+ b94:	8f858024 	lw	a1,-32732(gp)
+ b98:	02803821 	move	a3,s4
+ b9c:	8f99804c 	lw	t9,-32692(gp)
+ ba0:	02203021 	move	a2,s1
+ ba4:	8fa40aa0 	lw	a0,2720(sp)
+ ba8:	24a5108c 	addiu	a1,a1,4236
+ bac:	0320f809 	jalr	t9
+ bb0:	afb50010 	sw	s5,16(sp)
+ bb4:	8fbc0018 	lw	gp,24(sp)
+ bb8:	8fa40aa0 	lw	a0,2720(sp)
+[31m bbc:	8f99807c 	lw	t9,system[0m
+ bc0:	0320f809 	jalr	t9
+ bc4:	00000000 	nop
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m1[0m times [0;33mlibcfgbackup.so[0m
+

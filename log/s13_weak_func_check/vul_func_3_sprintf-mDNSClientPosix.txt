@@ -1,0 +1,93 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mmDNSClientPosix[0m
+
+  407108:	27bdffc0 	addiu	sp,sp,-64
+  40710c:	afbf003c 	sw	ra,60(sp)
+  407110:	afbe0038 	sw	s8,56(sp)
+  407114:	afb70034 	sw	s7,52(sp)
+  407118:	afb60030 	sw	s6,48(sp)
+  40711c:	afb5002c 	sw	s5,44(sp)
+  407120:	afb40028 	sw	s4,40(sp)
+  407124:	afb30024 	sw	s3,36(sp)
+  407128:	afb20020 	sw	s2,32(sp)
+  40712c:	afb1001c 	sw	s1,28(sp)
+  407130:	afb00018 	sw	s0,24(sp)
+  407134:	3c1c0047 	lui	gp,0x47
+  407138:	279c60e0 	addiu	gp,gp,24800
+  40713c:	afbc0010 	sw	gp,16(sp)
+  407140:	3c1e0045 	lui	s8,0x45
+  407144:	3c170045 	lui	s7,0x45
+  407148:	00808821 	move	s1,a0
+  40714c:	27deceec 	addiu	s8,s8,-12564
+  407150:	00a09021 	move	s2,a1
+  407154:	26f75674 	addiu	s7,s7,22132
+  407158:	00008021 	move	s0,zero
+  40715c:	24130010 	li	s3,16
+  407160:	3416ffff 	li	s6,0xffff
+  407164:	24150008 	li	s5,8
+  407168:	2a340011 	slti	s4,s1,17
+[31m  40716c:	8f99819c 	lw	t9,sprintf[0m
+  407170:	02601021 	move	v0,s3
+  407174:	0234100b 	0x234100b
+--
+  407358:	24040001 	li	a0,1
+  40735c:	8fbc0040 	lw	gp,64(sp)
+  407360:	8f998370 	lw	t9,-31888(gp)
+  407364:	0320f809 	jalr	t9
+  407368:	24050038 	li	a1,56
+  40736c:	8fbc0040 	lw	gp,64(sp)
+  407370:	104000a6 	beqz	v0,40760c <free_ifi_info@@Base+0x5c4>
+  407374:	00408021 	move	s0,v0
+  407378:	8e620000 	lw	v0,0(s3)
+  40737c:	02a03821 	move	a3,s5
+  407380:	8fa40160 	lw	a0,352(sp)
+  407384:	03c02821 	move	a1,s8
+  407388:	afa2016c 	sw	v0,364(sp)
+  40738c:	02c03021 	move	a2,s6
+  407390:	ae700000 	sw	s0,0(s3)
+  407394:	8fa30144 	lw	v1,324(sp)
+  407398:	8fa20148 	lw	v0,328(sp)
+  40739c:	afa30010 	sw	v1,16(sp)
+  4073a0:	afa20014 	sw	v0,20(sp)
+  4073a4:	8fa3014c 	lw	v1,332(sp)
+  4073a8:	8fa20150 	lw	v0,336(sp)
+  4073ac:	afa30018 	sw	v1,24(sp)
+  4073b0:	afa2001c 	sw	v0,28(sp)
+  4073b4:	8fa30154 	lw	v1,340(sp)
+  4073b8:	8fa20158 	lw	v0,344(sp)
+[31m  4073bc:	8f99819c 	lw	t9,sprintf[0m
+  4073c0:	afa30020 	sw	v1,32(sp)
+  4073c4:	0320f809 	jalr	t9
+--
+  44c154:	240600ff 	li	a2,255
+  44c158:	0320f809 	jalr	t9
+  44c15c:	a3a20128 	sb	v0,296(sp)
+  44c160:	8fbc0020 	lw	gp,32(sp)
+  44c164:	8f9980b8 	lw	t9,strlen
+  44c168:	0320f809 	jalr	t9
+  44c16c:	02202021 	move	a0,s1
+  44c170:	8fbc0020 	lw	gp,32(sp)
+  44c174:	8f8483f4 	lw	a0,-31756(gp)
+  44c178:	10000008 	b	44c19c <main@@Base+0x9cc>
+  44c17c:	00001821 	move	v1,zero
+  44c180:	82250000 	lb	a1,0(s1)
+  44c184:	8c860000 	lw	a2,0(a0)
+  44c188:	00052840 	sll	a1,a1,0x1
+  44c18c:	00c52821 	addu	a1,a2,a1
+  44c190:	84a50000 	lh	a1,0(a1)
+  44c194:	a2250000 	sb	a1,0(s1)
+  44c198:	26310001 	addiu	s1,s1,1
+  44c19c:	0062282a 	slt	a1,v1,v0
+  44c1a0:	14a0fff7 	bnez	a1,44c180 <main@@Base+0x9b0>
+  44c1a4:	24630001 	addiu	v1,v1,1
+  44c1a8:	3c020047 	lui	v0,0x47
+  44c1ac:	27a6002c 	addiu	a2,sp,44
+  44c1b0:	8c43e83c 	lw	v1,-6084(v0)
+  44c1b4:	8e020a48 	lw	v0,2632(s0)
+[31m  44c1b8:	8f99819c 	lw	t9,sprintf[0m
+  44c1bc:	14600006 	bnez	v1,44c1d8 <main@@Base+0xa08>
+  44c1c0:	27a40128 	addiu	a0,sp,296
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m3[0m times [0;33mmDNSClientPosix[0m
+

@@ -1,0 +1,560 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s17_cwe_checker.html" title="./../s17_cwe_checker.html" >&laquo; Back to s17_cwe_checker</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/252.html" title="252" target="_blank" >CWE252</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401158",</pre>
+<pre>      "00401cc0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401158_6",</pre>
+<pre>      "instr_00401cc0_6"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "atoi"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "reason=isolated_returns_no_reg_taint"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Unchecked Return Value) There is no check of the return value of 00401158 (atoi)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/252.html" title="252" target="_blank" >CWE252</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401240",</pre>
+<pre>      "00401270"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401240_7",</pre>
+<pre>      "instr_00401270_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "system"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "reason=empty_state"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Unchecked Return Value) There is no check of the return value of 00401240 (system)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/252.html" title="252" target="_blank" >CWE252</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040125c",</pre>
+<pre>      "00401270"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040125c_7",</pre>
+<pre>      "instr_00401270_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "system"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "reason=empty_state"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Unchecked Return Value) There is no check of the return value of 0040125c (system)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/252.html" title="252" target="_blank" >CWE252</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401284",</pre>
+<pre>      "00401294"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401284_7",</pre>
+<pre>      "instr_00401294_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "system"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "reason=empty_state"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Unchecked Return Value) There is no check of the return value of 00401284 (system)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/332.html" title="332" target="_blank" >CWE332</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [],</pre>
+<pre>    "tids": [],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Insufficient Entropy in PRNG) program uses rand without calling srand before"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/467.html" title="467" target="_blank" >CWE467</a>",</pre>
+<pre>    "version": "0.2",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004013b4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004013b4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(Use of sizeof on a Pointer Type) sizeof on pointer at 004013b4 (strncpy)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/476.html" title="476" target="_blank" >CWE476</a>",</pre>
+<pre>    "version": "0.3",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004011b4",</pre>
+<pre>      "00401218"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004011b4_6",</pre>
+<pre>      "instr_00401218_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "tmpfile"</pre>
+<pre>    ],</pre>
+<pre>    "other": [],</pre>
+<pre>    "description": "(NULL Pointer Dereference) There is no check if the return value is NULL at 004011b4 (tmpfile)."</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004010d4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004010d4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (004010d4) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401294"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401294_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (00401294) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040139c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040139c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "memset"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (0040139c) -&gt; memset"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004013b4"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004013b4_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (004013b4) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004013d0"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004013d0_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (004013d0) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "004013ec"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_004013ec_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (004013ec) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401408"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401408_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (00401408) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401424"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401424_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (00401424) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401440"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401440_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (00401440) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040145c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040145c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (0040145c) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "0040159c"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_0040159c_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (0040159c) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401c14"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401c14_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "main"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strlen"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) main (00401c14) -&gt; strlen"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00401d38"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00401d38_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "FUN_00401cd0"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "strncpy"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) FUN_00401cd0 (00401d38) -&gt; strncpy"</pre>
+<pre>  },</pre>
+<pre>  {</pre>
+<pre>    "name": "<a href="https://cwe.mitre.org/data/definitions/676.html" title="676" target="_blank" >CWE676</a>",</pre>
+<pre>    "version": "0.1",</pre>
+<pre>    "addresses": [</pre>
+<pre>      "00402360"</pre>
+<pre>    ],</pre>
+<pre>    "tids": [</pre>
+<pre>      "instr_00402360_7"</pre>
+<pre>    ],</pre>
+<pre>    "symbols": [</pre>
+<pre>      "FUN_00402294"</pre>
+<pre>    ],</pre>
+<pre>    "other": [</pre>
+<pre>      [</pre>
+<pre>        "dangerous_function",</pre>
+<pre>        "snprintf"</pre>
+<pre>      ]</pre>
+<pre>    ],</pre>
+<pre>    "description": "(Use of Potentially Dangerous Function) FUN_00402294 (00402360) -&gt; snprintf"</pre>
+<pre>  }</pre>
+<pre>]</pre>  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

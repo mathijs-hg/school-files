@@ -1,0 +1,93 @@
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m tear down of [0;33mhnap_push_service[0m
+
+  4021a8:	8e040000 	lw	a0,0(s0)
+  4021ac:	8f998050 	lw	t9,-32688(gp)
+  4021b0:	0320f809 	jalr	t9
+  4021b4:	00922021 	addu	a0,a0,s2
+  4021b8:	8fbc0010 	lw	gp,16(sp)
+  4021bc:	8e020000 	lw	v0,0(s0)
+  4021c0:	00529021 	addu	s2,v0,s2
+  4021c4:	92420005 	lbu	v0,5(s2)
+  4021c8:	14400007 	bnez	v0,4021e8 <main@@Base+0x574>
+  4021cc:	00000000 	nop
+  4021d0:	26310001 	addiu	s1,s1,1
+  4021d4:	2a22000a 	slti	v0,s1,10
+  4021d8:	10400028 	beqz	v0,40227c <main@@Base+0x608>
+  4021dc:	02330018 	mult	s1,s3
+  4021e0:	1000fff1 	b	4021a8 <main@@Base+0x534>
+  4021e4:	00009012 	mflo	s2
+  4021e8:	8f9981d8 	lw	t9,-32296(gp)
+  4021ec:	0320f809 	jalr	t9
+  4021f0:	3404c350 	li	a0,0xc350
+  4021f4:	8fbc0010 	lw	gp,16(sp)
+  4021f8:	1000ffe9 	b	4021a0 <main@@Base+0x52c>
+  4021fc:	02808821 	move	s1,s4
+  402200:	3c040041 	lui	a0,0x41
+  402204:	248448b8 	addiu	a0,a0,18616
+  402208:	3c050041 	lui	a1,0x41
+[31m  40220c:	8f99820c 	lw	t9,printf[0m
+  402210:	0320f809 	jalr	t9
+  402214:	24a54ae0 	addiu	a1,a1,19168
+--
+  40226c:	02202021 	move	a0,s1
+  402270:	8fbc0010 	lw	gp,16(sp)
+  402274:	1000ff90 	b	4020b8 <main@@Base+0x444>
+  402278:	00000000 	nop
+  40227c:	8f9981d8 	lw	t9,-32296(gp)
+  402280:	0320f809 	jalr	t9
+  402284:	3404c350 	li	a0,0xc350
+  402288:	8fbc0010 	lw	gp,16(sp)
+  40228c:	8f90819c 	lw	s0,-32356(gp)
+  402290:	8e040000 	lw	a0,0(s0)
+  402294:	8f998038 	lw	t9,-32712(gp)
+  402298:	0320f809 	jalr	t9
+  40229c:	00000000 	nop
+  4022a0:	8fbc0010 	lw	gp,16(sp)
+  4022a4:	1000ffd6 	b	402200 <main@@Base+0x58c>
+  4022a8:	ae000000 	sw	zero,0(s0)
+  4022ac:	27bdffe0 	addiu	sp,sp,-32
+  4022b0:	afbf001c 	sw	ra,28(sp)
+  4022b4:	3c1c0043 	lui	gp,0x43
+  4022b8:	279cf1a0 	addiu	gp,gp,-3680
+  4022bc:	afbc0010 	sw	gp,16(sp)
+  4022c0:	00803021 	move	a2,a0
+  4022c4:	3c040041 	lui	a0,0x41
+  4022c8:	248448d8 	addiu	a0,a0,18648
+  4022cc:	3c050041 	lui	a1,0x41
+[31m  4022d0:	8f99820c 	lw	t9,printf[0m
+  4022d4:	0320f809 	jalr	t9
+  4022d8:	24a54ae8 	addiu	a1,a1,19176
+--
+  413318:	8fb20088 	lw	s2,136(sp)
+  41331c:	8fb10084 	lw	s1,132(sp)
+  413320:	8fb00080 	lw	s0,128(sp)
+  413324:	03e00008 	jr	ra
+  413328:	27bd0090 	addiu	sp,sp,144
+  41332c:	27bdffd0 	addiu	sp,sp,-48
+  413330:	afbf002c 	sw	ra,44(sp)
+  413334:	afb30028 	sw	s3,40(sp)
+  413338:	afb20024 	sw	s2,36(sp)
+  41333c:	afb10020 	sw	s1,32(sp)
+  413340:	afb0001c 	sw	s0,28(sp)
+  413344:	3c1c0043 	lui	gp,0x43
+  413348:	279cf1a0 	addiu	gp,gp,-3680
+  41334c:	afbc0010 	sw	gp,16(sp)
+  413350:	00a09021 	move	s2,a1
+  413354:	8f9981c0 	lw	t9,-32320(gp)
+  413358:	0320f809 	jalr	t9
+  41335c:	00c08821 	move	s1,a2
+  413360:	8fbc0010 	lw	gp,16(sp)
+  413364:	1a20000d 	blez	s1,41339c <AESDecrypt@@Base+0x130>
+  413368:	00008021 	move	s0,zero
+  41336c:	3c130041 	lui	s3,0x41
+  413370:	26736978 	addiu	s3,s3,27000
+  413374:	02501021 	addu	v0,s2,s0
+  413378:	90450000 	lbu	a1,0(v0)
+[31m  41337c:	8f99820c 	lw	t9,printf[0m
+  413380:	0320f809 	jalr	t9
+  413384:	02602021 	move	a0,s3
+
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m used [0;33m3[0m times [0;33mhnap_push_service[0m
+

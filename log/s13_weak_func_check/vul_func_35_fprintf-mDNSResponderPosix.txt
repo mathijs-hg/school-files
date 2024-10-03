@@ -1,0 +1,886 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mmDNSResponderPosix[0m
+
+  4045d0:	8fa20098 	lw	v0,152(sp)
+  4045d4:	10430020 	beq	v0,v1,404658 <mDNSPlatformInterfaceIndexfromInterfaceID@@Base+0x3b4>
+  4045d8:	00000000 	nop
+  4045dc:	8e0315a8 	lw	v1,5544(s0)
+  4045e0:	00431026 	xor	v0,v0,v1
+  4045e4:	0002102b 	sltu	v0,zero,v0
+  4045e8:	1040001b 	beqz	v0,404658 <mDNSPlatformInterfaceIndexfromInterfaceID@@Base+0x3b4>
+  4045ec:	3c020047 	lui	v0,0x47
+  4045f0:	3c110047 	lui	s1,0x47
+  4045f4:	8c43f6cc 	lw	v1,-2356(v0)
+  4045f8:	3c100047 	lui	s0,0x47
+  4045fc:	8e26f6c8 	lw	a2,-2360(s1)
+  404600:	24630001 	addiu	v1,v1,1
+  404604:	24c20001 	addiu	v0,a2,1
+  404608:	00430018 	mult	v0,v1
+  40460c:	8e02f6c4 	lw	v0,-2364(s0)
+  404610:	24420001 	addiu	v0,v0,1
+  404614:	00001812 	mflo	v1
+  404618:	00031840 	sll	v1,v1,0x1
+  40461c:	0062182a 	slt	v1,v1,v0
+  404620:	1060001f 	beqz	v1,4046a0 <mDNSPlatformInterfaceIndexfromInterfaceID@@Base+0x3fc>
+  404624:	ae02f6c4 	sw	v0,-2364(s0)
+  404628:	8f838184 	lw	v1,-32380(gp)
+  40462c:	3c050045 	lui	a1,0x45
+  404630:	00c03821 	move	a3,a2
+[31m  404634:	8f998328 	lw	t9,fprintf[0m
+  404638:	24a5d28c 	addiu	a1,a1,-11636
+  40463c:	8c640000 	lw	a0,0(v1)
+--
+  405008:	afb30024 	sw	s3,36(sp)
+  40500c:	afb20020 	sw	s2,32(sp)
+  405010:	afb1001c 	sw	s1,28(sp)
+  405014:	afb00018 	sw	s0,24(sp)
+  405018:	3c1c0047 	lui	gp,0x47
+  40501c:	279c7100 	addiu	gp,gp,28928
+  405020:	afbc0010 	sw	gp,16(sp)
+  405024:	1480001d 	bnez	a0,40509c <mDNSPlatformStrLen@@Base+0x1ec>
+  405028:	00808021 	move	s0,a0
+  40502c:	8f9980b0 	lw	t9,-32592(gp)
+  405030:	3c040045 	lui	a0,0x45
+  405034:	3c050045 	lui	a1,0x45
+  405038:	3c070045 	lui	a3,0x45
+  40503c:	2484d260 	addiu	a0,a0,-11680
+  405040:	24a5d274 	addiu	a1,a1,-11660
+  405044:	24e7d858 	addiu	a3,a3,-10152
+  405048:	0320f809 	jalr	t9
+  40504c:	24060259 	li	a2,601
+  405050:	8fbc0010 	lw	gp,16(sp)
+  405054:	10000012 	b	4050a0 <mDNSPlatformStrLen@@Base+0x1f0>
+  405058:	3c120045 	lui	s2,0x45
+  40505c:	0320f809 	jalr	t9
+  405060:	00000000 	nop
+  405064:	8fbc0010 	lw	gp,16(sp)
+  405068:	8e82f6c0 	lw	v0,-2368(s4)
+[31m  40506c:	8f998328 	lw	t9,fprintf[0m
+  405070:	18400005 	blez	v0,405088 <mDNSPlatformStrLen@@Base+0x1d8>
+  405074:	02402821 	move	a1,s2
+--
+  405dd0:	00408821 	move	s1,v0
+  405dd4:	00008821 	move	s1,zero
+  405dd8:	24020001 	li	v0,1
+  405ddc:	a2021599 	sb	v0,5529(s0)
+  405de0:	16200019 	bnez	s1,405e48 <mDNSPlatformClose@@Base+0xd4c>
+  405de4:	a2001598 	sb	zero,5528(s0)
+  405de8:	8f998098 	lw	t9,-32616(gp)
+  405dec:	02402021 	move	a0,s2
+  405df0:	00003021 	move	a2,zero
+  405df4:	0320f809 	jalr	t9
+  405df8:	02002821 	move	a1,s0
+  405dfc:	8fbc0010 	lw	gp,16(sp)
+  405e00:	14400011 	bnez	v0,405e48 <mDNSPlatformClose@@Base+0xd4c>
+  405e04:	00408821 	move	s1,v0
+  405e08:	3c020047 	lui	v0,0x47
+  405e0c:	3c030047 	lui	v1,0x47
+  405e10:	8c44f6cc 	lw	a0,-2356(v0)
+  405e14:	8c63f6c0 	lw	v1,-2368(v1)
+  405e18:	24840001 	addiu	a0,a0,1
+  405e1c:	1860000e 	blez	v1,405e58 <mDNSPlatformClose@@Base+0xd5c>
+  405e20:	ac44f6cc 	sw	a0,-2356(v0)
+  405e24:	8f828184 	lw	v0,-32380(gp)
+  405e28:	3c050045 	lui	a1,0x45
+  405e2c:	8e0615a0 	lw	a2,5536(s0)
+  405e30:	8c440000 	lw	a0,0(v0)
+[31m  405e34:	8f998328 	lw	t9,fprintf[0m
+  405e38:	0320f809 	jalr	t9
+  405e3c:	24a5d658 	addiu	a1,a1,-10664
+--
+  4068b0:	8f9980fc 	lw	t9,-32516(gp)
+  4068b4:	0320f809 	jalr	t9
+  4068b8:	00000000 	nop
+  4068bc:	8c470000 	lw	a3,0(v0)
+  4068c0:	8fbc0010 	lw	gp,16(sp)
+  4068c4:	14e00009 	bnez	a3,4068ec <mDNSPlatformInit@@Base+0x37c>
+  4068c8:	00000000 	nop
+  4068cc:	8e240000 	lw	a0,0(s1)
+  4068d0:	3c050040 	lui	a1,0x40
+  4068d4:	02203021 	move	a2,s1
+  4068d8:	0c101063 	jal	40418c <mDNSPlatformMemAllocate@@Base+0x14>
+  4068dc:	24a562d0 	addiu	a1,a1,25296
+  4068e0:	8fbc0010 	lw	gp,16(sp)
+  4068e4:	1040001e 	beqz	v0,406960 <mDNSPlatformInit@@Base+0x3f0>
+  4068e8:	00403821 	move	a3,v0
+  4068ec:	8f828184 	lw	v0,-32380(gp)
+  4068f0:	8f9984bc 	lw	t9,-31556(gp)
+  4068f4:	8c440000 	lw	a0,0(v0)
+  4068f8:	afa70038 	sw	a3,56(sp)
+  4068fc:	0320f809 	jalr	t9
+  406900:	afa4003c 	sw	a0,60(sp)
+  406904:	3c050045 	lui	a1,0x45
+  406908:	8fbc0010 	lw	gp,16(sp)
+  40690c:	24a5d6d0 	addiu	a1,a1,-10544
+  406910:	8fa70038 	lw	a3,56(sp)
+[31m  406914:	8f998328 	lw	t9,fprintf[0m
+  406918:	8fa4003c 	lw	a0,60(sp)
+  40691c:	0320f809 	jalr	t9
+--
+  4245c4:	8fb20050 	lw	s2,80(sp)
+  4245c8:	8fb1004c 	lw	s1,76(sp)
+  4245cc:	8fb00048 	lw	s0,72(sp)
+  4245d0:	03e00008 	jr	ra
+  4245d4:	27bd0070 	addiu	sp,sp,112
+	...
+
+004245e0 <mDNSPlatformWriteLogMsg@@Base>:
+  4245e0:	27bdffd0 	addiu	sp,sp,-48
+  4245e4:	afbf002c 	sw	ra,44(sp)
+  4245e8:	afb30028 	sw	s3,40(sp)
+  4245ec:	afb20024 	sw	s2,36(sp)
+  4245f0:	afb10020 	sw	s1,32(sp)
+  4245f4:	afb0001c 	sw	s0,28(sp)
+  4245f8:	3c1c0047 	lui	gp,0x47
+  4245fc:	279c7100 	addiu	gp,gp,28928
+  424600:	afbc0010 	sw	gp,16(sp)
+  424604:	8f8283a4 	lw	v0,-31836(gp)
+  424608:	00809821 	move	s3,a0
+  42460c:	8c430000 	lw	v1,0(v0)
+  424610:	10600012 	beqz	v1,42465c <mDNSPlatformWriteLogMsg@@Base+0x7c>
+  424614:	00a08821 	move	s1,a1
+  424618:	8f908184 	lw	s0,-32380(gp)
+  42461c:	00a03021 	move	a2,a1
+  424620:	3c050046 	lui	a1,0x46
+[31m  424624:	8f998328 	lw	t9,fprintf[0m
+  424628:	8e040000 	lw	a0,0(s0)
+  42462c:	0320f809 	jalr	t9
+--
+  42464c:	8fb10020 	lw	s1,32(sp)
+  424650:	8fb0001c 	lw	s0,28(sp)
+  424654:	03200008 	jr	t9
+  424658:	27bd0030 	addiu	sp,sp,48
+  42465c:	2cc30005 	sltiu	v1,a2,5
+  424660:	10600012 	beqz	v1,4246ac <mDNSPlatformWriteLogMsg@@Base+0xcc>
+  424664:	3c050045 	lui	a1,0x45
+  424668:	3c030045 	lui	v1,0x45
+  42466c:	00061080 	sll	v0,a2,0x2
+  424670:	24635000 	addiu	v1,v1,20480
+  424674:	00621021 	addu	v0,v1,v0
+  424678:	8c420000 	lw	v0,0(v0)
+  42467c:	00400008 	jr	v0
+  424680:	00000000 	nop
+  424684:	10000015 	b	4246dc <mDNSPlatformWriteLogMsg@@Base+0xfc>
+  424688:	24100004 	li	s0,4
+  42468c:	10000013 	b	4246dc <mDNSPlatformWriteLogMsg@@Base+0xfc>
+  424690:	24100003 	li	s0,3
+  424694:	10000011 	b	4246dc <mDNSPlatformWriteLogMsg@@Base+0xfc>
+  424698:	24100005 	li	s0,5
+  42469c:	1000000f 	b	4246dc <mDNSPlatformWriteLogMsg@@Base+0xfc>
+  4246a0:	24100006 	li	s0,6
+  4246a4:	1000000d 	b	4246dc <mDNSPlatformWriteLogMsg@@Base+0xfc>
+  4246a8:	24100007 	li	s0,7
+  4246ac:	8f928184 	lw	s2,-32380(gp)
+[31m  4246b0:	8f998328 	lw	t9,fprintf[0m
+  4246b4:	24a54e64 	addiu	a1,a1,20068
+  4246b8:	8e440000 	lw	a0,0(s2)
+--
+  44b5b4:	3c040046 	lui	a0,0x46
+  44b5b8:	8f9980b0 	lw	t9,-32592(gp)
+  44b5bc:	3c050046 	lui	a1,0x46
+  44b5c0:	3c070046 	lui	a3,0x46
+  44b5c4:	2484e37c 	addiu	a0,a0,-7300
+  44b5c8:	24a5e370 	addiu	a1,a1,-7312
+  44b5cc:	24e7ed74 	addiu	a3,a3,-4748
+  44b5d0:	0320f809 	jalr	t9
+  44b5d4:	2406005c 	li	a2,92
+  44b5d8:	8fbf001c 	lw	ra,28(sp)
+  44b5dc:	24030001 	li	v1,1
+  44b5e0:	3c020048 	lui	v0,0x48
+  44b5e4:	a0439961 	sb	v1,-26271(v0)
+  44b5e8:	03e00008 	jr	ra
+  44b5ec:	27bd0020 	addiu	sp,sp,32
+  44b5f0:	27bdffe0 	addiu	sp,sp,-32
+  44b5f4:	afbf001c 	sw	ra,28(sp)
+  44b5f8:	afb00018 	sw	s0,24(sp)
+  44b5fc:	3c1c0047 	lui	gp,0x47
+  44b600:	279c7100 	addiu	gp,gp,28928
+  44b604:	afbc0010 	sw	gp,16(sp)
+  44b608:	3c020047 	lui	v0,0x47
+  44b60c:	8f908184 	lw	s0,-32380(gp)
+  44b610:	3c050046 	lui	a1,0x46
+  44b614:	8c46f0e0 	lw	a2,-3872(v0)
+[31m  44b618:	8f998328 	lw	t9,fprintf[0m
+  44b61c:	8e040000 	lw	a0,0(s0)
+  44b620:	0320f809 	jalr	t9
+--
+  44b680:	0320f809 	jalr	t9
+  44b684:	2484e4a8 	addiu	a0,a0,-7000
+  44b688:	3c040046 	lui	a0,0x46
+  44b68c:	8fbc0010 	lw	gp,16(sp)
+  44b690:	8e050000 	lw	a1,0(s0)
+  44b694:	8f9980a0 	lw	t9,-32608(gp)
+  44b698:	0320f809 	jalr	t9
+  44b69c:	2484e4d4 	addiu	a0,a0,-6956
+  44b6a0:	3c040046 	lui	a0,0x46
+  44b6a4:	8fbc0010 	lw	gp,16(sp)
+  44b6a8:	8e050000 	lw	a1,0(s0)
+  44b6ac:	8f9980a0 	lw	t9,-32608(gp)
+  44b6b0:	0320f809 	jalr	t9
+  44b6b4:	2484e4fc 	addiu	a0,a0,-6916
+  44b6b8:	3c040046 	lui	a0,0x46
+  44b6bc:	8fbc0010 	lw	gp,16(sp)
+  44b6c0:	8e050000 	lw	a1,0(s0)
+  44b6c4:	8f9980a0 	lw	t9,-32608(gp)
+  44b6c8:	0320f809 	jalr	t9
+  44b6cc:	2484e53c 	addiu	a0,a0,-6852
+  44b6d0:	3c050046 	lui	a1,0x46
+  44b6d4:	8fbc0010 	lw	gp,16(sp)
+  44b6d8:	3c060046 	lui	a2,0x46
+  44b6dc:	8e040000 	lw	a0,0(s0)
+  44b6e0:	24a5e578 	addiu	a1,a1,-6792
+[31m  44b6e4:	8f998328 	lw	t9,fprintf[0m
+  44b6e8:	0320f809 	jalr	t9
+  44b6ec:	24c6ecf8 	addiu	a2,a2,-4872
+  44b6f0:	3c050046 	lui	a1,0x46
+  44b6f4:	8fbc0010 	lw	gp,16(sp)
+  44b6f8:	3c060046 	lui	a2,0x46
+  44b6fc:	8e040000 	lw	a0,0(s0)
+  44b700:	24a5e5b8 	addiu	a1,a1,-6728
+[31m  44b704:	8f998328 	lw	t9,fprintf[0m
+  44b708:	0320f809 	jalr	t9
+  44b70c:	24c6ed0c 	addiu	a2,a2,-4852
+  44b710:	3c050046 	lui	a1,0x46
+  44b714:	8fbc0010 	lw	gp,16(sp)
+  44b718:	24060224 	li	a2,548
+  44b71c:	8e040000 	lw	a0,0(s0)
+[31m  44b720:	8f998328 	lw	t9,fprintf[0m
+  44b724:	0320f809 	jalr	t9
+  44b728:	24a5e5fc 	addiu	a1,a1,-6660
+  44b72c:	3c040046 	lui	a0,0x46
+  44b730:	8fbc0010 	lw	gp,16(sp)
+  44b734:	8e050000 	lw	a1,0(s0)
+  44b738:	8f9980a0 	lw	t9,-32608(gp)
+  44b73c:	0320f809 	jalr	t9
+  44b740:	2484e63c 	addiu	a0,a0,-6596
+  44b744:	3c040046 	lui	a0,0x46
+  44b748:	8fbc0010 	lw	gp,16(sp)
+  44b74c:	8e050000 	lw	a1,0(s0)
+  44b750:	8f9980a0 	lw	t9,-32608(gp)
+  44b754:	0320f809 	jalr	t9
+  44b758:	2484e66c 	addiu	a0,a0,-6548
+  44b75c:	3c040046 	lui	a0,0x46
+  44b760:	8fbc0010 	lw	gp,16(sp)
+  44b764:	8e050000 	lw	a1,0(s0)
+  44b768:	8f9980a0 	lw	t9,-32608(gp)
+  44b76c:	0320f809 	jalr	t9
+  44b770:	2484e69c 	addiu	a0,a0,-6500
+  44b774:	3c060046 	lui	a2,0x46
+  44b778:	8fbc0010 	lw	gp,16(sp)
+  44b77c:	3c050046 	lui	a1,0x46
+  44b780:	8e040000 	lw	a0,0(s0)
+  44b784:	24c6ecdc 	addiu	a2,a2,-4900
+[31m  44b788:	8f998328 	lw	t9,fprintf[0m
+  44b78c:	0320f809 	jalr	t9
+  44b790:	24a5e6cc 	addiu	a1,a1,-6452
+--
+  44ba50:	afa00024 	sw	zero,36(sp)
+  44ba54:	afa00028 	sw	zero,40(sp)
+  44ba58:	afb00034 	sw	s0,52(sp)
+  44ba5c:	0320f809 	jalr	t9
+  44ba60:	afa00038 	sw	zero,56(sp)
+  44ba64:	8fbc0040 	lw	gp,64(sp)
+  44ba68:	1440001b 	bnez	v0,44bad8 <mDNSCoreReceive@@Base+0x1e80>
+  44ba6c:	00408821 	move	s1,v0
+  44ba70:	3c030047 	lui	v1,0x47
+  44ba74:	3c020047 	lui	v0,0x47
+  44ba78:	8f8480f0 	lw	a0,-32528(gp)
+  44ba7c:	8c67f834 	lw	a3,-1996(v1)
+  44ba80:	8c840000 	lw	a0,0(a0)
+  44ba84:	8c45f838 	lw	a1,-1992(v0)
+  44ba88:	24e60001 	addiu	a2,a3,1
+  44ba8c:	ac66f834 	sw	a2,-1996(v1)
+  44ba90:	ac50f838 	sw	s0,-1992(v0)
+  44ba94:	ae050e30 	sw	a1,3632(s0)
+  44ba98:	18800012 	blez	a0,44bae4 <mDNSCoreReceive@@Base+0x1e8c>
+  44ba9c:	ae070e34 	sw	a3,3636(s0)
+  44baa0:	3c020047 	lui	v0,0x47
+  44baa4:	3c050046 	lui	a1,0x46
+  44baa8:	8c46f0e0 	lw	a2,-3872(v0)
+  44baac:	24a5e850 	addiu	a1,a1,-6064
+  44bab0:	8f828184 	lw	v0,-32380(gp)
+[31m  44bab4:	8f998328 	lw	t9,fprintf[0m
+  44bab8:	8c440000 	lw	a0,0(v0)
+  44babc:	afb50010 	sw	s5,16(sp)
+--
+  44bd74:	afb5002c 	sw	s5,44(sp)
+  44bd78:	afb40028 	sw	s4,40(sp)
+  44bd7c:	afb30024 	sw	s3,36(sp)
+  44bd80:	afb20020 	sw	s2,32(sp)
+  44bd84:	afb1001c 	sw	s1,28(sp)
+  44bd88:	afb00018 	sw	s0,24(sp)
+  44bd8c:	3c1c0047 	lui	gp,0x47
+  44bd90:	279c7100 	addiu	gp,gp,28928
+  44bd94:	afbc0010 	sw	gp,16(sp)
+  44bd98:	3c150047 	lui	s5,0x47
+  44bd9c:	3c140046 	lui	s4,0x46
+  44bda0:	26b5f83c 	addiu	s5,s5,-1988
+  44bda4:	2694e8e0 	addiu	s4,s4,-5920
+  44bda8:	3c100047 	lui	s0,0x47
+  44bdac:	8f9280f0 	lw	s2,-32528(gp)
+  44bdb0:	8f918184 	lw	s1,-32380(gp)
+  44bdb4:	1000000f 	b	44bdf4 <mDNSCoreReceive@@Base+0x219c>
+  44bdb8:	3c130047 	lui	s3,0x47
+  44bdbc:	8ec20e30 	lw	v0,3632(s6)
+  44bdc0:	0320f809 	jalr	t9
+  44bdc4:	ae02f838 	sw	v0,-1992(s0)
+  44bdc8:	8e420000 	lw	v0,0(s2)
+  44bdcc:	8fbc0010 	lw	gp,16(sp)
+  44bdd0:	18400008 	blez	v0,44bdf4 <mDNSCoreReceive@@Base+0x219c>
+  44bdd4:	00000000 	nop
+[31m  44bdd8:	8f998328 	lw	t9,fprintf[0m
+  44bddc:	8ec70e34 	lw	a3,3636(s6)
+  44bde0:	8e240000 	lw	a0,0(s1)
+--
+  44be10:	8fb60030 	lw	s6,48(sp)
+  44be14:	8fb5002c 	lw	s5,44(sp)
+  44be18:	8fb40028 	lw	s4,40(sp)
+  44be1c:	8fb30024 	lw	s3,36(sp)
+  44be20:	8fb20020 	lw	s2,32(sp)
+  44be24:	8fb1001c 	lw	s1,28(sp)
+  44be28:	8fb00018 	lw	s0,24(sp)
+  44be2c:	03e00008 	jr	ra
+  44be30:	27bd0038 	addiu	sp,sp,56
+  44be34:	27bdffe0 	addiu	sp,sp,-32
+  44be38:	afbf001c 	sw	ra,28(sp)
+  44be3c:	afb00018 	sw	s0,24(sp)
+  44be40:	3c1c0047 	lui	gp,0x47
+  44be44:	279c7100 	addiu	gp,gp,28928
+  44be48:	afbc0010 	sw	gp,16(sp)
+  44be4c:	8f9980bc 	lw	t9,strlen
+  44be50:	0320f809 	jalr	t9
+  44be54:	00808021 	move	s0,a0
+  44be58:	2c420040 	sltiu	v0,v0,64
+  44be5c:	8fbc0010 	lw	gp,16(sp)
+  44be60:	1440000a 	bnez	v0,44be8c <mDNSCoreReceive@@Base+0x2234>
+  44be64:	3c020047 	lui	v0,0x47
+  44be68:	3c050046 	lui	a1,0x46
+  44be6c:	8c46f0e0 	lw	a2,-3872(v0)
+  44be70:	8f828184 	lw	v0,-32380(gp)
+[31m  44be74:	8f998328 	lw	t9,fprintf[0m
+  44be78:	8c440000 	lw	a0,0(v0)
+  44be7c:	0320f809 	jalr	t9
+  44be80:	24a5e900 	addiu	a1,a1,-5888
+  44be84:	1000000d 	b	44bebc <mDNSCoreReceive@@Base+0x2264>
+  44be88:	00001021 	move	v0,zero
+  44be8c:	82030000 	lb	v1,0(s0)
+  44be90:	1460000a 	bnez	v1,44bebc <mDNSCoreReceive@@Base+0x2264>
+  44be94:	24020001 	li	v0,1
+  44be98:	3c020047 	lui	v0,0x47
+  44be9c:	3c050046 	lui	a1,0x46
+  44bea0:	8c46f0e0 	lw	a2,-3872(v0)
+  44bea4:	8f828184 	lw	v0,-32380(gp)
+[31m  44bea8:	8f998328 	lw	t9,fprintf[0m
+  44beac:	8c440000 	lw	a0,0(v0)
+  44beb0:	0320f809 	jalr	t9
+  44beb4:	24a5e940 	addiu	a1,a1,-5824
+  44beb8:	00001021 	move	v0,zero
+  44bebc:	8fbf001c 	lw	ra,28(sp)
+  44bec0:	8fb00018 	lw	s0,24(sp)
+  44bec4:	03e00008 	jr	ra
+  44bec8:	27bd0020 	addiu	sp,sp,32
+  44becc:	27bdffe0 	addiu	sp,sp,-32
+  44bed0:	afbf001c 	sw	ra,28(sp)
+  44bed4:	afb00018 	sw	s0,24(sp)
+  44bed8:	3c1c0047 	lui	gp,0x47
+  44bedc:	279c7100 	addiu	gp,gp,28928
+  44bee0:	afbc0010 	sw	gp,16(sp)
+  44bee4:	8f9980bc 	lw	t9,strlen
+  44bee8:	0320f809 	jalr	t9
+  44beec:	00808021 	move	s0,a0
+  44bef0:	2c420040 	sltiu	v0,v0,64
+  44bef4:	8fbc0010 	lw	gp,16(sp)
+  44bef8:	1440000a 	bnez	v0,44bf24 <mDNSCoreReceive@@Base+0x22cc>
+  44befc:	3c020047 	lui	v0,0x47
+  44bf00:	3c050046 	lui	a1,0x46
+  44bf04:	8c46f0e0 	lw	a2,-3872(v0)
+  44bf08:	8f828184 	lw	v0,-32380(gp)
+[31m  44bf0c:	8f998328 	lw	t9,fprintf[0m
+  44bf10:	8c440000 	lw	a0,0(v0)
+  44bf14:	0320f809 	jalr	t9
+  44bf18:	24a5e964 	addiu	a1,a1,-5788
+  44bf1c:	1000000d 	b	44bf54 <mDNSCoreReceive@@Base+0x22fc>
+  44bf20:	00001021 	move	v0,zero
+  44bf24:	82030000 	lb	v1,0(s0)
+  44bf28:	1460000a 	bnez	v1,44bf54 <mDNSCoreReceive@@Base+0x22fc>
+  44bf2c:	24020001 	li	v0,1
+  44bf30:	3c020047 	lui	v0,0x47
+  44bf34:	3c050046 	lui	a1,0x46
+  44bf38:	8c46f0e0 	lw	a2,-3872(v0)
+  44bf3c:	8f828184 	lw	v0,-32380(gp)
+[31m  44bf40:	8f998328 	lw	t9,fprintf[0m
+  44bf44:	8c440000 	lw	a0,0(v0)
+  44bf48:	0320f809 	jalr	t9
+--
+  44bf80:	afb3084c 	sw	s3,2124(sp)
+  44bf84:	afb20848 	sw	s2,2120(sp)
+  44bf88:	afb10844 	sw	s1,2116(sp)
+  44bf8c:	afb00840 	sw	s0,2112(sp)
+  44bf90:	3c1c0047 	lui	gp,0x47
+  44bf94:	279c7100 	addiu	gp,gp,28928
+  44bf98:	afbc0020 	sw	gp,32(sp)
+  44bf9c:	3c050046 	lui	a1,0x46
+  44bfa0:	8f99821c 	lw	t9,-32228(gp)
+  44bfa4:	24a5d2f8 	addiu	a1,a1,-11528
+  44bfa8:	0320f809 	jalr	t9
+  44bfac:	0080b021 	move	s6,a0
+  44bfb0:	8fbc0020 	lw	gp,32(sp)
+  44bfb4:	14400004 	bnez	v0,44bfc8 <mDNSCoreReceive@@Base+0x2370>
+  44bfb8:	00408021 	move	s0,v0
+  44bfbc:	3c15fffe 	lui	s5,0xfffe
+  44bfc0:	1000011b 	b	44c430 <mDNSCoreReceive@@Base+0x27d8>
+  44bfc4:	36b5ffff 	ori	s5,s5,0xffff
+  44bfc8:	8f8280f0 	lw	v0,-32528(gp)
+  44bfcc:	8c420000 	lw	v0,0(v0)
+  44bfd0:	28420002 	slti	v0,v0,2
+  44bfd4:	14400007 	bnez	v0,44bff4 <mDNSCoreReceive@@Base+0x239c>
+  44bfd8:	3c050046 	lui	a1,0x46
+  44bfdc:	8f828184 	lw	v0,-32380(gp)
+  44bfe0:	02c03021 	move	a2,s6
+[31m  44bfe4:	8f998328 	lw	t9,fprintf[0m
+  44bfe8:	8c440000 	lw	a0,0(v0)
+  44bfec:	0320f809 	jalr	t9
+--
+  44c000:	27b40028 	addiu	s4,sp,40
+  44c004:	27b30430 	addiu	s3,sp,1072
+  44c008:	3c170047 	lui	s7,0x47
+  44c00c:	02802021 	move	a0,s4
+  44c010:	24050100 	li	a1,256
+  44c014:	24070001 	li	a3,1
+  44c018:	0c112f11 	jal	44bc44 <mDNSCoreReceive@@Base+0x1fec>
+  44c01c:	02003021 	move	a2,s0
+  44c020:	8fbc0020 	lw	gp,32(sp)
+  44c024:	104000e2 	beqz	v0,44c3b0 <mDNSCoreReceive@@Base+0x2758>
+  44c028:	2402005c 	li	v0,92
+  44c02c:	83a30028 	lb	v1,40(sp)
+  44c030:	14620005 	bne	v1,v0,44c048 <mDNSCoreReceive@@Base+0x23f0>
+  44c034:	02808821 	move	s1,s4
+  44c038:	83a20029 	lb	v0,41(sp)
+  44c03c:	27b10029 	addiu	s1,sp,41
+  44c040:	38420023 	xori	v0,v0,0x23
+  44c044:	0282880b 	0x282880b
+  44c048:	8f8280f0 	lw	v0,-32528(gp)
+  44c04c:	8c420000 	lw	v0,0(v0)
+  44c050:	28420002 	slti	v0,v0,2
+  44c054:	14400007 	bnez	v0,44c074 <mDNSCoreReceive@@Base+0x241c>
+  44c058:	3c050046 	lui	a1,0x46
+  44c05c:	8f828184 	lw	v0,-32380(gp)
+  44c060:	02203021 	move	a2,s1
+[31m  44c064:	8f998328 	lw	t9,fprintf[0m
+  44c068:	8c440000 	lw	a0,0(v0)
+  44c06c:	0320f809 	jalr	t9
+--
+  44c0a4:	00000000 	nop
+  44c0a8:	104400ee 	beq	v0,a0,44c464 <mDNSCoreReceive@@Base+0x280c>
+  44c0ac:	00000000 	nop
+  44c0b0:	1443fffa 	bne	v0,v1,44c09c <mDNSCoreReceive@@Base+0x2444>
+  44c0b4:	26520001 	addiu	s2,s2,1
+  44c0b8:	2652ffff 	addiu	s2,s2,-1
+  44c0bc:	100000ea 	b	44c468 <mDNSCoreReceive@@Base+0x2810>
+  44c0c0:	a2400000 	sb	zero,0(s2)
+  44c0c4:	26520001 	addiu	s2,s2,1
+  44c0c8:	82420000 	lb	v0,0(s2)
+  44c0cc:	14400003 	bnez	v0,44c0dc <mDNSCoreReceive@@Base+0x2484>
+  44c0d0:	00000000 	nop
+  44c0d4:	10000006 	b	44c0f0 <mDNSCoreReceive@@Base+0x2498>
+  44c0d8:	03c09021 	move	s2,s8
+  44c0dc:	1044fff9 	beq	v0,a0,44c0c4 <mDNSCoreReceive@@Base+0x246c>
+  44c0e0:	00000000 	nop
+  44c0e4:	1043fff8 	beq	v0,v1,44c0c8 <mDNSCoreReceive@@Base+0x2470>
+  44c0e8:	26520001 	addiu	s2,s2,1
+  44c0ec:	2652ffff 	addiu	s2,s2,-1
+  44c0f0:	8f8280f0 	lw	v0,-32528(gp)
+  44c0f4:	8c420000 	lw	v0,0(v0)
+  44c0f8:	28420002 	slti	v0,v0,2
+  44c0fc:	14400010 	bnez	v0,44c140 <mDNSCoreReceive@@Base+0x24e8>
+  44c100:	3c050046 	lui	a1,0x46
+  44c104:	8f838184 	lw	v1,-32380(gp)
+[31m  44c108:	8f998328 	lw	t9,fprintf[0m
+  44c10c:	24a5e9f8 	addiu	a1,a1,-5640
+  44c110:	8c640000 	lw	a0,0(v1)
+  44c114:	27a60128 	addiu	a2,sp,296
+  44c118:	0320f809 	jalr	t9
+  44c11c:	afa3083c 	sw	v1,2108(sp)
+  44c120:	3c050046 	lui	a1,0x46
+  44c124:	02403021 	move	a2,s2
+  44c128:	8fbc0020 	lw	gp,32(sp)
+  44c12c:	8fa3083c 	lw	v1,2108(sp)
+[31m  44c130:	8f998328 	lw	t9,fprintf[0m
+  44c134:	8c640000 	lw	a0,0(v1)
+  44c138:	0320f809 	jalr	t9
+  44c13c:	24a5ea0c 	addiu	a1,a1,-5620
+  44c140:	27a30228 	addiu	v1,sp,552
+  44c144:	24050100 	li	a1,256
+  44c148:	02003021 	move	a2,s0
+  44c14c:	00602021 	move	a0,v1
+  44c150:	00003821 	move	a3,zero
+  44c154:	0c112f11 	jal	44bc44 <mDNSCoreReceive@@Base+0x1fec>
+  44c158:	afa3083c 	sw	v1,2108(sp)
+  44c15c:	8fbc0020 	lw	gp,32(sp)
+  44c160:	8fa3083c 	lw	v1,2108(sp)
+  44c164:	10400092 	beqz	v0,44c3b0 <mDNSCoreReceive@@Base+0x2758>
+  44c168:	00000000 	nop
+  44c16c:	8f8280f0 	lw	v0,-32528(gp)
+  44c170:	8c420000 	lw	v0,0(v0)
+  44c174:	28420002 	slti	v0,v0,2
+  44c178:	14400007 	bnez	v0,44c198 <mDNSCoreReceive@@Base+0x2540>
+  44c17c:	3c050046 	lui	a1,0x46
+  44c180:	8f828184 	lw	v0,-32380(gp)
+  44c184:	00603021 	move	a2,v1
+[31m  44c188:	8f998328 	lw	t9,fprintf[0m
+  44c18c:	8c440000 	lw	a0,0(v0)
+  44c190:	0320f809 	jalr	t9
+--
+  44c1ac:	00402021 	move	a0,v0
+  44c1b0:	0c112f8d 	jal	44be34 <mDNSCoreReceive@@Base+0x21dc>
+  44c1b4:	afa20830 	sw	v0,2096(sp)
+  44c1b8:	8fbc0020 	lw	gp,32(sp)
+  44c1bc:	1040007c 	beqz	v0,44c3b0 <mDNSCoreReceive@@Base+0x2758>
+  44c1c0:	27a30228 	addiu	v1,sp,552
+  44c1c4:	8f9984f4 	lw	t9,-31500(gp)
+  44c1c8:	00602021 	move	a0,v1
+  44c1cc:	0320f809 	jalr	t9
+  44c1d0:	afa3083c 	sw	v1,2108(sp)
+  44c1d4:	3404ffff 	li	a0,0xffff
+  44c1d8:	2442ffff 	addiu	v0,v0,-1
+  44c1dc:	0044102b 	sltu	v0,v0,a0
+  44c1e0:	8fbc0020 	lw	gp,32(sp)
+  44c1e4:	8fa3083c 	lw	v1,2108(sp)
+  44c1e8:	10400005 	beqz	v0,44c200 <mDNSCoreReceive@@Base+0x25a8>
+  44c1ec:	27a60328 	addiu	a2,sp,808
+  44c1f0:	0000a821 	move	s5,zero
+  44c1f4:	afa60838 	sw	a2,2104(sp)
+  44c1f8:	1000000c 	b	44c22c <mDNSCoreReceive@@Base+0x25d4>
+  44c1fc:	afa30834 	sw	v1,2100(sp)
+  44c200:	3c020047 	lui	v0,0x47
+  44c204:	3c050046 	lui	a1,0x46
+  44c208:	8c46f0e0 	lw	a2,-3872(v0)
+  44c20c:	8f828184 	lw	v0,-32380(gp)
+[31m  44c210:	8f998328 	lw	t9,fprintf[0m
+  44c214:	8c440000 	lw	a0,0(v0)
+  44c218:	0320f809 	jalr	t9
+  44c21c:	24a5ea38 	addiu	a1,a1,-5576
+  44c220:	8fbc0020 	lw	gp,32(sp)
+  44c224:	10000062 	b	44c3b0 <mDNSCoreReceive@@Base+0x2758>
+  44c228:	00000000 	nop
+  44c22c:	02003021 	move	a2,s0
+  44c230:	24050400 	li	a1,1024
+  44c234:	00003821 	move	a3,zero
+  44c238:	0c112f11 	jal	44bc44 <mDNSCoreReceive@@Base+0x1fec>
+  44c23c:	02602021 	move	a0,s3
+  44c240:	3c050046 	lui	a1,0x46
+  44c244:	02603021 	move	a2,s3
+  44c248:	8fbc0020 	lw	gp,32(sp)
+[31m  44c24c:	8f998328 	lw	t9,fprintf[0m
+  44c250:	10400031 	beqz	v0,44c318 <mDNSCoreReceive@@Base+0x26c0>
+  44c254:	24a5ea74 	addiu	a1,a1,-5516
+--
+  44c29c:	02953821 	addu	a3,s4,s5
+  44c2a0:	8fbc0020 	lw	gp,32(sp)
+  44c2a4:	00c32021 	addu	a0,a2,v1
+  44c2a8:	00621821 	addu	v1,v1,v0
+  44c2ac:	00403021 	move	a2,v0
+  44c2b0:	8f998250 	lw	t9,-32176(gp)
+  44c2b4:	1120000a 	beqz	t1,44c2e0 <mDNSCoreReceive@@Base+0x2688>
+  44c2b8:	2c680108 	sltiu	t0,v1,264
+  44c2bc:	10400016 	beqz	v0,44c318 <mDNSCoreReceive@@Base+0x26c0>
+  44c2c0:	00000000 	nop
+  44c2c4:	11000014 	beqz	t0,44c318 <mDNSCoreReceive@@Base+0x26c0>
+  44c2c8:	00000000 	nop
+  44c2cc:	a0e20300 	sb	v0,768(a3)
+  44c2d0:	0320f809 	jalr	t9
+  44c2d4:	0060a821 	move	s5,v1
+  44c2d8:	1000000d 	b	44c310 <mDNSCoreReceive@@Base+0x26b8>
+  44c2dc:	00000000 	nop
+  44c2e0:	8f828184 	lw	v0,-32380(gp)
+  44c2e4:	3c050046 	lui	a1,0x46
+  44c2e8:	02203821 	move	a3,s1
+  44c2ec:	8fa30830 	lw	v1,2096(sp)
+  44c2f0:	24a5ea88 	addiu	a1,a1,-5496
+  44c2f4:	8c440000 	lw	a0,0(v0)
+  44c2f8:	8fa20834 	lw	v0,2100(sp)
+  44c2fc:	8ee6f0e0 	lw	a2,-3872(s7)
+[31m  44c300:	8f998328 	lw	t9,fprintf[0m
+  44c304:	afa30010 	sw	v1,16(sp)
+  44c308:	0320f809 	jalr	t9
+  44c30c:	afa20014 	sw	v0,20(sp)
+  44c310:	1000ffc7 	b	44c230 <mDNSCoreReceive@@Base+0x25d8>
+  44c314:	02003021 	move	a2,s0
+  44c318:	27a30228 	addiu	v1,sp,552
+  44c31c:	27a60128 	addiu	a2,sp,296
+  44c320:	32b5ffff 	andi	s5,s5,0xffff
+  44c324:	8f9984f4 	lw	t9,-31500(gp)
+  44c328:	00602021 	move	a0,v1
+  44c32c:	afa3083c 	sw	v1,2108(sp)
+  44c330:	0320f809 	jalr	t9
+  44c334:	afa60830 	sw	a2,2096(sp)
+  44c338:	27a70328 	addiu	a3,sp,808
+  44c33c:	02202021 	move	a0,s1
+  44c340:	8fa50830 	lw	a1,2096(sp)
+  44c344:	02403021 	move	a2,s2
+  44c348:	afb50010 	sw	s5,16(sp)
+  44c34c:	0c112e4f 	jal	44b93c <mDNSCoreReceive@@Base+0x1ce4>
+  44c350:	afa20014 	sw	v0,20(sp)
+  44c354:	8fbc0020 	lw	gp,32(sp)
+  44c358:	8fa3083c 	lw	v1,2108(sp)
+  44c35c:	1040000e 	beqz	v0,44c398 <mDNSCoreReceive@@Base+0x2740>
+  44c360:	0040a821 	move	s5,v0
+  44c364:	8f828184 	lw	v0,-32380(gp)
+  44c368:	3c050046 	lui	a1,0x46
+  44c36c:	02203821 	move	a3,s1
+[31m  44c370:	8f998328 	lw	t9,fprintf[0m
+  44c374:	24a5eac8 	addiu	a1,a1,-5432
+  44c378:	8c440000 	lw	a0,0(v0)
+  44c37c:	8fa20830 	lw	v0,2096(sp)
+  44c380:	8ee6f0e0 	lw	a2,-3872(s7)
+  44c384:	afa20010 	sw	v0,16(sp)
+  44c388:	afb20014 	sw	s2,20(sp)
+  44c38c:	0320f809 	jalr	t9
+  44c390:	afa30018 	sw	v1,24(sp)
+  44c394:	8fbc0020 	lw	gp,32(sp)
+  44c398:	8f99844c 	lw	t9,-31668(gp)
+  44c39c:	0320f809 	jalr	t9
+  44c3a0:	02002021 	move	a0,s0
+  44c3a4:	8fbc0020 	lw	gp,32(sp)
+  44c3a8:	1040ff19 	beqz	v0,44c010 <mDNSCoreReceive@@Base+0x23b8>
+  44c3ac:	02802021 	move	a0,s4
+  44c3b0:	8f99844c 	lw	t9,-31668(gp)
+  44c3b4:	0320f809 	jalr	t9
+  44c3b8:	02002021 	move	a0,s0
+  44c3bc:	8fbc0020 	lw	gp,32(sp)
+  44c3c0:	1440000c 	bnez	v0,44c3f4 <mDNSCoreReceive@@Base+0x279c>
+  44c3c4:	3c020047 	lui	v0,0x47
+  44c3c8:	3c050046 	lui	a1,0x46
+  44c3cc:	02c03821 	move	a3,s6
+  44c3d0:	8c46f0e0 	lw	a2,-3872(v0)
+  44c3d4:	24a5eb14 	addiu	a1,a1,-5356
+  44c3d8:	8f828184 	lw	v0,-32380(gp)
+  44c3dc:	3c15fffe 	lui	s5,0xfffe
+[31m  44c3e0:	8f998328 	lw	t9,fprintf[0m
+  44c3e4:	8c440000 	lw	a0,0(v0)
+  44c3e8:	0320f809 	jalr	t9
+--
+  44c6b8:	8e020000 	lw	v0,0(s0)
+  44c6bc:	00402021 	move	a0,v0
+  44c6c0:	0c112f8d 	jal	44be34 <mDNSCoreReceive@@Base+0x21dc>
+  44c6c4:	aee2f0f0 	sw	v0,-3856(s7)
+  44c6c8:	1000fff5 	b	44c6a0 <main@@Base+0x1a8>
+  44c6cc:	00000000 	nop
+  44c6d0:	8e020000 	lw	v0,0(s0)
+  44c6d4:	3c040047 	lui	a0,0x47
+  44c6d8:	1000ffab 	b	44c588 <main@@Base+0x90>
+  44c6dc:	ac82f0f4 	sw	v0,-3852(a0)
+  44c6e0:	8f9984f4 	lw	t9,-31500(gp)
+  44c6e4:	8e040000 	lw	a0,0(s0)
+  44c6e8:	0320f809 	jalr	t9
+  44c6ec:	00000000 	nop
+  44c6f0:	2443ffff 	addiu	v1,v0,-1
+  44c6f4:	0073182b 	sltu	v1,v1,s3
+  44c6f8:	8fbc0020 	lw	gp,32(sp)
+  44c6fc:	1460ffa2 	bnez	v1,44c588 <main@@Base+0x90>
+  44c700:	ae82f0d4 	sw	v0,-3884(s4)
+  44c704:	3c020047 	lui	v0,0x47
+  44c708:	3c050046 	lui	a1,0x46
+  44c70c:	8c46f0e0 	lw	a2,-3872(v0)
+  44c710:	24a5ea38 	addiu	a1,a1,-5576
+  44c714:	8f828184 	lw	v0,-32380(gp)
+  44c718:	8c440000 	lw	a0,0(v0)
+[31m  44c71c:	8f998328 	lw	t9,fprintf[0m
+  44c720:	0320f809 	jalr	t9
+  44c724:	00000000 	nop
+--
+  44c7e8:	10000008 	b	44c80c <main@@Base+0x314>
+  44c7ec:	00000000 	nop
+  44c7f0:	8e020000 	lw	v0,0(s0)
+  44c7f4:	1000ff64 	b	44c588 <main@@Base+0x90>
+  44c7f8:	ac82f0e8 	sw	v0,-3864(a0)
+  44c7fc:	0c112d7c 	jal	44b5f0 <mDNSCoreReceive@@Base+0x1998>
+  44c800:	00000000 	nop
+  44c804:	1000ffc8 	b	44c728 <main@@Base+0x230>
+  44c808:	00000000 	nop
+  44c80c:	8f9082ec 	lw	s0,-32020(gp)
+  44c810:	8e020000 	lw	v0,0(s0)
+  44c814:	10520012 	beq	v0,s2,44c860 <main@@Base+0x368>
+  44c818:	00000000 	nop
+  44c81c:	0c112d7c 	jal	44b5f0 <mDNSCoreReceive@@Base+0x1998>
+  44c820:	00000000 	nop
+  44c824:	3c030047 	lui	v1,0x47
+  44c828:	8e020000 	lw	v0,0(s0)
+  44c82c:	3c050046 	lui	a1,0x46
+  44c830:	8fbc0020 	lw	gp,32(sp)
+  44c834:	00021080 	sll	v0,v0,0x2
+  44c838:	8c66f0e0 	lw	a2,-3872(v1)
+  44c83c:	02228821 	addu	s1,s1,v0
+  44c840:	8f828184 	lw	v0,-32380(gp)
+  44c844:	8e270000 	lw	a3,0(s1)
+  44c848:	8c440000 	lw	a0,0(v0)
+[31m  44c84c:	8f998328 	lw	t9,fprintf[0m
+  44c850:	0320f809 	jalr	t9
+  44c854:	24a5eb8c 	addiu	a1,a1,-5236
+--
+  44c874:	8c42f0f8 	lw	v0,-3848(v0)
+  44c878:	80420000 	lb	v0,0(v0)
+  44c87c:	1440000b 	bnez	v0,44c8ac <main@@Base+0x3b4>
+  44c880:	00000000 	nop
+  44c884:	0c112d7c 	jal	44b5f0 <mDNSCoreReceive@@Base+0x1998>
+  44c888:	00000000 	nop
+  44c88c:	3c020047 	lui	v0,0x47
+  44c890:	8fbc0020 	lw	gp,32(sp)
+  44c894:	3c050046 	lui	a1,0x46
+  44c898:	8c46f0e0 	lw	a2,-3872(v0)
+  44c89c:	8f828184 	lw	v0,-32380(gp)
+  44c8a0:	8c440000 	lw	a0,0(v0)
+  44c8a4:	1000ff9d 	b	44c71c <main@@Base+0x224>
+  44c8a8:	24a5ebac 	addiu	a1,a1,-5204
+  44c8ac:	3c020047 	lui	v0,0x47
+  44c8b0:	9043f830 	lbu	v1,-2000(v0)
+  44c8b4:	8f8280f0 	lw	v0,-32528(gp)
+  44c8b8:	10600044 	beqz	v1,44c9cc <main@@Base+0x4d4>
+  44c8bc:	00000000 	nop
+  44c8c0:	8c420000 	lw	v0,0(v0)
+  44c8c4:	18400009 	blez	v0,44c8ec <main@@Base+0x3f4>
+  44c8c8:	3c020047 	lui	v0,0x47
+  44c8cc:	3c050046 	lui	a1,0x46
+  44c8d0:	8c46f0e0 	lw	a2,-3872(v0)
+  44c8d4:	8f828184 	lw	v0,-32380(gp)
+[31m  44c8d8:	8f998328 	lw	t9,fprintf[0m
+  44c8dc:	8c440000 	lw	a0,0(v0)
+  44c8e0:	0320f809 	jalr	t9
+  44c8e4:	24a5ebfc 	addiu	a1,a1,-5124
+  44c8e8:	8fbc0020 	lw	gp,32(sp)
+  44c8ec:	8f9980c0 	lw	t9,-32576(gp)
+  44c8f0:	00002021 	move	a0,zero
+  44c8f4:	0320f809 	jalr	t9
+  44c8f8:	00002821 	move	a1,zero
+  44c8fc:	8fbc0020 	lw	gp,32(sp)
+  44c900:	14400025 	bnez	v0,44c998 <main@@Base+0x4a0>
+  44c904:	00408021 	move	s0,v0
+  44c908:	3c020047 	lui	v0,0x47
+  44c90c:	3c050046 	lui	a1,0x46
+  44c910:	8f99821c 	lw	t9,-32228(gp)
+  44c914:	8c44f0e4 	lw	a0,-3868(v0)
+  44c918:	0320f809 	jalr	t9
+  44c91c:	24a5d1dc 	addiu	a1,a1,-11812
+  44c920:	8fbc0020 	lw	gp,32(sp)
+  44c924:	1040003d 	beqz	v0,44ca1c <main@@Base+0x524>
+  44c928:	00408021 	move	s0,v0
+  44c92c:	8f9984bc 	lw	t9,-31556(gp)
+  44c930:	0320f809 	jalr	t9
+  44c934:	00000000 	nop
+  44c938:	3c050046 	lui	a1,0x46
+  44c93c:	02002021 	move	a0,s0
+  44c940:	8fbc0020 	lw	gp,32(sp)
+  44c944:	24a5e894 	addiu	a1,a1,-5996
+[31m  44c948:	8f998328 	lw	t9,fprintf[0m
+  44c94c:	0320f809 	jalr	t9
+  44c950:	00403021 	move	a2,v0
+  44c954:	8fbc0020 	lw	gp,32(sp)
+  44c958:	8f9981ec 	lw	t9,-32276(gp)
+  44c95c:	0320f809 	jalr	t9
+  44c960:	02002021 	move	a0,s0
+  44c964:	8fbc0020 	lw	gp,32(sp)
+  44c968:	1040002c 	beqz	v0,44ca1c <main@@Base+0x524>
+  44c96c:	3c040045 	lui	a0,0x45
+  44c970:	8f9980b0 	lw	t9,-32592(gp)
+  44c974:	3c050046 	lui	a1,0x46
+  44c978:	3c070046 	lui	a3,0x46
+  44c97c:	2484da18 	addiu	a0,a0,-9704
+  44c980:	24a5e370 	addiu	a1,a1,-7312
+  44c984:	24e7ecd4 	addiu	a3,a3,-4908
+  44c988:	0320f809 	jalr	t9
+  44c98c:	240602c5 	li	a2,709
+  44c990:	10000021 	b	44ca18 <main@@Base+0x520>
+  44c994:	00000000 	nop
+  44c998:	3c020047 	lui	v0,0x47
+  44c99c:	3c050046 	lui	a1,0x46
+  44c9a0:	8c46f0e0 	lw	a2,-3872(v0)
+  44c9a4:	8f828184 	lw	v0,-32380(gp)
+[31m  44c9a8:	8f998328 	lw	t9,fprintf[0m
+  44c9ac:	8c440000 	lw	a0,0(v0)
+  44c9b0:	0320f809 	jalr	t9
+  44c9b4:	24a5ec1c 	addiu	a1,a1,-5092
+  44c9b8:	02002021 	move	a0,s0
+  44c9bc:	8fbc0020 	lw	gp,32(sp)
+  44c9c0:	8f9980f8 	lw	t9,-32520(gp)
+  44c9c4:	1000ff3a 	b	44c6b0 <main@@Base+0x1b8>
+  44c9c8:	00000000 	nop
+  44c9cc:	8c420000 	lw	v0,0(v0)
+  44c9d0:	18400012 	blez	v0,44ca1c <main@@Base+0x524>
+  44c9d4:	00000000 	nop
+  44c9d8:	8f828184 	lw	v0,-32380(gp)
+  44c9dc:	8f9984bc 	lw	t9,-31556(gp)
+  44c9e0:	8c440000 	lw	a0,0(v0)
+  44c9e4:	3c020047 	lui	v0,0x47
+  44c9e8:	8c46f0e0 	lw	a2,-3872(v0)
+  44c9ec:	afa400c4 	sw	a0,196(sp)
+  44c9f0:	0320f809 	jalr	t9
+  44c9f4:	afa600c0 	sw	a2,192(sp)
+  44c9f8:	3c050046 	lui	a1,0x46
+  44c9fc:	8fbc0020 	lw	gp,32(sp)
+  44ca00:	24a5ec44 	addiu	a1,a1,-5052
+  44ca04:	8fa400c4 	lw	a0,196(sp)
+[31m  44ca08:	8f998328 	lw	t9,fprintf[0m
+  44ca0c:	8fa600c0 	lw	a2,192(sp)
+  44ca10:	0320f809 	jalr	t9
+--
+  44cba0:	02602021 	move	a0,s3
+  44cba4:	8f9980fc 	lw	t9,-32516(gp)
+  44cba8:	0320f809 	jalr	t9
+  44cbac:	00000000 	nop
+  44cbb0:	24030004 	li	v1,4
+  44cbb4:	8c420000 	lw	v0,0(v0)
+  44cbb8:	8fbc0020 	lw	gp,32(sp)
+  44cbbc:	10430004 	beq	v0,v1,44cbd0 <main@@Base+0x6d8>
+  44cbc0:	24040001 	li	a0,1
+  44cbc4:	a3c49962 	sb	a0,-26270(s8)
+  44cbc8:	10000032 	b	44cc94 <main@@Base+0x79c>
+  44cbcc:	00000000 	nop
+  44cbd0:	92c29960 	lbu	v0,-26272(s6)
+  44cbd4:	10400011 	beqz	v0,44cc1c <main@@Base+0x724>
+  44cbd8:	00000000 	nop
+  44cbdc:	8e220000 	lw	v0,0(s1)
+  44cbe0:	a2c09960 	sb	zero,-26272(s6)
+  44cbe4:	24420001 	addiu	v0,v0,1
+  44cbe8:	28430003 	slti	v1,v0,3
+  44cbec:	14600002 	bnez	v1,44cbf8 <main@@Base+0x700>
+  44cbf0:	ae220000 	sw	v0,0(s1)
+  44cbf4:	ae200000 	sw	zero,0(s1)
+  44cbf8:	8e260000 	lw	a2,0(s1)
+  44cbfc:	18c00007 	blez	a2,44cc1c <main@@Base+0x724>
+  44cc00:	00000000 	nop
+[31m  44cc04:	8f998328 	lw	t9,fprintf[0m
+  44cc08:	3c050046 	lui	a1,0x46
+  44cc0c:	8e840000 	lw	a0,0(s4)
+--
+  44cc9c:	02401021 	move	v0,s2
+  44cca0:	0c112f5a 	jal	44bd68 <mDNSCoreReceive@@Base+0x2110>
+  44cca4:	3c120047 	lui	s2,0x47
+  44cca8:	8fbc0020 	lw	gp,32(sp)
+  44ccac:	2644f83c 	addiu	a0,s2,-1988
+  44ccb0:	8f998298 	lw	t9,-32104(gp)
+  44ccb4:	0320f809 	jalr	t9
+  44ccb8:	24110002 	li	s1,2
+  44ccbc:	8fbc0020 	lw	gp,32(sp)
+  44ccc0:	8f998540 	lw	t9,-31424(gp)
+  44ccc4:	0320f809 	jalr	t9
+  44ccc8:	2644f83c 	addiu	a0,s2,-1988
+  44cccc:	8fbc0020 	lw	gp,32(sp)
+  44ccd0:	16000006 	bnez	s0,44ccec <main@@Base+0x7f4>
+  44ccd4:	3c020047 	lui	v0,0x47
+  44ccd8:	8f8280f0 	lw	v0,-32528(gp)
+  44ccdc:	8c420000 	lw	v0,0(v0)
+  44cce0:	1840000d 	blez	v0,44cd18 <main@@Base+0x820>
+  44cce4:	00008821 	move	s1,zero
+  44cce8:	3c020047 	lui	v0,0x47
+  44ccec:	3c050046 	lui	a1,0x46
+  44ccf0:	02003821 	move	a3,s0
+  44ccf4:	8c46f0e0 	lw	a2,-3872(v0)
+  44ccf8:	24a5ec90 	addiu	a1,a1,-4976
+  44ccfc:	8f828184 	lw	v0,-32380(gp)
+[31m  44cd00:	8f998328 	lw	t9,fprintf[0m
+  44cd04:	8c440000 	lw	a0,0(v0)
+  44cd08:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m35[0m times [0;33mmDNSResponderPosix[0m
+

@@ -1,0 +1,72 @@
+
+-----------------------------------------------------------------
+
+[[0;33m*[0m] Emulating binary name: [0;33mflash_eraseall[0m
+[[0;33m*[0m] Emulator used: [0;33mqemu-mips-static[0m
+[[0;33m*[0m] Using root directory: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m ([0;33m1/1[0m)
+[[0;33m*[0m] Using CPU config: [0;33mNONE[0m
+[[0;33m*[0m] Emulating binary: [0;33m/usr/bin/flash_eraseall[0m
+
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33mNONE[0m
+./usr/bin/flash_eraseall: NONE: No such file or directory
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m-v[0m
+./usr/bin/flash_eraseall: invalid option -- v
+./usr/bin/flash_eraseall: no MTD device specified
+Try `./usr/bin/flash_eraseall --help' for more information.
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m-V[0m
+./usr/bin/flash_eraseall: invalid option -- V
+./usr/bin/flash_eraseall: no MTD device specified
+Try `./usr/bin/flash_eraseall --help' for more information.
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m-h[0m
+./usr/bin/flash_eraseall: invalid option -- h
+./usr/bin/flash_eraseall: no MTD device specified
+Try `./usr/bin/flash_eraseall --help' for more information.
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m-help[0m
+./usr/bin/flash_eraseall: invalid option -- h
+./usr/bin/flash_eraseall: invalid option -- e
+./usr/bin/flash_eraseall: invalid option -- l
+./usr/bin/flash_eraseall: invalid option -- p
+./usr/bin/flash_eraseall: no MTD device specified
+Try `./usr/bin/flash_eraseall --help' for more information.
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m--help[0m
+Usage: ./usr/bin/flash_eraseall [OPTION] MTD_DEVICE
+Erases all of the specified MTD device.
+
+  -j, --jffs2    format the device for jffs2
+  -q, --quiet    don't display progress messages
+      --silent   same as --quiet
+      --help     display this help and exit
+      --version  output version information and exit
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33m--version[0m
+flash_eraseall $Revision: 1.1 $
+
+Copyright (C) 2000 Arcom Control Systems Ltd
+
+flash_eraseall comes with NO WARRANTY
+to the extent permitted by law.
+
+You may redistribute copies of flash_eraseall
+under the terms of the GNU General Public Licence.
+See the file `COPYING' for more information.
+[[0;33m*[0m] Emulating binary [0;33m./usr/bin/flash_eraseall[0m with parameter [0;33mversion[0m
+./usr/bin/flash_eraseall: version: No such file or directory
+
+-----------------------------------------------------------------
+
+
+
+For reproducing the EMBA user-mode emulation mechanism, the following commands could be used as starting point:
+
+ - Start EMBA docker container with the firmware directory as log directory:
+      # [0;33mEMBA="." FIRMWARE="/home/kali/Downloads/DCS-935L_A1_FW_1.09.02_20160713_r3952.bin" LOG="/absolute/path/to/EMBA/log/directory" docker-compose run emba[0m
+
+ - Change your working directory to the root directory of your firmware:
+      # [0;33mcd /logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m
+
+ - Copy the static compiled user-mode emulator to your current working directory
+      # [0;33mcp $(which qemu-mips-static) .[0m
+
+ - Start the emulation with the following command: 
+      # [0;33mjchroot  . -- ./qemu-mips-static ./usr/bin/flash_eraseall <parameters like -v or --help>[0m
+
+[0;33mWARNING: EMBA is doing some more magic in the background. Probably it is not that easy, but give it a try.[0m

@@ -1,0 +1,104 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33msignalc[0m
+
+  406860:	02202021 	move	a0,s1
+  406864:	8fbc0018 	lw	gp,24(sp)
+  406868:	8f99818c 	lw	t9,-32372(gp)
+  40686c:	0320f809 	jalr	t9
+  406870:	02402821 	move	a1,s2
+  406874:	2404000a 	li	a0,10
+  406878:	8fbc0018 	lw	gp,24(sp)
+  40687c:	8f9981c4 	lw	t9,-32316(gp)
+  406880:	0320f809 	jalr	t9
+  406884:	02402821 	move	a1,s2
+  406888:	8fbc0018 	lw	gp,24(sp)
+  40688c:	1000ff97 	b	4066ec <_ftext@@Base+0x402c>
+  406890:	00000000 	nop
+  406894:	27bdfec8 	addiu	sp,sp,-312
+  406898:	afbf0134 	sw	ra,308(sp)
+  40689c:	afb20130 	sw	s2,304(sp)
+  4068a0:	afb1012c 	sw	s1,300(sp)
+  4068a4:	afb00128 	sw	s0,296(sp)
+  4068a8:	3c1c0044 	lui	gp,0x44
+  4068ac:	279c5740 	addiu	gp,gp,22336
+  4068b0:	afbc0018 	sw	gp,24(sp)
+  4068b4:	a3a00020 	sb	zero,32(sp)
+  4068b8:	00a08021 	move	s0,a1
+  4068bc:	10800061 	beqz	a0,406a44 <_ftext@@Base+0x4384>
+  4068c0:	00e09021 	move	s2,a3
+[31m  4068c4:	8f9982e8 	lw	t9,strcat[0m
+  4068c8:	27b10020 	addiu	s1,sp,32
+  4068cc:	00802821 	move	a1,a0
+  4068d0:	afa60120 	sw	a2,288(sp)
+  4068d4:	0320f809 	jalr	t9
+  4068d8:	02202021 	move	a0,s1
+  4068dc:	8fbc0018 	lw	gp,24(sp)
+  4068e0:	8f99828c 	lw	t9,strlen
+  4068e4:	0320f809 	jalr	t9
+  4068e8:	02202021 	move	a0,s1
+  4068ec:	3c030042 	lui	v1,0x42
+  4068f0:	2464c6c0 	addiu	a0,v1,-14656
+  4068f4:	02221021 	addu	v0,s1,v0
+  4068f8:	90840001 	lbu	a0,1(a0)
+  4068fc:	9063c6c0 	lbu	v1,-14656(v1)
+  406900:	8fbc0018 	lw	gp,24(sp)
+  406904:	a0440001 	sb	a0,1(v0)
+  406908:	a0430000 	sb	v1,0(v0)
+  40690c:	8fa60120 	lw	a2,288(sp)
+  406910:	12000012 	beqz	s0,40695c <_ftext@@Base+0x429c>
+  406914:	02002821 	move	a1,s0
+[31m  406918:	8f9982e8 	lw	t9,strcat[0m
+  40691c:	afa60120 	sw	a2,288(sp)
+  406920:	0320f809 	jalr	t9
+  406924:	02202021 	move	a0,s1
+  406928:	8fbc0018 	lw	gp,24(sp)
+  40692c:	8f99828c 	lw	t9,strlen
+  406930:	0320f809 	jalr	t9
+  406934:	02202021 	move	a0,s1
+  406938:	3c030042 	lui	v1,0x42
+  40693c:	2464c5d0 	addiu	a0,v1,-14896
+  406940:	02221021 	addu	v0,s1,v0
+  406944:	90840001 	lbu	a0,1(a0)
+  406948:	9063c5d0 	lbu	v1,-14896(v1)
+  40694c:	8fbc0018 	lw	gp,24(sp)
+  406950:	a0440001 	sb	a0,1(v0)
+  406954:	a0430000 	sb	v1,0(v0)
+  406958:	8fa60120 	lw	a2,288(sp)
+  40695c:	10c00010 	beqz	a2,4069a0 <_ftext@@Base+0x42e0>
+  406960:	00c02821 	move	a1,a2
+[31m  406964:	8f9982e8 	lw	t9,strcat[0m
+  406968:	0320f809 	jalr	t9
+  40696c:	02202021 	move	a0,s1
+--
+  40fdfc:	00409021 	move	s2,v0
+  40fe00:	8f998394 	lw	t9,-31852(gp)
+  40fe04:	02c02021 	move	a0,s6
+  40fe08:	24050800 	li	a1,2048
+  40fe0c:	3406ffff 	li	a2,0xffff
+  40fe10:	00003821 	move	a3,zero
+  40fe14:	3610002c 	ori	s0,s0,0x2c
+  40fe18:	afb40010 	sw	s4,16(sp)
+  40fe1c:	0320f809 	jalr	t9
+  40fe20:	03d08021 	addu	s0,s8,s0
+  40fe24:	24050801 	li	a1,2049
+  40fe28:	02c02021 	move	a0,s6
+  40fe2c:	8fbc0028 	lw	gp,40(sp)
+  40fe30:	3406ffff 	li	a2,0xffff
+  40fe34:	00408821 	move	s1,v0
+  40fe38:	00003821 	move	a3,zero
+  40fe3c:	8f998394 	lw	t9,-31852(gp)
+  40fe40:	0320f809 	jalr	t9
+  40fe44:	afb00010 	sw	s0,16(sp)
+  40fe48:	3c060003 	lui	a2,0x3
+  40fe4c:	02002821 	move	a1,s0
+  40fe50:	8fbc0028 	lw	gp,40(sp)
+  40fe54:	34c60068 	ori	a2,a2,0x68
+  40fe58:	00513825 	or	a3,v0,s1
+  40fe5c:	00dd3021 	addu	a2,a2,sp
+[31m  40fe60:	8f9982e8 	lw	t9,strcat[0m
+  40fe64:	02802021 	move	a0,s4
+  40fe68:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m4[0m times [0;33msignalc[0m
+

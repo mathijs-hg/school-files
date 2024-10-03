@@ -1,0 +1,760 @@
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00400f50_00400f50.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00400f50_00400f50.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m14[0m - [0;33mmemset(auStack_4f,0,0x3f);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_004013f4_004013f4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_004013f4_004013f4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m89[0m - [0;33msystem("/sbin/reboot&");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-sprintf-vsprintf[0m
+        Issue description:
+    A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold, or when a program attempts to put data in a memory area outside of the boundaries of a buffer.
+
+        [0;32m12[0m - [0;33msprintf(acStack_90,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m12[0m - [0;33msprintf(acStack_90,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m13[0m - [0;33m__fd = open(acStack_90,0x501,0x284);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m26[0m - [0;33msprintf(acStack_90,"%d",_Var3);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-sprintf-vsprintf[0m
+        Issue description:
+    A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold, or when a program attempts to put data in a memory area outside of the boundaries of a buffer.
+
+        [0;32m7[0m - [0;33msprintf(acStack_88,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m7[0m - [0;33msprintf(acStack_88,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m9[0m - [0;33munlink(acStack_88);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m109[0m - [0;33mmemset(&uStack_854,0,0x800);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m110[0m - [0;33mrecvfrom(server_sockfd,&uStack_854,0x800,0,(sockaddr *)client_addr,local_40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m110[0m - [0;33mrecvfrom(server_sockfd,&uStack_854,0x800,0,(sockaddr *)client_addr,local_40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m38[0m - [0;33mmemset(auStack_357,0,0xff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mmemset(auStack_250,0,0x21d);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m49[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m52[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m56[0m - [0;33msprintf(acStack_1c3,"%u.%u.%u",(uint)local_2c,(uint)local_2a,(uint)local_28[0]);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m78[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m81[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m84[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00400f50_00400f50.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00400f50_00400f50.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m14[0m - [0;33mmemset(auStack_4f,0,0x3f);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-sprintf-vsprintf[0m
+        Issue description:
+    A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold, or when a program attempts to put data in a memory area outside of the boundaries of a buffer.
+
+        [0;32m12[0m - [0;33msprintf(acStack_90,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m12[0m - [0;33msprintf(acStack_90,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m13[0m - [0;33m__fd = open(acStack_90,0x501,0x284);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401120_00401120.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m26[0m - [0;33msprintf(acStack_90,"%d",_Var3);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_004013f4_004013f4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_004013f4_004013f4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m89[0m - [0;33msystem("/sbin/reboot&");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m38[0m - [0;33mmemset(auStack_357,0,0xff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mmemset(auStack_250,0,0x21d);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m49[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m51[0m - [0;33mstrncpy(acStack_233,&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m52[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m56[0m - [0;33msprintf(acStack_1c3,"%u.%u.%u",(uint)local_2c,(uint)local_2a,(uint)local_28[0]);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m78[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m80[0m - [0;33mstrncpy(acStack_1f3,&local_358,0x20);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m81[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m83[0m - [0;33mstrncpy(acStack_1d3,&local_358,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m84[0m - [0;33mmemset(&local_358,0,0x100);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_0040172c_0040172c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m86[0m - [0;33mstrncpy((char *)((int)&uStack_1b8 + 3),&local_358,0x40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00401df4_00401df4.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m44[0m - [0;33mstrncpy(acStack_34,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-sprintf-vsprintf[0m
+        Issue description:
+    A buffer overflow condition exists when a program attempts to put more data in a buffer than it can hold, or when a program attempts to put data in a memory area outside of the boundaries of a buffer.
+
+        [0;32m7[0m - [0;33msprintf(acStack_88,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m7[0m - [0;33msprintf(acStack_88,"/var/run/ipfind-%s.pid",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/FUN_00402198_00402198.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m9[0m - [0;33munlink(acStack_88);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m62[0m - [0;33mstrncpy(acStack_8f4,ifname,0x10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m109[0m - [0;33mmemset(&uStack_854,0,0x800);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m110[0m - [0;33mrecvfrom(server_sockfd,&uStack_854,0x800,0,(sockaddr *)client_addr,local_40);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_ipfind/main_00402210.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m110[0m - [0;33mrecvfrom(server_sockfd,&uStack_854,0x800,0,(sockaddr *)client_addr,local_40);[0m
+
+-----------------------------------------------------------------
+

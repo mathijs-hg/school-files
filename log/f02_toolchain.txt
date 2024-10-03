@@ -1,0 +1,51 @@
+[[0;34m+[0m] [0;36m[1mToolchain overview[0m
+[1m=================================================================[0m
+The toolchain identification module aggregates multiple sources to help the tester in getting a better understanding of the toolchain that was used to compile/build the firmware.
+For this process EMBA aggregates the following details:
+    * The identified kernel version
+    * Identifies the kernel release date - getting an idea on how old the used Linux kernel really is
+    * EMBA extracts the GCC version from a kernel identifier string
+    * EMBA extracts the GCC version from the firmware binaries
+    * Uses an already identified libstdc++ for further GCC identification
+    * Identifies the GCC release date - getting an idea on how old the used toolchain really is
+    * EMBA extracts the binary flags from the firmware binaries
+
+
+The following details will help the tester for a better understanding of the original firmware build process. Additionally, these details can support the tester during the build process of a well fitting cross-compilation toolchain.
+
+
+[[0;32m+[0m][0;32m Identified kernel version [0;33m2.6.30.9[0;32m which was released on [0;33m05-Oct-2009[0;32m - kernel configuration available.[0m
+
+
+[[0;32m+[0m][0;32m Identified GCC version [0;33mgcc version 4.4.5[0;32m released on [0;33mOctober 1, 2010[0;32m in the Linux kernel identifier string.[0m
+    [0;33mLinux version 2.6.30.9 (root@localhost.localdomain) (gcc version 4.4.5-1.5.5p4 (GCC) ) #67 Wed Jul 13 15:57:14 CST 2016[0m
+
+
+[[0;32m+[0m][0;32m Identified GCC version [0;33mGCC 4.4.2[0;32m released on [0;33mOctober 15, 2009[0;32m via libstdc++ [0;33mlibstdc++.so.6.0.13[0;32m.[0m
+
+
+[[0;32m+[0m][0;32m Identified firmware architecture [0;33mMIPS, MIPS-I version 1 (SYSV)[0;32m / endianes [0;33mbig[0;32m / machine configuration [0;33mMIPS R3000[0;32m on binary level.[0m
+
+
+[[0;32m+[0m][0;32m Identified possible GCC version on binary level [0;33mGCC (GNU) 3.3.2 / 3.3.2[0;32m released on [0;33mOctober 17, 2003[0;32m.[0m
+[[0;32m+[0m][0;32m Identified possible GCC version on binary level [0;33mGCC (GNU) 4.4.5-1.5.5p4 / 4.4.5[0;32m released on [0;33mOctober 1, 2010[0;32m.[0m
+
+
+[[0;32m+[0m][0;32m Identified the following used binary flags:[0m
+    [0;33m0x1001[0m
+    [0;33m0x1007[0m
+    [0;33mcpic[0m
+    [0;33mmips1[0m
+    [0;33mnoreorder[0m
+    [0;33mo32[0m
+    [0;33mpic[0m
+
+
+
+-----------------------------------------------------------------
+
+The shown toolchain details can help in building a working buildchain for building working binaries and libraries.
+Multiple examples of such a build process are collected in the EMBA wiki
+
+-----------------------------------------------------------------
+

@@ -1,0 +1,82 @@
+[[0;34m+[0m] [0;36m[1mBusybox vulnerability identification and verification[0m
+[1m=================================================================[0m
+First, this module extracts the BusyBox vulnerabilities based on version details.
+Second, the enabled applets are extracted from the emulation results of module s115/s116.
+Finally, the already known vulnerabilities are matched against the extracted applets. Vulnerability descriptions with matching applets are rated as verified CVEs
+
+
+
+
+[0;34m==>[0m [0;36mBusyBox - Version based vulnerability detection[0m
+-----------------------------------------------------------------
+[[0;32m+[0m][0;32m Extracted [0;33m19[0;32m vulnerabilities based on BusyBox version only[0m
+
+
+
+
+[0;34m==>[0m [0;36mBusyBox - Applet identification via emulation results[0m
+-----------------------------------------------------------------
+[[0;33m*[0m] Extract applet data for BusyBox version [0;33mbusybox:1.22.1[0m from emulation logs
+[[0;32m+[0m][0;32m Extracted [0;33m84[0;32m valid BusyBox applets from usermode log files[0m
+
+
+
+
+[0;34m==>[0m [0;36mBusyBox - Static applet identification from binary[0m
+-----------------------------------------------------------------
+[[0;33m*[0m] Extract applet data for BusyBox version [0;33mbusybox:1.22.1[0m from binary [0;33m/logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/bin/busybox[0m
+[[0;32m+[0m][0;32m Extracted [0;33m0[0;32m valid BusyBox applets via static analysis[0m
+
+
+
+
+[0;34m==>[0m [0;36mBusyBox - Vulnerability verification[0m
+-----------------------------------------------------------------
+[[0;32m+[0m][0;32m Extracted [0;33m19[0;32m vulnerabilities based on BusyBox version only[0m
+
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2018-1000500[0;32m - applet [0;33mwget[0;32m[0m
+	Busybox contains a Missing SSL certificate validation vulnerability in The "busybox wget" applet that can result in arbitrary code execution. This attack appear to be exploitable via Simply download any file over HTTPS using "busybox [33mwget[0m https://compromised-domain.com/important-file".
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2018-1000517[0;32m - applet [0;33mwget[0;32m[0m
+	BusyBox project BusyBox [33mwget[0m version prior to commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e contains a Buffer Overflow vulnerability in Busybox [33mwget[0m that can result in heap buffer overflow. This attack appear to be exploitable via network connectivity. This vulnerability appears to have been fixed in after commit 8e2174e9bd836e53c8b9c6e00d1bc6e2a718686e.
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42378[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the getvar_i function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42379[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the next_input_file function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42381[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the hash_init function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42384[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the handle_special function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42385[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the evaluate function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2021-42386[0;32m - applet [0;33mawk[0;32m[0m
+	A use-after-free in Busybox's [33mawk[0m applet leads to denial of service and possibly code execution when processing a crafted [33mawk[0m pattern in the nvalloc function
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Verified BusyBox vulnerability [0;33mCVE-2022-28391[0;32m - applet [0;33mnetstat[0;32m[0m
+	BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if [33mnetstat[0m is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.
+
+-----------------------------------------------------------------
+

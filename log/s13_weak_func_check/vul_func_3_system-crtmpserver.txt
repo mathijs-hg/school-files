@@ -1,0 +1,93 @@
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mcrtmpserver[0m
+
+  4629c4:	27bdffe0 	addiu	sp,sp,-32
+  4629c8:	afbf001c 	sw	ra,28(sp)
+  4629cc:	afbc0010 	sw	gp,16(sp)
+  4629d0:	24050001 	li	a1,1
+  4629d4:	8f998468 	lw	t9,-31640(gp)
+  4629d8:	0320f809 	jalr	t9
+  4629dc:	00003021 	move	a2,zero
+  4629e0:	8fbc0010 	lw	gp,16(sp)
+  4629e4:	8f998a24 	lw	t9,-30172(gp)
+  4629e8:	0320f809 	jalr	t9
+  4629ec:	00402021 	move	a0,v0
+  4629f0:	3c1c002e 	lui	gp,0x2e
+  4629f4:	279cda90 	addiu	gp,gp,-9584
+  4629f8:	0399e021 	addu	gp,gp,t9
+  4629fc:	27bdffe0 	addiu	sp,sp,-32
+  462a00:	afbf001c 	sw	ra,28(sp)
+  462a04:	afb00018 	sw	s0,24(sp)
+  462a08:	afbc0010 	sw	gp,16(sp)
+  462a0c:	00003021 	move	a2,zero
+  462a10:	8f9996d0 	lw	t9,-26928(gp)
+  462a14:	00003821 	move	a3,zero
+  462a18:	00808021 	move	s0,a0
+  462a1c:	0320f809 	jalr	t9
+  462a20:	24050001 	li	a1,1
+  462a24:	8fbc0010 	lw	gp,16(sp)
+[31m  462a28:	8f99a368 	lw	t9,system[0m
+  462a2c:	0320f809 	jalr	t9
+  462a30:	00402021 	move	a0,v0
+--
+  4c227c:	8fbc0018 	lw	gp,24(sp)
+  4c2280:	27b40050 	addiu	s4,sp,80
+  4c2284:	02003021 	move	a2,s0
+  4c2288:	8fa70054 	lw	a3,84(sp)
+  4c228c:	02802021 	move	a0,s4
+  4c2290:	8f999ba0 	lw	t9,-25696(gp)
+  4c2294:	0320f809 	jalr	t9
+  4c2298:	02602821 	move	a1,s3
+  4c229c:	8fbc0018 	lw	gp,24(sp)
+  4c22a0:	8fa40054 	lw	a0,84(sp)
+  4c22a4:	8f9088f4 	lw	s0,-30476(gp)
+  4c22a8:	2491fff4 	addiu	s1,a0,-12
+  4c22ac:	163000a0 	bne	s1,s0,4c2530 <_Z13getHostByNameSs@@Base+0x650>
+  4c22b0:	00000000 	nop
+  4c22b4:	8fa40058 	lw	a0,88(sp)
+  4c22b8:	2491fff4 	addiu	s1,a0,-12
+  4c22bc:	1611008c 	bne	s0,s1,4c24f0 <_Z13getHostByNameSs@@Base+0x610>
+  4c22c0:	00000000 	nop
+  4c22c4:	27b1005c 	addiu	s1,sp,92
+  4c22c8:	02802821 	move	a1,s4
+  4c22cc:	8f999e2c 	lw	t9,-25044(gp)
+  4c22d0:	0320f809 	jalr	t9
+  4c22d4:	02202021 	move	a0,s1
+  4c22d8:	8fbc0018 	lw	gp,24(sp)
+  4c22dc:	8fa4005c 	lw	a0,92(sp)
+[31m  4c22e0:	8f99a368 	lw	t9,system[0m
+  4c22e4:	0320f809 	jalr	t9
+  4c22e8:	00000000 	nop
+--
+  4c2900:	02002021 	move	a0,s0
+  4c2904:	8fbc0018 	lw	gp,24(sp)
+  4c2908:	27b40048 	addiu	s4,sp,72
+  4c290c:	02602821 	move	a1,s3
+  4c2910:	8fa6004c 	lw	a2,76(sp)
+  4c2914:	8f999ba0 	lw	t9,-25696(gp)
+  4c2918:	0320f809 	jalr	t9
+  4c291c:	02802021 	move	a0,s4
+  4c2920:	8fbc0018 	lw	gp,24(sp)
+  4c2924:	8fa4004c 	lw	a0,76(sp)
+  4c2928:	8f9188f4 	lw	s1,-30476(gp)
+  4c292c:	2490fff4 	addiu	s0,a0,-12
+  4c2930:	16110083 	bne	s0,s1,4c2b40 <_Z13getHostByNameSs@@Base+0xc60>
+  4c2934:	00000000 	nop
+  4c2938:	8fa40050 	lw	a0,80(sp)
+  4c293c:	2490fff4 	addiu	s0,a0,-12
+  4c2940:	1630006f 	bne	s1,s0,4c2b00 <_Z13getHostByNameSs@@Base+0xc20>
+  4c2944:	00000000 	nop
+  4c2948:	27b00054 	addiu	s0,sp,84
+  4c294c:	02802821 	move	a1,s4
+  4c2950:	8f999e2c 	lw	t9,-25044(gp)
+  4c2954:	0320f809 	jalr	t9
+  4c2958:	02002021 	move	a0,s0
+  4c295c:	8fbc0018 	lw	gp,24(sp)
+  4c2960:	8fa40054 	lw	a0,84(sp)
+[31m  4c2964:	8f99a368 	lw	t9,system[0m
+  4c2968:	0320f809 	jalr	t9
+  4c296c:	00000000 	nop
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m3[0m times [0;33mcrtmpserver[0m
+

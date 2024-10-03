@@ -1,0 +1,117 @@
+
+-----------------------------------------------------------------
+
+[[0;33m*[0m] Initial strace run with [0;33mjchroot[0m on the command [0;33m./mydlink/signalc[0m to identify missing areas
+
+[[0;33m*[0m] Emulating binary name: [0;33msignalc[0m in [0;33mstrace[0m mode to identify missing areas (with [0;33mjchroot[0m)
+[[0;33m*[0m] Emulator used: [0;33mqemu-mips-static[0m
+[[0;33m*[0m] Chroot environment used: [0;33mjchroot[0m
+[[0;33m*[0m] Using root directory: [0;33m/logs/s115_usermode_emulator/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract[0m ([0;33m1/1[0m)
+[[0;33m*[0m] Using CPU config: [0;33mNONE[0m
+
+1  = 0x2b2c3000
+1 open("/lib/libssl.so.1.0.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e730) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b2c5000
+1  = 0x2b2c5000
+1  = 0x2b323000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libcrypto.so.1.0.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e720) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b328000
+1  = 0x2b328000
+1  = 0x2b4af000
+1  = 0x2b4c5000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e710) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b4c7000
+1  = 0x2b4c7000
+1  = 0x2b536000
+1  = 0x2b538000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e700) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b53d000
+1  = 0x2b53d000
+1  = 0x2b55f000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libcrypto.so.1.0.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e6f0) = 0
+1 close(3) = 0
+1 open("/lib/libdl.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e6e0) = 0
+1  = 0x2b2c4000
+1 read(3,0x2b2c4000,4096) = 4096
+1  = 0x2b560000
+1  = 0x2b560000
+1  = 0x2b571000
+1 close(3) = 0
+1 munmap(0x2b2c4000,4096) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e6d0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e6c0) = 0
+1 close(3) = 0
+1 open("/lib/libdl.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e6b0) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e6a0) = 0
+1 close(3) = 0
+1 open("/lib/libgcc_s.so.1",O_RDONLY) = 3
+1 fstat(3,0x2b18e690) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e680) = 0
+1 close(3) = 0
+1 open("/lib/libc.so.0",O_RDONLY) = 3
+1 fstat(3,0x2b18e670) = 0
+1 close(3) = 0
+1 stat("/lib/ld-uClibc.so.0",0x2b18f194) = 0
+1 mprotect(0x2b536000,4096,PROT_READ) = 0
+1 mprotect(0x2b571000,4096,PROT_READ) = 0
+1 mprotect(0x2b2c0000,4096,PROT_READ) = 0
+1 ioctl(0,TCGETS,0x2b18efd0) = -1 errno=25 (Inappropriate ioctl for device)
+1 ioctl(1,TCGETS,0x2b18efd0) = -1 errno=25 (Inappropriate ioctl for device)
+1 gettimeofday(0x2b18f3b8,0x2b18f3e0) = 0 ({tv_sec = 1727733903,tv_usec = 539761},{0,0})
+1 time(0,723055584,723055932,0,0,0) = 1727733903
+1 brk(NULL) = 0x0046b000
+1 brk(0x0046c000) = 0x0046c000
+1 pipe(723055032,1,1,0,0,0) = 3
+1 fcntl(3,F_GETFL) = 8192
+1 ioctl(3,TCGETS,0x2b18f0b8) = -1 errno=25 (Inappropriate ioctl for device)
+1 brk(0x0046d000) = 0x0046d000
+1 fork() = 3
+1 close(4) = 0
+1 read(3,0x46b070,4096) = 0
+3 close(3) = 0
+3 dup2(4,1) = 1
+3 close(4) = 0
+3 execve("/bin/sh",{"sh","-c","mdb get dev_model ",NULL}) = -1 errno=8 (Exec format error)
+3 exit(127)
+ = 0
+1 close(3) = 0
+1 wait4(3,0x2b18f1d0,0,(nil)) = 3
+1 write(1,0x2b53a298,17)unexpected error
+ = 17
+1 exit(-1)
+
+[[0;33m*[0m] Identification of missing filesytem areas.
+[[0;33m*[0m] No missing areas found.
+
+-----------------------------------------------------------------
+

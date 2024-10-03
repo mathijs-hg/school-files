@@ -1,0 +1,1 @@
+../scheduleReboot.cgi

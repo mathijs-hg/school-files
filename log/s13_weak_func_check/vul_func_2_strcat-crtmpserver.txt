@@ -1,0 +1,64 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m tear down of [0;33mcrtmpserver[0m
+
+  430520:	00a02021 	move	a0,a1
+  430524:	8f858030 	lw	a1,-32720(gp)
+  430528:	2652ffef 	addiu	s2,s2,-17
+  43052c:	8f998cdc 	lw	t9,-29476(gp)
+  430530:	0320f809 	jalr	t9
+  430534:	24a50b10 	addiu	a1,a1,2832
+  430538:	8fbc0010 	lw	gp,16(sp)
+  43053c:	0242302b 	sltu	a2,s2,v0
+  430540:	0046900a 	0x46900a
+  430544:	8f838030 	lw	v1,-32720(gp)
+  430548:	02321021 	addu	v0,s1,s2
+  43054c:	8c650b14 	lw	a1,2836(v1)
+  430550:	24630b14 	addiu	v1,v1,2836
+  430554:	8c640004 	lw	a0,4(v1)
+  430558:	aa050000 	swl	a1,0(s0)
+  43055c:	ba050003 	swr	a1,3(s0)
+  430560:	aa040004 	swl	a0,4(s0)
+  430564:	ba040007 	swr	a0,7(s0)
+  430568:	90640008 	lbu	a0,8(v1)
+  43056c:	a2040008 	sb	a0,8(s0)
+  430570:	90630009 	lbu	v1,9(v1)
+  430574:	a2030009 	sb	v1,9(s0)
+  430578:	80420000 	lb	v0,0(v0)
+  43057c:	14400019 	bnez	v0,4305e4 <_ZN13RunningStatusD1Ev@@Base+0x284>
+  430580:	02403021 	move	a2,s2
+[31m  430584:	8f99a07c 	lw	t9,strcat[0m
+  430588:	02202821 	move	a1,s1
+  43058c:	0320f809 	jalr	t9
+--
+  430628:	8f999d4c 	lw	t9,strlen
+  43062c:	00a02021 	move	a0,a1
+  430630:	0320f809 	jalr	t9
+  430634:	afa50018 	sw	a1,24(sp)
+  430638:	8fbc0010 	lw	gp,16(sp)
+  43063c:	0242182b 	sltu	v1,s2,v0
+  430640:	8f848034 	lw	a0,-32716(gp)
+  430644:	90848d00 	lbu	a0,-29440(a0)
+  430648:	a2040000 	sb	a0,0(s0)
+  43064c:	8fa50018 	lw	a1,24(sp)
+  430650:	1060000e 	beqz	v1,43068c <_ZN13RunningStatusD1Ev@@Base+0x32c>
+  430654:	02002021 	move	a0,s0
+  430658:	00529023 	subu	s2,v0,s2
+  43065c:	8f999d4c 	lw	t9,strlen
+  430660:	00b22821 	addu	a1,a1,s2
+  430664:	0320f809 	jalr	t9
+  430668:	afa50018 	sw	a1,24(sp)
+  43066c:	8fbc0010 	lw	gp,16(sp)
+  430670:	02021021 	addu	v0,s0,v0
+  430674:	8f838038 	lw	v1,-32712(gp)
+  430678:	8c63cedc 	lw	v1,-12580(v1)
+  43067c:	a8430000 	swl	v1,0(v0)
+  430680:	b8430003 	swr	v1,3(v0)
+  430684:	8fa50018 	lw	a1,24(sp)
+  430688:	02002021 	move	a0,s0
+[31m  43068c:	8f99a07c 	lw	t9,strcat[0m
+  430690:	8fbf002c 	lw	ra,44(sp)
+  430694:	8fb20028 	lw	s2,40(sp)
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcat[0m used [0;33m2[0m times [0;33mcrtmpserver[0m
+

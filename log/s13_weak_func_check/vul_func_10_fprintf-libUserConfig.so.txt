@@ -1,0 +1,197 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mlibUserConfig.so[0m
+
+    1554:	8fbc0020 	lw	gp,32(sp)
+    1558:	8f848028 	lw	a0,-32728(gp)
+    155c:	8f998044 	lw	t9,-32700(gp)
+    1560:	0320f809 	jalr	t9
+    1564:	24841f58 	addiu	a0,a0,8024
+    1568:	00003021 	move	a2,zero
+    156c:	8fbc0020 	lw	gp,32(sp)
+    1570:	04400009 	bltz	v0,1598 <cfgRead@@Base+0xe8>
+    1574:	00408821 	move	s1,v0
+    1578:	8f998084 	lw	t9,-32636(gp)
+    157c:	24060002 	li	a2,2
+    1580:	00402021 	move	a0,v0
+    1584:	0320f809 	jalr	t9
+    1588:	00002821 	move	a1,zero
+    158c:	8fbc0020 	lw	gp,32(sp)
+    1590:	04410011 	bgez	v0,15d8 <cfgRead@@Base+0x128>
+    1594:	00403021 	move	a2,v0
+    1598:	8f828048 	lw	v0,-32696(gp)
+    159c:	02203821 	move	a3,s1
+    15a0:	2413ffff 	li	s3,-1
+    15a4:	8f858028 	lw	a1,-32728(gp)
+    15a8:	8c440000 	lw	a0,0(v0)
+    15ac:	afa60010 	sw	a2,16(sp)
+    15b0:	24a51f6c 	addiu	a1,a1,8044
+    15b4:	8f868028 	lw	a2,-32728(gp)
+[31m    15b8:	8f998078 	lw	t9,fprintf[0m
+    15bc:	0320f809 	jalr	t9
+    15c0:	24c61f58 	addiu	a2,a2,8024
+    15c4:	8fbc0020 	lw	gp,32(sp)
+    15c8:	06200055 	bltz	s1,1720 <cfgRead@@Base+0x270>
+    15cc:	00000000 	nop
+    15d0:	10000044 	b	16e4 <cfgRead@@Base+0x234>
+    15d4:	2413ffff 	li	s3,-1
+    15d8:	24024799 	li	v0,18329
+    15dc:	10c2000b 	beq	a2,v0,160c <cfgRead@@Base+0x15c>
+    15e0:	24074799 	li	a3,18329
+    15e4:	8f828048 	lw	v0,-32696(gp)
+    15e8:	8f858028 	lw	a1,-32728(gp)
+    15ec:	2413ffff 	li	s3,-1
+    15f0:	8c440000 	lw	a0,0(v0)
+    15f4:	2412ffff 	li	s2,-1
+[31m    15f8:	8f998078 	lw	t9,fprintf[0m
+    15fc:	0320f809 	jalr	t9
+    1600:	24a51f94 	addiu	a1,a1,8084
+--
+    1664:	0320f809 	jalr	t9
+    1668:	26160008 	addiu	s6,s0,8
+    166c:	02202021 	move	a0,s1
+    1670:	24064799 	li	a2,18329
+    1674:	8fbc0020 	lw	gp,32(sp)
+    1678:	02c02821 	move	a1,s6
+    167c:	8f99806c 	lw	t9,-32660(gp)
+    1680:	0320f809 	jalr	t9
+    1684:	00009821 	move	s3,zero
+    1688:	02c02821 	move	a1,s6
+    168c:	24064799 	li	a2,18329
+    1690:	8fbc0020 	lw	gp,32(sp)
+    1694:	8f99807c 	lw	t9,-32644(gp)
+    1698:	0320f809 	jalr	t9
+    169c:	02402021 	move	a0,s2
+    16a0:	2606001a 	addiu	a2,s0,26
+    16a4:	8a020016 	lwl	v0,22(s0)
+    16a8:	96050012 	lhu	a1,18(s0)
+    16ac:	8fbc0020 	lw	gp,32(sp)
+    16b0:	8ea40000 	lw	a0,0(s5)
+    16b4:	9a020019 	lwr	v0,25(s0)
+    16b8:	96070010 	lhu	a3,16(s0)
+    16bc:	96030014 	lhu	v1,20(s0)
+    16c0:	afa50010 	sw	a1,16(sp)
+    16c4:	8f858028 	lw	a1,-32728(gp)
+[31m    16c8:	8f998078 	lw	t9,fprintf[0m
+    16cc:	24a51fd8 	addiu	a1,a1,8152
+    16d0:	afa30014 	sw	v1,20(sp)
+--
+    19a0:	8a270004 	lwl	a3,4(s1)
+    19a4:	02603021 	move	a2,s3
+    19a8:	2413fffe 	li	s3,-2
+    19ac:	8f828048 	lw	v0,-32696(gp)
+    19b0:	8f858028 	lw	a1,-32728(gp)
+    19b4:	9a270007 	lwr	a3,7(s1)
+    19b8:	8c440000 	lw	a0,0(v0)
+    19bc:	1000003f 	b	1abc <cfgInitial@@Base+0x2c4>
+    19c0:	24a520a4 	addiu	a1,a1,8356
+    19c4:	8f998034 	lw	t9,-32716(gp)
+    19c8:	8f948028 	lw	s4,-32728(gp)
+    19cc:	0320f809 	jalr	t9
+    19d0:	02402021 	move	a0,s2
+    19d4:	24050002 	li	a1,2
+    19d8:	8fbc0020 	lw	gp,32(sp)
+    19dc:	8f998044 	lw	t9,-32700(gp)
+    19e0:	0320f809 	jalr	t9
+    19e4:	26841efc 	addiu	a0,s4,7932
+    19e8:	8fbc0020 	lw	gp,32(sp)
+    19ec:	0441000c 	bgez	v0,1a20 <cfgInitial@@Base+0x228>
+    19f0:	00409021 	move	s2,v0
+    19f4:	26861efc 	addiu	a2,s4,7932
+    19f8:	8f828048 	lw	v0,-32696(gp)
+    19fc:	2413ffff 	li	s3,-1
+    1a00:	8f858028 	lw	a1,-32728(gp)
+[31m    1a04:	8f998078 	lw	t9,fprintf[0m
+    1a08:	8c440000 	lw	a0,0(v0)
+    1a0c:	0320f809 	jalr	t9
+    1a10:	24a5208c 	addiu	a1,a1,8332
+    1a14:	8fbc0020 	lw	gp,32(sp)
+    1a18:	1000006f 	b	1bd8 <cfgInitial@@Base+0x3e0>
+    1a1c:	00000000 	nop
+    1a20:	8f998084 	lw	t9,-32636(gp)
+    1a24:	00402021 	move	a0,v0
+    1a28:	00002821 	move	a1,zero
+    1a2c:	0320f809 	jalr	t9
+    1a30:	00003021 	move	a2,zero
+    1a34:	24064799 	li	a2,18329
+    1a38:	02402021 	move	a0,s2
+    1a3c:	8fbc0020 	lw	gp,32(sp)
+    1a40:	8f99806c 	lw	t9,-32660(gp)
+    1a44:	0320f809 	jalr	t9
+    1a48:	26050008 	addiu	a1,s0,8
+    1a4c:	8a270004 	lwl	a3,4(s1)
+    1a50:	8e06000c 	lw	a2,12(s0)
+    1a54:	9a270007 	lwr	a3,7(s1)
+    1a58:	8fbc0020 	lw	gp,32(sp)
+    1a5c:	10c70008 	beq	a2,a3,1a80 <cfgInitial@@Base+0x288>
+    1a60:	00000000 	nop
+    1a64:	8f828048 	lw	v0,-32696(gp)
+    1a68:	24130001 	li	s3,1
+    1a6c:	8f858028 	lw	a1,-32728(gp)
+    1a70:	8c440000 	lw	a0,0(v0)
+[31m    1a74:	8f998078 	lw	t9,fprintf[0m
+    1a78:	10000043 	b	1b88 <cfgInitial@@Base+0x390>
+    1a7c:	24a520d4 	addiu	a1,a1,8404
+    1a80:	8e060008 	lw	a2,8(s0)
+    1a84:	14d30006 	bne	a2,s3,1aa0 <cfgInitial@@Base+0x2a8>
+    1a88:	3c0366e6 	lui	v1,0x66e6
+    1a8c:	8a02479d 	lwl	v0,18333(s0)
+    1a90:	3463f634 	ori	v1,v1,0xf634
+    1a94:	9a0247a0 	lwr	v0,18336(s0)
+    1a98:	1043000b 	beq	v0,v1,1ac8 <cfgInitial@@Base+0x2d0>
+    1a9c:	2615001a 	addiu	s5,s0,26
+    1aa0:	8a07479d 	lwl	a3,18333(s0)
+    1aa4:	24130001 	li	s3,1
+    1aa8:	8f828048 	lw	v0,-32696(gp)
+    1aac:	8f858028 	lw	a1,-32728(gp)
+    1ab0:	8c440000 	lw	a0,0(v0)
+    1ab4:	9a0747a0 	lwr	a3,18336(s0)
+    1ab8:	24a52108 	addiu	a1,a1,8456
+[31m    1abc:	8f998078 	lw	t9,fprintf[0m
+    1ac0:	10000031 	b	1b88 <cfgInitial@@Base+0x390>
+    1ac4:	00000000 	nop
+    1ac8:	8f948048 	lw	s4,-32696(gp)
+    1acc:	8a060016 	lwl	a2,22(s0)
+    1ad0:	02a03821 	move	a3,s5
+    1ad4:	27b3003a 	addiu	s3,sp,58
+    1ad8:	8f858028 	lw	a1,-32728(gp)
+[31m    1adc:	8f998078 	lw	t9,fprintf[0m
+    1ae0:	8e840000 	lw	a0,0(s4)
+    1ae4:	9a060019 	lwr	a2,25(s0)
+    1ae8:	0320f809 	jalr	t9
+    1aec:	24a52130 	addiu	a1,a1,8496
+    1af0:	02603821 	move	a3,s3
+    1af4:	8fbc0020 	lw	gp,32(sp)
+    1af8:	8a26000e 	lwl	a2,14(s1)
+    1afc:	8f858028 	lw	a1,-32728(gp)
+[31m    1b00:	8f998078 	lw	t9,fprintf[0m
+    1b04:	8e840000 	lw	a0,0(s4)
+    1b08:	9a260011 	lwr	a2,17(s1)
+    1b0c:	0320f809 	jalr	t9
+    1b10:	24a5216c 	addiu	a1,a1,8556
+    1b14:	8a140016 	lwl	s4,22(s0)
+    1b18:	8a27000e 	lwl	a3,14(s1)
+    1b1c:	9a140019 	lwr	s4,25(s0)
+    1b20:	9a270011 	lwr	a3,17(s1)
+    1b24:	8fbc0020 	lw	gp,32(sp)
+    1b28:	12870008 	beq	s4,a3,1b4c <cfgInitial@@Base+0x354>
+    1b2c:	02803021 	move	a2,s4
+    1b30:	8f828048 	lw	v0,-32696(gp)
+    1b34:	24130001 	li	s3,1
+    1b38:	8f858028 	lw	a1,-32728(gp)
+    1b3c:	8c440000 	lw	a0,0(v0)
+[31m    1b40:	8f998078 	lw	t9,fprintf[0m
+    1b44:	10000010 	b	1b88 <cfgInitial@@Base+0x390>
+    1b48:	24a521a8 	addiu	a1,a1,8616
+    1b4c:	8f998050 	lw	t9,-32688(gp)
+    1b50:	02602821 	move	a1,s3
+    1b54:	0320f809 	jalr	t9
+    1b58:	02a02021 	move	a0,s5
+    1b5c:	8fbc0020 	lw	gp,32(sp)
+    1b60:	8f838048 	lw	v1,-32696(gp)
+[31m    1b64:	8f998078 	lw	t9,fprintf[0m
+    1b68:	1040000b 	beqz	v0,1b98 <cfgInitial@@Base+0x3a0>
+    1b6c:	02a03021 	move	a2,s5
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m10[0m times [0;33mlibUserConfig.so[0m
+

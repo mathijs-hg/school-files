@@ -1,0 +1,85 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 5:[0m
+[0musername_check=`/usr/sbin/userconfig -read USER_ADMIN Username1`[0m
+[32m               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+username_check=$(/usr/sbin/userconfig -read USER_ADMIN Username1)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 6:[0m
+[0mpassword_check=`/usr/sbin/userconfig -read USER_ADMIN Password1`[0m
+[32m               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+password_check=$(/usr/sbin/userconfig -read USER_ADMIN Password1)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 7:[0m
+[0mcheck_value=1[0m
+[33m^---------^ SC2034 (warning): check_value appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 10:[0m
+[0mif [ "$username" == "$username_check" ] && [ "$password" == "$password_check" ]; then[0m
+[33m                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 16:[0m
+[0m	username_check=`/usr/sbin/userconfig -read USER_GENERAL Username$i`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	username_check=$(/usr/sbin/userconfig -read USER_GENERAL Username$i)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 17:[0m
+[0m	password_check=`/usr/sbin/userconfig -read USER_GENERAL Password$i`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	password_check=$(/usr/sbin/userconfig -read USER_GENERAL Password$i)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 18:[0m
+[0m	if [ "$username" == "$username_check" ] && [ "$password" == "$password_check" ]; then[0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 21:[0m
+[0m	i=$(($i + 1))[0m
+[32m             ^-- SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 26:[0m
+[0m	username_check=`/usr/sbin/userconfig -read USER_GUEST Username$i`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	username_check=$(/usr/sbin/userconfig -read USER_GUEST Username$i)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 27:[0m
+[0m	password_check=`/usr/sbin/userconfig -read USER_GUEST Password$i`[0m
+[32m                       ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	password_check=$(/usr/sbin/userconfig -read USER_GUEST Password$i)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 28:[0m
+[0m	if [ "$username" == "$username_check" ] && [ "$password" == "$password_check" ]; then[0m
+[33m                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                                 ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/verify_user.sh line 31:[0m
+[0m	i=$(($i + 1))[0m
+[32m             ^-- SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- check_value appears unused. Verif...
+  https://www.shellcheck.net/wiki/SC3014 -- In POSIX sh, == in place of = is ...
+  https://www.shellcheck.net/wiki/SC2004 -- $/${} is unnecessary on arithmeti...

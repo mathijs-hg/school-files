@@ -9,72 +9,468 @@ a vendor binary.
 
 [[0;33m*[0m] Vulnerable functions: fprintf mmap popen printf sprintf strcat strcpy system
 
-[[0;32m+[0m][0;32m /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 14 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libhistory.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 30 [0m/ [0;33mstrlen: 25 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/lib/libreadline.so.5.2 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 85 [0m/ [0;33mstrlen: 71 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/mii_mgr (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/hw_nat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 51 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/regs (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/mpstat (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/hw_nat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/regs (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 1 [0m/ [0;33mCorrect error handling: 1 [0m[0m
-[[0;32m+[0m][0;32m /usr/bin/mpstat (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/regs (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/switch (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/mpstat (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/switch (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 236 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/switch (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/switch (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwpriv (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 23 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/bin/switch (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwpriv (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 17 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwpriv (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwpriv (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 16 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwlist (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 28 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwconfig (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 24 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiformat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 216 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiattach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 56 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwlist (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 62 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwconfig (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 33 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiformat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 45 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiattach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 12 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/flash_erase (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 106 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwlist (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubidetach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 49 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/rt2860apd (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwconfig (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubirmvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 63 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiformat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiattach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/flash_erase (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubidetach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwlist (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 16 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/rt2860apd (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 372 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /usr/sbin/iwconfig (-rwxrwxr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 17 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubiformat (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubirmvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubimkvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 72 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/flash_erase (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubidetach (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/rt2860apd (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 8 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubirmvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubimkvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubinfo (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 75 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/flash_erase (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 25 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/rt2860apd (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 8 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubimkvol (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubinfo (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 33 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ubinfo (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 15 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
-[[0;32m+[0m][0;32m /sbin/ated_iwpriv (-rwxrwxr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 18 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-server (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 16 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/xtables-multi (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 82 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/iwcontrol (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 46 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/reboot (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-relay (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 14 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-sniff (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 14 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/netmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/fw_upgrade (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 21 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 14 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-server (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/xtables-multi (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1247 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/iwcontrol (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 64 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-relay (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-sniff (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 103 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/netmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 13 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/fw_upgrade (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-server (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/iwcontrol (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 32 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/xtables-multi (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-relay (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-sniff (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/netmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/fw_upgrade (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-server (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/iwcontrol (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 8 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/xtables-multi (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 16 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/pppoe-sniff (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/makeDevUid (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/netmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 61 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_tool_wifi_sitesurvey (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/sysmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /sbin/xtables-multi (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 52 [0m/ [0;33mstrlen: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/netmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 19 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rscam_uvc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 109 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/makeDevUid (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ipfind (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_tool_wifi_sitesurvey (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/sysmgr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 55 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/twinkling (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rscam_uvc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ipfind (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp_igd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 22 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/openssl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 20 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hnap_push_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 45 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ntpclient (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/makeBonjourFile (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 22 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ipfind (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp_igd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 57 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/bundle_restore (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtkmib (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/openssl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 69 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ntpclient (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 37 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/msger (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/makeBonjourFile (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp_igd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 15 [0m/ [0;33mstrlen: 7 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/bundle_restore (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSClientPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 20 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtkmib (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/openssl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/msger (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/userconfig (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/getpreviewimg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/bundle_restore (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/wanip_detect (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSClientPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mdb (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 33 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtsp/rtspd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/msger (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/openssl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/userconfig (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 17 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/wanip_detect (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSClientPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mdb (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 24 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtsp/rtspd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 31 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/dlinkpsk (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/userconfig (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hwmon (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/wanip_detect (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 10 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 5 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtsp/rtspd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 26 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mdb (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/factory_reset (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/userconfig (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/schboot (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hwmon (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 42 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 49 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mdb (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 8 [0m/ [0;33mstrlen: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtsp/rtspd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSResponderPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 35 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/factory_reset (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/httpd-manager (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hwmon (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/userconfig (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/schboot (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mdb (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/upnp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtsp/rtspd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 18 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/factory_reset (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/httpd-manager (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSResponderPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/hwmon (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mkdosfs (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/cfg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/llmnr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 39 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mDNSResponderPosix (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/pppd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 9 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/set_passwd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mkdosfs (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 38 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/cfg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/elog (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 65 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/llmnr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 6 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/pppd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 12 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/mkdosfs (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/md5sum (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/cfg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/elog (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/llmnr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 181 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/pppd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/cfg (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libMsgctrl.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 31 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 96 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libEventLog.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 1 [0m/ [0;33mCorrect error handling: 1 [0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libProfile.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/pppd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVmtd.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 29 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVnetwork.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVbase64.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libRingBuf.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libProfile.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVmtd.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/ddp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 32 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVnetwork.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 7 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 60 [0m/ [0;33mstrlen: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 8 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 23 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libRingBuf.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libasp.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVmtd.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVnetwork.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/eventd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 19 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libHttpNotify.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libssl.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libutl.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 15 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libweb.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 25 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libHttpNotify.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfgbackup.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libutl.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 12 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libssl.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libweb.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 46 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libHttpNotify.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfgbackup.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 144 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libutl.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libweb.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libUserConfig.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libHttpNotify.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfgbackup.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libutl.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libweb.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 15 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libUserConfig.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 42 [0m/ [0;33mstrlen: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libnet.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/sbin/rtmp/crtmpserver (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libutl.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libweb.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 15 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcrypto.so.1.0.0 (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 7 [0m/ [0;33mstrlen: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFtp.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 9 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVwireless.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libnet.so.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 20 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVconfig.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 24 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVsystem.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libEMail.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/iwpriv (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 28 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFtp.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/flash_eraseall (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libcfg.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libutil-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVsystem.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libEMail.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFtp.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 5 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/iwpriv (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/flash_eraseall (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVsystem.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 7 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libEMail.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/iwpriv (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 24 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libpthread-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 1 [0m/ [0;33mCorrect error handling: 2 [0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libFVsystem.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/lib/libEMail.so (-rw-r--r-- root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 9 [0m/ [0;33mstrlen: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libcrypt-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /usr/bin/iwpriv (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 18 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libdl-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libm-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libstdc++.so.6.0.13 (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libcrypt-0.9.30.3.so (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/httpd_check (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libcurl.so.4.3.0 (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/tsa (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 30 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/upnpc-ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 346 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/httpd_check (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /server/camsvr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 121 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/httpd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 220 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/tsa (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /lib/libstdc++.so.6.0.13 (-rwxr-xr-x 500 500)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/upnp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/upnpc-ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 2 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/httpd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 1 [0m/ [0;33mCorrect error handling: 0 [0m[0m
+[[0;32m+[0m][0;32m /mydlink/tsa (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 9 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_mod.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /server/camsvr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mmmap [0m/ [0;31mFunction count: 1 [0m/ [0;33mCorrect error handling: 1 [0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 10 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor_reset.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 74 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/upnpc-ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 364 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/notify_stream.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 14 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/tsa (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 14 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/httpd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_mod.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /server/camsvr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 114 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 9 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor_reset.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 5 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/upnpc-ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 18 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/tsa (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_mod.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/httpd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 8 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /server/camsvr (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/stream_auth.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 21 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/upnpc-ddns (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 17 [0m/ [0;33mstrlen: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/audio.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/httpd (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 0 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/network.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 17 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/stream_auth.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/datetime.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 14 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/dcp (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/system_reset.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/stream_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 45 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/audio.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /mydlink/signalc (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/led.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/network.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/datetime.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 13 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/pppoe.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/httpport.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/system_reset.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/stream_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/network.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/led.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/motion.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/datetime.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/pppoe.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/stream_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/httpport.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor_output.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/scheduled_reboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/motion.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wlansignal.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless_ap.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/group_list.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/rtspurl.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 12 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/scheduled_reboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/irled.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/https.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless_ap.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/group_list.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/ddns.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wps.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/rtspurl.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/sensor.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/scheduled_reboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/irled.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/https.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 28 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/ddns.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/timestamp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/scheduled_reboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/icr.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wlansurvey.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 23 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/audio_detection.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/system_reboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/ddns.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_del.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/timestamp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/icr.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_list.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/event_log.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/audio_detection.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/video.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 17 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/icr.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 11 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/camera_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_del.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/video_type.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_list.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/event_log.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/wireless.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/mic.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/video.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_del.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/camera_info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/user_list.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 3 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/notify.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 14 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/firmwareupgrade.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/video.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/mic.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/common/info.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/config/firmwareupgrade.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/users/env_sound_lv.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/users/verify.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/setconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 29 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/autodiscover.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/queryconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/unbindsetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 28 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/setconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/autodiscover.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/greece/rhea (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/greece/zeus (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 79 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/setconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/unbindsetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/autodiscover.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/ad.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/setconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/unbindsetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/autodiscover.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/whardfactorydefault.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/tools.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/ad.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/serverreport.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 93 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/unbindsetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 3 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/setconf.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 5 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventrecording.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/tools.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/email.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/localrecording/unbindsetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 2 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/network.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wad.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventrecording.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wifichannel.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/serverSetting.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/tools.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 60 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventrecording.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wifichannel.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wad.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/camera.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/hnap/hnap_service (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 70 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/param.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 427 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/finish.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/motion.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wpwdgrp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/scheduleReboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/param.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/dayMode.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/update.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/motion.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wpwdgrp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/scheduleReboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/audiovideo.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 10 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/RTS5826.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/param.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/dayMode.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 13 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/update.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/ddns.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/scheduleReboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wireless.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/param.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 66 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/viewer.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/update.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventsnapshot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/restore.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/scheduleReboot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/query/query.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/unittest.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 7 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/update.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/videoclip.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 20 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventsnapshot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/adv_snapshot_cont.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 18 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/restore.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wdatetime.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/unittest.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mpopen [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/testserv.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 22 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/smartwizard.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/videoclip.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 15 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/eventsnapshot.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/adv_snapshot_cont.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 15 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/factorydefault.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/wdatetime.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/unittest.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/hardfactorydefault.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/testserv.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/smartwizard.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 14 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/videoclip.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/firmwareupgrade.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 5 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/adv_snapshot_cont.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 1 [0m/ [0;33mstrlen: 0 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/unittest.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 1 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/ftp.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/curl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/testserv.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/videoclip.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/stunnel (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mfprintf [0m/ [0;31mFunction count: 1 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/admin/adv_snapshot_cont.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 2 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/firmwareupgrade.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 6 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /web/cgi-bin/cgi/unittest.cgi (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 8 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/curl (-rwxr-xr-x root root)[0;36m - common linux file: yes - [0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 4 [0m/ [0;33mstrlen: 4 [0m/ [0;32mnetworking: no[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mprintf [0m/ [0;31mFunction count: 15 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/stunnel (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 6 [0m/ [0;33mstrlen: 4 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msprintf [0m/ [0;31mFunction count: 115 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcat [0m/ [0;31mFunction count: 8 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36mstrcpy [0m/ [0;31mFunction count: 93 [0m/ [0;33mstrlen: 43 [0m/ [0;33mnetworking: yes[0m[0m[0m
+[[0;32m+[0m][0;32m /bin/wscd (-rwxr-xr-x root root)[0;31m - common linux file: no -[0m Vulnerable function: [0;36msystem [0m/ [0;31mFunction count: 18 [0m/ [0;33mnetworking: yes[0m[0m[0m
 
 
 [0;34m==>[0m [0;36mTop 10 legacy C functions - Objdump disasm mode[0m
@@ -82,89 +478,118 @@ a vendor binary.
 
 
 [[0;32m+[0m][0;32m fprintf - top 10 results:[0m
-[0;33m	216   : ubiformat       : common linux file: no[0m
-[0;33m	106   : flash_erase     : common linux file: no[0m
-[0;33m	75    : ubinfo          : common linux file: no[0m
-[0;33m	72    : ubimkvol        : common linux file: no[0m
-[0;33m	63    : ubirmvol        : common linux file: no[0m
-[0;33m	56    : ubiattach       : common linux file: no[0m
-[0;33m	49    : ubidetach       : common linux file: no[0m
-[0;32m	28    : iwlist          : common linux file: yes[0m
-[0;33m	25    : ated_iwpriv     : common linux file: no[0m
-[0;32m	24    : iwconfig        : common linux file: yes[0m
+[0;33m	427   : param.cgi       : common linux file: no[0m
+[0;33m	346   : upnpc-ddns      : common linux file: no[0m
+[0;32m	220   : httpd           : common linux file: yes[0m
+[0;33m	181   : ddp             : common linux file: no[0m
+[0;33m	121   : camsvr          : common linux file: no[0m
+[0;33m	109   : rscam_uvc       : common linux file: no[0m
+[0;33m	103   : hnap_push_servi : common linux file: no[0m
+[0;32m	82    : xtables-multi   : common linux file: yes[0m
+[0;33m	79    : hnap_service    : common linux file: no[0m
+[0;33m	65    : eventd          : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m mmap - top 10 results:[0m
-[0;33m	1     : regs            : common linux file: no[0m
+[0;33m	1     : libpthread-0.9. : common linux file: no[0m
+[0;32m	1     : httpd           : common linux file: yes[0m
+[0;33m	1     : crtmpserver     : common linux file: no[0m
+[0;33m	1     : camsvr          : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m popen - top 10 results:[0m
-[0;33m	1     : ated_iwpriv     : common linux file: no[0m
+[0;33m	8     : crtmpserver     : common linux file: no[0m
+[0;33m	2     : upnpc-ddns      : common linux file: no[0m
+[0;33m	2     : unbindsetting.c : common linux file: no[0m
+[0;33m	2     : signalc         : common linux file: no[0m
+[0;33m	2     : setconf.cgi     : common linux file: no[0m
+[0;33m	2     : autodiscover.cg : common linux file: no[0m
+[0;33m	1     : unittest.cgi    : common linux file: no[0m
+[0;33m	1     : tsa             : common linux file: no[0m
+[0;33m	1     : dcp             : common linux file: no[0m
+[0;33m	1     : RTS5826.cgi     : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m printf - top 10 results:[0m
-[0;33m	372   : rt2860apd       : common linux file: no[0m
-[0;33m	236   : switch          : common linux file: no[0m
-[0;32m	62    : iwlist          : common linux file: yes[0m
-[0;33m	51    : hw_nat          : common linux file: no[0m
-[0;33m	45    : ubiformat       : common linux file: no[0m
-[0;33m	33    : ubinfo          : common linux file: no[0m
-[0;32m	33    : iwconfig        : common linux file: yes[0m
-[0;32m	20    : mpstat          : common linux file: yes[0m
-[0;32m	17    : iwpriv          : common linux file: yes[0m
-[0;33m	15    : ated_iwpriv     : common linux file: no[0m
+[0;32m	1247  : xtables-multi   : common linux file: yes[0m
+[0;33m	364   : upnpc-ddns      : common linux file: no[0m
+[0;33m	114   : camsvr          : common linux file: no[0m
+[0;32m	69    : openssl         : common linux file: yes[0m
+[0;33m	64    : iwcontrol       : common linux file: no[0m
+[0;33m	42    : hwmon           : common linux file: no[0m
+[0;33m	38    : mkdosfs         : common linux file: no[0m
+[0;33m	37    : ntpclient       : common linux file: no[0m
+[0;33m	31    : rtspd           : common linux file: no[0m
+[0;33m	22    : upnp_igd        : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m sprintf - top 10 results:[0m
-[0;33m	10    : ubinfo          : common linux file: no[0m
-[0;33m	9     : ubirmvol        : common linux file: no[0m
-[0;33m	9     : ubimkvol        : common linux file: no[0m
-[0;33m	9     : ubiformat       : common linux file: no[0m
-[0;33m	8     : rt2860apd       : common linux file: no[0m
-[0;33m	8     : flash_erase     : common linux file: no[0m
-[0;32m	5     : libreadline.so. : common linux file: yes[0m
-[0;32m	5     : iwpriv          : common linux file: yes[0m
-[0;32m	5     : iwlist          : common linux file: yes[0m
-[0;32m	5     : iwconfig        : common linux file: yes[0m
+[0;33m	144   : libFVwireless.s : common linux file: no[0m
+[0;33m	115   : wscd            : common linux file: no[0m
+[0;33m	96    : eventd          : common linux file: no[0m
+[0;33m	93    : hnap_service    : common linux file: no[0m
+[0;33m	74    : dcp             : common linux file: no[0m
+[0;33m	61    : hnap_push_servi : common linux file: no[0m
+[0;33m	57    : upnp_igd        : common linux file: no[0m
+[0;33m	49    : upnp            : common linux file: no[0m
+[0;33m	46    : libweb.so.0     : common linux file: no[0m
+[0;33m	32    : iwcontrol       : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m strcat - top 10 results:[0m
-[0;32m	2     : libreadline.so. : common linux file: yes[0m
+[0;32m	16    : xtables-multi   : common linux file: yes[0m
+[0;33m	8     : wscd            : common linux file: no[0m
+[0;33m	8     : eventd          : common linux file: no[0m
+[0;33m	7     : libFVwireless.s : common linux file: no[0m
+[0;33m	6     : libEMail.so     : common linux file: no[0m
+[0;33m	5     : dcp             : common linux file: no[0m
+[0;33m	4     : signalc         : common linux file: no[0m
+[0;33m	4     : param.cgi       : common linux file: no[0m
+[0;33m	4     : libweb.so.0     : common linux file: no[0m
+[0;32m	4     : libcrypto.so.1. : common linux file: yes[0m
 
 
 
 
 [[0;32m+[0m][0;32m strcpy - top 10 results:[0m
-[0;32m	85    : libreadline.so. : common linux file: yes[0m
-[0;32m	30    : libhistory.so.5 : common linux file: yes[0m
-[0;32m	17    : iwconfig        : common linux file: yes[0m
-[0;32m	16    : iwpriv          : common linux file: yes[0m
-[0;32m	16    : iwlist          : common linux file: yes[0m
-[0;33m	8     : rt2860apd       : common linux file: no[0m
-[0;32m	2     : mpstat          : common linux file: yes[0m
-[0;33m	2     : ated_iwpriv     : common linux file: no[0m
-[0;33m	1     : ubiformat       : common linux file: no[0m
-[0;33m	1     : switch          : common linux file: no[0m
+[0;33m	93    : wscd            : common linux file: no[0m
+[0;33m	60    : hnap_service    : common linux file: no[0m
+[0;33m	60    : eventd          : common linux file: no[0m
+[0;33m	55    : hnap_push_servi : common linux file: no[0m
+[0;32m	52    : xtables-multi   : common linux file: yes[0m
+[0;33m	42    : libFVwireless.s : common linux file: no[0m
+[0;33m	29    : ddp             : common linux file: no[0m
+[0;33m	21    : dcp             : common linux file: no[0m
+[0;33m	20    : libcfg.so       : common linux file: no[0m
+[0;33m	18    : rtspd           : common linux file: no[0m
 
 
 
 
 [[0;32m+[0m][0;32m system - top 10 results:[0m
-[0;33m	1     : switch          : common linux file: no[0m
-[0;33m	1     : ated_iwpriv     : common linux file: no[0m
+[0;33m	70    : hnap_service    : common linux file: no[0m
+[0;33m	66    : param.cgi       : common linux file: no[0m
+[0;33m	45    : hnap_push_servi : common linux file: no[0m
+[0;33m	32    : ddp             : common linux file: no[0m
+[0;33m	24    : libFVconfig.so  : common linux file: no[0m
+[0;33m	20    : mdb             : common linux file: no[0m
+[0;33m	19    : netmgr          : common linux file: no[0m
+[0;33m	19    : eventd          : common linux file: no[0m
+[0;33m	18    : wscd            : common linux file: no[0m
+[0;33m	15    : libweb.so.0     : common linux file: no[0m
 
 
 
-[*] Statistics:180:318
+[*] Statistics:673:218
 
 [*] Statistics1:MIPS

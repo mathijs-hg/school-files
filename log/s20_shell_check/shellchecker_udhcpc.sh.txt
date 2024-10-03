@@ -1,0 +1,326 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 14:[0m
+[0mdpch_ret=-1[0m
+[33m^------^ SC2034 (warning): dpch_ret appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 21:[0m
+[0m	netphy=`msger sinfo 1 net.phy 0|cut -d ' ' -f 4`[0m
+[32m               ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	netphy=$(msger sinfo 1 net.phy 0|cut -d ' ' -f 4)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 22:[0m
+[0m	if [ $netphy -gt 3 ]; then[0m
+[32m             ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ "$netphy" -gt 3 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 23:[0m
+[0m		netphy=$(($netphy-4))[0m
+[32m                          ^-----^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 25:[0m
+[0m	if [ $netphy = 0 ]; then[0m
+[32m             ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ "$netphy" = 0 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 27:[0m
+[0m	elif [ $netphy = 1 ] || [ $netphy = 3 ]; then[0m
+[32m               ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                                  ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	elif [ "$netphy" = 1 ] || [ "$netphy" = 3 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 29:[0m
+[0m	elif [ $netphy = 2 ]; then[0m
+[32m               ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	elif [ "$netphy" = 2 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 36:[0m
+[0m	hostname=`userconfig -read CAMSYSTEM CameraName`[0m
+[32m                 ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	hostname=$(userconfig -read CAMSYSTEM CameraName)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 38:[0m
+[0m		hostname=`userconfig -read System ModelName`[0m
+[32m                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+		hostname=$(userconfig -read System ModelName)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 41:[0m
+[0m	/bin/kill `pidof udhcpc`[0m
+[33m                  ^------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                  ^------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	/bin/kill $(pidof udhcpc)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 46:[0m
+[0m                if [ "$ipAddr" == "" ];then[0m
+[33m                               ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 59:[0m
+[0m		dhcp_count=$(($dhcp_count+1))[0m
+[32m                              ^---------^ SC2004 (style): $/${} is unnecessary on arithmetic variables.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 65:[0m
+[0m		iChannel=`iwpriv wlan0-vxd get_mib channel | cut -d ':' -f 2`[0m
+[32m                         ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+		iChannel=$(iwpriv wlan0-vxd get_mib channel | cut -d ':' -f 2)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 90:[0m
+[0m        dhcp_pid=`pidof udhcpc`[0m
+[32m                 ^------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+        dhcp_pid=$(pidof udhcpc)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 93:[0m
+[0m                ipAddr="`/sbin/ifconfig $iface | sed -nr 's/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'`"[0m
+[32m                        ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                ipAddr="$(/sbin/ifconfig $iface | sed -nr 's/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 105:[0m
+[0m	while [ true ][0m
+[32m                ^--^ SC2160 (style): Instead of '[ true ]', just use 'true'.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 115:[0m
+[0m				/bin/kill `pidof udhcpc`[0m
+[33m                                          ^------------^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                          ^------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+				/bin/kill $(pidof udhcpc)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 124:[0m
+[0m				IndicatedLED=`userconfig -read CAMSYSTEM IndicatedLED`[0m
+[32m                                             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+				IndicatedLED=$(userconfig -read CAMSYSTEM IndicatedLED)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 125:[0m
+[0m				if [ $IndicatedLED = 0x01 ]; then[0m
+[32m                                     ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				if [ "$IndicatedLED" = 0x01 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 126:[0m
+[0m					temp1=`msger hwmon 0 offnetled 0 1 2`[0m
+[32m                                              ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+					temp1=$(msger hwmon 0 offnetled 0 1 2)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 127:[0m
+[0m					temp1=`msger hwmon 0 pwrled 0 1 5 0`[0m
+[32m                                              ^----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+					temp1=$(msger hwmon 0 pwrled 0 1 5 0)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 128:[0m
+[0m					`/etc/init.d/led.sh wpsok`[0m
+[33m                                        ^------------------------^ SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                        ^------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+					$(/etc/init.d/led.sh wpsok)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 135:[0m
+[0m                                `/etc/rc.d/init.d/udhcpd.sh start`[0m
+[33m                                ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(/etc/rc.d/init.d/udhcpd.sh start)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 136:[0m
+[0m                                `ifconfig br0 10.255.255.1`[0m
+[33m                                ^-------------------------^ SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(ifconfig br0 10.255.255.1)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 140:[0m
+[0m                        if [ $dhcp_ret == 1 ] && [ $phylink = "wireless" ]; then[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 142:[0m
+[0m				echo `date`[0m
+[33m                                     ^----^ SC2046 (warning): Quote this to prevent word splitting.[0m
+[32m                                     ^----^ SC2005 (style): Useless echo? Instead of 'echo $(cmd)', just use 'cmd'.[0m
+[32m                                     ^----^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+				echo $(date)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 143:[0m
+[0m				IndicatedLED=`userconfig -read CAMSYSTEM IndicatedLED`[0m
+[32m                                             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+				IndicatedLED=$(userconfig -read CAMSYSTEM IndicatedLED)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 144:[0m
+[0m				if [ $IndicatedLED = 0x01 ]; then[0m
+[32m                                     ^-----------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+				if [ "$IndicatedLED" = 0x01 ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 145:[0m
+[0m					temp1=`msger hwmon 0 offnetled 0 0 2`[0m
+[32m                                              ^-----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+					temp1=$(msger hwmon 0 offnetled 0 0 2)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 146:[0m
+[0m					temp1=`msger hwmon 0 pwrled 0 1 0 5`[0m
+[33m                                        ^---^ SC2034 (warning): temp1 appears unused. Verify use (or export if used externally).[0m
+[32m                                              ^----------------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+					temp1=$(msger hwmon 0 pwrled 0 1 0 5)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 148:[0m
+[0m                                `iwpriv wlan0 set_mib func_off=1`[0m
+[33m                                ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(iwpriv wlan0 set_mib func_off=1)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 149:[0m
+[0m                                `/etc/rc.d/init.d/udhcpd.sh stop`[0m
+[33m                                ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(/etc/rc.d/init.d/udhcpd.sh stop)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 150:[0m
+[0m                        elif [ $dhcp_ret == 1 ] && [ $phylink = "wired" ]; then[0m
+[33m                                         ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 151:[0m
+[0m                                `iwpriv wlan0 set_mib func_off=1`[0m
+[33m                                ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(iwpriv wlan0 set_mib func_off=1)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 152:[0m
+[0m                                `/etc/rc.d/init.d/udhcpd.sh stop`[0m
+[33m                                ^-- SC2092 (warning): Remove backticks to avoid executing output (or use eval if intentional).[0m
+[32m                                ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+                                $(/etc/rc.d/init.d/udhcpd.sh stop)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 154:[0m
+[0m			if [ $dhcp_ret == 0 ] || [ $dhcp_ret == 1 ]; then[0m
+[33m                                       ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+[33m                                                             ^-- SC3014 (warning): In POSIX sh, == in place of = is undefined.[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 175:[0m
+[0m	pid=[0m
+[33m        ^-^ SC2034 (warning): pid appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 176:[0m
+[0m	if [ -f /var/run/$1.pid ]; then[0m
+[32m                         ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	if [ -f /var/run/"$1".pid ]; then
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 177:[0m
+[0m		local line p[0m
+[33m                ^----------^ SC3043 (warning): In POSIX sh, 'local' is undefined.[0m
+[33m                           ^-- SC2034 (warning): p appears unused. Verify use (or export if used externally).[0m
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 178:[0m
+[0m		read line < /var/run/$1.pid[0m
+[32m                ^--^ SC2162 (info): read without -r will mangle backslashes.[0m
+[32m                                     ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		read line < /var/run/"$1".pid
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 179:[0m
+[0m		kill $line[0m
+[32m                     ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+		kill "$line"
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/udhcpc.sh line 181:[0m
+[0m	rm -f /var/run/$1.pid[0m
+[32m                       ^-- SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	rm -f /var/run/"$1".pid
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- dpch_ret appears unused. Verify u...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+  https://www.shellcheck.net/wiki/SC2092 -- Remove backticks to avoid executi...

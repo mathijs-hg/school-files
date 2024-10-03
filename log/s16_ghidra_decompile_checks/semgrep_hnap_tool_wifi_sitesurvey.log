@@ -1,0 +1,860 @@
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00402294_00402294.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00402294_00402294.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m22[0m - [0;33msnprintf(param_3,param_4,"%s",iVar2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m12[0m - [0;33mstrncpy(param_1,__src,param_2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m12[0m - [0;33mstrncpy(param_1,__src,param_2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m14[0m - [0;33miVar2 = (int)param_2 / 2;[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-rand-srand[0m
+        Issue description:
+    The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.
+
+        [0;32m17[0m - [0;33miVar1 = rand();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m17[0m - [0;33miVar1 = rand();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mmemset(auStack_4cf,0,0x3ff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m54[0m - [0;33mlocal_5c = fopen(pcVar6,"w");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m60[0m - [0;33m__s = tmpfile();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m61[0m - [0;33mpcVar6 = (char *)malloc(0x5554);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m61[0m - [0;33mpcVar6 = (char *)malloc(0x5554);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m70[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=2");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m73[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=1");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m76[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=3");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-free[0m
+        Issue description:
+    The software calls free() on a pointer to memory that has a short  lifetime and was not allocated using associated heap allocation  functions such as malloc(), calloc(), or realloc().
+
+        [0;32m80[0m - [0;33mfree(pcVar6);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m95[0m - [0;33mpcVar6 = fgets(&local_4d0,0x400,__s);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m97[0m - [0;33mmemset(acStack_d0,0,0x6b);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m12[0m - [0;33mstrncpy(param_1,__src,param_2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m12[0m - [0;33mstrncpy(param_1,__src,param_2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m14[0m - [0;33miVar2 = (int)param_2 / 2;[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-rand-srand[0m
+        Issue description:
+    The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.
+
+        [0;32m17[0m - [0;33miVar1 = rand();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00401cd0_00401cd0.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m17[0m - [0;33miVar1 = rand();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00402294_00402294.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/FUN_00402294_00402294.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m22[0m - [0;33msnprintf(param_3,param_4,"%s",iVar2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m44[0m - [0;33mmemset(auStack_4cf,0,0x3ff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m54[0m - [0;33mlocal_5c = fopen(pcVar6,"w");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m60[0m - [0;33m__s = tmpfile();[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m61[0m - [0;33mpcVar6 = (char *)malloc(0x5554);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m61[0m - [0;33mpcVar6 = (char *)malloc(0x5554);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m70[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=2");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m73[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=1");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m76[0m - [0;33msystem("iwpriv wlan0 set_mib band2G5GSelected=3");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-free[0m
+        Issue description:
+    The software calls free() on a pointer to memory that has a short  lifetime and was not allocated using associated heap allocation  functions such as malloc(), calloc(), or realloc().
+
+        [0;32m80[0m - [0;33mfree(pcVar6);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m95[0m - [0;33mpcVar6 = fgets(&local_4d0,0x400,__s);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m97[0m - [0;33mmemset(acStack_d0,0,0x6b);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m98[0m - [0;33mstrncpy(acStack_d0,&local_4d0,4);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m99[0m - [0;33mstrncpy(acStack_cb,acStack_4cc,0x21);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m100[0m - [0;33mstrncpy(local_a9,acStack_4ab,0x14);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m101[0m - [0;33mstrncpy(acStack_94,acStack_497,0x17);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m102[0m - [0;33mstrncpy(acStack_7c,acStack_480,10);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-use-of-strncpy-stpncpy-strlcpy[0m
+        Issue description:
+    The software uses the size of a source buffer when reading from or writing to a destination buffer, which may cause it to access memory that is outside of the bounds of the buffer.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m103[0m - [0;33mstrncpy(acStack_71,acStack_476,8);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_hnap_tool_wifi_sitesurvey/main_0040107c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-unterminated-string-strncpy-stpncpy[0m
+        Issue description:
+    If there is no NUL character byte in the first n bytes of the source string, strncpy() and stpncpy() do not NUL-terminate the destination buffer. If the program does not explicitly terminate the destination buffer, this will almost certainly result in information disclosure, and possibly a buffer overflow condition.
+
+        [0;32m104[0m - [0;33mstrncpy(acStack_68,acStack_46e,2);[0m
+
+-----------------------------------------------------------------
+

@@ -1,0 +1,1 @@
+../firmwareupgrade.cgi

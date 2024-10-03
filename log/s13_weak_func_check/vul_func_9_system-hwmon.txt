@@ -1,0 +1,192 @@
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m tear down of [0;33mhwmon[0m
+
+  401c5c:	8fbc0010 	lw	gp,16(sp)
+  401c60:	3c020041 	lui	v0,0x41
+  401c64:	8c444ad0 	lw	a0,19152(v0)
+  401c68:	8f998078 	lw	t9,-32648(gp)
+  401c6c:	0320f809 	jalr	t9
+  401c70:	00000000 	nop
+  401c74:	8fbf001c 	lw	ra,28(sp)
+  401c78:	8fb00018 	lw	s0,24(sp)
+  401c7c:	03e00008 	jr	ra
+  401c80:	27bd0020 	addiu	sp,sp,32
+
+00401c84 <DoWarmReboot@@Base>:
+  401c84:	27bdffe0 	addiu	sp,sp,-32
+  401c88:	afbf001c 	sw	ra,28(sp)
+  401c8c:	3c1c0042 	lui	gp,0x42
+  401c90:	279cc8d0 	addiu	gp,gp,-14128
+  401c94:	afbc0010 	sw	gp,16(sp)
+  401c98:	3c040040 	lui	a0,0x40
+  401c9c:	2484421c 	addiu	a0,a0,16924
+  401ca0:	3c050040 	lui	a1,0x40
+  401ca4:	8f998174 	lw	t9,-32396(gp)
+  401ca8:	0320f809 	jalr	t9
+  401cac:	24a541fc 	addiu	a1,a1,16892
+  401cb0:	8fbc0010 	lw	gp,16(sp)
+  401cb4:	3c040040 	lui	a0,0x40
+[31m  401cb8:	8f998138 	lw	t9,system[0m
+  401cbc:	0320f809 	jalr	t9
+  401cc0:	24844230 	addiu	a0,a0,16944
+  401cc4:	8fbf001c 	lw	ra,28(sp)
+  401cc8:	03e00008 	jr	ra
+  401ccc:	27bd0020 	addiu	sp,sp,32
+
+00401cd0 <DoFactoryReset@@Base>:
+  401cd0:	27bdffe0 	addiu	sp,sp,-32
+  401cd4:	afbf001c 	sw	ra,28(sp)
+  401cd8:	3c1c0042 	lui	gp,0x42
+  401cdc:	279cc8d0 	addiu	gp,gp,-14128
+  401ce0:	afbc0010 	sw	gp,16(sp)
+  401ce4:	3c040040 	lui	a0,0x40
+  401ce8:	24844240 	addiu	a0,a0,16960
+  401cec:	3c050040 	lui	a1,0x40
+  401cf0:	8f998174 	lw	t9,-32396(gp)
+  401cf4:	0320f809 	jalr	t9
+  401cf8:	24a541fc 	addiu	a1,a1,16892
+  401cfc:	8fbc0010 	lw	gp,16(sp)
+  401d00:	3c040040 	lui	a0,0x40
+[31m  401d04:	8f998138 	lw	t9,system[0m
+  401d08:	0320f809 	jalr	t9
+  401d0c:	24844254 	addiu	a0,a0,16980
+  401d10:	8fbc0010 	lw	gp,16(sp)
+  401d14:	3c040040 	lui	a0,0x40
+[31m  401d18:	8f998138 	lw	t9,system[0m
+  401d1c:	0320f809 	jalr	t9
+  401d20:	24844230 	addiu	a0,a0,16944
+--
+  401f4c:	00822024 	and	a0,a0,v0
+  401f50:	00651825 	or	v1,v1,a1
+  401f54:	00042040 	sll	a0,a0,0x1
+  401f58:	00641825 	or	v1,v1,a0
+  401f5c:	306300ff 	andi	v1,v1,0xff
+  401f60:	30620004 	andi	v0,v1,0x4
+  401f64:	304200ff 	andi	v0,v0,0xff
+  401f68:	10400017 	beqz	v0,401fc8 <DoFactoryReset@@Base+0x2f8>
+  401f6c:	30630002 	andi	v1,v1,0x2
+  401f70:	3c040040 	lui	a0,0x40
+  401f74:	248442d0 	addiu	a0,a0,17104
+  401f78:	3c050040 	lui	a1,0x40
+  401f7c:	8f998174 	lw	t9,-32396(gp)
+  401f80:	0320f809 	jalr	t9
+  401f84:	24a541fc 	addiu	a1,a1,16892
+  401f88:	8fbc0010 	lw	gp,16(sp)
+  401f8c:	24040010 	li	a0,16
+  401f90:	8f998128 	lw	t9,-32472(gp)
+  401f94:	0320f809 	jalr	t9
+  401f98:	24050064 	li	a1,100
+  401f9c:	8fbc0010 	lw	gp,16(sp)
+  401fa0:	9623008e 	lhu	v1,142(s1)
+  401fa4:	3c020041 	lui	v0,0x41
+  401fa8:	a4434ac6 	sh	v1,19142(v0)
+  401fac:	3c040040 	lui	a0,0x40
+[31m  401fb0:	8f998138 	lw	t9,system[0m
+  401fb4:	0320f809 	jalr	t9
+  401fb8:	248442e8 	addiu	a0,a0,17128
+  401fbc:	8fbc0010 	lw	gp,16(sp)
+  401fc0:	10000019 	b	402028 <DoFactoryReset@@Base+0x358>
+  401fc4:	3c020041 	lui	v0,0x41
+  401fc8:	306300ff 	andi	v1,v1,0xff
+  401fcc:	10600016 	beqz	v1,402028 <DoFactoryReset@@Base+0x358>
+  401fd0:	3c020041 	lui	v0,0x41
+  401fd4:	3c040040 	lui	a0,0x40
+  401fd8:	24844308 	addiu	a0,a0,17160
+  401fdc:	3c050040 	lui	a1,0x40
+  401fe0:	8f998174 	lw	t9,-32396(gp)
+  401fe4:	0320f809 	jalr	t9
+  401fe8:	24a541fc 	addiu	a1,a1,16892
+  401fec:	8fbc0010 	lw	gp,16(sp)
+  401ff0:	24040010 	li	a0,16
+  401ff4:	8f998128 	lw	t9,-32472(gp)
+  401ff8:	0320f809 	jalr	t9
+  401ffc:	00002821 	move	a1,zero
+  402000:	8fbc0010 	lw	gp,16(sp)
+  402004:	9623008e 	lhu	v1,142(s1)
+  402008:	3c020041 	lui	v0,0x41
+  40200c:	a4434ac6 	sh	v1,19142(v0)
+  402010:	3c040040 	lui	a0,0x40
+[31m  402014:	8f998138 	lw	t9,system[0m
+  402018:	0320f809 	jalr	t9
+  40201c:	24844320 	addiu	a0,a0,17184
+  402020:	8fbc0010 	lw	gp,16(sp)
+  402024:	3c020041 	lui	v0,0x41
+  402028:	94424ac6 	lhu	v0,19142(v0)
+  40202c:	10400023 	beqz	v0,4020bc <DoFactoryReset@@Base+0x3ec>
+  402030:	00000000 	nop
+  402034:	9623008e 	lhu	v1,142(s1)
+  402038:	0043102b 	sltu	v0,v0,v1
+  40203c:	1440000e 	bnez	v0,402078 <DoFactoryReset@@Base+0x3a8>
+  402040:	3c030041 	lui	v1,0x41
+  402044:	3c040040 	lui	a0,0x40
+  402048:	24844340 	addiu	a0,a0,17216
+  40204c:	3c050040 	lui	a1,0x40
+  402050:	8f998174 	lw	t9,-32396(gp)
+  402054:	0320f809 	jalr	t9
+  402058:	24a541fc 	addiu	a1,a1,16892
+  40205c:	8fbc0010 	lw	gp,16(sp)
+  402060:	3c040040 	lui	a0,0x40
+[31m  402064:	8f998138 	lw	t9,system[0m
+  402068:	0320f809 	jalr	t9
+  40206c:	2484435c 	addiu	a0,a0,17244
+  402070:	8fbc0010 	lw	gp,16(sp)
+  402074:	3c030041 	lui	v1,0x41
+  402078:	94624ac6 	lhu	v0,19142(v1)
+  40207c:	2442ffff 	addiu	v0,v0,-1
+  402080:	3042ffff 	andi	v0,v0,0xffff
+  402084:	1440000d 	bnez	v0,4020bc <DoFactoryReset@@Base+0x3ec>
+  402088:	a4624ac6 	sh	v0,19142(v1)
+  40208c:	3c040040 	lui	a0,0x40
+  402090:	24844380 	addiu	a0,a0,17280
+  402094:	3c050040 	lui	a1,0x40
+  402098:	8f998174 	lw	t9,-32396(gp)
+  40209c:	0320f809 	jalr	t9
+  4020a0:	24a541fc 	addiu	a1,a1,16892
+  4020a4:	8fbc0010 	lw	gp,16(sp)
+  4020a8:	3c040040 	lui	a0,0x40
+[31m  4020ac:	8f998138 	lw	t9,system[0m
+  4020b0:	0320f809 	jalr	t9
+  4020b4:	248443a0 	addiu	a0,a0,17312
+--
+  40247c:	8fbc0010 	lw	gp,16(sp)
+  402480:	92420031 	lbu	v0,49(s2)
+  402484:	00022027 	nor	a0,zero,v0
+  402488:	92430030 	lbu	v1,48(s2)
+  40248c:	00832024 	and	a0,a0,v1
+  402490:	a2440032 	sb	a0,50(s2)
+  402494:	00031827 	nor	v1,zero,v1
+  402498:	00621024 	and	v0,v1,v0
+  40249c:	a2420033 	sb	v0,51(s2)
+  4024a0:	92470030 	lbu	a3,48(s2)
+  4024a4:	92460031 	lbu	a2,49(s2)
+  4024a8:	10e60007 	beq	a3,a2,4024c8 <DoFactoryReset@@Base+0x7f8>
+  4024ac:	3c040040 	lui	a0,0x40
+  4024b0:	248443fc 	addiu	a0,a0,17404
+  4024b4:	3c050040 	lui	a1,0x40
+  4024b8:	8f998174 	lw	t9,-32396(gp)
+  4024bc:	0320f809 	jalr	t9
+  4024c0:	24a541fc 	addiu	a1,a1,16892
+  4024c4:	8fbc0010 	lw	gp,16(sp)
+  4024c8:	26024a84 	addiu	v0,s0,19076
+  4024cc:	8c420030 	lw	v0,48(v0)
+  4024d0:	30420200 	andi	v0,v0,0x200
+  4024d4:	10400007 	beqz	v0,4024f4 <DoFactoryReset@@Base+0x824>
+  4024d8:	26024a84 	addiu	v0,s0,19076
+  4024dc:	3c040040 	lui	a0,0x40
+[31m  4024e0:	8f998138 	lw	t9,system[0m
+  4024e4:	0320f809 	jalr	t9
+  4024e8:	24844418 	addiu	a0,a0,17432
+  4024ec:	8fbc0010 	lw	gp,16(sp)
+  4024f0:	26024a84 	addiu	v0,s0,19076
+  4024f4:	8c420030 	lw	v0,48(v0)
+  4024f8:	30420080 	andi	v0,v0,0x80
+  4024fc:	10400007 	beqz	v0,40251c <DoFactoryReset@@Base+0x84c>
+  402500:	3c020041 	lui	v0,0x41
+  402504:	3c040040 	lui	a0,0x40
+[31m  402508:	8f998138 	lw	t9,system[0m
+  40250c:	0320f809 	jalr	t9
+  402510:	24844434 	addiu	a0,a0,17460
+
+[0m
+[[0;33m*[0m] Function [0;33msystem[0m used [0;33m9[0m times [0;33mhwmon[0m
+

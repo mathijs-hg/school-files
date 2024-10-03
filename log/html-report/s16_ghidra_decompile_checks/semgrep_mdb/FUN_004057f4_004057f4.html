@@ -1,0 +1,949 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_mdb.html" title="./../semgrep_mdb.html" >&laquo; Back to semgrep_mdb</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>undefined4 FUN_004057f4(int param_1)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  size_t sVar2;</pre>
+<pre>  FILE *pFVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  undefined4 uVar6;</pre>
+<pre>  size_t sVar7;</pre>
+<pre>  void *pvVar8;</pre>
+<pre>  char *pcVar9;</pre>
+<pre>  int *piVar10;</pre>
+<pre>  int iVar11;</pre>
+<pre>  int iVar12;</pre>
+<pre>  uint local_d80;</pre>
+<pre>  int local_d7c;</pre>
+<pre>  undefined4 local_d78;</pre>
+<pre>  undefined4 local_d74;</pre>
+<pre>  int local_d70;</pre>
+<pre>  uint local_d6c;</pre>
+<pre>  int local_d68;</pre>
+<pre>  int local_d64;</pre>
+<pre>  uint local_d60;</pre>
+<pre>  uint local_d5c;</pre>
+<pre>  undefined local_d58 [256];</pre>
+<pre>  char local_c58;</pre>
+<pre>  undefined local_c57;</pre>
+<pre>  undefined local_c56;</pre>
+<pre>  undefined local_c55;</pre>
+<pre>  undefined local_c54;</pre>
+<pre>  undefined local_c53;</pre>
+<pre>  undefined local_c52;</pre>
+<pre>  undefined local_c51;</pre>
+<pre>  char *local_40;</pre>
+<pre>  char *local_3c;</pre>
+<pre>  char *local_38;</pre>
+<pre>  char *local_34;</pre>
+<pre>  undefined *local_30;</pre>
+<pre>  undefined *local_2c;</pre>
+<pre>  </pre>
+<pre>  local_d80 = 0;</pre>
+<pre>  SIReadInt(0x14,&amp;local_d80);</pre>
+<pre>  pcVar9 = *(char **)(param_1 + 4);</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"admin_passwd");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>    pcVar9 = *(char **)(param_1 + 8);</pre>
+<pre>    sVar2 = strlen(pcVar9);</pre>
+<pre>    if (0x20 &lt; sVar2) {</pre>
+<pre>      return 1;</pre>
+<pre>    }</pre>
+<pre>    if (sVar2 &lt; 6) {</pre>
+<pre>      return 1;</pre>
+<pre>    }</pre>
+<pre>    cfgWrite("USER_ADMIN","Password1",pcVar9,1);</pre>
+<pre>    local_d80 = local_d80 | 1;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"register_st");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    iVar1 = atoi(*(char **)(param_1 + 8));</pre>
+<pre>    local_d6c = local_d6c &amp; 0xffffff | iVar1 &lt;&lt; 0x18;</pre>
+<pre>    cfgWrite("MYDLINK","RegisterStatus",&amp;local_d6c,1);</pre>
+<pre>    local_d80 = local_d80 | 2;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_0");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,&amp;DAT_0040b248,&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,&amp;DAT_0040b248,&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 4;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_1");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr1",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr1",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 8;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_2");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr2",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr2",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x10;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_3");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr3",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr3",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x20;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_4");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr4",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr4",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x40;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_5");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr5",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr5",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x80;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_6");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr6",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr6",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x100;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_7");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr7",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr7",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x200;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_8");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr8",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr8",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x400;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"attr_9");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_c58 = '\0';</pre>
+<pre><span class="green">    memset(&amp;local_c57,0,0xc17)</span></span></pre>
+<pre><span class="green"><span class="green"><span class="green">    strncpy(&amp;local_c58,*(char **)(param_1 + 8),0xc18)</span></span></span></span></pre>
+<pre><span class="green"><span class="green">    iVar1 = stat("/mnt/flash/config/mdbcfg.ini",(stat *)local_d58)</span></span></span></pre>
+<pre>    if (iVar1 &lt; 0) {</pre>
+<pre><span class="green">      pFVar3 = fopen("/mnt/flash/config/mdbcfg.ini","wb")</span></span></pre>
+<pre>      fflush(pFVar3);</pre>
+<pre>      fclose(pFVar3);</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr9",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      CfgSetField("/mnt/flash/config/mdbcfg.ini",&amp;DAT_0040bf30,"attr9",&amp;local_c58);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x800;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"wan_mode");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    local_d6c = atoi(*(char **)(param_1 + 8));</pre>
+<pre>    if (local_d6c == 0) {</pre>
+<pre>      local_d6c = 1;</pre>
+<pre>      cfgWrite("NETWORK_V4","BootProto",&amp;local_d6c,1);</pre>
+<pre>    }</pre>
+<pre>    else if (local_d6c == 1) {</pre>
+<pre>      local_d6c = 0;</pre>
+<pre>      cfgWrite("NETWORK_V4","BootProto",&amp;local_d6c,1);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x1000;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"static_ip_info");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>    FUN_00404bc0(param_1);</pre>
+<pre>    piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>    iVar1 = 0;</pre>
+<pre>    if (0 &lt; *piVar10) {</pre>
+<pre>      local_3c = "D2";</pre>
+<pre>      local_2c = &amp;DAT_0040b334;</pre>
+<pre>      local_30 = &amp;DAT_0040b32c;</pre>
+<pre>      local_34 = "Gateway";</pre>
+<pre>      local_38 = "SubnetMask";</pre>
+<pre>      local_40 = "IP";</pre>
+<pre>      iVar4 = 0;</pre>
+<pre>      do {</pre>
+<pre>        pcVar9 = *(char **)((int)piVar10 + iVar4 + 4);</pre>
+<pre>        iVar4 = strcasecmp(pcVar9,"I");</pre>
+<pre>        if (iVar4 == 0) {</pre>
+<pre>          cfgWrite("NETWORK_V4",local_40,piVar10[iVar1 + 0x81],1);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = strcasecmp(pcVar9,"N");</pre>
+<pre>          if (iVar4 == 0) {</pre>
+<pre>            cfgWrite("NETWORK_V4",local_38,piVar10[iVar1 + 0x81],1);</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar4 = strcasecmp(pcVar9,"G");</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              cfgWrite("NETWORK_V4",local_34,piVar10[iVar1 + 0x81],1);</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar4 = strcasecmp(pcVar9,"D1");</pre>
+<pre>              if (iVar4 == 0) {</pre>
+<pre>                cfgWrite("NETWORK_V4",local_30,piVar10[iVar1 + 0x81],1);</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar4 = strcasecmp(pcVar9,local_3c);</pre>
+<pre>                if (iVar4 == 0) {</pre>
+<pre>                  cfgWrite("NETWORK_V4",local_2c,piVar10[iVar1 + 0x81],1);</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        iVar1 = iVar1 + 1;</pre>
+<pre>        piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>        iVar4 = iVar1 * 4;</pre>
+<pre>      } while (iVar1 &lt; *piVar10);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x2000;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"pppoe_info");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>    FUN_00404bc0(param_1);</pre>
+<pre>    piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>    iVar1 = 0;</pre>
+<pre>    if (0 &lt; *piVar10) {</pre>
+<pre>      local_38 = "PPPoEPWD";</pre>
+<pre>      local_3c = "PPPoEUID";</pre>
+<pre>      local_40 = "PPPoEEnable";</pre>
+<pre>      iVar4 = 0;</pre>
+<pre>      do {</pre>
+<pre>        pcVar9 = *(char **)((int)piVar10 + iVar4 + 4);</pre>
+<pre>        iVar4 = strcasecmp(pcVar9,"E");</pre>
+<pre>        if (iVar4 == 0) {</pre>
+<pre>          iVar4 = atoi((char *)piVar10[iVar1 + 0x81]);</pre>
+<pre>          local_d6c = local_d6c &amp; 0xffffff | iVar4 &lt;&lt; 0x18;</pre>
+<pre>          cfgWrite("NETWORK_V4",local_40,&amp;local_d6c,1);</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar4 = strcasecmp(pcVar9,"U");</pre>
+<pre>          if (iVar4 == 0) {</pre>
+<pre>            cfgWrite("NETWORK_V4",local_3c,piVar10[iVar1 + 0x81],1);</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar4 = strcasecmp(pcVar9,"P");</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              cfgWrite("NETWORK_V4",local_38,piVar10[iVar1 + 0x81],1);</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>        iVar1 = iVar1 + 1;</pre>
+<pre>        piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>        iVar4 = iVar1 * 4;</pre>
+<pre>      } while (iVar1 &lt; *piVar10);</pre>
+<pre>    }</pre>
+<pre>    local_d80 = local_d80 | 0x4000;</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"wlan_st_info");</pre>
+<pre>  if (iVar1 == 0) {</pre>
+<pre>    return 1;</pre>
+<pre>  }</pre>
+<pre>  iVar1 = strcasecmp(pcVar9,"wlan_info");</pre>
+<pre>  if (iVar1 != 0) {</pre>
+<pre>    iVar1 = strcasecmp(pcVar9,"time");</pre>
+<pre>    if (iVar1 == 0) {</pre>
+<pre>      local_d7c = 0;</pre>
+<pre>      local_d78 = 0;</pre>
+<pre>      local_d74 = 0;</pre>
+<pre>      local_d70 = 0;</pre>
+<pre>      local_d6c = 0;</pre>
+<pre>      local_d5c = 0;</pre>
+<pre>      local_d60 = 0;</pre>
+<pre>      local_d64 = 0;</pre>
+<pre>      local_d68 = 0;</pre>
+<pre>      iVar1 = sscanf(*(char **)(param_1 + 8),"%d:%d:%d:%d:%d:%d:%d:%d",&amp;local_d78,&amp;local_d7c,</pre>
+<pre><span class="green">                     &amp;local_d70,&amp;local_d6c,&amp;local_d5c,&amp;local_d60,&amp;local_d64,&amp;local_d68)</span></span></pre>
+<pre>      if (iVar1 != 8) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x99 &lt; local_d7c - 1U) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x81 &lt; local_d70 - 0x7b3U) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (10 &lt; local_d6c - 2) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x1d &lt; local_d5c - 2) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x16 &lt; local_d60 - 1) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x3a &lt; local_d64 - 1U) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      if (0x3a &lt; local_d68 - 1U) {</pre>
+<pre>        return 1;</pre>
+<pre>      }</pre>
+<pre>      local_d74 = get_real_timezone_id(3);</pre>
+<pre>      cfgWrite("DATETIME","TimeZone",&amp;local_d74,1);</pre>
+<pre>      FUN_004054d4();</pre>
+<pre>      FUN_004053f0(local_d70,local_d6c,local_d5c,local_d60,local_d64,local_d68);</pre>
+<pre>      local_d80 = local_d80 | 0x20000;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      iVar1 = strcasecmp(pcVar9,"ntpsetting");</pre>
+<pre>      if (iVar1 == 0) {</pre>
+<pre>        local_d6c = local_d6c &amp; 0xffffff;</pre>
+<pre>        local_d58[0] = '\0';</pre>
+<pre><span class="green">        memset(local_d58 + 1,0,0xff)</span></span></pre>
+<pre>        local_d68 = 0;</pre>
+<pre>        local_d64 = 0;</pre>
+<pre>        local_d60 = 0;</pre>
+<pre>        local_d5c = 0;</pre>
+<pre>        iVar1 = sscanf(*(char **)(param_1 + 8),"%d:%d:%[^:]:%u",&amp;local_d60,&amp;local_d68,local_d58,</pre>
+<pre><span class="green">                       &amp;local_d5c)</span></span></pre>
+<pre>        if (iVar1 != 4) {</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        if (1 &lt; local_d60) {</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        if (0x19 &lt; local_d68 + 0xcU) {</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        if (1 &lt; local_d5c) {</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        uVar6 = __floatsisf();</pre>
+<pre>        local_d64 = get_real_timezone_id_by_offset(uVar6);</pre>
+<pre>        if (local_d64 == -1) {</pre>
+<pre>          return 1;</pre>
+<pre>        }</pre>
+<pre>        cfgWrite("DATETIME","TimeZone",&amp;local_d64,1);</pre>
+<pre>        cfgWrite("DATETIME","Protocol",&amp;local_d60,1);</pre>
+<pre>        cfgWrite("DATETIME","NTPServerIP",local_d58,1);</pre>
+<pre>        local_d6c = local_d6c &amp; 0xffffff | local_d5c &lt;&lt; 0x18;</pre>
+<pre>        cfgWrite("MYDLINK","LRCLockDateTime",&amp;local_d6c,1);</pre>
+<pre>        FUN_004054d4();</pre>
+<pre>        if (local_d60 == 1) {</pre>
+<pre><span class="green">          system("/etc/init.d/ntpc.sh stop 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre><span class="green">          system("/usr/sbin/msger sinfo 0 sntpstate 0 0 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre><span class="green">          system("/etc/init.d/ntpc.sh start 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre><span class="green">          system("/etc/init.d/ntpc.sh stop 2&gt;/dev/null 1&gt;/dev/null")</span></span></pre>
+<pre>        }</pre>
+<pre>        local_d80 = local_d80 | 0x100000;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar1 = strcasecmp(pcVar9,"lrmapping");</pre>
+<pre>        if (iVar1 == 0) {</pre>
+<pre><span class="green">          sVar2 = strlen(*(char **)(param_1 + 8))</span></span></pre>
+<pre><span class="green">          pFVar3 = fopen("/mnt/flash/config/lrmapping.dat","wb")</span></span></pre>
+<pre>          if (pFVar3 == (FILE *)0x0) {</pre>
+<pre>            return 1;</pre>
+<pre>          }</pre>
+<pre><span class="green">          sVar7 = 0</span></span></pre>
+<pre>          while (0 &lt; (int)sVar2) {</pre>
+<pre>            pvVar8 = (void *)(*(int *)(param_1 + 8) + sVar7);</pre>
+<pre>            *(void **)(param_1 + 8) = pvVar8;</pre>
+<pre><span class="green">            sVar7 = fwrite(pvVar8,1,sVar2,pFVar3)</span></span></pre>
+<pre>            sVar2 = sVar2 - sVar7;</pre>
+<pre>            if ((int)sVar7 &lt; 1) {</pre>
+<pre>              fclose(pFVar3);</pre>
+<pre>              return 1;</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>          fclose(pFVar3);</pre>
+<pre>          local_d80 = local_d80 | 0x200000;</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          iVar1 = strcasecmp(pcVar9,"lrunmapping");</pre>
+<pre>          if (iVar1 == 0) {</pre>
+<pre><span class="green">            sVar2 = strlen(*(char **)(param_1 + 8))</span></span></pre>
+<pre><span class="green">            pFVar3 = fopen("/mnt/flash/config/lrunmapping.dat","wb")</span></span></pre>
+<pre>            if (pFVar3 == (FILE *)0x0) {</pre>
+<pre>              return 1;</pre>
+<pre>            }</pre>
+<pre><span class="green">            sVar7 = 0</span></span></pre>
+<pre>            while (0 &lt; (int)sVar2) {</pre>
+<pre>              pvVar8 = (void *)(*(int *)(param_1 + 8) + sVar7);</pre>
+<pre>              *(void **)(param_1 + 8) = pvVar8;</pre>
+<pre><span class="green">              sVar7 = fwrite(pvVar8,1,sVar2,pFVar3)</span></span></pre>
+<pre>              sVar2 = sVar2 - sVar7;</pre>
+<pre>              if ((int)sVar7 &lt; 1) {</pre>
+<pre>                fclose(pFVar3);</pre>
+<pre>                return 1;</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>            fclose(pFVar3);</pre>
+<pre>            local_d80 = local_d80 | 0x2000000;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar1 = strcasecmp(pcVar9,"lrthreshold");</pre>
+<pre>            if (iVar1 == 0) {</pre>
+<pre>              local_d5c = atoi(*(char **)(param_1 + 8));</pre>
+<pre>              cfgWrite("MYDLINK","LRCThreshold",&amp;local_d5c,1);</pre>
+<pre>              local_d80 = local_d80 | 0x400000;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar1 = strcasecmp(pcVar9,"mydlink_server_availability");</pre>
+<pre>              if (iVar1 == 0) {</pre>
+<pre>                iVar1 = atoi(*(char **)(param_1 + 8));</pre>
+<pre>                local_d6c = local_d6c &amp; 0xffffff | iVar1 &lt;&lt; 0x18;</pre>
+<pre>                cfgWrite("MYDLINK","ServerAvailability",&amp;local_d6c,1);</pre>
+<pre>                local_d80 = local_d80 | 0x40000;</pre>
+<pre>              }</pre>
+<pre>              else {</pre>
+<pre>                iVar1 = strcasecmp(pcVar9,"device_recording");</pre>
+<pre>                if (iVar1 == 0) {</pre>
+<pre>                  local_d6c = local_d6c &amp; 0xffffff;</pre>
+<pre>                  pcVar9 = *(char **)(param_1 + 8);</pre>
+<pre>                  iVar1 = strcmp(pcVar9,(char *)&amp;DAT_0040b24c);</pre>
+<pre>                  if ((iVar1 != 0) &amp;&amp; (iVar1 = strcmp(pcVar9,(char *)&amp;DAT_0040c078), iVar1 != 0)) {</pre>
+<pre>                    return 1;</pre>
+<pre>                  }</pre>
+<pre>                  iVar1 = atoi(pcVar9);</pre>
+<pre>                  local_d6c = local_d6c &amp; 0xffffff | iVar1 &lt;&lt; 0x18;</pre>
+<pre>                  cfgWrite("MYDLINK","LRCEnable",&amp;local_d6c,1);</pre>
+<pre>                  local_d80 = local_d80 | 0x80000;</pre>
+<pre>                }</pre>
+<pre>                else {</pre>
+<pre>                  iVar1 = strcasecmp(pcVar9,"policy");</pre>
+<pre>                  if (iVar1 == 0) {</pre>
+<pre>                    if (stderr != 0) {</pre>
+<pre>                      fwrite("mdbSet: Got SetDCHPolicy Request\n",1,0x21,(FILE *)stderr);</pre>
+<pre>                    }</pre>
+<pre>                    qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                    iVar1 = checkSetPolicyType(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                    if (iVar1 == 0) {</pre>
+<pre>                      SetNotifierSettingsHandle(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                    }</pre>
+<pre>                    else if (iVar1 == 1) {</pre>
+<pre>                      DoActionHandle(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                    }</pre>
+<pre>                    else if (iVar1 == 2) {</pre>
+<pre>                      SetDCHPolicyHandle(*(undefined4 *)(param_1 + 8));</pre>
+<pre><span class="green">                      system("msger hnap_push_service 0 hreview_policy 0 0&amp;")</span></span></pre>
+<pre>                    }</pre>
+<pre>                    local_d80 = local_d80 | 0x800000;</pre>
+<pre>                  }</pre>
+<pre>                  else {</pre>
+<pre>                    iVar1 = strcasecmp(pcVar9,"event");</pre>
+<pre>                    if (iVar1 == 0) {</pre>
+<pre>                      if (stderr != 0) {</pre>
+<pre>                        fwrite("mdbSet: Got PushDCHEvent Request\n",1,0x21,(FILE *)stderr);</pre>
+<pre>                      }</pre>
+<pre>                      qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                      PushDCHEventHandle(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                      local_d80 = local_d80 | 0x1000000;</pre>
+<pre>                    }</pre>
+<pre>                    else {</pre>
+<pre>                      iVar1 = strcasecmp(pcVar9,"reload_http_service");</pre>
+<pre>                      if (iVar1 != 0) {</pre>
+<pre>                        return 1;</pre>
+<pre>                      }</pre>
+<pre>                      if (stderr != 0) {</pre>
+<pre>                        fwrite("mdbSet: Got reload_http_service\n",1,0x20,(FILE *)stderr);</pre>
+<pre>                      }</pre>
+<pre>                      qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>                      iVar1 = atoi(*(char **)(param_1 + 8));</pre>
+<pre>                      if (iVar1 == 1) {</pre>
+<pre>                        local_d80 = local_d80 | 0x4000000;</pre>
+<pre>                      }</pre>
+<pre>                    }</pre>
+<pre>                  }</pre>
+<pre>                }</pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>    goto LAB_00407c5c;</pre>
+<pre>  }</pre>
+<pre>  qryStringDecode(*(undefined4 *)(param_1 + 8));</pre>
+<pre>  FUN_00404bc0(param_1);</pre>
+<pre>  local_d6c = 0xffffffff;</pre>
+<pre>  local_d58[0] = '\0';</pre>
+<pre><span class="green">  memset(local_d58 + 1,0,0x7f)</span></span></pre>
+<pre>  piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>  iVar1 = 0;</pre>
+<pre>  if (*piVar10 &lt; 1) {</pre>
+<pre>    iVar12 = -1;</pre>
+<pre>    local_40 = (char *)0xffffffff;</pre>
+<pre>    iVar4 = -1;</pre>
+<pre>LAB_00406f6c:</pre>
+<pre>    if (iVar12 - 3U &lt; 3) {</pre>
+<pre>      if (iVar12 == 3) {</pre>
+<pre>        if (local_40 == (char *)0x2) {</pre>
+<pre>          local_d78 = 2;</pre>
+<pre>          local_d7c = 3;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x3) {</pre>
+<pre>          local_d7c = 2;</pre>
+<pre>          local_d78 = 2;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x4) {</pre>
+<pre>          local_d78 = 2;</pre>
+<pre>          local_d7c = 4;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else if (iVar12 == 4) {</pre>
+<pre>        if (local_40 == (char *)0x2) {</pre>
+<pre>          local_d7c = 3;</pre>
+<pre>          local_d78 = 3;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x3) {</pre>
+<pre>          local_d78 = 3;</pre>
+<pre>          local_d7c = 2;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x4) {</pre>
+<pre>          local_d7c = 3;</pre>
+<pre>          local_d78 = 4;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else if (iVar12 == 5) {</pre>
+<pre>        local_d78 = 4;</pre>
+<pre>        local_d7c = 4;</pre>
+<pre>        cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>        cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>        cfgWrite("WIRELESS","PreSharedKey",local_d58,1);</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_40 = (char *)0xffffffff;</pre>
+<pre>    iVar12 = -1;</pre>
+<pre>    local_3c = "E";</pre>
+<pre>    local_38 = "K";</pre>
+<pre>    local_34 = local_d58;</pre>
+<pre>    iVar11 = -1;</pre>
+<pre>    do {</pre>
+<pre>      pcVar9 = (char *)piVar10[iVar1 + 1];</pre>
+<pre>      iVar4 = strcasecmp(pcVar9,"M");</pre>
+<pre>      if (iVar4 == 0) {</pre>
+<pre>        local_d6c = atoi((char *)piVar10[iVar1 + 0x81]);</pre>
+<pre>        iVar4 = iVar11;</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        iVar5 = strcasecmp(pcVar9,"I");</pre>
+<pre>        iVar4 = iVar1;</pre>
+<pre>        if (iVar5 != 0) {</pre>
+<pre>          iVar4 = strcasecmp(pcVar9,"S");</pre>
+<pre>          if (iVar4 == 0) {</pre>
+<pre>            iVar12 = atoi((char *)piVar10[iVar1 + 0x81]);</pre>
+<pre>            iVar4 = iVar11;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar4 = strcasecmp(pcVar9,local_3c);</pre>
+<pre>            if (iVar4 == 0) {</pre>
+<pre>              local_40 = (char *)atoi((char *)piVar10[iVar1 + 0x81]);</pre>
+<pre>              iVar4 = iVar11;</pre>
+<pre>            }</pre>
+<pre>            else {</pre>
+<pre>              iVar5 = strcasecmp(pcVar9,local_38);</pre>
+<pre>              iVar4 = iVar11;</pre>
+<pre>              if (iVar5 == 0) {</pre>
+<pre><span class="green"><span class="green">                strcpy(local_34,(char *)piVar10[iVar1 + 0x81])</span></span></span></pre>
+<pre>              }</pre>
+<pre>            }</pre>
+<pre>          }</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      iVar1 = iVar1 + 1;</pre>
+<pre>      piVar10 = *(int **)(param_1 + 0xc);</pre>
+<pre>      iVar11 = iVar4;</pre>
+<pre>    } while (iVar1 &lt; *piVar10);</pre>
+<pre>    if (iVar12 == 0) {</pre>
+<pre>      local_d78 = 0;</pre>
+<pre>      cfgWrite("WIRELESS","Encryption",&amp;local_d78,1);</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre>      if (1 &lt; iVar12 - 1U) goto LAB_00406f6c;</pre>
+<pre>      if (iVar12 == 1) {</pre>
+<pre>        if (local_40 == (char *)0x0) {</pre>
+<pre>          local_d78 = 0;</pre>
+<pre>          local_d7c = 1;</pre>
+<pre>          local_d74 = 0;</pre>
+<pre>          local_d70 = 0;</pre>
+<pre>          local_c58 = '\0';</pre>
+<pre>          local_c57 = 0;</pre>
+<pre>          local_c56 = 0;</pre>
+<pre>          local_c55 = 0;</pre>
+<pre>          local_c54 = 0;</pre>
+<pre>          local_c53 = 0;</pre>
+<pre>          local_c52 = 0;</pre>
+<pre>          local_c51 = 0;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","WEPKeyLength",&amp;local_d74,1);</pre>
+<pre>          cfgRead("WIRELESS","WEPActiveKey",&amp;local_d70);</pre>
+<pre><span class="green">          sprintf(&amp;local_c58,"WEPKey%d",local_d70)</span></span></pre>
+<pre>          cfgWrite("WIRELESS",&amp;local_c58,local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x1) {</pre>
+<pre>          local_d70 = 0;</pre>
+<pre>          local_d74 = 1;</pre>
+<pre>          local_d7c = 1;</pre>
+<pre>          local_d78 = 0;</pre>
+<pre>          local_c58 = '\0';</pre>
+<pre>          local_c57 = 0;</pre>
+<pre>          local_c56 = 0;</pre>
+<pre>          local_c55 = 0;</pre>
+<pre>          local_c54 = 0;</pre>
+<pre>          local_c53 = 0;</pre>
+<pre>          local_c52 = 0;</pre>
+<pre>          local_c51 = 0;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d70,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d74,1);</pre>
+<pre>          cfgWrite("WIRELESS","WEPKeyLength",&amp;local_d7c,1);</pre>
+<pre>          cfgRead("WIRELESS","WEPActiveKey",&amp;local_d78);</pre>
+<pre><span class="green">          sprintf(&amp;local_c58,"WEPKey%d",local_d78)</span></span></pre>
+<pre>          cfgWrite("WIRELESS",&amp;local_c58,local_d58,1);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      else if (iVar12 == 2) {</pre>
+<pre>        if (local_40 == (char *)0x0) {</pre>
+<pre>          local_d78 = 1;</pre>
+<pre>          local_d7c = 1;</pre>
+<pre>          local_d74 = 0;</pre>
+<pre>          local_d70 = 0;</pre>
+<pre>          local_c58 = '\0';</pre>
+<pre>          local_c57 = 0;</pre>
+<pre>          local_c56 = 0;</pre>
+<pre>          local_c55 = 0;</pre>
+<pre>          local_c54 = 0;</pre>
+<pre>          local_c53 = 0;</pre>
+<pre>          local_c52 = 0;</pre>
+<pre>          local_c51 = 0;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d78,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d7c,1);</pre>
+<pre>          cfgWrite("WIRELESS","WEPKeyLength",&amp;local_d74,1);</pre>
+<pre>          cfgRead("WIRELESS","WEPActiveKey",&amp;local_d70);</pre>
+<pre><span class="green">          sprintf(&amp;local_c58,"WEPKey%d",local_d70)</span></span></pre>
+<pre>          cfgWrite("WIRELESS",&amp;local_c58,local_d58,1);</pre>
+<pre>        }</pre>
+<pre>        else if (local_40 == (char *)0x1) {</pre>
+<pre>          local_d70 = 1;</pre>
+<pre>          local_d74 = 1;</pre>
+<pre>          local_d7c = 1;</pre>
+<pre>          local_d78 = 0;</pre>
+<pre>          local_c58 = '\0';</pre>
+<pre>          local_c57 = 0;</pre>
+<pre>          local_c56 = 0;</pre>
+<pre>          local_c55 = 0;</pre>
+<pre>          local_c54 = 0;</pre>
+<pre>          local_c53 = 0;</pre>
+<pre>          local_c52 = 0;</pre>
+<pre>          local_c51 = 0;</pre>
+<pre>          cfgWrite("WIRELESS","Authentication",&amp;local_d70,1);</pre>
+<pre>          cfgWrite("WIRELESS","Encryption",&amp;local_d74,1);</pre>
+<pre>          cfgWrite("WIRELESS","WEPKeyLength",&amp;local_d7c,1);</pre>
+<pre>          cfgRead("WIRELESS","WEPActiveKey",&amp;local_d78);</pre>
+<pre><span class="green">          sprintf(&amp;local_c58,"WEPKey%d",local_d78)</span></span></pre>
+<pre>          cfgWrite("WIRELESS",&amp;local_c58,local_d58,1);</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if (local_d6c != 0xffffffff) {</pre>
+<pre>    cfgWrite("WIRELESS",&amp;DAT_0040b408,&amp;local_d6c,1);</pre>
+<pre>  }</pre>
+<pre>  if (iVar4 != -1) {</pre>
+<pre>    cfgWrite("WIRELESS",&amp;DAT_0040b410,</pre>
+<pre>             *(undefined4 *)(*(int *)(param_1 + 0xc) + (iVar4 + 0x80) * 4 + 4),1);</pre>
+<pre>  }</pre>
+<pre>  local_d80 = local_d80 | 0x10000;</pre>
+<pre>LAB_00407c5c:</pre>
+<pre>  SIWriteInt(0x14,local_d80);</pre>
+<pre>  if (stdout != (FILE *)0x0) {</pre>
+<pre>    fprintf(stdout,"%d\n",1);</pre>
+<pre>  }</pre>
+<pre>  return 0;</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

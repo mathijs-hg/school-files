@@ -1,0 +1,84 @@
+2024-09-30 21:42:02 INFO  (LoggingInitialization) Using log config file: jar:file:/external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2024-09-30 21:42:02 INFO  (LoggingInitialization) Using log file: /logs/s16_ghidra_decompile_checks/ghidra_rtkmib_10075.txt  
+2024-09-30 21:42:02 INFO  (Preferences) Loading user preferences: /root/.ghidra/.ghidra_10.2.3_PUBLIC/preferences  
+2024-09-30 21:42:17 INFO  (ClassSearcher) Class search complete (15298 ms)  
+2024-09-30 21:42:18 INFO  (SSLContextInitializer) Initializing SSL Context  
+2024-09-30 21:42:19 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2024-09-30 21:42:19 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2024-09-30 21:42:19 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2024-09-30 21:42:25 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /external/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Debug/Debugger-agent-frida/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts  
+2024-09-30 21:42:25 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2024-09-30 21:42:25 INFO  (HeadlessAnalyzer) Creating project: /logs/s16_ghidra_decompile_checks/ghidra_rtkmib_10075  
+2024-09-30 21:42:26 INFO  (DefaultProject) Creating project: /logs/s16_ghidra_decompile_checks/ghidra_rtkmib_10075  
+2024-09-30 21:42:26 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2024-09-30 21:42:26 INFO  (HeadlessAnalyzer)      project: /logs/s16_ghidra_decompile_checks/ghidra_rtkmib_10075  
+2024-09-30 21:42:26 INFO  (HeadlessAnalyzer) IMPORTING: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:42:37 INFO  (AutoImporter) Using Loader: Executable and Linking Format (ELF)  
+2024-09-30 21:42:40 DEBUG (ElfHeader) Elf symbol table section .dynsym linked to string table section .dynstr  
+2024-09-30 21:42:40 DEBUG (ElfProgramBuilder) Discarding 12-byte alignment/filler segment_4.6 at 00411064  
+2024-09-30 21:42:40 DEBUG (ElfProgramBuilder) Discarding 8-byte alignment/filler segment_3.11 at 004007b8  
+2024-09-30 21:42:42 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "MIPS:BE:32:default" and cspec "default" for file: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:42:44 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:42:51 INFO  (PackedDatabaseCache) Packed database cache: /tmp/root-Ghidra/packed-db-cache  
+2024-09-30 21:42:52 DEBUG (PackedDatabaseCache) Using cached packed database: /external/ghidra/ghidra_10.2.3_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2024-09-30 21:43:01 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              4.096 secs
+    Apply Data Archives                        3.524 secs
+    Call Convention ID                         0.578 secs
+    Call-Fixup Installer                       0.002 secs
+    Create Address Tables                      0.058 secs
+    Create Function                            0.044 secs
+    Data Reference                             0.155 secs
+    Decompiler Switch Analysis                 2.438 secs
+    Demangler GNU                              0.266 secs
+    Disassemble Entry Points                   1.695 secs
+    Embedded Media                             0.147 secs
+    External Entry References                  0.000 secs
+    Function Start Search                      0.279 secs
+    GCC Exception Handlers                     0.102 secs
+    MIPS Constant Reference Analyzer           1.644 secs
+    MIPS Symbol                                0.027 secs
+    MIPS UnAlligned Instruction Fix            0.013 secs
+    Non-Returning Functions - Discovered       0.001 secs
+    Non-Returning Functions - Known            0.002 secs
+    Reference                                  0.147 secs
+    Shared Return Calls                        0.146 secs
+    Stack                                      1.260 secs
+    Subroutine References                      0.005 secs
+    Subroutine References - One Time           0.000 secs
+-----------------------------------------------------
+     Total Time   16 secs
+-----------------------------------------------------
+  
+2024-09-30 21:43:01 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:43:02 INFO  (HeadlessAnalyzer) SCRIPT: /external/ghidra_scripts/Haruspex.java  
+2024-09-30 21:43:02 INFO  (GhidraScript) 
+Haruspex.java - Extract Ghidra decompiler's pseudo-code  
+2024-09-30 21:43:02 INFO  (GhidraScript) Copyright (c) 2022 Marco Ivaldi <raptor@0xdeadbeef.info>
+  
+2024-09-30 21:43:02 INFO  (GhidraScript) Output directory not supplied, using default "/tmp/haruspex_rtkmib".  
+2024-09-30 21:43:02 INFO  Output directory not supplied, using default "/tmp/haruspex_rtkmib".  
+2024-09-30 21:43:02 INFO  (GhidraScript) Extracting pseudo-code from 8 functions...
+  
+2024-09-30 21:43:05 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:43:05 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/usr/sbin/rtkmib  
+2024-09-30 21:43:06 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /rtkmib  

@@ -1,0 +1,480 @@
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m12[0m - [0;33mmemset(auStack_123,0,0xff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m18[0m - [0;33msprintf(&local_124,"/var/reboot -d %d 2>/dev/null 1>/dev/null&",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-command-injection[0m
+        Issue description:
+    The software constructs an OS command using externally-influenced input,  but it does not neutralize or incorrectly neutralizes special elements  that could modify the intended OS command.
+
+        [0;32m19[0m - [0;33msystem(&local_124);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m19[0m - [0;33msystem(&local_124);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m18[0m - [0;33msignal(2,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m19[0m - [0;33msignal(0xf,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m20[0m - [0;33msignal(3,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m21[0m - [0;33msignal(0xb,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m22[0m - [0;33msignal(0x10,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m23[0m - [0;33msignal(0x11,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m24[0m - [0;33msignal(0xd,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m25[0m - [0;33msignal(0x12,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-access-stat-lstat[0m
+        Issue description:
+    The software checks the state of a resource before using it, but the  resource's state can change between the check and the use in a way that  invalidates the results of the check. This canmcause the software to  perform invalid actions when the resource is inman unexpected state.
+
+        [0;32m39[0m - [0;33miVar1 = stat(*(char **)(param_2 + 4),&sStack_c0);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m39[0m - [0;33miVar1 = stat(*(char **)(param_2 + 4),&sStack_c0);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m48[0m - [0;33m__stream = fopen(*(char **)(param_2 + 4),"r");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m58[0m - [0;33msystem("/etc/init.d/stop_daemon_when_fwup.sh 2>/dev/null 1>/dev/null");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m62[0m - [0;33m__ptr = malloc(sStack_c0.st_blocks);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m75[0m - [0;33msVar2 = 0;[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-unsigned-comparison[0m
+        Issue description:
+    Checking if an unsigned variable is negative makes no sense and is usually a good indication that something is probably wrong with the code.
+
+        [0;32m81[0m - [0;33mif ((int)sVar2 < 0) {[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m103[0m - [0;33msystem("/usr/sbin/twinkling 2>/dev/null 1>/dev/null&");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m106[0m - [0;33msystem("/usr/sbin/userconfig -backup /mnt/flash/config/restore.ini 2>/dev/null 1>/dev/null");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m12[0m - [0;33mmemset(auStack_123,0,0xff);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m18[0m - [0;33msprintf(&local_124,"/var/reboot -d %d 2>/dev/null 1>/dev/null&",param_1);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-command-injection[0m
+        Issue description:
+    The software constructs an OS command using externally-influenced input,  but it does not neutralize or incorrectly neutralizes special elements  that could modify the intended OS command.
+
+        [0;32m19[0m - [0;33msystem(&local_124);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/FUN_00400a6c_00400a6c.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m19[0m - [0;33msystem(&local_124);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m18[0m - [0;33msignal(2,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m19[0m - [0;33msignal(0xf,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m20[0m - [0;33msignal(3,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m21[0m - [0;33msignal(0xb,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m22[0m - [0;33msignal(0x10,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m23[0m - [0;33msignal(0x11,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m24[0m - [0;33msignal(0xd,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-signal[0m
+        Issue description:
+    The signal() API should be regarded as deprecated. When possible, sigaction() should be used instead, because it allows to precisely specify the desired behavior in case two signals arrive shortly after each other thus preventing many race conditions.
+
+        [0;32m25[0m - [0;33msignal(0x12,(__sighandler_t)&LAB_00400a08);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-insecure-api-access-stat-lstat[0m
+        Issue description:
+    The software checks the state of a resource before using it, but the  resource's state can change between the check and the use in a way that  invalidates the results of the check. This canmcause the software to  perform invalid actions when the resource is inman unexpected state.
+
+        [0;32m39[0m - [0;33miVar1 = stat(*(char **)(param_2 + 4),&sStack_c0);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m39[0m - [0;33miVar1 = stat(*(char **)(param_2 + 4),&sStack_c0);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m48[0m - [0;33m__stream = fopen(*(char **)(param_2 + 4),"r");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m58[0m - [0;33msystem("/etc/init.d/stop_daemon_when_fwup.sh 2>/dev/null 1>/dev/null");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m62[0m - [0;33m__ptr = malloc(sStack_c0.st_blocks);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m75[0m - [0;33msVar2 = 0;[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-signed-unsigned-conversion[0m
+        Issue description:
+    The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.
+
+        [0;32m79[0m - [0;33msVar2 = fread(__ptr_00,1,__n,__stream);[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-incorrect-unsigned-comparison[0m
+        Issue description:
+    Checking if an unsigned variable is negative makes no sense and is usually a good indication that something is probably wrong with the code.
+
+        [0;32m81[0m - [0;33mif ((int)sVar2 < 0) {[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m103[0m - [0;33msystem("/usr/sbin/twinkling 2>/dev/null 1>/dev/null&");[0m
+
+-----------------------------------------------------------------
+
+[[0;32m+[0m][0;32m Identified source function: [0;33m/logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c[0m[0m
+[REF] /logs/s16_ghidra_decompile_checks/haruspex_fw_upgrade/main_00400bc8.c
+        Semgrep rule: [0;33mexternal.semgrep-rules-0xdea.c.raptor-interesting-api-calls[0m
+        Issue description:
+    Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.
+
+        [0;32m106[0m - [0;33msystem("/usr/sbin/userconfig -backup /mnt/flash/config/restore.ini 2>/dev/null 1>/dev/null");[0m
+
+-----------------------------------------------------------------
+

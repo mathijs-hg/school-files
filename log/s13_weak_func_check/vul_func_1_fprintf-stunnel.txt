@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mstunnel[0m
+
+  41d3b4:	2402ffff 	li	v0,-1
+	...
+
+0041d3c0 <ui_config_reloaded@@Base>:
+  41d3c0:	03e00008 	jr	ra
+  41d3c4:	00000000 	nop
+
+0041d3c8 <ui_new_chain@@Base>:
+  41d3c8:	03e00008 	jr	ra
+  41d3cc:	00000000 	nop
+  41d3d0:	03e00008 	jr	ra
+  41d3d4:	00000000 	nop
+  41d3d8:	03e00008 	jr	ra
+  41d3dc:	00001021 	move	v0,zero
+  41d3e0:	03e00008 	jr	ra
+  41d3e4:	00001021 	move	v0,zero
+
+0041d3e8 <ui_new_log@@Base>:
+  41d3e8:	3c1c0002 	lui	gp,0x2
+  41d3ec:	279c0fa8 	addiu	gp,gp,4008
+  41d3f0:	0399e021 	addu	gp,gp,t9
+  41d3f4:	8f8283d8 	lw	v0,-31784(gp)
+  41d3f8:	00803021 	move	a2,a0
+  41d3fc:	8f858024 	lw	a1,-32732(gp)
+  41d400:	8c440000 	lw	a0,0(v0)
+[31m  41d404:	8f998234 	lw	t9,fprintf[0m
+  41d408:	24a5587c 	addiu	a1,a1,22652
+  41d40c:	03200008 	jr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m1[0m times [0;33mstunnel[0m
+

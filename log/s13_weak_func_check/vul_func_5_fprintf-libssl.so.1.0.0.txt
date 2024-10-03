@@ -1,0 +1,151 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mlibssl.so.1.0.0[0m
+
+    d9b4:	24050088 	li	a1,136
+    d9b8:	1000ff72 	b	d784 <ssl3_get_cert_verify@@Base+0x2ec>
+    d9bc:	24060041 	li	a2,65
+    d9c0:	8f998488 	lw	t9,-31608(gp)
+    d9c4:	0320f809 	jalr	t9
+    d9c8:	00402021 	move	a0,v0
+    d9cc:	8fbc0018 	lw	gp,24(sp)
+    d9d0:	1c40000d 	bgtz	v0,da08 <ssl3_get_cert_verify@@Base+0x570>
+    d9d4:	24020040 	li	v0,64
+    d9d8:	8f99896c 	lw	t9,-30356(gp)
+    d9dc:	0320f809 	jalr	t9
+    d9e0:	02802021 	move	a0,s4
+    d9e4:	24020c47 	li	v0,3143
+    d9e8:	8fbc0018 	lw	gp,24(sp)
+    d9ec:	24040014 	li	a0,20
+    d9f0:	24050088 	li	a1,136
+    d9f4:	8f87802c 	lw	a3,-32724(gp)
+    d9f8:	8f9980ac 	lw	t9,-32596(gp)
+    d9fc:	afa20010 	sw	v0,16(sp)
+    da00:	1000ff5f 	b	d780 <ssl3_get_cert_verify@@Base+0x2e8>
+    da04:	24e77720 	addiu	a3,a3,30496
+    da08:	12620008 	beq	s3,v0,da2c <ssl3_get_cert_verify@@Base+0x594>
+    da0c:	02603021 	move	a2,s3
+    da10:	8f82855c 	lw	v0,-31396(gp)
+    da14:	8f85802c 	lw	a1,-32724(gp)
+[31m    da18:	8f998370 	lw	t9,fprintf[0m
+    da1c:	8c440000 	lw	a0,0(v0)
+    da20:	0320f809 	jalr	t9
+--
+   262c0:	0040b821 	move	s7,v0
+   262c4:	8f99807c 	lw	t9,-32644(gp)
+   262c8:	0320f809 	jalr	t9
+   262cc:	00402021 	move	a0,v0
+   262d0:	3c03000f 	lui	v1,0xf
+   262d4:	34630007 	ori	v1,v1,0x7
+   262d8:	24040002 	li	a0,2
+   262dc:	00431024 	and	v0,v0,v1
+   262e0:	8fbc0010 	lw	gp,16(sp)
+   262e4:	14440042 	bne	v0,a0,263f0 <tls1_enc@@Base+0x204>
+   262e8:	00000000 	nop
+   262ec:	8f99891c 	lw	t9,-30436(gp)
+   262f0:	0320f809 	jalr	t9
+   262f4:	02e02021 	move	a0,s7
+   262f8:	28430002 	slti	v1,v0,2
+   262fc:	8fbc0010 	lw	gp,16(sp)
+   26300:	1460003b 	bnez	v1,263f0 <tls1_enc@@Base+0x204>
+   26304:	00000000 	nop
+   26308:	8e630140 	lw	v1,320(s3)
+   2630c:	8e64013c 	lw	a0,316(s3)
+   26310:	1083000c 	beq	a0,v1,26344 <tls1_enc@@Base+0x158>
+   26314:	240702ff 	li	a3,767
+   26318:	8f82855c 	lw	v0,-31396(gp)
+   2631c:	8f858024 	lw	a1,-32732(gp)
+   26320:	8f868024 	lw	a2,-32732(gp)
+[31m   26324:	8f998370 	lw	t9,fprintf[0m
+   26328:	24a5879c 	addiu	a1,a1,-30820
+   2632c:	8c440000 	lw	a0,0(v0)
+--
+   30098:	02021023 	subu	v0,s0,v0
+   3009c:	8fbf0024 	lw	ra,36(sp)
+   300a0:	8fb00020 	lw	s0,32(sp)
+   300a4:	03e00008 	jr	ra
+   300a8:	27bd0028 	addiu	sp,sp,40
+
+000300ac <dtls1_read_failed@@Base>:
+   300ac:	3c1c0004 	lui	gp,0x4
+   300b0:	279ca024 	addiu	gp,gp,-24540
+   300b4:	0399e021 	addu	gp,gp,t9
+   300b8:	27bdffd8 	addiu	sp,sp,-40
+   300bc:	afbf0024 	sw	ra,36(sp)
+   300c0:	afb10020 	sw	s1,32(sp)
+   300c4:	afb0001c 	sw	s0,28(sp)
+   300c8:	afbc0010 	sw	gp,16(sp)
+   300cc:	00a08021 	move	s0,a1
+   300d0:	18a0000d 	blez	a1,30108 <dtls1_read_failed@@Base+0x5c>
+   300d4:	00808821 	move	s1,a0
+   300d8:	8f82855c 	lw	v0,-31396(gp)
+   300dc:	24070498 	li	a3,1176
+   300e0:	8f858024 	lw	a1,-32732(gp)
+   300e4:	24100001 	li	s0,1
+   300e8:	8f868024 	lw	a2,-32732(gp)
+   300ec:	8c440000 	lw	a0,0(v0)
+   300f0:	24a58a98 	addiu	a1,a1,-30056
+[31m   300f4:	8f998370 	lw	t9,fprintf[0m
+   300f8:	0320f809 	jalr	t9
+   300fc:	24c68a8c 	addiu	a2,a2,-30068
+--
+   30dcc:	afb20038 	sw	s2,56(sp)
+   30dd0:	afb10034 	sw	s1,52(sp)
+   30dd4:	afb00030 	sw	s0,48(sp)
+   30dd8:	afbc0010 	sw	gp,16(sp)
+   30ddc:	30a6ffff 	andi	a2,a1,0xffff
+   30de0:	afa0001c 	sw	zero,28(sp)
+   30de4:	27a50018 	addiu	a1,sp,24
+   30de8:	afa00018 	sw	zero,24(sp)
+   30dec:	00061a02 	srl	v1,a2,0x8
+   30df0:	8c82005c 	lw	v0,92(a0)
+   30df4:	00808021 	move	s0,a0
+   30df8:	a3a6001f 	sb	a2,31(sp)
+   30dfc:	00e09021 	move	s2,a3
+   30e00:	a3a3001e 	sb	v1,30(sp)
+   30e04:	8f99876c 	lw	t9,-30868(gp)
+   30e08:	8c440248 	lw	a0,584(v0)
+   30e0c:	0320f809 	jalr	t9
+   30e10:	afa60028 	sw	a2,40(sp)
+   30e14:	8fbc0010 	lw	gp,16(sp)
+   30e18:	8fa60028 	lw	a2,40(sp)
+   30e1c:	1440000a 	bnez	v0,30e48 <dtls1_retransmit_message@@Base+0xa8>
+   30e20:	24130001 	li	s3,1
+   30e24:	8f82855c 	lw	v0,-31396(gp)
+   30e28:	00008821 	move	s1,zero
+   30e2c:	8f858024 	lw	a1,-32732(gp)
+[31m   30e30:	8f998370 	lw	t9,fprintf[0m
+   30e34:	8c440000 	lw	a0,0(v0)
+   30e38:	0320f809 	jalr	t9
+--
+   32464:	0320f809 	jalr	t9
+   32468:	00000000 	nop
+   3246c:	8fbc0010 	lw	gp,16(sp)
+   32470:	8f998094 	lw	t9,-32620(gp)
+   32474:	0320f809 	jalr	t9
+   32478:	00402021 	move	a0,v0
+   3247c:	8fbc0010 	lw	gp,16(sp)
+   32480:	044000b4 	bltz	v0,32754 <dtls1_enc@@Base+0x354>
+   32484:	0040a021 	move	s4,v0
+   32488:	8e360058 	lw	s6,88(s1)
+   3248c:	8e32008c 	lw	s2,140(s1)
+   32490:	1240004f 	beqz	s2,325d0 <dtls1_enc@@Base+0x1d0>
+   32494:	26d00130 	addiu	s0,s6,304
+   32498:	8f998494 	lw	t9,-31596(gp)
+   3249c:	0320f809 	jalr	t9
+   324a0:	02402021 	move	a0,s2
+   324a4:	00409821 	move	s3,v0
+   324a8:	8ec3013c 	lw	v1,316(s6)
+   324ac:	8ec20140 	lw	v0,320(s6)
+   324b0:	8fbc0010 	lw	gp,16(sp)
+   324b4:	1062000c 	beq	v1,v0,324e8 <dtls1_enc@@Base+0xe8>
+   324b8:	240700a2 	li	a3,162
+   324bc:	8f82855c 	lw	v0,-31396(gp)
+   324c0:	8f858024 	lw	a1,-32732(gp)
+   324c4:	8f868024 	lw	a2,-32732(gp)
+[31m   324c8:	8f998370 	lw	t9,fprintf[0m
+   324cc:	24a5879c 	addiu	a1,a1,-30820
+   324d0:	8c440000 	lw	a0,0(v0)
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m5[0m times [0;33mlibssl.so.1.0.0[0m
+

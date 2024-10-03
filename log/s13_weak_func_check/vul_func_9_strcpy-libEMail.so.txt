@@ -1,0 +1,215 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibEMail.so[0m
+
+    1014:	248605cc 	addiu	a2,a0,1484
+    1018:	02402021 	move	a0,s2
+    101c:	8f99805c 	lw	t9,-32676(gp)
+    1020:	24a53134 	addiu	a1,a1,12596
+    1024:	0320f809 	jalr	t9
+    1028:	2611064c 	addiu	s1,s0,1612
+    102c:	8fbc0010 	lw	gp,16(sp)
+    1030:	8f998040 	lw	t9,strlen
+    1034:	0320f809 	jalr	t9
+    1038:	02402021 	move	a0,s2
+    103c:	02202021 	move	a0,s1
+    1040:	00003821 	move	a3,zero
+    1044:	8fbc0010 	lw	gp,16(sp)
+    1048:	00403021 	move	a2,v0
+    104c:	8f998024 	lw	t9,-32732(gp)
+    1050:	27390ea0 	addiu	t9,t9,3744
+    1054:	0320f809 	jalr	t9
+    1058:	02402821 	move	a1,s2
+    105c:	8fbc0010 	lw	gp,16(sp)
+    1060:	10400003 	beqz	v0,1070 <mailInit@@Base+0x2a0>
+    1064:	2402fed3 	li	v0,-301
+    1068:	1000004a 	b	1194 <mailInit@@Base+0x3c4>
+    106c:	2403fed3 	li	v1,-301
+    1070:	8f858024 	lw	a1,-32732(gp)
+    1074:	02402021 	move	a0,s2
+[31m    1078:	8f9980c8 	lw	t9,strcpy[0m
+    107c:	0320f809 	jalr	t9
+    1080:	24a53144 	addiu	a1,a1,12612
+--
+    1140:	8f998088 	lw	t9,-32632(gp)
+    1144:	02402021 	move	a0,s2
+    1148:	0320f809 	jalr	t9
+    114c:	24a53470 	addiu	a1,a1,13424
+    1150:	8fbc0010 	lw	gp,16(sp)
+    1154:	8f998040 	lw	t9,strlen
+    1158:	0320f809 	jalr	t9
+    115c:	02402021 	move	a0,s2
+    1160:	02202021 	move	a0,s1
+    1164:	00003821 	move	a3,zero
+    1168:	8fbc0010 	lw	gp,16(sp)
+    116c:	00403021 	move	a2,v0
+    1170:	8f938024 	lw	s3,-32732(gp)
+    1174:	26730ea0 	addiu	s3,s3,3744
+    1178:	0260c821 	move	t9,s3
+    117c:	0320f809 	jalr	t9
+    1180:	02402821 	move	a1,s2
+    1184:	8fbc0010 	lw	gp,16(sp)
+    1188:	10400004 	beqz	v0,119c <mailInit@@Base+0x3cc>
+    118c:	2402fed2 	li	v0,-302
+    1190:	2403fed2 	li	v1,-302
+    1194:	100000dd 	b	150c <mailInit@@Base+0x73c>
+    1198:	ae030000 	sw	v1,0(s0)
+    119c:	8f858024 	lw	a1,-32732(gp)
+    11a0:	02402021 	move	a0,s2
+[31m    11a4:	8f9980c8 	lw	t9,strcpy[0m
+    11a8:	0320f809 	jalr	t9
+    11ac:	24a53160 	addiu	a1,a1,12640
+--
+    1204:	00401821 	move	v1,v0
+    1208:	2444ffff 	addiu	a0,v0,-1
+    120c:	02041821 	addu	v1,s0,a0
+    1210:	8065044c 	lb	a1,1100(v1)
+    1214:	2403000a 	li	v1,10
+    1218:	10a30003 	beq	a1,v1,1228 <mailInit@@Base+0x458>
+    121c:	00000000 	nop
+    1220:	10000003 	b	1230 <mailInit@@Base+0x460>
+    1224:	00402021 	move	a0,v0
+    1228:	1080000d 	beqz	a0,1260 <mailInit@@Base+0x490>
+    122c:	00000000 	nop
+    1230:	2483ffff 	addiu	v1,a0,-1
+    1234:	02031021 	addu	v0,s0,v1
+    1238:	8045044c 	lb	a1,1100(v0)
+    123c:	2402000d 	li	v0,13
+    1240:	10a20003 	beq	a1,v0,1250 <mailInit@@Base+0x480>
+    1244:	00000000 	nop
+    1248:	10000003 	b	1258 <mailInit@@Base+0x488>
+    124c:	00801821 	move	v1,a0
+    1250:	10600003 	beqz	v1,1260 <mailInit@@Base+0x490>
+    1254:	00000000 	nop
+    1258:	02031821 	addu	v1,s0,v1
+    125c:	a060044c 	sb	zero,1100(v1)
+    1260:	8f858024 	lw	a1,-32732(gp)
+    1264:	27b30064 	addiu	s3,sp,100
+[31m    1268:	8f9980c8 	lw	t9,strcpy[0m
+    126c:	02602021 	move	a0,s3
+    1270:	0320f809 	jalr	t9
+--
+    283c:	27390fc8 	addiu	t9,t9,4040
+    2840:	0320f809 	jalr	t9
+    2844:	02002021 	move	a0,s0
+    2848:	8fbc0010 	lw	gp,16(sp)
+    284c:	14400035 	bnez	v0,2924 <send_maillist@@Base+0x160>
+    2850:	00000000 	nop
+    2854:	8f998024 	lw	t9,-32732(gp)
+    2858:	273916c4 	addiu	t9,t9,5828
+    285c:	0320f809 	jalr	t9
+    2860:	02002021 	move	a0,s0
+    2864:	8fbc0010 	lw	gp,16(sp)
+    2868:	1440002e 	bnez	v0,2924 <send_maillist@@Base+0x160>
+    286c:	2616004c 	addiu	s6,s0,76
+    2870:	8f958024 	lw	s5,-32732(gp)
+    2874:	261100cc 	addiu	s1,s0,204
+    2878:	00009021 	move	s2,zero
+    287c:	26b51a60 	addiu	s5,s5,6752
+    2880:	27b40018 	addiu	s4,sp,24
+    2884:	1000001b 	b	28f4 <send_maillist@@Base+0x130>
+    2888:	2413ffff 	li	s3,-1
+    288c:	0320f809 	jalr	t9
+    2890:	00000000 	nop
+    2894:	02c02021 	move	a0,s6
+    2898:	8fbc0010 	lw	gp,16(sp)
+    289c:	24450001 	addiu	a1,v0,1
+[31m    28a0:	8f9980c8 	lw	t9,strcpy[0m
+    28a4:	0320f809 	jalr	t9
+    28a8:	0222280a 	0x222280a
+--
+    29b0:	14400004 	bnez	v0,29c4 <mailUploadList@@Base+0x6c>
+    29b4:	00000000 	nop
+    29b8:	8c820034 	lw	v0,52(a0)
+    29bc:	1040002e 	beqz	v0,2a78 <mailUploadList@@Base+0x120>
+    29c0:	2402ffff 	li	v0,-1
+    29c4:	8e020010 	lw	v0,16(s0)
+    29c8:	9203000d 	lbu	v1,13(s0)
+    29cc:	34420002 	ori	v0,v0,0x2
+    29d0:	10600013 	beqz	v1,2a20 <mailUploadList@@Base+0xc8>
+    29d4:	ae020010 	sw	v0,16(s0)
+    29d8:	3044000f 	andi	a0,v0,0xf
+    29dc:	24030001 	li	v1,1
+    29e0:	14830003 	bne	a0,v1,29f0 <mailUploadList@@Base+0x98>
+    29e4:	00000000 	nop
+    29e8:	10000007 	b	2a08 <mailUploadList@@Base+0xb0>
+    29ec:	2402001a 	li	v0,26
+    29f0:	304200f0 	andi	v0,v0,0xf0
+    29f4:	14400003 	bnez	v0,2a04 <mailUploadList@@Base+0xac>
+    29f8:	00000000 	nop
+    29fc:	10000002 	b	2a08 <mailUploadList@@Base+0xb0>
+    2a00:	24020019 	li	v0,25
+    2a04:	2402001b 	li	v0,27
+    2a08:	8f858024 	lw	a1,-32732(gp)
+    2a0c:	260403cc 	addiu	a0,s0,972
+    2a10:	ae020008 	sw	v0,8(s0)
+[31m    2a14:	8f9980c8 	lw	t9,strcpy[0m
+    2a18:	10000004 	b	2a2c <mailUploadList@@Base+0xd4>
+    2a1c:	24a53390 	addiu	a1,a1,13200
+[31m    2a20:	8f9980c8 	lw	t9,strcpy[0m
+    2a24:	260403cc 	addiu	a0,s0,972
+    2a28:	8e050020 	lw	a1,32(s0)
+--
+    2c98:	afa30010 	sw	v1,16(sp)
+    2c9c:	24c6076c 	addiu	a2,a2,1900
+    2ca0:	8e220008 	lw	v0,8(s1)
+    2ca4:	24e70001 	addiu	a3,a3,1
+    2ca8:	8fbc0020 	lw	gp,32(sp)
+    2cac:	afa20014 	sw	v0,20(sp)
+    2cb0:	8e220004 	lw	v0,4(s1)
+    2cb4:	8f858024 	lw	a1,-32732(gp)
+    2cb8:	afa20018 	sw	v0,24(sp)
+    2cbc:	8e220000 	lw	v0,0(s1)
+    2cc0:	24a533a0 	addiu	a1,a1,13216
+    2cc4:	8f99805c 	lw	t9,-32676(gp)
+    2cc8:	0320f809 	jalr	t9
+    2ccc:	afa2001c 	sw	v0,28(sp)
+    2cd0:	8fbc0020 	lw	gp,32(sp)
+    2cd4:	10000016 	b	2d30 <mailUpload@@Base+0x1a0>
+    2cd8:	00000000 	nop
+    2cdc:	14430014 	bne	v0,v1,2d30 <mailUpload@@Base+0x1a0>
+    2ce0:	02402021 	move	a0,s2
+    2ce4:	8f998090 	lw	t9,-32624(gp)
+    2ce8:	0320f809 	jalr	t9
+    2cec:	2405002f 	li	a1,47
+    2cf0:	2604004c 	addiu	a0,s0,76
+    2cf4:	8fbc0020 	lw	gp,32(sp)
+    2cf8:	24450001 	addiu	a1,v0,1
+[31m    2cfc:	8f9980c8 	lw	t9,strcpy[0m
+    2d00:	0320f809 	jalr	t9
+    2d04:	0242280a 	0x242280a
+--
+    2d14:	0320f809 	jalr	t9
+    2d18:	27a50028 	addiu	a1,sp,40
+    2d1c:	2403ffff 	li	v1,-1
+    2d20:	8fbc0020 	lw	gp,32(sp)
+    2d24:	1043002c 	beq	v0,v1,2dd8 <mailUpload@@Base+0x248>
+    2d28:	2402ffff 	li	v0,-1
+    2d2c:	8fb3005c 	lw	s3,92(sp)
+    2d30:	9202000d 	lbu	v0,13(s0)
+    2d34:	10400013 	beqz	v0,2d84 <mailUpload@@Base+0x1f4>
+    2d38:	24030001 	li	v1,1
+    2d3c:	8e020010 	lw	v0,16(s0)
+    2d40:	3044000f 	andi	a0,v0,0xf
+    2d44:	14830003 	bne	a0,v1,2d54 <mailUpload@@Base+0x1c4>
+    2d48:	00000000 	nop
+    2d4c:	10000007 	b	2d6c <mailUpload@@Base+0x1dc>
+    2d50:	2402001a 	li	v0,26
+    2d54:	304200f0 	andi	v0,v0,0xf0
+    2d58:	14400003 	bnez	v0,2d68 <mailUpload@@Base+0x1d8>
+    2d5c:	00000000 	nop
+    2d60:	10000002 	b	2d6c <mailUpload@@Base+0x1dc>
+    2d64:	24020019 	li	v0,25
+    2d68:	2402001b 	li	v0,27
+    2d6c:	8f858024 	lw	a1,-32732(gp)
+    2d70:	260403cc 	addiu	a0,s0,972
+    2d74:	ae020008 	sw	v0,8(s0)
+[31m    2d78:	8f9980c8 	lw	t9,strcpy[0m
+    2d7c:	10000004 	b	2d90 <mailUpload@@Base+0x200>
+    2d80:	24a53390 	addiu	a1,a1,13200
+[31m    2d84:	8f9980c8 	lw	t9,strcpy[0m
+    2d88:	260403cc 	addiu	a0,s0,972
+    2d8c:	8e050020 	lw	a1,32(s0)
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m9[0m times [0;33mlibEMail.so[0m
+

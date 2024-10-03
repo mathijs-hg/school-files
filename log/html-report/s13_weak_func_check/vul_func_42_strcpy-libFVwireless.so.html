@@ -1,0 +1,1138 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s13_weak_func_check.html" title="./../s13_weak_func_check.html" >&laquo; Back to s13_weak_func_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> tear down of </span><span class="orange">libFVwireless.so</span></pre>
+<br />
+<pre>    4994:	03e00008 	jr	ra</pre>
+<pre>    4998:	27bd0020 	addiu	sp,sp,32</pre>
+<br />
+<pre>0000499c &lt;realtek_GetRSSI&commat;&commat;Base&gt;:</pre>
+<pre>    499c:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    49a0:	279cd8f4 	addiu	gp,gp,-9996</pre>
+<pre>    49a4:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    49a8:	27bdff30 	addiu	sp,sp,-208</pre>
+<pre>    49ac:	afbf00cc 	sw	ra,204(sp)</pre>
+<pre>    49b0:	afb100c8 	sw	s1,200(sp)</pre>
+<pre>    49b4:	afb000c4 	sw	s0,196(sp)</pre>
+<pre>    49b8:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    49bc:	24050001 	li	a1,1</pre>
+<pre>    49c0:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    49c4:	00808821 	move	s1,a0</pre>
+<pre>    49c8:	00003021 	move	a2,zero</pre>
+<pre>    49cc:	0320f809 	jalr	t9</pre>
+<pre>    49d0:	24040002 	li	a0,2</pre>
+<pre>    49d4:	00001821 	move	v1,zero</pre>
+<pre>    49d8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    49dc:	0440001d 	bltz	v0,4a54 &lt;realtek_GetRSSI&commat;&commat;Base+0xb8&gt;</pre>
+<pre>    49e0:	00408021 	move	s0,v0</pre>
+<pre>    49e4:	27a60018 	addiu	a2,sp,24</pre>
+<pre>    49e8:	02202821 	move	a1,s1</pre>
+<pre>    49ec:	27b10038 	addiu	s1,sp,56</pre>
+<pre><span class="red">    49f0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    49f4:	00c02021 	move	a0,a2</pre>
+<pre>    49f8:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    4a64:	03e00008 	jr	ra</pre>
+<pre>    4a68:	27bd00d0 	addiu	sp,sp,208</pre>
+<br />
+<pre>00004a6c &lt;realtek_GetStaNum&commat;&commat;Base&gt;:</pre>
+<pre>    4a6c:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    4a70:	279cd824 	addiu	gp,gp,-10204</pre>
+<pre>    4a74:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    4a78:	27bdffa8 	addiu	sp,sp,-88</pre>
+<pre>    4a7c:	afbf0054 	sw	ra,84(sp)</pre>
+<pre>    4a80:	afb10050 	sw	s1,80(sp)</pre>
+<pre>    4a84:	afb0004c 	sw	s0,76(sp)</pre>
+<pre>    4a88:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    4a8c:	24050001 	li	a1,1</pre>
+<pre>    4a90:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    4a94:	00808821 	move	s1,a0</pre>
+<pre>    4a98:	00003021 	move	a2,zero</pre>
+<pre>    4a9c:	a7a00018 	sh	zero,24(sp)</pre>
+<pre>    4aa0:	0320f809 	jalr	t9</pre>
+<pre>    4aa4:	24040002 	li	a0,2</pre>
+<pre>    4aa8:	2403ffff 	li	v1,-1</pre>
+<pre>    4aac:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4ab0:	0440001d 	bltz	v0,4b28 &lt;realtek_GetStaNum&commat;&commat;Base+0xbc&gt;</pre>
+<pre>    4ab4:	00408021 	move	s0,v0</pre>
+<pre>    4ab8:	27a6001c 	addiu	a2,sp,28</pre>
+<pre>    4abc:	02202821 	move	a1,s1</pre>
+<pre><span class="red">    4ac0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4ac4:	00c02021 	move	a0,a2</pre>
+<pre>    4ac8:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    4b40:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    4b44:	279cd750 	addiu	gp,gp,-10416</pre>
+<pre>    4b48:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    4b4c:	27bdffa8 	addiu	sp,sp,-88</pre>
+<pre>    4b50:	afbf0054 	sw	ra,84(sp)</pre>
+<pre>    4b54:	afb40050 	sw	s4,80(sp)</pre>
+<pre>    4b58:	afb3004c 	sw	s3,76(sp)</pre>
+<pre>    4b5c:	afb20048 	sw	s2,72(sp)</pre>
+<pre>    4b60:	afb10044 	sw	s1,68(sp)</pre>
+<pre>    4b64:	afb00040 	sw	s0,64(sp)</pre>
+<pre>    4b68:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    4b6c:	2410ffff 	li	s0,-1</pre>
+<pre>    4b70:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    4b74:	0080a021 	move	s4,a0</pre>
+<pre>    4b78:	24040002 	li	a0,2</pre>
+<pre>    4b7c:	00a09821 	move	s3,a1</pre>
+<pre>    4b80:	24050001 	li	a1,1</pre>
+<pre>    4b84:	00c09021 	move	s2,a2</pre>
+<pre>    4b88:	0320f809 	jalr	t9</pre>
+<pre>    4b8c:	00003021 	move	a2,zero</pre>
+<pre>    4b90:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4b94:	0440001d 	bltz	v0,4c0c &lt;realtek_StrPriv&commat;&commat;Base+0xcc&gt;</pre>
+<pre>    4b98:	00408821 	move	s1,v0</pre>
+<pre>    4b9c:	27a60018 	addiu	a2,sp,24</pre>
+<pre>    4ba0:	02802821 	move	a1,s4</pre>
+<pre><span class="red">    4ba4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4ba8:	00c02021 	move	a0,a2</pre>
+<pre>    4bac:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    4c28:	03e00008 	jr	ra</pre>
+<pre>    4c2c:	27bd0058 	addiu	sp,sp,88</pre>
+<br />
+<pre>00004c30 &lt;realtek_SetWpaPsk&commat;&commat;Base&gt;:</pre>
+<pre>    4c30:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    4c34:	279cd660 	addiu	gp,gp,-10656</pre>
+<pre>    4c38:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    4c3c:	27bdff90 	addiu	sp,sp,-112</pre>
+<pre>    4c40:	afbf006c 	sw	ra,108(sp)</pre>
+<pre>    4c44:	afb30068 	sw	s3,104(sp)</pre>
+<pre>    4c48:	afb20064 	sw	s2,100(sp)</pre>
+<pre>    4c4c:	afb10060 	sw	s1,96(sp)</pre>
+<pre>    4c50:	afb0005c 	sw	s0,92(sp)</pre>
+<pre>    4c54:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    4c58:	8f99804c 	lw	t9,strlen</pre>
+<pre>    4c5c:	00809821 	move	s3,a0</pre>
+<pre>    4c60:	00a02021 	move	a0,a1</pre>
+<pre>    4c64:	0320f809 	jalr	t9</pre>
+<pre>    4c68:	00a08821 	move	s1,a1</pre>
+<pre>    4c6c:	28420041 	slti	v0,v0,65</pre>
+<pre>    4c70:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4c74:	10400029 	beqz	v0,4d1c &lt;realtek_SetWpaPsk&commat;&commat;Base+0xec&gt;</pre>
+<pre>    4c78:	27b20018 	addiu	s2,sp,24</pre>
+<pre>    4c7c:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    4c80:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    4c84:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4c88:	2604a680 	addiu	a0,s0,-22912</pre>
+<pre>    4c8c:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    4d60:	afb1003c 	sw	s1,60(sp)</pre>
+<pre>    4d64:	afb00038 	sw	s0,56(sp)</pre>
+<pre>    4d68:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    4d6c:	8f99804c 	lw	t9,strlen</pre>
+<pre>    4d70:	00808821 	move	s1,a0</pre>
+<pre>    4d74:	00c02021 	move	a0,a2</pre>
+<pre>    4d78:	00c09021 	move	s2,a2</pre>
+<pre>    4d7c:	0320f809 	jalr	t9</pre>
+<pre>    4d80:	00a09821 	move	s3,a1</pre>
+<pre>    4d84:	00408021 	move	s0,v0</pre>
+<pre>    4d88:	24020005 	li	v0,5</pre>
+<pre>    4d8c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4d90:	12020007 	beq	s0,v0,4db0 &lt;realtek_SetWepKey&commat;&commat;Base+0x78&gt;</pre>
+<pre>    4d94:	2402000a 	li	v0,10</pre>
+<pre>    4d98:	12020005 	beq	s0,v0,4db0 &lt;realtek_SetWepKey&commat;&commat;Base+0x78&gt;</pre>
+<pre>    4d9c:	2402000d 	li	v0,13</pre>
+<pre>    4da0:	12020003 	beq	s0,v0,4db0 &lt;realtek_SetWepKey&commat;&commat;Base+0x78&gt;</pre>
+<pre>    4da4:	2402001a 	li	v0,26</pre>
+<pre>    4da8:	160200a2 	bne	s0,v0,5034 &lt;realtek_SetWepKey&commat;&commat;Base+0x2fc&gt;</pre>
+<pre>    4dac:	00000000 	nop</pre>
+<pre>    4db0:	2a620004 	slti	v0,s3,4</pre>
+<pre>    4db4:	1040009f 	beqz	v0,5034 &lt;realtek_SetWepKey&commat;&commat;Base+0x2fc&gt;</pre>
+<pre>    4db8:	00000000 	nop</pre>
+<pre>    4dbc:	8f948018 	lw	s4,-32744(gp)</pre>
+<pre>    4dc0:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    4dc4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4dc8:	2684a700 	addiu	a0,s4,-22784</pre>
+<pre>    4dcc:	0320f809 	jalr	t9</pre>
+<pre>    4dd0:	24a58ba0 	addiu	a1,a1,-29792</pre>
+<pre>    4dd4:	02202021 	move	a0,s1</pre>
+<pre>    4dd8:	340589f2 	li	a1,0x89f2</pre>
+<pre>    4ddc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4de0:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    4de4:	0320f809 	jalr	t9</pre>
+<pre>    4de8:	2686a700 	addiu	a2,s4,-22784</pre>
+<pre>    4dec:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4df0:	04400090 	bltz	v0,5034 &lt;realtek_SetWepKey&commat;&commat;Base+0x2fc&gt;</pre>
+<pre>    4df4:	24030005 	li	v1,5</pre>
+<pre>    4df8:	8e82a700 	lw	v0,-22784(s4)</pre>
+<pre>    4dfc:	12030003 	beq	s0,v1,4e0c &lt;realtek_SetWepKey&commat;&commat;Base+0xd4&gt;</pre>
+<pre>    4e00:	2403000a 	li	v1,10</pre>
+<pre>    4e04:	16030021 	bne	s0,v1,4e8c &lt;realtek_SetWepKey&commat;&commat;Base+0x154&gt;</pre>
+<pre>    4e08:	2403000d 	li	v1,13</pre>
+<pre>    4e0c:	24030001 	li	v1,1</pre>
+<pre>    4e10:	1043001e 	beq	v0,v1,4e8c &lt;realtek_SetWepKey&commat;&commat;Base+0x154&gt;</pre>
+<pre>    4e14:	2403000d 	li	v1,13</pre>
+<pre>    4e18:	8f948018 	lw	s4,-32744(gp)</pre>
+<pre>    4e1c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    4e20:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4e24:	2684a700 	addiu	a0,s4,-22784</pre>
+<pre>    4e28:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    4e4c:	02203021 	move	a2,s1</pre>
+<pre>    4e50:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4e54:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    4e58:	8f99807c 	lw	t9,-32644(gp)</pre>
+<pre>    4e5c:	0320f809 	jalr	t9</pre>
+<pre>    4e60:	24a58bb4 	addiu	a1,a1,-29772</pre>
+<pre>    4e64:	2686a700 	addiu	a2,s4,-22784</pre>
+<pre>    4e68:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    4e6c:	8f848024 	lw	a0,-32732(gp)</pre>
+<pre>    4e70:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    4e74:	8f878024 	lw	a3,-32732(gp)</pre>
+<pre>    4e78:	248487a0 	addiu	a0,a0,-30816</pre>
+<pre>    4e7c:	8f998060 	lw	t9,-32672(gp)</pre>
+<pre>    4e80:	24a58f64 	addiu	a1,a1,-28828</pre>
+<pre>    4e84:	10000024 	b	4f18 &lt;realtek_SetWepKey&commat;&commat;Base+0x1e0&gt;</pre>
+<pre>    4e88:	24e78bb0 	addiu	a3,a3,-29776</pre>
+<pre>    4e8c:	12030003 	beq	s0,v1,4e9c &lt;realtek_SetWepKey&commat;&commat;Base+0x164&gt;</pre>
+<pre>    4e90:	2403001a 	li	v1,26</pre>
+<pre>    4e94:	16030023 	bne	s0,v1,4f24 &lt;realtek_SetWepKey&commat;&commat;Base+0x1ec&gt;</pre>
+<pre>    4e98:	00000000 	nop</pre>
+<pre>    4e9c:	24030005 	li	v1,5</pre>
+<pre>    4ea0:	10430021 	beq	v0,v1,4f28 &lt;realtek_SetWepKey&commat;&commat;Base+0x1f0&gt;</pre>
+<pre>    4ea4:	24020005 	li	v0,5</pre>
+<pre>    4ea8:	8f948018 	lw	s4,-32744(gp)</pre>
+<pre>    4eac:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    4eb0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    4eb4:	2684a700 	addiu	a0,s4,-22784</pre>
+<pre>    4eb8:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    51fc:	248487a0 	addiu	a0,a0,-30816</pre>
+<pre>    5200:	0320f809 	jalr	t9</pre>
+<pre>    5204:	24a58f64 	addiu	a1,a1,-28828</pre>
+<pre>    5208:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    520c:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    5210:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    5214:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    5218:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    521c:	03e00008 	jr	ra</pre>
+<pre>    5220:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>00005224 &lt;realtek_GetEncryption&commat;&commat;Base&gt;:</pre>
+<pre>    5224:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    5228:	279cd06c 	addiu	gp,gp,-12180</pre>
+<pre>    522c:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    5230:	27bdffd0 	addiu	sp,sp,-48</pre>
+<pre>    5234:	afbf002c 	sw	ra,44(sp)</pre>
+<pre>    5238:	afb30028 	sw	s3,40(sp)</pre>
+<pre>    523c:	afb20024 	sw	s2,36(sp)</pre>
+<pre>    5240:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    5244:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    5248:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    524c:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    5250:	00809821 	move	s3,a0</pre>
+<pre>    5254:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    5258:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    525c:	2604a800 	addiu	a0,s0,-22528</pre>
+<pre>    5260:	0320f809 	jalr	t9</pre>
+<pre>    5264:	24a58ba0 	addiu	a1,a1,-29792</pre>
+<pre>    5268:	02602021 	move	a0,s3</pre>
+<pre>    526c:	340589f2 	li	a1,0x89f2</pre>
+<pre>    5270:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5274:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    5278:	0320f809 	jalr	t9</pre>
+<pre>    527c:	2606a800 	addiu	a2,s0,-22528</pre>
+<pre>    5280:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5284:	0440003f 	bltz	v0,5384 &lt;realtek_GetEncryption&commat;&commat;Base+0x160&gt;</pre>
+<pre>    5288:	2402ffff 	li	v0,-1</pre>
+<pre>    528c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    5290:	2612a800 	addiu	s2,s0,-22528</pre>
+<pre><span class="red">    5294:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5298:	02402021 	move	a0,s2</pre>
+<pre>    529c:	8e11a800 	lw	s1,-22528(s0)</pre>
+<pre>    52a0:	0320f809 	jalr	t9</pre>
+<pre>    52a4:	24a58c1c 	addiu	a1,a1,-29668</pre>
+<pre>    52a8:	02602021 	move	a0,s3</pre>
+<pre>    52ac:	340589f2 	li	a1,0x89f2</pre>
+<pre>    52b0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    52b4:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    52b8:	0320f809 	jalr	t9</pre>
+<pre>    52bc:	02403021 	move	a2,s2</pre>
+<pre>    52c0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    52c4:	0440002f 	bltz	v0,5384 &lt;realtek_GetEncryption&commat;&commat;Base+0x160&gt;</pre>
+<pre>    52c8:	2402ffff 	li	v0,-1</pre>
+<pre>    52cc:	8e02a800 	lw	v0,-22528(s0)</pre>
+<pre><span class="red">    52d0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    52d4:	30420001 	andi	v0,v0,0x1</pre>
+<pre>    52d8:	10400004 	beqz	v0,52ec &lt;realtek_GetEncryption&commat;&commat;Base+0xc8&gt;</pre>
+<pre>--</pre>
+<pre>    53d8:	2ca20005 	sltiu	v0,a1,5</pre>
+<pre>    53dc:	10400098 	beqz	v0,5640 &lt;realtek_SetEncryption&commat;&commat;Base+0x2a0&gt;</pre>
+<pre>    53e0:	00808821 	move	s1,a0</pre>
+<pre>    53e4:	8f828024 	lw	v0,-32732(gp)</pre>
+<pre>    53e8:	00052880 	sll	a1,a1,0x2</pre>
+<pre>    53ec:	24429260 	addiu	v0,v0,-28064</pre>
+<pre>    53f0:	00452821 	addu	a1,v0,a1</pre>
+<pre>    53f4:	8ca20000 	lw	v0,0(a1)</pre>
+<pre>    53f8:	005c1021 	addu	v0,v0,gp</pre>
+<pre>    53fc:	00400008 	jr	v0</pre>
+<pre>    5400:	00000000 	nop</pre>
+<pre>    5404:	00009821 	move	s3,zero</pre>
+<pre>    5408:	1000000a 	b	5434 &lt;realtek_SetEncryption&commat;&commat;Base+0x94&gt;</pre>
+<pre>    540c:	24170001 	li	s7,1</pre>
+<pre>    5410:	00009821 	move	s3,zero</pre>
+<pre>    5414:	10000007 	b	5434 &lt;realtek_SetEncryption&commat;&commat;Base+0x94&gt;</pre>
+<pre>    5418:	0000b821 	move	s7,zero</pre>
+<pre>    541c:	10000004 	b	5430 &lt;realtek_SetEncryption&commat;&commat;Base+0x90&gt;</pre>
+<pre>    5420:	24130002 	li	s3,2</pre>
+<pre>    5424:	10000002 	b	5430 &lt;realtek_SetEncryption&commat;&commat;Base+0x90&gt;</pre>
+<pre>    5428:	24130008 	li	s3,8</pre>
+<pre>    542c:	2413000a 	li	s3,10</pre>
+<pre>    5430:	24170002 	li	s7,2</pre>
+<pre>    5434:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    5438:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    543c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5440:	2604a840 	addiu	a0,s0,-22464</pre>
+<pre>    5444:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    5648:	8fb60074 	lw	s6,116(sp)</pre>
+<pre>    564c:	8fb50070 	lw	s5,112(sp)</pre>
+<pre>    5650:	8fb4006c 	lw	s4,108(sp)</pre>
+<pre>    5654:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    5658:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    565c:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    5660:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    5664:	03e00008 	jr	ra</pre>
+<pre>    5668:	27bd0080 	addiu	sp,sp,128</pre>
+<br />
+<pre>0000566c &lt;realtek_GetAuth&commat;&commat;Base&gt;:</pre>
+<pre>    566c:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    5670:	279ccc24 	addiu	gp,gp,-13276</pre>
+<pre>    5674:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    5678:	27bdffd0 	addiu	sp,sp,-48</pre>
+<pre>    567c:	afbf002c 	sw	ra,44(sp)</pre>
+<pre>    5680:	afb40028 	sw	s4,40(sp)</pre>
+<pre>    5684:	afb30024 	sw	s3,36(sp)</pre>
+<pre>    5688:	afb20020 	sw	s2,32(sp)</pre>
+<pre>    568c:	afb1001c 	sw	s1,28(sp)</pre>
+<pre>    5690:	afb00018 	sw	s0,24(sp)</pre>
+<pre>    5694:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    5698:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    569c:	0080a021 	move	s4,a0</pre>
+<pre>    56a0:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    56a4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    56a8:	2604a880 	addiu	a0,s0,-22400</pre>
+<pre>    56ac:	0320f809 	jalr	t9</pre>
+<pre>    56b0:	24a58c8c 	addiu	a1,a1,-29556</pre>
+<pre>    56b4:	02802021 	move	a0,s4</pre>
+<pre>    56b8:	340589f2 	li	a1,0x89f2</pre>
+<pre>    56bc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    56c0:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    56c4:	0320f809 	jalr	t9</pre>
+<pre>    56c8:	2606a880 	addiu	a2,s0,-22400</pre>
+<pre>    56cc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    56d0:	0440003f 	bltz	v0,57d0 &lt;realtek_GetAuth&commat;&commat;Base+0x164&gt;</pre>
+<pre>    56d4:	2402ffff 	li	v0,-1</pre>
+<pre>    56d8:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    56dc:	2613a880 	addiu	s3,s0,-22400</pre>
+<pre><span class="red">    56e0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    56e4:	02602021 	move	a0,s3</pre>
+<pre>    56e8:	8e12a880 	lw	s2,-22400(s0)</pre>
+<pre>    56ec:	0320f809 	jalr	t9</pre>
+<pre>    56f0:	24a58ba0 	addiu	a1,a1,-29792</pre>
+<pre>    56f4:	02802021 	move	a0,s4</pre>
+<pre>    56f8:	340589f2 	li	a1,0x89f2</pre>
+<pre>    56fc:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5700:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    5704:	0320f809 	jalr	t9</pre>
+<pre>    5708:	02603021 	move	a2,s3</pre>
+<pre>    570c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5710:	0440002f 	bltz	v0,57d0 &lt;realtek_GetAuth&commat;&commat;Base+0x164&gt;</pre>
+<pre>    5714:	2402ffff 	li	v0,-1</pre>
+<pre>    5718:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    571c:	02602021 	move	a0,s3</pre>
+<pre><span class="red">    5720:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5724:	8211a880 	lb	s1,-22400(s0)</pre>
+<pre>    5728:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    5ac0:	2606a900 	addiu	a2,s0,-22272</pre>
+<pre>    5ac4:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5ac8:	340589f1 	li	a1,0x89f1</pre>
+<pre>    5acc:	8fbf0024 	lw	ra,36(sp)</pre>
+<pre>    5ad0:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    5ad4:	8fb10020 	lw	s1,32(sp)</pre>
+<pre>    5ad8:	8fb0001c 	lw	s0,28(sp)</pre>
+<pre>    5adc:	03200008 	jr	t9</pre>
+<pre>    5ae0:	27bd0028 	addiu	sp,sp,40</pre>
+<br />
+<pre>00005ae4 &lt;realtek_GetWirelessMode&commat;&commat;Base&gt;:</pre>
+<pre>    5ae4:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    5ae8:	279cc7ac 	addiu	gp,gp,-14420</pre>
+<pre>    5aec:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    5af0:	27bdffd0 	addiu	sp,sp,-48</pre>
+<pre>    5af4:	afbf002c 	sw	ra,44(sp)</pre>
+<pre>    5af8:	afb40028 	sw	s4,40(sp)</pre>
+<pre>    5afc:	afb30024 	sw	s3,36(sp)</pre>
+<pre>    5b00:	afb20020 	sw	s2,32(sp)</pre>
+<pre>    5b04:	afb1001c 	sw	s1,28(sp)</pre>
+<pre>    5b08:	afb00018 	sw	s0,24(sp)</pre>
+<pre>    5b0c:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    5b10:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    5b14:	00809021 	move	s2,a0</pre>
+<pre>    5b18:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    5b1c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5b20:	2604a940 	addiu	a0,s0,-22208</pre>
+<pre>    5b24:	0320f809 	jalr	t9</pre>
+<pre>    5b28:	24a58ce8 	addiu	a1,a1,-29464</pre>
+<pre>    5b2c:	02402021 	move	a0,s2</pre>
+<pre>    5b30:	340589f2 	li	a1,0x89f2</pre>
+<pre>    5b34:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5b38:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    5b3c:	0320f809 	jalr	t9</pre>
+<pre>    5b40:	2606a940 	addiu	a2,s0,-22208</pre>
+<pre>    5b44:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5b48:	0440003a 	bltz	v0,5c34 &lt;realtek_GetWirelessMode&commat;&commat;Base+0x150&gt;</pre>
+<pre>    5b4c:	2402ffff 	li	v0,-1</pre>
+<pre>    5b50:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    5b54:	2611a940 	addiu	s1,s0,-22208</pre>
+<pre><span class="red">    5b58:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5b5c:	02202021 	move	a0,s1</pre>
+<pre>    5b60:	9214a940 	lbu	s4,-22208(s0)</pre>
+<pre>    5b64:	0320f809 	jalr	t9</pre>
+<pre>    5b68:	24a58cf8 	addiu	a1,a1,-29448</pre>
+<pre>    5b6c:	02402021 	move	a0,s2</pre>
+<pre>    5b70:	340589f2 	li	a1,0x89f2</pre>
+<pre>    5b74:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5b78:	02203021 	move	a2,s1</pre>
+<pre>    5b7c:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    5b80:	0320f809 	jalr	t9</pre>
+<pre>    5b84:	3294000f 	andi	s4,s4,0xf</pre>
+<pre>    5b88:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    5b8c:	04400029 	bltz	v0,5c34 &lt;realtek_GetWirelessMode&commat;&commat;Base+0x150&gt;</pre>
+<pre>    5b90:	2402ffff 	li	v0,-1</pre>
+<pre>    5b94:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    5b98:	02202021 	move	a0,s1</pre>
+<pre><span class="red">    5b9c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5ba0:	9213a940 	lbu	s3,-22208(s0)</pre>
+<pre>    5ba4:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    5e58:	2607a980 	addiu	a3,s0,-22144</pre>
+<pre>    5e5c:	8fbf007c 	lw	ra,124(sp)</pre>
+<pre>    5e60:	8fb70078 	lw	s7,120(sp)</pre>
+<pre>    5e64:	8fb60074 	lw	s6,116(sp)</pre>
+<pre>    5e68:	8fb50070 	lw	s5,112(sp)</pre>
+<pre>    5e6c:	8fb4006c 	lw	s4,108(sp)</pre>
+<pre>    5e70:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    5e74:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    5e78:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    5e7c:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    5e80:	03e00008 	jr	ra</pre>
+<pre>    5e84:	27bd0080 	addiu	sp,sp,128</pre>
+<br />
+<pre>00005e88 &lt;realtek_GetCountryRegion&commat;&commat;Base&gt;:</pre>
+<pre>    5e88:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    5e8c:	279cc408 	addiu	gp,gp,-15352</pre>
+<pre>    5e90:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    5e94:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    5e98:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    5e9c:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    5ea0:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    5ea4:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    5ea8:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    5eac:	00808821 	move	s1,a0</pre>
+<pre>    5eb0:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    5eb4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    5eb8:	2604a9c0 	addiu	a0,s0,-22080</pre>
+<pre>    5ebc:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    5fb4:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    5fb8:	8f998060 	lw	t9,-32672(gp)</pre>
+<pre>    5fbc:	248487a0 	addiu	a0,a0,-30816</pre>
+<pre>    5fc0:	0320f809 	jalr	t9</pre>
+<pre>    5fc4:	24a58f64 	addiu	a1,a1,-28828</pre>
+<pre>    5fc8:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    5fcc:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    5fd0:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    5fd4:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    5fd8:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    5fdc:	03e00008 	jr	ra</pre>
+<pre>    5fe0:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>00005fe4 &lt;realtek_GetInfraMode&commat;&commat;Base&gt;:</pre>
+<pre>    5fe4:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    5fe8:	279cc2ac 	addiu	gp,gp,-15700</pre>
+<pre>    5fec:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    5ff0:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    5ff4:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    5ff8:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    5ffc:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    6000:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    6004:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    6008:	00808821 	move	s1,a0</pre>
+<pre>    600c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    6010:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    6014:	2604aa40 	addiu	a0,s0,-21952</pre>
+<pre>    6018:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    614c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    6150:	8f998060 	lw	t9,-32672(gp)</pre>
+<pre>    6154:	248487a0 	addiu	a0,a0,-30816</pre>
+<pre>    6158:	0320f809 	jalr	t9</pre>
+<pre>    615c:	24a58f64 	addiu	a1,a1,-28828</pre>
+<pre>    6160:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    6164:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    6168:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    616c:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    6170:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    6174:	03e00008 	jr	ra</pre>
+<pre>    6178:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>0000617c &lt;realtek_GetChannel&commat;&commat;Base&gt;:</pre>
+<pre>    617c:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    6180:	279cc114 	addiu	gp,gp,-16108</pre>
+<pre>    6184:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    6188:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    618c:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    6190:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    6194:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    6198:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    619c:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    61a0:	00808821 	move	s1,a0</pre>
+<pre>    61a4:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    61a8:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    61ac:	2604aac0 	addiu	a0,s0,-21824</pre>
+<pre>    61b0:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    62b0:	248487a0 	addiu	a0,a0,-30816</pre>
+<pre>    62b4:	0320f809 	jalr	t9</pre>
+<pre>    62b8:	24a58f64 	addiu	a1,a1,-28828</pre>
+<pre>    62bc:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    62c0:	8fb30068 	lw	s3,104(sp)</pre>
+<pre>    62c4:	8fb20064 	lw	s2,100(sp)</pre>
+<pre>    62c8:	8fb10060 	lw	s1,96(sp)</pre>
+<pre>    62cc:	8fb0005c 	lw	s0,92(sp)</pre>
+<pre>    62d0:	03e00008 	jr	ra</pre>
+<pre>    62d4:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>000062d8 &lt;realtek_GetMAC&commat;&commat;Base&gt;:</pre>
+<pre>    62d8:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    62dc:	279cbfb8 	addiu	gp,gp,-16456</pre>
+<pre>    62e0:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    62e4:	27bdffd0 	addiu	sp,sp,-48</pre>
+<pre>    62e8:	afbf002c 	sw	ra,44(sp)</pre>
+<pre>    62ec:	afb30028 	sw	s3,40(sp)</pre>
+<pre>    62f0:	afb20024 	sw	s2,36(sp)</pre>
+<pre>    62f4:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    62f8:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    62fc:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    6300:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    6304:	00808821 	move	s1,a0</pre>
+<pre>    6308:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    630c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    6310:	2604ab40 	addiu	a0,s0,-21696</pre>
+<pre>    6314:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    63b4:	8fbf002c 	lw	ra,44(sp)</pre>
+<pre>    63b8:	8fb30028 	lw	s3,40(sp)</pre>
+<pre>    63bc:	8fb20024 	lw	s2,36(sp)</pre>
+<pre>    63c0:	8fb10020 	lw	s1,32(sp)</pre>
+<pre>    63c4:	8fb0001c 	lw	s0,28(sp)</pre>
+<pre>    63c8:	03e00008 	jr	ra</pre>
+<pre>    63cc:	27bd0030 	addiu	sp,sp,48</pre>
+<br />
+<pre>000063d0 &lt;realtek_WSCGenPin&commat;&commat;Base&gt;:</pre>
+<pre>    63d0:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    63d4:	279cbec0 	addiu	gp,gp,-16704</pre>
+<pre>    63d8:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    63dc:	27bdff90 	addiu	sp,sp,-112</pre>
+<pre>    63e0:	afbf006c 	sw	ra,108(sp)</pre>
+<pre>    63e4:	afb20068 	sw	s2,104(sp)</pre>
+<pre>    63e8:	afb10064 	sw	s1,100(sp)</pre>
+<pre>    63ec:	afb00060 	sw	s0,96(sp)</pre>
+<pre>    63f0:	afbc0018 	sw	gp,24(sp)</pre>
+<pre>    63f4:	8f848024 	lw	a0,-32732(gp)</pre>
+<pre>    63f8:	8f998068 	lw	t9,-32664(gp)</pre>
+<pre>    63fc:	0320f809 	jalr	t9</pre>
+<pre>    6400:	24848de0 	addiu	a0,a0,-29216</pre>
+<pre>    6404:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>    6408:	1040009d 	beqz	v0,6680 &lt;realtek_WSCGenPin&commat;&commat;Base+0x2b0&gt;</pre>
+<pre>    640c:	27b00020 	addiu	s0,sp,32</pre>
+<pre><span class="red">    6410:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    6414:	00402821 	move	a1,v0</pre>
+<pre>    6418:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    66ac:	0320f809 	jalr	t9</pre>
+<pre>    66b0:	afa20014 	sw	v0,20(sp)</pre>
+<pre>    66b4:	8fbc0018 	lw	gp,24(sp)</pre>
+<pre>    66b8:	8f998054 	lw	t9,-32684(gp)</pre>
+<pre>    66bc:	0320f809 	jalr	t9</pre>
+<pre>    66c0:	02002021 	move	a0,s0</pre>
+<pre>    66c4:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    66c8:	8fb20068 	lw	s2,104(sp)</pre>
+<pre>    66cc:	8fb10064 	lw	s1,100(sp)</pre>
+<pre>    66d0:	8fb00060 	lw	s0,96(sp)</pre>
+<pre>    66d4:	03e00008 	jr	ra</pre>
+<pre>    66d8:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>000066dc &lt;realtek_GetESSID&commat;&commat;Base&gt;:</pre>
+<pre>    66dc:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    66e0:	279cbbb4 	addiu	gp,gp,-17484</pre>
+<pre>    66e4:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    66e8:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    66ec:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    66f0:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    66f4:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    66f8:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    66fc:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    6700:	00808821 	move	s1,a0</pre>
+<pre>    6704:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    6708:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    670c:	2604ab80 	addiu	a0,s0,-21632</pre>
+<pre>    6710:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    6844:	26658f64 	addiu	a1,s3,-28828</pre>
+<pre>    6848:	8f998060 	lw	t9,-32672(gp)</pre>
+<pre>    684c:	0320f809 	jalr	t9</pre>
+<pre>    6850:	2607abc0 	addiu	a3,s0,-21568</pre>
+<pre>    6854:	8fbf006c 	lw	ra,108(sp)</pre>
+<pre>    6858:	8fb40068 	lw	s4,104(sp)</pre>
+<pre>    685c:	8fb30064 	lw	s3,100(sp)</pre>
+<pre>    6860:	8fb20060 	lw	s2,96(sp)</pre>
+<pre>    6864:	8fb1005c 	lw	s1,92(sp)</pre>
+<pre>    6868:	8fb00058 	lw	s0,88(sp)</pre>
+<pre>    686c:	03e00008 	jr	ra</pre>
+<pre>    6870:	27bd0070 	addiu	sp,sp,112</pre>
+<br />
+<pre>00006874 &lt;realtek_GetBand&commat;&commat;Base&gt;:</pre>
+<pre>    6874:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    6878:	279cba1c 	addiu	gp,gp,-17892</pre>
+<pre>    687c:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    6880:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    6884:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    6888:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    688c:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    6890:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    6894:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    6898:	00808821 	move	s1,a0</pre>
+<pre>    689c:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    68a0:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    68a4:	2604ac00 	addiu	a0,s0,-21504</pre>
+<pre>    68a8:	0320f809 	jalr	t9</pre>
+<pre>    68ac:	24a58ce8 	addiu	a1,a1,-29464</pre>
+<pre>    68b0:	02202021 	move	a0,s1</pre>
+<pre>    68b4:	340589f2 	li	a1,0x89f2</pre>
+<pre>    68b8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    68bc:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    68c0:	0320f809 	jalr	t9</pre>
+<pre>    68c4:	2606ac00 	addiu	a2,s0,-21504</pre>
+<pre>    68c8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    68cc:	04400017 	bltz	v0,692c &lt;realtek_GetBand&commat;&commat;Base+0xb8&gt;</pre>
+<pre>    68d0:	24020001 	li	v0,1</pre>
+<pre>    68d4:	8203ac00 	lb	v1,-21504(s0)</pre>
+<pre>    68d8:	14620012 	bne	v1,v0,6924 &lt;realtek_GetBand&commat;&commat;Base+0xb0&gt;</pre>
+<pre>    68dc:	24040002 	li	a0,2</pre>
+<pre>    68e0:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    68e4:	2604ac00 	addiu	a0,s0,-21504</pre>
+<pre><span class="red">    68e8:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    68ec:	0320f809 	jalr	t9</pre>
+<pre>    68f0:	24a58cf8 	addiu	a1,a1,-29448</pre>
+<pre>--</pre>
+<pre>    6d48:	8fbf00ac 	lw	ra,172(sp)</pre>
+<pre>    6d4c:	8fbe00a8 	lw	s8,168(sp)</pre>
+<pre>    6d50:	8fb700a4 	lw	s7,164(sp)</pre>
+<pre>    6d54:	8fb600a0 	lw	s6,160(sp)</pre>
+<pre>    6d58:	8fb5009c 	lw	s5,156(sp)</pre>
+<pre>    6d5c:	8fb40098 	lw	s4,152(sp)</pre>
+<pre>    6d60:	8fb30094 	lw	s3,148(sp)</pre>
+<pre>    6d64:	8fb20090 	lw	s2,144(sp)</pre>
+<pre>    6d68:	8fb1008c 	lw	s1,140(sp)</pre>
+<pre>    6d6c:	8fb00088 	lw	s0,136(sp)</pre>
+<pre>    6d70:	03e00008 	jr	ra</pre>
+<pre>    6d74:	27bd00b0 	addiu	sp,sp,176</pre>
+<br />
+<pre>00006d78 &lt;realtek_GetRadio&commat;&commat;Base&gt;:</pre>
+<pre>    6d78:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    6d7c:	279cb518 	addiu	gp,gp,-19176</pre>
+<pre>    6d80:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    6d84:	27bdffd8 	addiu	sp,sp,-40</pre>
+<pre>    6d88:	afbf0024 	sw	ra,36(sp)</pre>
+<pre>    6d8c:	afb10020 	sw	s1,32(sp)</pre>
+<pre>    6d90:	afb0001c 	sw	s0,28(sp)</pre>
+<pre>    6d94:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    6d98:	8f908018 	lw	s0,-32744(gp)</pre>
+<pre>    6d9c:	00808821 	move	s1,a0</pre>
+<pre>    6da0:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    6da4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    6da8:	2604ac80 	addiu	a0,s0,-21376</pre>
+<pre>    6dac:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    6fc4:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    6fc8:	27bdff98 	addiu	sp,sp,-104</pre>
+<pre>    6fcc:	afbf0064 	sw	ra,100(sp)</pre>
+<pre>    6fd0:	afbe0060 	sw	s8,96(sp)</pre>
+<pre>    6fd4:	afb7005c 	sw	s7,92(sp)</pre>
+<pre>    6fd8:	afb60058 	sw	s6,88(sp)</pre>
+<pre>    6fdc:	afb50054 	sw	s5,84(sp)</pre>
+<pre>    6fe0:	afb40050 	sw	s4,80(sp)</pre>
+<pre>    6fe4:	afb3004c 	sw	s3,76(sp)</pre>
+<pre>    6fe8:	afb20048 	sw	s2,72(sp)</pre>
+<pre>    6fec:	afb10044 	sw	s1,68(sp)</pre>
+<pre>    6ff0:	afb00040 	sw	s0,64(sp)</pre>
+<pre>    6ff4:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    6ff8:	2411ffff 	li	s1,-1</pre>
+<pre>    6ffc:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    7000:	00809821 	move	s3,a0</pre>
+<pre>    7004:	24040002 	li	a0,2</pre>
+<pre>    7008:	00a09021 	move	s2,a1</pre>
+<pre>    700c:	24050001 	li	a1,1</pre>
+<pre>    7010:	00c0a021 	move	s4,a2</pre>
+<pre>    7014:	0320f809 	jalr	t9</pre>
+<pre>    7018:	00003021 	move	a2,zero</pre>
+<pre>    701c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7020:	0440004d 	bltz	v0,7158 &lt;realtek_SiteScan&commat;&commat;Base+0x19c&gt;</pre>
+<pre>    7024:	00408021 	move	s0,v0</pre>
+<pre><span class="red">    7028:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    702c:	27b10020 	addiu	s1,sp,32</pre>
+<pre>    7030:	02602821 	move	a1,s3</pre>
+<pre>--</pre>
+<pre>    72a4:	8f828024 	lw	v0,-32732(gp)</pre>
+<pre>    72a8:	24428eb8 	addiu	v0,v0,-29000</pre>
+<pre>    72ac:	0320f809 	jalr	t9</pre>
+<pre>    72b0:	afa20020 	sw	v0,32(sp)</pre>
+<pre>    72b4:	8fbc0038 	lw	gp,56(sp)</pre>
+<pre>    72b8:	8f99804c 	lw	t9,strlen</pre>
+<pre>    72bc:	0320f809 	jalr	t9</pre>
+<pre>    72c0:	02c02021 	move	a0,s6</pre>
+<pre>    72c4:	8fbc0038 	lw	gp,56(sp)</pre>
+<pre>    72c8:	1260009a 	beqz	s3,7534 &lt;realtek_SiteSurvey&commat;&commat;Base+0x3a8&gt;</pre>
+<pre>    72cc:	0040b821 	move	s7,v0</pre>
+<pre>    72d0:	02228823 	subu	s1,s1,v0</pre>
+<pre>    72d4:	00021023 	negu	v0,v0</pre>
+<pre>    72d8:	02808021 	move	s0,s4</pre>
+<pre>    72dc:	afb10060 	sw	s1,96(sp)</pre>
+<pre>    72e0:	0000f021 	move	s8,zero</pre>
+<pre>    72e4:	8f9580b4 	lw	s5,-32588(gp)</pre>
+<pre>    72e8:	27b10040 	addiu	s1,sp,64</pre>
+<pre>    72ec:	8f928110 	lw	s2,-32496(gp)</pre>
+<pre>    72f0:	1000008c 	b	7524 &lt;realtek_SiteSurvey&commat;&commat;Base+0x398&gt;</pre>
+<pre>    72f4:	afa20068 	sw	v0,104(sp)</pre>
+<pre>    72f8:	9602006e 	lhu	v0,110(s0)</pre>
+<pre>    72fc:	30420010 	andi	v0,v0,0x10</pre>
+<pre>    7300:	14400005 	bnez	v0,7318 &lt;realtek_SiteSurvey&commat;&commat;Base+0x18c&gt;</pre>
+<pre>    7304:	afa30064 	sw	v1,100(sp)</pre>
+<pre><span class="red">    7308:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    730c:	8e450000 	lw	a1,0(s2)</pre>
+<pre>    7310:	10000048 	b	7434 &lt;realtek_SiteSurvey&commat;&commat;Base+0x2a8&gt;</pre>
+<pre>    7314:	02202021 	move	a0,s1</pre>
+<pre>    7318:	8e030064 	lw	v1,100(s0)</pre>
+<pre>    731c:	14600005 	bnez	v1,7334 &lt;realtek_SiteSurvey&commat;&commat;Base+0x1a8&gt;</pre>
+<pre>    7320:	02202021 	move	a0,s1</pre>
+<pre><span class="red">    7324:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7328:	8e450004 	lw	a1,4(s2)</pre>
+<pre>    732c:	10000041 	b	7434 &lt;realtek_SiteSurvey&commat;&commat;Base+0x2a8&gt;</pre>
+<pre>    7330:	00000000 	nop</pre>
+<pre>    7334:	3c044000 	lui	a0,0x4000</pre>
+<pre>    7338:	34844000 	ori	a0,a0,0x4000</pre>
+<pre>    733c:	00641024 	and	v0,v1,a0</pre>
+<pre>    7340:	14440009 	bne	v0,a0,7368 &lt;realtek_SiteSurvey&commat;&commat;Base+0x1dc&gt;</pre>
+<pre>    7344:	30624000 	andi	v0,v1,0x4000</pre>
+<pre><span class="red">    7348:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    734c:	8e450018 	lw	a1,24(s2)</pre>
+<pre>    7350:	0320f809 	jalr	t9</pre>
+<pre>    7354:	02202021 	move	a0,s1</pre>
+<pre>    7358:	8fbc0038 	lw	gp,56(sp)</pre>
+<pre>    735c:	8f9980d0 	lw	t9,-32560(gp)</pre>
+<pre>    7360:	10000027 	b	7400 &lt;realtek_SiteSurvey&commat;&commat;Base+0x274&gt;</pre>
+<pre>    7364:	02202021 	move	a0,s1</pre>
+<pre>    7368:	10400005 	beqz	v0,7380 &lt;realtek_SiteSurvey&commat;&commat;Base+0x1f4&gt;</pre>
+<pre>    736c:	3062ffff 	andi	v0,v1,0xffff</pre>
+<pre><span class="red">    7370:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7374:	8e450010 	lw	a1,16(s2)</pre>
+<pre>    7378:	10000017 	b	73d8 &lt;realtek_SiteSurvey&commat;&commat;Base+0x24c&gt;</pre>
+<pre>    737c:	02202021 	move	a0,s1</pre>
+<pre>    7380:	10400005 	beqz	v0,7398 &lt;realtek_SiteSurvey&commat;&commat;Base+0x20c&gt;</pre>
+<pre>    7384:	3c084000 	lui	t0,0x4000</pre>
+<pre><span class="red">    7388:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    738c:	8e450008 	lw	a1,8(s2)</pre>
+<pre>    7390:	10000011 	b	73d8 &lt;realtek_SiteSurvey&commat;&commat;Base+0x24c&gt;</pre>
+<pre>    7394:	02202021 	move	a0,s1</pre>
+<pre>    7398:	00681024 	and	v0,v1,t0</pre>
+<pre>    739c:	10400005 	beqz	v0,73b4 &lt;realtek_SiteSurvey&commat;&commat;Base+0x228&gt;</pre>
+<pre>    73a0:	3c09ffff 	lui	t1,0xffff</pre>
+<pre><span class="red">    73a4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    73a8:	8e450014 	lw	a1,20(s2)</pre>
+<pre>    73ac:	10000006 	b	73c8 &lt;realtek_SiteSurvey&commat;&commat;Base+0x23c&gt;</pre>
+<pre>    73b0:	02202021 	move	a0,s1</pre>
+<pre>    73b4:	00691024 	and	v0,v1,t1</pre>
+<pre><span class="red">    73b8:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    73bc:	10400004 	beqz	v0,73d0 &lt;realtek_SiteSurvey&commat;&commat;Base+0x244&gt;</pre>
+<pre>    73c0:	02202021 	move	a0,s1</pre>
+<pre>--</pre>
+<pre>    78f8:	8fb20030 	lw	s2,48(sp)</pre>
+<pre>    78fc:	8fb1002c 	lw	s1,44(sp)</pre>
+<pre>    7900:	8fb00028 	lw	s0,40(sp)</pre>
+<pre>    7904:	03200008 	jr	t9</pre>
+<pre>    7908:	27bd0050 	addiu	sp,sp,80</pre>
+<br />
+<pre>0000790c &lt;realtek_StartJoin&commat;&commat;Base&gt;:</pre>
+<pre>    790c:	3c1c0002 	lui	gp,0x2</pre>
+<pre>    7910:	279ca984 	addiu	gp,gp,-22140</pre>
+<pre>    7914:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    7918:	27bdef88 	addiu	sp,sp,-4216</pre>
+<pre>    791c:	afbf1074 	sw	ra,4212(sp)</pre>
+<pre>    7920:	afbe1070 	sw	s8,4208(sp)</pre>
+<pre>    7924:	afb7106c 	sw	s7,4204(sp)</pre>
+<pre>    7928:	afb61068 	sw	s6,4200(sp)</pre>
+<pre>    792c:	afb51064 	sw	s5,4196(sp)</pre>
+<pre>    7930:	afb41060 	sw	s4,4192(sp)</pre>
+<pre>    7934:	afb3105c 	sw	s3,4188(sp)</pre>
+<pre>    7938:	afb21058 	sw	s2,4184(sp)</pre>
+<pre>    793c:	afb11054 	sw	s1,4180(sp)</pre>
+<pre>    7940:	afb01050 	sw	s0,4176(sp)</pre>
+<pre>    7944:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    7948:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    794c:	27b10044 	addiu	s1,sp,68</pre>
+<pre>    7950:	00808021 	move	s0,a0</pre>
+<pre><span class="red">    7954:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7958:	02202021 	move	a0,s1</pre>
+<pre>    795c:	0320f809 	jalr	t9</pre>
+<pre>    7960:	24a58ba0 	addiu	a1,a1,-29792</pre>
+<pre>    7964:	02002021 	move	a0,s0</pre>
+<pre>    7968:	340589f2 	li	a1,0x89f2</pre>
+<pre>    796c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7970:	8f998050 	lw	t9,-32688(gp)</pre>
+<pre>    7974:	0320f809 	jalr	t9</pre>
+<pre>    7978:	02203021 	move	a2,s1</pre>
+<pre>    797c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7980:	04400115 	bltz	v0,7dd8 &lt;realtek_StartJoin&commat;&commat;Base+0x4cc&gt;</pre>
+<pre>    7984:	2403ffff 	li	v1,-1</pre>
+<pre>    7988:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    798c:	02202021 	move	a0,s1</pre>
+<pre><span class="red">    7990:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7994:	83b30044 	lb	s3,68(sp)</pre>
+<pre>    7998:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    7ab8:	0040b021 	move	s6,v0</pre>
+<pre>    7abc:	8f848024 	lw	a0,-32732(gp)</pre>
+<pre>    7ac0:	8f998044 	lw	t9,-32700(gp)</pre>
+<pre>    7ac4:	8e850000 	lw	a1,0(s4)</pre>
+<pre>    7ac8:	0320f809 	jalr	t9</pre>
+<pre>    7acc:	24848f8c 	addiu	a0,a0,-28788</pre>
+<pre>    7ad0:	100000c1 	b	7dd8 &lt;realtek_StartJoin&commat;&commat;Base+0x4cc&gt;</pre>
+<pre>    7ad4:	2403ffff 	li	v1,-1</pre>
+<pre>    7ad8:	8f99808c 	lw	t9,-32628(gp)</pre>
+<pre>    7adc:	00402021 	move	a0,v0</pre>
+<pre>    7ae0:	00002821 	move	a1,zero</pre>
+<pre>    7ae4:	24065558 	li	a2,21848</pre>
+<pre>    7ae8:	0320f809 	jalr	t9</pre>
+<pre>    7aec:	245e0004 	addiu	s8,v0,4</pre>
+<pre>    7af0:	240600ac 	li	a2,172</pre>
+<pre>    7af4:	03c02021 	move	a0,s8</pre>
+<pre>    7af8:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7afc:	00002821 	move	a1,zero</pre>
+<pre>    7b00:	8f99808c 	lw	t9,-32628(gp)</pre>
+<pre>    7b04:	0320f809 	jalr	t9</pre>
+<pre>    7b08:	27b40024 	addiu	s4,sp,36</pre>
+<pre>    7b0c:	02802021 	move	a0,s4</pre>
+<pre>    7b10:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7b14:	a2c00000 	sb	zero,0(s6)</pre>
+<pre>    7b18:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre><span class="red">    7b1c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7b20:	0320f809 	jalr	t9</pre>
+<pre>    7b24:	24a58de0 	addiu	a1,a1,-29216</pre>
+<pre>--</pre>
+<pre>    7b90:	afa31048 	sw	v1,4168(sp)</pre>
+<pre>    7b94:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7b98:	8fa31048 	lw	v1,4168(sp)</pre>
+<pre>    7b9c:	10400008 	beqz	v0,7bc0 &lt;realtek_StartJoin&commat;&commat;Base+0x2b4&gt;</pre>
+<pre>    7ba0:	00000000 	nop</pre>
+<pre>    7ba4:	26f70001 	addiu	s7,s7,1</pre>
+<pre>    7ba8:	02e3102a 	slt	v0,s7,v1</pre>
+<pre>    7bac:	26850006 	addiu	a1,s4,6</pre>
+<pre>    7bb0:	269400ac 	addiu	s4,s4,172</pre>
+<pre>    7bb4:	8f998080 	lw	t9,-32640(gp)</pre>
+<pre>    7bb8:	1440fff4 	bnez	v0,7b8c &lt;realtek_StartJoin&commat;&commat;Base+0x280&gt;</pre>
+<pre>    7bbc:	02202021 	move	a0,s1</pre>
+<pre>    7bc0:	8f99808c 	lw	t9,-32628(gp)</pre>
+<pre>    7bc4:	27b40048 	addiu	s4,sp,72</pre>
+<pre>    7bc8:	afa31048 	sw	v1,4168(sp)</pre>
+<pre>    7bcc:	02802021 	move	a0,s4</pre>
+<pre>    7bd0:	00002821 	move	a1,zero</pre>
+<pre>    7bd4:	0320f809 	jalr	t9</pre>
+<pre>    7bd8:	240600ac 	li	a2,172</pre>
+<pre>    7bdc:	8fa31048 	lw	v1,4168(sp)</pre>
+<pre>    7be0:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7be4:	18600003 	blez	v1,7bf4 &lt;realtek_StartJoin&commat;&commat;Base+0x2e8&gt;</pre>
+<pre>    7be8:	0077182a 	slt	v1,v1,s7</pre>
+<pre>    7bec:	1060001b 	beqz	v1,7c5c &lt;realtek_StartJoin&commat;&commat;Base+0x350&gt;</pre>
+<pre>    7bf0:	240200ac 	li	v0,172</pre>
+<pre><span class="red">    7bf4:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7bf8:	26840006 	addiu	a0,s4,6</pre>
+<pre>    7bfc:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    7c18:	12600003 	beqz	s3,7c28 &lt;realtek_StartJoin&commat;&commat;Base+0x31c&gt;</pre>
+<pre>    7c1c:	a682002c 	sh	v0,44(s4)</pre>
+<pre>    7c20:	24020010 	li	v0,16</pre>
+<pre>    7c24:	a682006a 	sh	v0,106(s4)</pre>
+<pre>    7c28:	32420001 	andi	v0,s2,0x1</pre>
+<pre>    7c2c:	10400004 	beqz	v0,7c40 &lt;realtek_StartJoin&commat;&commat;Base+0x334&gt;</pre>
+<pre>    7c30:	00000000 	nop</pre>
+<pre>    7c34:	8e820060 	lw	v0,96(s4)</pre>
+<pre>    7c38:	34424000 	ori	v0,v0,0x4000</pre>
+<pre>    7c3c:	ae820060 	sw	v0,96(s4)</pre>
+<pre>    7c40:	32520002 	andi	s2,s2,0x2</pre>
+<pre>    7c44:	1240000d 	beqz	s2,7c7c &lt;realtek_StartJoin&commat;&commat;Base+0x370&gt;</pre>
+<pre>    7c48:	3c024000 	lui	v0,0x4000</pre>
+<pre>    7c4c:	8e830060 	lw	v1,96(s4)</pre>
+<pre>    7c50:	00621025 	or	v0,v1,v0</pre>
+<pre>    7c54:	10000009 	b	7c7c &lt;realtek_StartJoin&commat;&commat;Base+0x370&gt;</pre>
+<pre>    7c58:	ae820060 	sw	v0,96(s4)</pre>
+<pre>    7c5c:	02802021 	move	a0,s4</pre>
+<pre>    7c60:	240600ac 	li	a2,172</pre>
+<pre>    7c64:	02e20018 	mult	s7,v0</pre>
+<pre>    7c68:	8f99810c 	lw	t9,-32500(gp)</pre>
+<pre>    7c6c:	0000b812 	mflo	s7</pre>
+<pre>    7c70:	0320f809 	jalr	t9</pre>
+<pre>    7c74:	03d72821 	addu	a1,s8,s7</pre>
+<pre>    7c78:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre><span class="red">    7c7c:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7c80:	27b10024 	addiu	s1,sp,36</pre>
+<pre>    7c84:	02002821 	move	a1,s0</pre>
+<pre>--</pre>
+<pre>    7e10:	279ca484 	addiu	gp,gp,-23420</pre>
+<pre>    7e14:	0399e021 	addu	gp,gp,t9</pre>
+<pre>    7e18:	27bdf9a0 	addiu	sp,sp,-1632</pre>
+<pre>    7e1c:	afbf065c 	sw	ra,1628(sp)</pre>
+<pre>    7e20:	afb50658 	sw	s5,1624(sp)</pre>
+<pre>    7e24:	afb40654 	sw	s4,1620(sp)</pre>
+<pre>    7e28:	afb30650 	sw	s3,1616(sp)</pre>
+<pre>    7e2c:	afb2064c 	sw	s2,1612(sp)</pre>
+<pre>    7e30:	afb10648 	sw	s1,1608(sp)</pre>
+<pre>    7e34:	afb00644 	sw	s0,1604(sp)</pre>
+<pre>    7e38:	afbc0010 	sw	gp,16(sp)</pre>
+<pre>    7e3c:	2410ffff 	li	s0,-1</pre>
+<pre>    7e40:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    7e44:	00809021 	move	s2,a0</pre>
+<pre>    7e48:	24040002 	li	a0,2</pre>
+<pre>    7e4c:	00a0a021 	move	s4,a1</pre>
+<pre>    7e50:	24050001 	li	a1,1</pre>
+<pre>    7e54:	00c0a821 	move	s5,a2</pre>
+<pre>    7e58:	0320f809 	jalr	t9</pre>
+<pre>    7e5c:	00003021 	move	a2,zero</pre>
+<pre>    7e60:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    7e64:	0440003e 	bltz	v0,7f60 &lt;realtek_GetStaInfo&commat;&commat;Base+0x154&gt;</pre>
+<pre>    7e68:	00408821 	move	s1,v0</pre>
+<pre>    7e6c:	27a60018 	addiu	a2,sp,24</pre>
+<pre>    7e70:	02402821 	move	a1,s2</pre>
+<pre><span class="red">    7e74:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    7e78:	00c02021 	move	a0,a2</pre>
+<pre>    7e7c:	0320f809 	jalr	t9</pre>
+<pre>--</pre>
+<pre>    7fe0:	0440005e 	bltz	v0,815c &lt;realtek_ListStaInfo&commat;&commat;Base+0x1d4&gt;</pre>
+<pre>    7fe4:	00408821 	move	s1,v0</pre>
+<pre>    7fe8:	8f9e8024 	lw	s8,-32732(gp)</pre>
+<pre>    7fec:	27b000e8 	addiu	s0,sp,232</pre>
+<pre>    7ff0:	8f978024 	lw	s7,-32732(gp)</pre>
+<pre>    7ff4:	00009021 	move	s2,zero</pre>
+<pre>    7ff8:	a2a00000 	sb	zero,0(s5)</pre>
+<pre>    7ffc:	27de8f64 	addiu	s8,s8,-28828</pre>
+<pre>    8000:	26f78ffc 	addiu	s7,s7,-28676</pre>
+<pre>    8004:	27b40038 	addiu	s4,sp,56</pre>
+<pre>    8008:	8f968074 	lw	s6,-32652(gp)</pre>
+<pre>    800c:	1000004e 	b	8148 &lt;realtek_ListStaInfo&commat;&commat;Base+0x1c0&gt;</pre>
+<pre>    8010:	27b30040 	addiu	s3,sp,64</pre>
+<pre>    8014:	9206ffee 	lbu	a2,-18(s0)</pre>
+<pre>    8018:	8f828024 	lw	v0,-32732(gp)</pre>
+<pre>    801c:	30c70001 	andi	a3,a2,0x1</pre>
+<pre>    8020:	8f858024 	lw	a1,-32732(gp)</pre>
+<pre>    8024:	24428ff0 	addiu	v0,v0,-28688</pre>
+<pre>    8028:	03c7100a 	0x3c7100a</pre>
+<pre>    802c:	00403821 	move	a3,v0</pre>
+<pre>    8030:	00061600 	sll	v0,a2,0x18</pre>
+<pre>    8034:	00021603 	sra	v0,v0,0x18</pre>
+<pre>    8038:	0441000e 	bgez	v0,8074 &lt;realtek_ListStaInfo&commat;&commat;Base+0xec&gt;</pre>
+<pre>    803c:	24a58ff4 	addiu	a1,a1,-28684</pre>
+<pre>    8040:	92020001 	lbu	v0,1(s0)</pre>
+<pre><span class="red">    8044:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    8048:	30420002 	andi	v0,v0,0x2</pre>
+<pre>    804c:	00021100 	sll	v0,v0,0x4</pre>
+<pre>--</pre>
+<pre>    81cc:	97a20018 	lhu	v0,24(sp)</pre>
+<pre>    81d0:	30420001 	andi	v0,v0,0x1</pre>
+<pre>    81d4:	10400035 	beqz	v0,82ac &lt;realtek_WStatus&commat;&commat;Base+0x11c&gt;</pre>
+<pre>    81d8:	00001021 	move	v0,zero</pre>
+<pre>    81dc:	8f998138 	lw	t9,-32456(gp)</pre>
+<pre>    81e0:	0320f809 	jalr	t9</pre>
+<pre>    81e4:	02202021 	move	a0,s1</pre>
+<pre>    81e8:	24030002 	li	v1,2</pre>
+<pre>    81ec:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    81f0:	14430006 	bne	v0,v1,820c &lt;realtek_WStatus&commat;&commat;Base+0x7c&gt;</pre>
+<pre>    81f4:	24040002 	li	a0,2</pre>
+<pre>    81f8:	8f998108 	lw	t9,-32504(gp)</pre>
+<pre>    81fc:	0320f809 	jalr	t9</pre>
+<pre>    8200:	02202021 	move	a0,s1</pre>
+<pre>    8204:	10000029 	b	82ac &lt;realtek_WStatus&commat;&commat;Base+0x11c&gt;</pre>
+<pre>    8208:	00000000 	nop</pre>
+<pre>    820c:	8f9980e4 	lw	t9,-32540(gp)</pre>
+<pre>    8210:	24050001 	li	a1,1</pre>
+<pre>    8214:	0320f809 	jalr	t9</pre>
+<pre>    8218:	00003021 	move	a2,zero</pre>
+<pre>    821c:	8fbc0010 	lw	gp,16(sp)</pre>
+<pre>    8220:	04400021 	bltz	v0,82a8 &lt;realtek_WStatus&commat;&commat;Base+0x118&gt;</pre>
+<pre>    8224:	00408021 	move	s0,v0</pre>
+<pre>    8228:	27a6001c 	addiu	a2,sp,28</pre>
+<pre>    822c:	02202821 	move	a1,s1</pre>
+<pre><span class="red">    8230:	8f998148 	lw	t9,strcpy</span></pre>
+<pre>    8234:	00c02021 	move	a0,a2</pre>
+<pre>    8238:	8f918018 	lw	s1,-32744(gp)</pre>
+<br />
+<pre></span></pre>
+<pre>[</span><span class="orange">*</span>] Function </span><span class="orange">strcpy</span> used </span><span class="orange">42</span> times </span><span class="orange">libFVwireless.so</span></pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

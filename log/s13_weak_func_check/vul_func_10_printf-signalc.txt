@@ -1,0 +1,220 @@
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m tear down of [0;33msignalc[0m
+
+  40ada0:	8f9980c4 	lw	t9,-32572(gp)
+  40ada4:	10400249 	beqz	v0,40b6cc <main@@Base+0xa24>
+  40ada8:	24a5a8f0 	addiu	a1,a1,-22288
+  40adac:	0320f809 	jalr	t9
+  40adb0:	00000000 	nop
+  40adb4:	8fbc0028 	lw	gp,40(sp)
+  40adb8:	10400248 	beqz	v0,40b6dc <main@@Base+0xa34>
+  40adbc:	02402021 	move	a0,s2
+  40adc0:	26100001 	addiu	s0,s0,1
+  40adc4:	0211102a 	slt	v0,s0,s1
+  40adc8:	10400024 	beqz	v0,40ae5c <main@@Base+0x1b4>
+  40adcc:	00000000 	nop
+  40add0:	8fd70004 	lw	s7,4(s8)
+  40add4:	3c050042 	lui	a1,0x42
+  40add8:	8f9980c4 	lw	t9,-32572(gp)
+  40addc:	24a5a880 	addiu	a1,a1,-22400
+  40ade0:	02e02021 	move	a0,s7
+  40ade4:	0320f809 	jalr	t9
+  40ade8:	27de0004 	addiu	s8,s8,4
+  40adec:	3c050042 	lui	a1,0x42
+  40adf0:	02e02021 	move	a0,s7
+  40adf4:	8fbc0028 	lw	gp,40(sp)
+  40adf8:	8f9980c4 	lw	t9,-32572(gp)
+  40adfc:	1440ffe3 	bnez	v0,40ad8c <main@@Base+0xe4>
+  40ae00:	24a5a8ec 	addiu	a1,a1,-22292
+[31m  40ae04:	8f99807c 	lw	t9,printf[0m
+  40ae08:	3c040042 	lui	a0,0x42
+  40ae0c:	8e87eb54 	lw	a3,-5292(s4)
+--
+  40b6b0:	24a5eb20 	addiu	a1,a1,-5344
+  40b6b4:	2484aa24 	addiu	a0,a0,-21980
+  40b6b8:	0c101be8 	jal	406fa0 <_ftext@@Base+0x48e0>
+  40b6bc:	24060012 	li	a2,18
+  40b6c0:	8fbc0028 	lw	gp,40(sp)
+  40b6c4:	1000fea7 	b	40b164 <main@@Base+0x4bc>
+  40b6c8:	00000000 	nop
+  40b6cc:	0c102a01 	jal	40a804 <_ftext@@Base+0x8144>
+  40b6d0:	00000000 	nop
+  40b6d4:	1000fdd5 	b	40ae2c <main@@Base+0x184>
+  40b6d8:	00001021 	move	v0,zero
+  40b6dc:	8f99815c 	lw	t9,-32420(gp)
+  40b6e0:	00002821 	move	a1,zero
+  40b6e4:	0320f809 	jalr	t9
+  40b6e8:	24060040 	li	a2,64
+  40b6ec:	24020002 	li	v0,2
+  40b6f0:	8fbc0028 	lw	gp,40(sp)
+  40b6f4:	16220018 	bne	s1,v0,40b758 <main@@Base+0xab0>
+  40b6f8:	26100001 	addiu	s0,s0,1
+  40b6fc:	a3a00060 	sb	zero,96(sp)
+  40b700:	0c102a11 	jal	40a844 <_ftext@@Base+0x8184>
+  40b704:	02402021 	move	a0,s2
+  40b708:	3c040042 	lui	a0,0x42
+  40b70c:	8fbc0028 	lw	gp,40(sp)
+  40b710:	2484a970 	addiu	a0,a0,-22160
+[31m  40b714:	8f99807c 	lw	t9,printf[0m
+  40b718:	0320f809 	jalr	t9
+  40b71c:	00402821 	move	a1,v0
+--
+  416e4c:	27bd00b0 	addiu	sp,sp,176
+  416e50:	30420004 	andi	v0,v0,0x4
+  416e54:	1040fff7 	beqz	v0,416e34 <bufferevent_openssl_socket_new@@Base+0xa0>
+  416e58:	00000000 	nop
+  416e5c:	8cc60018 	lw	a2,24(a2)
+  416e60:	8e02002c 	lw	v0,44(s0)
+  416e64:	00c2102a 	slt	v0,a2,v0
+  416e68:	1440fff2 	bnez	v0,416e34 <bufferevent_openssl_socket_new@@Base+0xa0>
+  416e6c:	00000000 	nop
+  416e70:	18c0004e 	blez	a2,416fac <bufferevent_openssl_socket_new@@Base+0x218>
+  416e74:	00000000 	nop
+  416e78:	8e020064 	lw	v0,100(s0)
+  416e7c:	10400058 	beqz	v0,416fe0 <bufferevent_openssl_socket_new@@Base+0x24c>
+  416e80:	00003821 	move	a3,zero
+  416e84:	8e050010 	lw	a1,16(s0)
+  416e88:	8e020014 	lw	v0,20(s0)
+  416e8c:	8f998144 	lw	t9,-32444(gp)
+  416e90:	8e040068 	lw	a0,104(s0)
+  416e94:	0320f809 	jalr	t9
+  416e98:	00a22821 	addu	a1,a1,v0
+  416e9c:	8fbc0010 	lw	gp,16(sp)
+  416ea0:	00408821 	move	s1,v0
+  416ea4:	8e020018 	lw	v0,24(s0)
+  416ea8:	1051003c 	beq	v0,s1,416f9c <bufferevent_openssl_socket_new@@Base+0x208>
+  416eac:	3c040043 	lui	a0,0x43
+[31m  416eb0:	8f99807c 	lw	t9,printf[0m
+  416eb4:	02202821 	move	a1,s1
+  416eb8:	2484d4c0 	addiu	a0,a0,-11072
+  416ebc:	0320f809 	jalr	t9
+  416ec0:	3c130043 	lui	s3,0x43
+  416ec4:	00002821 	move	a1,zero
+  416ec8:	8fbc0010 	lw	gp,16(sp)
+  416ecc:	27b20018 	addiu	s2,sp,24
+  416ed0:	8e040068 	lw	a0,104(s0)
+  416ed4:	8f998068 	lw	t9,-32664(gp)
+  416ed8:	0320f809 	jalr	t9
+  416edc:	2673d4e8 	addiu	s3,s3,-11032
+  416ee0:	3c040043 	lui	a0,0x43
+  416ee4:	8fbc0010 	lw	gp,16(sp)
+  416ee8:	2484d4d4 	addiu	a0,a0,-11052
+[31m  416eec:	8f99807c 	lw	t9,printf[0m
+  416ef0:	0320f809 	jalr	t9
+  416ef4:	00402821 	move	a1,v0
+  416ef8:	8fbc0010 	lw	gp,16(sp)
+  416efc:	10000009 	b	416f24 <bufferevent_openssl_socket_new@@Base+0x190>
+  416f00:	00000000 	nop
+  416f04:	0320f809 	jalr	t9
+  416f08:	00000000 	nop
+  416f0c:	02602021 	move	a0,s3
+  416f10:	8fbc0010 	lw	gp,16(sp)
+[31m  416f14:	8f99807c 	lw	t9,printf[0m
+  416f18:	0320f809 	jalr	t9
+  416f1c:	02402821 	move	a1,s2
+  416f20:	8fbc0010 	lw	gp,16(sp)
+  416f24:	8f9981ac 	lw	t9,-32340(gp)
+  416f28:	0320f809 	jalr	t9
+  416f2c:	00000000 	nop
+  416f30:	02402821 	move	a1,s2
+  416f34:	8fbc0010 	lw	gp,16(sp)
+  416f38:	8f998180 	lw	t9,-32384(gp)
+  416f3c:	1440fff1 	bnez	v0,416f04 <bufferevent_openssl_socket_new@@Base+0x170>
+  416f40:	00402021 	move	a0,v0
+  416f44:	8f998370 	lw	t9,-31888(gp)
+  416f48:	0320f809 	jalr	t9
+  416f4c:	00000000 	nop
+  416f50:	8fbc0010 	lw	gp,16(sp)
+  416f54:	8c440000 	lw	a0,0(v0)
+  416f58:	8f998080 	lw	t9,-32640(gp)
+  416f5c:	0320f809 	jalr	t9
+  416f60:	00409021 	move	s2,v0
+  416f64:	3c040043 	lui	a0,0x43
+  416f68:	8fbc0010 	lw	gp,16(sp)
+  416f6c:	2484d4f0 	addiu	a0,a0,-11024
+  416f70:	8e460000 	lw	a2,0(s2)
+[31m  416f74:	8f99807c 	lw	t9,printf[0m
+  416f78:	0320f809 	jalr	t9
+  416f7c:	00402821 	move	a1,v0
+--
+  41732c:	24062000 	li	a2,8192
+  417330:	0320f809 	jalr	t9
+  417334:	00003821 	move	a3,zero
+  417338:	8fbc0010 	lw	gp,16(sp)
+  41733c:	1000ffe3 	b	4172cc <bufferevent_write@@Base+0x110>
+  417340:	00000000 	nop
+  417344:	00403021 	move	a2,v0
+  417348:	0c105c00 	jal	417000 <bufferevent_openssl_socket_new@@Base+0x26c>
+  41734c:	02002021 	move	a0,s0
+  417350:	8e030024 	lw	v1,36(s0)
+  417354:	8e020008 	lw	v0,8(s0)
+  417358:	0043102a 	slt	v0,v0,v1
+  41735c:	1440ffe9 	bnez	v0,417304 <bufferevent_write@@Base+0x148>
+  417360:	00000000 	nop
+  417364:	8e190058 	lw	t9,88(s0)
+  417368:	1320ffe6 	beqz	t9,417304 <bufferevent_write@@Base+0x148>
+  41736c:	00000000 	nop
+  417370:	8e050070 	lw	a1,112(s0)
+  417374:	0320f809 	jalr	t9
+  417378:	02002021 	move	a0,s0
+  41737c:	1000ffe1 	b	417304 <bufferevent_write@@Base+0x148>
+  417380:	00000000 	nop
+  417384:	8e030060 	lw	v1,96(s0)
+  417388:	1060ffde 	beqz	v1,417304 <bufferevent_write@@Base+0x148>
+  41738c:	3c040043 	lui	a0,0x43
+[31m  417390:	8f99807c 	lw	t9,printf[0m
+  417394:	00402821 	move	a1,v0
+  417398:	2484d508 	addiu	a0,a0,-11000
+  41739c:	0320f809 	jalr	t9
+  4173a0:	3c130043 	lui	s3,0x43
+  4173a4:	00002821 	move	a1,zero
+  4173a8:	8fbc0010 	lw	gp,16(sp)
+  4173ac:	27b20018 	addiu	s2,sp,24
+  4173b0:	8e040068 	lw	a0,104(s0)
+  4173b4:	8f998068 	lw	t9,-32664(gp)
+  4173b8:	0320f809 	jalr	t9
+  4173bc:	2673d4e8 	addiu	s3,s3,-11032
+  4173c0:	3c040043 	lui	a0,0x43
+  4173c4:	8fbc0010 	lw	gp,16(sp)
+  4173c8:	2484d4d4 	addiu	a0,a0,-11052
+[31m  4173cc:	8f99807c 	lw	t9,printf[0m
+  4173d0:	0320f809 	jalr	t9
+  4173d4:	00402821 	move	a1,v0
+  4173d8:	8fbc0010 	lw	gp,16(sp)
+  4173dc:	10000009 	b	417404 <bufferevent_write@@Base+0x248>
+  4173e0:	00000000 	nop
+  4173e4:	0320f809 	jalr	t9
+  4173e8:	00000000 	nop
+  4173ec:	02602021 	move	a0,s3
+  4173f0:	8fbc0010 	lw	gp,16(sp)
+[31m  4173f4:	8f99807c 	lw	t9,printf[0m
+  4173f8:	0320f809 	jalr	t9
+  4173fc:	02402821 	move	a1,s2
+  417400:	8fbc0010 	lw	gp,16(sp)
+  417404:	8f9981ac 	lw	t9,-32340(gp)
+  417408:	0320f809 	jalr	t9
+  41740c:	00000000 	nop
+  417410:	02402821 	move	a1,s2
+  417414:	8fbc0010 	lw	gp,16(sp)
+  417418:	8f998180 	lw	t9,-32384(gp)
+  41741c:	1440fff1 	bnez	v0,4173e4 <bufferevent_write@@Base+0x228>
+  417420:	00402021 	move	a0,v0
+  417424:	8f998370 	lw	t9,-31888(gp)
+  417428:	0320f809 	jalr	t9
+  41742c:	00000000 	nop
+  417430:	8fbc0010 	lw	gp,16(sp)
+  417434:	8c440000 	lw	a0,0(v0)
+  417438:	8f998080 	lw	t9,-32640(gp)
+  41743c:	0320f809 	jalr	t9
+  417440:	00409021 	move	s2,v0
+  417444:	3c040043 	lui	a0,0x43
+  417448:	8fbc0010 	lw	gp,16(sp)
+  41744c:	2484d4f0 	addiu	a0,a0,-11024
+  417450:	8e460000 	lw	a2,0(s2)
+[31m  417454:	8f99807c 	lw	t9,printf[0m
+  417458:	0320f809 	jalr	t9
+  41745c:	00402821 	move	a1,v0
+
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m used [0;33m10[0m times [0;33msignalc[0m
+

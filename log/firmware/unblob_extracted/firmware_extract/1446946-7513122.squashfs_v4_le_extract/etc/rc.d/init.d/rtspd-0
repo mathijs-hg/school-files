@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# rtspd: This starts and stops rtsp server.
+#
+# chkconfig: 2345 92 12
+# description: rtspd
+#
+# processname: /usr/sbin/rtsp/rtspd
+
+# automatically export variables to the environment
+set -a
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+port=`/usr/sbin/userconfig -read RTSP Port`
+privacy_mode_enable=`/usr/sbin/userconfig -read PRIVACY_MODE Enable`
+privacy_mode_manual=`/usr/sbin/userconfig -read PRIVACY_MODE Manual`
+
+start() {
+	echo "Starting rtsp..."
+	mkdir -p /tmp/rtspd
+	cp /usr/sbin/rtsp/mime.types /tmp/rtspd/mime.types
+	if [ $privacy_mode_enable == "0x01" ] && [ $privacy_mode_manual == "0x01" ]; then
+		echo "privacy mode turned on. Can't start RTSP Server."
+	else
+		/usr/sbin/rtsp/rtspd -p $port -v 1>/dev/null 2>/dev/null
+	fi
+}
+
+stop() {
+	kill `pidof rtspd`
+}
+
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+	*)
+		echo "Usage $0 {start|stop|restart}"
+		exit 1
+esac
+
+exit $?

@@ -1,0 +1,122 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33msignalc[0m
+
+  4044c4:	8fbc0018 	lw	gp,24(sp)
+  4044c8:	24020200 	li	v0,512
+  4044cc:	02203021 	move	a2,s1
+  4044d0:	27b40020 	addiu	s4,sp,32
+  4044d4:	2405003c 	li	a1,60
+  4044d8:	8f998334 	lw	t9,-31948(gp)
+  4044dc:	02803821 	move	a3,s4
+  4044e0:	afa20020 	sw	v0,32(sp)
+  4044e4:	0320f809 	jalr	t9
+  4044e8:	a3a00024 	sb	zero,36(sp)
+  4044ec:	8fbc0018 	lw	gp,24(sp)
+  4044f0:	1040006c 	beqz	v0,4046a4 <_ftext@@Base+0x1fe4>
+  4044f4:	3c020042 	lui	v0,0x42
+  4044f8:	3c020042 	lui	v0,0x42
+  4044fc:	24040006 	li	a0,6
+  404500:	8f99835c 	lw	t9,-31908(gp)
+  404504:	24428d18 	addiu	v0,v0,-29416
+  404508:	26658a30 	addiu	a1,s3,-30160
+  40450c:	2646b034 	addiu	a2,s2,-20428
+  404510:	afa20010 	sw	v0,16(sp)
+  404514:	0320f809 	jalr	t9
+  404518:	24070c4c 	li	a3,3148
+  40451c:	8fbc0018 	lw	gp,24(sp)
+  404520:	8f95827c 	lw	s5,-32132(gp)
+  404524:	02202821 	move	a1,s1
+[31m  404528:	8f998050 	lw	t9,strcpy[0m
+  40452c:	8ea40000 	lw	a0,0(s5)
+  404530:	0320f809 	jalr	t9
+--
+  406b3c:	a260000e 	sb	zero,14(s3)
+  406b40:	0320f809 	jalr	t9
+  406b44:	a262000f 	sb	v0,15(s3)
+  406b48:	3c060042 	lui	a2,0x42
+  406b4c:	02602021 	move	a0,s3
+  406b50:	8fbc0018 	lw	gp,24(sp)
+  406b54:	24050002 	li	a1,2
+  406b58:	8f9982fc 	lw	t9,-32004(gp)
+  406b5c:	0320f809 	jalr	t9
+  406b60:	24c68ae8 	addiu	a2,a2,-29976
+  406b64:	3c060042 	lui	a2,0x42
+  406b68:	02602021 	move	a0,s3
+  406b6c:	8fbc0018 	lw	gp,24(sp)
+  406b70:	24050003 	li	a1,3
+  406b74:	8f9982fc 	lw	t9,-32004(gp)
+  406b78:	0320f809 	jalr	t9
+  406b7c:	24c69a18 	addiu	a2,a2,-26088
+  406b80:	8fbc0018 	lw	gp,24(sp)
+  406b84:	8f9982fc 	lw	t9,-32004(gp)
+  406b88:	02203021 	move	a2,s1
+  406b8c:	9605fffa 	lhu	a1,-6(s0)
+  406b90:	0320f809 	jalr	t9
+  406b94:	02602021 	move	a0,s3
+  406b98:	02402021 	move	a0,s2
+  406b9c:	8fbc0018 	lw	gp,24(sp)
+[31m  406ba0:	8f998050 	lw	t9,strcpy[0m
+  406ba4:	0320f809 	jalr	t9
+  406ba8:	26450011 	addiu	a1,s2,17
+--
+  410308:	03a8e821 	addu	sp,sp,t0
+  41030c:	8ce20000 	lw	v0,0(a3)
+  410310:	8fbf7fec 	lw	ra,32748(sp)
+  410314:	8fbe7fe8 	lw	s8,32744(sp)
+  410318:	8fb77fe4 	lw	s7,32740(sp)
+  41031c:	8fb67fe0 	lw	s6,32736(sp)
+  410320:	8fb57fdc 	lw	s5,32732(sp)
+  410324:	8fb47fd8 	lw	s4,32728(sp)
+  410328:	8fb37fd4 	lw	s3,32724(sp)
+  41032c:	8fb27fd0 	lw	s2,32720(sp)
+  410330:	8fb17fcc 	lw	s1,32716(sp)
+  410334:	8fb07fc8 	lw	s0,32712(sp)
+  410338:	03e00008 	jr	ra
+  41033c:	27bd7ff0 	addiu	sp,sp,32752
+  410340:	02a01021 	move	v0,s5
+  410344:	00008021 	move	s0,zero
+  410348:	10000004 	b	41035c <event_pkt_create_server@@Base+0xbec>
+  41034c:	24040020 	li	a0,32
+  410350:	26100001 	addiu	s0,s0,1
+  410354:	1204ff8c 	beq	s0,a0,410188 <event_pkt_create_server@@Base+0xa18>
+  410358:	00000000 	nop
+  41035c:	80430000 	lb	v1,0(v0)
+  410360:	1460fffb 	bnez	v1,410350 <event_pkt_create_server@@Base+0xbe0>
+  410364:	24420140 	addiu	v0,v0,320
+  410368:	00101200 	sll	v0,s0,0x8
+[31m  41036c:	8f998050 	lw	t9,strcpy[0m
+  410370:	00109980 	sll	s3,s0,0x6
+  410374:	02629821 	addu	s3,s3,v0
+--
+  4152dc:	92490002 	lbu	t1,2(s2)
+  4152e0:	24a5d2e0 	addiu	a1,a1,-11552
+  4152e4:	92480003 	lbu	t0,3(s2)
+  4152e8:	26310020 	addiu	s1,s1,32
+  4152ec:	92430004 	lbu	v1,4(s2)
+  4152f0:	92660002 	lbu	a2,2(s3)
+  4152f4:	92470001 	lbu	a3,1(s2)
+  4152f8:	8f998114 	lw	t9,-32492(gp)
+  4152fc:	8fa402f8 	lw	a0,760(sp)
+  415300:	afa90010 	sw	t1,16(sp)
+  415304:	afa80014 	sw	t0,20(sp)
+  415308:	afa30018 	sw	v1,24(sp)
+  41530c:	0320f809 	jalr	t9
+  415310:	afa2001c 	sw	v0,28(sp)
+  415314:	0215102a 	slt	v0,s0,s5
+  415318:	8fbc0020 	lw	gp,32(sp)
+  41531c:	1440ffbb 	bnez	v0,41520c <xmessage_Util_GetActiveInterfaceMAC@@Base+0x120>
+  415320:	00109940 	sll	s3,s0,0x5
+  415324:	8f9981c8 	lw	t9,-32312(gp)
+  415328:	0320f809 	jalr	t9
+  41532c:	03c02021 	move	a0,s8
+  415330:	83a20040 	lb	v0,64(sp)
+  415334:	8fbc0020 	lw	gp,32(sp)
+  415338:	1040ff85 	beqz	v0,415150 <xmessage_Util_GetActiveInterfaceMAC@@Base+0x64>
+  41533c:	00000000 	nop
+[31m  415340:	8f998050 	lw	t9,strcpy[0m
+  415344:	8fa402f8 	lw	a0,760(sp)
+  415348:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m4[0m times [0;33msignalc[0m
+

@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mbundle_restore[0m
+
+  400ab8:	10570003 	beq	v0,s7,400ac8 <main@@Base+0x1d8>
+  400abc:	2403005c 	li	v1,92
+  400ac0:	14430005 	bne	v0,v1,400ad8 <main@@Base+0x1e8>
+  400ac4:	02701821 	addu	v1,s3,s0
+  400ac8:	02701821 	addu	v1,s3,s0
+  400acc:	a07e0208 	sb	s8,520(v1)
+  400ad0:	26100001 	addiu	s0,s0,1
+  400ad4:	02701821 	addu	v1,s3,s0
+  400ad8:	a0620208 	sb	v0,520(v1)
+  400adc:	26100001 	addiu	s0,s0,1
+  400ae0:	26310001 	addiu	s1,s1,1
+  400ae4:	02209021 	move	s2,s1
+  400ae8:	8f99803c 	lw	t9,strlen
+  400aec:	0320f809 	jalr	t9
+  400af0:	02802021 	move	a0,s4
+  400af4:	8fbc0018 	lw	gp,24(sp)
+  400af8:	0222102b 	sltu	v0,s1,v0
+  400afc:	1440ffea 	bnez	v0,400aa8 <main@@Base+0x1b8>
+  400b00:	00000000 	nop
+  400b04:	8f828040 	lw	v0,-32704(gp)
+  400b08:	8c440000 	lw	a0,0(v0)
+  400b0c:	afb40010 	sw	s4,16(sp)
+  400b10:	8fa50ac0 	lw	a1,2752(sp)
+  400b14:	8fa60aac 	lw	a2,2732(sp)
+  400b18:	8fa70ab0 	lw	a3,2736(sp)
+[31m  400b1c:	8f998058 	lw	t9,fprintf[0m
+  400b20:	0320f809 	jalr	t9
+  400b24:	00000000 	nop
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m1[0m times [0;33mbundle_restore[0m
+

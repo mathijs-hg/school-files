@@ -1,0 +1,496 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_ntpclient.html" title="./../semgrep_ntpclient.html" >&laquo; Back to semgrep_ntpclient</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>/* WARNING: Could not reconcile some variable overlaps */</pre>
+<br />
+<pre>undefined4 main(int param_1,char **param_2)</pre>
+<br />
+<pre>{</pre>
+<pre>  int iVar1;</pre>
+<pre>  undefined *puVar2;</pre>
+<pre>  hostent *phVar3;</pre>
+<pre>  int *piVar4;</pre>
+<pre>  int iVar5;</pre>
+<pre>  undefined4 uVar6;</pre>
+<pre>  uint uVar7;</pre>
+<pre>  undefined4 *puVar8;</pre>
+<pre>  char *pcVar9;</pre>
+<pre>  undefined8 uVar10;</pre>
+<pre>  undefined8 uVar11;</pre>
+<pre>  undefined4 *puVar12;</pre>
+<pre>  undefined4 *puVar13;</pre>
+<pre>  undefined auStack_148 [8];</pre>
+<pre>  int local_140;</pre>
+<pre>  int local_13c;</pre>
+<pre>  int local_138;</pre>
+<pre>  int local_134;</pre>
+<pre>  int local_130;</pre>
+<pre>  undefined4 local_12c;</pre>
+<pre>  undefined4 local_128;</pre>
+<pre>  undefined4 local_124;</pre>
+<pre>  undefined4 local_120;</pre>
+<pre>  undefined4 local_11c;</pre>
+<pre>  int local_118;</pre>
+<pre>  int local_114;</pre>
+<pre>  int local_110;</pre>
+<pre>  int local_10c;</pre>
+<pre>  undefined4 *local_108;</pre>
+<pre>  undefined4 local_104;</pre>
+<pre>  undefined4 local_100;</pre>
+<pre>  undefined auStack_fc [4];</pre>
+<pre>  undefined4 local_f8 [2];</pre>
+<pre>  undefined8 local_f0;</pre>
+<pre>  sockaddr local_e8;</pre>
+<pre>  undefined4 local_d8;</pre>
+<pre>  undefined4 local_d4;</pre>
+<pre>  undefined4 local_d0;</pre>
+<pre>  sockaddr local_cc;</pre>
+<pre>  undefined4 local_bc;</pre>
+<pre>  undefined4 local_b8;</pre>
+<pre>  undefined4 local_b4;</pre>
+<pre>  undefined8 local_68;</pre>
+<pre>  char *local_60;</pre>
+<pre>  undefined4 *local_5c;</pre>
+<pre>  undefined4 *local_58;</pre>
+<pre>  undefined *local_54;</pre>
+<pre>  undefined8 *local_50;</pre>
+<pre>  undefined4 *local_4c;</pre>
+<pre>  undefined4 **local_48;</pre>
+<pre>  char *local_44;</pre>
+<pre>  int local_40;</pre>
+<pre>  undefined4 local_38;</pre>
+<pre>  undefined4 local_34;</pre>
+<pre>  char *local_30;</pre>
+<pre>  char *local_2c;</pre>
+<pre>  </pre>
+<pre>  local_140 = 0;</pre>
+<pre>  local_13c = 0;</pre>
+<pre>  local_138 = 0;</pre>
+<pre>  local_134 = 600;</pre>
+<pre>  local_130 = 0;</pre>
+<pre>  local_12c = 1;</pre>
+<pre>  local_118 = 0;</pre>
+<pre>  local_114 = 2;</pre>
+<pre>  pcVar9 = (char *)0x0;</pre>
+<pre>  local_68._0_4_ = 0;</pre>
+<pre>  local_60 = "initial frequency %d\n";</pre>
+<pre>  while( true ) {</pre>
+<pre><span class="green">    iVar1 = getopt(param_1,param_2,"c:df:g:h:i:lp:q:rst6")</span></span></pre>
+<pre>    if (iVar1 == -1) break;</pre>
+<pre>    uVar7 = (uint)(iVar1 - 0x36U &lt; 0x3f);</pre>
+<pre>    if (uVar7 == 0) {</pre>
+<pre>switchD_00401f0c_caseD_37:</pre>
+<pre>      FUN_0040100c(*param_2);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>      exit(1);</pre>
+<pre>    }</pre>
+<pre>    puVar2 = (&amp;switchD_00401f0c::switchdataD_004048e0)[iVar1 - 0x36U];</pre>
+<pre>    switch((uint)puVar2 &amp; 0xfffffffe) {</pre>
+<pre>    case 0x401f14:</pre>
+<pre>      local_138 = atoi(optarg);</pre>
+<pre>      break;</pre>
+<pre>    case 0x401f30:</pre>
+<pre>      debug = debug + 1;</pre>
+<pre>      break;</pre>
+<pre>    case 0x401f40:</pre>
+<pre>      iVar1 = atoi(optarg);</pre>
+<pre>      if (debug != 0) {</pre>
+<pre><span class="green">        printf(local_60,iVar1)</span></span></pre>
+<pre>      }</pre>
+<pre>      FUN_00400fa8(iVar1);</pre>
+<pre>      break;</pre>
+<pre>    case 0x401f88:</pre>
+<pre>      local_130 = atoi(optarg);</pre>
+<pre>      break;</pre>
+<pre>    case 0x401fa4:</pre>
+<pre>      pcVar9 = optarg;</pre>
+<pre>      break;</pre>
+<pre>    case 0x401fb0:</pre>
+<pre>      local_134 = atoi(optarg);</pre>
+<pre>      break;</pre>
+<pre>    case 0x401fcc:</pre>
+<pre>      local_140 = local_140 + 1;</pre>
+<pre>      break;</pre>
+<pre>    case 0x401fdc:</pre>
+<pre>      iVar1 = atoi(optarg);</pre>
+<pre>      local_68._0_4_ = (int)(short)iVar1;</pre>
+<pre>      break;</pre>
+<pre>    case 0x402000:</pre>
+<pre>      atof(optarg);</pre>
+<pre>      min_delay._0_4_ = puVar2;</pre>
+<pre>      min_delay._4_4_ = uVar7;</pre>
+<pre>      break;</pre>
+<pre>    case 0x402258:</pre>
+<pre>      uVar11 = 0;</pre>
+<pre>      puVar8 = (undefined4 *)0x0;</pre>
+<pre>      local_60 = (char *)&amp;local_10c;</pre>
+<pre>      local_5c = &amp;local_104;</pre>
+<pre>      local_58 = &amp;local_100;</pre>
+<pre>      local_54 = auStack_fc;</pre>
+<pre>      local_50 = &amp;local_f0;</pre>
+<pre>      local_4c = local_f8;</pre>
+<pre>      local_48 = &amp;local_108;</pre>
+<pre>      local_44 = "%d %f %f %f %lf %f %d";</pre>
+<pre>      local_40 = 0x15180;</pre>
+<pre>      local_30 = "contemplate %u %.1f %.1f %d\n";</pre>
+<pre>      local_34 = 0;</pre>
+<pre>      local_38 = 0x3ef00000;</pre>
+<pre>      local_2c = "fake %f %d \n";</pre>
+<pre>      iVar1 = 0;</pre>
+<pre>      while( true ) {</pre>
+<pre><span class="green">        pcVar9 = fgets((char *)&amp;local_cc,100,stdin)</span></span></pre>
+<pre>        if (pcVar9 == (char *)0x0) {</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>          exit(0);</pre>
+<pre>        }</pre>
+<pre>        puVar12 = local_58;</pre>
+<pre>        iVar5 = sscanf((char *)&amp;local_cc,local_44,local_60,local_5c,local_58,local_54,local_50,</pre>
+<pre><span class="green"><span class="green"><span class="green">                       local_4c,local_48)</span></span></span></span></pre>
+<pre>        if (iVar5 != 7) break;</pre>
+<pre>        fputs((char *)&amp;local_cc,stdout);</pre>
+<pre>        iVar5 = __fixsfsi(local_104);</pre>
+<pre>        iVar5 = iVar5 + local_10c * local_40;</pre>
+<pre>        uVar6 = __addsf3(local_100,local_f8[0]);</pre>
+<pre>        uVar10 = __extendsfdf2(uVar6);</pre>
+<pre>        puVar13 = (undefined4 *)((ulonglong)uVar10 &gt;&gt; 0x20);</pre>
+<pre>        if (debug != 0) {</pre>
+<pre><span class="green">          printf(local_30,iVar5,local_f0._0_4_,local_f0._4_4_,puVar13,(int)uVar10,local_108)</span></span></pre>
+<pre>          puVar12 = puVar13;</pre>
+<pre>        }</pre>
+<pre>        if (iVar1 == 0) {</pre>
+<pre>          puVar8 = local_108;</pre>
+<pre>        }</pre>
+<pre>        uVar10 = __floatunsidf(iVar5 - iVar1);</pre>
+<pre>        local_68 = uVar10;</pre>
+<pre>        uVar10 = __floatsidf((int)local_108 - (int)puVar8);</pre>
+<pre>        uVar10 = __muldf3(local_68._0_4_,local_68._4_4_,(int)((ulonglong)uVar10 &gt;&gt; 0x20),(int)uVar10</pre>
+<pre>                         );</pre>
+<pre>        uVar10 = __muldf3((int)((ulonglong)uVar10 &gt;&gt; 0x20),(int)uVar10,local_38,local_34);</pre>
+<pre>        uVar11 = __adddf3((int)((ulonglong)uVar11 &gt;&gt; 0x20),(int)uVar11,</pre>
+<pre>                          (int)((ulonglong)uVar10 &gt;&gt; 0x20),(int)uVar10);</pre>
+<pre>        if (debug != 0) {</pre>
+<pre>          puVar12 = puVar8;</pre>
+<pre><span class="green">          printf(local_2c)</span></span></pre>
+<pre>        }</pre>
+<pre>        local_f0._0_4_ = (undefined4)((ulonglong)local_f0 &gt;&gt; 0x20);</pre>
+<pre>        uVar10 = __adddf3((int)((ulonglong)uVar11 &gt;&gt; 0x20),(int)uVar11,local_f0._0_4_,local_f0._4_4_</pre>
+<pre>                          ,puVar12);</pre>
+<pre>        local_108 = puVar8;</pre>
+<pre>        local_f0 = uVar10;</pre>
+<pre>        puVar8 = (undefined4 *)contemplate_data(iVar5);</pre>
+<pre>        iVar1 = iVar5;</pre>
+<pre>      }</pre>
+<pre>      fwrite("Replay input error\n",1,0x13,stderr);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>      exit(2);</pre>
+<pre>    case 0x40231c:</pre>
+<pre>      local_13c = local_13c + 1;</pre>
+<pre>      break;</pre>
+<pre>    case 0x40232c:</pre>
+<pre>      local_12c = 0;</pre>
+<pre>      break;</pre>
+<pre>    case 0x402334:</pre>
+<pre>      local_118 = 1;</pre>
+<pre>      break;</pre>
+<pre>    case 0x402340:</pre>
+<pre>      goto switchD_00401f0c_caseD_37;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if (pcVar9 == (char *)0x0) {</pre>
+<pre>    FUN_0040100c(*param_2);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>    exit(1);</pre>
+<pre>  }</pre>
+<pre>  if ((((local_13c == 0) || (local_140 != 0)) || (local_130 != 0)) || (local_138 != 0)) {</pre>
+<pre>    if ((local_138 != 1) &amp;&amp; (local_134 &lt; 0xf)) {</pre>
+<pre>      local_134 = 0xf;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    local_138 = 1;</pre>
+<pre>  }</pre>
+<pre>  if (debug != 0) {</pre>
+<pre>    printf("Configuration:\n  -c probe_count %d\n  -d (debug)     %d\n  -g goodness    %d\n  -h hostname    %s\n  -i interval    %d\n  -l live        %d\n  -p local_port  %d\n  -q min_delay   %f\n  -s set_clock   %d\n  -x cross_check %d\n  -6 ipv6support %d\n"</pre>
+<pre>           ,local_138,debug,local_130,pcVar9,local_134,local_140,local_68._0_4_,min_delay._0_4_,</pre>
+<pre>           min_delay._4_4_,local_13c,local_12c,local_118);</pre>
+<pre>  }</pre>
+<pre>  if (local_118 == 0) {</pre>
+<pre>    phVar3 = gethostbyname(pcVar9);</pre>
+<pre>    if (phVar3 == (hostent *)0x0) {</pre>
+<pre>      piVar4 = __h_errno_location();</pre>
+<pre>      *piVar4 = 0;</pre>
+<pre>      herror(pcVar9);</pre>
+<pre>      phVar3 = gethostbyname2(pcVar9,10);</pre>
+<pre>      goto LAB_004024dc;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    phVar3 = gethostbyname2(pcVar9,10);</pre>
+<pre>    if (phVar3 == (hostent *)0x0) {</pre>
+<pre>      phVar3 = gethostbyname(pcVar9);</pre>
+<pre>LAB_004024dc:</pre>
+<pre>      if (phVar3 == (hostent *)0x0) {</pre>
+<pre>        herror(pcVar9);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>        exit(1);</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  if (phVar3-&gt;h_addrtype == 10) {</pre>
+<pre>    if (phVar3-&gt;h_length == 0x10) {</pre>
+<pre>LAB_00402568:</pre>
+<pre>      local_110 = phVar3-&gt;h_length;</pre>
+<pre>      local_114 = phVar3-&gt;h_addrtype;</pre>
+<pre><span class="green">      memcpy(&amp;local_128,*phVar3-&gt;h_addr_list,phVar3-&gt;h_length)</span></span></pre>
+<pre>      if (debug != 0) {</pre>
+<pre>        if (local_114 == 10) {</pre>
+<pre>          fwrite("Use IPv6 address: ",1,0x12,stderr);</pre>
+<pre>          puVar8 = &amp;local_128;</pre>
+<pre>          if (local_110 + -2 &lt; 1) {</pre>
+<pre>            iVar1 = 0;</pre>
+<pre>          }</pre>
+<pre>          else {</pre>
+<pre>            iVar1 = 0;</pre>
+<pre>            do {</pre>
+<pre>              fprintf(stderr,"%X%02X:",(uint)*(byte *)puVar8,(uint)*(byte *)((int)puVar8 + 1));</pre>
+<pre>              iVar1 = iVar1 + 2;</pre>
+<pre>              puVar8 = (undefined4 *)((int)puVar8 + 2);</pre>
+<pre>            } while (iVar1 &lt; local_110 + -2);</pre>
+<pre>          }</pre>
+<pre>          fprintf(stderr,"%X%02X\n",(uint)*(byte *)((int)&amp;local_128 + iVar1),</pre>
+<pre>                  (uint)*(byte *)((int)&amp;local_128 + iVar1 + 1));</pre>
+<pre>        }</pre>
+<pre>        else {</pre>
+<pre>          fwrite("Use IPv4 address: ",1,0x12,stderr);</pre>
+<pre>          iVar1 = 0;</pre>
+<pre>          if (0 &lt; local_110 + -1) {</pre>
+<pre>            puVar2 = auStack_148;</pre>
+<pre>            do {</pre>
+<pre>              fprintf(stderr,"%d.",(uint)(byte)puVar2[0x20]);</pre>
+<pre>              iVar1 = iVar1 + 1;</pre>
+<pre>              puVar2 = auStack_148 + iVar1;</pre>
+<pre>            } while (iVar1 &lt; local_110 + -1);</pre>
+<pre>          }</pre>
+<pre>          fprintf(stderr,"%d\n",(uint)*(byte *)((int)&amp;local_128 + iVar1));</pre>
+<pre>        }</pre>
+<pre>      }</pre>
+<pre>      iVar1 = socket(local_114,1,0x11);</pre>
+<pre>      if (iVar1 == -1) {</pre>
+<pre>        perror("socket");</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>        exit(1);</pre>
+<pre>      }</pre>
+<pre>      if (local_114 == 10) {</pre>
+<pre>        local_e8.sa_data._2_4_ = 0;</pre>
+<pre>        local_e8.sa_data._6_4_ = 0;</pre>
+<pre>        local_e8.sa_data._10_4_ = 0;</pre>
+<pre>        local_d8 = 0;</pre>
+<pre>        local_d4 = 0;</pre>
+<pre>        local_d0 = 0;</pre>
+<pre>        local_e8.sa_family = 10;</pre>
+<pre>        local_e8.sa_data._0_2_ = (short)local_68._0_4_;</pre>
+<pre>        iVar5 = bind(iVar1,&amp;local_e8,0x1c);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_cc.sa_data._2_4_ = 0;</pre>
+<pre>        local_cc.sa_data._6_4_ = 0;</pre>
+<pre>        local_cc.sa_data._10_4_ = 0;</pre>
+<pre>        local_cc.sa_family = 2;</pre>
+<pre>        local_cc.sa_data._0_2_ = (short)local_68._0_4_;</pre>
+<pre>        iVar5 = bind(iVar1,&amp;local_cc,0x10);</pre>
+<pre>      }</pre>
+<pre>      if (iVar5 == -1) {</pre>
+<pre>        perror("bind");</pre>
+<pre>        fprintf(stderr,"could not bind to udp port %d\n",local_68._0_4_);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>        exit(1);</pre>
+<pre>      }</pre>
+<pre>      if (local_114 == 10) {</pre>
+<pre>        local_cc.sa_data._2_4_ = 0;</pre>
+<pre>        local_b4 = 0;</pre>
+<pre>        local_cc.sa_family = 10;</pre>
+<pre>        local_cc.sa_data._6_4_ = local_128;</pre>
+<pre>        local_cc.sa_data._10_4_ = local_124;</pre>
+<pre>        local_bc = local_120;</pre>
+<pre>        local_b8 = local_11c;</pre>
+<pre>        local_cc.sa_data._0_2_ = 0x7b;</pre>
+<pre>        iVar5 = connect(iVar1,&amp;local_cc,0x1c);</pre>
+<pre>      }</pre>
+<pre>      else {</pre>
+<pre>        local_cc.sa_data._6_4_ = 0;</pre>
+<pre>        local_cc.sa_data._10_4_ = 0;</pre>
+<pre>        local_cc.sa_family = 2;</pre>
+<pre>        local_cc.sa_data._2_4_ = local_128;</pre>
+<pre>        local_cc.sa_data._0_2_ = 0x7b;</pre>
+<pre>        iVar5 = connect(iVar1,&amp;local_cc,0x10);</pre>
+<pre>      }</pre>
+<pre>      if (iVar5 != -1) {</pre>
+<pre>        uVar6 = FUN_004010e8(iVar1,auStack_148);</pre>
+<pre>        close(iVar1);</pre>
+<pre>        return uVar6;</pre>
+<pre>      }</pre>
+<pre>      perror("connect");</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>      exit(1);</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  else if ((phVar3-&gt;h_addrtype != 2) || (phVar3-&gt;h_length == 4)) goto LAB_00402568;</pre>
+<pre>  fprintf(stderr,"oops %d\n",phVar3-&gt;h_length);</pre>
+<pre>                    /* WARNING: Subroutine does not return */</pre>
+<pre>  exit(1);</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

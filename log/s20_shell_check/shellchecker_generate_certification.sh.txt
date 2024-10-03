@@ -1,0 +1,37 @@
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/generate_certification.sh line 11:[0m
+[0m	randnumber=`openssl rand -hex 1024`[0m
+[32m                   ^----------------------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	randnumber=$(openssl rand -hex 1024)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/generate_certification.sh line 12:[0m
+[0m	mac=`rtkmib mac`[0m
+[32m            ^----------^ SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+
+[1mDid you mean: [0m
+	mac=$(rtkmib mac)
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/generate_certification.sh line 13:[0m
+[0m	mac2=`echo $mac | awk -F: '{printf $1$2$3$4$5$6}'`[0m
+[32m             ^-- SC2006 (style): Use $(...) notation instead of legacy backticks `...`.[0m
+[32m                   ^--^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	mac2=$(echo "$mac" | awk -F: '{printf $1$2$3$4$5$6}')
+
+
+[1mIn /logs/firmware/unblob_extracted/firmware_extract/1446946-7513122.squashfs_v4_le_extract/etc/rc.d/init.d/generate_certification.sh line 15:[0m
+[0m	echo $randnumber$mac2 > /tmp/random.rnd[0m
+[32m             ^---------^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+[32m                        ^---^ SC2086 (info): Double quote to prevent globbing and word splitting.[0m
+
+[1mDid you mean: [0m
+	echo "$randnumber""$mac2" > /tmp/random.rnd
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
+  https://www.shellcheck.net/wiki/SC2006 -- Use $(...) notation instead of le...

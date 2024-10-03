@@ -1,0 +1,181 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mlibcrypto.so.1.0.0[0m
+
+   3b470:	27bd0040 	addiu	sp,sp,64
+
+0003b474 <CRYPTO_strdup@@Base>:
+   3b474:	3c1c0016 	lui	gp,0x16
+   3b478:	279c68dc 	addiu	gp,gp,26844
+   3b47c:	0399e021 	addu	gp,gp,t9
+   3b480:	27bdffd0 	addiu	sp,sp,-48
+   3b484:	afbf002c 	sw	ra,44(sp)
+   3b488:	afb10028 	sw	s1,40(sp)
+   3b48c:	afb00024 	sw	s0,36(sp)
+   3b490:	afbc0010 	sw	gp,16(sp)
+   3b494:	8f999a98 	lw	t9,strlen
+   3b498:	00808021 	move	s0,a0
+   3b49c:	afa50018 	sw	a1,24(sp)
+   3b4a0:	0320f809 	jalr	t9
+   3b4a4:	afa6001c 	sw	a2,28(sp)
+   3b4a8:	8fbc0010 	lw	gp,16(sp)
+   3b4ac:	8fa50018 	lw	a1,24(sp)
+   3b4b0:	8f999cf0 	lw	t9,-25360(gp)
+   3b4b4:	8fa6001c 	lw	a2,28(sp)
+   3b4b8:	0320f809 	jalr	t9
+   3b4bc:	24440001 	addiu	a0,v0,1
+   3b4c0:	8fbc0010 	lw	gp,16(sp)
+   3b4c4:	10400005 	beqz	v0,3b4dc <CRYPTO_strdup@@Base+0x68>
+   3b4c8:	00408821 	move	s1,v0
+[31m   3b4cc:	8f998118 	lw	t9,strcpy[0m
+   3b4d0:	02002821 	move	a1,s0
+   3b4d4:	0320f809 	jalr	t9
+--
+   afcb0:	24050082 	li	a1,130
+   afcb4:	24060043 	li	a2,67
+   afcb8:	1000004f 	b	afdf8 <DSO_METHOD_dlfcn@@Base+0x328>
+   afcbc:	00008021 	move	s0,zero
+   afcc0:	10c00004 	beqz	a2,afcd4 <DSO_METHOD_dlfcn@@Base+0x204>
+   afcc4:	2410002f 	li	s0,47
+   afcc8:	80a20000 	lb	v0,0(a1)
+   afccc:	14500029 	bne	v0,s0,afd74 <DSO_METHOD_dlfcn@@Base+0x2a4>
+   afcd0:	00000000 	nop
+   afcd4:	8f999a98 	lw	t9,strlen
+   afcd8:	8f918028 	lw	s1,-32728(gp)
+   afcdc:	0320f809 	jalr	t9
+   afce0:	02602021 	move	a0,s3
+   afce4:	2406012c 	li	a2,300
+   afce8:	8fbc0018 	lw	gp,24(sp)
+   afcec:	24440001 	addiu	a0,v0,1
+   afcf0:	8f999cf0 	lw	t9,-25360(gp)
+   afcf4:	0320f809 	jalr	t9
+   afcf8:	262584a8 	addiu	a1,s1,-31576
+   afcfc:	8fbc0018 	lw	gp,24(sp)
+   afd00:	14400004 	bnez	v0,afd14 <DSO_METHOD_dlfcn@@Base+0x244>
+   afd04:	00408021 	move	s0,v0
+   afd08:	8f9981cc 	lw	t9,-32308(gp)
+   afd0c:	10000012 	b	afd58 <DSO_METHOD_dlfcn@@Base+0x288>
+   afd10:	2402012e 	li	v0,302
+[31m   afd14:	8f998118 	lw	t9,strcpy[0m
+   afd18:	10000014 	b	afd6c <DSO_METHOD_dlfcn@@Base+0x29c>
+   afd1c:	02602821 	move	a1,s3
+   afd20:	8f999a98 	lw	t9,strlen
+   afd24:	0320f809 	jalr	t9
+   afd28:	00c02021 	move	a0,a2
+   afd2c:	262584a8 	addiu	a1,s1,-31576
+   afd30:	8fbc0018 	lw	gp,24(sp)
+   afd34:	24440001 	addiu	a0,v0,1
+   afd38:	8f999cf0 	lw	t9,-25360(gp)
+   afd3c:	0320f809 	jalr	t9
+   afd40:	24060137 	li	a2,311
+   afd44:	8fbc0018 	lw	gp,24(sp)
+   afd48:	14400006 	bnez	v0,afd64 <DSO_METHOD_dlfcn@@Base+0x294>
+   afd4c:	00408021 	move	s0,v0
+   afd50:	8f9981cc 	lw	t9,-32308(gp)
+   afd54:	24020139 	li	v0,313
+   afd58:	afa20010 	sw	v0,16(sp)
+   afd5c:	10000023 	b	afdec <DSO_METHOD_dlfcn@@Base+0x31c>
+   afd60:	262784a8 	addiu	a3,s1,-31576
+[31m   afd64:	8f998118 	lw	t9,strcpy[0m
+   afd68:	02402821 	move	a1,s2
+   afd6c:	10000032 	b	afe38 <DSO_METHOD_dlfcn@@Base+0x368>
+--
+   afda4:	8063ffff 	lb	v1,-1(v1)
+   afda8:	14700003 	bne	v1,s0,afdb8 <DSO_METHOD_dlfcn@@Base+0x2e8>
+   afdac:	00000000 	nop
+   afdb0:	2631ffff 	addiu	s1,s1,-1
+   afdb4:	2442ffff 	addiu	v0,v0,-1
+   afdb8:	8f948028 	lw	s4,-32728(gp)
+   afdbc:	24440002 	addiu	a0,v0,2
+   afdc0:	8f999cf0 	lw	t9,-25360(gp)
+   afdc4:	2406014e 	li	a2,334
+   afdc8:	0320f809 	jalr	t9
+   afdcc:	268584a8 	addiu	a1,s4,-31576
+   afdd0:	8fbc0018 	lw	gp,24(sp)
+   afdd4:	1440000c 	bnez	v0,afe08 <DSO_METHOD_dlfcn@@Base+0x338>
+   afdd8:	00408021 	move	s0,v0
+   afddc:	24020150 	li	v0,336
+   afde0:	268784a8 	addiu	a3,s4,-31576
+   afde4:	8f9981cc 	lw	t9,-32308(gp)
+   afde8:	afa20010 	sw	v0,16(sp)
+   afdec:	24040025 	li	a0,37
+   afdf0:	24050082 	li	a1,130
+   afdf4:	24060041 	li	a2,65
+   afdf8:	0320f809 	jalr	t9
+   afdfc:	00000000 	nop
+   afe00:	10000010 	b	afe44 <DSO_METHOD_dlfcn@@Base+0x374>
+   afe04:	02001021 	move	v0,s0
+[31m   afe08:	8f998118 	lw	t9,strcpy[0m
+   afe0c:	02402821 	move	a1,s2
+   afe10:	0320f809 	jalr	t9
+   afe14:	00402021 	move	a0,v0
+   afe18:	26240001 	addiu	a0,s1,1
+   afe1c:	02602821 	move	a1,s3
+   afe20:	8fbc0018 	lw	gp,24(sp)
+   afe24:	02118821 	addu	s1,s0,s1
+   afe28:	2402002f 	li	v0,47
+   afe2c:	02042021 	addu	a0,s0,a0
+[31m   afe30:	8f998118 	lw	t9,strcpy[0m
+   afe34:	a2220000 	sb	v0,0(s1)
+   afe38:	0320f809 	jalr	t9
+--
+   aff28:	0320f809 	jalr	t9
+   aff2c:	2406006d 	li	a2,109
+   aff30:	1000001a 	b	aff9c <DSO_METHOD_dlfcn@@Base+0x4cc>
+   aff34:	02001021 	move	v0,s0
+   aff38:	12600014 	beqz	s3,aff8c <DSO_METHOD_dlfcn@@Base+0x4bc>
+   aff3c:	02202821 	move	a1,s1
+   aff40:	8f999da0 	lw	t9,-25184(gp)
+   aff44:	0320f809 	jalr	t9
+   aff48:	02402021 	move	a0,s2
+   aff4c:	8fbc0018 	lw	gp,24(sp)
+   aff50:	30420002 	andi	v0,v0,0x2
+   aff54:	8f998a14 	lw	t9,-30188(gp)
+   aff58:	14400005 	bnez	v0,aff70 <DSO_METHOD_dlfcn@@Base+0x4a0>
+   aff5c:	02203021 	move	a2,s1
+   aff60:	8f858028 	lw	a1,-32728(gp)
+   aff64:	02002021 	move	a0,s0
+   aff68:	10000004 	b	aff7c <DSO_METHOD_dlfcn@@Base+0x4ac>
+   aff6c:	24a584b4 	addiu	a1,a1,-31564
+   aff70:	8f858028 	lw	a1,-32728(gp)
+   aff74:	02002021 	move	a0,s0
+   aff78:	24a584c0 	addiu	a1,a1,-31552
+   aff7c:	0320f809 	jalr	t9
+   aff80:	00000000 	nop
+   aff84:	10000005 	b	aff9c <DSO_METHOD_dlfcn@@Base+0x4cc>
+   aff88:	02001021 	move	v0,s0
+[31m   aff8c:	8f998118 	lw	t9,strcpy[0m
+   aff90:	0320f809 	jalr	t9
+   aff94:	00402021 	move	a0,v0
+--
+  142a98:	8e640008 	lw	a0,8(s3)
+  142a9c:	0320f809 	jalr	t9
+  142aa0:	00000000 	nop
+  142aa4:	8fbc0020 	lw	gp,32(sp)
+  142aa8:	1040000d 	beqz	v0,142ae0 <TS_RESP_verify_response@@Base+0x2bc>
+  142aac:	00000000 	nop
+  142ab0:	16a00005 	bnez	s5,142ac8 <TS_RESP_verify_response@@Base+0x2a4>
+  142ab4:	02802021 	move	a0,s4
+  142ab8:	8f999e84 	lw	t9,-24956(gp)
+  142abc:	0320f809 	jalr	t9
+  142ac0:	02c02821 	move	a1,s6
+  142ac4:	8fbc0020 	lw	gp,32(sp)
+  142ac8:	8f999e84 	lw	t9,-24956(gp)
+  142acc:	02802021 	move	a0,s4
+  142ad0:	8e450004 	lw	a1,4(s2)
+  142ad4:	0320f809 	jalr	t9
+  142ad8:	0000a821 	move	s5,zero
+  142adc:	8fbc0020 	lw	gp,32(sp)
+  142ae0:	26520008 	addiu	s2,s2,8
+  142ae4:	1657ffea 	bne	s2,s7,142a90 <TS_RESP_verify_response@@Base+0x26c>
+  142ae8:	00000000 	nop
+  142aec:	83a20028 	lb	v0,40(sp)
+  142af0:	14400006 	bnez	v0,142b0c <TS_RESP_verify_response@@Base+0x2e8>
+  142af4:	27a40028 	addiu	a0,sp,40
+  142af8:	8f858028 	lw	a1,-32728(gp)
+[31m  142afc:	8f998118 	lw	t9,strcpy[0m
+  142b00:	0320f809 	jalr	t9
+  142b04:	24a513e4 	addiu	a1,a1,5092
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m7[0m times [0;33mlibcrypto.so.1.0.0[0m
+

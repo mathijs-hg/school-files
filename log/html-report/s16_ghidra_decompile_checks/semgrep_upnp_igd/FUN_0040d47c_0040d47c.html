@@ -1,0 +1,415 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../../index.html"><img class="inherit" id="logoImage" src="./../../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../semgrep_upnp_igd.html" title="./../semgrep_upnp_igd.html" >&laquo; Back to semgrep_upnp_igd</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<br />
+<pre>void FUN_0040d47c(int *param_1)</pre>
+<br />
+<pre>{</pre>
+<pre>  ssize_t sVar1;</pre>
+<pre>  int iVar2;</pre>
+<pre>  char *__nptr;</pre>
+<pre>  void *pvVar3;</pre>
+<pre>  int iVar4;</pre>
+<pre>  size_t __size;</pre>
+<pre>  int iVar5;</pre>
+<pre>  undefined4 uVar6;</pre>
+<pre>  int iVar7;</pre>
+<pre>  int iVar8;</pre>
+<pre>  char **ppcVar9;</pre>
+<pre>  code *pcVar10;</pre>
+<pre>  int *piVar11;</pre>
+<pre>  undefined4 uVar12;</pre>
+<pre>  </pre>
+<pre>  if (param_1[0x202] != 0) {</pre>
+<pre>    iVar2 = param_1[0x205];</pre>
+<pre>    if (iVar2 == param_1[0x206]) {</pre>
+<pre>      param_1[0x205] = 0;</pre>
+<pre>      param_1[0x206] = 0;</pre>
+<pre>    }</pre>
+<pre>    else if (iVar2 != 0) {</pre>
+<pre>      param_1[0x206] = iVar2;</pre>
+<pre>    }</pre>
+<pre>    iVar2 = param_1[0x206];</pre>
+<pre>    if (iVar2 == param_1[0x207]) {</pre>
+<pre>      param_1[0x207] = iVar2 + 0x1000U;</pre>
+<pre><span class="green"><span class="green"><span class="green"><span class="green">      pvVar3 = realloc((void *)param_1[0x201],iVar2 + 0x1000U)</span></span></span></span></span></pre>
+<pre>      param_1[0x201] = (int)pvVar3;</pre>
+<pre>      iVar2 = param_1[0x206];</pre>
+<pre>    }</pre>
+<pre><span class="green">    sVar1 = recv(param_1[0x209],(void *)(param_1[0x201] + iVar2),param_1[0x207] - iVar2,0)</span></span></pre>
+<pre>    iVar8 = param_1[0x20d];</pre>
+<pre>    iVar2 = (sVar1 + param_1[0x206]) - param_1[0x205];</pre>
+<pre>    iVar4 = param_1[0x20e];</pre>
+<pre>    iVar7 = param_1[0x201] + param_1[0x205];</pre>
+<pre>    iVar5 = *param_1;</pre>
+<pre>    pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>    param_1[0x208] = param_1[0x208] + sVar1;</pre>
+<pre>    param_1[0x206] = sVar1 + param_1[0x206];</pre>
+<pre>    do {</pre>
+<pre>      (*pcVar10)(param_1,iVar5,0,iVar7,param_1 + 0x205,iVar2,0,iVar8,iVar4);</pre>
+<pre>      iVar5 = param_1[0x205];</pre>
+<pre>      iVar4 = param_1[0x206];</pre>
+<pre>      iVar2 = iVar5;</pre>
+<pre>      if (iVar5 == iVar4) {</pre>
+<pre>LAB_0040dbb8:</pre>
+<pre>        if (((param_1[0x202] != -1) &amp;&amp; (param_1[0x202] &lt;= param_1[0x208])) || (sVar1 == 0)) {</pre>
+<pre>          if (iVar5 == iVar2) {</pre>
+<pre>            param_1[0x205] = 0;</pre>
+<pre>            param_1[0x206] = 0;</pre>
+<pre>          }</pre>
+<pre>          (*(code *)param_1[0x20f])</pre>
+<pre>                    (param_1,*param_1,0,param_1[0x201],param_1 + 0x205,param_1[0x206],0xffffffff,</pre>
+<pre>                     param_1[0x20d],param_1[0x20e]);</pre>
+<pre>          if ((void *)param_1[0x201] != (void *)0x0) {</pre>
+<pre>            free((void *)param_1[0x201]);</pre>
+<pre>            param_1[0x201] = 0;</pre>
+<pre>            param_1[0x207] = 0;</pre>
+<pre>          }</pre>
+<pre>          param_1[0x20a] = 1;</pre>
+<pre>          param_1[0x202] = 0;</pre>
+<pre>          ILibLifeTime_AddEx(*(undefined4 *)(param_1[0x20c] + 0x48),param_1,1000,FUN_0040cef4,0);</pre>
+<pre>        }</pre>
+<pre>        if (param_1[0x205] != param_1[0x206]) {</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        param_1[0x206] = 0;</pre>
+<pre>        param_1[0x205] = 0;</pre>
+<pre>        return;</pre>
+<pre>      }</pre>
+<pre>      if (iVar5 == 0) {</pre>
+<pre>        iVar5 = 0;</pre>
+<pre>        iVar2 = iVar4;</pre>
+<pre>        goto LAB_0040dbb8;</pre>
+<pre>      }</pre>
+<pre><span class="green"><span class="green">      memcpy((void *)param_1[0x201],(void *)((int)(void *)param_1[0x201] + iVar5),iVar4 - iVar5)</span></span></span></pre>
+<pre>      iVar8 = param_1[0x20d];</pre>
+<pre>      iVar2 = param_1[0x206] - param_1[0x205];</pre>
+<pre>      iVar4 = param_1[0x20e];</pre>
+<pre>      iVar5 = *param_1;</pre>
+<pre>      iVar7 = param_1[0x201];</pre>
+<pre>      pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>      param_1[0x206] = iVar2;</pre>
+<pre>      param_1[0x205] = 0;</pre>
+<pre>    } while( true );</pre>
+<pre>  }</pre>
+<pre><span class="green">  sVar1 = recv(param_1[0x209],(void *)((int)param_1 + param_1[0x203] + 4),0x800 - param_1[0x203],0)</span></span></pre>
+<pre>  if (sVar1 == 0) {</pre>
+<pre>    if (*param_1 != 0) {</pre>
+<pre>      ILibDestructPacket();</pre>
+<pre>    }</pre>
+<pre>    if (param_1[0x207] != 0) {</pre>
+<pre>      free((void *)param_1[0x201]);</pre>
+<pre>    }</pre>
+<pre>    param_1[0x201] = 0;</pre>
+<pre>    param_1[0x207] = 0;</pre>
+<pre>    *param_1 = 0;</pre>
+<pre>    close(param_1[0x209]);</pre>
+<pre>    param_1[0x209] = -1;</pre>
+<pre>    ILibLifeTime_Remove(*(undefined4 *)(param_1[0x20c] + 0x48),param_1);</pre>
+<pre>    if (param_1[0x20a] != 0) {</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    iVar4 = param_1[0x20d];</pre>
+<pre>    iVar5 = 0;</pre>
+<pre>    iVar2 = param_1[0x20e];</pre>
+<pre>    uVar6 = 2;</pre>
+<pre>    pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>    uVar12 = 0xffffffff;</pre>
+<pre>    piVar11 = (int *)0x0;</pre>
+<pre>LAB_0040da34:</pre>
+<pre>    (*pcVar10)(param_1,iVar5,uVar6,0,piVar11,0,uVar12,iVar4,iVar2);</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  if (param_1[0x20a] != 0) {</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  iVar2 = sVar1 + param_1[0x203];</pre>
+<pre>  param_1[0x203] = iVar2;</pre>
+<pre>  if (iVar2 &lt; 5) {</pre>
+<pre>    return;</pre>
+<pre>  }</pre>
+<pre>  iVar4 = 0;</pre>
+<pre>  piVar11 = param_1;</pre>
+<pre>  while( true ) {</pre>
+<pre>    if (iVar2 + -3 &lt;= iVar4) {</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    if (((*(char *)(piVar11 + 1) == '\r') &amp;&amp; (*(char *)((int)piVar11 + 5) == '\n')) &amp;&amp;</pre>
+<pre>       ((*(char *)((int)piVar11 + 6) == '\r' &amp;&amp; (*(char *)((int)piVar11 + 7) == '\n')))) break;</pre>
+<pre>    iVar4 = iVar4 + 1;</pre>
+<pre>    piVar11 = (int *)((int)piVar11 + 1);</pre>
+<pre>  }</pre>
+<pre>  iVar2 = ILibParsePacketHeader(param_1 + 1,0,iVar4 + 4);</pre>
+<pre>  *param_1 = iVar2;</pre>
+<pre>  if (iVar2 == 0) {</pre>
+<pre>    (*(code *)param_1[0x20f])(param_1,0,0,0,0,0,0xffffffff,param_1[0x20d],param_1[0x20e]);</pre>
+<pre>  }</pre>
+<pre>  else {</pre>
+<pre>    *(int *)(iVar2 + 0x40) = param_1[0x204];</pre>
+<pre>    param_1[0x202] = -1;</pre>
+<pre>    param_1[0x208] = 0;</pre>
+<pre>    for (ppcVar9 = *(char ***)(*param_1 + 0x34); ppcVar9 != (char **)0x0;</pre>
+<pre>        ppcVar9 = (char **)ppcVar9[5]) {</pre>
+<pre>      iVar2 = strncasecmp(*ppcVar9,"CONTENT-LENGTH",0xe);</pre>
+<pre>      if (iVar2 == 0) {</pre>
+<pre><span class="green"><span class="green"><span class="green">        __nptr = (char *)malloc((size_t)(ppcVar9[3] + 1))</span></span></span></span></pre>
+<pre><span class="green">        memcpy(__nptr,ppcVar9[2],(size_t)ppcVar9[3])</span></span></pre>
+<pre>        __nptr[(int)ppcVar9[3]] = '\0';</pre>
+<pre>        iVar2 = atoi(__nptr);</pre>
+<pre>        param_1[0x202] = iVar2;</pre>
+<pre>        free(__nptr);</pre>
+<pre>        break;</pre>
+<pre>      }</pre>
+<pre>    }</pre>
+<pre><span class="green">    __size = param_1[0x202]</span></span></pre>
+<pre>    if (__size == 0xffffffff) {</pre>
+<pre><span class="green"><span class="green"><span class="green">      pvVar3 = malloc(0x1000)</span></span></span></span></pre>
+<pre>      param_1[0x201] = (int)pvVar3;</pre>
+<pre>      param_1[0x207] = 0x1000;</pre>
+<pre>    }</pre>
+<pre>    else if (__size == 0) {</pre>
+<pre>      param_1[0x201] = 0;</pre>
+<pre>      param_1[0x207] = 0;</pre>
+<pre>    }</pre>
+<pre>    else {</pre>
+<pre><span class="green"><span class="green">      pvVar3 = malloc(__size)</span></span></span></pre>
+<pre>      param_1[0x201] = (int)pvVar3;</pre>
+<pre>      param_1[0x207] = param_1[0x202];</pre>
+<pre>    }</pre>
+<pre>    if ((param_1[0x203] &lt;= iVar4 + 4) || (param_1[0x202] == 0)) {</pre>
+<pre>      param_1[0x205] = 0;</pre>
+<pre>      param_1[0x206] = 0;</pre>
+<pre>      iVar5 = *param_1;</pre>
+<pre>      iVar4 = param_1[0x20d];</pre>
+<pre>      iVar2 = param_1[0x20e];</pre>
+<pre>      pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>      piVar11 = param_1 + 0x205;</pre>
+<pre>      if (param_1[0x202] != 0) {</pre>
+<pre>        uVar6 = 0;</pre>
+<pre>        uVar12 = 0;</pre>
+<pre>        goto LAB_0040da34;</pre>
+<pre>      }</pre>
+<pre>      (*pcVar10)(param_1,iVar5,0,0,piVar11,0,0xffffffff,iVar4,iVar2);</pre>
+<pre>      param_1[0x20a] = 1;</pre>
+<pre>      param_1[0x202] = 0;</pre>
+<pre>      uVar6 = *(undefined4 *)(param_1[0x20c] + 0x48);</pre>
+<pre>      goto LAB_0040d6a8;</pre>
+<pre>    }</pre>
+<pre><span class="green">    memcpy((void *)param_1[0x201],(void *)((int)param_1 + iVar4 + 8),(-4 - iVar4) + param_1[0x203])</span></span></pre>
+<pre>    iVar2 = (-4 - iVar4) + param_1[0x203];</pre>
+<pre>    param_1[0x205] = 0;</pre>
+<pre>    param_1[0x206] = iVar2;</pre>
+<pre>    param_1[0x208] = iVar2;</pre>
+<pre>    if ((param_1[0x202] == -1) || (iVar2 &lt; param_1[0x202])) {</pre>
+<pre>      iVar5 = param_1[0x20d];</pre>
+<pre>      iVar4 = param_1[0x20e];</pre>
+<pre>      iVar7 = *param_1;</pre>
+<pre>      iVar8 = param_1[0x201];</pre>
+<pre>      pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>      while( true ) {</pre>
+<pre>        (*pcVar10)(param_1,iVar7,0,iVar8,param_1 + 0x205,iVar2,0,iVar5,iVar4);</pre>
+<pre>        iVar2 = param_1[0x205];</pre>
+<pre>        if (iVar2 == param_1[0x206]) {</pre>
+<pre>          return;</pre>
+<pre>        }</pre>
+<pre>        if (iVar2 == 0) break;</pre>
+<pre>        memcpy((void *)param_1[0x201],(void *)((int)(void *)param_1[0x201] + iVar2),</pre>
+<pre><span class="green">               param_1[0x206] - iVar2)</span></span></pre>
+<pre>        iVar5 = param_1[0x20d];</pre>
+<pre>        iVar2 = param_1[0x206] - param_1[0x205];</pre>
+<pre>        iVar4 = param_1[0x20e];</pre>
+<pre>        iVar7 = *param_1;</pre>
+<pre>        iVar8 = param_1[0x201];</pre>
+<pre>        pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>        param_1[0x206] = iVar2;</pre>
+<pre>        param_1[0x205] = 0;</pre>
+<pre>      }</pre>
+<pre>      return;</pre>
+<pre>    }</pre>
+<pre>    iVar8 = param_1[0x20d];</pre>
+<pre>    iVar4 = param_1[0x20e];</pre>
+<pre>    iVar5 = *param_1;</pre>
+<pre>    iVar7 = param_1[0x201];</pre>
+<pre>    pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>    while( true ) {</pre>
+<pre>      (*pcVar10)(param_1,iVar5,0,iVar7,param_1 + 0x205,iVar2,0xffffffff,iVar8,iVar4);</pre>
+<pre>      iVar2 = param_1[0x205];</pre>
+<pre>      if ((iVar2 == param_1[0x206]) || (iVar2 == 0)) break;</pre>
+<pre>      memcpy((void *)param_1[0x201],(void *)((int)(void *)param_1[0x201] + iVar2),</pre>
+<pre><span class="green">             param_1[0x206] - iVar2)</span></span></pre>
+<pre>      iVar8 = param_1[0x20d];</pre>
+<pre>      iVar2 = param_1[0x206] - param_1[0x205];</pre>
+<pre>      iVar4 = param_1[0x20e];</pre>
+<pre>      iVar5 = *param_1;</pre>
+<pre>      iVar7 = param_1[0x201];</pre>
+<pre>      pcVar10 = (code *)param_1[0x20f];</pre>
+<pre>      param_1[0x206] = iVar2;</pre>
+<pre>      param_1[0x205] = 0;</pre>
+<pre>    }</pre>
+<pre>  }</pre>
+<pre>  param_1[0x202] = 0;</pre>
+<pre>  if ((void *)param_1[0x201] != (void *)0x0) {</pre>
+<pre>    free((void *)param_1[0x201]);</pre>
+<pre>    param_1[0x201] = 0;</pre>
+<pre>    param_1[0x207] = 0;</pre>
+<pre>  }</pre>
+<pre>  param_1[0x20a] = 1;</pre>
+<pre>  uVar6 = *(undefined4 *)(param_1[0x20c] + 0x48);</pre>
+<pre>LAB_0040d6a8:</pre>
+<pre>  ILibLifeTime_AddEx(uVar6,param_1,1000,FUN_0040cef4,0);</pre>
+<pre>  return;</pre>
+<pre>}</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

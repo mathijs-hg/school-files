@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m tear down of [0;33mmakeDevUid[0m
+
+  400b1c:	00031e00 	sll	v1,v1,0x18
+  400b20:	10000004 	b	400b34 <main@@Base+0x204>
+  400b24:	00031e03 	sra	v1,v1,0x18
+  400b28:	24630030 	addiu	v1,v1,48
+  400b2c:	00031e00 	sll	v1,v1,0x18
+  400b30:	00031e03 	sra	v1,v1,0x18
+  400b34:	a2030000 	sb	v1,0(s0)
+  400b38:	26100001 	addiu	s0,s0,1
+  400b3c:	1612ffdf 	bne	s0,s2,400abc <main@@Base+0x18c>
+  400b40:	3c040040 	lui	a0,0x40
+  400b44:	a3a00030 	sb	zero,48(sp)
+  400b48:	27b00020 	addiu	s0,sp,32
+  400b4c:	24840d20 	addiu	a0,a0,3360
+  400b50:	3c050040 	lui	a1,0x40
+  400b54:	24a50de8 	addiu	a1,a1,3560
+  400b58:	3c060040 	lui	a2,0x40
+  400b5c:	24c60df0 	addiu	a2,a2,3568
+  400b60:	8f998038 	lw	t9,-32712(gp)
+  400b64:	0320f809 	jalr	t9
+  400b68:	02003821 	move	a3,s0
+  400b6c:	8fbc0010 	lw	gp,16(sp)
+  400b70:	8f828044 	lw	v0,-32700(gp)
+  400b74:	8c440000 	lw	a0,0(v0)
+  400b78:	3c050040 	lui	a1,0x40
+  400b7c:	24a50dfc 	addiu	a1,a1,3580
+[31m  400b80:	8f998068 	lw	t9,fprintf[0m
+  400b84:	0320f809 	jalr	t9
+  400b88:	02003021 	move	a2,s0
+
+[0m
+[[0;33m*[0m] Function [0;33mfprintf[0m used [0;33m1[0m times [0;33mmakeDevUid[0m
+

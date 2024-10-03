@@ -1,0 +1,106 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mlibFtp.so[0m
+
+    1f68:	8fbc0060 	lw	gp,96(sp)
+    1f6c:	144300ab 	bne	v0,v1,221c <ftpWrite@@Base+0x628>
+    1f70:	2402fece 	li	v0,-306
+    1f74:	27a20088 	addiu	v0,sp,136
+    1f78:	02202021 	move	a0,s1
+    1f7c:	27a60080 	addiu	a2,sp,128
+    1f80:	afa20010 	sw	v0,16(sp)
+    1f84:	27a2008c 	addiu	v0,sp,140
+    1f88:	8f858024 	lw	a1,-32732(gp)
+    1f8c:	27a70084 	addiu	a3,sp,132
+    1f90:	afa20014 	sw	v0,20(sp)
+    1f94:	27a2006c 	addiu	v0,sp,108
+    1f98:	8f998080 	lw	t9,-32640(gp)
+    1f9c:	24a52b48 	addiu	a1,a1,11080
+    1fa0:	afa20018 	sw	v0,24(sp)
+    1fa4:	27a20070 	addiu	v0,sp,112
+    1fa8:	0320f809 	jalr	t9
+    1fac:	afa2001c 	sw	v0,28(sp)
+    1fb0:	02202021 	move	a0,s1
+    1fb4:	8fbc0060 	lw	gp,96(sp)
+    1fb8:	8fa20088 	lw	v0,136(sp)
+    1fbc:	8f858024 	lw	a1,-32732(gp)
+    1fc0:	afa20010 	sw	v0,16(sp)
+    1fc4:	8fa2008c 	lw	v0,140(sp)
+    1fc8:	24a52b5c 	addiu	a1,a1,11100
+[31m    1fcc:	8f998064 	lw	t9,sprintf[0m
+    1fd0:	8fa60080 	lw	a2,128(sp)
+    1fd4:	8fa70084 	lw	a3,132(sp)
+--
+    24cc:	0320f809 	jalr	t9
+    24d0:	27a50020 	addiu	a1,sp,32
+    24d4:	2403ffff 	li	v1,-1
+    24d8:	8fbc0018 	lw	gp,24(sp)
+    24dc:	10430058 	beq	v0,v1,2640 <ftpUpload@@Base+0x29c>
+    24e0:	2402ffff 	li	v0,-1
+    24e4:	8fb30054 	lw	s3,84(sp)
+    24e8:	10000042 	b	25f4 <ftpUpload@@Base+0x250>
+    24ec:	00000000 	nop
+    24f0:	8f998078 	lw	t9,-32648(gp)
+    24f4:	02202021 	move	a0,s1
+    24f8:	0320f809 	jalr	t9
+    24fc:	00002821 	move	a1,zero
+    2500:	8fbc0018 	lw	gp,24(sp)
+    2504:	8f998070 	lw	t9,-32656(gp)
+    2508:	0320f809 	jalr	t9
+    250c:	02202021 	move	a0,s1
+    2510:	8e07002c 	lw	a3,44(s0)
+    2514:	8fbc0018 	lw	gp,24(sp)
+    2518:	10e0000b 	beqz	a3,2548 <ftpUpload@@Base+0x1a4>
+    251c:	00408821 	move	s1,v0
+    2520:	80e20000 	lb	v0,0(a3)
+    2524:	10400008 	beqz	v0,2548 <ftpUpload@@Base+0x1a4>
+    2528:	26040030 	addiu	a0,s0,48
+    252c:	8f858024 	lw	a1,-32732(gp)
+[31m    2530:	8f998064 	lw	t9,sprintf[0m
+    2534:	8e060028 	lw	a2,40(s0)
+    2538:	0320f809 	jalr	t9
+    253c:	24a52bd4 	addiu	a1,a1,11220
+    2540:	10000005 	b	2558 <ftpUpload@@Base+0x1b4>
+    2544:	00000000 	nop
+    2548:	8f9980e0 	lw	t9,-32544(gp)
+    254c:	8e050028 	lw	a1,40(s0)
+    2550:	0320f809 	jalr	t9
+    2554:	26040030 	addiu	a0,s0,48
+    2558:	8fbc0018 	lw	gp,24(sp)
+    255c:	8f998048 	lw	t9,strlen
+    2560:	0320f809 	jalr	t9
+    2564:	26040030 	addiu	a0,s0,48
+    2568:	8e23000c 	lw	v1,12(s1)
+    256c:	24420030 	addiu	v0,v0,48
+    2570:	8fbc0018 	lw	gp,24(sp)
+    2574:	02022021 	addu	a0,s0,v0
+    2578:	8e260014 	lw	a2,20(s1)
+    257c:	8e270010 	lw	a3,16(s1)
+    2580:	afa30010 	sw	v1,16(sp)
+    2584:	24c6076c 	addiu	a2,a2,1900
+    2588:	8f858024 	lw	a1,-32732(gp)
+    258c:	24e70001 	addiu	a3,a3,1
+    2590:	8e220008 	lw	v0,8(s1)
+[31m    2594:	8f998064 	lw	t9,sprintf[0m
+    2598:	24a52bdc 	addiu	a1,a1,11228
+    259c:	0320f809 	jalr	t9
+    25a0:	afa20014 	sw	v0,20(sp)
+    25a4:	3c030001 	lui	v1,0x1
+    25a8:	8fa50024 	lw	a1,36(sp)
+    25ac:	346386a0 	ori	v1,v1,0x86a0
+    25b0:	26040130 	addiu	a0,s0,304
+    25b4:	8fbc0018 	lw	gp,24(sp)
+    25b8:	00a3001a 	div	zero,a1,v1
+    25bc:	14600002 	bnez	v1,25c8 <ftpUpload@@Base+0x224>
+    25c0:	00000000 	nop
+    25c4:	0007000d 	break	0x7
+    25c8:	8e220000 	lw	v0,0(s1)
+    25cc:	8f858024 	lw	a1,-32732(gp)
+    25d0:	8e260008 	lw	a2,8(s1)
+    25d4:	8e270004 	lw	a3,4(s1)
+[31m    25d8:	8f998064 	lw	t9,sprintf[0m
+    25dc:	afa20010 	sw	v0,16(sp)
+    25e0:	24a52bf0 	addiu	a1,a1,11248
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m4[0m times [0;33mlibFtp.so[0m
+

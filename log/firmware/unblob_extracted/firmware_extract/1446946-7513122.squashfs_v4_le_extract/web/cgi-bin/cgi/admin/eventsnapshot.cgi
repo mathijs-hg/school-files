@@ -1,0 +1,1 @@
+../eventsnapshot.cgi

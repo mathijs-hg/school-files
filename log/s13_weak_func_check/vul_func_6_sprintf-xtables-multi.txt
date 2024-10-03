@@ -1,0 +1,163 @@
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m tear down of [0;33mxtables-multi[0m
+
+  42f3a4:	10400008 	beqz	v0,42f3c8 <libipt_CLUSTERIP_init@@Base+0x1c8>
+  42f3a8:	24030002 	li	v1,2
+  42f3ac:	14430009 	bne	v0,v1,42f3d4 <libipt_CLUSTERIP_init@@Base+0x1d4>
+  42f3b0:	3c110045 	lui	s1,0x45
+  42f3b4:	10000009 	b	42f3dc <libipt_CLUSTERIP_init@@Base+0x1dc>
+  42f3b8:	26311498 	addiu	s1,s1,5272
+  42f3bc:	3c110045 	lui	s1,0x45
+  42f3c0:	10000006 	b	42f3dc <libipt_CLUSTERIP_init@@Base+0x1dc>
+  42f3c4:	26311484 	addiu	s1,s1,5252
+  42f3c8:	3c110045 	lui	s1,0x45
+  42f3cc:	10000003 	b	42f3dc <libipt_CLUSTERIP_init@@Base+0x1dc>
+  42f3d0:	26311478 	addiu	s1,s1,5240
+  42f3d4:	3c110045 	lui	s1,0x45
+  42f3d8:	263114fc 	addiu	s1,s1,5372
+  42f3dc:	26020004 	addiu	v0,s0,4
+  42f3e0:	3c12004c 	lui	s2,0x4c
+  42f3e4:	90430005 	lbu	v1,5(v0)
+  42f3e8:	3c050045 	lui	a1,0x45
+  42f3ec:	90470001 	lbu	a3,1(v0)
+  42f3f0:	24a5150c 	addiu	a1,a1,5388
+  42f3f4:	90490002 	lbu	t1,2(v0)
+  42f3f8:	26441620 	addiu	a0,s2,5664
+  42f3fc:	90480003 	lbu	t0,3(v0)
+  42f400:	90420004 	lbu	v0,4(v0)
+  42f404:	92060004 	lbu	a2,4(s0)
+[31m  42f408:	8f9981e4 	lw	t9,sprintf[0m
+  42f40c:	afa90010 	sw	t1,16(sp)
+  42f410:	afa80014 	sw	t0,20(sp)
+--
+  42f4c8:	3c110045 	lui	s1,0x45
+  42f4cc:	10400008 	beqz	v0,42f4f0 <libipt_CLUSTERIP_init@@Base+0x2f0>
+  42f4d0:	3c110045 	lui	s1,0x45
+  42f4d4:	24030002 	li	v1,2
+  42f4d8:	14430007 	bne	v0,v1,42f4f8 <libipt_CLUSTERIP_init@@Base+0x2f8>
+  42f4dc:	3c110045 	lui	s1,0x45
+  42f4e0:	10000007 	b	42f500 <libipt_CLUSTERIP_init@@Base+0x300>
+  42f4e4:	26311498 	addiu	s1,s1,5272
+  42f4e8:	10000005 	b	42f500 <libipt_CLUSTERIP_init@@Base+0x300>
+  42f4ec:	26311484 	addiu	s1,s1,5252
+  42f4f0:	10000003 	b	42f500 <libipt_CLUSTERIP_init@@Base+0x300>
+  42f4f4:	26311478 	addiu	s1,s1,5240
+  42f4f8:	3c110045 	lui	s1,0x45
+  42f4fc:	263114fc 	addiu	s1,s1,5372
+  42f500:	26020004 	addiu	v0,s0,4
+  42f504:	3c12004c 	lui	s2,0x4c
+  42f508:	90490002 	lbu	t1,2(v0)
+  42f50c:	3c050045 	lui	a1,0x45
+  42f510:	90480003 	lbu	t0,3(v0)
+  42f514:	26441620 	addiu	a0,s2,5664
+  42f518:	90430005 	lbu	v1,5(v0)
+  42f51c:	24a5150c 	addiu	a1,a1,5388
+  42f520:	90470001 	lbu	a3,1(v0)
+  42f524:	90420004 	lbu	v0,4(v0)
+  42f528:	92060004 	lbu	a2,4(s0)
+[31m  42f52c:	8f9981e4 	lw	t9,sprintf[0m
+  42f530:	afa90010 	sw	t1,16(sp)
+  42f534:	afa80014 	sw	t0,20(sp)
+--
+  43ce38:	2610188c 	addiu	s0,s0,6284
+  43ce3c:	38420001 	xori	v0,v0,0x1
+  43ce40:	8fbf001c 	lw	ra,28(sp)
+  43ce44:	0002800b 	0x2800b
+  43ce48:	02001021 	move	v0,s0
+  43ce4c:	8fb00018 	lw	s0,24(sp)
+  43ce50:	03e00008 	jr	ra
+  43ce54:	27bd0020 	addiu	sp,sp,32
+
+0043ce58 <xtables_ipaddr_to_numeric@@Base>:
+  43ce58:	27bdffd8 	addiu	sp,sp,-40
+  43ce5c:	afbf0024 	sw	ra,36(sp)
+  43ce60:	afb00020 	sw	s0,32(sp)
+  43ce64:	3c1c0047 	lui	gp,0x47
+  43ce68:	279c7ae0 	addiu	gp,gp,31456
+  43ce6c:	afbc0018 	sw	gp,24(sp)
+  43ce70:	3c10004c 	lui	s0,0x4c
+  43ce74:	00801821 	move	v1,a0
+  43ce78:	90820003 	lbu	v0,3(a0)
+  43ce7c:	3c050045 	lui	a1,0x45
+  43ce80:	90670001 	lbu	a3,1(v1)
+  43ce84:	24a54498 	addiu	a1,a1,17560
+  43ce88:	90630002 	lbu	v1,2(v1)
+  43ce8c:	90860000 	lbu	a2,0(a0)
+  43ce90:	26041d28 	addiu	a0,s0,7464
+[31m  43ce94:	8f9981e4 	lw	t9,sprintf[0m
+  43ce98:	afa30010 	sw	v1,16(sp)
+  43ce9c:	0320f809 	jalr	t9
+--
+  43cebc:	afbf001c 	sw	ra,28(sp)
+  43cec0:	afb00018 	sw	s0,24(sp)
+  43cec4:	3c1c0047 	lui	gp,0x47
+  43cec8:	279c7ae0 	addiu	gp,gp,31456
+  43cecc:	afbc0010 	sw	gp,16(sp)
+  43ced0:	2402ffff 	li	v0,-1
+  43ced4:	8c830000 	lw	v1,0(a0)
+  43ced8:	10620009 	beq	v1,v0,43cf00 <xtables_ipmask_to_numeric@@Base+0x48>
+  43cedc:	24060020 	li	a2,32
+  43cee0:	2402fffe 	li	v0,-2
+  43cee4:	2405ffff 	li	a1,-1
+  43cee8:	24c6ffff 	addiu	a2,a2,-1
+  43ceec:	10c50003 	beq	a2,a1,43cefc <xtables_ipmask_to_numeric@@Base+0x44>
+  43cef0:	00000000 	nop
+  43cef4:	1462fffc 	bne	v1,v0,43cee8 <xtables_ipmask_to_numeric@@Base+0x30>
+  43cef8:	00021040 	sll	v0,v0,0x1
+  43cefc:	2402ffff 	li	v0,-1
+  43cf00:	14c2000c 	bne	a2,v0,43cf34 <xtables_ipmask_to_numeric@@Base+0x7c>
+  43cf04:	00000000 	nop
+  43cf08:	0c10f396 	jal	43ce58 <xtables_ipaddr_to_numeric@@Base>
+  43cf0c:	3c10004c 	lui	s0,0x4c
+  43cf10:	8fbc0010 	lw	gp,16(sp)
+  43cf14:	3c050044 	lui	a1,0x44
+  43cf18:	00403021 	move	a2,v0
+  43cf1c:	24a54c5c 	addiu	a1,a1,19548
+[31m  43cf20:	8f9981e4 	lw	t9,sprintf[0m
+  43cf24:	0320f809 	jalr	t9
+  43cf28:	26041d14 	addiu	a0,s0,7444
+  43cf2c:	1000000d 	b	43cf64 <xtables_ipmask_to_numeric@@Base+0xac>
+  43cf30:	26021d14 	addiu	v0,s0,7444
+  43cf34:	24020020 	li	v0,32
+  43cf38:	14c20004 	bne	a2,v0,43cf4c <xtables_ipmask_to_numeric@@Base+0x94>
+  43cf3c:	3c10004c 	lui	s0,0x4c
+  43cf40:	3c020045 	lui	v0,0x45
+  43cf44:	10000007 	b	43cf64 <xtables_ipmask_to_numeric@@Base+0xac>
+  43cf48:	24421878 	addiu	v0,v0,6264
+  43cf4c:	3c050044 	lui	a1,0x44
+[31m  43cf50:	8f9981e4 	lw	t9,sprintf[0m
+  43cf54:	24a54c60 	addiu	a1,a1,19552
+  43cf58:	0320f809 	jalr	t9
+--
+  43cfc4:	8fbc0010 	lw	gp,16(sp)
+  43cfc8:	14430010 	bne	v0,v1,43d00c <xtables_ip6mask_to_numeric@@Base+0x70>
+  43cfcc:	24030080 	li	v1,128
+  43cfd0:	8f9985e0 	lw	t9,-31264(gp)
+  43cfd4:	3c10004c 	lui	s0,0x4c
+  43cfd8:	3c050045 	lui	a1,0x45
+  43cfdc:	2604189c 	addiu	a0,s0,6300
+  43cfe0:	0320f809 	jalr	t9
+  43cfe4:	24a59918 	addiu	a1,a1,-26344
+  43cfe8:	0c10f3dd 	jal	43cf74 <xtables_ip6addr_to_numeric@@Base>
+  43cfec:	02202021 	move	a0,s1
+  43cff0:	2604189c 	addiu	a0,s0,6300
+  43cff4:	8fbc0010 	lw	gp,16(sp)
+  43cff8:	8f998398 	lw	t9,-31848(gp)
+  43cffc:	0320f809 	jalr	t9
+  43d000:	00402821 	move	a1,v0
+  43d004:	1000000d 	b	43d03c <xtables_ip6mask_to_numeric@@Base+0xa0>
+  43d008:	2602189c 	addiu	v0,s0,6300
+  43d00c:	14430004 	bne	v0,v1,43d020 <xtables_ip6mask_to_numeric@@Base+0x84>
+  43d010:	3c10004c 	lui	s0,0x4c
+  43d014:	3c020045 	lui	v0,0x45
+  43d018:	10000008 	b	43d03c <xtables_ip6mask_to_numeric@@Base+0xa0>
+  43d01c:	24421878 	addiu	v0,v0,6264
+  43d020:	3c050044 	lui	a1,0x44
+  43d024:	00403021 	move	a2,v0
+[31m  43d028:	8f9981e4 	lw	t9,sprintf[0m
+  43d02c:	24a54c60 	addiu	a1,a1,19552
+  43d030:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33msprintf[0m used [0;33m6[0m times [0;33mxtables-multi[0m
+

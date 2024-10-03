@@ -1,0 +1,64 @@
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m tear down of [0;33mopenssl[0m
+
+  420a1c:	8f998de0 	lw	t9,strlen
+  420a20:	8c430000 	lw	v1,0(v0)
+  420a24:	8fa403d8 	lw	a0,984(sp)
+  420a28:	afa303c8 	sw	v1,968(sp)
+  420a2c:	8c420008 	lw	v0,8(v0)
+  420a30:	0320f809 	jalr	t9
+  420a34:	afa20400 	sw	v0,1024(sp)
+  420a38:	8fa403c8 	lw	a0,968(sp)
+  420a3c:	8fbc0068 	lw	gp,104(sp)
+  420a40:	10800004 	beqz	a0,420a54 <make_revocation_str@@Base+0x5630>
+  420a44:	240300f8 	li	v1,248
+  420a48:	2405007d 	li	a1,125
+  420a4c:	00a41823 	subu	v1,a1,a0
+  420a50:	00031840 	sll	v1,v1,0x1
+  420a54:	0043182b 	sltu	v1,v0,v1
+  420a58:	14600009 	bnez	v1,420a80 <make_revocation_str@@Base+0x565c>
+  420a5c:	00008021 	move	s0,zero
+  420a60:	8f828434 	lw	v0,-31692(gp)
+  420a64:	8f858030 	lw	a1,-32720(gp)
+  420a68:	00008821 	move	s1,zero
+  420a6c:	8c440000 	lw	a0,0(v0)
+  420a70:	24160001 	li	s6,1
+  420a74:	8f998664 	lw	t9,-31132(gp)
+  420a78:	1000027c 	b	42146c <make_revocation_str@@Base+0x6048>
+  420a7c:	24a58848 	addiu	a1,a1,-30648
+[31m  420a80:	8f99807c 	lw	t9,strcpy[0m
+  420a84:	8fa503d8 	lw	a1,984(sp)
+  420a88:	0320f809 	jalr	t9
+--
+  448a90:	1040002b 	beqz	v0,448b40 <extract_port@@Base+0x200>
+  448a94:	00000000 	nop
+  448a98:	161effec 	bne	s0,s8,448a4c <extract_port@@Base+0x10c>
+  448a9c:	02030018 	mult	s0,v1
+  448aa0:	8f928018 	lw	s2,-32744(gp)
+  448aa4:	02202021 	move	a0,s1
+  448aa8:	8f999274 	lw	t9,-28044(gp)
+  448aac:	8e42cae0 	lw	v0,-13600(s2)
+  448ab0:	24420001 	addiu	v0,v0,1
+  448ab4:	0320f809 	jalr	t9
+  448ab8:	ae42cae0 	sw	v0,-13600(s2)
+  448abc:	8fbc0010 	lw	gp,16(sp)
+  448ac0:	10400029 	beqz	v0,448b68 <extract_port@@Base+0x228>
+  448ac4:	00408021 	move	s0,v0
+  448ac8:	8f998de0 	lw	t9,strlen
+  448acc:	0320f809 	jalr	t9
+  448ad0:	02202021 	move	a0,s1
+  448ad4:	2c420080 	sltiu	v0,v0,128
+  448ad8:	8fbc0010 	lw	gp,16(sp)
+  448adc:	10400023 	beqz	v0,448b6c <extract_port@@Base+0x22c>
+  448ae0:	02001021 	move	v0,s0
+  448ae4:	02202821 	move	a1,s1
+  448ae8:	24110098 	li	s1,152
+  448aec:	02710018 	mult	s3,s1
+  448af0:	8f918018 	lw	s1,-32744(gp)
+[31m  448af4:	8f99807c 	lw	t9,strcpy[0m
+  448af8:	2631caf8 	addiu	s1,s1,-13576
+  448afc:	00009812 	mflo	s3
+
+[0m
+[[0;33m*[0m] Function [0;33mstrcpy[0m used [0;33m2[0m times [0;33mopenssl[0m
+

@@ -1,0 +1,35 @@
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m tear down of [0;33mlibcfg.so[0m
+
+    1c30:	8fbe0040 	lw	s8,64(sp)
+    1c34:	8fb7003c 	lw	s7,60(sp)
+    1c38:	8fb60038 	lw	s6,56(sp)
+    1c3c:	8fb50034 	lw	s5,52(sp)
+    1c40:	8fb40030 	lw	s4,48(sp)
+    1c44:	8fb3002c 	lw	s3,44(sp)
+    1c48:	8fb20028 	lw	s2,40(sp)
+    1c4c:	8fb10024 	lw	s1,36(sp)
+    1c50:	8fb00020 	lw	s0,32(sp)
+    1c54:	03e00008 	jr	ra
+    1c58:	27bd0048 	addiu	sp,sp,72
+
+00001c5c <ListDump@@Base>:
+    1c5c:	3c1c0002 	lui	gp,0x2
+    1c60:	279cad94 	addiu	gp,gp,-21100
+    1c64:	0399e021 	addu	gp,gp,t9
+    1c68:	27bdffd8 	addiu	sp,sp,-40
+    1c6c:	afbf0024 	sw	ra,36(sp)
+    1c70:	afb10020 	sw	s1,32(sp)
+    1c74:	afb0001c 	sw	s0,28(sp)
+    1c78:	afbc0010 	sw	gp,16(sp)
+    1c7c:	1080000b 	beqz	a0,1cac <ListDump@@Base+0x50>
+    1c80:	00808021 	move	s0,a0
+    1c84:	8f918024 	lw	s1,-32732(gp)
+    1c88:	26314864 	addiu	s1,s1,18532
+[31m    1c8c:	8f998120 	lw	t9,printf[0m
+    1c90:	02002821 	move	a1,s0
+    1c94:	0320f809 	jalr	t9
+
+[0m
+[[0;33m*[0m] Function [0;33mprintf[0m used [0;33m1[0m times [0;33mlibcfg.so[0m
+
